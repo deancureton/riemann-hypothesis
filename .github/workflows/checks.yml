@@ -14,11 +14,13 @@ permissions:
 jobs:
   mirror:
     if: github.event_name == 'workflow_dispatch'
-    name: Historic original-submission provenance comparison
+    name: Original submission matches the published archive
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Download the archive from alpo.ge and compare
+        with:
+          ref: 40e56bab026552e089d7afcfeff08d2defb9c005
+      - name: Compare the published archive with the original submission commit
         run: |
           T="$RUNNER_TEMP/dl"; mkdir "$T"
           for i in $(seq -w 1 14); do curl -fsSL --retry 3 -o "$T/part$i" "https://alpo.ge/lean.tar.gz.part$i"; done
@@ -26,19 +28,10 @@ jobs:
           echo "9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc  $T/lean.tar.gz" | sha256sum -c
           tar xzf "$T/lean.tar.gz" -C "$T"
 
-          # src/ differs only by the added Challenge.lean
-          d=$(diff -r "$T/lean/src" src || true); echo "$d"
-          [ "$d" = "Only in src: Challenge.lean" ]
+          diff -qr "$T/lean/src" src
           cmp "$T/lean/lean-toolchain" lean-toolchain
           cmp "$T/lean/lake-manifest.json" lake-manifest.json
-
-          # Only the explicit cache prefix and marked Comparator suffix are additions.
-          printf '# Cache infrastructure; the original submission starts below this block.\nplatformIndependent = true\n\n' > "$T/cache-prefix"
-          head -n 3 lakefile.toml | cmp - "$T/cache-prefix"
-          tail -n +4 lakefile.toml > "$T/lakefile-without-cache.toml"
-          n=$(wc -c < "$T/lean/lakefile.toml")
-          head -c "$n" "$T/lakefile-without-cache.toml" | cmp - "$T/lean/lakefile.toml"
-          tail -c +"$((n + 1))" "$T/lakefile-without-cache.toml"
+          cmp "$T/lean/lakefile.toml" lakefile.toml
 
   challenge:
     name: Challenge compiles against Mathlib alone

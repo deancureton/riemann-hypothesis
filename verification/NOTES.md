@@ -11,22 +11,15 @@ Comparator's output will be added here when the run finishes.
 | Archive | `https://alpo.ge/lean.tar.gz.part01` … `part14`, downloaded 2026-11-20 |
 | Joined archive | `cat lean.tar.gz.part{01..14} > lean.tar.gz`: 239,275,554 bytes, sha256 `9631b4f020199e580ba86178cb56c6e9b09f690c2369a80dc4334aa93f49c7fc` |
 
-The first commit of this repository, `40e56bab`, is the archive's `lean/` directory exactly as
-published. Later commits add `src/Challenge.lean`, `comparator.json`, `export-targets.txt`, the
-README, this folder, the CI workflow and, since
-[#7](https://github.com/leanprover-community/riemann-hypothesis/pull/7), the build cache in
-`scripts/`. Nothing else under `src/` is touched. `git diff 40e56bab HEAD --stat` shows this, and
-CI downloads the archive again and compares it with the tree.
+The [original submission commit][original-submission] (`40e56bab`) preserves the archive's
+`lean/` directory as published. The manual provenance job verifies the archive checksum and
+compares its Lean sources, Lake configuration, dependency manifest, and toolchain with that commit.
 
-`lakefile.toml` is the original with two additions:
-
-- three lines at the top, which set `platformIndependent = true` for the build cache;
-- a marked block at the end, which registers the `Challenge` library, the `cache` executable and
-  the cache server.
-
-CI checks that the original file sits unchanged between the two. Neither addition makes Lake
-treat an existing build as out of date; that was tested on a small Lean `v4.33.1` project, not
-on this one.
+Later commits add the Comparator and build cache. The maintained source on `main` also
+includes proof cleanup such as [#8](https://github.com/leanprover-community/riemann-hypothesis/pull/8)
+and [#45](https://github.com/leanprover-community/riemann-hypothesis/pull/45).
+Run `git diff 40e56bab HEAD -- src lean-toolchain lakefile.toml lake-manifest.json`
+to inspect the changes from the original submission.
 
 The build cache is described in [CACHE.md](CACHE.md). The steps in the README's "Checking it" do
 not use it.
@@ -34,7 +27,11 @@ not use it.
 The server answers HTTP 200 with an HTML page for any path, so a `part15` URL appears to exist.
 Check the joined sha256, not the status codes.
 
-## Size
+[original-submission]: https://github.com/leanprover-community/riemann-hypothesis/commit/40e56bab026552e089d7afcfeff08d2defb9c005
+
+## Original submission size
+
+The counts below describe the original submission at `40e56bab`.
 
 175,187 `.lean` files and 1,030,531,854 bytes of source: 17,374,215 lines, of which 15,531,759
 are non-blank. There are no comments. The source has 818,755 `theorem`/`lemma` declarations and
@@ -52,10 +49,10 @@ the import closure of `Main`.
 | Lemmata | 167 | 9,232 |
 | Supplements, BuildAid, `Main.lean`, `Statements.lean` | 10 | 70 |
 
-## Static scan
+## Original submission static scan
 
-[`static-scan.txt`](static-scan.txt) is a text search over every file. It finds no `axiom`,
-`sorry`, `admit`, `native_decide`, `implemented_by`, `extern`, `unsafe`, `opaque`, `debug.*`
+[`static-scan.txt`](static-scan.txt) records a text search of the original submission at `40e56bab`. It finds no
+`axiom`, `sorry`, `admit`, `native_decide`, `implemented_by`, `extern`, `unsafe`, `opaque`, `debug.*`
 option or `skipKernelTC`. All notation is `local` or `scoped`, and nothing in the source reads
 or writes files, starts processes or reads the environment.
 
