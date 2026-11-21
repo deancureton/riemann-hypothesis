@@ -122,7 +122,7 @@ theorem abs_ne_inv : (Model.absPow E (1 : ℕ)).loc w ≠ ((Model.absPow E (1 : 
   have h3 := mul_inv_cancel₀ h0
   rw [h2] at h3
   have h4 : Ideal.absNorm w.asIdeal * Ideal.absNorm w.asIdeal = 1 := by exact_mod_cast h3
-  nlinarith
+  exact (one_lt_mul_self_iff.mpr hq).ne' h4
 
 end GlobalTheory.Published.CharWDTest
 

@@ -158,8 +158,8 @@ theorem hyp_exist (hL : LocalLanglandsGL) (Ω : Type) [Field Ω] [Algebra ℚ Ω
     have hp := Rat.HeightOneSpectrum.prime_natGenerator w
     change ((Rat.HeightOneSpectrum.natGenerator w : ℕ) : ℤ) ^ 2 ∣ ((Rat.HeightOneSpectrum.natGenerator w : ℕ) : ℤ) at h1
     have h2 : (Rat.HeightOneSpectrum.natGenerator w) ^ 2 ∣ Rat.HeightOneSpectrum.natGenerator w := by exact_mod_cast h1
-    have := Nat.le_of_dvd hp.pos h2
-    nlinarith [hp.two_le]
+    exact (Nat.le_of_dvd hp.pos h2).not_gt (by
+      simpa only [pow_two] using lt_mul_of_one_lt_right hp.pos hp.one_lt)
   · have := Nat.card_congr (RingHom.quotientKerEquivOfSurjective hsur).toEquiv
     rw [hker, Nat.card_zmod] at this
     rw [pow_one]; exact this

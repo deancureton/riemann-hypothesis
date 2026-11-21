@@ -25,10 +25,10 @@ theorem norm_det {n : ℕ} {ε : Fin n → Bool} {g : Matrix (Fin n) (Fin n) ℂ
   rw [Matrix.det_mul, Matrix.det_mul, Matrix.det_conjTranspose] at h1
   have h4 : star g.det * g.det = 1 := by
     apply mul_left_cancel₀ h3
-    linear_combination h1
+    rwa [mul_one, ← mul_assoc, mul_comm _ (star g.det)]
   have h5 := congrArg norm h4
   rw [norm_mul, norm_star, norm_one] at h5
-  nlinarith [norm_nonneg g.det]
+  exact (mul_self_inj_of_nonneg (norm_nonneg g.det) zero_le_one).mp (by simpa using h5)
 
 theorem compact_const (n : ℕ) (s : Bool) : CompactSpace (Formalism.REAL.UJ (fun _ : Fin n => s)) := by
   have hemb := Formalism.REAL.isClosedEmbeddingMatrix n (fun _ => s)
@@ -71,20 +71,21 @@ def lamDet (n : ℕ) (m : ℤ) : Fin n → ℝ := fun a => (m : ℝ) + Formalism
 
 theorem lamDet_hc (n : ℕ) (m : ℤ) : Formalism.QuantumDeterminants.IsHCParam (lamDet n m) := by
   refine ⟨fun a b h => ?_, fun a => ⟨m - (a : ℕ), ?_⟩⟩
-  · have : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast h
-    simp only [lamDet, Formalism.QuantumDeterminants.rhoStd]; linarith
+  · have hab : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast h
+    exact add_lt_add_right (sub_lt_sub_left hab _) _
   · simp only [lamDet, Formalism.QuantumDeterminants.rhoStd]; push_cast; ring
 
 theorem fdeg_lamDet (n : ℕ) (m : ℤ) : Formalism.QuantumDeterminants.fdegHC (lamDet n m) = 1 := by
   unfold Formalism.QuantumDeterminants.fdegHC
   rw [div_eq_one_iff_eq]
   · refine Finset.prod_congr rfl fun a _ => Finset.prod_congr rfl fun b hb => ?_
-    have : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast (Finset.mem_filter.1 hb).2
+    have hab : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast (Finset.mem_filter.1 hb).2
     simp only [lamDet, Formalism.QuantumDeterminants.rhoStd]
-    rw [abs_of_pos (by linarith)]; ring
+    rw [abs_of_pos (by linarith only [hab])]
+    ring
   · refine Finset.prod_ne_zero_iff.2 fun a _ => Finset.prod_ne_zero_iff.2 fun b hb => ?_
-    have : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast (Finset.mem_filter.1 hb).2
-    linarith
+    have hab : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast (Finset.mem_filter.1 hb).2
+    exact (sub_pos.mpr hab).ne'
 
 theorem lowK_lamDet (n : ℕ) (s : Bool) (m : ℤ) :
     Formalism.QuantumDeterminants.lowK (fun _ : Fin n => s) (lamDet n m) = fun _ => (m : ℝ) := by
@@ -278,7 +279,8 @@ theorem unitary_one_one_chambers (k : ℝ) (hk : 1 ≤ k) :
       simp only [Formalism.QuantumDeterminants.lowK, Pi.add_apply, Pi.sub_apply, Formalism.REAL.rhoN, Formalism.REAL.rhoC, Finset.card_filter,
         Fin.sum_univ_two] <;> simp <;> norm_num
   · simp [Formalism.QuantumDeterminants.fdegHC, Finset.prod_filter, Fin.prod_univ_two]
-    rw [abs_of_nonneg (by linarith)]; ring
+    rw [abs_of_nonneg (by linarith only [hk])]
+    ring
 
 theorem lowK_add_two_rhoC {n : ℕ} (ε : Fin n → Bool) (lam : Fin n → ℝ) (a : Fin n) :
     (Formalism.QuantumDeterminants.lowK ε lam + (2 : ℝ) • Formalism.REAL.rhoC ε) a =

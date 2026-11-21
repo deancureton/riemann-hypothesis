@@ -344,13 +344,13 @@ theorem KltAt.lt_one (h : KltAt p n Δ x) (hz : z ⤳ x) (hE : E.IsAt z) : Δ z 
   obtain ⟨η, m, g, -, hm, hg, h⟩ := h
   have := h E (hE.through hz)
   rw [hg.discrep_eq_neg hm hz hE] at this
-  linarith
+  simpa only [neg_lt_neg_iff] using this
 
 theorem LcAt.le_one (h : LcAt p n Δ x) (hz : z ⤳ x) (hE : E.IsAt z) : Δ z ≤ 1 := by
   obtain ⟨η, m, g, -, hm, hg, h⟩ := h
   have := h E (hE.through hz)
   rw [hg.discrep_eq_neg hm hz hE] at this
-  linarith
+  simpa only [neg_le_neg_iff] using this
 
 theorem DivOver.ord_pow (E : DivOver p) (f : X.functionFieldˣ) (r : ℕ) :
     E.ord (f ^ r) = r * E.ord f := by
@@ -474,9 +474,7 @@ theorem kltAt_zero_of_smooth [SmoothOfRelativeDimension n p] (hn : topologicalKr
   · simp [DivOver.formOrd_formOf_eq_zero (hz.mem_open U.isOpen hx) hE hω]
   · have := DivOver.formOrd_formOf_nonneg hn hx hE ω h0
     have : (0 : ℚ) ≤ E.formOrd (formOf U (gen_mem hx) ω) := by exact_mod_cast this
-    simp only [discrep, E.ord_one]
-    norm_num
-    linarith
+    simpa [discrep, E.ord_one] using lt_of_lt_of_le (by norm_num : (-1 : ℚ) < 0) this
 
 omit [LocallyOfFiniteType p] in
 

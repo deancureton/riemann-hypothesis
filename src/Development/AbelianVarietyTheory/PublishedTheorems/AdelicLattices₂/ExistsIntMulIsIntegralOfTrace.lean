@@ -154,7 +154,7 @@ theorem exists_bound_short (n : ℕ) (hn : n ≠ 0) {N : ℤ} (hN : N ≠ 0) :
     rw [Algebra.trace_algebraMap, Algebra.IsQuadraticExtension.finrank_eq_two, map_nsmul] at h1
     have h2 : algebraMap F E (q x y) = h x y + star (h x y) := by rw [← hs]; rfl
     rw [h2, map_add, trace_star, two_nsmul] at h1
-    linarith
+    linarith only [h1]
   set T : Matrix κ κ ℚ := Matrix.of fun i j => Algebra.trace ℚ F (q (b i) (b j)) with hT
   obtain ⟨hT0, hT1⟩ := det_ne_zero_and_abs_le T hM0 (by
     intro x hx i
@@ -183,7 +183,7 @@ theorem exists_bound_short (n : ℕ) (hn : n ≠ 0) {N : ℤ} (hN : N ≠ 0) :
       simp only [sub_smul, Finset.sum_sub_distrib, Int.cast_smul_eq_zsmul, ← hc, mul_smul,
         ← Finset.smul_sum, ← hy, sub_self]
     have h5 := Fintype.linearIndependent_iff.1 hbQ _ h4 i
-    exact ⟨2 * c i, by push_cast; linarith⟩)
+    exact ⟨2 * c i, by push_cast; linarith only [h5]⟩)
   have hcard : Fintype.card κ ≠ 0 := by
     rw [hκ, hFV]; exact mul_ne_zero finrank_pos.ne' (by omega)
   set M : ℝ := |((N * D * 2 : ℤ) : ℝ)| with hM
@@ -191,10 +191,9 @@ theorem exists_bound_short (n : ℕ) (hn : n ≠ 0) {N : ℤ} (hN : N ≠ 0) :
   obtain ⟨z, hz0, hz⟩ := exists_short_of_trace_det q hqs b hκ (t := M + 1) (by positivity) hT0 (by
     have h1 : |((T.det : ℚ) : ℝ)| ≤ M ^ Fintype.card κ := by rw [hM]; exact_mod_cast hT1
     have h2 : M ^ Fintype.card κ < (M + 1) ^ Fintype.card κ :=
-      pow_lt_pow_left₀ (by linarith) hM' hcard
-    have h3 : 1 ≤ (M + 1) ^ Fintype.card κ := one_le_pow₀ (by linarith)
-    refine h1.trans_lt (h2.trans_le ?_)
-    nlinarith)
+      pow_lt_pow_left₀ (lt_add_of_pos_right _ zero_lt_one) hM' hcard
+    have h3 : 1 ≤ (M + 1) ^ Fintype.card κ := one_le_pow₀ (le_add_of_nonneg_left hM')
+    exact h1.trans_lt (h2.trans_le (le_self_pow₀ h3 two_ne_zero)))
   refine ⟨∑ i, z i • b i, sum_mem fun i _ => Λ.smul_mem _ (β i).2, fun h0 => hz0 ?_, fun φ => ?_⟩
   · exact funext (Fintype.linearIndependent_iff.1 hbZ z h0)
   · have h1 := hz (φ.comp (algebraMap F E))
@@ -202,6 +201,6 @@ theorem exists_bound_short (n : ℕ) (hn : n ≠ 0) {N : ℤ} (hN : N ≠ 0) :
     refine le_trans ?_ h1
     change _ ≤ ‖φ (h _ _ + h _ _)‖
     rw [← two_mul, map_mul, norm_mul, map_ofNat, Complex.norm_ofNat]
-    linarith [norm_nonneg (φ (h (∑ i, z i • b i) (∑ i, z i • b i)))]
+    linarith only [norm_nonneg (φ (h (∑ i, z i • b i) (∑ i, z i • b i)))]
 
 end GlobalTheory.HermClass

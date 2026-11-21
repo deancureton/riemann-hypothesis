@@ -156,8 +156,8 @@ theorem not_isRegAlg_half : ¬ (CG.ofChar (GlobalTheory.HeckeGal.Model.absPow E 
   obtain ⟨n, hn⟩ := (CG.isRegAlg_ofChar _).1 hr τ
   rw [(InfType.expo_of_infType E _).2.1 _ (GlobalTheory.HeckeGal.Model.absPow_isAbsPow E _)] at hn
   have h1 : (1 / 2 : ℝ) = n := by exact_mod_cast hn
-  have h2 : (1 : ℤ) = 2 * n := by exact_mod_cast (by linarith : (1 : ℝ) = 2 * n)
-  omega
+  have h2 : (1 : ℤ) = n * 2 := by exact_mod_cast (div_eq_iff (by norm_num : (2 : ℝ) ≠ 0)).mp h1
+  lia
 
 theorem exists_gauss : ∃ (_ : IsCMField (CyclotomicField 4 ℚ)) (π : CuspSub (CyclotomicField 4 ℚ) 1),
     (CG.mk π).IsRegAlg ∧ (∀ τ, (CG.mk π).infChar ((starRingEnd ℂ).comp τ) =

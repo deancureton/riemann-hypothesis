@@ -24,17 +24,17 @@ theorem norm_det {n : ℕ} {ε : Fin n → Bool} {g : Matrix (Fin n) (Fin n) ℂ
   rw [Matrix.det_mul, Matrix.det_mul, Matrix.det_conjTranspose] at h1
   have h4 : star g.det * g.det = 1 := by
     apply mul_left_cancel₀ h3
-    linear_combination h1
+    rwa [mul_one, ← mul_assoc, mul_comm _ (star g.det)]
   have h5 := congrArg norm h4
   rw [norm_mul, norm_star, norm_one] at h5
-  nlinarith [norm_nonneg g.det]
+  exact (mul_self_inj_of_nonneg (norm_nonneg g.det) zero_le_one).mp (by simpa using h5)
 
 def lamDet (n : ℕ) (m : ℤ) : Fin n → ℝ := fun a => (m : ℝ) + Formalism.QuantumDeterminants.rhoStd n a
 
 theorem lamDet_hc (n : ℕ) (m : ℤ) : Formalism.QuantumDeterminants.IsHCParam (lamDet n m) := by
   refine ⟨fun a b h => ?_, fun a => ⟨m - (a : ℕ), ?_⟩⟩
-  · have : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast h
-    simp only [lamDet, Formalism.QuantumDeterminants.rhoStd]; linarith
+  · have hab : ((a : ℕ) : ℝ) < (b : ℕ) := by exact_mod_cast h
+    exact add_lt_add_right (sub_lt_sub_left hab _) _
   · simp only [lamDet, Formalism.QuantumDeterminants.rhoStd]; push_cast; ring
 
 theorem lowK_lamDet (n : ℕ) (s : Bool) (m : ℤ) :
@@ -142,11 +142,11 @@ theorem lowest_integral {N : ℕ} (ε : Fin N → Bool) (lam : Fin N → ℝ)
     (h : ∀ a, ∃ m : ℤ, lam a - ((N : ℝ) - 1) / 2 = (m : ℝ)) (a : Fin N) :
     ∃ m : ℤ, (lam + rhoN ε - rhoC ε) a = (m : ℝ) := by
   obtain ⟨m, hm⟩ := h a
-  have := card_split ε a
+  have hcard := card_split ε a
   refine ⟨m + (univ.filter fun b => a < b ∧ ε b ≠ ε a).card + (univ.filter fun b => b < a ∧ ε b = ε a).card, ?_⟩
   simp only [Pi.sub_apply, Pi.add_apply, rhoN, rhoC]
   push_cast
-  linarith
+  linarith only [hm, hcard]
 
 theorem lowest_rank_two :
     (![1 / 2, -1 / 2] : Fin 2 → ℝ) + rhoN ![true, false] - rhoC ![true, false] = ![1, -1] := by
@@ -197,11 +197,11 @@ theorem integral_of_isDS {N : ℕ} (ε : Fin N → Bool) (lam : Fin N → ℝ) {
     have h4 : ((Formalism.QuantumDeterminants.lowK ε lam a : ℝ) : ℂ) * (2 * Real.pi * Complex.I) = k * (2 * Real.pi * Complex.I) := by
       rw [← hk]; push_cast; ring
     exact_mod_cast mul_right_cancel₀ Complex.two_pi_I_ne_zero h4
-  have := card_split ε a
+  have hcard := card_split ε a
   refine ⟨k - (univ.filter fun b => a < b ∧ ε b ≠ ε a).card - (univ.filter fun b => b < a ∧ ε b = ε a).card, ?_⟩
   simp only [Formalism.QuantumDeterminants.lowK, Pi.sub_apply, Pi.add_apply, rhoN, rhoC] at h3
   push_cast
-  linarith
+  linarith only [h3, hcard]
 
 theorem use_rank_two (h : DiscreteSeriesUpqExists) :
     ∃ (H : Type) (_ : NormedAddCommGroup H) (_ : InnerProductSpace ℂ H)

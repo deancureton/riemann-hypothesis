@@ -38,7 +38,7 @@ theorem rho_antitone {N : ℕ} (ε : Fin N → Bool) : Antitone (rhoC ε + rhoN 
     have h2' := congrArg (Nat.cast : ℕ → ℝ) h2
     push_cast at h1' h2'
     simp only [rhoC, rhoN, ne_eq]
-    linarith
+    linarith only [h1', h2']
   intro a b hab
   simp only [Pi.add_apply, key]
   have h1 : (univ.filter fun c : Fin N => b < c).card ≤ (univ.filter fun c : Fin N => a < c).card :=
@@ -51,7 +51,7 @@ theorem rho_antitone {N : ℕ} (ε : Fin N → Bool) : Antitone (rhoC ε + rhoN 
     exact_mod_cast h1
   have h2' : ((univ.filter fun c : Fin N => c < a).card : ℝ) ≤ (univ.filter fun c : Fin N => c < b).card := by
     exact_mod_cast h2
-  linarith
+  exact div_le_div_of_nonneg_right (sub_le_sub h1' h2') (by norm_num)
 
 theorem norm_lowest_le_of_cone {N : ℕ} (ε : Fin N → Bool) (lam μ : Fin N → ℝ) (hl : Antitone lam)
     (c : Fin N → Fin N → ℕ) (hc : ∀ a b, c a b ≠ 0 → a < b)
@@ -80,10 +80,10 @@ theorem norm_lowest_le_of_cone {N : ℕ} (ε : Fin N → Bool) (lam μ : Fin N �
     · exact mul_nonneg (Nat.cast_nonneg _) (sub_nonneg.2 (hxa (hc a b h).le))
   have hm : μ + (2 : ℝ) • rhoC ε = x + Q := by rw [hμ, hx]; abel
   rw [hm]
-  have : nsq (x + Q) = nsq x + 2 * ∑ i, x i * Q i + ∑ i, Q i * Q i := by
+  have hsum : nsq (x + Q) = nsq x + 2 * ∑ i, x i * Q i + ∑ i, Q i * Q i := by
     simp only [nsq, dot, Pi.add_apply, Finset.mul_sum, ← Finset.sum_add_distrib]
     exact Finset.sum_congr rfl fun i _ => by ring
   have h2 : 0 ≤ ∑ i, Q i * Q i := Finset.sum_nonneg fun i _ => mul_self_nonneg _
-  linarith
+  linarith only [hsum, hdot, h2]
 
 end GlobalTheory.Published

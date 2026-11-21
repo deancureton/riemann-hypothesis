@@ -103,10 +103,9 @@ theorem eq_of_isometric_trivShift {s t : ℝ} (h : (ArithBase.trivShift s).Isome
   have hx : ‖x‖ = 1 := by
     rcases mul_self_eq_one_iff.mp hn with h | h
     · exact h
-    · linarith [norm_nonneg x]
-  rw [hx] at e
-  simp at e
-  linarith
+    · exact ((norm_nonneg x).not_gt (h.symm ▸ neg_one_lt_zero)).elim
+  simp only [hx, zero_add, one_pow, Real.log_one, add_zero] at e
+  exact mul_left_cancel₀ (by norm_num : (2 : ℝ) ≠ 0) e.symm
 
 end GlobalTheory.HermLB
 

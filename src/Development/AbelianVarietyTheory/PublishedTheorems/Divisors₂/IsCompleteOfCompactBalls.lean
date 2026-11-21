@@ -84,8 +84,9 @@ theorem coNormSq_le_iff {H : Matrix (Fin n) (Fin n) ℂ} (hH : H.PosDef) (v : Fi
   obtain ⟨-, h2, h3⟩ := dual_vector hH v
   have := hξ (star (H⁻¹ *ᵥ star v))
   rw [h3, ← h2, Complex.norm_real, Real.norm_eq_abs, sq_abs] at this
-  have h0 := coNormSq_nonneg hH v
-  nlinarith
+  rcases (coNormSq_nonneg hH v).eq_or_lt with h0 | h0
+  · exact h0.symm ▸ hh
+  · exact le_of_mul_le_mul_right (by simpa only [sq] using this) h0
 
 section Atlas
 

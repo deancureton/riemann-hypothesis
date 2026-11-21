@@ -78,13 +78,13 @@ theorem norm_mulVec_le (g : Matrix (Fin n) (Fin n) ℂ) (v : Fin n → ℂ) :
         Finset.single_le_sum (f := fun b => ‖g i b‖ ^ 2) (fun b _ => by positivity) (Finset.mem_univ j)
       exact hrow.trans (Finset.single_le_sum (f := fun a => ∑ b, ‖g a b‖ ^ 2)
         (fun a _ => by positivity) (Finset.mem_univ i))
-    nlinarith [sq_nonneg (‖g i j‖ - 1), norm_nonneg (g i j)]
+    nlinarith only [hsq, sq_nonneg (‖g i j‖ - 1)]
   refine (pi_norm_le_iff_of_nonneg (by positivity)).2 fun i => ?_
   change ‖∑ j, g i j * v j‖ ≤ _
   calc ‖∑ j, g i j * v j‖ ≤ ∑ j, ‖g i j * v j‖ := norm_sum_le _ _
     _ ≤ ∑ _j : Fin n, (1 + hs g) * ‖v‖ := Finset.sum_le_sum fun j _ => by
         rw [norm_mul]
-        exact mul_le_mul (hent i j) (norm_le_pi_norm v j) (norm_nonneg _) (by linarith)
+        exact mul_le_mul (hent i j) (norm_le_pi_norm v j) (norm_nonneg _) (add_nonneg zero_le_one hs0)
     _ = (1 + hs g) * (n * ‖v‖) := by
         simp only [Finset.sum_const, Finset.card_univ, Fintype.card_fin, nsmul_eq_mul]
         ring

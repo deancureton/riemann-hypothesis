@@ -99,7 +99,7 @@ theorem exists_coord (x : Qi) : ∃ a b : ℚ, x = a + b * ii := by
       push_cast
       linear_combination ((s : Qi) - t * ii) * h1 + (t : Qi) ^ 2 * ii_mul
     have h3 : s ^ 2 + t ^ 2 = 0 := by exact_mod_cast h2
-    constructor <;> nlinarith [sq_nonneg s, sq_nonneg t]
+    exact mul_self_add_mul_self_eq_zero.mp (by simpa only [sq] using h3)
   have hr : Module.finrank ℚ Qi = 2 := by
     rw [IsCyclotomicExtension.finrank (n := 4) Qi
       (Polynomial.cyclotomic.irreducible_rat (by norm_num))]
@@ -144,7 +144,7 @@ theorem signature_needed :
   obtain ⟨Q, -, h⟩ := Landherr.congr_complex h (Classical.choice inferInstance)
   have h0 := congrArg Complex.re (congrFun (congrFun h 0) 0)
   simp [Matrix.mul_apply, Fin.sum_univ_two] at h0
-  nlinarith [mul_self_nonneg (Q 0 0).re, mul_self_nonneg (Q 0 0).im, mul_self_nonneg (Q 1 0).re,
+  linarith only [h0, mul_self_nonneg (Q 0 0).re, mul_self_nonneg (Q 0 0).im, mul_self_nonneg (Q 1 0).re,
     mul_self_nonneg (Q 1 0).im]
 
 theorem hasseNorm_iff (H : HasseNorm) (K L : Type) [Field K] [NumberField K] [Field L]

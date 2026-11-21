@@ -70,7 +70,7 @@ theorem isTotallyComplex_of_sq_eq_neg (hp : 0 < p) {x : K} (hx : x ^ 2 = -(p : K
   have h1 := congrArg (InfinitePlace.embedding_of_isReal hv) hx
   rw [map_pow, map_neg, map_natCast] at h1
   have h2 : (0 : ℝ) < p := by exact_mod_cast hp
-  nlinarith [sq_nonneg (InfinitePlace.embedding_of_isReal hv x)]
+  exact (not_lt_of_ge (sq_nonneg _)) (h1.symm ▸ neg_neg_of_pos h2)
 
 variable [Algebra K ℂ]
 
@@ -83,7 +83,7 @@ private theorem algebraMap_rat_ne_sqrtNegNat (hp : 0 < p) (q : ℚ) : algebraMap
     exact h1
   have h4 := Rat.cast_injective h3
   have h5 : (0 : ℚ) < p := by exact_mod_cast hp
-  nlinarith [sq_nonneg q]
+  exact (not_lt_of_ge (sq_nonneg q)) (h4.symm ▸ neg_neg_of_pos h5)
 
 private theorem finrank_adjoin_sqrtNegNat_eq_two (hp : 0 < p) : Module.finrank ℚ ℚ⟮sqrtNegNat p⟯ = 2 := by
   have hint : IsIntegral ℚ (sqrtNegNat p) :=

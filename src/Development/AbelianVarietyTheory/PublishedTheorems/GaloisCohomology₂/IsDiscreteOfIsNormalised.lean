@@ -107,7 +107,7 @@ theorem isUnitary_of_isNormalised {π : CuspSub E 1} (h : IsNormalised π) : π.
     obtain ⟨n, hn⟩ := pow_unbounded_of_one_lt C (not_le.1 hc)
     have := hb (x ^ n)
     rw [map_pow, Units.val_pow_eq_pow_val, norm_pow] at this
-    linarith
+    exact hn.not_ge this
   intro x
   refine le_antisymm (hle x) ?_
   have := hle x⁻¹
