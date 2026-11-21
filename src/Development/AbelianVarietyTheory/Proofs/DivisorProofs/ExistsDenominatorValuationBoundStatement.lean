@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDenominatorValuationBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_denominator_valuation_bound : ∀ (E : Type
     (La : ℝ), z.Good f La → ∀ y : FrPt Xo c z.K, y.x = z.x → ∀ la : GlobalTheory.AllWt.Weight Dw, GapGe 1 la →
     ∃ N : z.K, N ≠ 0 ∧ ∀ F ∈ GlobalTheory.AllWt.secZ Xo c (GlobalTheory.AllWt.exOf Dw la 0),
       (∀ v, ∀ w ∈ valSet Xo c (algCls Xo c) v, 0 ≤ w F) → IsIntegral ℤ (N * evR Xo c F y) := by
-  first | exact @GlobalTheory.LatFull.CMInt.exists_frame_denom_intWt | exact GlobalTheory.LatFull.CMInt.exists_frame_denom_intWt | (intros; apply GlobalTheory.LatFull.CMInt.exists_frame_denom_intWt <;> assumption)
+  exact @GlobalTheory.LatFull.CMInt.exists_frame_denom_intWt

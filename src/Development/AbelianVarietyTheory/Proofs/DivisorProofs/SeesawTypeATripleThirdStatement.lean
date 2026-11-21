@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeATripleThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_triple_third : GlobalTheory.ThK.KP �
     ∀ (v : Pl F) (k : UA σ G.V.J), k ∈ UAt σ G.V (evFin F v) → ∀ g₁ : UA σ G₁.V.J, g₁ ∈ UAt σ G₁.V (evFin F v) →
     ∀ c : ℂ, (∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e (om (k, 1) Ψ) = c • om₁ (g₁, 1) (e Ψ)) →
       ∀ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v), ev v (locOp v (om (k, 1)) φ) = c • locOp v (om₁ (g₁, 1)) (ev v φ) := by
-  first | exact @GlobalTheory.ThK.LawLoc.ev_locOp_law | exact GlobalTheory.ThK.LawLoc.ev_locOp_law | (intros; apply GlobalTheory.ThK.LawLoc.ev_locOp_law <;> assumption)
+  exact @GlobalTheory.ThK.LawLoc.ev_locOp_law

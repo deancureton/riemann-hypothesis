@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicFunctionalVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adelic_functional_vanishing : ∀ (F : Type) [Fiel
     ∀ l ∈ (adeleClass F).adm κ,
     (∀ (t : AF F), ∀ y ∈ Y₀, ∀ φ ∈ schA F κ, l (schr ψ (0, t • fun i => algebraMap F (AF F) (y i)) φ) = l φ) →
     ∀ Φ ∈ schA F κ, (∀ x : κ → AF F, (∀ y ∈ Y₀, x ⬝ᵥ (fun i => algebraMap F (AF F) (y i)) = 0) → Φ x = 0) → l Φ = 0 := by
-  first | exact @GlobalTheory.CharKerSub.main | exact GlobalTheory.CharKerSub.main | (intros; apply GlobalTheory.CharKerSub.main <;> assumption)
+  exact @GlobalTheory.CharKerSub.main

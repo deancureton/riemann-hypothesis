@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockDegreeKFixedReduction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.fock_degree_k_fixed_reduction : GlobalTheory.ThK.K
         f ∈ fockDeg G.M B.ψ B.emb (fixDeg B G.M om + 2 * k + 1) ⊔ Submodule.span ℂ
           {f₁ | ∃ γ ∈ Lines σ G.W, ∃ g ∈ fockDeg G.M B.ψ B.emb (fixDeg B G.M om + 2 * k + 1), IsKFix B om g ∧
             ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) g f₁} := by
-  first | exact @GlobalTheory.EvenStep.even_step | exact GlobalTheory.EvenStep.even_step | (intros; apply GlobalTheory.EvenStep.even_step <;> assumption)
+  exact @GlobalTheory.EvenStep.even_step

@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions GlobalTheory.Mean4 GlobalTheor
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.polarization_part_base_change : ∀ (O : Type) [CommRing O] (c : O →+* O) (K K' : Type) [Field K] [Field K'] (f : K →+* K') (G : Over (Sp K)) [GrpObj G] (i : OAct O G) (G' : Over (Sp K')) [GrpObj G'] (i' : OAct O G') (φ : G'.left ⟶ G.left), IsActPull i' i (spMap f) φ → PolPart c i → PolPart c i' := by
-  first | exact @GlobalTheory.PolPartPull.polPart_of_isActPull | exact GlobalTheory.PolPartPull.polPart_of_isActPull | (intros; apply GlobalTheory.PolPartPull.polPart_of_isActPull <;> assumption)
+  exact @GlobalTheory.PolPartPull.polPart_of_isActPull

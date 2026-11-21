@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsContinuousCoordsUnramifiedFrobenius
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_continuous_coords_unramified_frobenius : �
       Continuous (fun t => ((x t : ↥(MaximalUnramifiedExtension l)) : Om l)) →
       ∃ a : X → Fin r → ℚ_[l], Continuous a ∧ ∀ t (m : Fin r),
         fr l m (x t) = ∑ k, (W : Matrix (Fin r) (Fin r) ↥(MaximalUnramifiedExtension l)) m k * algebraMap ℚ_[l] ↥(MaximalUnramifiedExtension l) (a t k) := by
-  first | exact @GlobalTheory.PMon.coef_unr_continuous | exact GlobalTheory.PMon.coef_unr_continuous | (intros; apply GlobalTheory.PMon.coef_unr_continuous <;> assumption)
+  exact @GlobalTheory.PMon.coef_unr_continuous

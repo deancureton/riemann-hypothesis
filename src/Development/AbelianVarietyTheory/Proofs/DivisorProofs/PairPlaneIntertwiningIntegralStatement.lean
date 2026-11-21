@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairPlaneIntertwiningIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.pair_plane_intertwining_integral : GlobalTheory.Th
       V₁.J = H.ιᵀ * X.J * H.ι.map σ → M₁.IsGood B.ψ → IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ g ∈ SB (Fin n × Fin d → FiniteAdeleRing (𝓞 F) F), ∃ T : SInf F (Fin n × Fin d) →L[ℂ] ℂ,
       ∀ f : SInf F (Fin n × Fin d), (∑' w : Fin d → E, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (pureA F f g)))) = T f := by
-  first | exact @GlobalTheory.ThKExpandYAdm.adm | exact GlobalTheory.ThKExpandYAdm.adm | (intros; apply GlobalTheory.ThKExpandYAdm.adm <;> assumption)
+  exact @GlobalTheory.ThKExpandYAdm.adm

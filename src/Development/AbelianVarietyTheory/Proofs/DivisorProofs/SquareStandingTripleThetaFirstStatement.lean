@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareStandingTripleThetaFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMixModelB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAwayUnitOfPowEqOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Theta Formalism.L2.DIV IsDedekindDomain NumberField MeasureTheory Matrix
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.square_standing_triple_theta_first : ∀ {D : D7} 
         (Assignment.one.block _ _) ∧
       ∀ u, chart jj (finCongr (rankW₁ G t i j w)) (colsEq t e w) g cc
           (coY D.sp.cm.sig Γ.V' Γ.W (Bs.τ v) (Γ.V'.bas v) (Γ.W.bas v) u) = linB B t i j w (ptB e u) := by
-  first | exact @GlobalTheory.TopFlip.ChartB.exists_mixChart_linB | exact GlobalTheory.TopFlip.ChartB.exists_mixChart_linB | (intros; apply GlobalTheory.TopFlip.ChartB.exists_mixChart_linB <;> assumption)
+  exact @GlobalTheory.TopFlip.ChartB.exists_mixChart_linB

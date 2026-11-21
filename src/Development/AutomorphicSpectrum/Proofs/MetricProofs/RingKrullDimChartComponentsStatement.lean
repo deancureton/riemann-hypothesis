@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.RingKrullDimChartComponents
-import Mathlib
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelong
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.SheetDensityEqSetSheetDensity
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.ringKrullDim_chartComponents : ∀ (K : Type) [Fin
     (Q : Ideal (MRingOver ℂ ι)) (e m : ℕ) (σ : Fin m ≃ ((k : K) → ι k)) (i : (k : K) → ι k),
     IsCxVar Q e → ∀ J ∈ chartComponents (conePts Q) σ i,
       ringKrullDim (MvPolynomial (Fin m) ℂ ⧸ J) = (e : ℕ) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartComponents_dim | exact GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartComponents_dim | (intros; apply GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartComponents_dim <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartComponents_dim

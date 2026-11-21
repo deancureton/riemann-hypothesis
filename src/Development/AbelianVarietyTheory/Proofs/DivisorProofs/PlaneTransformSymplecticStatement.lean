@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneTransformSymplectic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.plane_transform_symplectic : ∀ {F E : Type} [Fie
     symp (cA σ) (-1) (incM F X.J) (incM F W.J) w w' =
       (planeT σ X W H H' w).1.1 ⬝ᵥ (planeT σ X W H H' w').1.2 - (planeT σ X W H H' w').1.1 ⬝ᵥ (planeT σ X W H H' w).1.2 +
         symp (cA σ) (-1) (incM F X₁.J) (incM F W₁.J) (planeT σ X W H H' w).2 (planeT σ X W H H' w').2 := by
-  first | exact @GlobalTheory.ThK.PlaneForm.form_eq | exact GlobalTheory.ThK.PlaneForm.form_eq | (intros; apply GlobalTheory.ThK.PlaneForm.form_eq <;> assumption)
+  exact @GlobalTheory.ThK.PlaneForm.form_eq

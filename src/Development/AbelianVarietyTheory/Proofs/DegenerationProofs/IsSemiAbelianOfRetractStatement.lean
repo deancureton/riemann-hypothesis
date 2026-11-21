@@ -11,4 +11,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.SS
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isSemiAbelian_of_retract' : ∀ (S : Scheme.{0}) (G G₁ : Over S) [GrpObj G] [GrpObj G₁], IsSemiAbelian G → SmConn G₁ → ∀ (i : G₁ ⟶ G) (r : G ⟶ G₁), IsMonHom r → i ≫ r = 𝟙 G₁ → IsSemiAbelian G₁ := by
-  first | exact @GlobalTheory.SS.isSemiAbelian_of_retract | exact GlobalTheory.SS.isSemiAbelian_of_retract | (intros; apply GlobalTheory.SS.isSemiAbelian_of_retract <;> assumption)
+  exact @GlobalTheory.SS.isSemiAbelian_of_retract

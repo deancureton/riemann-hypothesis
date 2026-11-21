@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsStageTrianglePolynomial
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_stage_triangle_polynomial : GlobalTheory.Fu
   GBig fun {D} T _ _ G μ₀ _ _ _ => ∀ (W : G.Weil) (S : GridChoice W Set.univ), IsStdChar D W.ψ (-1) →
     NumbersIn D.what₂.embLL S μ₀ → ∀ (i j : Fin D.R.m) (p q : ℕ) (A A' WW : HSp D) (X : Tri T A A' WW), GlobalTheory.SqTower.IsStageC W i j p q X →
       ∃ P' : PolF D WW.rank A'.rank, (∀ t h, MeasureTheory.IntegrableOn (X.ker' W.ψ W.θ t P' h) X.fd' X.m') ∧ ∀ t, X.I' W.ψ W.θ t P' ≠ 0 := by
-  first | exact @GlobalTheory.StageSmall.small_stage | exact GlobalTheory.StageSmall.small_stage | (intros; apply GlobalTheory.StageSmall.small_stage <;> assumption)
+  exact @GlobalTheory.StageSmall.small_stage

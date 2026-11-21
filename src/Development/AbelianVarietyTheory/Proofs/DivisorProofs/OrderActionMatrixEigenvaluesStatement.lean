@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrderActionMatrixEigenvalues
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.order_action_matrix_eigenvalues : ∀ (E : Type) [
     (∀ a i, T a (B i) = ∑ k, ((ρ a (Pi.single i 1) k : R) : ℂ) • B k) →
     ∀ σ : E →+* FractionRing R, Module.finrank (FractionRing R) (GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.eigK ρ σ) =
       Module.finrank ℂ (⨅ a : orderC c, Module.End.eigenspace (T a) (j (σ a)) : Submodule ℂ W) := by
-  first | exact @GlobalTheory.finrank_eigK_eq_finrank_eig_complex | exact GlobalTheory.finrank_eigK_eq_finrank_eig_complex | (intros; apply GlobalTheory.finrank_eigK_eq_finrank_eig_complex <;> assumption)
+  exact @GlobalTheory.finrank_eigK_eq_finrank_eig_complex

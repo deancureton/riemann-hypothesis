@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsModelBlocksUnitaryFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_model_blocks_unitary_frame : GlobalTheory.T
     ∃ (M₁ : Model σ X W) (blk : Fin q → Finset (Fin n × Fin d)) (e : Fn F n d →ₗ[ℂ] Fn F n d) (c : ℂ),
       M₁.IsGood B.ψ ∧ IsFrameCo σ X.J W.J x y M₁.co blk ∧ IsEv B M M₁ 1 1 ∅ e ∧ c ≠ 0 ∧
       ∀ Φ ∈ schA F (Fin n × Fin d), thetaSum F (e Φ) = c * thetaSum F Φ := by
-  first | exact @GlobalTheory.ThKFrameModel.exists_frame_model | exact GlobalTheory.ThKFrameModel.exists_frame_model | (intros; apply GlobalTheory.ThKFrameModel.exists_frame_model <;> assumption)
+  exact @GlobalTheory.ThKFrameModel.exists_frame_model

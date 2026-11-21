@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilDoubledDarbouxCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_finite_free_neighbourhood : ∀ (A : Type) 
     ∃ (C : Type) (_ : CommRing C) (_ : Algebra A C) (_ : Module.Finite A C) (_ : Module.Free A C) (U : T.Opens)
       (e : Sp C ≅ U.toScheme), e.hom ≫ U.ι ≫ π = spMap (algebraMap A C) ∧
         ∀ t : T, π t = IsLocalRing.closedPoint A → t ∈ U := by
-  first | exact @GlobalTheory.exists_finite_free_chart_of_henselian | exact GlobalTheory.exists_finite_free_chart_of_henselian | (intros; apply GlobalTheory.exists_finite_free_chart_of_henselian <;> assumption)
+  exact @GlobalTheory.exists_finite_free_chart_of_henselian

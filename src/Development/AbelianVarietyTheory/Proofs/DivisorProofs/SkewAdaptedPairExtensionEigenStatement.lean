@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_extension_eigen : ∀ (F E : Typ
             M₁.co.rho B.ψ z ((e ∘ₗ om (1, m)) Φ)) ∧
         (∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), (e ∘ₗ om (1, m)) (M.co.rho B.ψ u Φ) = (e ∘ₗ om (1, m)) Φ) ∧
         (∀ l ∈ (adeleClass F).adm (Fin n × Fin d₁), l ∘ₗ (e ∘ₗ om (1, m)) ∈ (adeleClass F).adm (Fin n × Fin d)) := by
-  first | exact @GlobalTheory.EvLevi.ev_levi | exact GlobalTheory.EvLevi.ev_levi | (intros; apply GlobalTheory.EvLevi.ev_levi <;> assumption)
+  exact @GlobalTheory.EvLevi.ev_levi

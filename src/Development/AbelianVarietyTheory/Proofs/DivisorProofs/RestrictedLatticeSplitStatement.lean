@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedLatticeSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.restricted_lattice_split : ∀ (F E : Type) [Field
     ∀ (L : Submodule (𝓞 E) (Fin n → E)) (a : GL (Fin n) (AF F ⊗[F] E)), GlobalTheory.EisLine.IsAdapted σ J X Y L a →
     ∀ z ∈ L0 σ J X Y L, ∀ i, ((Formalism.UG.cT (σ : E →+* E) (Y0 σ J X Y) * J0 σ J X Y) *ᵥ z) i • (X0 σ J X Y)ᵀ i ∈ L0 σ J X Y L ∧
       ((Formalism.UG.cT (σ : E →+* E) (X0 σ J X Y) * J0 σ J X Y) *ᵥ z) i • (Y0 σ J X Y)ᵀ i ∈ L0 σ J X Y L := by
-  first | exact @GlobalTheory.EisRestrictSplit.restrictedLattice_split | exact GlobalTheory.EisRestrictSplit.restrictedLattice_split | (intros; apply GlobalTheory.EisRestrictSplit.restrictedLattice_split <;> assumption)
+  exact @GlobalTheory.EisRestrictSplit.restrictedLattice_split

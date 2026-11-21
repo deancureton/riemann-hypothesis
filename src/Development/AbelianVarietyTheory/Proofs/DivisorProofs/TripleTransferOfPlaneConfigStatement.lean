@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleTransferOfPlaneConfig
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.triple_transfer_of_plane_config : GlobalTheory.ThK
       (∀ g ∈ UAt σ G₁.V (evI F), ∀ f f₁ : SInf F (Fin b × Fin (b + a')), Acts (evI F) (om₁ (g, 1)) f f₁ → l f₁ = l f) →
     ∀ T : SInf F (Fin (b + 2) × Fin (b + 2 + a')) →L[ℂ] SInf F (Fin b × Fin (b + a')), (∀ f, ⇑(T f) = coneInfFun B G.M om ei K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) f) →
       ∃ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')), l (T f) ≠ 0 := by
-  first | exact @GlobalTheory.ThK.coneInf_bump_ne_zero | exact GlobalTheory.ThK.coneInf_bump_ne_zero | (intros; apply GlobalTheory.ThK.coneInf_bump_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.coneInf_bump_ne_zero

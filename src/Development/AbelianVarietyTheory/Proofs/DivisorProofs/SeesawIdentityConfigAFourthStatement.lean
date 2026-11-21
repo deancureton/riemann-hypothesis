@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawIdentityConfigAFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.seesaw_identity_config_a_fourth : GlobalTheory.ThK
     ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K → ∀ (μK : Measure (KAt K (evI F))) (μ : Measure (idelesAt E (evI F))),
       IsNormK K (evI F) μK → μ.IsHaarMeasure →
     ∃ T : SInf F (Fin (b + 2) × Fin (b + 2 + a')) →L[ℂ] SInf F (Fin b × Fin (b + a')), ∀ f, ⇑(T f) = coneInfFun B G.M om ei K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) f := by
-  first | exact @GlobalTheory.ThK.exists_clm_coneInfFun | exact GlobalTheory.ThK.exists_clm_coneInfFun | (intros; apply GlobalTheory.ThK.exists_clm_coneInfFun <;> assumption)
+  exact @GlobalTheory.ThK.exists_clm_coneInfFun

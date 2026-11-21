@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationACompactIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.configuration_a_compact_integral : GlobalTheory.Th
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ (A : InfinitePlace F → Matrix (Fin (b + 2)) (Formalism.BasicNotions.TH.Ix (b + 2 - G.p) G.p) ℂ) (C : InfinitePlace F → Matrix (Fin (b + 2 + a')) (Formalism.BasicNotions.TH.Ix (b + 2 + a' - (G.p + G.q)) (G.p + G.q)) ℂ) (Φ : GlobalTheory.RealLift.Tens F (b + 2 - G.p) G.p (b + 2 + a' - (G.p + G.q)) (G.p + G.q) →ₗ[ℂ] SInf F (Fin (b + 2) × Fin (b + 2 + a'))), IsFockData B G.M A C Φ → ∀ (w : InfinitePlace F) (Y : Formalism.BasicNotions.TH.Mat (b + 2 + a' - (G.p + G.q)) (G.p + G.q)),
       Formalism.BasicNotions.TH.IsKC Y → ∀ v ∈ lowPartInf B G.M R.p, fockOp (R.p ∘ₗ Φ) w Y v ∈ lowPartInf B G.M R.p := by
-  first | exact @GlobalTheory.FockLowStab.main | exact GlobalTheory.FockLowStab.main | (intros; apply GlobalTheory.FockLowStab.main <;> assumption)
+  exact @GlobalTheory.FockLowStab.main

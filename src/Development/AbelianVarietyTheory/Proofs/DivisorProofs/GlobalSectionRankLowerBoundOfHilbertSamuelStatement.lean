@@ -10,4 +10,4 @@ open GlobalTheory.HSCore GlobalTheory.QCoh
 open GlobalTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.globalSectionRankLowerBound_of_hilbertSamuel : Quoted → RankLow := by
-  first | exact @GlobalTheory.HSCore.RankBound.rankLow | exact GlobalTheory.HSCore.RankBound.rankLow | (intros; apply GlobalTheory.HSCore.RankBound.rankLow <;> assumption)
+  exact @GlobalTheory.HSCore.RankBound.rankLow

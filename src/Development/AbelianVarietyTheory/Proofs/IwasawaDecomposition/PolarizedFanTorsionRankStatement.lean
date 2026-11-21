@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizedFanTorsionRank
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.polarized_fan_torsion_rank : ∀ (E : Type) [Field
       Irreducible ϖ → ∀ (ψ : R →+* V) (gam : FractionRing R →+* FractionRing V),
       (∀ r, gam (algebraMap R _ r) = algebraMap V _ (ψ r)) → ∀ be ∈ levelForms H 1 P.D.toPre.X, FormAt P.D.toPre ψ ϖ be →
       ∃ (n : ℤ) (w : Vˣ), (n : ℝ) = d * (resInt (𝓞 E) φs).evalZ be ∧ gam q = algebraMap V _ w * algebraMap V _ ϖ ^ n := by
-  first | exact @GlobalTheory.TorRef.ChartMono.exists_monomial | exact GlobalTheory.TorRef.ChartMono.exists_monomial | (intros; apply GlobalTheory.TorRef.ChartMono.exists_monomial <;> assumption)
+  exact @GlobalTheory.TorRef.ChartMono.exists_monomial

@@ -10,4 +10,4 @@ open scoped nonZeroDivisors ContDiff
 open GlobalTheory.AscFin
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.standardFrameLink_map_inverts_hermitianSkewAdjoint : OnStd fun {D} _ _ {sc} {G} W F => ∀ ρ (x : WO (negSp F.Lz) (G.V (.core (2 * ρ + 1)))), (F.lnk ρ).κ _ (incA D D.host.xi0⁻¹ • GlobalTheory.IndefiniteRowSideFullHecke.SkewGramHalfModule.starAdj _ _ x) = x := by
-  first | exact @GlobalTheory.KapAdjLine.kap_starAdj | exact GlobalTheory.KapAdjLine.kap_starAdj | (intros; apply GlobalTheory.KapAdjLine.kap_starAdj <;> assumption)
+  exact @GlobalTheory.KapAdjLine.kap_starAdj

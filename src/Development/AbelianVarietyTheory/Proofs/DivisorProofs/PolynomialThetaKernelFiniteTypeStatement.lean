@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.polynomial_theta_kernel_finite_type : ∀ (F E : T
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁,
       ∃ K, IsMaxCpt σ (c • G.W.J.map σ) K ∧ FiniteDimensional ℂ (Submodule.span ℂ (Set.range fun k : K => fun g => (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) (g * k))) := by
-  first | exact @GlobalTheory.ThKAutSmallKFin.kfin | exact GlobalTheory.ThKAutSmallKFin.kfin | (intros; apply GlobalTheory.ThKAutSmallKFin.kfin <;> assumption)
+  exact @GlobalTheory.ThKAutSmallKFin.kfin

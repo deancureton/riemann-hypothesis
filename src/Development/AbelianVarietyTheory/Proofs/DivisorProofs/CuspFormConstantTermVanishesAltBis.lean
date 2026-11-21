@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspOnTranslCompact
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
 open scoped TensorProduct NNReal Matrix ComplexConjugate
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.cusp_form_constant_term_vanishes_alt : ∀ (F E : 
         (∀ y ∈ C, ofInf σ J (projInf σ J y) ∈ K) →
         (∀ y ∈ C, GlobalTheory.StdPar.IsCuspOn σ J X Y S K (fun g => ψ (g * y))) ∧
           FiniteDimensional ℂ (Submodule.span ℂ {f : GAd σ J → ℂ | ∃ y ∈ C, f = fun g => ψ (g * y)}) := by
-  first | exact @GlobalTheory.StdPar.isCuspOn_transl_compact | exact GlobalTheory.StdPar.isCuspOn_transl_compact | (intros; apply GlobalTheory.StdPar.isCuspOn_transl_compact <;> assumption)
+  exact @GlobalTheory.StdPar.isCuspOn_transl_compact

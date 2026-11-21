@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilOpCone
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_unfolding_alt : GlobalTheory.ThK.KP 
       om₁ x (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ) =
         fun y => ∫ k, ∫ l, om₁ x (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ))) y * (X.ν l : ℂ) *
           ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ThKOp.weilOp_cone | exact GlobalTheory.ThKOp.weilOp_cone | (intros; apply GlobalTheory.ThKOp.weilOp_cone <;> assumption)
+  exact @GlobalTheory.ThKOp.weilOp_cone

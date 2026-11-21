@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementDet
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_det : ∀ {F E : Type}
     (∀ u, form σ Y.J (H.ι *ᵥ u) H.x = 0 ∧ form σ Y.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * Y.J * H.ι.map σ = Y₁.J → Y.J.det ≠ 0 →
     Y₁.J.det ≠ 0 →
     ∃ K : Set (unip σ Y H), IsCompact K ∧ ∀ u : unip σ Y H, ∃ γ ∈ (ratU σ Y.J).subgroupOf (unip σ Y H), γ * u ∈ K := by
-  first | exact @GlobalTheory.UnipCocptForm.cocompact_unip_form | exact GlobalTheory.UnipCocptForm.cocompact_unip_form | (intros; apply GlobalTheory.UnipCocptForm.cocompact_unip_form <;> assumption)
+  exact @GlobalTheory.UnipCocptForm.cocompact_unip_form

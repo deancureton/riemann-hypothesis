@@ -6,4 +6,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrys
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CubeTheorem
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.group_structure_of_published_inputs : GlobalTheory.Published.RaynaudExtension → GlobalTheory.Published.GrothendieckOrthogonality → GlobalTheory.Published.DualAbelianScheme → GlobalTheory.Published.CubeTheorem → GlobalTheory.GroupBplus.GroupSt := by
-  first | exact @GlobalTheory.GroupBplus.groupSt | exact GlobalTheory.GroupBplus.groupSt | (intros; apply GlobalTheory.GroupBplus.groupSt <;> assumption)
+  exact @GlobalTheory.GroupBplus.groupSt

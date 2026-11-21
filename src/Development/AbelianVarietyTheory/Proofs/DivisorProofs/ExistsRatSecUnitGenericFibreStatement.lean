@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRatSecUnitGenericFibre
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_ratSec_unit_generic_fibre : ∀ (O : Type) 
         fnOf ((lbPow D M).U i) h (gen.s i).1 * fnOf ⊤ trivial (f.appTop.hom ((Scheme.ΓSpecIso (.of O)).inv.hom ϖ)) ^ n =
           (τ i : Z.functionField) ^ M) →
       PowEq f ϖ hϖ D sig M n gen := by
-  first | exact @GlobalTheory.GenericRatSec.exists_ratSec | exact GlobalTheory.GenericRatSec.exists_ratSec | (intros; apply GlobalTheory.GenericRatSec.exists_ratSec <;> assumption)
+  exact @GlobalTheory.GenericRatSec.exists_ratSec

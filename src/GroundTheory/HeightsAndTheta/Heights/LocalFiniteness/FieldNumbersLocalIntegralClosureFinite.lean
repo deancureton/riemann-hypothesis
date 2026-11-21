@@ -58,7 +58,6 @@ import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.PTwistedDua
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PBoundedChartsOfRegCharts
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.AestronglyMeasurableMapSymm
 import GroundTheory.HeightsAndTheta.Heights.Regularisation.PChartLeviThGe
-import Mathlib
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.Assembly
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.AssemblyPartial
 import GroundTheory.HeightsAndTheta.Heights.VerticalDivisors.PChowSecDegree

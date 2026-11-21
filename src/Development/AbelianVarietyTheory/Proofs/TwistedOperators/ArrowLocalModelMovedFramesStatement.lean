@@ -10,4 +10,4 @@ open GlobalTheory.FlatPlace GlobalTheory.LocMod GlobalTheory.SplitWeil
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arrowLocalModel_movedFrames : Big fun ch => LatP ch → ChrP ch → ArrP ch := by
-  first | exact @GlobalTheory.ArrowModel.arrow_model | exact GlobalTheory.ArrowModel.arrow_model | (intros; apply GlobalTheory.ArrowModel.arrow_model <;> assumption)
+  exact @GlobalTheory.ArrowModel.arrow_model

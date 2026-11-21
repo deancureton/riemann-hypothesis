@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.fixed_space_le_sup_eigenspaces : ∀ (D : D7) (cf 
         ⨆ σ ∈ {σ : D.what₂.FT | D.what₂.isot j σ ≠ ⊥ ∧ D.nd.goodRow σ},
           Module.End.eigenspace (hkT D T S In i j b k P)
             (algebraMap (T.O i) (FractionRing (T.O i)) (cHkT D T i b P : T.O i) ^ k * readT D T i b (In.eig j σ k P)) := by
-  first | exact @GlobalTheory.HeightCounting.FormsStep.V0T_le_iSup_eigenspace | exact GlobalTheory.HeightCounting.FormsStep.V0T_le_iSup_eigenspace | (intros; apply GlobalTheory.HeightCounting.FormsStep.V0T_le_iSup_eigenspace <;> assumption)
+  exact @GlobalTheory.HeightCounting.FormsStep.V0T_le_iSup_eigenspace

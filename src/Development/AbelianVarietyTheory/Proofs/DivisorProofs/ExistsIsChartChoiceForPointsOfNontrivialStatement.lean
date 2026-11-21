@@ -11,4 +11,4 @@ open GlobalTheory GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.DeRham Glob
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_isChartChoiceForPoints_of_nontrivial : ∀ (R : Type) [CommRing R] [Nontrivial R] (A B : Over (Sp R)) [GrpObj A] [GrpObj B] (P : LB (A ⊗ B).left), P.IsLB → ∃ j : ∀ (D : Type) [CommRing D] [Algebra R D], Pt A D → P.ι, IsChoice P j := by
-  first | exact @GlobalTheory.PtExt.exists_isChoice | exact GlobalTheory.PtExt.exists_isChoice | (intros; apply GlobalTheory.PtExt.exists_isChoice <;> assumption)
+  exact @GlobalTheory.PtExt.exists_isChoice

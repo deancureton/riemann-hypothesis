@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEvaluationTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_a_evaluation_theta : GlobalTheory.ThK.KP �
     ∀ (k : UA σ G.V.J) (a : AE F E), mat k *ᵥ incV F H.x = a • incV F H.x →
     (∀ z : Fin b → AE F E, ∃ c : AE F E, mat k *ᵥ (incM F H.ι *ᵥ z) = incM F H.ι *ᵥ z + c • incV F H.x) →
     ∃ c : ℂ, ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e (om (k, 1) Ψ) = c • e Ψ := by
-  first | exact @GlobalTheory.ThKNScalar.twist_scalar | exact GlobalTheory.ThKNScalar.twist_scalar | (intros; apply GlobalTheory.ThKNScalar.twist_scalar <;> assumption)
+  exact @GlobalTheory.ThKNScalar.twist_scalar

@@ -4,7 +4,6 @@ import Formalism.SharpRestriction.GlobalSchurBounds.GL3Theta
 import Formalism.SharpRestriction.GlobalSchurBounds.FirstClaimLemmaTwoFourOfLemmaTwoThree
 import Formalism.SharpRestriction.DesignExistsOfChoices
 import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.EqOfLeOfAbsNormEq
-import Mathlib
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ImaginaryQuadraticClassBound.GenCoprime
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ImaginaryQuadraticClassBound.ClassNum
 

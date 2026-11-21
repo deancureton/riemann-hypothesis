@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerPairModelGoodDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.stabilizer_pair_model_good_descent : ∀ {F E : Ty
         coneInfInt B M om ei u ν z f (compArch σ X.J k) (unitArch F E l) (fun i => evI F (y i)) *
         (∏ v ∈ T, coneFinInt B M om v (ev v) u ν z (φ v) (compAt σ X.J v k) (unitAt E v l) (fun i => evFin F v (y i))) *
         ∏ᶠ (v : Pl F) (_ : v ∉ T), coneFinInt B M om v (ev v) u ν z (M.vac v) 1 (unitAt E v l) (fun i => evFin F v (y i)) := by
-  first | exact @GlobalTheory.ThK.ConeIntFac.coneInt_pure | exact GlobalTheory.ThK.ConeIntFac.coneInt_pure | (intros; apply GlobalTheory.ThK.ConeIntFac.coneInt_pure <;> assumption)
+  exact @GlobalTheory.ThK.ConeIntFac.coneInt_pure

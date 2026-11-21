@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LastStepDatumTransportBadPrime
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.SplitPart
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.CongAt
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Forms Formalism.UG
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.lastStep_datum_transport_badPrime : ∀ {B : Base}
         GlobalTheory.TopStep.locTop I.Ch I.sel (I.tup a) (I.cst a) n P
           (castSp B.fields.E (congrArg B.R.N h) ∘ₗ Formalism.L2.Col.inFr (Formalism.L2.Col.frsF I.sel (I.tup a) q.1.1 P) (Formalism.L2.Col.frsF I.sel (I.tup a) q'.1.1 P) x)
           ((Formalism.L2.Col.frsF I.sel (I.tup a) q.1.1 P).symm (Formalism.L2.Col.repY q.1.2)) := by
-  first | exact @GlobalTheory.Transport.LastTw.locTop_transport_tw | exact GlobalTheory.Transport.LastTw.locTop_transport_tw | (intros; apply GlobalTheory.Transport.LastTw.locTop_transport_tw <;> assumption)
+  exact @GlobalTheory.Transport.LastTw.locTop_transport_tw

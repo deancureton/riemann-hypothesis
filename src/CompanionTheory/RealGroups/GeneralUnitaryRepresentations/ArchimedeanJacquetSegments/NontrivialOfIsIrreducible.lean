@@ -1,5 +1,4 @@
 import CompanionTheory.RealGroups.GeneralUnitaryRepresentations.ArchimedeanJacquetSegments.Complementary
-import Mathlib
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.DualClassInvolutiveImports
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.GlobalTheory.BernsteinZelevinskyFiniteness
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothIterPhi
@@ -56,7 +55,6 @@ theorem dualCl_fst (x : IrrGL k) : (dualCl x).1 = x.1 := by
 
 end NuP
 
-set_option maxHeartbeats 4000000 in
 open NuP in
 theorem nuPair_of (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k]
     (h1 : GlobalTheory.BZSeg.DerivJac k) (h2 : GlobalTheory.BZSeg.JmTheta k) (h3 : DerFin k) : GlobalTheory.BZSeg.NuPair k := by

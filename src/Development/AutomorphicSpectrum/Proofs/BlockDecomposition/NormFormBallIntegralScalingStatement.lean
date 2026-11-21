@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormFormBallIntegralScaling
-import Mathlib
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
 import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
 
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.norm_form_ball_integral_scaling : ForEF fun F _ _ 
   ∫ u in (valBall E n : Set E), (χ (Algebra.norm F (t : E) * Algebra.norm F u) : ℂ) ∂muE E χ =
     (((modulus (Algebra.norm F (t : E)) : ℝ)⁻¹ : ℝ) : ℂ) *
       ∫ u in (valBall E (n + ord (t : E)) : Set E), (χ (Algebra.norm F u) : ℂ) ∂muE E χ := by
-  first | exact @GlobalTheory.CompanionTheory.WeilGaussScale.integral_valBall_dilation | exact GlobalTheory.CompanionTheory.WeilGaussScale.integral_valBall_dilation | (intros; apply GlobalTheory.CompanionTheory.WeilGaussScale.integral_valBall_dilation <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WeilGaussScale.integral_valBall_dilation

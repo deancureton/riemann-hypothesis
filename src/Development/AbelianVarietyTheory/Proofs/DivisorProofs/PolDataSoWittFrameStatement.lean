@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolDataSoWittFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.pol_data_so_witt_frame : ∀ (F E : Type) [Field F
           IsAut σ (c • G.W.J.map σ) K (fun x => G.M'.I om' Φ' ((toGAd hσ G.W.J hc).symm x)) →
           ∀ S : Finset (Fin r), ¬ (∀ k ∈ S, ∀ i ≤ k, i ∈ S) →
             GlobalTheory.StdPar.IsCuspComp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M'.I om' Φ' ((toGAd hσ G.W.J hc).symm x)) 0 := by
-  first | exact @GlobalTheory.ThK.CuspidalComponentGap.cuspComp_eq_zero | exact GlobalTheory.ThK.CuspidalComponentGap.cuspComp_eq_zero | (intros; apply GlobalTheory.ThK.CuspidalComponentGap.cuspComp_eq_zero <;> assumption)
+  exact @GlobalTheory.ThK.CuspidalComponentGap.cuspComp_eq_zero

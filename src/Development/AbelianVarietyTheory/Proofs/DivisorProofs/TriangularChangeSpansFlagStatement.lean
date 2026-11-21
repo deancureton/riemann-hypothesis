@@ -15,4 +15,4 @@ open GlobalTheory.FlagCell GlobalTheory.FlagConnect
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.triangular_change_spans_flag : ∀ (X : Scheme.{0}) (F : X.Modules) (m : ℕ) (fl : Vert.Flag F m) (V : X.Opens) (v : Fin m → Γ(F, V)) (M : Matrix (Fin m) (Fin m) Γ(X, V)), Spans fl V v → M.BlockTriangular id → IsUnit M.det → Spans fl V fun j => ∑ k, M k j • v k := by
-  first | exact @GlobalTheory.FlagCell.Spans.mul_upper | exact GlobalTheory.FlagCell.Spans.mul_upper | (intros; apply GlobalTheory.FlagCell.Spans.mul_upper <;> assumption)
+  exact @GlobalTheory.FlagCell.Spans.mul_upper

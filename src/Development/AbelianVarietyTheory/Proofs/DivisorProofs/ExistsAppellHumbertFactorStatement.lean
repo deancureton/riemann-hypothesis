@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAppellHumbertFactor
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.exists_appell_humbert_factor : ∀ (g : ℕ) (A : 
     ∀ Hm : Matrix (Fin g) (Fin g) ℂ, Hm.IsHermitian →
     (∀ l ∈ u₀.Λ, ∀ l' ∈ u₀.Λ, ∃ n : ℤ, (l ⬝ᵥ Hm.mulVec (star l')).im = n) →
     ∃ (M : LB A.left) (u : HolUnif A M g) (χ : u.Λ → ℂ), M.IsLB ∧ u.ex = u₀.ex ∧ IsFactorAH u Hm χ := by
-  first | exact @GlobalTheory.AHBundle.exists_lb_of_hermitian_int | exact GlobalTheory.AHBundle.exists_lb_of_hermitian_int | (intros; apply GlobalTheory.AHBundle.exists_lb_of_hermitian_int <;> assumption)
+  exact @GlobalTheory.AHBundle.exists_lb_of_hermitian_int

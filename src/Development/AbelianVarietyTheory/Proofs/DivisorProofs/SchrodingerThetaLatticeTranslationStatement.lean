@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerThetaLatticeTranslation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.schrodinger_theta_lattice_translation : ∀ (F : T
     ∀ μ : @Measure (Fin r → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ →
     ∀ (t : AF F), ∀ v ∈ Λ, ∀ φ : (κ → AF F) → ℂ,
       ∫ x, schr ψ (∑ j, x j • ((fun k => algebraMap F (AF F) ((u j).1 k)), (fun k => algebraMap F (AF F) ((u j).2 k)))) (schr ψ (t • ((fun k => algebraMap F (AF F) (v.1 k)), (fun k => algebraMap F (AF F) (v.2 k)))) φ) 0 ∂μ = ∫ x, schr ψ (∑ j, x j • ((fun k => algebraMap F (AF F) ((u j).1 k)), (fun k => algebraMap F (AF F) ((u j).2 k)))) φ 0 ∂μ := by
-  first | exact @GlobalTheory.LagrInv.lagrForm_schr_invariant | exact GlobalTheory.LagrInv.lagrForm_schr_invariant | (intros; apply GlobalTheory.LagrInv.lagrForm_schr_invariant <;> assumption)
+  exact @GlobalTheory.LagrInv.lagrForm_schr_invariant

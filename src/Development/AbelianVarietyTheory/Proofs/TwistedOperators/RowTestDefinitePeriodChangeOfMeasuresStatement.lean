@@ -10,4 +10,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Ro
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rowTest_definitePeriod_change_of_measures : Big fun ch => VolAt ch := by
-  first | exact @GlobalTheory.RowVal.volAt_big | exact GlobalTheory.RowVal.volAt_big | (intros; apply GlobalTheory.RowVal.volAt_big <;> assumption)
+  exact @GlobalTheory.RowVal.volAt_big

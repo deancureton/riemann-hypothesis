@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepPureTensorLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocPt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.weil_rep_pure_tensor_local : ∀ {F E : Type} [Fie
       (∀ᶠ u in cofinite, φ u = GlobalTheory.FinComm.indO u) →
       M.co.rho ψ w (pure f φ) =
         pure f (Function.update φ v (GlobalTheory.FinComm.locOp ψ v (GlobalTheory.FinComm.locPt v (M.co.e w)) (φ v))) := by
-  first | exact @GlobalTheory.FinComm.RhoPure.rho_pure | exact GlobalTheory.FinComm.RhoPure.rho_pure | (intros; apply GlobalTheory.FinComm.RhoPure.rho_pure <;> assumption)
+  exact @GlobalTheory.FinComm.RhoPure.rho_pure

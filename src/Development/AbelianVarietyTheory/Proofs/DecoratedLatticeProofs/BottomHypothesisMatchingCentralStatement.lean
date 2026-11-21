@@ -13,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.MiTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bottom_hypothesis_matching_central : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), BotHyp W → W.Q.Rl.toRealDat.IsModels ∧ IsInfFam W.Q.Rl.θ ∧ IsStdChar D W.Q.Rl.ψ (-1) ∧ (∀ z ∈ GfC (D.sp.Y 0), z ∈ Subgroup.center (GA D (D.sp.Y 0)) → Matches W.S.X W.Q.instEq (rJ W) (rChi W) (z * (show GA D (D.sp.Y 0) from W.Q.tS))) ∧ (∀ k ∈ rJ W, rChi W k ≠ 0) ∧ ∀ e : W.Q.Rl.HE.H, W.Q.Rl.HE.e e ∈ W.Q.Rl.toRealDat.EEat (W.Q.Rl.toRealDat.levR W.Q.F.lv2 true) → rowOf W e ∈ ThetaLiftSpaceZero W := by
-  first | exact @GlobalTheory.MiTop.botHyp_match | exact GlobalTheory.MiTop.botHyp_match | (intros; apply GlobalTheory.MiTop.botHyp_match <;> assumption)
+  exact @GlobalTheory.MiTop.botHyp_match

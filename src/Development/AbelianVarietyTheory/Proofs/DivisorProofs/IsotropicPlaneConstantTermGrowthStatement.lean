@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicPlaneConstantTermGrowth
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.isotropic_plane_constant_term_growth : ∀ (F E : 
       ∀ g : UA σ Y₁.J → ℂ, (∀ h₁ m, IsLevi (W₁ := Y₁) P 1 h₁ m → g h₁ = fa (m * h)) →
       ∃ N : ℕ, ∀ l : List (ℝ → GAd σ (c • Y₁.J.map σ)), (∀ γ ∈ l, IsRealLine σ (c • Y₁.J.map σ) γ) →
         ∃ C : ℝ, ∀ x, ‖l.foldr lineDer (fun x => g ((toGAd hσ Y₁.J hc).symm x)) x‖ ≤ C * (height σ (c • Y₁.J.map σ) x : ℝ) ^ N := by
-  first | exact @GlobalTheory.ThK.DescB.GenGrowth.main | exact GlobalTheory.ThK.DescB.GenGrowth.main | (intros; apply GlobalTheory.ThK.DescB.GenGrowth.main <;> assumption)
+  exact @GlobalTheory.ThK.DescB.GenGrowth.main

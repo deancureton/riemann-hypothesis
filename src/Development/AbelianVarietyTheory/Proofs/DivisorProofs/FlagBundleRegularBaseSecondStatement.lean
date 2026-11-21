@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleRegularBaseSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_regular_base_second : ArCalc → ∀ (
     ∀ (fl : Vert.Flag ((Scheme.Modules.pullback π).obj E) 2), IsFlagBundle π (fun _ : Unit => E) (fun _ => 2) (fun _ => fl) →
     ∀ (A : HermLB q) (Ψ : MvPolynomial (Fin 2) ℝ →ₗ[ℝ] ℝ),
       IsGeoFun ![VMetric.grLB fl 0 (H.pull π w), A.pull π w] (d + 1) Ψ → Ψ (-X 0 * X 1 ^ d) = gdeg A d := by
-  first | exact @GlobalTheory.LineGysin.geoFun_neg_taut_mul_pow | exact GlobalTheory.LineGysin.geoFun_neg_taut_mul_pow | (intros; apply GlobalTheory.LineGysin.geoFun_neg_taut_mul_pow <;> assumption)
+  exact @GlobalTheory.LineGysin.geoFun_neg_taut_mul_pow

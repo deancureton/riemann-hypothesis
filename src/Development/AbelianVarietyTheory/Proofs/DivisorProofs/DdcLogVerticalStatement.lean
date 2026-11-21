@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DdcLogVertical
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.FlatAcyc
 open scoped Real ContDiff
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.ddc_log_vertical : ∀ {E : Type} [NormedAddCommGr
       (1 / (4 * π)) *
         (fderiv ℝ (fun z' => fderiv ℝ (fun z'' => Real.log (h (b, z''))) z' (Complex.I • v)) z w -
           fderiv ℝ (fun z' => fderiv ℝ (fun z'' => Real.log (h (b, z''))) z' (Complex.I • w)) z v) := by
-  first | exact @GlobalTheory.DdcVert.ddc_log_vert | exact GlobalTheory.DdcVert.ddc_log_vert | (intros; apply GlobalTheory.DdcVert.ddc_log_vert <;> assumption)
+  exact @GlobalTheory.DdcVert.ddc_log_vert

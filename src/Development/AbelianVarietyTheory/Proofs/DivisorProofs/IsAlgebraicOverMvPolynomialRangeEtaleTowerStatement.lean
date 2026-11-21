@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAlgebraicOverMvPolynomialRangeEtaleTower
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.isAlgebraic_over_mvPolynomial_range_etaleTower : �
     (ι : R →+* T) (ψ : T →+* R) (τ : Fin r → T),
   IsEtTower cK R cL T ι ψ τ → Function.Injective (MvPolynomial.eval₂Hom ι τ) →
   ∀ z : L, IsAlgebraic (T.subtype.comp (MvPolynomial.eval₂Hom ι τ)).range z := by
-  first | exact @GlobalTheory.FieldPair.isAlgebraic_range_eval₂Hom_of_isEtTower | exact GlobalTheory.FieldPair.isAlgebraic_range_eval₂Hom_of_isEtTower | (intros; apply GlobalTheory.FieldPair.isAlgebraic_range_eval₂Hom_of_isEtTower <;> assumption)
+  exact @GlobalTheory.FieldPair.isAlgebraic_range_eval₂Hom_of_isEtTower

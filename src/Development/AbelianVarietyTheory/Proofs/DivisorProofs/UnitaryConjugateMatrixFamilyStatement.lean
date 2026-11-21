@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryConjugateMatrixFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.unitary_conjugate_matrix_family : ∀ (K : Type) [
     ∃ A' : (K →+* ℂ) → Matrix (Fin n) (Fin n) ℂ, (∀ σ, (A' σ).det ≠ 0) ∧
       (∀ σ, ∃ U ∈ Matrix.unitaryGroup (Fin n) ℂ, A' ((starRingEnd ℂ).comp σ) = (A' σ).map (starRingEnd ℂ) * U) ∧
       ∀ σ : K →+* ℂ, g.map σ * A' σ = A σ * (Matrix.of fun (j : Fin N) (k : Fin n) => if (j : ℕ) = (k : ℕ) then (1 : ℂ) else 0) := by
-  first | exact @GlobalTheory.exists_frames_extend | exact GlobalTheory.exists_frames_extend | (intros; apply GlobalTheory.exists_frames_extend <;> assumption)
+  exact @GlobalTheory.exists_frames_extend

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubquotientTwistFiltration
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.subquotient_twist_filtration : ∀ {G H V : Type} 
     ∃ (t : Fin n) (V' : Type) (_ : AddCommGroup V') (_ : Module ℂ V') (Q' : Representation ℂ H V'),
       GlobalTheory.SmGL.IsSubquotient Q' ((GlobalTheory.SmGL.twist (GlobalTheory.SmGL.subQuot (S t.succ) (S t.castSucc)) χ).comp φ) ∧
       ∃ F' : Q'.IntertwiningMap Y, F' ≠ 0 := by
-  first | exact @GlobalTheory.SmGL.exists_step_subquotient_ne_zero_of_filtration | exact GlobalTheory.SmGL.exists_step_subquotient_ne_zero_of_filtration | (intros; apply GlobalTheory.SmGL.exists_step_subquotient_ne_zero_of_filtration <;> assumption)
+  exact @GlobalTheory.SmGL.exists_step_subquotient_ne_zero_of_filtration

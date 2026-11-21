@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelLevelPPowerFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.integral_model_level_p_power_frame : GlobalTheory.
           w₂ k ∈ P.eigV (embInt c P.integers (conjEmb τ.1))) ∧
         ‖(Matrix.of fun k k' => P.pairV (w₁ k) (∑ m, (β (T (σ (Sum.inl k')) m) : ℂ_[p]) ⊗ₜ[ℤ_[p]] ta m)).det‖ = 1 ∧
         ‖(Matrix.of fun k k' => P.pairV (w₂ k) (∑ m, (β (S (σ (Sum.inr k')) m) : ℂ_[p]) ⊗ₜ[ℤ_[p]] ta m)).det‖ = 1 := by
-  first | exact @GlobalTheory.FlatModel.htAt_dualFam_frame | exact GlobalTheory.FlatModel.htAt_dualFam_frame | (intros; apply GlobalTheory.FlatModel.htAt_dualFam_frame <;> assumption)
+  exact @GlobalTheory.FlatModel.htAt_dualFam_frame

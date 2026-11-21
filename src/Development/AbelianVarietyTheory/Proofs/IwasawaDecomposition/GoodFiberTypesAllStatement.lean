@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.good_fiber_types_all : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AllSt fun _ _ _ _ _ _ x => LA hL x → GoodFTAll (Dof x) := by
-  first | exact @GlobalTheory.GoodFirst.goodFTAll_allSt | exact GlobalTheory.GoodFirst.goodFTAll_allSt | (intros; apply GlobalTheory.GoodFirst.goodFTAll_allSt <;> assumption)
+  exact @GlobalTheory.GoodFirst.goodFTAll_allSt

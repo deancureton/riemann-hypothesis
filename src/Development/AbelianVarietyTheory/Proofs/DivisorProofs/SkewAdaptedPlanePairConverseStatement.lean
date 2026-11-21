@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_converse : GlobalTheory.Th
         (∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), S (M.co.rho B.ψ u Φ) = S Φ) →
         (∀ l ∈ (adeleClass F).adm (Fin n × Fin d₁), l ∘ₗ S ∈ (adeleClass F).adm (Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), S Φ = c • e Φ := by
-  first | exact @GlobalTheory.EvZeroUniq.main | exact GlobalTheory.EvZeroUniq.main | (intros; apply GlobalTheory.EvZeroUniq.main <;> assumption)
+  exact @GlobalTheory.EvZeroUniq.main

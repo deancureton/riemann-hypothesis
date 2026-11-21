@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledVacuumConditionStableLatticeStabilizerIne
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.doubledVacuumCondition_stable_latticeStabilizer_in
       Acts (evFin F v) (dd.rho B.ψ (Matrix.fromCols w₁ w₂)) (φ₁)
         (B.ψ (⅟(2 : AF F) * symp (cA σ) (inclR (F := F) (AF F) (θ : E)) (incM F G.V'.J) (dbl (incM F G.W.J))
           (Matrix.fromCols w₁ w₂) (Matrix.fromCols w₁ w₂)) • (φ₁))) := by
-  first | exact @GlobalTheory.DblVacTransport.acts_dblVacCond_of_mem_KAtD | exact GlobalTheory.DblVacTransport.acts_dblVacCond_of_mem_KAtD | (intros; apply GlobalTheory.DblVacTransport.acts_dblVacCond_of_mem_KAtD <;> assumption)
+  exact @GlobalTheory.DblVacTransport.acts_dblVacCond_of_mem_KAtD

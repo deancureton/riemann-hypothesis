@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.kummer_cochain_cup_product_congruence : ∀ (p : �
   Cob1 n H (fun g => (p : Ω) ^ c * ((b g).val : Ω) - (p : Ω) ^ c * A' * ((lq g).val : Ω) - (p : Ω) ^ c * B' * ((lz g).val : Ω)) →
   Cob2 n H (fun g h => (p : Ω) ^ (4 * c) * (((a g).val : Ω) * ((b h).val : Ω)) +
       (p : Ω) ^ (4 * c) * (A * B' - B * A') * (((lz g).val : Ω) * ((lq h).val : Ω))) := by
-  first | exact @GlobalTheory.CuspCup.cup_congruence | exact GlobalTheory.CuspCup.cup_congruence | (intros; apply GlobalTheory.CuspCup.cup_congruence <;> assumption)
+  exact @GlobalTheory.CuspCup.cup_congruence

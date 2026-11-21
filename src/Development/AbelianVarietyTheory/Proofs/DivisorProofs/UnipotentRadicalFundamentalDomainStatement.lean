@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalFundamentalDomain
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_fundamental_domain : ∀ (F E : 
       GlobalTheory.SiegelSet.IsWittFrame σ J X Y → ∀ S : Finset (Fin r),
       ∃ (μ : Measure (GlobalTheory.StdPar.unip σ J X S)) (𝓕 : Set (GlobalTheory.StdPar.unip σ J X S)), μ.IsHaarMeasure ∧
         IsFundamentalDomain ((ratPts σ J).subgroupOf (GlobalTheory.StdPar.unip σ J X S)) 𝓕 μ ∧ μ 𝓕 = 1 := by
-  first | exact @GlobalTheory.StdPar.exists_haar_fundamentalDomain_mass_one | exact GlobalTheory.StdPar.exists_haar_fundamentalDomain_mass_one | (intros; apply GlobalTheory.StdPar.exists_haar_fundamentalDomain_mass_one <;> assumption)
+  exact @GlobalTheory.StdPar.exists_haar_fundamentalDomain_mass_one

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcPeriod
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.GenericSectionExtendsNormalStatement
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_period : ∀ (E : Type) [Field 
     ∀ (ψ : PowerSeries O' →+* V) (gam : FractionRing (PowerSeries O') →+* FractionRing V),
     (∀ r, gam (algebraMap (PowerSeries O') _ r) = algebraMap V _ (ψ r)) →
     ∀ χ : Sp V ⟶ Z.X, spMap gam ≫ x₀ ≫ Z.j = Out.jK V ≫ χ → GlobalTheory.LocM.idlAlong BD.idealSheaf χ = Ideal.span {ψ PowerSeries.X ^ n} := by
-  first | exact @GlobalTheory.ArcOrder.main | exact GlobalTheory.ArcOrder.main | (intros; apply GlobalTheory.ArcOrder.main <;> assumption)
+  exact @GlobalTheory.ArcOrder.main

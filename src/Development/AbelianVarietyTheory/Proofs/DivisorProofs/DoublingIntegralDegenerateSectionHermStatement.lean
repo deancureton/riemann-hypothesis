@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingIntegralDegenerateSectionHerm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.doubling_integral_degenerate_section_herm : Global
     ∀ (μ : Measure (UA σ X.J)) (𝓕 : Set (UA σ X.J)), μ.IsHaarMeasure → IsFundamentalDomain (ratU σ X.J) 𝓕 μ →
       GlobalTheory.Cont.HolValueAt (fun s => ∫ g, flatOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ f s₀ s (i (g, 1)) ∂μ) s₀
         (∫ g in 𝓕, Ψ (i (g, 1)) ∂μ) := by
-  first | exact @GlobalTheory.ThK.Bot.UnfFirst.holValueAt_first | exact GlobalTheory.ThK.Bot.UnfFirst.holValueAt_first | (intros; apply GlobalTheory.ThK.Bot.UnfFirst.holValueAt_first <;> assumption)
+  exact @GlobalTheory.ThK.Bot.UnfFirst.holValueAt_first

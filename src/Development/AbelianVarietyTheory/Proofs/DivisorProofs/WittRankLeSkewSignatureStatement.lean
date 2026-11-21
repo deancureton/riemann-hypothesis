@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.witt_rank_le_skew_signature : ∀ (F E : Type) [Fi
     (B : Base F E) (n : ℕ) (W : Spc F E n) (r' s' : ℕ), B.IsGood σ → W.IsSkew σ B r' s' →
     ∀ (c : E), c ≠ 0 → σ c = -c → ∀ (r : ℕ) (Xf Yf : Matrix (Fin n) (Fin r) E), IsWittFrame σ (c • W.J.map σ) Xf Yf →
       r ≤ r' ∧ r ≤ s' := by
-  first | exact @GlobalTheory.WittBound.wittIndex_le | exact GlobalTheory.WittBound.wittIndex_le | (intros; apply GlobalTheory.WittBound.wittIndex_le <;> assumption)
+  exact @GlobalTheory.WittBound.wittIndex_le

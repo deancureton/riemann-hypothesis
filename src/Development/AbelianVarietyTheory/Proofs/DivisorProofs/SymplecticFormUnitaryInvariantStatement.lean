@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticFormUnitaryInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.symplectic_form_unitary_invariant : ∀ (F E : Typ
     (X : Spc F E n) (W : Spc F E d) (g : UA σ X.J) (h : UA σ W.J) (x u : Matrix (Fin n) (Fin d) (AE F E)),
     symp (cA σ) (-1) (incM F X.J) (incM F W.J) (mat g * x * (mat h)ᵀ) (mat g * u * (mat h)ᵀ) =
       symp (cA σ) (-1) (incM F X.J) (incM F W.J) x u := by
-  first | exact @GlobalTheory.SympInv.symp_act | exact GlobalTheory.SympInv.symp_act | (intros; apply GlobalTheory.SympInv.symp_act <;> assumption)
+  exact @GlobalTheory.SympInv.symp_act

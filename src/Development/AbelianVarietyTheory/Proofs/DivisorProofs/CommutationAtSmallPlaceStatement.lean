@@ -5,4 +5,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.commutation_at_small_place : InRange fun _ _ _ _ p j P _ w => SmallAt p j P w → CommAt p j P w := by
-  first | exact @GlobalTheory.HeckeCommFrame.comm | exact GlobalTheory.HeckeCommFrame.comm | (intros; apply GlobalTheory.HeckeCommFrame.comm <;> assumption)
+  exact @GlobalTheory.HeckeCommFrame.comm

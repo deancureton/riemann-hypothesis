@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalOfGammaStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_of_gamma_stabilizer : ∀ (R : T
     (N : Matrix (Fin n) (Fin n) R)ᵀ * GlobalTheory.SplitCoord.gam e (K : Matrix (Fin m) (Fin m) R) * (N' : Matrix (Fin n) (Fin n) R) =
       GlobalTheory.SplitCoord.gam e (K : Matrix (Fin m) (Fin m) R) →
     N' ∈ GlobalTheory.SmGL.unipRad R e := by
-  first | exact @GlobalTheory.SplitCoord.UnipDual.unipRad_dual | exact GlobalTheory.SplitCoord.UnipDual.unipRad_dual | (intros; apply GlobalTheory.SplitCoord.UnipDual.unipRad_dual <;> assumption)
+  exact @GlobalTheory.SplitCoord.UnipDual.unipRad_dual

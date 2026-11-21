@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPAdicArcBase
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_integral : ∀ (E : Type) [Fiel
         IsArcBase O' ϖ → IsArcChart Y (GlobalTheory.PolArc.moveV bV hbV b' a) ϖ χ₀ →
         ∀ x₀ : Sp (FractionRing (PowerSeries O')) ⟶ Xo.XF c, Out.jK (PowerSeries O') ≫ χ₀ = x₀ ≫ Y.j →
         ∀ χ : Sp (PowerSeries O') ⟶ Z.X, Out.jK (PowerSeries O') ≫ χ = x₀ ≫ Z.j → IsArcChart Z a ϖ χ := by
-  first | exact @GlobalTheory.ArcChartExt.isArcChart_extend | exact GlobalTheory.ArcChartExt.isArcChart_extend | (intros; apply GlobalTheory.ArcChartExt.isArcChart_extend <;> assumption)
+  exact @GlobalTheory.ArcChartExt.isArcChart_extend

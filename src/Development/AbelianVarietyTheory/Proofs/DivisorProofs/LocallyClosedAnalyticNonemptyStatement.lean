@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyClosedAnalyticNonempty
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.torsion_kernel_finite_presentation : ∀ (R : Type
       QuasiSeparated (pullback.fst ((𝟙 G) ^ N : G ⟶ G).left η[G].left ≫ G.hom) ∧
       LocallyQuasiFinite (pullback.fst ((𝟙 G) ^ N : G ⟶ G).left η[G].left ≫ G.hom) ∧
       Flat (pullback.fst ((𝟙 G) ^ N : G ⟶ G).left η[G].left ≫ G.hom) := by
-  first | exact @GlobalTheory.SemiAbKer.kernel_props | exact GlobalTheory.SemiAbKer.kernel_props | (intros; apply GlobalTheory.SemiAbKer.kernel_props <;> assumption)
+  exact @GlobalTheory.SemiAbKer.kernel_props

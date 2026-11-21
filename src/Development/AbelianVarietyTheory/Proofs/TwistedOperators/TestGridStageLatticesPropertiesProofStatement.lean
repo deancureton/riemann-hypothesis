@@ -22,4 +22,4 @@ open GlobalTheory.SepRows GlobalTheory.CoreOnto
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.testGridStageLatticesProperties_proof : StageOK := by
-  first | exact @GlobalTheory.CoreOnto.StageProof.stageOK | exact GlobalTheory.CoreOnto.StageProof.stageOK | (intros; apply GlobalTheory.CoreOnto.StageProof.stageOK <;> assumption)
+  exact @GlobalTheory.CoreOnto.StageProof.stageOK

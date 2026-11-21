@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlanePairRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_pair_restriction : GlobalTheory.T
         ∀ w : Fin d → E, (∀ i, ∃ o : 𝓞 E, (N : E) * w i = o) → ∀ ξ : Fin d₂ × Fin d → F,
           e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))) (fun i => algebraMap F (AF F) (ξ i)) ≠ 0 →
           ∀ i, IsIntegral ℤ ((m : F) * ξ i) := by
-  first | exact @GlobalTheory.EvPtDenom.main | exact GlobalTheory.EvPtDenom.main | (intros; apply GlobalTheory.EvPtDenom.main <;> assumption)
+  exact @GlobalTheory.EvPtDenom.main

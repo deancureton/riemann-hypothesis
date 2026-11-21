@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicFixedVectorDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.parabolic_fixed_vector_decomposition : ∀ (F E : 
     ∀ p ∈ UAt σ G.V (evI F), mat p *ᵥ incV F H.x = incV F H.x →
       ∃ (n m : UA σ G.V.J) (g₀ : UA σ G₁.V.J), n ∈ unip σ G.V H ∧ n ∈ UAt σ G.V (evI F) ∧
         IsLevi (W₁ := G₁.V) H 1 g₀ m ∧ m ∈ UAt σ G.V (evI F) ∧ g₀ ∈ UAt σ G₁.V (evI F) ∧ p = n * m := by
-  first | exact @GlobalTheory.StabDecInf.stab_decomp_inf | exact GlobalTheory.StabDecInf.stab_decomp_inf | (intros; apply GlobalTheory.StabDecInf.stab_decomp_inf <;> assumption)
+  exact @GlobalTheory.StabDecInf.stab_decomp_inf

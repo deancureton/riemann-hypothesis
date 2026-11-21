@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BranchingPairingArchimedeanBoundFockNorm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BrPairFApply
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsFunForm
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.branchingPairing_archimedean_bound_fockNorm : ∀ 
       (pairK Λ (fun _ => (1 : Matrix (Fin N) (Fin N) ℂ)) (GlobalTheory.CoefModel.mapVV φ Λ u) (GlobalTheory.CoefModel.mapVV φ Λ u)).re *
       (pairK (fun τ => (σ τ).dual) (fun _ => (1 : Matrix (Fin n) (Fin n) ℂ)) (GlobalTheory.CoefModel.mapVV φ _ v)
         (GlobalTheory.CoefModel.mapVV φ _ v)).re := by
-  first | exact @GlobalTheory.BrPairBound.inf_bound | exact GlobalTheory.BrPairBound.inf_bound | (intros; apply GlobalTheory.BrPairBound.inf_bound <;> assumption)
+  exact @GlobalTheory.BrPairBound.inf_bound

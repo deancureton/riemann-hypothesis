@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralRationalPairFundDomainEqIterated
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRatPairIff
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.lintegral_rationalPair_fundDomain_eq_iterated : �
     ∃ c₁ : ENNReal, c₁ ≠ 0 ∧ c₁ ≠ ⊤ ∧ ∀ G : (κ → AF F) × (κ → AF F) → ENNReal, @Measurable _ _ (borel _) _ G →
       (∀ γ ∈ GlobalTheory.WeilUnitaryTransport.ratPair F κ, ∀ w, G (γ + w) = G w) →
       ∫⁻ w in 𝓕, G w ∂ν = c₁ * ∫⁻ x in 𝓕₁, ∫⁻ y in 𝓕₁, G (x, y) ∂μ ∂μ := by
-  first | exact @GlobalTheory.PeriodicIterated.lintegral_ratPair_fundamentalDomain_eq_iterated | exact GlobalTheory.PeriodicIterated.lintegral_ratPair_fundamentalDomain_eq_iterated | (intros; apply GlobalTheory.PeriodicIterated.lintegral_ratPair_fundamentalDomain_eq_iterated <;> assumption)
+  exact @GlobalTheory.PeriodicIterated.lintegral_ratPair_fundamentalDomain_eq_iterated

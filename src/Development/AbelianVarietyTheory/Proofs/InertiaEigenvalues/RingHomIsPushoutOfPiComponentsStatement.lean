@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.RingHomIsPushoutOfPiComponents
-import Mathlib
 open TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.ringHom_isPushout_of_pi_components : ∀ {A P A' P' : Type} [CommRing A] [CommRing P] [CommRing A'] [CommRing P'] {n : ℕ}
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.ringHom_isPushout_of_pi_components : ∀ {A P A' P
       (CommRingCat.ofHom (kk i)) (CommRingCat.ofHom (hh i))) →
     CategoryTheory.IsPushout (CommRingCat.ofHom f) (CommRingCat.ofHom k) (CommRingCat.ofHom k')
       (CommRingCat.ofHom h') := by
-  first | exact @GlobalTheory.isPushout_of_pi_components | exact GlobalTheory.isPushout_of_pi_components | (intros; apply GlobalTheory.isPushout_of_pi_components <;> assumption)
+  exact @GlobalTheory.isPushout_of_pi_components

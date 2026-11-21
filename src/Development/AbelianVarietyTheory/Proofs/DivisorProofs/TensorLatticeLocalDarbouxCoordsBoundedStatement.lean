@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorLatticeLocalDarbouxCoordsBounded
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.tensorLattice_localDarbouxCoords_bounded : ∀ {F 
     ∃ c : Fv F v, c ≠ 0 ∧ ∀ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.latAtV X Y v, ∀ i,
       c * (GlobalTheory.LatVac.locCo co v γ).1 i ∈ v.adicCompletionIntegers F ∧
       c * (GlobalTheory.LatVac.locCo co v γ).2 i ∈ v.adicCompletionIntegers F := by
-  first | exact @GlobalTheory.LatBound.locCo_latAtV_bounded | exact GlobalTheory.LatBound.locCo_latAtV_bounded | (intros; apply GlobalTheory.LatBound.locCo_latAtV_bounded <;> assumption)
+  exact @GlobalTheory.LatBound.locCo_latAtV_bounded

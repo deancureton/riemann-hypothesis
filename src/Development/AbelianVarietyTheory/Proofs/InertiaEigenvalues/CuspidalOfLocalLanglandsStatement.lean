@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cuspidal_of_local_langlands : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (T : GlobalTheory.RowTie.WDTie D.nd D.naut), CGTrue hL D T → CuspRead (recT T hL) := by
-  first | exact @GlobalTheory.CuspReadTrue.cuspRead_recT | exact GlobalTheory.CuspReadTrue.cuspRead_recT | (intros; apply GlobalTheory.CuspReadTrue.cuspRead_recT <;> assumption)
+  exact @GlobalTheory.CuspReadTrue.cuspRead_recT

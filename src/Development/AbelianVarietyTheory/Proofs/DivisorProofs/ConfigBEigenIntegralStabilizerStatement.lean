@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenIntegralStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_b_eigen_integral_stabilizer : GlobalTheory.
       ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h₁ m, IsLevi H' 1 h₁ m → ∀ h,
         GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (((a - (b + 2)) / 2 + 1 : ℕ) : ℂ) (m * h) =
           G₁.M'.I om₁' (cone B G.M' om' e' K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (om' (1, h) Φ')) h₁ := by
-  first | exact @GlobalTheory.ConeSmall.coneI_levi | exact GlobalTheory.ConeSmall.coneI_levi | (intros; apply GlobalTheory.ConeSmall.coneI_levi <;> assumption)
+  exact @GlobalTheory.ConeSmall.coneI_levi

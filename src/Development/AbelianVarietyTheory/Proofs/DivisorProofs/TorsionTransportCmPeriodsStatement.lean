@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionTransportCmPeriods
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.torsion_transport_cm_periods : GlobalTheory.Publis
               u'.IsDiff (fun j ↦ g (Ω₀ * w j) / Ω₁) v') ∧
           (∀ x x' : E, ((upIdele K E t : Af E) * algebraMap E (Af E) x' - algebraMap E (Af E) x) * ((y⁻¹ : (Af E)ˣ) : Af E) ∈ hatO c →
             (u'.ex (fun j ↦ g (φ (T.U.e j) x'))).left ≫ p = spMap (g : ℂ →+* ℂ) ≫ (T.U.u.ex (fun j ↦ φ (T.U.e j) x)).left) := by
-  first | exact @GlobalTheory.ConjCMPoint.conjUnif_of_torsTransport | exact GlobalTheory.ConjCMPoint.conjUnif_of_torsTransport | (intros; apply GlobalTheory.ConjCMPoint.conjUnif_of_torsTransport <;> assumption)
+  exact @GlobalTheory.ConjCMPoint.conjUnif_of_torsTransport

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaPairCompactLineAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolActs
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.theta_pair_compact_line_action : GlobalTheory.FunP
       (∀ Ψ ∈ N, ∀ Ψ₁ ∈ GlobalTheory.ThK.PolData B M,
         (∀ x, HasDerivAt (fun t : ℝ => om (1, γ (Multiplicative.ofAdd t)) Ψ x) (Ψ₁ x) 0) → Ψ₁ ∈ N) →
       ∀ Φ ∈ N, Φ ∈ GlobalTheory.ThK.PolData B M → om (1, γ (Multiplicative.ofAdd (1 : ℝ))) Φ ∈ N := by
-  first | exact @GlobalTheory.KExpLineW.stab_line | exact GlobalTheory.KExpLineW.stab_line | (intros; apply GlobalTheory.KExpLineW.stab_line <;> assumption)
+  exact @GlobalTheory.KExpLineW.stab_line

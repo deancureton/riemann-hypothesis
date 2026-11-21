@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEvaluationStabilizerVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_evaluation_stabilizer_vanishing : GlobalT
       ∀ μY : Measure (Fin b × Fin (b + a') → AF F), μY.IsAddHaarMeasure →
       AEStronglyMeasurable (fun p : K × ((AE F E)ˣ × (Fin b × Fin (b + a') → AF F)) => e (G.M.co.rho B.ψ (shiftA H H' p.2.1) (om (p.1.1, 1) Ψ)) p.2.2 * (X.ν p.2.1 : ℂ) *
           ((absE F E p.2.1 : ℝ) : ℂ) ^ ((b + 2 - a') / 2)) (μK.prod (μ.prod μY)) := by
-  first | exact @GlobalTheory.ConeMeas.coneIntegrand_aestronglyMeasurable | exact GlobalTheory.ConeMeas.coneIntegrand_aestronglyMeasurable | (intros; apply GlobalTheory.ConeMeas.coneIntegrand_aestronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeMeas.coneIntegrand_aestronglyMeasurable

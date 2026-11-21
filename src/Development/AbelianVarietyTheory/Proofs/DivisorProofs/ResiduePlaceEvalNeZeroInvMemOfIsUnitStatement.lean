@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ResiduePlaceEvalNeZeroInvMemOfIsUnit
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.residuePlace_eval_ne_zero_inv_mem_of_isUnit : ∀ 
   (∀ P : MvPolynomial (Fin m) ℂ, P ≠ 0 → IsUnit (MvPolynomial.eval₂ (cL.codRestrict Q hQ.const_mem) z P)) →
   ∀ P : MvPolynomial (Fin m) ℂ, P ≠ 0 → MvPolynomial.eval₂ cK (fun i => ψ (zs i)) P ≠ 0 ∧
     (MvPolynomial.eval₂ cK (fun i => ψ (zs i)) P)⁻¹ ∈ F.ring := by
-  first | exact @GlobalTheory.FieldPair.eval₂_residue_ne_zero_and_inv_mem_of_isUnit | exact GlobalTheory.FieldPair.eval₂_residue_ne_zero_and_inv_mem_of_isUnit | (intros; apply GlobalTheory.FieldPair.eval₂_residue_ne_zero_and_inv_mem_of_isUnit <;> assumption)
+  exact @GlobalTheory.FieldPair.eval₂_residue_ne_zero_and_inv_mem_of_isUnit

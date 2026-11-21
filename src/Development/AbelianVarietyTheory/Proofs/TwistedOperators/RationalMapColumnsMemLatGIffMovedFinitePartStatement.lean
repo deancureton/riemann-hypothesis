@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RationalMapColumnsMemLatGIffMovedFinitePart
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaAtEqProdAhG
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.L2.Pj Formalism.IndefR.Datum ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.rationalMap_columns_mem_latG_iff_moved_finitePart 
       (∀ a, (fun m => ∑ n, Yr m n * b n a) ∈ latG (Wc D i) y) ↔
         actO (Vc D i) (Wc D i) 1 y⁻¹ (ratW (Wc D i) (Vc D i) Yr - GlobalTheory.IndefiniteRowSideFullHecke.OrthonormalLatticeThetaValues.realPt (Vc D i) (Wc D i) Yr) ∈
           latO (Vc D i) (Wc D i) (R.ΛV i) (R.ΛW i) fun _ => True := by
-  first | exact @GlobalTheory.ColSplit.cols_mem_iff | exact GlobalTheory.ColSplit.cols_mem_iff | (intros; apply GlobalTheory.ColSplit.cols_mem_iff <;> assumption)
+  exact @GlobalTheory.ColSplit.cols_mem_iff

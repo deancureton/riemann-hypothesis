@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleArchimedeanConstant
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_archimedean_constant : GlobalTheor
             GlobalTheory.BotFormula.IsFinPt WW g h → GlobalTheory.BotFormula.IsFinPt A y x →
             GlobalTheory.AdForm.xiN W.θ A WW ea.symm ed.symm r rc (fun w => starRingEnd ℂ (X.ω s (y, g) (X.f s) w)) =
               (κ * starRingEnd ℂ u) • P.W.Om x h P.F := by
-  first | exact @GlobalTheory.ReadMatch.bottom_reading | exact GlobalTheory.ReadMatch.bottom_reading | (intros; apply GlobalTheory.ReadMatch.bottom_reading <;> assumption)
+  exact @GlobalTheory.ReadMatch.bottom_reading

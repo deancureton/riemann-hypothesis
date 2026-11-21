@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RestrictionLineOperatorSum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.restriction_line_operator_sum : GlobalTheory.FunPr
     ∀ u, HasDerivAt (fun t : ℝ => GlobalTheory.WeilM.thetaSum F (G.M.co.rho B.ψ u
         (om (1, γ (Multiplicative.ofAdd t)) (∑ i, tens (evI F) (⇑(f i)) (r i)))))
       (GlobalTheory.WeilM.thetaSum F (G.M.co.rho B.ψ u (∑ i, tens (evI F) (⇑(f₁ i)) (r i)))) 0 := by
-  first | exact @GlobalTheory.ThetaLineDeriv.main | exact GlobalTheory.ThetaLineDeriv.main | (intros; apply GlobalTheory.ThetaLineDeriv.main <;> assumption)
+  exact @GlobalTheory.ThetaLineDeriv.main

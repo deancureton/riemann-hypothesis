@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlacesBoundTuple
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.seesaw_left_restriction_levi : ∀ (F E : Type) [F
           et (dd.rho B.ψ (w * (dblEmb H.ι)ᵀ + u) Φ) = dd₁.rho B.ψ w (et Φ)) →
         (∀ l ∈ (adeleClass F).adm ((Fin n₁ × Fin d) ⊕ (Fin n₁ × Fin d)), l ∘ₗ et ∈ (adeleClass F).adm ((Fin n × Fin d) ⊕ (Fin n × Fin d))) →
         ∀ gd₁ md, IsDLevi H gd₁ md → ∃ c : ℂ, ∀ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), et (omd md Φ) = c • omd₁ gd₁ (et Φ) := by
-  first | exact @GlobalTheory.MixXDblInt.intertwine | exact GlobalTheory.MixXDblInt.intertwine | (intros; apply GlobalTheory.MixXDblInt.intertwine <;> assumption)
+  exact @GlobalTheory.MixXDblInt.intertwine

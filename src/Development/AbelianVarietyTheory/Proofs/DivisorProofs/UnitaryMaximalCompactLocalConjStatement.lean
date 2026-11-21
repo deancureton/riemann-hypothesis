@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.unitary_maximal_compact_local_conj : ∀ (F E : Ty
       ∀ i ∈ S, i.val + 1 ≤ n ∧ ∀ (hi : i.val + 1 ≤ n) (ϖ : (Fv F v)ˣ) (L : List ℂ),
         (∀ w, polyAt (jac (blockIndex hi) π (blockScalar₂ (Fv F v) n i ϖ)) L w = 0) →
         ∃ c ∈ L, ‖c‖ = nabs (Fv F v) ϖ ^ (s i).re := by
-  first | exact @GlobalTheory.LeviBlockRealization.exists_norm_eq_rpow | exact GlobalTheory.LeviBlockRealization.exists_norm_eq_rpow | (intros; apply GlobalTheory.LeviBlockRealization.exists_norm_eq_rpow <;> assumption)
+  exact @GlobalTheory.LeviBlockRealization.exists_norm_eq_rpow

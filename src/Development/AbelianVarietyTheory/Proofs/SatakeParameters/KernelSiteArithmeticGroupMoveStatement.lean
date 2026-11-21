@@ -5,4 +5,4 @@ open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kernelSite_arithmeticGroup_move : Sites (fun {D L hT Gi Gl Kc Dx cX ex u μ w hg Lv I H X} [Fact (D.what₂.places.resChar w).Prime] {std t J} S => S.Pos → S.Pair → S.Move) := by
-  first | exact @GlobalTheory.TwV.Xc.site_move | exact GlobalTheory.TwV.Xc.site_move | (intros; apply GlobalTheory.TwV.Xc.site_move <;> assumption)
+  exact @GlobalTheory.TwV.Xc.site_move

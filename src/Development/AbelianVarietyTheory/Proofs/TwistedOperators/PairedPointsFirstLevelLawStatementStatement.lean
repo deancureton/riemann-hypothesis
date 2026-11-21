@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairedPointsFirstLevelLawStatement
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.paired_points_first_level_law_statement : GlobalTh
       GlobalTheory.ExpansionInvariance.pairPts ch.S.toGridChoice τ x (Function.update y 0 (y 0 * k)) v
         ((((levEnv D.sp.X' R.βX (R.datXt t)).χ ⟨toXf k, hk⟩ : ℂˣ) : ℂ) • w) =
       GlobalTheory.ExpansionInvariance.pairPts ch.S.toGridChoice τ x y v w := by
-  first | exact @GlobalTheory.FirstRowVertex.paired_points_first_level_law | exact GlobalTheory.FirstRowVertex.paired_points_first_level_law | (intros; apply GlobalTheory.FirstRowVertex.paired_points_first_level_law <;> assumption)
+  exact @GlobalTheory.FirstRowVertex.paired_points_first_level_law

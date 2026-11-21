@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFromBlocksNegOfDiagBasisTransport
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unitary_fromBlocks_neg_of_diag_basis_transport : �
     Mᵀ * Matrix.fromBlocks K 0 0 (-K) * M.map γ = Matrix.fromBlocks K 0 0 (-K) →
     M * Matrix.fromBlocks P 0 0 P = Matrix.fromBlocks P 0 0 P * G.map ι →
     Gᵀ * Matrix.fromBlocks JL 0 0 (-JL) * G.map c = Matrix.fromBlocks JL 0 0 (-JL) := by
-  first | exact @GlobalTheory.fromBlocks_unitary_transfer | exact GlobalTheory.fromBlocks_unitary_transfer | (intros; apply GlobalTheory.fromBlocks_unitary_transfer <;> assumption)
+  exact @GlobalTheory.fromBlocks_unitary_transfer

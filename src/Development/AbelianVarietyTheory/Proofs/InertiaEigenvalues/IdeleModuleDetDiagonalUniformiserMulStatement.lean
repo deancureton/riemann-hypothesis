@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IdeleModuleDetDiagonalUniformiserMul
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocFacOfNeg
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemMspan
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.ideleModule_det_diagonalUniformiser_mul : ∀ (E :
     ∀ (l : HeightOneSpectrum (𝓞 E) →₀ (Fin n → ℤ)) (g : GA E n),
       (ideleModule E (GeneralLinearGroup.det (GlobalTheory.CellDec.tl n ϖ l * g)) : ℝ) =
         (∏ v ∈ l.support, ((qV E v : ℝ) ^ (∑ i, l v i))⁻¹) * (ideleModule E (GeneralLinearGroup.det g) : ℝ) := by
-  first | exact @GlobalTheory.CellDec.DetMod.ideleModule_det_tl_mul | exact GlobalTheory.CellDec.DetMod.ideleModule_det_tl_mul | (intros; apply GlobalTheory.CellDec.DetMod.ideleModule_det_tl_mul <;> assumption)
+  exact @GlobalTheory.CellDec.DetMod.ideleModule_det_tl_mul

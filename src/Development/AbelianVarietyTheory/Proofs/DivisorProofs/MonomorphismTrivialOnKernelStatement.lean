@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MonomorphismTrivialOnKernel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.monomorphism_trivial_on_kernel : ∀ (R R₀ : Typ
     ∀ (n : ℕ) (D : Over (Sp R)) [GrpObj D], IsSeparated D.hom → ∀ (x : Fin n → (A ⟶ D)), (∀ j, IsMonHom (x j)) →
     (∀ (T₀ : Over (Sp R₀)) (y : Over.mk (T₀.hom ≫ spMap π) ⟶ A), (∀ j, y ≫ x j = 1) → y = 1) →
     ∀ (T : Over (Sp R)) (y : T ⟶ A), (∀ j, y ≫ x j = 1) → y = 1 := by
-  first | exact @GlobalTheory.KernelThickening.kernel_trivial_of_nilpotent | exact GlobalTheory.KernelThickening.kernel_trivial_of_nilpotent | (intros; apply GlobalTheory.KernelThickening.kernel_trivial_of_nilpotent <;> assumption)
+  exact @GlobalTheory.KernelThickening.kernel_trivial_of_nilpotent

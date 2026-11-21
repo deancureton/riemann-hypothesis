@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalFramesGiveFlag
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
@@ -11,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory G
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_frames_give_flag : ∀ {F : Type} [Field F] [NumberField F] {Y : Var F} {C : CxSt F} {N : ℕ} (A : Fin N → Adl C Y) (p : ℕ), LocFrames A p → LocFlag A p := by
-  first | exact @GlobalTheory.TrivFlag.locFlag_of_locFrames | exact GlobalTheory.TrivFlag.locFlag_of_locFrames | (intros; apply GlobalTheory.TrivFlag.locFlag_of_locFrames <;> assumption)
+  exact @GlobalTheory.TrivFlag.locFlag_of_locFrames

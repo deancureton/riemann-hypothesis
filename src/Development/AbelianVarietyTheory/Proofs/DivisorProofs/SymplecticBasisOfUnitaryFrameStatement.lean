@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticBasisOfUnitaryFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DualRestrictSurjectiveOfIsTorsionFreeQuotient
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.symplectic_basis_of_unitary_frame : ∀ {F E : Typ
       (∀ k, (∀ i, k ∉ blk i) → ∀ (l : Fin d) (i : Fin q),
         form σ J (fun r => b (.inl k) r l) (x i) = 0 ∧ form σ J (fun r => b (.inl k) r l) (y i) = 0 ∧
         form σ J (fun r => b (.inr k) r l) (x i) = 0 ∧ form σ J (fun r => b (.inr k) r l) (y i) = 0) := by
-  first | exact @GlobalTheory.ThKTorus.exists_frame_symplectic_basis | exact GlobalTheory.ThKTorus.exists_frame_symplectic_basis | (intros; apply GlobalTheory.ThKTorus.exists_frame_symplectic_basis <;> assumption)
+  exact @GlobalTheory.ThKTorus.exists_frame_symplectic_basis

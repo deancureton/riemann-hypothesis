@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.line_action_derivative_pure_tensor : ∀ (F E : Ty
     ∀ φ : ∀ v : Pl F, (Fin a × Fin (a + a') → Fv F v) → ℂ, (∀ v, φ v ∈ GlobalTheory.WeilM.SB _) →
     (∀ᶠ v in Filter.cofinite, φ v = G.M.vac v) → ∀ g h,
     HasDerivAt (fun s : ℝ => theta om (pure f φ) g (h * γ (Multiplicative.ofAdd s))) (theta om (pure f₁ φ) g h) 0 := by
-  first | exact @GlobalTheory.ThKKernelLine.hasDerivAt_theta_line | exact GlobalTheory.ThKKernelLine.hasDerivAt_theta_line | (intros; apply GlobalTheory.ThKKernelLine.hasDerivAt_theta_line <;> assumption)
+  exact @GlobalTheory.ThKKernelLine.hasDerivAt_theta_line

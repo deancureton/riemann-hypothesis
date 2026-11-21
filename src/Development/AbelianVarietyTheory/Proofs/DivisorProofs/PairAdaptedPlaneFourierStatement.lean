@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedPlaneFourier
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_fourier : GlobalTheory.ThK.KP �
     ∀ Φ ∈ schA F (Fin n × Fin d), ∀ g : UA σ X.J, ∀ K : Set (UA σ X.J), IsCompact K → K ⊆ unip σ X H →
       ∀ K' : ℕ, ∃ (C : ℝ) (k : ℕ), ∀ u ∈ K, ∀ h : UA σ W.J, ∀ N : ℕ, 1 ≤ N → ∀ w : Fin d → E, (∀ i, ∃ o : 𝓞 E, (N : E) * w i = o) →
         ‖thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))))‖ * (1 + ∑ i, ∑ v : InfinitePlace E, v (w i)) ^ K' ≤ C * ((N : ℝ) * ht h) ^ k := by
-  first | exact @GlobalTheory.KernelBoundOnKDecay.decay | exact GlobalTheory.KernelBoundOnKDecay.decay | (intros; apply GlobalTheory.KernelBoundOnKDecay.decay <;> assumption)
+  exact @GlobalTheory.KernelBoundOnKDecay.decay

@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.generic_span_submodule_section_sum : ∀ {X : Sche
     (∀ hV : genericPoint X ∈ V, N = Submodule.span X.functionField ((fun z => F.presheaf.germ V _ hV (c z)) '' {z | Q z})) →
     ∀ (V' : X.Opens) (h : V' ≤ V) (a : κ → Γ(X, V')),
       (∑ z, a z • resM F h (c z)) ∈ (Sub.ofGeneric N).sec V' ↔ ∀ z, ¬ Q z → a z = 0 := by
-  first | exact @GlobalTheory.GrFilt.mem_ofGeneric_iff_of_span | exact GlobalTheory.GrFilt.mem_ofGeneric_iff_of_span | (intros; apply GlobalTheory.GrFilt.mem_ofGeneric_iff_of_span <;> assumption)
+  exact @GlobalTheory.GrFilt.mem_ofGeneric_iff_of_span

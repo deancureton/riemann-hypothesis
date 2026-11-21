@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalModelNonvanishingWeights
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppInjectiveOfFrames
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.normal_model_nonvanishing_weights : ∀ (O : Type)
       GlobalTheory.IsNormalScheme B'.X ∧ f.relDim = 0 ∧ ∀ (y : B'.X) (α : A), ∃ i, w α i ≠ 0 ∧ ∀ j, ∃ g,
         GlobalTheory.Cartier.RegAt y g ∧ g * GlobalTheory.TrueGeo.SmallSec.fnMap f.f (specializes_of_eq hη) (w α i) =
           GlobalTheory.TrueGeo.SmallSec.fnMap f.f (specializes_of_eq hη) (w α j) := by
-  first | exact @GlobalTheory.CorankOneNormal.exists_modification | exact GlobalTheory.CorankOneNormal.exists_modification | (intros; apply GlobalTheory.CorankOneNormal.exists_modification <;> assumption)
+  exact @GlobalTheory.CorankOneNormal.exists_modification

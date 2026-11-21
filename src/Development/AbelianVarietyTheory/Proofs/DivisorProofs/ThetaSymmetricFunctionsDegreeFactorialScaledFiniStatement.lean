@@ -10,4 +10,4 @@ open scoped CategoryTheory.Obj
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaSymmetricFunctionsDegreeFactorial_scaled_finite : ∀ (K : Type) [Field K] [IsAlgClosed K] (N : ℕ) (e : Fin N → K), ∃ T : Finset (Fin N → K), ∀ (c : Fin N → K) (a : K), a ≠ 0 → (∀ j, symTup c j = a * e j) → ∃ mu : K, mu ≠ 0 ∧ (fun b => mu * c b) ∈ T := by
-  first | exact @GlobalTheory.UMin.symTup_scale_finite | exact GlobalTheory.UMin.symTup_scale_finite | (intros; apply GlobalTheory.UMin.symTup_scale_finite <;> assumption)
+  exact @GlobalTheory.UMin.symTup_scale_finite

@@ -4,4 +4,4 @@ import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.Archim
 open GlobalTheory.BCT GlobalTheory.UnitaryBC PositivityTheory.Rg.Bc.ArchbcB.B PositivityTheory.Rg.BcB.F.MT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.double_coset_multiplication : DcosMul := by
-  first | exact @GlobalTheory.CompanionTheory.DcosProduct.dcosMul | exact GlobalTheory.CompanionTheory.DcosProduct.dcosMul | (intros; apply GlobalTheory.CompanionTheory.DcosProduct.dcosMul <;> assumption)
+  exact @GlobalTheory.CompanionTheory.DcosProduct.dcosMul

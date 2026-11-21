@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubschemeProjOverModL
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
@@ -10,4 +9,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory G
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.closed_subscheme_proj_over_mod_l : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (q : X ⟶ Sp k) (D : ℕ), IsArithVar q D → ∀ (Z : Scheme.{0}) (i : Z ⟶ X) [IsClosedImmersion i] (l : ℕ) [Fact l.Prime] [Algebra (ZMod l) Γ(Z, ⊤)], IsProjOver (strHom (ZMod l) Z) := by
-  first | exact @GlobalTheory.FibreProj.isProjOver_closed_fibre | exact GlobalTheory.FibreProj.isProjOver_closed_fibre | (intros; apply GlobalTheory.FibreProj.isProjOver_closed_fibre <;> assumption)
+  exact @GlobalTheory.FibreProj.isProjOver_closed_fibre

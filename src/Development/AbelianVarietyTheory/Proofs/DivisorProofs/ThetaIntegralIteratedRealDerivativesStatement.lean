@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.theta_integral_iterated_real_derivatives : ∀ (F 
       (l.map (back hσ G.W.J hc)).foldr (derR om) Φ ∈ GlobalTheory.ThK.PolData B G.M ∧
       l.foldr lineDer (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) =
         fun x => G.M.I om ((l.map (back hσ G.W.J hc)).foldr (derR om) Φ) ((toGAd hσ G.W.J hc).symm x) := by
-  first | exact @GlobalTheory.ThK.ZFinDer.derivs | exact GlobalTheory.ThK.ZFinDer.derivs | (intros; apply GlobalTheory.ThK.ZFinDer.derivs <;> assumption)
+  exact @GlobalTheory.ThK.ZFinDer.derivs

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneHaarDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.skew_plane_haar_decomposition : ∀ (F E : Type) [
       (∀ i, GlobalTheory.StdPar.IsCuspOn σ (c₀ • W₁.J.map σ) Xf Yf S' K₁ (ψs i)) →
       (∀ u ∈ GlobalTheory.StdPar.unip σ (c₀ • W.J.map σ) X' (insert 0 (S'.map (Fin.succEmb r))), ∀ g, Ψ (u * g) = Ψ g) ∧
       (∀ γ ∈ ratPts σ (c₀ • W.J.map σ), γ ∈ GlobalTheory.StdPar.levi σ (c₀ • W.J.map σ) X' Y' (insert 0 (S'.map (Fin.succEmb r))) → ∀ g, Ψ (γ * g) = Ψ g) := by
-  first | exact @GlobalTheory.InducedLeft.left_invariant | exact GlobalTheory.InducedLeft.left_invariant | (intros; apply GlobalTheory.InducedLeft.left_invariant <;> assumption)
+  exact @GlobalTheory.InducedLeft.left_invariant

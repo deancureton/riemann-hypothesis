@@ -1,6 +1,5 @@
 import Mathlib
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.CenterActionCommutesLeviDifference
-import Mathlib
 import CompanionTheory.SpectralGeometry.LocalGlobalProofs.StableLattices.Bdy
 open Finset Polynomial
 open Formalism.REAL (GlRel KHighest IsWeight qdet Tm qminor)
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.center_action_commutes_levi_difference : ∀ (n M 
       (∀ i : Pos n, inU lev i → Commute (E i.1.1 i.1.2) (ev E (fa n Y))) ∧
       ∀ x : V, ∃ w : Pos n → V, ev E (fa n Y) x - evL lev E (fb d h Y) x =
         ∑ i : Pos n, if inU lev i then E i.1.1 i.1.2 (w i) else 0 := by
-  first | exact @GlobalTheory.CompanionTheory.RgCOBlock.co_hyp | exact GlobalTheory.CompanionTheory.RgCOBlock.co_hyp | (intros; apply GlobalTheory.CompanionTheory.RgCOBlock.co_hyp <;> assumption)
+  exact @GlobalTheory.CompanionTheory.RgCOBlock.co_hyp

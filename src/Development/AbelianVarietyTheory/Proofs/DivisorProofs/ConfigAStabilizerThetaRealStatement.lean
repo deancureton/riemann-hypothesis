@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaReal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegralImports
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_theta_real : GlobalTheory.ThK.
     ∀ e, IsEv B G.M G₁.M H.ι H'.ι (isoA H H') e → ∀ (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' →
     ∀ Φ ∈ PolData B G.M, ∀ h, ∃ U : Set (Fin (Module.finrank F E) → Af F), IsCompact U ∧
       ∀ k ∈ K, ∀ l : (AE F E)ˣ, (fun i => (GlobalTheory.XTermMaj.crd F E (l : AE F E) i).2) ∉ U → e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, h) Φ)) = 0 := by
-  first | exact @GlobalTheory.XTermSupp.finsupp | exact GlobalTheory.XTermSupp.finsupp | (intros; apply GlobalTheory.XTermSupp.finsupp <;> assumption)
+  exact @GlobalTheory.XTermSupp.finsupp

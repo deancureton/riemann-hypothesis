@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReducedTripleIsotropicPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.reduced_triple_isotropic_plane : GlobalTheory.ThK.
     ∀ Ψ ∈ G₁.M'.So B.ψ B.τ₁, ∃ c : UA σ G₁.W.J → ℂ, IsCT H₂ (G₁.M'.I om₁' Ψ) c ∧
       GlobalTheory.ConeSmallMid.JRel W₂ H₂ X.α (((b : ℕ) : ℂ) / 2) X.β (((a : ℕ) : ℂ) / 2) c ∧
       GlobalTheory.ConeSmallMid.JRel W₂ H₂ X.β (((a : ℕ) : ℂ) / 2) X.α (((b : ℕ) : ℂ) / 2) c := by
-  first | exact @GlobalTheory.ConeSmallMidJB.jb_datum | exact GlobalTheory.ConeSmallMidJB.jb_datum | (intros; apply GlobalTheory.ConeSmallMidJB.jb_datum <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.jb_datum

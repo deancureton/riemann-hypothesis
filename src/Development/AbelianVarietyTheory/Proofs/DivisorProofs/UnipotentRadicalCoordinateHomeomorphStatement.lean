@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalCoordinateHomeomorph
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_coordinate_homeomorph : ∀ (F E
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∃ χ : unip σ G.V H ≃ₜ (Fin b → AE F E) × GlobalTheory.UnipConj.imLine σ, ∀ n,
       (χ n).1 = GlobalTheory.ThK.UnipDom.coA σ G.V.J H n ∧ ((χ n).2 : AE F E) = GlobalTheory.UnipConj.coT σ G.V.J H n := by
-  first | exact @GlobalTheory.UnipChart.unip_homeo_coords | exact GlobalTheory.UnipChart.unip_homeo_coords | (intros; apply GlobalTheory.UnipChart.unip_homeo_coords <;> assumption)
+  exact @GlobalTheory.UnipChart.unip_homeo_coords

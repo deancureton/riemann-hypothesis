@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentHaarFundamentalDomainUnit
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAutSub
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.unipotent_haar_fundamental_domain_unit : ∀ (F E 
     (∃ K : Set (unip σ Y H), IsCompact K ∧ ∀ u : unip σ Y H, ∃ γ ∈ (ratU σ Y.J).subgroupOf (unip σ Y H), γ * u ∈ K) →
     ∃ (μ : Measure (unip σ Y H)) (𝓕 : Set (unip σ Y H)), μ.IsHaarMeasure ∧
       IsFundamentalDomain ((ratU σ Y.J).subgroupOf (unip σ Y H)) 𝓕 μ ∧ μ 𝓕 = 1 := by
-  first | exact @GlobalTheory.UnipFD.main | exact GlobalTheory.UnipFD.main | (intros; apply GlobalTheory.UnipFD.main <;> assumption)
+  exact @GlobalTheory.UnipFD.main

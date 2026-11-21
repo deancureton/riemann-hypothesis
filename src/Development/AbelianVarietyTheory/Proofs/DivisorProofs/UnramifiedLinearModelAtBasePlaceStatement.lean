@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedLinearModelAtBasePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.unramified_linear_model_at_base_place : GlobalTheo
           Acts (evFin F B.v₁) (om' (1, h)) φ φ₁ ∧
           ι φ₁ = ((χW (GlobalTheory.SplitFlip.gdet M) : ℂ) * GlobalTheory.SplitFlip.apow (GlobalTheory.SplitFlip.gdet M) ((a' : ℂ) / 2)) •
             fun Y => ι φ (Y * M.1) := by
-  first | exact @GlobalTheory.WRightChar.unitaryW_char | exact GlobalTheory.WRightChar.unitaryW_char | (intros; apply GlobalTheory.WRightChar.unitaryW_char <;> assumption)
+  exact @GlobalTheory.WRightChar.unitaryW_char

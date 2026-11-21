@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilDatumTransportCmPreservesAdmissibleForms
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.weilDatumTransport_cm_preserves_admissibleForms : 
             ∀ om : UG (cA σ) (incM F JA) × UG (cA σ) (incM F JB) →* Module.End ℂ ((κ → AF F) → ℂ),
               GlobalTheory.WeilSchrodinger.IsTransportF σ B.ψ co ω om →
               ∀ p, ∀ l ∈ (adeleClass F).adm κ, l ∘ₗ om p ∈ (adeleClass F).adm κ := by
-  first | exact @GlobalTheory.WeilAdmCM.transport_adm | exact GlobalTheory.WeilAdmCM.transport_adm | (intros; apply GlobalTheory.WeilAdmCM.transport_adm <;> assumption)
+  exact @GlobalTheory.WeilAdmCM.transport_adm

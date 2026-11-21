@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSepClosureOfRangeEq
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterDeRham
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.DeRhamJacobian.IsdRJ
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasPeriods
@@ -21,4 +20,4 @@ open scoped GroundTheory.PAdicHodge.CyclNorms
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.is_sep_closure_of_range_eq : ∀ {l : ℕ} [Fact l.Prime] {F : Type} [Field F] [Algebra F (Om l)] (K : FinExt l),
     Set.range (algebraMap F (Om l)) = (K.1 : Set (Om l)) → IsSepClosure F (Om l) := by
-  first | exact @GlobalTheory.CompanionTheory.LTHodge.isSepClosure_Om_of_range | exact GlobalTheory.CompanionTheory.LTHodge.isSepClosure_Om_of_range | (intros; apply GlobalTheory.CompanionTheory.LTHodge.isSepClosure_Om_of_range <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LTHodge.isSepClosure_Om_of_range

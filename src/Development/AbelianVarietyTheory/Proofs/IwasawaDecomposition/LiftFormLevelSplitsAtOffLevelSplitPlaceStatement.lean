@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftFormLevelSplitsAtOffLevelSplitPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NVNeZero
 import Formalism.LocalToGlobal.Columns.MtHeckeSum
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.liftFormLevel_splits_at_offLevel_splitPlace : ∀ 
     ∃ j₁ ∈ (envL X I hX U Xg tr L cV i t).lev.J, ∃ j₂ ∈ (envL X I hX U Xg tr L cV i t).lev.J,
       (envL X I hX U Xg tr L cV i t).isLoc x j₁ ∧ j = j₁ * j₂ ∧
       ∀ l, (envL X I hX U Xg tr L cV i t).isLoc x l → Commute j₂ l := by
-  first | exact @GlobalTheory.Mem.R3.LiftBrg.LevSplitAt.lev_split_at | exact GlobalTheory.Mem.R3.LiftBrg.LevSplitAt.lev_split_at | (intros; apply GlobalTheory.Mem.R3.LiftBrg.LevSplitAt.lev_split_at <;> assumption)
+  exact @GlobalTheory.Mem.R3.LiftBrg.LevSplitAt.lev_split_at

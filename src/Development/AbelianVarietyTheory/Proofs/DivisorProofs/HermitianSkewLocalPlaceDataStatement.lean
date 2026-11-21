@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewLocalPlaceData
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.hermitian_skew_local_place_data : ∀ (F E : Type)
     ∀ v : Pl F, ∀ u ∈ isoB (F := F) H H', At (evFin F v) u → ∀ u' ∈ isoB (F := F) H H', At (evFin F v) u' →
       (GlobalTheory.LatVac.locCo M.co v u).1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u').2 -
         (GlobalTheory.LatVac.locCo M.co v u').1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u).2 = 0 := by
-  first | exact @GlobalTheory.IsoBLoc.isoB_locCo_iso | exact GlobalTheory.IsoBLoc.isoB_locCo_iso | (intros; apply GlobalTheory.IsoBLoc.isoB_locCo_iso <;> assumption)
+  exact @GlobalTheory.IsoBLoc.isoB_locCo_iso

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmAuxiliarySetLevelStructure
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.cm_auxiliary_set_level_structure : GlobalTheory.Pu
       IsPolForm (dp0 R) (𝟙 _) X₀.A (X₀.diag c₀) ((2 : R) • ψ₀) →
       ∀ a b : orderC (condQ 𝔣 Q), (b : E) = IsCMField.complexConj E a → ∀ h h' : HdR X₀.A,
         ψ₀ (act (dp0 R) (𝟙 _) cm a h) h' = ψ₀ h (act (dp0 R) (𝟙 _) cm b h') := by
-  first | exact @GlobalTheory.CMAdjoint.half_form_adjoint | exact GlobalTheory.CMAdjoint.half_form_adjoint | (intros; apply GlobalTheory.CMAdjoint.half_form_adjoint <;> assumption)
+  exact @GlobalTheory.CMAdjoint.half_form_adjoint

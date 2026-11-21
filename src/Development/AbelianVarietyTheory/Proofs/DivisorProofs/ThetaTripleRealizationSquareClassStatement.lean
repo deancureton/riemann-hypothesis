@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTripleRealizationSquareClass
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlipAtEq
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.theta_triple_realization_square_class : ∀ {D : D
         ∃ g, ∃ c' : ℂ, c' ≠ 0 ∧ ∀ φ ∈ GlobalTheory.WeilM.SB _, ∃ φ₃ ∈ GlobalTheory.WeilM.SB _,
           Acts (evFin D.host.F v) (om (1, blkU _ _ e h.JWW g)) φ φ₃ ∧
           ∀ Z, ιA φ₃ Z = c' * ιA φ (Z * (c₀.1 * GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk e K₁.1 K₂.1 * (c₀⁻¹).1)) := by
-  first | exact @GlobalTheory.MixCompare.mixed_compare | exact GlobalTheory.MixCompare.mixed_compare | (intros; apply GlobalTheory.MixCompare.mixed_compare <;> assumption)
+  exact @GlobalTheory.MixCompare.mixed_compare

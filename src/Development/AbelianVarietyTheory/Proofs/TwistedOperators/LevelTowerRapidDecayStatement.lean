@@ -9,4 +9,4 @@ open GlobalTheory.SepRows
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_tower_rapid_decay : GlobalTheory.FunPr.Hypotheses₂ → RowTower → RowRapid := by
-  first | exact @GlobalTheory.SepRows.RowRapidPf.rowRapid | exact GlobalTheory.SepRows.RowRapidPf.rowRapid | (intros; apply GlobalTheory.SepRows.RowRapidPf.rowRapid <;> assumption)
+  exact @GlobalTheory.SepRows.RowRapidPf.rowRapid

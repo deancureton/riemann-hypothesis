@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ScaledLatticeFourierInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenScaledInt
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.scaled_lattice_fourier_invariant : ∀ (F : Type) 
       schr ψ (0, fun i => algebraMap F (AF F) (b i))
           (pureA F f ((GlobalTheory.EvAdm.scaledInt F κ a : Set (κ → FiniteAdeleRing (𝓞 F) F)).indicator (fun _ => (1 : ℂ)))) =
         pureA F f' ((GlobalTheory.EvAdm.scaledInt F κ a : Set (κ → FiniteAdeleRing (𝓞 F) F)).indicator (fun _ => (1 : ℂ))) := by
-  first | exact @GlobalTheory.SchrCharPure.main | exact GlobalTheory.SchrCharPure.main | (intros; apply GlobalTheory.SchrCharPure.main <;> assumption)
+  exact @GlobalTheory.SchrCharPure.main

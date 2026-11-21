@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsVectorMapsIntoIdealOfNotOntoMod
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmHostUnitAddConjEqOne
 
 noncomputable section
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_vector_mapsInto_ideal_of_not_onto_mod : ∀
     (hr : Module.finrank (𝓞 E) Z = Module.finrank (𝓞 E) X) (𝔭 : Ideal (𝓞 E)) (h𝔭 : 𝔭.IsMaximal)
     (hi : img D y Z' 𝔭 ≠ ⊤),
     ∃ v : Z', y v ∈ 𝔭 • (⊤ : Submodule (𝓞 E) X) ∧ ∃ ℓ₀ : Z' →ₗ[𝓞 E] 𝓞 E, ℓ₀ v ∉ 𝔭 := by
-  first | exact @GlobalTheory.LowFilt.IsOpp.exists_ker_vec | exact GlobalTheory.LowFilt.IsOpp.exists_ker_vec | (intros; apply GlobalTheory.LowFilt.IsOpp.exists_ker_vec <;> assumption)
+  exact @GlobalTheory.LowFilt.IsOpp.exists_ker_vec

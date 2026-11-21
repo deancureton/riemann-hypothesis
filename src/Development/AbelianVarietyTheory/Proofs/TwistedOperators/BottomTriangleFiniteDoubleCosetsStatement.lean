@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomTriangleFiniteDoubleCosets
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_finite_double_cosets : ∀ {D : D7
     IsBottomTri W i j X →
     ∀ J : Subgroup (GA D WW), IsOpen (J : Set (GA D WW)) → ∃ H : Finset (GA D WW), (∀ h ∈ H, h ∈ GfC WW) ∧
       ∀ h ∈ GfC WW, ∃ γ ∈ GQ WW, ∃ r ∈ GinfC WW, ∃ h₀ ∈ H, ∃ κ ∈ J, κ ∈ GfC WW ∧ h = γ * r * h₀ * κ := by
-  first | exact @GlobalTheory.BotClassFin.exists_reps | exact GlobalTheory.BotClassFin.exists_reps | (intros; apply GlobalTheory.BotClassFin.exists_reps <;> assumption)
+  exact @GlobalTheory.BotClassFin.exists_reps

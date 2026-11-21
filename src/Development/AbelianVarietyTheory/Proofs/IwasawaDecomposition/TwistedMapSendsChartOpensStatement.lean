@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TwistedMapSendsChartOpens
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizationBaseChangeModels
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.twisted_map_sends_chart_opens : ∀ (E : Type) [Fi
         (m : SABMap t' Z'.t (spMap f ≫ hU'.fromSpec)), ∃ v' : Fin M.n → (epsR R' ⟶ t'.G),
         (∀ j, (v' j).left ≫ m.φ = spMap (ReciprocityTheory.ChartRestriction.G.Chart.dualMapR f) ≫ v₀ j) ∧ IsLieBasis v' ∧
           ∀ a j, IsLieComb (fun i => f (ρ a i j)) v' (v' j ≫ t'.act.act a) := by
-  first | exact @GlobalTheory.LiePull.lie_pull | exact GlobalTheory.LiePull.lie_pull | (intros; apply GlobalTheory.LiePull.lie_pull <;> assumption)
+  exact @GlobalTheory.LiePull.lie_pull

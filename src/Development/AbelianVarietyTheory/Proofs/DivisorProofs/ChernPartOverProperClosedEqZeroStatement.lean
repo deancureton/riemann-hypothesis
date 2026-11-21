@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChernPartOverProperClosedEqZero
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -12,4 +11,4 @@ open MeasureTheory GlobalTheory.CxPts GlobalTheory.ChartGlue GlobalTheory.Points
 open scoped ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.chernPart_over_properClosed_eq_zero : ∀ {k : Type} [CommRing k] {X : Scheme.{0}} [IsIntegral X] {p : X ⟶ Sp k} {D : ℕ}, IsArithVar p D → ∀ (Z : Set X), IsClosed Z → genericPoint X ∉ Z → ∀ (σ : k →+* ℂ) {B : LB X} (φ : Weight p σ B) (ε : ℤˣ), φ.chernPart D ε {y : CxPts p σ | y.1 (IsLocalRing.closedPoint ℂ) ∈ Z} = 0 := by
-  first | exact @GlobalTheory.ChernNull.chernPart_over_closed | exact GlobalTheory.ChernNull.chernPart_over_closed | (intros; apply GlobalTheory.ChernNull.chernPart_over_closed <;> assumption)
+  exact @GlobalTheory.ChernNull.chernPart_over_closed

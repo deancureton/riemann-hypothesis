@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.VacuumSplitPlaceIndicatorPair
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.vacuum_split_place_indicator_pair : GlobalTheory.F
     ∀ R : (Fin a' × Fin (a + a') → AF F) → ℂ, Rest (evFin F v) (G.M'.vac v) R →
     ∀ g ∈ GlobalTheory.InertDbl.KAtD σ G.W v, ∃ c : ℂ, omd g (GlobalTheory.InertDbl.dblFun (tens (evFin F v) (G.M'.vac v) R)) =
       c • GlobalTheory.InertDbl.dblFun (tens (evFin F v) (G.M'.vac v) R) := by
-  first | exact @GlobalTheory.SplitDblLine.dblFun_eigen_split | exact GlobalTheory.SplitDblLine.dblFun_eigen_split | (intros; apply GlobalTheory.SplitDblLine.dblFun_eigen_split <;> assumption)
+  exact @GlobalTheory.SplitDblLine.dblFun_eigen_split

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleThetaLift
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocPart
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InsP
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_A_triple_theta_lift : ∀ {F E : Type} [Fie
           Matrix.vecMulVec s (Pi.single 0 1) ∧
         GlobalTheory.FlipMatch.coY σ G.V' G.W (B.τ v) (G.V'.bas v) (G.W.bas v) (Matrix.vecMulVec y (incV F H'.x)) =
           Matrix.vecMulVec r (Pi.single ⟨b + 1, by omega⟩ 1) := by
-  first | exact @GlobalTheory.EvZeroCoords.coords_evZero | exact GlobalTheory.EvZeroCoords.coords_evZero | (intros; apply GlobalTheory.EvZeroCoords.coords_evZero <;> assumption)
+  exact @GlobalTheory.EvZeroCoords.coords_evZero

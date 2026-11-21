@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantSesquilinearUnitaryChar
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.invariant_sesquilinear_unitary_char : ∀ (k : Typ
         Bf Ψ₁ Ψ₂ = 0) →
       ∀ (g : GL (Fin n) k) (Ψ₁ Ψ₂ Ψ₂' : GlobalTheory.FullRankCoinv.fullRk k n d), Ψ₂'.1 = GlobalTheory.FullRankCoinv.lact ν g Ψ₂.1 →
         Bf Ψ₁ Ψ₂' = Bf Ψ₁ Ψ₂ := by
-  first | exact @GlobalTheory.FullRankCoinv.form_diag_right_invariant | exact GlobalTheory.FullRankCoinv.form_diag_right_invariant | (intros; apply GlobalTheory.FullRankCoinv.form_diag_right_invariant <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.form_diag_right_invariant

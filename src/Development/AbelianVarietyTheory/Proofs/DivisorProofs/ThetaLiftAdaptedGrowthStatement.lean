@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftAdaptedGrowth
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.theta_lift_adapted_growth : GlobalTheory.ThK.KP �
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E (a + a') d₁) (i₀ i₁ : ℕ), H'.IsAdapted σ B G.W W₁ i₀ i₁ →
       ∀ f ∈ thetaSpanV B G X om R Rf, ∀ g ∈ thetaSpanV' B G X om' R Rf, ∀ c d : UA σ G.W.J → ℂ,
         IsCT H' f c → IsCT H' g d → IsCT H' (f + g) (c + d) := by
-  first | exact @GlobalTheory.ThK.DescB.isCT_add_thetaSpan | exact GlobalTheory.ThK.DescB.isCT_add_thetaSpan | (intros; apply GlobalTheory.ThK.DescB.isCT_add_thetaSpan <;> assumption)
+  exact @GlobalTheory.ThK.DescB.isCT_add_thetaSpan

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExtensionDerivativeGlueCommute
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.vacuum_unramified_almost_all : ∀ {F E : Type} [F
     (H : Plane E n n₁) (H' : Plane E d d₁), B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' →
     H.IsAdapted σ B X X₁ j₀ j₁ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     ∀ᶠ v in cofinite, vacS σ X W H H' v = Set.indicator {y | ∀ k, y k ∈ v.adicCompletionIntegers F} 1 := by
-  first | exact @GlobalTheory.ThK.PlaneCo.Std.vacS_eventually_std | exact GlobalTheory.ThK.PlaneCo.Std.vacS_eventually_std | (intros; apply GlobalTheory.ThK.PlaneCo.Std.vacS_eventually_std <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.Std.vacS_eventually_std

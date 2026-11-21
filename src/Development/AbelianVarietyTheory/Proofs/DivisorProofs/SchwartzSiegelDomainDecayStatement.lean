@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.schwartz_siegel_domain_decay : GlobalTheory.ThK.KP
     ∀ N : ℕ, ∃ (C : ℝ) (k : ℕ), ∀ (f : SInf F (Fin n × Fin d)) (t : Fin q → ℝ) (a κ : UA σ X.J) (h : UA σ W.J),
       (∀ i, c ≤ t i) → IsTorusU x y t a → κ ∈ Cc →
       ‖theta om (pureA F f φ) (a * κ) h‖ * (1 + ∏ i, t i) ^ N ≤ C * semK (Fin n × Fin d) k f * (ht h : ℝ) ^ k := by
-  first | exact @GlobalTheory.ThKTorus.torusDecay | exact GlobalTheory.ThKTorus.torusDecay | (intros; apply GlobalTheory.ThKTorus.torusDecay <;> assumption)
+  exact @GlobalTheory.ThKTorus.torusDecay

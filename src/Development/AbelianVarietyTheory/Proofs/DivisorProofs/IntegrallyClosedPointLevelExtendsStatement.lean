@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrallyClosedPointLevelExtends
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -35,4 +34,4 @@ theorem _root_.GlobalTheory.T.integrally_closed_point_level_extends : ∀ (E : T
     ∀ (e σ : Over.mk yy ⟶ Y.oF.t.G), e.left = yy ≫ (Y.oF.etaA a).left → σ.left ≫ Y.m.φ = spMap φ ≫ wf.left →
       σ ^ (p ^ n) = 1 ∧ Out.WeilIs Y.oF.t.G Y.oF.t.PP.L ((p ^ n : ℕ) : ℤ) e σ
         (unitOn (Units.map ((algebraMap 𝓞_ℂ_[p] ℂ_[p]).comp x0).toMonoidHom (κ (spMap g ≫ wf.left)))) := by
-  first | exact @GlobalTheory.WeilSpec.weil_spec | exact GlobalTheory.WeilSpec.weil_spec | (intros; apply GlobalTheory.WeilSpec.weil_spec <;> assumption)
+  exact @GlobalTheory.WeilSpec.weil_spec

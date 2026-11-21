@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationMapIntertwines
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.evaluation_map_intertwines : GlobalTheory.ThK.KP �
     ∀ Φ ∈ schA F (Fin n × Fin d₁), ∀ N K : ℕ, 1 ≤ N → ∃ C : ℝ, ∀ w : Fin d₁ → E, (∀ i, ∃ o : 𝓞 E, (N : E) * w i = o) →
       ‖thetaSum F (e' (M₁.co.rho B.ψ (realAd F 1 • Matrix.vecMulVec (incV F H.y) (incV F w)) Φ))‖ *
         (1 + ∑ i, ∑ v : InfinitePlace E, v (w i)) ^ K ≤ C := by
-  first | exact @GlobalTheory.IsoXArchDecay.thetaSum_arch_decay | exact GlobalTheory.IsoXArchDecay.thetaSum_arch_decay | (intros; apply GlobalTheory.IsoXArchDecay.thetaSum_arch_decay <;> assumption)
+  exact @GlobalTheory.IsoXArchDecay.thetaSum_arch_decay

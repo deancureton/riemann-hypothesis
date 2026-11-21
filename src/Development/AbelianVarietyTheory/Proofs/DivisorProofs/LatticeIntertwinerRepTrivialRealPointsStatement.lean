@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeIntertwinerRepTrivialRealPoints
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntAFSmulMemLatOF
 open scoped TensorProduct Matrix Topology
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.latticeIntertwinerRep_trivial_realPoints : ∀ (F 
         (lam : ℕ →* ℂ) (Om : GAF σ JS × GAF σ JT →* Module.End ℂ (GlobalTheory.WeilPartsF.thetaSubF σ JS JT ξ₀ B.ψ)),
         GlobalTheory.FinLatF.IsLatRepF σ JS JT ξ₀ B.ψ hc Λ w lam Om →
         ∀ g ∈ GlobalTheory.WeilPartsF.GinfCF σ JS, ∀ h ∈ GlobalTheory.WeilPartsF.GinfCF σ JT, ∀ f, Om (g, h) f = f := by
-  first | exact @GlobalTheory.FinLatF.IsLatRepF.real_triv | exact GlobalTheory.FinLatF.IsLatRepF.real_triv | (intros; apply GlobalTheory.FinLatF.IsLatRepF.real_triv <;> assumption)
+  exact @GlobalTheory.FinLatF.IsLatRepF.real_triv

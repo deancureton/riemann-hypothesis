@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AutomorphicTypeFiniteDimStable
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.automorphic_type_finite_dim_stable : GlobalTheory.
     ∃ (m : ℕ) (T : Fin m → (GlobalTheory.IndefiniteRowSideFullHecke.FinitePartTypes.kFin (M.ε τ) (M.σ τ) →ₗ[ℂ] (GA D V → ℂ)))
       (p : Fin m → GlobalTheory.IndefiniteRowSideFullHecke.FinitePartTypes.kFin (M.ε τ) (M.σ τ)),
       (∀ j, GlobalTheory.IndefiniteRowSideFullHecke.FinitePartTypes.IsGKMap θ V τ (M.ε τ) (M.σ τ) (M.fr τ) (T j)) ∧ φ = ∑ j, T j (p j) := by
-  first | exact @GlobalTheory.FiniteGKSum.finite_sum_of_gkMaps | exact GlobalTheory.FiniteGKSum.finite_sum_of_gkMaps | (intros; apply GlobalTheory.FiniteGKSum.finite_sum_of_gkMaps <;> assumption)
+  exact @GlobalTheory.FiniteGKSum.finite_sum_of_gkMaps

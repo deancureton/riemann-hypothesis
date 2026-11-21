@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedRealLineFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.adapted_real_line_first : ∀ (F E : Type) [Field 
     ∀ k ∈ KInf σ W B.emb, (∀ w, (∀ i, ((mat k).map (piInf (B.emb w)) * C w) i (.inl r₀) = C w i (.inl r₀)) ∧
         ∀ i, ((mat k).map (piInf (B.emb w)) * C w) i (.inr s₀) = C w i (.inr s₀)) →
       ∃ k₁ ∈ KInf σ W₁ B.emb, IsLevi H' 1 k₁ k := by
-  first | exact @GlobalTheory.KInfLevi.exists_kInf_isLevi_of_fix | exact GlobalTheory.KInfLevi.exists_kInf_isLevi_of_fix | (intros; apply GlobalTheory.KInfLevi.exists_kInf_isLevi_of_fix <;> assumption)
+  exact @GlobalTheory.KInfLevi.exists_kInf_isLevi_of_fix

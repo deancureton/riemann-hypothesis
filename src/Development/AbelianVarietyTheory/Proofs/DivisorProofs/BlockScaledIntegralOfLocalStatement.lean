@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockScaledIntegralOfLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.block_scaled_integral_of_local : ∀ (F : Type) [F
     (t : Fin q → ℝ) (m : ℕ) (ξ : κ → F) (j : κ),
     (∀ v : Pl F, evFin F v ((m : AF F) * blkScale blk t (fun j => algebraMap F (AF F) (ξ j)) j) ∈ v.adicCompletionIntegers F) →
     IsIntegral ℤ ((m : F) * ξ j) := by
-  first | exact @GlobalTheory.ThKTorus.IntegralOfAdic.integral_of_evFin_mem | exact GlobalTheory.ThKTorus.IntegralOfAdic.integral_of_evFin_mem | (intros; apply GlobalTheory.ThKTorus.IntegralOfAdic.integral_of_evFin_mem <;> assumption)
+  exact @GlobalTheory.ThKTorus.IntegralOfAdic.integral_of_evFin_mem

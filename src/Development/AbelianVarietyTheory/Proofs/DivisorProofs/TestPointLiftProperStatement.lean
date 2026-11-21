@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TestPointLiftProper
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
 
 set_option autoImplicit false
@@ -18,4 +17,4 @@ attribute [local instance] algPadicInt algPadicField towerPadic factPadic Global
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.test_point_lift_proper : ∀ (p : ℕ) [Fact p.Prime] (X X' : Scheme.{0}) (π : X' ⟶ X), IsProper π → ∀ (Xw O : X.Opens), Xw ≤ O →
     IsIso (π ∣_ O) → ∀ yb : Sp 𝓞_ℂ_[p] ⟶ X, IsTest p Xw yb → ∃ yb', IsTest p (π ⁻¹ᵁ Xw) yb' ∧ yb' ≫ π = yb := by
-  first | exact @GlobalTheory.FlatModel.isTest_lift | exact GlobalTheory.FlatModel.isTest_lift | (intros; apply GlobalTheory.FlatModel.isTest_lift <;> assumption)
+  exact @GlobalTheory.FlatModel.isTest_lift

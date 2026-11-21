@@ -1,5 +1,4 @@
 import Formalism.LocalToGlobal.GlobalTheory.CloudNonneg
-import Mathlib
 import Formalism.GL3MeanSquares.HookFormulaTorsion.HilbertSchmidtHalfBound
 import Formalism.GL3MeanSquares.HookFormulaTorsion.WeightShiftProduct
 import Formalism.LogVandermondeBounds.LogVandermondeProofs.LogRatioLowerBoundOfLogVandermondeGap

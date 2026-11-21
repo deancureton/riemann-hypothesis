@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentNinth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_ninth : GlobalTheory.ThK
       V₁.J = H.ιᵀ * X.J * H.ι.map σ → M₁.IsGood B.ψ → IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ Ψ ∈ schA F (Fin n × Fin d), ∀ (w : Fin d → E) (γ u : unip σ X H), γ.1 ∈ ratU σ X.J →
       thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om ((γ * u).1, 1) Ψ))) = thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ))) := by
-  first | exact @GlobalTheory.UnipThetaTermX.main | exact GlobalTheory.UnipThetaTermX.main | (intros; apply GlobalTheory.UnipThetaTermX.main <;> assumption)
+  exact @GlobalTheory.UnipThetaTermX.main

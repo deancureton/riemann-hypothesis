@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RepresentationRestrictionIntertwinerExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLocType
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictionSubmoduleFunctionalInjectiveStatement
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.representation_restriction_intertwiner_exists : �
       (∀ φ ∈ M, ∀ h, Λ (π (leviEmb k e (midIncl k m h)) φ) = rightReg ℂ G₁ ℂ (ι h) (Λ φ)) →
       (∀ φ ∈ M, ∀ t₁ t₂, Λ (π (leviEmb k e (torusPt k m t₁ t₂)) φ) = ξ (t₁, t₂) • Λ φ) →
       ∀ φ ∈ M, Λ φ ∈ imgSpan I₁ ((rightReg ℂ G₁ ℂ).comp ι) := by
-  first | exact @GlobalTheory.LocTypeExt.eigenMap_mem_imgSpan | exact GlobalTheory.LocTypeExt.eigenMap_mem_imgSpan | (intros; apply GlobalTheory.LocTypeExt.eigenMap_mem_imgSpan <;> assumption)
+  exact @GlobalTheory.LocTypeExt.eigenMap_mem_imgSpan

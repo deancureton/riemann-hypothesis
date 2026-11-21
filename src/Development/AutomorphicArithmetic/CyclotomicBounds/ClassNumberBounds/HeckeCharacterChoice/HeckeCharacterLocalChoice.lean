@@ -4,7 +4,6 @@ import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.Heck
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.IdealValuations.DelRay
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.HeckeCharacterChoice.ExtAlg
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.InertiaRamification.FieldDefs
-import Mathlib
 
 open NumberField IsDedekindDomain
 open scoped nonZeroDivisors

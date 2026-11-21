@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamHodgeSubbundleExists
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.de_rham_hodge_subbundle_exists : GlobalTheory.CovT
     ∃ C : GlobalTheory.VB.Sub H, ∀ (V : T.Opens) (hV : IsAffineOpen V) (s : Γ(H, V)),
       s ∈ C.sec V ↔ e V hV s ∈ GlobalTheory.ConjSeq.conjDR p Γ(T, V)
         (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V) (onAff A hV) := by
-  first | exact @GlobalTheory.ConjSeq.ConjSub.exists_conjSub | exact GlobalTheory.ConjSeq.ConjSub.exists_conjSub | (intros; apply GlobalTheory.ConjSeq.ConjSub.exists_conjSub <;> assumption)
+  exact @GlobalTheory.ConjSeq.ConjSub.exists_conjSub

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeBasisFractionFieldIndependent
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.lattice_basis_fraction_field_independent : ∀ {E 
     (σ : I → E →+* FractionRing R)
     (h : Submodule.span L (β '' (N : Set (Fin n → R))) = ⨆ i, ⨅ a : orderC c, Module.End.eigenspace (T a) (j (σ i a))),
    N.baseChange (FractionRing R) = ⨆ i, GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.eigK ρ (σ i) := by
-  first | exact @GlobalTheory.EigDescentFrac.baseChange_eq_iSup_eigK | exact GlobalTheory.EigDescentFrac.baseChange_eq_iSup_eigK | (intros; apply GlobalTheory.EigDescentFrac.baseChange_eq_iSup_eigK <;> assumption)
+  exact @GlobalTheory.EigDescentFrac.baseChange_eq_iSup_eigK

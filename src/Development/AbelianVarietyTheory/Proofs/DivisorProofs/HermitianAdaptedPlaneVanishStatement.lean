@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_vanish : GlobalTheory.FunP
         e (om (m, 1) Φ) = c • om₁ (g₁, 1) (e Φ)) →
       ∀ (g₁ : UA σ X₁.J) (m : UA σ X.J), IsLevi H 1 g₁ m → ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (m, 1) Φ) = om₁ (g₁, 1) (e Φ) := by
-  first | exact @GlobalTheory.MixXChar.levi_scalar_one | exact GlobalTheory.MixXChar.levi_scalar_one | (intros; apply GlobalTheory.MixXChar.levi_scalar_one <;> assumption)
+  exact @GlobalTheory.MixXChar.levi_scalar_one

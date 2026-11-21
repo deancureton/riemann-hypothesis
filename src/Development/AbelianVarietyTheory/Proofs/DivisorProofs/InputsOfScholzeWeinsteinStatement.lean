@@ -8,4 +8,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.inputs_of_scholze_weinstein : GlobalTheory.CovTop.HypothesesXH → Hypotheses2 → HypothesesH → Known₂ → GlobalTheory.Published.ScholzeWeinsteinB → InputsSt := by
-  first | exact @GlobalTheory.CovHt.inputsSt_of_scholzeWeinstein | exact GlobalTheory.CovHt.inputsSt_of_scholzeWeinstein | (intros; apply GlobalTheory.CovHt.inputsSt_of_scholzeWeinstein <;> assumption)
+  exact @GlobalTheory.CovHt.inputsSt_of_scholzeWeinstein

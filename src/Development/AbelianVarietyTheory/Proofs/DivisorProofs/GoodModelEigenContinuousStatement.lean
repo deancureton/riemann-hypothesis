@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MemConfTOfDetNeZero
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.good_model_eigen_continuous : ∀ {F E : Type} [Fi
       (∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = M.vac v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v)) →
       ∀ (v : Pl F) (γ : Matrix (Fin n) (Fin d) (AE F E)), γ ∈ I → At (evFin F v) γ →
       ∀ φ ∈ SB (Fin n × Fin d → Fv F v), ev v (schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo M.co v γ) φ) = ev v φ := by
-  first | exact @GlobalTheory.ThK.EvLocInv.ev_schr_of_mem | exact GlobalTheory.ThK.EvLocInv.ev_schr_of_mem | (intros; apply GlobalTheory.ThK.EvLocInv.ev_schr_of_mem <;> assumption)
+  exact @GlobalTheory.ThK.EvLocInv.ev_schr_of_mem

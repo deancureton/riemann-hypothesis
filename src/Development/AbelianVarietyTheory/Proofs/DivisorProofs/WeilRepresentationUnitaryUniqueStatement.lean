@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationUnitaryUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weil_representation_unitary_unique : GlobalTheory.
     ∀ γ ∈ Lines σ X, ∀ f ∈ M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin n × Fin d),
       ActsD (evI F) (fun t => om (γ (Multiplicative.ofAdd t), 1)) f f₁ →
       ActsD (evI F) (fun t => om (g * γ (Multiplicative.ofAdd t) * g⁻¹, 1)) (T f) (T f₁) := by
-  first | exact @GlobalTheory.WeilConjLine.deriv_conj_line | exact GlobalTheory.WeilConjLine.deriv_conj_line | (intros; apply GlobalTheory.WeilConjLine.deriv_conj_line <;> assumption)
+  exact @GlobalTheory.WeilConjLine.deriv_conj_line

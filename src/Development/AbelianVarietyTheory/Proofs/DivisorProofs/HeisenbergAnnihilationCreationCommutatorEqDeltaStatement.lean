@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergAnnihilationCreationCommutatorEqDelta
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEval
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.heisenberg_annihilation_creation_commutator_eq_del
       ((4 * Real.pi : ℂ) * Complex.I * ((∑ w, ∑ a, ∑ b, lineSign a b * c w a b * star (c' w a b)).im : ℂ)) • 1) →
     ∀ j k : W × (Ix P Q × Ix R S), GlobalTheory.CCRFock.fockD H j * GlobalTheory.CCRFock.fockM H k - GlobalTheory.CCRFock.fockM H k * GlobalTheory.CCRFock.fockD H j =
       if j = k then 1 else 0 := by
-  first | exact @GlobalTheory.CCRFock.CommDM.fockD_fockM_comm | exact GlobalTheory.CCRFock.CommDM.fockD_fockM_comm | (intros; apply GlobalTheory.CCRFock.CommDM.fockD_fockM_comm <;> assumption)
+  exact @GlobalTheory.CCRFock.CommDM.fockD_fockM_comm

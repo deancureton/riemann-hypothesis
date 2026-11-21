@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpanHeisenbergTranslatesVacuumInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInertLocalUniformizerImports
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.span_heisenbergTranslates_vacuum_inertPlace : ∀ 
         (m : (Fin a' × Fin (a + a') → Fv F v) → ℂ) ((ρ x m : SB (Fin a' × Fin (a + a') → Fv F v)) : (Fin a' × Fin (a + a') → Fv F v) → ℂ)) →
     ∀ s : SB (Fin a' × Fin (a + a') → Fv F v), (s : (Fin a' × Fin (a + a') → Fv F v) → ℂ) = G.M'.vac v →
       Submodule.span ℂ (Set.range fun x => ρ x s) = ⊤ := by
-  first | exact @GlobalTheory.InertSpan.span_translates_vac | exact GlobalTheory.InertSpan.span_translates_vac | (intros; apply GlobalTheory.InertSpan.span_translates_vac <;> assumption)
+  exact @GlobalTheory.InertSpan.span_translates_vac

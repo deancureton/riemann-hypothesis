@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.log_metric_cutoff_integrable : GlobalTheory.CovTop
       (ch : GlobalTheory.AlgChart (O.var c).str σ (O.var c).dim) (y : GlobalTheory.TrueGeo.Pts (O.var c) σ), y ∈ ch.e.source →
       Integrable (fun ξ => Real.log (O.met.r c σ (P.exph c σ ch y (t • ξ))) * GlobalTheory.ChernReg.cutoff (P.om c σ ch y ξ)) ∧
       rhoIn (P.om c σ) (P.exph c σ) (fun z => Real.log (O.met.r c σ z)) ch y t ≤ Real.log (C * Real.log (1 / t)) := by
-  first | exact @GlobalTheory.LogMean.regLog_le_log_log | exact GlobalTheory.LogMean.regLog_le_log_log | (intros; apply GlobalTheory.LogMean.regLog_le_log_log <;> assumption)
+  exact @GlobalTheory.LogMean.regLog_le_log_log

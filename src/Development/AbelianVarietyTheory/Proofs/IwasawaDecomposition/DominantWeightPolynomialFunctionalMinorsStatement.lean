@@ -9,4 +9,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.toy_entPl_canOnto : ∀ (D : D7) (Pl : Examples₂.EntPl D), CanOnto Pl := by
-  first | exact @GlobalTheory.Mem.CanonicalSurjection.canOnto_all | exact GlobalTheory.Mem.CanonicalSurjection.canOnto_all | (intros; apply GlobalTheory.Mem.CanonicalSurjection.canOnto_all <;> assumption)
+  exact @GlobalTheory.Mem.CanonicalSurjection.canOnto_all

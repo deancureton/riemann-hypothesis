@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionTransportCmConjugation
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.torsion_transport_cm_conjugation : GlobalTheory.Pu
           ∃ (u'' : HolUnif X'.A (X'.diag T.U.c) (Module.finrank ℚ (FR E))) (h' : I → ℝ), u''.ex = u'.ex ∧
             (∃ χ, u''.IsAH (Matrix.diagonal fun j ↦ (h' (T.U.e j) : ℂ)) χ) ∧
             ∀ i, g ((T.U.h i : ℂ) * (Real.sqrt d : ℝ)) = ((modF t : ℝ) : ℂ) * ((h' i : ℂ) * (Real.sqrt d : ℝ)) := by
-  first | exact @GlobalTheory.ConjHerm.exists_conj_herm | exact GlobalTheory.ConjHerm.exists_conj_herm | (intros; apply GlobalTheory.ConjHerm.exists_conj_herm <;> assumption)
+  exact @GlobalTheory.ConjHerm.exists_conj_herm

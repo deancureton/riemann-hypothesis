@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lattice_comparison_on_points : Hypotheses2 → HypothesesH → OnObj fun _ _ _ _ H h => LatCmp H h.pts := by
-  first | exact @GlobalTheory.LatHt.latCmp | exact GlobalTheory.LatHt.latCmp | (intros; apply GlobalTheory.LatHt.latCmp <;> assumption)
+  exact @GlobalTheory.LatHt.latCmp

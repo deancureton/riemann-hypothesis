@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_height_integral : ∀ {E : Type} [F
     ∀ {M M' : X.Modules} {r : ℕ} (τ : E →+* ℂ) (t : FrAssign Z M r jB) (t' : FrAssign Z M' r jB) (u : M ⟶ M'),
     IsVB M r → IsVB M' r → IsLieFrames Z e jB πB M r τ false t → IsLieFrames Z e jB πB M' r τ false t' →
     Matches Z jB πB u t t' → Mono u := by
-  first | exact @GlobalTheory.LieFilt.mono_of_matches | exact GlobalTheory.LieFilt.mono_of_matches | (intros; apply GlobalTheory.LieFilt.mono_of_matches <;> assumption)
+  exact @GlobalTheory.LieFilt.mono_of_matches

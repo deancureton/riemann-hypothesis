@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ToricTorsionUniformisationEqRestrictCharacters
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.toricTorsion_uniformisation_eq_restrictCharacters 
       τ' ^ k = 1 → (∀ χ, τ (Multiplicative.ofAdd χ) = τ' (Multiplicative.ofAdd (ρ χ))) →
       q.y = 0 → GlobalTheory.UT.IsTor τ q.g → q'.y = 0 → GlobalTheory.UT.IsTor τ' q'.g →
       GlobalTheory.FlatTors.IsImage P F k q v → GlobalTheory.FlatTors.IsImage P' F k q' v' → v = v' ≫ m.φ := by
-  first | exact @GlobalTheory.ToricTorsionCompare.toric_torsion_eq_restrict | exact GlobalTheory.ToricTorsionCompare.toric_torsion_eq_restrict | (intros; apply GlobalTheory.ToricTorsionCompare.toric_torsion_eq_restrict <;> assumption)
+  exact @GlobalTheory.ToricTorsionCompare.toric_torsion_eq_restrict

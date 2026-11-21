@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.SpanFiniteTranslatesVacuumThetaFockVacua
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ValRingLocRing
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OmPureTensorOOfFinite
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.span_finiteTranslates_vacuum_thetaFockVacua : ∀ 
     (f₀ : WO V W → ℂ), VacPair ψ θ V W χV χW om ΛV ΛW sW f₀ →
     ∀ (e : AE D) (M : ℕ) (O₁ : Subring ℂ), M ≠ 0 → ∀ f ∈ trSp ψ V W ΛV ΛW f₀ e M O₁,
       IsThetaFunO ψ V W f ∧ ∀ τ, IsFockVacAt (heisO ψ V W) θ τ (cplxO 1 (sW τ)) f := by
-  first | exact @GlobalTheory.LevelSeries.trSp_theta_fock | exact GlobalTheory.LevelSeries.trSp_theta_fock | (intros; apply GlobalTheory.LevelSeries.trSp_theta_fock <;> assumption)
+  exact @GlobalTheory.LevelSeries.trSp_theta_fock

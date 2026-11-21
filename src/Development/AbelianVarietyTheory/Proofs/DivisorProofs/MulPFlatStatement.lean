@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RigOfOmegaInjective
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mulP_flat' : ∀ (p : ℕ) (R : Type) [CommRing R] (G : GlobalTheory.PDivGroup p R) (n : ℕ), RingHom.Flat ((G.mulP n : G.A n →ₐ[R] G.A (n + 1)) : G.A n →+* G.A (n + 1)) := by
-  first | exact @GlobalTheory.PDivGroup.mulP_flat | exact GlobalTheory.PDivGroup.mulP_flat | (intros; apply GlobalTheory.PDivGroup.mulP_flat <;> assumption)
+  exact @GlobalTheory.PDivGroup.mulP_flat

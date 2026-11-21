@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceActionOnTensorCoords
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InclRMulPtAt
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc GlobalTheory.InertCoord
 open scoped TensorProduct Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.inertPlace_action_on_tensorCoords : ∀ (F E : Typ
               (Bm : Matrix (Fin d) (Fin d) (w.adicCompletion E))) * x *
             (((A⁻¹ : GL (Fin n) (w.adicCompletion E)) : Matrix (Fin n) (Fin n) (w.adicCompletion E)) * (mat g₁).map (locW h) *
               (A : Matrix (Fin n) (Fin n) (w.adicCompletion E)))ᵀ) := by
-  first | exact @GlobalTheory.InertCoordAct.act_kap | exact GlobalTheory.InertCoordAct.act_kap | (intros; apply GlobalTheory.InertCoordAct.act_kap <;> assumption)
+  exact @GlobalTheory.InertCoordAct.act_kap

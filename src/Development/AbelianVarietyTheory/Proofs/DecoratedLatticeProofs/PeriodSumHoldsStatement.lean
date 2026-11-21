@@ -10,4 +10,4 @@ open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.period_sum_holds : ∀ D : D7, PerSum D := by
-  first | exact @GlobalTheory.SeeSaw.perSum_all | exact GlobalTheory.SeeSaw.perSum_all | (intros; apply GlobalTheory.SeeSaw.perSum_all <;> assumption)
+  exact @GlobalTheory.SeeSaw.perSum_all

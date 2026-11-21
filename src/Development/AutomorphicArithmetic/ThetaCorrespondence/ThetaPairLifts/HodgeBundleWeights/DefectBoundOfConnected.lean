@@ -54,5 +54,5 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.defect_bound_le_half_mu : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Lifts fun Fm x _ ι p i _ C => (i : ℕ) + 1 = (Fm.D x ι).R.m → GramAt p i → 2 * defBound (dat p i) (wtA (p.κ i)) (p.κ i).n (-flatDegVal (dat p i) (ofRecord (Fm.D x ι) (Fm.L x ι) p.Del p.h0).logOm) - C * unitE p ≤ muCore p i := by
-  first | exact @_root_.GlobalTheory.CovTop.DefCore.twice_defect_bound_le_mu | exact _root_.GlobalTheory.CovTop.DefCore.twice_defect_bound_le_mu | (intros; apply _root_.GlobalTheory.CovTop.DefCore.twice_defect_bound_le_mu <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DefCore.twice_defect_bound_le_mu
 end

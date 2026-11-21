@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerLeviCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.stabilizer_levi_compatible : ∀ (F E : Type) [Fie
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K → ∀ m : (AE F E)ˣ → UA σ G₁.V.J → UA σ G.V.J, (∀ l g₀, IsLevi H l g₀ (m l g₀)) →
     ∀ g : UA σ G.V.J, ∃ n ∈ unip σ G.V H, ∃ l g₀, ∃ k ∈ K, g = n * m l g₀ * k := by
-  first | exact @GlobalTheory.IwDec.iwasawa_levi | exact GlobalTheory.IwDec.iwasawa_levi | (intros; apply GlobalTheory.IwDec.iwasawa_levi <;> assumption)
+  exact @GlobalTheory.IwDec.iwasawa_levi

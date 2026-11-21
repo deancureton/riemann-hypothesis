@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.exists_archimedean_unitary_weights : ∀ {D : D7} 
         X.ker' W.ψ W.θ t P h (x * (g : GA D A')) =
           (∏ τ, (ρ g τ : Matrix (Fin A'.rank) (Fin A'.rank) ℂ).det ^ (m τ)) *
             X.ker' W.ψ W.θ t (GlobalTheory.MinorFrame.colSub (fun τ => (ρ g τ : Matrix (Fin A'.rank) (Fin A'.rank) ℂ)) P) h x := by
-  first | exact @GlobalTheory.BottomRealAct.realAction | exact GlobalTheory.BottomRealAct.realAction | (intros; apply GlobalTheory.BottomRealAct.realAction <;> assumption)
+  exact @GlobalTheory.BottomRealAct.realAction

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BaseChangeModuleTensorAction
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingActionOfIsGrpPullback
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.base_change_module_tensor_action : ∀ (R R' O : T
     letI : Module (R ⊗[ℤ] O) M := TensorProduct.Algebra.module
     letI : Module (R' ⊗[ℤ] O) N := TensorProduct.Algebra.module
     Module.Invertible (R ⊗[ℤ] O) M → Module.Invertible (R' ⊗[ℤ] O) N := by
-  first | exact @GlobalTheory.invertible_of_baseChange_tensor_int | exact GlobalTheory.invertible_of_baseChange_tensor_int | (intros; apply GlobalTheory.invertible_of_baseChange_tensor_int <;> assumption)
+  exact @GlobalTheory.invertible_of_baseChange_tensor_int

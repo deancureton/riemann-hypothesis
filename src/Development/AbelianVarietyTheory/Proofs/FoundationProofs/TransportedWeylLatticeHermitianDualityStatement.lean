@@ -12,4 +12,4 @@ open NumberField IsDedekindDomain MvPolynomial Formalism.BasicNotions Formalism.
 open scoped Matrix ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.transported_weylLattice_hermitianDuality : NabDelDual := by
-  first | exact @GlobalTheory.TransDual.nabDelDual | exact GlobalTheory.TransDual.nabDelDual | (intros; apply GlobalTheory.TransDual.nabDelDual <;> assumption)
+  exact @GlobalTheory.TransDual.nabDelDual

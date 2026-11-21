@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.continuous_extension_doubled_unitary : ∀ (F E : 
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (0 : Fin d → AE F E) (incV F H'.x) = Sum.elim (0 : Fin d → AE F E) (incV F H'.x) ∧
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (incV F H'.y) (0 : Fin d → AE F E) = Sum.elim (incV F H'.y) (0 : Fin d → AE F E) ∧
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (0 : Fin d → AE F E) (incV F H'.y) = Sum.elim (0 : Fin d → AE F E) (incV F H'.y)) ↔ g = ext g₁ := by
-  first | exact @GlobalTheory.DblLeviExt.dbl_ext_existsUnique | exact GlobalTheory.DblLeviExt.dbl_ext_existsUnique | (intros; apply GlobalTheory.DblLeviExt.dbl_ext_existsUnique <;> assumption)
+  exact @GlobalTheory.DblLeviExt.dbl_ext_existsUnique

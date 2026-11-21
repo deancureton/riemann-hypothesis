@@ -174,7 +174,6 @@ theorem sPresentation_single [Finite S] (v : HeightOneSpectrum (𝓞 K.1)) (hv :
       SIdeleClassGroup.mk S (finiteEmbedding v (localUniformizer v)) := by
   rw [sPresentation_apply, map_one, one_mul, toAdd_ofAdd, divisorIdele_single, zpow_one]
 
-set_option maxHeartbeats 4000000 in
 
 theorem charEquiv_sPresentation_single_of (hS : S.Finite) [NeZero n] (h : Odd n ∨ IsTotallyComplex K.1)
     (χ : ContinuousMonoidHom (galUnramifiedOutside K.1 ℚ̄ S) (Multiplicative (ZMod n)))

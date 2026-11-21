@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowDegreeKEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.low_degree_K_equivariant : GlobalTheory.ThK.KP →
       ∀ k : ℕ, lowDegInf B G.M R.p ≤ k → ∀ S : R.Pi →ₗ[ℂ] R.Pi, KEqOn B G.M om R.p (lowPartInf B G.M R.p) S →
         (∀ x ∈ lowPartInf B G.M R.p, S x ∈ (fockDeg G.M B.ψ B.emb (k + 1)).map R.p) →
           ∀ x ∈ lowPartInf B G.M R.p, S x ∈ (fockDeg G.M B.ψ B.emb k).map R.p := by
-  first | exact @GlobalTheory.LowKStep.map_mem_fockDeg_of_succ | exact GlobalTheory.LowKStep.map_mem_fockDeg_of_succ | (intros; apply GlobalTheory.LowKStep.map_mem_fockDeg_of_succ <;> assumption)
+  exact @GlobalTheory.LowKStep.map_mem_fockDeg_of_succ

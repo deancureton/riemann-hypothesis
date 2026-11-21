@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceTransformingCharacterEqOne
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLagrAt
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.inert_place_transforming_character_eq_one : ∀ (F
     ∀ c : UA σ G.V'.J → ℂ, (∀ g ∈ UAt σ G.V' (evFin F v), ∀ φ ∈ SB (Fin a' × Fin (a + a') → Fv F v),
       ∀ φ₁ ∈ SB (Fin a' × Fin (a + a') → Fv F v), Acts (evFin F v) (om' (g, 1)) φ φ₁ → l φ₁ = c g * l φ) →
     ∀ g ∈ UAt σ G.V' (evFin F v), c g = 1 := by
-  first | exact @GlobalTheory.InertLagChar.char_eq_one | exact GlobalTheory.InertLagChar.char_eq_one | (intros; apply GlobalTheory.InertLagChar.char_eq_one <;> assumption)
+  exact @GlobalTheory.InertLagChar.char_eq_one

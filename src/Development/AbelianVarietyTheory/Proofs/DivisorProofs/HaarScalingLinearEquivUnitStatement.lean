@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarScalingLinearEquivUnit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousCA
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.haar_scaling_linear_equiv_unit : ∀ (F E : Type) 
     ∀ [IsTopologicalRing (AE F E)] [LocallyCompactSpace (AE F E)] [MeasurableSpace (Fin n₁ → AE F E)]
       [BorelSpace (Fin n₁ → AE F E)] (l : (AE F E)ˣ) (g₀ : UA σ X₁.J) (L : (Fin n₁ → AE F E) ≃ₜ+ (Fin n₁ → AE F E)),
       (∀ a, L a = cA σ l • (mat g₀ *ᵥ a)) → addEquivAddHaarChar L = absE F E l ^ n₁ := by
-  first | exact @GlobalTheory.LeviModulus.CharVec.haarChar_smul_mulVec | exact GlobalTheory.LeviModulus.CharVec.haarChar_smul_mulVec | (intros; apply GlobalTheory.LeviModulus.CharVec.haarChar_smul_mulVec <;> assumption)
+  exact @GlobalTheory.LeviModulus.CharVec.haarChar_smul_mulVec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleChernIntegralPullSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_chern_integral_pull_second : ∀ (k : 
     IsFlagBundle π (fun _ : Unit => E) (fun _ => 2) (fun _ => fl) → ∀ (A : HermLB q) (σ : k →+* ℂ),
     ∀ φ : (hB.atlas σ).Fld, (hB.atlas σ).IsForm φ → ∀ (ι : Type) (s : Finset ι) (m : ι → ℕ) (W : ι → MvPolynomial (Fin 3) ℝ),
       (hY.atlas σ).integral (pullF hB hY σ π w φ * evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) (upperParabolic s m W)) = 0 := by
-  first | exact @GlobalTheory.FibVan.fibre_integral_vanish | exact GlobalTheory.FibVan.fibre_integral_vanish | (intros; apply GlobalTheory.FibVan.fibre_integral_vanish <;> assumption)
+  exact @GlobalTheory.FibVan.fibre_integral_vanish

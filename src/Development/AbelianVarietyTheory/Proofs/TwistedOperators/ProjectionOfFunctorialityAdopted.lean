@@ -96,6 +96,6 @@ end ThetaProjectionIdempotent
 section
 open GlobalTheory.RowClaim
 theorem _root_.GlobalTheory.Adopt.projection_of_functoriality_adopted : GlobalTheory.FunPr.Hypotheses₂ → StepProj := by
-  first | exact @ThetaProjectionIdempotent.CompanionTheory.Member.projection_of_functoriality | exact ThetaProjectionIdempotent.CompanionTheory.Member.projection_of_functoriality | (intros; apply ThetaProjectionIdempotent.CompanionTheory.Member.projection_of_functoriality <;> assumption)
+  exact @ThetaProjectionIdempotent.CompanionTheory.Member.projection_of_functoriality
 
 end

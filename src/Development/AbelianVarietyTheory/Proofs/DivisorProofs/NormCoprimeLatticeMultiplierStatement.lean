@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormCoprimeLatticeMultiplier
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.norm_coprime_lattice_multiplier : ∀ (K : Type) [
     ∀ k : ℕ, 0 < k → ∃ (m : K) (b : ℕ), 0 < b ∧ Nat.Coprime b k ∧ Complex.normSq (io m) = b / modF t ∧
       ∀ u ∈ lattice c (y * (upIdele K E t)⁻¹), algebraMap K E m * u ∈ lattice c y ∧
         ((upIdele K E t : Af E) * algebraMap E (Af E) (u / k) - algebraMap E (Af E) (algebraMap K E m * u / k)) * ((y⁻¹ : (Af E)ˣ) : Af E) ∈ hatO c := by
-  first | exact @GlobalTheory.ConjApprox.approx_idele | exact GlobalTheory.ConjApprox.approx_idele | (intros; apply GlobalTheory.ConjApprox.approx_idele <;> assumption)
+  exact @GlobalTheory.ConjApprox.approx_idele

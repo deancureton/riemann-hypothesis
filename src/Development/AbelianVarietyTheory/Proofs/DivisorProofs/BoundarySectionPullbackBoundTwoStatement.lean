@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundarySectionPullbackBoundTwo
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.boundary_section_pullback_bound_two : ∀ (d : ℕ
     ∃ Bk : ∀ k, FinHolAtlas n (W k), (∀ k, HoloMap (Bk k) B Subtype.val) ∧ ∃ C : ℝ,
       ∀ (R : ℕ) (T : Fin n → LocPot Y), (∀ k, T k = (α + LocPot.ofFun (w R)).pullback μ hμ.1 ∨ T k = α.pullback μ hμ.1) → ∀ k, 1 ≤ e 0 k →
         -C ≤ mInt (Bk k) (fun i => (T i).pullback Subtype.val continuous_subtype_val) (fun y => w R (μ y.1)) := by
-  first | exact @GlobalTheory.ResDivBound.divisor_terms_bounded | exact GlobalTheory.ResDivBound.divisor_terms_bounded | (intros; apply GlobalTheory.ResDivBound.divisor_terms_bounded <;> assumption)
+  exact @GlobalTheory.ResDivBound.divisor_terms_bounded

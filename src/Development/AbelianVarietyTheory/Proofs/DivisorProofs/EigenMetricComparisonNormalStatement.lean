@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenMetricComparisonNormal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.eigen_metric_comparison_normal : GlobalTheory.CovT
       (r : ∀ σ i, ((((fl σ).pull ρ).root i).pull j).ι → Gs.functionFieldˣ),
       GlobalTheory.PairCov.CovCommon O R c q jB πB G π ρ j πG φ jG ∧
       ∀ σ i, GlobalTheory.PairCov.IsFrameSecX (O := O) (c := c) σ (h σ).isVB jB πB (t σ) π ρ ((fl σ).pull ρ) j φ jG i (r σ i) := by
-  first | exact @GlobalTheory.PairCovGen.exists_genericFibre | exact GlobalTheory.PairCovGen.exists_genericFibre | (intros; apply GlobalTheory.PairCovGen.exists_genericFibre <;> assumption)
+  exact @GlobalTheory.PairCovGen.exists_genericFibre

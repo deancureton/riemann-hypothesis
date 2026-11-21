@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.nef_induced_model_dominant_weight : GlobalTheory.C
   ∃ (N : TrueGeo.Model (O.var c)) (π : N.X ⟶ M.X) (hπ : π ≫ M.p = N.p), Function.Surjective π ∧
     ∀ (Z : Scheme.{0}) (i : Z ⟶ N.X) [IsClosedImmersion i] [IsIntegral Z] [Algebra (ZMod q) Γ(Z, ⊤)],
       topologicalKrullDim Z = 1 → 0 ≤ topSelfIntersection (ZMod q) ((L.pull π hπ).B.pull i) 1 := by
-  first | exact @GlobalTheory.NefDeRhamCore.exists_model_nonneg | exact GlobalTheory.NefDeRhamCore.exists_model_nonneg | (intros; apply GlobalTheory.NefDeRhamCore.exists_model_nonneg <;> assumption)
+  exact @GlobalTheory.NefDeRhamCore.exists_model_nonneg

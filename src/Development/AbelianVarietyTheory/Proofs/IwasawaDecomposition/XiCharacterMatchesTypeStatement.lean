@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.XiCharacterMatchesType
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
@@ -16,4 +15,4 @@ open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Fo
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.xi_character_matches_type : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t _ n _ => ∀ μ, Used0 (w.D Z) μ → t.r.z.R.toLevCh.xiH (t.r.Y.tupT μ) = n.tp.xi μ := by
-  first | exact @GlobalTheory.HeightCounting.Up.xiH_tupT_layer | exact GlobalTheory.HeightCounting.Up.xiH_tupT_layer | (intros; apply GlobalTheory.HeightCounting.Up.xiH_tupT_layer <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.xiH_tupT_layer

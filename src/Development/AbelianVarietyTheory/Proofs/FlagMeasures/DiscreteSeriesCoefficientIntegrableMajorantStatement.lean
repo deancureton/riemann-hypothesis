@@ -7,4 +7,4 @@ open MeasureTheory NumberField Matrix Finset Formalism.MainNotions.S Formalism.R
 open scoped InnerProductSpace ComplexOrder ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.discrete_series_coefficient_integrable_majorant : PhMaj := by
-  first | exact @GlobalTheory.Dec.PhMajProof.phMaj | exact GlobalTheory.Dec.PhMajProof.phMaj | (intros; apply GlobalTheory.Dec.PhMajProof.phMaj <;> assumption)
+  exact @GlobalTheory.Dec.PhMajProof.phMaj

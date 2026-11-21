@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodTransportGaloisConjugate
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.period_transport_galois_conjugate : ∀ (A A' : Ov
       u.IsDiff w v → u'.IsDiff (fun j ↦ g (Ω₀ * w j) / Ω₁) v') →
     ∀ (m : Fin n → ℂ) (α : A ⟶ A) [IsMonHom α] (α' : A' ⟶ A') [IsMonHom α'], α'.left ≫ p = p ≫ α.left →
       ((∀ w, u.ex (fun j ↦ m j * w j) = u.ex w ≫ α) ↔ (∀ w, u'.ex (fun j ↦ g (m j) * w j) = u'.ex w ≫ α')) := by
-  first | exact @GlobalTheory.DiagConj.diag_endo_iff_conj_diag | exact GlobalTheory.DiagConj.diag_endo_iff_conj_diag | (intros; apply GlobalTheory.DiagConj.diag_endo_iff_conj_diag <;> assumption)
+  exact @GlobalTheory.DiagConj.diag_endo_iff_conj_diag

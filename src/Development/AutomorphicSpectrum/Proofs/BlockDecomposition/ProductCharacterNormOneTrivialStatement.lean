@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductCharacterNormOneTrivial
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldCoefficientNormOneTwistStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RealWeilActionUnitRotationStatement
@@ -21,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.product_character_norm_one_trivial : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → IsTotallyComplex K →
   ∀ (DK : DatK K) (c : HeckeCharacter K) (n : ℤ) (t : ℝ) (S : Finset (PlK K)), AdmK DK c n t S →
   ∀ M : ∀ v : Pl, LM c v, AdmM M → ∀ g : G2, thT n t M g 0 ≠ 0 → ∀ κ ∈ K1 K, ∏ᶠ v, (M v).ct (k1 (M v) κ) = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.TermZero.finprod_character_norm_one_eq_one | exact GlobalTheory.CompanionTheory.FexTheta.TermZero.finprod_character_norm_one_eq_one | (intros; apply GlobalTheory.CompanionTheory.FexTheta.TermZero.finprod_character_norm_one_eq_one <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.TermZero.finprod_character_norm_one_eq_one

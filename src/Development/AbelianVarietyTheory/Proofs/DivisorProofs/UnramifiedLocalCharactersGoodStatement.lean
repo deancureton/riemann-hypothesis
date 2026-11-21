@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedLocalCharactersGood
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDetProdConstAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSignatureSum
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.unramified_local_characters_good : ∀ (F E : Type
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' →
     ∀ w : HeightOneSpectrum (𝓞 E), X.Good (w.under (𝓞 F)) →
       GlobalTheory.ThK.DetProd.IsUnramAt w (GlobalTheory.LFun.locChar X.α w) ∧ GlobalTheory.ThK.DetProd.IsUnramAt w (GlobalTheory.LFun.locChar X.β w) := by
-  first | exact @GlobalTheory.GoodPlaceUnr.unram_of_good | exact GlobalTheory.GoodPlaceUnr.unram_of_good | (intros; apply GlobalTheory.GoodPlaceUnr.unram_of_good <;> assumption)
+  exact @GlobalTheory.GoodPlaceUnr.unram_of_good

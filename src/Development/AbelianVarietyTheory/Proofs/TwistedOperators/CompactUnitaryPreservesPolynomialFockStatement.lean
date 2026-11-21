@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompactUnitaryPreservesPolynomialFock
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.compactUnitary_preserves_polynomialFock : ∀ (F E
         ∀ k ∈ KInf σ W τ, ∀ f ∈ M.Pol ψ τ,
           (∃ f₁ : SInf F (Fin n × Fin d), Acts (evI F) (om (1, k)) f f₁) ∧
           ∀ f₁ : SInf F (Fin n × Fin d), Acts (evI F) (om (1, k)) f f₁ → f₁ ∈ M.Pol ψ τ := by
-  first | exact @GlobalTheory.FockCompactW.pol_stable_compact | exact GlobalTheory.FockCompactW.pol_stable_compact | (intros; apply GlobalTheory.FockCompactW.pol_stable_compact <;> assumption)
+  exact @GlobalTheory.FockCompactW.pol_stable_compact

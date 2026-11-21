@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FrameGramUnitaryIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -46,4 +45,4 @@ theorem _root_.GlobalTheory.T.frame_gram_unitary_identity : GlobalTheory.FunPr.H
         (heisO ψ S T u f) (MvPolynomial.monomial k 1) 0 =
         c * ((k.prod fun v n => GlobalTheory.FunObj.period δ v.1 ^ n) * GL3Theta.applyAt0 D (MvPolynomial.monomial k 1)
           (StandardLatticesGL3.comb D (TaylorLogMetric.tor0 D D.host.ccK δ) a s e0)) := by
-  first | exact @GlobalTheory.FinTransJet.fock_jets_heisO_fin | exact GlobalTheory.FinTransJet.fock_jets_heisO_fin | (intros; apply GlobalTheory.FinTransJet.fock_jets_heisO_fin <;> assumption)
+  exact @GlobalTheory.FinTransJet.fock_jets_heisO_fin

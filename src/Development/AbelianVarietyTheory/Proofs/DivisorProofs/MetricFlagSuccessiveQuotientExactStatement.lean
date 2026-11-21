@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.metric_flag_successive_quotient_exact : ∀ (k : T
     ∃ (h₁ : VMetric q₁ E₁ 2) (H₁ : h₁.IsCInf),
       (VMetric.grLB fl₁ 0 (H₁.pull ρ wρ)).Isometric (VMetric.grLB fl i (H.pull π w)) ∧
       (VMetric.grLB fl₁ 1 (H₁.pull ρ wρ)).Isometric (VMetric.grLB fl i' (H.pull π w)) := by
-  first | exact @GlobalTheory.SubqPair.exists_isometric_pair | exact GlobalTheory.SubqPair.exists_isometric_pair | (intros; apply GlobalTheory.SubqPair.exists_isometric_pair <;> assumption)
+  exact @GlobalTheory.SubqPair.exists_isometric_pair

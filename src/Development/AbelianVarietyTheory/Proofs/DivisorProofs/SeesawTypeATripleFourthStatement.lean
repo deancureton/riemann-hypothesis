@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeATripleFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_triple_fourth : ∀ (hKP : GlobalThe
           ∀ (s : EuclideanSpace ℝ (Fin m)) (g : SInf F (Fin (b + 2) × Fin (b + 2 + a'))),
             ⇑g = GlobalTheory.ArchUniq.schrF (GlobalTheory.ArchUniq.trP F (Fin (b + 2) × Fin (b + 2 + a'))) (Λ₁ s, Λ₂ s) ⇑f₀ →
             ℓ g = Complex.exp (2 * Real.pi * Complex.I * ((inner ℝ s (π p) : ℝ) : ℂ)) * ℓ f₀ := by
-  first | exact @GlobalTheory.ArchEigen.exists_param_eigen | exact GlobalTheory.ArchEigen.exists_param_eigen | (intros; apply GlobalTheory.ArchEigen.exists_param_eigen <;> assumption)
+  exact @GlobalTheory.ArchEigen.exists_param_eigen

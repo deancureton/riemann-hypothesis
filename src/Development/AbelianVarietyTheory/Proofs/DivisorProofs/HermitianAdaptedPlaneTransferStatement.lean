@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPlaneTransfer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_transfer : GlobalTheory.Fu
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       (∃ Φ ∈ schA F (Fin n × Fin d), e Φ ≠ 0) →
       ∀ c : UA σ W.J →* ℂˣ, (∀ h, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, h) Φ) = (c h : ℂ) • om₁ (1, h) (e Φ)) → c = 1 := by
-  first | exact @GlobalTheory.MixXUWChar.char_eq_one | exact GlobalTheory.MixXUWChar.char_eq_one | (intros; apply GlobalTheory.MixXUWChar.char_eq_one <;> assumption)
+  exact @GlobalTheory.MixXUWChar.char_eq_one

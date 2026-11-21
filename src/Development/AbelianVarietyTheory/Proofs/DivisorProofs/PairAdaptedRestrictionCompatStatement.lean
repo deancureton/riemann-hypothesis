@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_restriction_compat : GlobalTheory.Fun
         (∃ φ ∈ schA F ((Fin n × Fin d₁) ⊕ (Fin n × Fin d₁)), l₁ φ ≠ 0) →
       ∀ μ : @Measure (Fin n → AE F E) (borel _), GlobalTheory.SiegelAvg.IsHaarB μ →
         ∃ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), GlobalTheory.SiegelAvg.avgForm μ (l₁ ∘ₗ ed) (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y)) Φ ≠ 0 := by
-  first | exact @GlobalTheory.SiegelAvgNz.avg_ne_zero | exact GlobalTheory.SiegelAvgNz.avg_ne_zero | (intros; apply GlobalTheory.SiegelAvgNz.avg_ne_zero <;> assumption)
+  exact @GlobalTheory.SiegelAvgNz.avg_ne_zero

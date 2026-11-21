@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumEigenAtAllPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvFinMkPt
 
 open scoped TensorProduct
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.vacuum_eigen_at_all_places : ∀ {F E : Type} [Fie
     (∀ v, ∀ γ ∈ latAtV X W v, ∀ f : SInf F (Fin n × Fin d),
       M.co.rho ψ γ (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f M.vac) = c v γ • GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f M.vac) →
     ∀ v, ∀ γ ∈ latAtV X W v, locOp ψ v (locPt v (M.co.e γ)) (M.vac v) = c v γ • M.vac v := by
-  first | exact @GlobalTheory.VacEig.vac_eig | exact GlobalTheory.VacEig.vac_eig | (intros; apply GlobalTheory.VacEig.vac_eig <;> assumption)
+  exact @GlobalTheory.VacEig.vac_eig

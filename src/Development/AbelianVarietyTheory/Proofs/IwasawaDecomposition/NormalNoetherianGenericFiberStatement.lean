@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.NormalNoetherianGenericFiber
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.normal_noetherian_generic_fiber : ∀ (R K : Type)
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme N → IsLocallyNoetherian N →
     ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme (pullback g (spMap (algebraMap R K))) ∧
       IsLocallyNoetherian (pullback g (spMap (algebraMap R K))) := by
-  first | exact @GlobalTheory.GenFibre.normal_genericFibre | exact GlobalTheory.GenFibre.normal_genericFibre | (intros; apply GlobalTheory.GenFibre.normal_genericFibre <;> assumption)
+  exact @GlobalTheory.GenFibre.normal_genericFibre

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsIsoOfGluedPullbacksReduced
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.isIso_of_glued_pullbacks_reduced : ∀ {S X₀ : S
     (∀ i k, jB i k ≫ b i k = j k) →
     ∃ (A : Scheme.{0}) (F : A ⟶ S) (ψ : ∀ i, X i ⟶ A),
       (∀ i, IsPullback (ψ i) (g i) F (κ i)) ∧ ∀ i k, IsPullback (a i k) (b i k) (ψ i) (ψ k) := by
-  first | exact @GlobalTheory.SchGlue.exists_glue_of_dense | exact GlobalTheory.SchGlue.exists_glue_of_dense | (intros; apply GlobalTheory.SchGlue.exists_glue_of_dense <;> assumption)
+  exact @GlobalTheory.SchGlue.exists_glue_of_dense

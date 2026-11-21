@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationAGlobalIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.configuration_a_global_identity : GlobalTheory.ThK
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F b a') (Rf₁ : FinMaps F b a'),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∃ (A : InfinitePlace F → Matrix (Fin (b + 2)) (Formalism.BasicNotions.TH.Ix (b + 2 - G.p) G.p) ℂ) (C : InfinitePlace F → Matrix (Fin (b + 2 + a')) (Formalism.BasicNotions.TH.Ix (b + 2 + a' - (G.p + G.q)) (G.p + G.q)) ℂ) (r₀ : Fin (b + 2 + a' - (G.p + G.q))) (s₀ : Fin (G.p + G.q)), IsFrames B G.V G.W A C ∧ IsAdaptedFrame B H' C r₀ s₀ := by
-  first | exact @GlobalTheory.FockBridge.FramesAlpha.frames_alpha | exact GlobalTheory.FockBridge.FramesAlpha.frames_alpha | (intros; apply GlobalTheory.FockBridge.FramesAlpha.frames_alpha <;> assumption)
+  exact @GlobalTheory.FockBridge.FramesAlpha.frames_alpha

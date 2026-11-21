@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseAFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.evaluation_triple_period_case_a_fourth : GlobalThe
     ∀ μ : Measure (AE F E)ˣ, μ.IsHaarMeasure → ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ C : Set (UA σ G.V.J), IsCompact C →
       ∀ y₀ : Fin b × Fin (b + a') → AF F, ∃ U ∈ 𝓝 y₀, ∃ Gf : (AE F E)ˣ → ℝ, Integrable Gf μ ∧ ∀ k ∈ C, ∀ (l : (AE F E)ˣ), ∀ y ∈ U,
         ‖e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, 1) Ψ)) y‖ * (absE F E l : ℝ) ^ ((b + 2 - a') / 2) ≤ Gf l := by
-  first | exact @GlobalTheory.ConeDom.dom | exact GlobalTheory.ConeDom.dom | (intros; apply GlobalTheory.ConeDom.dom <;> assumption)
+  exact @GlobalTheory.ConeDom.dom

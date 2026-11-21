@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarSectionPeriodicity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.FlatAcyc
 open scoped Real ContDiff
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.dbar_section_periodicity : ∀ {E : Type} [NormedA
     (f : (Fin g → ℂ) → Ext m) (hf : IsSec τ M j b f) (l : Fl g) (hl : l ∈ M) (z : Fin g → ℂ)
     (c : Fin g) (S : Finset (Fin m)),
     d01 (fun z' => f z' S) (z + per (τ b) l) (ev c) = j l (b, z) * d01 (fun z' => f z' S) z (ev c) := by
-  first | exact @GlobalTheory.FlatAcycShift.dbar_coeff_transl | exact GlobalTheory.FlatAcycShift.dbar_coeff_transl | (intros; apply GlobalTheory.FlatAcycShift.dbar_coeff_transl <;> assumption)
+  exact @GlobalTheory.FlatAcycShift.dbar_coeff_transl

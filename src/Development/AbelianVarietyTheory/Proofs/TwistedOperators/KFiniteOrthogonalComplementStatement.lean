@@ -11,4 +11,4 @@ open GlobalTheory.Orb (IsPseudoCoeff ujMat ujRep)
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.k_finite_orthogonal_complement : ∀ (n : ℕ) (ε : Fin n → Bool) (H : Type) [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H] (ρ : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)), IsAdmRep ε ρ → ∀ Z : Submodule ℂ H, Z ≤ kFinVec ε ρ → IsKStableOn ε ρ Z → Z ≠ kFinVec ε ρ → ∃ a : H, a ≠ 0 ∧ IsKFin ε ρ a ∧ ∀ z ∈ Z, ⟪a, z⟫_ℂ = 0 := by
-  first | exact @GlobalTheory.exists_kFin_orthogonal_of_ne_kFinVec | exact GlobalTheory.exists_kFin_orthogonal_of_ne_kFinVec | (intros; apply GlobalTheory.exists_kFin_orthogonal_of_ne_kFinVec <;> assumption)
+  exact @GlobalTheory.exists_kFin_orthogonal_of_ne_kFinVec

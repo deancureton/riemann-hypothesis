@@ -12,4 +12,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unramified_central_scalars_trivial : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (m : LM c v), Unr c v → m.ok → ∀ a ∈ unQ v, omW m a = 1 ∧ om0 m a = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.CenTheta.central_scalars_trivial_on_units | exact GlobalTheory.CompanionTheory.CenTheta.central_scalars_trivial_on_units | (intros; apply GlobalTheory.CompanionTheory.CenTheta.central_scalars_trivial_on_units <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenTheta.central_scalars_trivial_on_units

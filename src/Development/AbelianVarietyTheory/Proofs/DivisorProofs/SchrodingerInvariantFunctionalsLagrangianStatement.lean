@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerInvariantFunctionalsLagrangian
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.schrodinger_invariant_functionals_lagrangian : Glo
     (∀ (t : AF F), ∀ w ∈ L, ∀ φ ∈ schA F κ,
       l₂ (schr ψ (t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i)))) φ) = l₂ φ) →
     (∃ φ ∈ schA F κ, l₂ φ ≠ 0) → ∃ c : ℂ, ∀ φ ∈ schA F κ, l₁ φ = c * l₂ φ := by
-  first | exact @GlobalTheory.SvNLinear.main | exact GlobalTheory.SvNLinear.main | (intros; apply GlobalTheory.SvNLinear.main <;> assumption)
+  exact @GlobalTheory.SvNLinear.main

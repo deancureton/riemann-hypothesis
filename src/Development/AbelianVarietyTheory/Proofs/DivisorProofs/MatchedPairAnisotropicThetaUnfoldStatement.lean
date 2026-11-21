@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairAnisotropicThetaUnfold
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.matched_pair_anisotropic_theta_unfold : GlobalTheo
       (∀ (g : UA σ G.W.J) (g' : GAd σ (c₀ • G.W.J.map σ)), g.1 = g'.1 → φ' g' = G.M.I om Φ g - c * G.M'.I om' Φ' g) →
       ∃ N : ℕ, ∀ l : List (ℝ → GAd σ (c₀ • G.W.J.map σ)), (∀ γ ∈ l, GlobalTheory.SiegelSet.IsRealLine σ (c₀ • G.W.J.map σ) γ) →
         ∃ C : ℝ, ∀ g, ‖l.foldr GlobalTheory.SiegelSet.lineDer φ' g‖ ≤ C * (height σ (c₀ • G.W.J.map σ) g : ℝ) ^ N := by
-  first | exact @GlobalTheory.ThK.GrowthDiff.growth_diff | exact GlobalTheory.ThK.GrowthDiff.growth_diff | (intros; apply GlobalTheory.ThK.GrowthDiff.growth_diff <;> assumption)
+  exact @GlobalTheory.ThK.GrowthDiff.growth_diff

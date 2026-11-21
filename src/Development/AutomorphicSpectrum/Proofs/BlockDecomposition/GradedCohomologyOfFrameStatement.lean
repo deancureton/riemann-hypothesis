@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.graded_cohomology_of_frame : ∀ {R : Type} [CommR
         Rep (Fil r) (Fil (r + 1)) (fun s => ∑ I : Idx j 0, E.form σ I.1 (x I) s) c) ∧
       ∀ x : Idx j 0 → Φ.A.obj E.D, (∀ I, x I ∈ (Fil q).S E.D) →
         Rep (Fil r) (Fil (r + 1)) (fun s => ∑ I : Idx j 0, E.form σ I.1 (x I) s) 0 → ∀ I, x I ∈ (Fil ((q : ℤ) + 1)).S E.D := by
-  first | exact @GlobalTheory.CompanionTheory.LocGr.gr_zero | exact GlobalTheory.CompanionTheory.LocGr.gr_zero | (intros; apply GlobalTheory.CompanionTheory.LocGr.gr_zero <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocGr.gr_zero

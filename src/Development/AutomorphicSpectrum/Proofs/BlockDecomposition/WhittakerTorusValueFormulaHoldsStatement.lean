@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WhittakerTorusValueFormulaHolds
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FintypeResidue
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionNonvanishing
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.whittaker_torus_value_formula_holds : ∀ (F : Typ
   (b ≤ a → Ad3.LFS.s2 ψ ν (torusPow F 2 ![a, b]) =
     sqrtQ F ^ (-(a - b)) * evalAt ![ν (unifUnit F), (ν (unifUnit F))⁻¹] (schur ![a, b])) ∧
   (a < b → Ad3.LFS.s2 ψ ν (torusPow F 2 ![a, b]) = 0) := by
-  first | exact @GlobalTheory.CompanionTheory.LFUDom.whittaker_torus_value_formula | exact GlobalTheory.CompanionTheory.LFUDom.whittaker_torus_value_formula | (intros; apply GlobalTheory.CompanionTheory.LFUDom.whittaker_torus_value_formula <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LFUDom.whittaker_torus_value_formula

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralLinearFormOnBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.integral_linear_form_on_basis : ∀ {O : Type} [Co
     (γ : Fin m → LinearMap.BilinForm ℤ X) (hγ : ∀ i, γ i ∈ GlobalTheory.PolFan.balForms bar X),
     GlobalTheory.Toroidal.IsPartOfBasis (fun i => (⟨γ i, hγ i⟩ : GlobalTheory.PolFan.balForms bar X)) →
     ∀ w : Fin m → ℤ, ∃ ℓ : LinearMap.BilinForm ℤ X →ₗ[ℤ] ℤ, ∀ i, ℓ (γ i) = w i := by
-  first | exact @GlobalTheory.BalExt.exists_linearForm_ext | exact GlobalTheory.BalExt.exists_linearForm_ext | (intros; apply GlobalTheory.BalExt.exists_linearForm_ext <;> assumption)
+  exact @GlobalTheory.BalExt.exists_linearForm_ext

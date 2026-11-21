@@ -6,4 +6,4 @@ open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.Me
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.acrisToBdRPlus_injective : ∀ (l : ℕ) [Fact l.Prime], ∀ j : Per.Acris l →+* Per.BdRp l, IsCrisP j → Function.Injective j := by
-  first | exact @GlobalTheory.MemLoc.crisP_injective | exact GlobalTheory.MemLoc.crisP_injective | (intros; apply GlobalTheory.MemLoc.crisP_injective <;> assumption)
+  exact @GlobalTheory.MemLoc.crisP_injective

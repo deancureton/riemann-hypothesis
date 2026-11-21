@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftTorsionPointNilpotent
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lift_torsion_point_nilpotent : ∀ {R : Type} [Com
     (G₀ : Over (Sp ℂ)) [GrpObj G₀] (i : G₀.left ⟶ G.left), IsGrpPullback G₀ G (spMap (π : R →+* ℂ)) i →
     ∀ (N : ℕ), 1 ≤ N → ∀ (p : 𝟙_ (Over (Sp ℂ)) ⟶ G₀), p ^ N = 1 →
     ∃ q : 𝟙_ (Over (Sp R)) ⟶ G, q ^ N = 1 ∧ p.left ≫ i = spMap (π : R →+* ℂ) ≫ q.left := by
-  first | exact @GlobalTheory.TorsionLift.exists_torsion_lift | exact GlobalTheory.TorsionLift.exists_torsion_lift | (intros; apply GlobalTheory.TorsionLift.exists_torsion_lift <;> assumption)
+  exact @GlobalTheory.TorsionLift.exists_torsion_lift

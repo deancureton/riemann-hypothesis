@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameConjugateEmbeddingEqConjMulUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsModelOf
@@ -20,4 +19,4 @@ open GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.CxPts G
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.frame_conjugate_embedding_eq_conj_mul_unitary : ∀ (K : Type) [Field K] (N : ℕ) (A : (K →+* ℂ) → Matrix (Fin N) (Fin N) ℂ), GlobalTheory.ChowHt.ConjCompat A → (∀ σ, (A σ).det ≠ 0) →
     ∀ σ : K →+* ℂ, ∃ U ∈ Matrix.unitaryGroup (Fin N) ℂ, A ((starRingEnd ℂ).comp σ) = (A σ).map (starRingEnd ℂ) * U := by
-  first | exact @GlobalTheory.ConjUnitary.conj_frame_unitary | exact GlobalTheory.ConjUnitary.conj_frame_unitary | (intros; apply GlobalTheory.ConjUnitary.conj_frame_unitary <;> assumption)
+  exact @GlobalTheory.ConjUnitary.conj_frame_unitary

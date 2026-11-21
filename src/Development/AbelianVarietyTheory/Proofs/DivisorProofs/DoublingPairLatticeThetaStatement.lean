@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPairLatticeTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_lattice_theta : ∀ (F E : Type) [Fi
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE M.co u) Ψ) = co.rho B.ψ u (e Ψ)) →
     ∀ x : UA σ Xs.J, ∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d),
       om₂ (x, 1) (e (boxC Φ₁ Φ₂)) = e (boxC (om (x, 1) Φ₁) (om (x, 1) Φ₂)) := by
-  first | exact @GlobalTheory.DblUnitaryBox.om_boxC | exact GlobalTheory.DblUnitaryBox.om_boxC | (intros; apply GlobalTheory.DblUnitaryBox.om_boxC <;> assumption)
+  exact @GlobalTheory.DblUnitaryBox.om_boxC

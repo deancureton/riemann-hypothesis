@@ -17,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.DownLift GlobalTheory.Core.Rk.Exh
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.howe_unramified_lift : GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.DoublingMethod → GlobalTheory.Published.RegularisedSiegelWeilFirstTerm → GlobalTheory.Published.UnramifiedDoublingGL → GlobalTheory.Published.HeckeLPartialContinuation → GlobalTheory.Hk3.HoweUnram → ∀ (D : D7) (G : Type) [Group G] [Fintype G] (Pl0 T : Type) (A : FamIn D.what₂.LL G Pl0 T D.R.m) (Ks : Type) [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] (R : RealDat D A Ks) (F : Face D A), GlobalTheory.LiftRows.Given R F → R.FullP → ∀ i t, NonVan R i t := by
-  first | exact @GlobalTheory.DownLift.nonVan_of_given_fullP | exact GlobalTheory.DownLift.nonVan_of_given_fullP | (intros; apply GlobalTheory.DownLift.nonVan_of_given_fullP <;> assumption)
+  exact @GlobalTheory.DownLift.nonVan_of_given_fullP

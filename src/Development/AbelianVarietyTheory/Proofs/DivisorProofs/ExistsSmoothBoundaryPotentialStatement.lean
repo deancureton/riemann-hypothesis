@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_smooth_boundary_potential : GlobalTheory.Co
         (T.K B c).num (Fin.cons (T.L B c (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0) + (T.K B c).ar g)
           fun _ => T.L B c u + (T.K B c).ar f) =
         (T.M c).int (fun _ => (T.K B c).c1 (T.L B c u + (T.K B c).ar f)) (fun _ _ => O.Y.htDetT B c τ) := by
-  first | exact @GlobalTheory.FlatDetLine.numbers_eq_height_mul_degree | exact GlobalTheory.FlatDetLine.numbers_eq_height_mul_degree | (intros; apply GlobalTheory.FlatDetLine.numbers_eq_height_mul_degree <;> assumption)
+  exact @GlobalTheory.FlatDetLine.numbers_eq_height_mul_degree

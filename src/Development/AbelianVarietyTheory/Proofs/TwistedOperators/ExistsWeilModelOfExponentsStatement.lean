@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsWeilModelOfExponents
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.exists_weil_model_of_exponents : GlobalTheory.FunP
     (χX χW : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Chr D.host.F D.host.E) (om : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Rep D.sp.cm.sig Xs Ws)
     (τ : ∀ w : InfinitePlace D.host.F, GlobalTheory.AdelicU.EmbOver D.host.E w),
     GlobalTheory.RealDict.PublishedHyps D Xs Ws Mo ψ' χX χW om τ ∧ GlobalTheory.RealDict.IsPairReading ψ ε A B ω Xs Ws Mo ψ' om τ := by
-  first | exact @GlobalTheory.PairDarboux.exists_pair_darboux | exact GlobalTheory.PairDarboux.exists_pair_darboux | (intros; apply GlobalTheory.PairDarboux.exists_pair_darboux <;> assumption)
+  exact @GlobalTheory.PairDarboux.exists_pair_darboux

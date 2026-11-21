@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProductFormulaGlobalCharacter
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.product_formula_global_character : ∀ (K : Type) 
   ∀ M : ∀ v : Pl, LM c v, (∀ v, (M v).ok) → ∀ κ : Kˣ,
     (Function.mulSupport fun v : Pl => cW (M v) κ).Finite ∧
       (∏ᶠ v : Pl, cW (M v) κ) * chC n (Complex.I * t) (embU κ) = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.HeckeUnit.cW_finprod_mul_chC | exact GlobalTheory.CompanionTheory.FexTheta.HeckeUnit.cW_finprod_mul_chC | (intros; apply GlobalTheory.CompanionTheory.FexTheta.HeckeUnit.cW_finprod_mul_chC <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.HeckeUnit.cW_finprod_mul_chC

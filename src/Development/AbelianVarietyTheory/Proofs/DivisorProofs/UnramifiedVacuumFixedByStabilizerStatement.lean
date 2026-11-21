@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedVacuumFixedByStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.unramified_vacuum_fixed_by_stabilizer : ∀ {F E :
       Acts (evFin F v) (om (k, 1)) (G.M.vac v) (G.M.vac v)) ∧
     (∀ K : Subgroup (UA σ G.V'.J), IsStab B K → ∀ k ∈ KAt K (evFin F v),
       Acts (evFin F v) (om' (k, 1)) (G.M'.vac v) (G.M'.vac v)) := by
-  first | exact @GlobalTheory.VacFixStab.vac_fixed_both | exact GlobalTheory.VacFixStab.vac_fixed_both | (intros; apply GlobalTheory.VacFixStab.vac_fixed_both <;> assumption)
+  exact @GlobalTheory.VacFixStab.vac_fixed_both

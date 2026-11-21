@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.matched_theta_integral_value : GlobalTheory.FunPr.
   (ρ : RealMatch W), ρ.Over R → ∀ (t : T) (i j : Fin D.R.m) (M : Vol G), M.Is t → ∀ Θ Θ', IsMatched B t ρ i j Θ Θ' → ∀ g g₁,
   ∃ J : ℂ, ∀ z, IntegrableOn (translates z (kerSmall W Θ' g g₁)) (M.fd _) (M.ν _) →
     ∫ u in M.fd _, translates z (kerSmall W Θ' g g₁) u ∂M.ν _ = zdeg z * J := by
-  first | exact @GlobalTheory.SmallConst.regIntegral_const | exact GlobalTheory.SmallConst.regIntegral_const | (intros; apply GlobalTheory.SmallConst.regIntegral_const <;> assumption)
+  exact @GlobalTheory.SmallConst.regIntegral_const

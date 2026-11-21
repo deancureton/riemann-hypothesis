@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_restriction_pair_third : GlobalTheor
         (∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d), Ed (boxFun Φ₁ Φ₂) = boxFun (e Φ₁) (e₂ Φ₂)) ∧
         (∀ Φ ∈ schA F (Fin n × Fin d), e₂ Φ ∈ schA F (Fin n × Fin d₁)) ∧
         ∃ Φ ∈ schA F (Fin n × Fin d), e₂ Φ ≠ 0 := by
-  first | exact @GlobalTheory.DblEvalW.exists_dblEv | exact GlobalTheory.DblEvalW.exists_dblEv | (intros; apply GlobalTheory.DblEvalW.exists_dblEv <;> assumption)
+  exact @GlobalTheory.DblEvalW.exists_dblEv

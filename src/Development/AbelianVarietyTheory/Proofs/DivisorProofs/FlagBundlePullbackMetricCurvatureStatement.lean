@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundlePullbackMetricCurvature
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_pullback_metric_curvature : ArCalc →
       ∀ (j : ℕ) (P : MvPolynomial (Fin 2) ℝ), 1 ≤ j → 2 * j ≤ d + 2 → P.IsHomogeneous (d + 2 - 2 * j) →
         Φ ((X 1 - X 0) ^ (2 * j) * aeval (![X 0 + X 1, X 2] : Fin 2 → MvPolynomial (Fin 3) ℝ) P) =
           oddHarm j * Ψ ((X 1 - X 0) ^ (2 * j - 1) * aeval (![X 0 + X 1, X 2] : Fin 2 → MvPolynomial (Fin 3) ℝ) P) := by
-  first | exact @GlobalTheory.BlockPoint.OddTerm.arFun_pow_eq_oddHarm_mul | exact GlobalTheory.BlockPoint.OddTerm.arFun_pow_eq_oddHarm_mul | (intros; apply GlobalTheory.BlockPoint.OddTerm.arFun_pow_eq_oddHarm_mul <;> assumption)
+  exact @GlobalTheory.BlockPoint.OddTerm.arFun_pow_eq_oddHarm_mul

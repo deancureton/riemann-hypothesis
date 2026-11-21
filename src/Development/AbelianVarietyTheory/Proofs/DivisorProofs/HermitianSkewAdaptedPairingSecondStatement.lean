@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewAdaptedPairingSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.hermitian_skew_adapted_pairing_second : ∀ {F E :
       (Matrix.vecMulVec (incV F H.x) α + Matrix.vecMulVec (incM F H.ι *ᵥ c₁) (incV F H'.x) +
         incM F H.ι * Z * (incM F H'.ι)ᵀ) (incM F H.ι * z' * (incM F H'.ι)ᵀ) =
     symp (R := AF F) (cA σ) (-1) (incM F X₁.J) (incM F W₁.J) Z z' := by
-  first | exact @GlobalTheory.LeviPairing.pairing_eq | exact GlobalTheory.LeviPairing.pairing_eq | (intros; apply GlobalTheory.LeviPairing.pairing_eq <;> assumption)
+  exact @GlobalTheory.LeviPairing.pairing_eq

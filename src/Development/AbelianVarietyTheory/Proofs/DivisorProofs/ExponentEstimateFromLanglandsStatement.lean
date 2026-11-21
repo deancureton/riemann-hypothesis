@@ -13,4 +13,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.Bh
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.HeckeLAdicCharacterAboveIff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exponent_estimate_from_langlands : GlobalTheory.Published.ClozelCohomological → GlobalTheory.Published.CohomologicalCsdTempered → GlobalTheory.Published.HeckeLAdicCharacter → GlobalTheory.Published.ChebotarevDegreeOne → GlobalTheory.Published.DiscreteSpectrumGL → GlobalTheory.Published.GaloisRepOfPolarizedCuspidal → GlobalTheory.Published.BaseChangeDefiniteUnitary → GlobalTheory.Published.BhattScholzeCrystallineLattices → GlobalTheory.Published.HeckeLAdicCharacterAbove → GlobalTheory.Published.LocalLanglandsGL → GlobalTheory.BigOn.ExpSt := by
-  first | exact @GlobalTheory.BigOn.expSt_of_hypotheses | exact GlobalTheory.BigOn.expSt_of_hypotheses | (intros; apply GlobalTheory.BigOn.expSt_of_hypotheses <;> assumption)
+  exact @GlobalTheory.BigOn.expSt_of_hypotheses

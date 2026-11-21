@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenvectorIntegralCompletion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentTraceSeparatingElement
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RootsOfUnityAndPValuation
 open NumberField
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.eigenvector_integral_completion : ∀ (E : Type) [
     ∃ z : Fin N → F, (∀ i, z i ∈ R) ∧ ∀ P : Matrix (Fin N) (Fin N) F,
       (∀ a : 𝓞 E, P * (ρ a).map (Int.castRingHom F) = τ (a : E) • P) →
       P.mulVec z = (∑ k, r k * τ ((integralBasis E).traceDual k)) • P.mulVec y := by
-  first | exact @GlobalTheory.EigenDivide.exists_projection_eq | exact GlobalTheory.EigenDivide.exists_projection_eq | (intros; apply GlobalTheory.EigenDivide.exists_projection_eq <;> assumption)
+  exact @GlobalTheory.EigenDivide.exists_projection_eq

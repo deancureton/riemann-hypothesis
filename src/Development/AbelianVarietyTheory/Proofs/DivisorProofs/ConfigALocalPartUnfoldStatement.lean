@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartUnfold
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_unfold : GlobalTheory.FunPr.Hy
     IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ k ∈ UAt σ G.V (evI F), ∀ g ∈ UAt σ G.V (evI F), ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')),
       locOpInf (om (k, 1)) (locOpInf (om (g, 1)) f) = locOpInf (om (k * g, 1)) f := by
-  first | exact @GlobalTheory.ThK.InfComp.locOpInf_comp | exact GlobalTheory.ThK.InfComp.locOpInf_comp | (intros; apply GlobalTheory.ThK.InfComp.locOpInf_comp <;> assumption)
+  exact @GlobalTheory.ThK.InfComp.locOpInf_comp

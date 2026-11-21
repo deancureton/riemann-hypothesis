@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.nonempty_typePlaceCompletionIdent : ∀ D : D7, Nonempty (Ident D) := by
-  first | exact @GlobalTheory.TypeIdent.nonempty_ident | exact GlobalTheory.TypeIdent.nonempty_ident | (intros; apply GlobalTheory.TypeIdent.nonempty_ident <;> assumption)
+  exact @GlobalTheory.TypeIdent.nonempty_ident

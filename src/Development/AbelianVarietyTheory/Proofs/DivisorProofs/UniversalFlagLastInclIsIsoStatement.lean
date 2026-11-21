@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UniversalFlagLastInclIsIso
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -19,4 +18,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.FlagZ
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.universal_flag_last_incl_isIso : ∀ (ι : Type) [Fintype ι] (N : ℕ) (τ : ι), IsIso (GlobalTheory.FlagZ.Univ.incl ι N τ (Fin.last N)) := by
-  first | exact @GlobalTheory.FlagZ.Univ.isIso_incl_last_step | exact GlobalTheory.FlagZ.Univ.isIso_incl_last_step | (intros; apply GlobalTheory.FlagZ.Univ.isIso_incl_last_step <;> assumption)
+  exact @GlobalTheory.FlagZ.Univ.isIso_incl_last_step

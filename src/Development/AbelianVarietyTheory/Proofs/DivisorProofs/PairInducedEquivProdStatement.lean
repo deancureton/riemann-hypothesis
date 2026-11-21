@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairInducedEquivProd
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.pair_induced_equiv_prod : ∀ (k : Type) [Field k]
     (b' : Fin 2 → ℕ) (d : ℕ) (h : b' 0 + b' 1 = d) (μ : Fin 2 → kˣ →* ℂˣ),
     Nonempty (Representation.Equiv ((GlobalTheory.LeviBlockExponent.pairInd k b' h μ).comp (GlobalTheory.CuspBlock.glCast h))
       (GlobalTheory.SmGL.prod₂ (GlobalTheory.SmGL.detRep (Fin (b' 0)) (μ 0)) (GlobalTheory.SmGL.detRep (Fin (b' 1)) (μ 1)))) := by
-  first | exact @GlobalTheory.PairIndProd.pairInd_equiv_prod₂ | exact GlobalTheory.PairIndProd.pairInd_equiv_prod₂ | (intros; apply GlobalTheory.PairIndProd.pairInd_equiv_prod₂ <;> assumption)
+  exact @GlobalTheory.PairIndProd.pairInd_equiv_prod₂

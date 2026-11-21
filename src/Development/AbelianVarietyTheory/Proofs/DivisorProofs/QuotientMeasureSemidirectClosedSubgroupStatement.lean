@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuotientMeasureSemidirectClosedSubgroup
-import Mathlib
 open MeasureTheory
 
 set_option maxHeartbeats 1000000 in
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.quotient_measure_semidirect_closed_subgroup : ∀ 
     ∃ (κ : Measure R) (𝓡 : Set R), κ.IsHaarMeasure ∧ IsFundamentalDomain (Γ.subgroupOf R) 𝓡 κ ∧ κ 𝓡 = 1 ∧
       ∀ φ : G → ℂ, Continuous φ → (∃ C, ∀ x ∈ R, ‖φ x‖ ≤ C) →
         ∫ x in 𝓡, φ x ∂κ = ∫ h in 𝓕, ∫ m in 𝓐, φ (m.1 * s h) ∂ν ∂μ := by
-  first | exact @GlobalTheory.semiHaar_exists_fd_setIntegral | exact GlobalTheory.semiHaar_exists_fd_setIntegral | (intros; apply GlobalTheory.semiHaar_exists_fd_setIntegral <;> assumption)
+  exact @GlobalTheory.semiHaar_exists_fd_setIntegral

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumUnramifiedAlmostAll
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -25,4 +24,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_place_ring_over_prime : ∀ (l : ℕ) [Fact l.Prime] (lam : algebraicClosure ℚ ℂ →+* ℂ_[l]) (k : IntermediateField ℚ ℂ), FiniteDimensional ℚ k →
     ∃ R : Subring ℂ, IsPlaceOver l lam k R := by
-  first | exact @GlobalTheory.PlaceRingExists.exists_isPlaceOver | exact GlobalTheory.PlaceRingExists.exists_isPlaceOver | (intros; apply GlobalTheory.PlaceRingExists.exists_isPlaceOver <;> assumption)
+  exact @GlobalTheory.PlaceRingExists.exists_isPlaceOver

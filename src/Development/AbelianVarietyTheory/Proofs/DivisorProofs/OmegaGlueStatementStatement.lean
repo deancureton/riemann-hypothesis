@@ -10,4 +10,4 @@ open Formalism.MainNotions.DIV.Cons (intO SCF)
 open GlobalTheory.OmegaHT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.OmegaGlueStatement : GlobalTheory.OmegaHT.GlueSt := by
-  first | exact @GlobalTheory.OmegaHT.FrameGlue.glue | exact GlobalTheory.OmegaHT.FrameGlue.glue | (intros; apply GlobalTheory.OmegaHT.FrameGlue.glue <;> assumption)
+  exact @GlobalTheory.OmegaHT.FrameGlue.glue

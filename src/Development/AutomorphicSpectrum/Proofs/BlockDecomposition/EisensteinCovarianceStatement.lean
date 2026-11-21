@@ -8,4 +8,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.ModerateGrowthSchwartz (schwartzA)
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eisenstein_covariance : PositivityTheory.GramSchwartzFunctions.EC.Covar := by
-  first | exact @GlobalTheory.CompanionTheory.EisCovar.covar | exact GlobalTheory.CompanionTheory.EisCovar.covar | (intros; apply GlobalTheory.CompanionTheory.EisCovar.covar <;> assumption)
+  exact @GlobalTheory.CompanionTheory.EisCovar.covar

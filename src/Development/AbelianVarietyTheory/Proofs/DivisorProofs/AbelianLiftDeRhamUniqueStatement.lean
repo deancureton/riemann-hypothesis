@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianLiftDeRhamUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.abelian_lift_crystalline_comparison : GlobalTheory
       (h : IsGrpPullback A₀ A (spMap π) i), IsAbelianScheme A → SmoothOfRelativeDimension g A.hom →
     ∀ (O : Type) [CommRing O] (a₀ : OAct O A₀), (∀ (x : O), ∀ d ∈ liftFil κ h, act κ (spMap π) a₀ x d ∈ liftFil κ h) →
       ∃ a : OAct O A, ∀ x, (a₀.act x).left ≫ i = i ≫ (a.act x).left := by
-  first | exact @GlobalTheory.OActLift.exists_oAct_lift | exact GlobalTheory.OActLift.exists_oAct_lift | (intros; apply GlobalTheory.OActLift.exists_oAct_lift <;> assumption)
+  exact @GlobalTheory.OActLift.exists_oAct_lift

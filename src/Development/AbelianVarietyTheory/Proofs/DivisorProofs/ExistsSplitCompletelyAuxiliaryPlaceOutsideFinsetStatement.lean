@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSplitCompletelyAuxiliaryPlaceOutsideFinset
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.exists_splitCompletely_auxiliary_place_outside_fin
     (P₀ : Finset (HeightOneSpectrum (𝓞 D.host.F))), ∃ v₁ : HeightOneSpectrum (𝓞 D.host.F), v₁ ∉ P₀ ∧
       SplitsFully D.host.E v₁ ∧ (∀ w ∈ locPl G t, w.under (𝓞 D.host.F) ≠ v₁) ∧
       Nonempty (D.host.E →ₐ[D.host.F] Fv D.host.F v₁) := by
-  first | exact @GlobalTheory.GoodPlace.exists_good_place | exact GlobalTheory.GoodPlace.exists_good_place | (intros; apply GlobalTheory.GoodPlace.exists_good_place <;> assumption)
+  exact @GlobalTheory.GoodPlace.exists_good_place

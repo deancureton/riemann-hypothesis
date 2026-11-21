@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockVacuaSpanFiniteDimensional
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolActs
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.fockVacua_span_finiteDimensional : ∀ (F E : Type
     (X : Spc F E n) (W : Spc F E d) (M : Model σ X W) (χX χW : Chr F E) (om : Rep σ X W) (r s r' s' : ℕ),
     GlobalTheory.ThK.IsPair B M χX χW om r s r' s' →
     FiniteDimensional ℂ (Submodule.span ℂ {f₀ : SInf F (Fin n × Fin d) | M.IsGauss B.ψ B.emb f₀}) := by
-  first | exact @GlobalTheory.FockVac.span_finiteDimensional | exact GlobalTheory.FockVac.span_finiteDimensional | (intros; apply GlobalTheory.FockVac.span_finiteDimensional <;> assumption)
+  exact @GlobalTheory.FockVac.span_finiteDimensional

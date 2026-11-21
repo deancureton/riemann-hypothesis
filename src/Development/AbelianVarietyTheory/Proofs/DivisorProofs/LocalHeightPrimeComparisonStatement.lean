@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.local_height_prime_comparison : Hypotheses2 → Hy
         Real.log (colMinor e.w (M a) (blkLe (fun l : Fin (D.R.f * O.N) => letterEmb O l) i)) -
           Real.log (colMinor e.w (M a) (blkLt (fun l : Fin (D.R.f * O.N) => letterEmb O l) i)) +
             (if letterEmb O i ∈ cmSet O then vDiff D.host.E p else 0) * Real.log (e.w (p : AlgebraicClosure D.what₂.LL)) := by
-  first | exact @GlobalTheory.EqHalf.EigNorm.lg_eigA | exact GlobalTheory.EqHalf.EigNorm.lg_eigA | (intros; apply GlobalTheory.EqHalf.EigNorm.lg_eigA <;> assumption)
+  exact @GlobalTheory.EqHalf.EigNorm.lg_eigA

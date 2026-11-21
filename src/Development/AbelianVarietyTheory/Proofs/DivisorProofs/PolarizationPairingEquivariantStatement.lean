@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizationPairingEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
 open CategoryTheory AlgebraicGeometry Limits MonoidalCategory CartesianMonoidalCategory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.polarization_pairing_equivariant : GlobalTheory.Co
     (e : ∀ (V : T.Opens) (hV : IsAffineOpen V), Γ(H, V) ≃ₗ[Γ(T, V)] primDR (onAff A hV))
     (ρ : O →+* End H) (β : H ⟶ dual H), IsDRAct e i ρ → IsPolPairing e P β →
     ∀ x : O, VB.act ρ x ≫ β = β ≫ dualMap (VB.act ρ (c x)) := by
-  first | exact @GlobalTheory.AbDatum.Adjoint.main | exact GlobalTheory.AbDatum.Adjoint.main | (intros; apply GlobalTheory.AbDatum.Adjoint.main <;> assumption)
+  exact @GlobalTheory.AbDatum.Adjoint.main

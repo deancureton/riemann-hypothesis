@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.pullback_id_flag_piece_iso : ∀ {B Y : Scheme.{0}
     ∃ e : (Scheme.Modules.pullback (𝟙 Y)).obj F ≅ F, e.hom ≫ ι =
       (Scheme.Modules.pullback (𝟙 Y)).map ι ≫ (Scheme.Modules.pullbackComp (𝟙 Y) π).hom.app E ≫
         (Scheme.Modules.pullbackCongr w).hom.app E := by
-  first | exact @GlobalTheory.pullback_id_lift_step_self | exact GlobalTheory.pullback_id_lift_step_self | (intros; apply GlobalTheory.pullback_id_lift_step_self <;> assumption)
+  exact @GlobalTheory.pullback_id_lift_step_self

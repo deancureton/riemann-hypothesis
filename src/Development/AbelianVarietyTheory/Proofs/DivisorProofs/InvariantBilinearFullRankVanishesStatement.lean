@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantBilinearFullRankVanishes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShearGLTransposeMul
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.invariant_bilinear_full_rank_vanishes : GlobalTheo
       (∀ h : GL (Fin d) k, ∃ m : ℝ, 0 < m ∧ ∀ (Ψ₁ Ψ₁' : fullRk k n d) (Ψ₂ Ψ₂' : fullRk k ρ d),
         Ψ₁'.1 = (fun Y => Ψ₁.1 (Y * h.1)) → Ψ₂'.1 = (fun Y => Ψ₂.1 (Y * h.1)) → (m : ℂ) * Bf Ψ₁' Ψ₂' = Bf Ψ₁ Ψ₂) →
       ∀ Ψ₁ Ψ₂, Bf Ψ₁ Ψ₂ = 0 := by
-  first | exact @GlobalTheory.FibreVanish.form_eq_zero | exact GlobalTheory.FibreVanish.form_eq_zero | (intros; apply GlobalTheory.FibreVanish.form_eq_zero <;> assumption)
+  exact @GlobalTheory.FibreVanish.form_eq_zero

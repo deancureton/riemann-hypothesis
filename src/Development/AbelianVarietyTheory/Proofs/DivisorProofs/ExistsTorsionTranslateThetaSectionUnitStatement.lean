@@ -10,4 +10,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.UT ReciprocityTheory.ChartRestriction.G.DVR
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_torsionTranslate_thetaSection_unit : ∀ (V : Type) [CommRing V] [IsDomain V] [IsLocalRing V] (D : DegPre V) (θ : D.SecB 1 0), IntTerm.IsTheta D θ → ∀ N : ℕ, 2 ≤ N → IsUnit (N : V) → ∀ (C : Type) (b : C → (𝟙_ (Over (Sp V)) ⟶ D.P.A)), IntTerm.Exhausts D.P N b → ∀ a : 𝟙_ (Over (Sp V)) ⟶ D.P.A, ∃ c, IntTerm.UnitAt D θ (a * b c) := by
-  first | exact @GlobalTheory.Poinc.IntTerm.exists_unitAt_mul | exact GlobalTheory.Poinc.IntTerm.exists_unitAt_mul | (intros; apply GlobalTheory.Poinc.IntTerm.exists_unitAt_mul <;> assumption)
+  exact @GlobalTheory.Poinc.IntTerm.exists_unitAt_mul

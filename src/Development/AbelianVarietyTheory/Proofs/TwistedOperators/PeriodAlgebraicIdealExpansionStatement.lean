@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PeriodAlgebraicIdealExpansion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.period_algebraic_ideal_expansion : ∀ {D : D7} {T
         ∀ U : GlobalTheory.NormSum.Tup D A'.rank WW.rank n, ∃ Q : MvPolynomial (GL3Theta.Idx D A'.rank WW.rank) ℂ,
           (∀ α, IsAlgebraic ℚ (Q.coeff α)) ∧
           X.ker' W.ψ W.θ t (GlobalTheory.NormSum.minorPol D U) h x = Ω * GL3Theta.applyAt0 D Q (StandardLatticesGL3.comb D (TaylorLogMetric.tor0 D cc δ) c s e0) := by
-  first | exact @GlobalTheory.BottomFieldDict.ker'_minorPol_eq_jet | exact GlobalTheory.BottomFieldDict.ker'_minorPol_eq_jet | (intros; apply GlobalTheory.BottomFieldDict.ker'_minorPol_eq_jet <;> assumption)
+  exact @GlobalTheory.BottomFieldDict.ker'_minorPol_eq_jet

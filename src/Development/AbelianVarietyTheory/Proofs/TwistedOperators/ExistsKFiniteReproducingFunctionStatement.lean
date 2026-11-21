@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsKFiniteReproducingFunction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DecompAtZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ open scoped InnerProductSpace
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_K_finite_reproducing_function : ∀ (n : ℕ) (ε : Fin n → Bool) (W : Type) [AddCommGroup W] [Module ℂ W] [FiniteDimensional ℂ W] (ρ : Representation ℂ (Formalism.REAL.KG ε) W), GlobalTheory.Published.AutFin.IsContRep ρ → ∃ e : Formalism.REAL.KG ε → ℂ, KFinFun ε e ∧ ∀ h ∈ GlobalTheory.Published.AutFin.coeffSpan ρ, ∫ k, e k * h k ∂(Formalism.REAL.muK ε) = h 1 := by
-  first | exact @GlobalTheory.ReproKFin.reproduce_one | exact GlobalTheory.ReproKFin.reproduce_one | (intros; apply GlobalTheory.ReproKFin.reproduce_one <;> assumption)
+  exact @GlobalTheory.ReproKFin.reproduce_one

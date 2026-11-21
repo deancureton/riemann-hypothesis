@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerLocallyConstant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.local_stabilizer_locally_constant : GlobalTheory.F
     (om' : Rep σ G.V' G.W), IsTriple B G X om om' → ∀ K : Subgroup (UA σ G.V'.J), IsStab B K → ∀ v : Pl F,
     CompactSpace (KAt K (evFin F v)) ∧ ∀ φ ∈ SB (Fin a' × Fin (a + a') → Fv F v),
       IsLocallyConstant (fun k : KAt K (evFin F v) => locOp v (om' (k.1, 1)) φ) := by
-  first | exact @GlobalTheory.ThK.LemF.compact_locConst_KAt | exact GlobalTheory.ThK.LemF.compact_locConst_KAt | (intros; apply GlobalTheory.ThK.LemF.compact_locConst_KAt <;> assumption)
+  exact @GlobalTheory.ThK.LemF.compact_locConst_KAt

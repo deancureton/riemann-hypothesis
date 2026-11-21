@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TautologicalFlagUniversal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.tautological_flag_universal : ∀ (ι : Type) [Fin
         e.hom ≫ (fl' a).ι i = (Scheme.Modules.pullback g').map ((fl a).ι i) ≫
           (Scheme.Modules.pullbackComp g' (GlobalTheory.FlagZ.flStr ι N)).hom.app (GlobalTheory.FlagZ.Taut.stdE N) ≫
             (Scheme.Modules.pullbackCongr w).hom.app (GlobalTheory.FlagZ.Taut.stdE N) := by
-  first | exact @GlobalTheory.FlagZ.exists_classifying | exact GlobalTheory.FlagZ.exists_classifying | (intros; apply GlobalTheory.FlagZ.exists_classifying <;> assumption)
+  exact @GlobalTheory.FlagZ.exists_classifying

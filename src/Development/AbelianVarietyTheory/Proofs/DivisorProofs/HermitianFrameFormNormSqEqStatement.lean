@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFrameFormNormSqEq
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.hermitian_frame_form_norm_sq_eq : ∀ (n : ℕ) (K
     ((ofValues (GlobalTheory.HermFrame.ddc (fun x => 1 - v x) z) : Ev n) : Alt n) *
       (((ofValues (GlobalTheory.HermFrame.extTrace (fun x => GlobalTheory.HermFrame.chg (A x) (K x)) z) : Ev n) : Alt n) -
         ((ofValues (GlobalTheory.HermFrame.extTrace K z) : Ev n) : Alt n)) = 0 := by
-  first | exact @GlobalTheory.LineForm.ddc_sinSq_mul_extTrace_sub | exact GlobalTheory.LineForm.ddc_sinSq_mul_extTrace_sub | (intros; apply GlobalTheory.LineForm.ddc_sinSq_mul_extTrace_sub <;> assumption)
+  exact @GlobalTheory.LineForm.ddc_sinSq_mul_extTrace_sub

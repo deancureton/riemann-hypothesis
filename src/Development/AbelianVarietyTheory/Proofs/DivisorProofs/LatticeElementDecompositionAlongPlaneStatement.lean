@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.lattice_element_decomposition_along_plane : ∀ (F
       ∃ (a b : Fin d → AE F E) (z : Matrix (Fin n₁) (Fin d) (AE F E)), z ∈ latAtV X₁ W v ∧
         Matrix.vecMulVec (incV F H.x) a ∈ latAtV X W v ∧ Matrix.vecMulVec (incV F H.y) b ∈ latAtV X W v ∧
         γ = Matrix.vecMulVec (incV F H.x) a + incM F H.ι * z + Matrix.vecMulVec (incV F H.y) b := by
-  first | exact @GlobalTheory.LatPlaneSplit.latAtV_split | exact GlobalTheory.LatPlaneSplit.latAtV_split | (intros; apply GlobalTheory.LatPlaneSplit.latAtV_split <;> assumption)
+  exact @GlobalTheory.LatPlaneSplit.latAtV_split

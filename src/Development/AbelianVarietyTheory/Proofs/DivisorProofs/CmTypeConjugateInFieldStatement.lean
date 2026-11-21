@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmTypeConjugateInField
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -17,4 +16,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cm_type_conjugate_in_field : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (K : Type) [Field K] (j : K →+* ℂ) (I : Type)
     (φ : I → E →+* ℂ) (φK : I → E →+* K), (∀ i, j.comp (φK i) = φ i) → IsCMType φ →
     GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.IsCMTypeIn (fun i ↦ GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.bar (φK i)) := by
-  first | exact @GlobalTheory.CMTypeThroughField.isCMTypeIn_bar | exact GlobalTheory.CMTypeThroughField.isCMTypeIn_bar | (intros; apply GlobalTheory.CMTypeThroughField.isCMTypeIn_bar <;> assumption)
+  exact @GlobalTheory.CMTypeThroughField.isCMTypeIn_bar

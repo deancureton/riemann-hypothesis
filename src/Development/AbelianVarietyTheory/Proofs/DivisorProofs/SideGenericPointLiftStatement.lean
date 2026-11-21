@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SideGenericPointLift
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Side
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ExistsValuationSubringDominatingSubring
 open AlgebraicGeometry CategoryTheory NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.CxPts GlobalTheory.Toroidal GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.ShFam.GalCarry GlobalTheory.ShFam.GalCarry.Corr
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.side_generic_point_lift : ∀ (F : Type) [Field F]
       p' ≫ (Y' i').str = genericPt (Y i) ≫ (Y i).str ∧
       Rel (AlgebraicClosure (Y i).Fn) i i' (spMap (algebraMap (Y i).Fn (AlgebraicClosure (Y i).Fn)) ≫ genericPt (Y i))
         (spMap (algebraMap (Y i).Fn (AlgebraicClosure (Y i).Fn)) ≫ p') := by
-  first | exact @GlobalTheory.ShFam.GalCarry.Corr.partner_generic_descends | exact GlobalTheory.ShFam.GalCarry.Corr.partner_generic_descends | (intros; apply GlobalTheory.ShFam.GalCarry.Corr.partner_generic_descends <;> assumption)
+  exact @GlobalTheory.ShFam.GalCarry.Corr.partner_generic_descends

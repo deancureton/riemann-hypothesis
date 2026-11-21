@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiltrationCentralCharDistinct
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.filtration_central_char_distinct : ∀ {G V Y : Ty
       (∃ (z : G) (c c' : ℂ), c ≠ c' ∧ (∀ y, τ z y = c • y) ∧ ∀ y, subQuot (S t.succ) (S t.castSucc) z y = c' • y) ∨
       (∃ (z : G) (c c' : ℂ), c ≠ c' ∧ (∀ y, τ z y = c • y) ∧ ∀ y, subQuot (S t'.succ) (S t'.castSucc) z y = c' • y)) →
     (∀ t : Fin N, HomLeOne (subQuot (S t.succ) (S t.castSucc)) τ) → HomLeOne ρ τ := by
-  first | exact @GlobalTheory.FiltLevi.homLeOne_of_filtration | exact GlobalTheory.FiltLevi.homLeOne_of_filtration | (intros; apply GlobalTheory.FiltLevi.homLeOne_of_filtration <;> assumption)
+  exact @GlobalTheory.FiltLevi.homLeOne_of_filtration

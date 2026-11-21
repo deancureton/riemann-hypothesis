@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianGrowthConjTorsionTranslatesVacuum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbLLMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairIntAt
 
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.gaussianGrowth_conj_torsionTranslates_vacuum : ∀
       3 * (2 * ((fF D * a * b : ℕ) : ℝ) * D.host.rdE + 1) ^ (fF D * a * b) *
         nrm1Sq (lamConj Qbar ρ (lamOf D cc δ)) (GL3Theta.th0 (lamConj Qbar ρ (lamOf D cc δ)) t') ^ (fF D * a * b) *
         Real.exp (Real.pi * (∑ τ, ∑ i, ∑ j, ‖z τ i j‖ ^ 2) / area (lamConj Qbar ρ (lamOf D cc δ))) := by
-  first | exact @GlobalTheory.ConjGrowth.conj_growth | exact GlobalTheory.ConjGrowth.conj_growth | (intros; apply GlobalTheory.ConjGrowth.conj_growth <;> assumption)
+  exact @GlobalTheory.ConjGrowth.conj_growth

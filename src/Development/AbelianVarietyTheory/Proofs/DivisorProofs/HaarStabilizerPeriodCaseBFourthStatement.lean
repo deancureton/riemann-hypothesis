@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarStabilizerPeriodCaseBFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.haar_stabilizer_period_case_b_fourth : GlobalTheor
       ∃ c : UA σ G.W.J → ℂ, IsCT H' (GlobalTheory.ConeSmallSer.partSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) (GlobalTheory.ConeSmallSer.midSet H'.x T)) c ∧
         GlobalTheory.ConeSmallMid.JRel G₁.W H' X.α (((b + 2 : ℕ) : ℂ) / 2) X.β (((a + 2 : ℕ) : ℂ) / 2) c ∧
         GlobalTheory.ConeSmallMid.JRel G₁.W H' X.β (((a + 2 : ℕ) : ℂ) / 2) X.α (((b + 2 : ℕ) : ℂ) / 2) c := by
-  first | exact @GlobalTheory.ConeSmallMidJB.jb_mid | exact GlobalTheory.ConeSmallMidJB.jb_mid | (intros; apply GlobalTheory.ConeSmallMidJB.jb_mid <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.jb_mid

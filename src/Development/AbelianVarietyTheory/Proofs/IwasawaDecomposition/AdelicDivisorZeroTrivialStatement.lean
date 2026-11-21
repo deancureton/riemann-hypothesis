@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.AdelicDivisorZeroTrivial
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ImaginaryRootNeZero
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MetsOfParOf
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InducedMetricPow
@@ -26,4 +25,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adelic_divisor_zero_trivial : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (x : ToroidalCompactificationData s) (Φ : s.Flag) (k : s.Comp) (M : GlobalTheory.TrueGeo.Model (Φ.C k).Y) (m : ℕ+), (adlOf (Φ.C k) (metsOf x Φ k) 0).Induced M (GlobalTheory.HermLB.triv M.p) m 0 := by
-  first | exact @GlobalTheory.CombInd.induced_adlOf_zero | exact GlobalTheory.CombInd.induced_adlOf_zero | (intros; apply GlobalTheory.CombInd.induced_adlOf_zero <;> assumption)
+  exact @GlobalTheory.CombInd.induced_adlOf_zero

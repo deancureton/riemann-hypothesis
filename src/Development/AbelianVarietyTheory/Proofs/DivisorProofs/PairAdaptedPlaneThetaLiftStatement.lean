@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedPlaneThetaLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_theta_lift : GlobalTheory.ThK.K
     ∀ Φ ∈ schA F (Fin n × Fin d), ∀ g : UA σ X.J, ∀ K : Set (UA σ X.J), IsCompact K → K ⊆ unip σ X H →
       ∃ (C : ℝ) (k : ℕ), ∀ u ∈ K, ∀ h : UA σ W.J, ∃ N : ℕ, 1 ≤ N ∧ (N : ℝ) ≤ C * (ht h : ℝ) ^ k ∧
         ∀ w : Fin d → E, e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))) ≠ 0 → ∀ i, ∃ o : 𝓞 E, (N : E) * w i = o := by
-  first | exact @GlobalTheory.KernelDenomUnif.main | exact GlobalTheory.KernelDenomUnif.main | (intros; apply GlobalTheory.KernelDenomUnif.main <;> assumption)
+  exact @GlobalTheory.KernelDenomUnif.main

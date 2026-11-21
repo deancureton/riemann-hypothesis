@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBLocalZetaIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.configuration_b_local_zeta_identity : GlobalTheory
         (Φ : Tens F P Q (R₀ + 1) (S₀ + 1) →ₗ[ℂ] SInf F (Fin a × Fin (a + (b + 2)))) (r₀ : Fin (R₀ + 1)) (s₀ : Fin (S₀ + 1)),
         GlobalTheory.FockBridge.IsFockData B G₁.M A C₁ Φ₁ ∧ GlobalTheory.FockBridge.IsFockData B G.M A C Φ ∧
         GlobalTheory.FockBridge.IsAdaptedFrame B H' C r₀ s₀ ∧ IsCompat B H' C C₁ r₀ s₀ := by
-  first | exact @GlobalTheory.FockFrames.frames_beta | exact GlobalTheory.FockFrames.frames_beta | (intros; apply GlobalTheory.FockFrames.frames_beta <;> assumption)
+  exact @GlobalTheory.FockFrames.frames_beta

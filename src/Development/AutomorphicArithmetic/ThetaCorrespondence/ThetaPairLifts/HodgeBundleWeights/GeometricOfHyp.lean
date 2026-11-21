@@ -79,5 +79,5 @@ section
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.BasicNotions.TH Formalism.L2.Theta ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD GlobalTheory.AllWt GlobalTheory.CompHt GlobalTheory.CovTop GlobalTheory.BigTop GlobalTheory.CovHt
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.geom_of_published_inputs : GlobalTheory.CovTop.HypothesesX → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → Geom := by
-  first | exact @_root_.GlobalTheory.CovHt.GeomBound.geom_of_deepGood_size | exact _root_.GlobalTheory.CovHt.GeomBound.geom_of_deepGood_size | (intros; apply _root_.GlobalTheory.CovHt.GeomBound.geom_of_deepGood_size <;> assumption)
+  exact @_root_.GlobalTheory.CovHt.GeomBound.geom_of_deepGood_size
 end

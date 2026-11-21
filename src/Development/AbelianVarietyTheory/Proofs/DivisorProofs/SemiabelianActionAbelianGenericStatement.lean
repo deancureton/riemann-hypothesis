@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.semiabelian_action_abelian_generic : GlobalTheory.
   ∃ (C₁ : Scheme.{0}) (_ : Algebra k Γ(C₁, ⊤)) (_ : IsIntegral C₁) (π : C₁ ⟶ C), IsSmoothProjCurve k C₁ ∧ IsCover k π ∧
     ∃ (G₁ : Over C₁) (_ : GrpObj G₁) (_ : IsSemiAbelian G₁) (i₁ : OAct (𝓞 E) G₁) (φ : G₁.left ⟶ G.left), IsActPull i₁ i π φ ∧
       HasDieu q k (H.bar : 𝓞 E →+* 𝓞 E) i₁ := by
-  first | exact @GlobalTheory.DieuCover.exists_cover_hasDieu_of_hypotheses | exact GlobalTheory.DieuCover.exists_cover_hasDieu_of_hypotheses | (intros; apply GlobalTheory.DieuCover.exists_cover_hasDieu_of_hypotheses <;> assumption)
+  exact @GlobalTheory.DieuCover.exists_cover_hasDieu_of_hypotheses

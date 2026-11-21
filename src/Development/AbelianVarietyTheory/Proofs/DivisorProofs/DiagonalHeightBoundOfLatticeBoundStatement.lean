@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalHeightBoundOfLatticeBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValVwProdLe
 
@@ -15,4 +14,4 @@ attribute [local instance] algPadicInt algPadicField towerPadic factPadic Global
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.diagonal_height_bound_of_lattice_bound : GlobalTheory.CovHt.HTDiag.LatBound → GlobalTheory.CovHt.HTDiag.DiagBound := by
-  first | exact @GlobalTheory.CovHt.HTDiag.diagBound_of_latBound | exact GlobalTheory.CovHt.HTDiag.diagBound_of_latBound | (intros; apply GlobalTheory.CovHt.HTDiag.diagBound_of_latBound <;> assumption)
+  exact @GlobalTheory.CovHt.HTDiag.diagBound_of_latBound

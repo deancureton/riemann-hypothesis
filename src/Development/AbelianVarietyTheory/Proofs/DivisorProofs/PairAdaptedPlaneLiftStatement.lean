@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedPlaneLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -40,4 +39,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_lift : GlobalTheory.FunPr.Hypot
           ∀ f : SchwartzMap ((Fin n × Fin d) ⊕ (Fin n × Fin d) → NumberField.mixedEmbedding.mixedSpace F) ℂ,
             (letI : MeasurableSpace (Fin n → AE F E) := borel _; Integrable (fun y => GlobalTheory.DiagSiegel.diagInt μ₁ (ed (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y) y (pureA F f g)))) μ) ∧
             (letI : MeasurableSpace (Fin n → AE F E) := borel _; ∫ y, GlobalTheory.DiagSiegel.diagInt μ₁ (ed (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y) y (pureA F f g))) ∂μ) = T f := by
-  first | exact @GlobalTheory.SiegelAvgCore.main | exact GlobalTheory.SiegelAvgCore.main | (intros; apply GlobalTheory.SiegelAvgCore.main <;> assumption)
+  exact @GlobalTheory.SiegelAvgCore.main

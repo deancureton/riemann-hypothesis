@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EllipticCurveMapToAbelian
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExpConjOfOne
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.conjugate_twist_function_decomposition : GlobalThe
   ∀ Φ Φ' : GA (Fm.D x i) (Wc (Fm.D x i) j) → ℂ, GlobalTheory.ConjTwist.ConjFun (p.O j) (p.κ j) τ 1 Φ Φ' →
     ∃ (n : ℕ) (b : Fin n → ℂ) (g : Fin n → NX.FmK p.Sx ((j : ℕ) + 1)),
       Φ = ∑ k, b k • evW p.nexp p.v₀ j (g k).val ∧ ∑ k, τ (b k) • evW p.nexp p.v₀ j (g k).val = Φ' := by
-  first | exact @GlobalTheory.ConjExpandRational.conj_expansion_rational | exact GlobalTheory.ConjExpandRational.conj_expansion_rational | (intros; apply GlobalTheory.ConjExpandRational.conj_expansion_rational <;> assumption)
+  exact @GlobalTheory.ConjExpandRational.conj_expansion_rational

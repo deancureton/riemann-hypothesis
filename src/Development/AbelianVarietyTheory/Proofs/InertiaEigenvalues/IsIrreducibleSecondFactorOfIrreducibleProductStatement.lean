@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsIrreducibleSecondFactorOfIrreducibleProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitAtOfIsSplitPl
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIrreducibleFixed
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsComplementaryProductOfIsCuspidal
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.isIrreducible_second_factor_of_irreducible_product
     (π : Representation ℂ (GL (Fin (r + t)) k) U),
     IsSmooth σ₀ → σ₀.IsIrreducible → IsSmooth τ → π.IsIrreducible → Nonempty (π.Equiv (prod₂ σ₀ τ)) →
       τ.IsIrreducible := by
-  first | exact @GlobalTheory.SmGL.ProdIrr.isIrreducible_of_prod₂ | exact GlobalTheory.SmGL.ProdIrr.isIrreducible_of_prod₂ | (intros; apply GlobalTheory.SmGL.ProdIrr.isIrreducible_of_prod₂ <;> assumption)
+  exact @GlobalTheory.SmGL.ProdIrr.isIrreducible_of_prod₂

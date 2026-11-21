@@ -10,4 +10,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Ro
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.iteration_and_linearity_cuspidal : GlobalTheory.FunPr.Hypotheses₂ → GlobalTheory.IndefiniteRowSideFullHecke.CuspAlongSmoothLifts.LiftsCuspidal → Big fun ch => IterAt ch ∧ LinAt ch := by
-  first | exact @GlobalTheory.RowChain.iterAt_linAt | exact GlobalTheory.RowChain.iterAt_linAt | (intros; apply GlobalTheory.RowChain.iterAt_linAt <;> assumption)
+  exact @GlobalTheory.RowChain.iterAt_linAt

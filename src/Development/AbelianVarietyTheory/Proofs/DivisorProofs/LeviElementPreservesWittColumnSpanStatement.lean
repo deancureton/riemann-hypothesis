@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviElementPreservesWittColumnSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIdTorusEltOne
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.StdPar GlobalTheory.IdTorus
 open Formalism.UG (cT)
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.levi_element_preserves_witt_column_span : ∀ {F E
     ∀ {g : GAd σ J}, g ∈ levi σ J X Y S → ∀ k ∈ S,
     (matHom _ σ J g).1 *ᵥ (fun i => adMat F X i k) =
       (adMat F (cT (σ : E →+* E) Y * J) * (matHom _ σ J g).1 * adMat F X) k k • (fun i => adMat F X i k) := by
-  first | exact @GlobalTheory.IdTorus.levi_mulVec_col | exact GlobalTheory.IdTorus.levi_mulVec_col | (intros; apply GlobalTheory.IdTorus.levi_mulVec_col <;> assumption)
+  exact @GlobalTheory.IdTorus.levi_mulVec_col

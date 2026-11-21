@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TangentBasisPullbackCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CmpStOfSabExtNormalSt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.tangent_basis_pullback_compatible : ∀ (E : Type)
       Module.Basis (Fin d) S (ReciprocityTheory.ChartRestriction.G.PullbackSections.TanM y tK.G)),
       ∀ (S S' : Type) [CommRing S] [CommRing S'] (φ : S →+* S') (y : Sp S ⟶ Sp K) (y' : Sp S' ⟶ Sp K)
         (e : spMap φ ≫ y = y') (j : Fin d), tanPull φ e (B S y j) = B S' y' j := by
-  first | exact @GlobalTheory.LieFrameField.lieFrame_baseChange | exact GlobalTheory.LieFrameField.lieFrame_baseChange | (intros; apply GlobalTheory.LieFrameField.lieFrame_baseChange <;> assumption)
+  exact @GlobalTheory.LieFrameField.lieFrame_baseChange

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsGlobalSum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.matched_maps_global_sum : GlobalTheory.Published.H
         StrictMono N → (∀ i, GlobalTheory.Published.ThetaSub om v (N i)) → m ≤ L) ∧
       ∀ N : Submodule ℂ ((Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v) → ℂ), GlobalTheory.Published.ThetaSub om v N →
         N ≠ GlobalTheory.WeilM.SB _ → ∀ φ ∈ N, Rf.p v φ = 0 := by
-  first | exact @GlobalTheory.HoweNonsplitKer.howe_nonsplit_ker | exact GlobalTheory.HoweNonsplitKer.howe_nonsplit_ker | (intros; apply GlobalTheory.HoweNonsplitKer.howe_nonsplit_ker <;> assumption)
+  exact @GlobalTheory.HoweNonsplitKer.howe_nonsplit_ker

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTriplePeriodIdentityCaseB
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.theta_triple_period_identity_case_b : GlobalTheory
       ei' (locOpInf (G.M'.co.rho B.ψ (partInf F (shiftB σ H H' s))) (locOpInf (om' (m, 1)) f)) =
         fac X.ν (((a + (b + 2) : ℕ) : ℝ) / 2) t •
           locOpInf (om₁' (g₀, 1)) (ei' (locOpInf (G.M'.co.rho B.ψ (partInf F (shiftB σ H H' (t * s)))) f)) := by
-  first | exact @GlobalTheory.ThK.InfB.levi_cone_law | exact GlobalTheory.ThK.InfB.levi_cone_law | (intros; apply GlobalTheory.ThK.InfB.levi_cone_law <;> assumption)
+  exact @GlobalTheory.ThK.InfB.levi_cone_law

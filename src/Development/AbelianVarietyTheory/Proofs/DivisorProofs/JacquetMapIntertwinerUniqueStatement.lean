@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetMapIntertwinerUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsJacMapZero
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.jacquet_map_intertwiner_unique : GlobalTheory.ThK.
       GlobalTheory.JacLine.IsJacMap a b α β (fun x => (β x : ℂ) * GlobalTheory.SplitFlip.apow x ((a : ℂ) / 2))
         (fun y => (β y : ℂ) * GlobalTheory.SplitFlip.apow y (-(a : ℂ) / 2)) φ' →
       φ = 0 ∨ ∃ c : ℂ, φ' = c • φ := by
-  first | exact @GlobalTheory.JacLineGL.jacMap_line | exact GlobalTheory.JacLineGL.jacMap_line | (intros; apply GlobalTheory.JacLineGL.jacMap_line <;> assumption)
+  exact @GlobalTheory.JacLineGL.jacMap_line

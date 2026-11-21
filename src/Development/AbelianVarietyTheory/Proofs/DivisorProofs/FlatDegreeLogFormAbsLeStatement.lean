@@ -23,4 +23,4 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flat_degree_log_form_abs_le : Size → Covers fun Fm x _ ι p i Y PP _ => |GlobalTheory.FlatLine.flatDegVal (dat p i) (Formalism.L2.DIV.ofRecord (Fm.D x ι) (Fm.L x ι) p.Del p.h0).logOm| ≤ 9 * (Fm.D x ι).R.r * (Fm.L x ι).sc.L := by
-  first | exact @GlobalTheory.CovTop.FlatSz.flatDegVal_covers | exact GlobalTheory.CovTop.FlatSz.flatDegVal_covers | (intros; apply GlobalTheory.CovTop.FlatSz.flatDegVal_covers <;> assumption)
+  exact @GlobalTheory.CovTop.FlatSz.flatDegVal_covers

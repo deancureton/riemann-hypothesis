@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaLiftCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_lift_compatible : GlobalTheory.ThK.
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F a b) (Rf₁ : FinMaps F a b),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       lowPartInf B G.M R.p ≤ twPart B G.M om R.p G₁.W H' X.β ((a : ℝ) / 2) (lowPartInf B G.M R.p) ⊔ offPart B G.M om R.p G₁.W H' X.β ((a : ℝ) / 2) (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.WtSplitB.lowPart_le_tw_sup_off_beta | exact GlobalTheory.WtSplitB.lowPart_le_tw_sup_off_beta | (intros; apply GlobalTheory.WtSplitB.lowPart_le_tw_sup_off_beta <;> assumption)
+  exact @GlobalTheory.WtSplitB.lowPart_le_tw_sup_off_beta

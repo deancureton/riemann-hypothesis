@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleFrameCompatibility
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsReading
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.triple_frame_compatibility : GlobalTheory.Publishe
       GlobalTheory.TripleRead.IsTransp ψ false Γ.M' om' ωB e (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W₁ (-1) h.JW₁) (GlobalTheory.TripleRead.toUX X e h.JX) →
       ∀ R Rf, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsMatched Bs Γ Xc om om' R Rf →
         ∃ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' := by
-  first | exact @GlobalTheory.TripleAssembly.exists_isMatch | exact GlobalTheory.TripleAssembly.exists_isMatch | (intros; apply GlobalTheory.TripleAssembly.exists_isMatch <;> assumption)
+  exact @GlobalTheory.TripleAssembly.exists_isMatch

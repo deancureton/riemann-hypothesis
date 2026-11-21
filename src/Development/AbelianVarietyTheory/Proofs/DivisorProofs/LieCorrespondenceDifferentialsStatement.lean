@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.lie_correspondence_differentials : ∀ (E : Type) 
     (∀ i, Obj.LieCorr (algebraMap Qb ℂ) p (v₀ i) (v i) ∧ U.u.IsDiff (Pi.single (U.e.symm i) (a i)) (v i).hom) →
     ∃ (δ₀ : X₀.DetGen) (δ : X.DetGen) (C : ℂ), Obj.DetCorr (algebraMap Qb ℂ) p δ₀.1 δ.1 ∧ U.IsDet δ.1 C ∧
       IsAlgebraic ℚ (C * ∏ i, a i) := by
-  first | exact @GlobalTheory.LatJet.exists_detGen_coeff_algebraic | exact GlobalTheory.LatJet.exists_detGen_coeff_algebraic | (intros; apply GlobalTheory.LatJet.exists_detGen_coeff_algebraic <;> assumption)
+  exact @GlobalTheory.LatJet.exists_detGen_coeff_algebraic

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormInvariantQuotientDefinite
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
 open scoped Topology
 set_option maxHeartbeats 1000000 in
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.hermitian_form_invariant_quotient_definite : ∀ {
       ∀ y ∈ Submodule.span ℂ (Set.range fun g => ρ g x), (∀ k ∈ K, ρ k y = y) →
         ∃ z ∈ Submodule.span ℂ (s : Set V), B (y - z) (y - z) = 0),
     ∃ S : Submodule ℂ V, S ≤ D ∧ GlobalTheory.ThKLocSS.IsSimpleOver (Set.range ρ) N S := by
-  first | exact @GlobalTheory.UnitaryRep.exists_isSimpleOver_of_unitary | exact GlobalTheory.UnitaryRep.exists_isSimpleOver_of_unitary | (intros; apply GlobalTheory.UnitaryRep.exists_isSimpleOver_of_unitary <;> assumption)
+  exact @GlobalTheory.UnitaryRep.exists_isSimpleOver_of_unitary

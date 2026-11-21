@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StepFunctionIndicatorSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ScaledIntegerPeriodic
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.step_function_indicator_span : ∀ (β : Type) (le
     (∀ x ∈ B, ∀ y ∈ B, le x y → le y x → F x = F y) →
     ∃ (m : ℕ) (c : Fin m → ℂ) (a : Fin m → β), (∀ i, a i ∈ B) ∧
       ∀ x ∈ B, F x = ∑ i, c i * (if le x (a i) then 1 else 0) := by
-  first | exact @GlobalTheory.classFun_eq_sum_indicator_le | exact GlobalTheory.classFun_eq_sum_indicator_le | (intros; apply GlobalTheory.classFun_eq_sum_indicator_le <;> assumption)
+  exact @GlobalTheory.classFun_eq_sum_indicator_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleAdaptedModelCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelG
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.double_adapted_model_compatible : GlobalTheory.Fun
     GlobalTheory.ThK.EvFactor.FinRelG B M M₁ H.ι H'.ι (isoA H H') v T → GlobalTheory.ThK.EvFactor.FinRelG B M M₁ H.ι H'.ι (isoA H H') v T' →
     (SB _).map T = SB _ → (SB _).map T' = SB _ → T (M.vac v) = M₁.vac v → T' (M.vac v) = M₁.vac v →
     ∀ φ ∈ SB (Fin n × Fin d → Fv F v), T' φ = T φ := by
-  first | exact @GlobalTheory.ThK.EvUniqA.finRelG_isoA_unique | exact GlobalTheory.ThK.EvUniqA.finRelG_isoA_unique | (intros; apply GlobalTheory.ThK.EvUniqA.finRelG_isoA_unique <;> assumption)
+  exact @GlobalTheory.ThK.EvUniqA.finRelG_isoA_unique

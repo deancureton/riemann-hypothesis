@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentFifth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_fifth : GlobalTheory.ThK
       IsFundamentalDomain ((ratU σ X.J).subgroupOf (unip σ X H)) 𝓕 μ → μ 𝓕 = 1 →
     ∀ Ψ ∈ schA F (Fin n × Fin d), ∀ u' ∈ unip σ W H',
       ∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) (om (u.1, 1) (om (1, u') Ψ)))) ∂μ = ∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) (om (u.1, 1) Ψ))) ∂μ := by
-  first | exact @GlobalTheory.NwInvTerm.integral_term_invariant | exact GlobalTheory.NwInvTerm.integral_term_invariant | (intros; apply GlobalTheory.NwInvTerm.integral_term_invariant <;> assumption)
+  exact @GlobalTheory.NwInvTerm.integral_term_invariant

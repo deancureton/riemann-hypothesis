@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.EqMatrixCoeffOfLocallyUniformLimitKFinite
-import Mathlib
 import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.FinitePartTypes
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DiscreteSeriesUpqExistsIffDsExists
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.eq_matrixCoeff_of_locallyUniform_limit_kFinite : G
           ∀ y ∈ C, y ∈ UJset ε → ‖h y - ∑ a, L a (σ y (w a))‖ < δ) →
     ∃ L : Fin d → (H →ₗ[ℂ] ℂ), (∀ a, Sobolev₂ (GlobalTheory.SmoothGlob.lieSet ε) σ (L a)) ∧
       ∀ y ∈ UJset ε, h y = ∑ a, L a (σ y (w a)) := by
-  first | exact @GlobalTheory.TypeSum.CoefClos.eq_coef_of_closure | exact GlobalTheory.TypeSum.CoefClos.eq_coef_of_closure | (intros; apply GlobalTheory.TypeSum.CoefClos.eq_coef_of_closure <;> assumption)
+  exact @GlobalTheory.TypeSum.CoefClos.eq_coef_of_closure

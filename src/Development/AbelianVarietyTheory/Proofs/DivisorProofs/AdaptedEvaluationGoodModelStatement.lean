@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedEvaluationGoodModel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_evaluation_good_model : GlobalTheory.ThK.K
       ∀ (f : SInf F (Fin n × Fin d)) (S : Finset (Fin n → E)),
         ∑ ξ ∈ S, ‖thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (pureA F f g)))‖ ≤
           C * (s.sup (schwartzSeminormFamily ℂ (Fin n × Fin d → mixedEmbedding.mixedSpace F) ℂ)) f := by
-  first | exact @GlobalTheory.ThetaMajorant.main | exact GlobalTheory.ThetaMajorant.main | (intros; apply GlobalTheory.ThetaMajorant.main <;> assumption)
+  exact @GlobalTheory.ThetaMajorant.main

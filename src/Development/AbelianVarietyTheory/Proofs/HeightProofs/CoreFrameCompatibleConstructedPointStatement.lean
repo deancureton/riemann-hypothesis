@@ -5,4 +5,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.coreFrameCompatible_constructed_point : GlobalTheory.NT.RayField → ∀ (𝒮 : Slots), CoreSlot 𝒮 → ∀ (K : Ctx) (p : WPt 𝒮 K), Tied p.O.ex.errX (cfOf p).J (cfOf p).C := by
-  first | exact @GlobalTheory.Plug.tied_cfOf | exact GlobalTheory.Plug.tied_cfOf | (intros; apply GlobalTheory.Plug.tied_cfOf <;> assumption)
+  exact @GlobalTheory.Plug.tied_cfOf

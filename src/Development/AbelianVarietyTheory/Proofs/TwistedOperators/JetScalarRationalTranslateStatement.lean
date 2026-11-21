@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JetScalarRationalTranslate
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitOff
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.RowTest GlobalTheory.RowClaim
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.jet_scalar_rational_translate : GlobalTheory.FunPr
         EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.small (r * x)) (stdL D _) → EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.big (r' * y)) (stdL D _) →
         GlobalTheory.MovedKappaEx.UnitAt q c) ∧
       GlobalTheory.MovedKappaEx.JetKap ch p (r * x) (r' * y) (c * κ) := by
-  first | exact @GlobalTheory.RatMoveJets.exists_rat_move | exact GlobalTheory.RatMoveJets.exists_rat_move | (intros; apply GlobalTheory.RatMoveJets.exists_rat_move <;> assumption)
+  exact @GlobalTheory.RatMoveJets.exists_rat_move

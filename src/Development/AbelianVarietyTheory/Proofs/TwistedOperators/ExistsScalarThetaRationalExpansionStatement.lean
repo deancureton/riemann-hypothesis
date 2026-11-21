@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsScalarThetaRationalExpansion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_scalar_theta_rational_expansion : ∀ {D : 
       γ * a ∈ GfC A → γ' * a' ∈ GfC WW →
       ∃ (κ : ℂ) (F : WO (GlobalTheory.Grid.neg A) WW → ℂ), GlobalTheory.MovedAlg.IsAlgComb W.ψ (GlobalTheory.Grid.neg A) WW X.vac F ∧
         X.ω t (γ, γ') X.vac = κ • F := by
-  first | exact @GlobalTheory.RatVacAlg.om_rat_vac_eq_smul_algComb | exact GlobalTheory.RatVacAlg.om_rat_vac_eq_smul_algComb | (intros; apply GlobalTheory.RatVacAlg.om_rat_vac_eq_smul_algComb <;> assumption)
+  exact @GlobalTheory.RatVacAlg.om_rat_vac_eq_smul_algComb

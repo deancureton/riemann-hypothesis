@@ -14,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_adapted_minor_norms : ∀ {K : Type} [NormedField K] [IsUltrametricDist K] {κ : Type} [Fintype κ] (bl : κ → ℕ) {g : ℕ}
     (P : Matrix (Fin g) κ K), IntAdapted bl P →
     (∀ (w : κ ≃ Fin g) (k : ℕ), ‖minor bl w k P‖ ≤ 1) ∧ ∃ w : κ ≃ Fin g, ∀ k : ℕ, ‖minor bl w k P‖ = 1 := by
-  first | exact @GlobalTheory.LieFilt.intAdapted_minor | exact GlobalTheory.LieFilt.intAdapted_minor | (intros; apply GlobalTheory.LieFilt.intAdapted_minor <;> assumption)
+  exact @GlobalTheory.LieFilt.intAdapted_minor

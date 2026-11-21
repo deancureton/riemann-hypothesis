@@ -17,4 +17,4 @@ open Formalism.MainNotions.StandardLattice Formalism.MainNotions.S Formalism.L2.
 open GlobalTheory.LiftRows
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_baseFrame_selfDual_hermitianFrameLattice : ∀ (D : D7) (V : HSp D), ∃ β₀ : GL (Fin V.rank) (Formalism.IndefR.Lev.EAf D), IsSDFrame V β₀ (frameLat V) 1 ∧ IsBaseFrame V β₀ (frameLat V) 1 := by
-  first | exact @GlobalTheory.SelfDualBaseFrame.exists_baseFrame_frameLat | exact GlobalTheory.SelfDualBaseFrame.exists_baseFrame_frameLat | (intros; apply GlobalTheory.SelfDualBaseFrame.exists_baseFrame_frameLat <;> assumption)
+  exact @GlobalTheory.SelfDualBaseFrame.exists_baseFrame_frameLat

@@ -10,7 +10,6 @@ namespace Formalism.RepresentationBoundsCohomology.BR
 
 open Formalism.NG
 
-set_option maxHeartbeats 4000000 in
 theorem theorem_n_five_top_holds : WachTwistTheorem := by
   intro O _ _ _ X X' T T' Z p q b ha hb d _ _ R' _ hc Tc _ _ _ _ G _ r χ E e₁ δ ι _ _ colIdx hinj
     D j e' Kc k0 hEE hee hpts g₀ n hspan π' ρπ hρπ t ht bl hbl ρk hsurj hblk _ _ _ _ hcard hcard1

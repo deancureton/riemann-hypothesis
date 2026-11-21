@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteBottomTripleWeightNatural
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.definiteBottomTriple_weight_natural : ∀ (D : D7)
     GlobalTheory.SquareComm.IsTriple A A' WW α β → (∀ τ, HasInfExp D α τ (a τ) ∧ HasInfExp D β τ (b τ)) →
     GlobalTheory.Grid.IsWeil ψ true A WW β (β / α) ωA → (∃ f, GlobalTheory.SquareComm.IsFinF ψ θ true FA FW f ∧ f ≠ 0) →
     ∃ n₀ : D.what₂.Tau → ℕ, ∀ τ, (n₀ τ : ℚ) = b τ - a τ - (WW.rank : ℚ) / 2 := by
-  first | exact @GlobalTheory.WeightNat.weight_nat | exact GlobalTheory.WeightNat.weight_nat | (intros; apply GlobalTheory.WeightNat.weight_nat <;> assumption)
+  exact @GlobalTheory.WeightNat.weight_nat

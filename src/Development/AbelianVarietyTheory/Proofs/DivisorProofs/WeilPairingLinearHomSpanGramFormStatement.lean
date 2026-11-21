@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingLinearHomSpanGramForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLinearHomProd
 open NumberField
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weilPairing_linearHom_span_gramForm : ∀ (E : Typ
     ∀ (x : Fin p → 𝓞 E) (r : 𝓞 E), (m : 𝓞 E) * r = ∑ a, ∑ b, z a * gP a b * (H.bar (x b) : 𝓞 E) →
     GlobalTheory.CM.WeilEq X.B.t.PP.L f (∏ b, ((X.A true).t.act.act (x b) ≫ GlobalTheory.FlatCM.phiP X b))
       (X.A true).t.PP.L ((X.A true).t.act.act r) (𝟙 _) (spMap (σ₁.comp (algebraMap (𝓞 K) K))) := by
-  first | exact @GlobalTheory.FlatCM.HomLat.weilEq_gram | exact GlobalTheory.FlatCM.HomLat.weilEq_gram | (intros; apply GlobalTheory.FlatCM.HomLat.weilEq_gram <;> assumption)
+  exact @GlobalTheory.FlatCM.HomLat.weilEq_gram

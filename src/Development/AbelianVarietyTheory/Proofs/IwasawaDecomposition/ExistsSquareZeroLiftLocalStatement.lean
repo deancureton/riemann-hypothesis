@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsSquareZeroLiftLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.exists_square_zero_lift_local : ∀ {X : Scheme.{0
     (hJ : RingHom.ker q ^ 2 = ⊥) (δ : overAt x0 A ⟶ G), Formalism.L2.Pj.homAt x0 q ≫ δ = 1 →
     ∃ ε : overAt x0 (TrivSqZeroExt S (RingHom.ker q)) ⟶ G,
       Formalism.L2.Pj.homAt x0 (TrivSqZeroExt.fstHom S S (RingHom.ker q)) ≫ ε = 1 ∧ Formalism.L2.Pj.homAt x0 (incl (RingHom.ker q) hJ) ≫ ε = δ := by
-  first | exact @GlobalTheory.ExpUniqCh0.exists_factor_trivSqZeroExt | exact GlobalTheory.ExpUniqCh0.exists_factor_trivSqZeroExt | (intros; apply GlobalTheory.ExpUniqCh0.exists_factor_trivSqZeroExt <;> assumption)
+  exact @GlobalTheory.ExpUniqCh0.exists_factor_trivSqZeroExt

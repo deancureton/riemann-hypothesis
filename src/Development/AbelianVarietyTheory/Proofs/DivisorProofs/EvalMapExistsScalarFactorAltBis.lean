@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalMapExistsScalarFactorAltAlt
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.norm_thetaSum_rho_vecMulVec_mul_pow_bounded : Glob
     ∀ Ψ ∈ schA F (Fin n × Fin d), ∀ N K : ℕ, 1 ≤ N → ∃ C : ℝ, ∀ ξ : Fin n → E, (∀ i, ∃ o : 𝓞 E, (N : E) * ξ i = o) →
       ‖thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) Ψ))‖ *
         (1 + ∑ i, ∑ w : InfinitePlace E, w (ξ i)) ^ K ≤ C := by
-  first | exact @GlobalTheory.XiTermDecay.decay | exact GlobalTheory.XiTermDecay.decay | (intros; apply GlobalTheory.XiTermDecay.decay <;> assumption)
+  exact @GlobalTheory.XiTermDecay.decay

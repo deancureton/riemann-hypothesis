@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_orthogonal_split : ∀ (F E : Typ
         ∃ (t : (AE F E)ˣ) (m : UA σ W.J) (h₁ : UA σ W₁.J), IsLevi (W₁ := W₁) H t 1 m ∧
           GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀ h₁ ∈ GlobalTheory.StdPar.levi σ (c₀ • W₁.J.map σ) Xf Yf S' ∧
           γ = GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ m * GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ (M h₁) := by
-  first | exact @GlobalTheory.LeviSplitFull.levi_split | exact GlobalTheory.LeviSplitFull.levi_split | (intros; apply GlobalTheory.LeviSplitFull.levi_split <;> assumption)
+  exact @GlobalTheory.LeviSplitFull.levi_split

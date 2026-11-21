@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedKStableFiniteExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_K_stable_finite_extension : GlobalTheory.T
         (∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + a')),
           Acts (evI F) (om (1, k)) f f₁ → R.p f ∈ N → R.p f₁ ∈ N) ∧
         lowPartInf B G.M R.p ⊓ N = ⊥ ∧ U₀ ≤ lowPartInf B G.M R.p ⊔ N := by
-  first | exact @GlobalTheory.KStableCompl.exists_kStable_compl | exact GlobalTheory.KStableCompl.exists_kStable_compl | (intros; apply GlobalTheory.KStableCompl.exists_kStable_compl <;> assumption)
+  exact @GlobalTheory.KStableCompl.exists_kStable_compl

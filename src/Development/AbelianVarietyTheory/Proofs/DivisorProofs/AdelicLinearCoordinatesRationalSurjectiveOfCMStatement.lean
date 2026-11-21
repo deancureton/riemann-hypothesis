@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLinearCoordinatesRationalSurjectiveOfCM
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoMulInvOf
 open scoped TensorProduct Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.adelicLinearCoordinates_rational_surjective_of_CM 
     (e : Formalism.IndefR.DatumF.WOF F E nS nT ≃ₗ[AF F] GlobalTheory.ThetaTransform.VA F N),
     (∀ x : Matrix (Fin nT) (Fin nS) E, ∃ y z : Fin N → F, e (Formalism.IndefR.DatumF.ratWF x) = (GlobalTheory.SWQ.rat y, GlobalTheory.SWQ.rat z)) →
     ∀ y z : Fin N → F, ∃ x : Matrix (Fin nT) (Fin nS) E, e (Formalism.IndefR.DatumF.ratWF x) = (GlobalTheory.SWQ.rat y, GlobalTheory.SWQ.rat z) := by
-  first | exact @GlobalTheory.WeilSchrodinger.rat_onto_of_rat_maps_F | exact GlobalTheory.WeilSchrodinger.rat_onto_of_rat_maps_F | (intros; apply GlobalTheory.WeilSchrodinger.rat_onto_of_rat_maps_F <;> assumption)
+  exact @GlobalTheory.WeilSchrodinger.rat_onto_of_rat_maps_F

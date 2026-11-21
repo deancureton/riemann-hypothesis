@@ -11,4 +11,4 @@ open scoped TensorProduct ComplexConjugate Real Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_testFunction_of_fockVacuum_thetaFunction : ∀ (D : D7) (S T : HSp D) (C : Ctx S T), ∀ B, C.IsB B → ∀ f, C.IsTh f → C.IsFock B f → ∃ φ : TF S.rank C.g, SW.IsSB φ ∧ f = C.Th (C.xB B) φ := by
-  first | exact @GlobalTheory.Ker.exists_test_of_fock | exact GlobalTheory.Ker.exists_test_of_fock | (intros; apply GlobalTheory.Ker.exists_test_of_fock <;> assumption)
+  exact @GlobalTheory.Ker.exists_test_of_fock

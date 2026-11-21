@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCompactElementOfUnitDeterminant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.exists_compact_element_of_unit_determinant : Globa
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     IsTriple B G X om om' → ∀ u : (Fv F B.v₁)ˣ, ValuativeRel.valuation (Fv F B.v₁) (u : Fv F B.v₁) = 1 →
       ∃ k ∈ GlobalTheory.InertSph.KAt σ G.W B.v₁, Matrix.GeneralLinearGroup.det (GlobalTheory.LocalUnitSubgroupClosure.cmpGL B.τ₁ k) = u := by
-  first | exact @GlobalTheory.SplitDetStab.exists_mem_KAt_det_eq | exact GlobalTheory.SplitDetStab.exists_mem_KAt_det_eq | (intros; apply GlobalTheory.SplitDetStab.exists_mem_KAt_det_eq <;> assumption)
+  exact @GlobalTheory.SplitDetStab.exists_mem_KAt_det_eq

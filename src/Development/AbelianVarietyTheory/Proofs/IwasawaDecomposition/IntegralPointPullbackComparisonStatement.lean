@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IntegralPointPullbackComparison
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPAdicArcBase
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.integral_point_pullback_comparison : ∀ (E : Type
         ∀ (T : Scheme.{0}) (g : T ⟶ t.G.left) (g₁ : T ⟶ Z.oF.t.G.left) (g₂ : T ⟶ Y.oF.t.G.left),
           g ≫ m₁.φ = g₁ ≫ Z.m.φ → g₁ ≫ Z.m0.toSABMap.φ = g₂ ≫ Y.m0.toSABMap.φ → g₁ ≫ Z.oF.t.G.hom = g₂ ≫ Y.oF.t.G.hom →
           g ≫ m₂.φ = g₂ ≫ Y.m.φ := by
-  first | exact @GlobalTheory.TriplesAlong.main | exact GlobalTheory.TriplesAlong.main | (intros; apply GlobalTheory.TriplesAlong.main <;> assumption)
+  exact @GlobalTheory.TriplesAlong.main

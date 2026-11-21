@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateLinearTensorModuleDecomposition
-import Mathlib
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conjugate_linear_tensor_module_decomposition : ∀ (A R Λ : Type) [CommRing A] [CommRing R] [CommRing Λ] [Algebra A R] (ι : Λ →+* R),
     Submodule.span A (Set.range ι) = ⊤ → ∀ (c : Λ →+* Λ) (cR : R →ₐ[A] R), (∀ a, cR (ι a) = ι (c a)) →
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.conjugate_linear_tensor_module_decomposition : ∀
     ∀ M : Matrix (m ⊕ n) (m ⊕ n) R, (∀ k, f (M (Sum.inl k)) = φ₁ k (f₁ 1)) →
       (∀ k, f (M (Sum.inr k)) = φ₂ k (f₂ 1)) →
       Associated (M.det * cR M.det) (ι (g₁.det * g₂.det)) := by
-  first | exact @GlobalTheory.CMNorm.associated_det_mul_conj | exact GlobalTheory.CMNorm.associated_det_mul_conj | (intros; apply GlobalTheory.CMNorm.associated_det_mul_conj <;> assumption)
+  exact @GlobalTheory.CMNorm.associated_det_mul_conj

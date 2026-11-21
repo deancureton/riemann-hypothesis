@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_character_tame : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D) (S : Reading P.T), IsTrue P S → ∀ (i : D.nd.Loc) (k : Fin 2) (v : D.nd.PlG k) (hw : IsSplitPl D.host (D.naut.plGw k v)), GlobalTheory.SplitWeil.IsTame (S i _ hw).mu := by
-  first | exact @GlobalTheory.PendOf.isTame_mu_plGw | exact GlobalTheory.PendOf.isTame_mu_plGw | (intros; apply GlobalTheory.PendOf.isTame_mu_plGw <;> assumption)
+  exact @GlobalTheory.PendOf.isTame_mu_plGw

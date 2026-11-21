@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedModelsEigenCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.adapted_models_eigen_compatible : GlobalTheory.ThK
     ∀ (n₁ : ℕ) (X₁ : Spc F E n₁) (H : Plane E n n₁) (j₀ j₁ : ℕ) (M₂ : Model σ X₁ W₁), H.IsAdapted σ B X X₁ j₀ j₁ →
     M₂.IsGood B.ψ → B.IsGood σ → (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W.IsSkew σ B r' s') →
     ∃ e' : Fn F n d₁ →ₗ[ℂ] Fn F n₁ d₁, IsEv B M₁ M₂ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e' := by
-  first | exact @GlobalTheory.ThKIsoEv.exists_isEv_iso | exact GlobalTheory.ThKIsoEv.exists_isEv_iso | (intros; apply GlobalTheory.ThKIsoEv.exists_isEv_iso <;> assumption)
+  exact @GlobalTheory.ThKIsoEv.exists_isEv_iso

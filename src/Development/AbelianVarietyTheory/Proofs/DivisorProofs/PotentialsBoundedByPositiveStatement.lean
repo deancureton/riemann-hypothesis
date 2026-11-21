@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.potentials_bounded_by_positive : ∀ (e : ℕ) (X : Type) [TopologicalSpace X] [CompactSpace X] [T2Space X] (At : FinHolAtlas e X) (α : LocPot X) (m : ℕ) (Λ : Fin m → LocPot X), IsPotential At α → ReciprocityTheory.AnForm.M.IsPosPot At α → (∀ i, IsPotential At (Λ i)) → ∃ K : Fin m → ℝ, ∀ i, 0 ≤ K i ∧ GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions.FormBoundedBy At α (Λ i) (K i) := by
-  first | exact @GlobalTheory.PosDom.exists_formBoundedBy | exact GlobalTheory.PosDom.exists_formBoundedBy | (intros; apply GlobalTheory.PosDom.exists_formBoundedBy <;> assumption)
+  exact @GlobalTheory.PosDom.exists_formBoundedBy

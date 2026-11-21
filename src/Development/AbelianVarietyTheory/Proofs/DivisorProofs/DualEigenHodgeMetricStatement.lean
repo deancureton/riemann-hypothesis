@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.dual_eigen_hodge_metric : ∀ {E : Type} [Field E]
         (G σ').gram yc u τ j i) ∧
       ∀ s s' : Σ τ, Fin (Dw.mult τ), s.1 ≠ s'.1 →
         HermFrame.form (HermFrame.dualGram ((h.met _).G ch y)) (fun b => P b s) (fun b => P b s') = 0 := by
-  first | exact @GlobalTheory.DualEigFrame.dualGram_tanMat | exact GlobalTheory.DualEigFrame.dualGram_tanMat | (intros; apply GlobalTheory.DualEigFrame.dualGram_tanMat <;> assumption)
+  exact @GlobalTheory.DualEigFrame.dualGram_tanMat

@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.log_norm_section_difference_bound : ∀ (D : D7) (O : Setup D) (c : O.s.Comp) (M : DRBase O c) (m : ℕ) (sc : (lbPow M.lamB m).Sec), ∃ C : ℝ, 0 ≤ C ∧ ∀ (σ : O.κ.c.F →+* ℂ) (R : ℝ) (y : CxPts M.q (σ.comp _)), Inner (up M.b rfl σ y) → |Real.log ((((M.lam R).pow m).φ _).nsq (secVal M.q _ sc) y) / 2 - Real.log ((((M.lam 2).pow m).φ _).nsq (secVal M.q _ sc) y) / 2| ≤ C * Real.log (M.x.r σ (up M.b rfl σ y)) := by
-  first | exact @GlobalTheory.LogNormCmp.abs_log_nsq_le | exact GlobalTheory.LogNormCmp.abs_log_nsq_le | (intros; apply GlobalTheory.LogNormCmp.abs_log_nsq_le <;> assumption)
+  exact @GlobalTheory.LogNormCmp.abs_log_nsq_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalDictionaryInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_local_dictionary_inertPlace : ∀ (F E : Ty
       ι 1 • P = P ∧ ι 1 • Q = Q ∧
       (∀ i j, c (JL j i) = JL i j) ∧ IsUnit JL.det ∧ Pᵀ * incM F X.J * P.map (cA σ) = JL.map ι ∧
       ∀ z : Fin n → AE F E, z ∈ GlobalTheory.InertSph.latAt X v ↔ ∃ a : Fin n → O, z = P *ᵥ fun i => ι (a i) := by
-  first | exact @GlobalTheory.InertLocDict.exists_local_dictionary | exact GlobalTheory.InertLocDict.exists_local_dictionary | (intros; apply GlobalTheory.InertLocDict.exists_local_dictionary <;> assumption)
+  exact @GlobalTheory.InertLocDict.exists_local_dictionary

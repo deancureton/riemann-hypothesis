@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCommonDenomFramePolynomialsCmPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.exists_commonDenom_framePolynomials_cmPoint : ∀ 
           (∀ b, (Y b).det ≠ 0) → GlobalTheory.Frames.FrChg (fun b => (Y b).transpose) (s : z.K) z.y y' →
           (∏ b, (Y b).det ^ k b) * evR Xo c F y' = Formalism.L2.LamCM.evalFr G Y) →
         ∀ μ, IsIntegral ℤ ((t : z.K) * MvPolynomial.coeff μ G) := by
-  first | exact @GlobalTheory.LatFull.CMInt.exists_coeff_denom_intWt | exact GlobalTheory.LatFull.CMInt.exists_coeff_denom_intWt | (intros; apply GlobalTheory.LatFull.CMInt.exists_coeff_denom_intWt <;> assumption)
+  exact @GlobalTheory.LatFull.CMInt.exists_coeff_denom_intWt

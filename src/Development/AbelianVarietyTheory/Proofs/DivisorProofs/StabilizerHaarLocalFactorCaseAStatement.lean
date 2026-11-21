@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerHaarLocalFactorCaseA
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdelicSchwartzSpaceOfLevelCompactSchwartz
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.stabilizer_haar_local_factor_case_a : GlobalTheory
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ x : Fin b × Fin (b + a') → AF F,
       ∀ (k : K) (l : (AE F E)ˣ), ∃ f : SInf F (Fin b × Fin (b + a')), ∀ t, f t = (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)) (x + GlobalTheory.ThetaTransform.embR t) * (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2)) := by
-  first | exact @GlobalTheory.ConeSlice.integrand_slice_schwartz | exact GlobalTheory.ConeSlice.integrand_slice_schwartz | (intros; apply GlobalTheory.ConeSlice.integrand_slice_schwartz <;> assumption)
+  exact @GlobalTheory.ConeSlice.integrand_slice_schwartz

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneWittIndex
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_witt_index : ∀ (F E : Type) [Fi
       (∀ k, X' k 0 = H.x k) →
       ∀ (p : GAd σ (c₀ • W.J.map σ)) (t : (AE F E)ˣ), (matHom (AF F) σ (c₀ • W.J.map σ) p).1 *ᵥ incV F H.x = t.1 • incV F H.x →
       ∃ y : GAd σ (c₀ • W₁.J.map σ), GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y p := by
-  first | exact @GlobalTheory.ThK.InducedCons.exists_isParDec | exact GlobalTheory.ThK.InducedCons.exists_isParDec | (intros; apply GlobalTheory.ThK.InducedCons.exists_isParDec <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.exists_isParDec

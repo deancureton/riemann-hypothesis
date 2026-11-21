@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridMatchingOfBaseChoice
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.grid_matching_of_base_choice : GlobalTheory.FunPr.
     {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] {R : RealDat D A Ks} {F : Face D A},
     HidaSetting large₂ R F → ∀ (ch : Choice R), ch.IsBase → ∀ (CF : ℝ), ch.AtScale CF large₂.sc.b →
     ∃ G' : GlobalTheory.Grid.GridPre R, G'.Is ∧ GlobalTheory.RowLift.RowMatchS ch G' := by
-  first | exact @GlobalTheory.RowLift.exists_rowMatchS | exact GlobalTheory.RowLift.exists_rowMatchS | (intros; apply GlobalTheory.RowLift.exists_rowMatchS <;> assumption)
+  exact @GlobalTheory.RowLift.exists_rowMatchS

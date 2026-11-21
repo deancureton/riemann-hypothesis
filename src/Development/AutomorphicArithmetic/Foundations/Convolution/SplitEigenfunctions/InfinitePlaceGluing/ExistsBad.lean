@@ -1,5 +1,4 @@
 import Development.AutomorphicArithmetic.Foundations.Convolution.SplitEigenfunctions.Entire
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.Imports
 import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.RealStructures.Imports
 import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.ImportsBis

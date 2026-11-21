@@ -12,4 +12,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_real_central_character_eq_one : ∀ (n : ℤ) (t : ℝ) (a : ℝˣ), ‖omR n t a‖ = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.CenTheta.norm_omR | exact GlobalTheory.CompanionTheory.CenTheta.norm_omR | (intros; apply GlobalTheory.CompanionTheory.CenTheta.norm_omR <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenTheta.norm_omR

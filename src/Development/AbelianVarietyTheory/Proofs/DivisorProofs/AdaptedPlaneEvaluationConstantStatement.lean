@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_evaluation_constant : GlobalTheory.T
             (∀ h, Summable fun x => thetaSum F (e (M.co.rho B.ψ (shiftA H H' 1) (om (γ x * g, h) Φ)))) ∧
             IsCT H' (theta om Φ g) fun h => C₀ * thetaSum F (e₀ (om (g, h) Φ)) +
               C₁ * ∑' x, thetaSum F (e (M.co.rho B.ψ (shiftA H H' 1) (om (γ x * g, h) Φ))) := by
-  first | exact @GlobalTheory.ThKConstTerm.constantTerm_theta | exact GlobalTheory.ThKConstTerm.constantTerm_theta | (intros; apply GlobalTheory.ThKConstTerm.constantTerm_theta <;> assumption)
+  exact @GlobalTheory.ThKConstTerm.constantTerm_theta

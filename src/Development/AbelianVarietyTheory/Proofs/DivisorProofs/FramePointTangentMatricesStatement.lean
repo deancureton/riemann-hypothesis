@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FramePointTangentMatrices
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.frame_point_tangent_matrices : ∀ (E : Type) [Fie
     IsUnit g₁.det → IsUnit g₂.det → (∀ i, IsCombAt z₀.x (z₀.u τ.1) (g₁ i) (v₁ i)) →
     (∀ i, IsCombAt z₀.x (z₀.u (conjEmb τ.1)) (g₂ i) (v₂ i)) →
     ∃ z : FrPt Xo c L, z.x = z₀.x ∧ (∀ i, z.u τ.1 i = v₁ i) ∧ ∀ i, z.u (conjEmb τ.1) i = v₂ i := by
-  first | exact @GlobalTheory.FrameChangePair.exists_frPt_comb_pair | exact GlobalTheory.FrameChangePair.exists_frPt_comb_pair | (intros; apply GlobalTheory.FrameChangePair.exists_frPt_comb_pair <;> assumption)
+  exact @GlobalTheory.FrameChangePair.exists_frPt_comb_pair

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianSetAdditiveSubgroup
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.plane_transform_restriction : ∀ {F E : Type} [Fi
     (∀ t : ℝ, ∀ l ∈ lagSet M M₁ H', t • l ∈ lagSet M M₁ H') ∧
     (∀ l ∈ lagSet M M₁ H', ∀ l' ∈ lagSet M M₁ H', trP F _ l.1 l'.2 = trP F _ l'.1 l.2) ∧
     ∀ v, (∀ l ∈ lagSet M M₁ H', trP F _ v.1 l.2 = trP F _ l.1 v.2) → v ∈ lagSet M M₁ H' := by
-  first | exact @GlobalTheory.ArchSch.lagSet_isLagrangian | exact GlobalTheory.ArchSch.lagSet_isLagrangian | (intros; apply GlobalTheory.ArchSch.lagSet_isLagrangian <;> assumption)
+  exact @GlobalTheory.ArchSch.lagSet_isLagrangian

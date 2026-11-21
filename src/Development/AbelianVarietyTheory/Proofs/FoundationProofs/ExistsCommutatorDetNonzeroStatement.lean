@@ -5,4 +5,4 @@ open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.
 open scoped Matrix
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_commutator_det_nonzero : ∀ (l : ℕ) [Fact l.Prime] (Ω : Type) [Field Ω] [Algebra ℚ Ω] [IsAlgClosure ℚ Ω] (e : ℕ) (S : Finset Pl) (A : ValuationSubring Ω) (W : R2 Ω l), Nf e S A W → ∃ φ ∈ ⁅H0g W, H0g W⁆, (mat W φ - 1).det ≠ 0 := by
-  first | exact @GlobalTheory.Ord2.commutator_H0_has_no_eigenvalue_one | exact GlobalTheory.Ord2.commutator_H0_has_no_eigenvalue_one | (intros; apply GlobalTheory.Ord2.commutator_H0_has_no_eigenvalue_one <;> assumption)
+  exact @GlobalTheory.Ord2.commutator_H0_has_no_eigenvalue_one

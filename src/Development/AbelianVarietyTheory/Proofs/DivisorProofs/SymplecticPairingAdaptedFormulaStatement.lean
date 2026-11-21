@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticPairingAdaptedFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.symplectic_pairing_adapted_formula : ∀ {F E : Ty
     symp (R := AF F) (cA σ) (-1) (incM F X.J) (incM F JW)
       (Matrix.vecMulVec (incV F H.x) α + incM F H.ι * C + Matrix.vecMulVec (incV F H.y) β) (Matrix.vecMulVec (incV F H.x) a) =
     -Algebra.trace (AF F) (AE F E) (β ⬝ᵥ (incM F JW *ᵥ fun k => cA σ (a k))) := by
-  first | exact @GlobalTheory.PairX.dotProduct_J_c_eq_neg_of_pairing | exact GlobalTheory.PairX.dotProduct_J_c_eq_neg_of_pairing | (intros; apply GlobalTheory.PairX.dotProduct_J_c_eq_neg_of_pairing <;> assumption)
+  exact @GlobalTheory.PairX.dotProduct_J_c_eq_neg_of_pairing

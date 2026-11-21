@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryBlockConjugate
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagColsZero
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.doubled_unitary_block_conjugate : ∀ (F E : Type)
       ((γ : GL (Fin d ⊕ Fin d) (AE F E)) : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *
           (diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) (AE F E)) =
         GlobalTheory.DblSiegel.lagCols (incV F H'.x) (incM F H'.ι) * S ∧ S * S' = 1 ∧ S' * S = 1 := by
-  first | exact @GlobalTheory.DblWitt.exists_unitary_diag_lag | exact GlobalTheory.DblWitt.exists_unitary_diag_lag | (intros; apply GlobalTheory.DblWitt.exists_unitary_diag_lag <;> assumption)
+  exact @GlobalTheory.DblWitt.exists_unitary_diag_lag

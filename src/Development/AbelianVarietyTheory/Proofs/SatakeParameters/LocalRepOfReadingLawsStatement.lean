@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_rep_of_reading_laws : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), ∀ S : Reading P.T, IsTrue P S → Laws S → ∀ i, RepOfLoc D.nd D.naut i := by
-  first | exact @GlobalTheory.RepOfLocal.main | exact GlobalTheory.RepOfLocal.main | (intros; apply GlobalTheory.RepOfLocal.main <;> assumption)
+  exact @GlobalTheory.RepOfLocal.main

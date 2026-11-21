@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.fourier_coeff_scalar_invariant : GlobalTheory.FunP
           Formalism.MainNotions.GL3Theta.applyAt0 D (MvPolynomial.monomial k 1) fun z => κ * Iop D (tor0 D D.host.ccK ch.S.Z.δ) (La0 D (tor0 D D.host.ccK ch.S.Z.δ) _ _) (Formalism.MainNotions.TaylorLogMetric.La D (tor0 D D.host.ccK ch.S.Z.δ) (GlobalTheory.MovedDict.srcLat ch.S.toGridChoice p x y) (GlobalTheory.MovedDict.tgtLat ch.S.toGridChoice p x y)) (ch.S.Z.e0 p) z)) →
     Mod1All κ ∧ (∀ (q : ℕ) [Fact q.Prime], EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.small x) (stdL D _) →
       EqAt D q (GlobalTheory.SumSize.latAt ch.S.toGridChoice p.big y) (stdL D _) → ∀ lam : Qbar →+* ℂ_[q], ‖lamC lam κ‖ = 1) := by
-  first | exact @GlobalTheory.MovedKappaArith.kappa_arith | exact GlobalTheory.MovedKappaArith.kappa_arith | (intros; apply GlobalTheory.MovedKappaArith.kappa_arith <;> assumption)
+  exact @GlobalTheory.MovedKappaArith.kappa_arith

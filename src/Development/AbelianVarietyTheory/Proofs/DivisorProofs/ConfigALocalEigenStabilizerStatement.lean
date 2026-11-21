@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalEigenStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_local_eigen_stabilizer : GlobalTheory.Fun
           coneEvFun B G H H' om v (ev v) l φ ((m p.2.1)⁻¹ * p.1.1) * ((absE F E p.2.1 : ℝ) : ℂ) ^ (b + 1)) (μK.prod μ) ∧
         l (coneFin B G.M om v (ev v) K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) φ) =
           ∫ k, ∫ t, coneEvFun B G H H' om v (ev v) l φ ((m t.1)⁻¹ * k.1) * ((absE F E t.1 : ℝ) : ℂ) ^ (b + 1) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ConeLeviInt.cone_as_integral | exact GlobalTheory.ConeLeviInt.cone_as_integral | (intros; apply GlobalTheory.ConeLeviInt.cone_as_integral <;> assumption)
+  exact @GlobalTheory.ConeLeviInt.cone_as_integral

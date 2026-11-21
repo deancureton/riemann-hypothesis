@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_derivative_along_line : ∀ (F E : Type) [Fi
     ∀ Ψ ∈ GlobalTheory.ThK.PolData B G.M, ∀ γ ∈ Lines σ G.V, ∀ g h,
       HasDerivAt (fun t : ℝ => theta om Ψ (g * γ (Multiplicative.ofAdd t)) h)
         (theta om (derL om (fun t => γ (Multiplicative.ofAdd t)) Ψ) g h) 0 := by
-  first | exact @GlobalTheory.ThK.KernelLineLeft.hasDerivAt_theta_lineLeft | exact GlobalTheory.ThK.KernelLineLeft.hasDerivAt_theta_lineLeft | (intros; apply GlobalTheory.ThK.KernelLineLeft.hasDerivAt_theta_lineLeft <;> assumption)
+  exact @GlobalTheory.ThK.KernelLineLeft.hasDerivAt_theta_lineLeft

@@ -6,4 +6,4 @@ open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weightTensorRepOfEmbeddings_isIrreducible : ∀ (L : Type) [Field L] [NumberField L] [IsCMField L] (n : ℕ) (ι : Type) [Fintype ι] (K : Type) [Field K] [CharZero K]
     (emb : ι → L →+* K) (lam : ι → DomWeight n), GlobalTheory.AlgWtF.CMDist emb → (GlobalTheory.AlgWtF.tenRepF emb lam).IsIrreducible := by
-  first | exact @GlobalTheory.AlgWtF.tenRepF_isIrreducible | exact GlobalTheory.AlgWtF.tenRepF_isIrreducible | (intros; apply GlobalTheory.AlgWtF.tenRepF_isIrreducible <;> assumption)
+  exact @GlobalTheory.AlgWtF.tenRepF_isIrreducible

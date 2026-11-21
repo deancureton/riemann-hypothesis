@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelSetWittFrameCompactBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.siegel_set_witt_frame_compact_bound : ∀ (F E : T
         ∀ p ∈ Ω, ∀ t ∈ GlobalTheory.SiegelSet.cone r₀ c, ∀ a, GlobalTheory.SiegelSet.IsTorusElt σ ((1 : E) • X.J.map σ) Xf Yf t a →
         ∀ k ∈ K, g.1 = HA.mat (AF F) σ ((1 : E) • X.J.map σ) (p * a * k) →
           ‖theta om Φ g h‖ ≤ C * (ht h : ℝ) ^ N * ∏ i, t i ^ (Module.finrank ℚ F * d) := by
-  first | exact @GlobalTheory.ThetaUnifSiegel.theta_le_height_pow_unif | exact GlobalTheory.ThetaUnifSiegel.theta_le_height_pow_unif | (intros; apply GlobalTheory.ThetaUnifSiegel.theta_le_height_pow_unif <;> assumption)
+  exact @GlobalTheory.ThetaUnifSiegel.theta_le_height_pow_unif

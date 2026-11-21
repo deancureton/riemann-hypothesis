@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.boundary_distance_smooth_interior : ∀ (D : D7) (
     (σ : κ.c.F →+* ℂ) (n : ℕ) (U : Set (V n)) (y : V n → CxPts (genStr s.T.Z) σ), IsOpen U →
     IsHolTo U (fun b => (y b).1) → ContinuousOn y U → ∀ u ∈ U, ¬ LiesIn (y u) (genBd s.T.Z) →
     ContDiffAt ℝ (∞ : WithTop ℕ∞) (fun v => x.r σ (y v)) u := by
-  first | exact @GlobalTheory.BdFamily.contDiffAt_r | exact GlobalTheory.BdFamily.contDiffAt_r | (intros; apply GlobalTheory.BdFamily.contDiffAt_r <;> assumption)
+  exact @GlobalTheory.BdFamily.contDiffAt_r

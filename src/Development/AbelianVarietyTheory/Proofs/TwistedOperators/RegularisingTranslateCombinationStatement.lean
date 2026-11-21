@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.matched_integral_euler_product : GlobalTheory.FunP
   (P : Finset (HeightOneSpectrum (𝓞 D.host.F))), ∃ v ∉ P, ∃ w : GA D (G.V (.grid i j)) →₀ ℂ, zdeg w ≠ 0 ∧
     IntegrableOn (translates w (kerSmall W Θ' g g₁)) (M.fd _) (M.ν _) ∧
     ∀ b ∈ w.support, b ∈ Set.range (GlobalTheory.AdelicU.emb D.sp.cm.sig (G.V (.grid i j)).gram v) := by
-  first | exact @GlobalTheory.RegAt.exists_regulariser_at | exact GlobalTheory.RegAt.exists_regulariser_at | (intros; apply GlobalTheory.RegAt.exists_regulariser_at <;> assumption)
+  exact @GlobalTheory.RegAt.exists_regulariser_at

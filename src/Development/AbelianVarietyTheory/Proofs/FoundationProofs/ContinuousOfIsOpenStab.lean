@@ -2,7 +2,6 @@ import CompanionTheory.EightfoldTheory.VariationTheory.PublishedTheorems.Imports
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.Hypotheses2
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AutomorphicForms.RTwist
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiscreteTopologyRatN
-import Mathlib
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.NormNatCastLtOne
 import GroundTheory.AutomorphicForms.StrongApproximationSLDense
 open NumberField IsDedekindDomain Neutral.B1 Formalism.L2.Host Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Polynomial

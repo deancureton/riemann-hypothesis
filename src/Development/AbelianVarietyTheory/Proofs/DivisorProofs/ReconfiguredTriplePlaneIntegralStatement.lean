@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReconfiguredTriplePlaneIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.reconfigured_triple_plane_integral : GlobalTheory.
       ∀ (μ : Measure (unip σ G₁.W H₂)) (𝓕 : Set (unip σ G₁.W H₂)), μ.IsHaarMeasure →
         IsFundamentalDomain ((ratU σ G₁.W.J).subgroupOf (unip σ G₁.W H₂)) 𝓕 μ → μ 𝓕 = 1 → ∀ h,
         Tendsto (fun k => ∫ u in 𝓕, G₁.M'.I om₁' (Ψs k) (u.1 * h) ∂μ) atTop (𝓝 (∫ u in 𝓕, G₁.M'.I om₁' Ψ (u.1 * h) ∂μ)) := by
-  first | exact @GlobalTheory.SoPolApprox.approx_pol | exact GlobalTheory.SoPolApprox.approx_pol | (intros; apply GlobalTheory.SoPolApprox.approx_pol <;> assumption)
+  exact @GlobalTheory.SoPolApprox.approx_pol

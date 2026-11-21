@@ -14,4 +14,4 @@ open GlobalTheory.Core.Rk.SW
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isSchwartzBruhat_iff_mem_adelicMatrixSchwartzSpace : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → ∀ (m n : ℕ) (φ : Mx D m n → ℂ), GlobalTheory.IndefiniteRowSideFullHecke.SchwartzBruhatMixedFamilies.IsSchwartzBruhat φ ↔ φ ∈ GlobalTheory.IndefiniteRowSideFullHecke.ModerateGrowthSchwartz.schwartzA θ m n := by
-  first | exact @GlobalTheory.SchwartzIff.isSchwartzBruhat_iff_mem_schwartzA | exact GlobalTheory.SchwartzIff.isSchwartzBruhat_iff_mem_schwartzA | (intros; apply GlobalTheory.SchwartzIff.isSchwartzBruhat_iff_mem_schwartzA <;> assumption)
+  exact @GlobalTheory.SchwartzIff.isSchwartzBruhat_iff_mem_schwartzA

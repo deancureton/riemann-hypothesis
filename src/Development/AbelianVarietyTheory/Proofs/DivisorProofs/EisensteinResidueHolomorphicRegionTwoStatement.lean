@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinResidueHolomorphicRegionTwo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_nhds_dop_central_eq_holomorphic_smul : ∀ 
       (∀ μ, GlobalTheory.EisLine.IsModerateForm σ J μ → DifferentiableOn ℂ (fun s => μ (H₀ s)) U₀) →
       ∃ V ∈ 𝓝 (((n : ℂ) - 1) / 2), ∀ z, GlobalTheory.UAut.IsCentral σ J z → ∃ χ : ℂ → ℂ, DifferentiableOn ℂ χ (interior V) ∧
         ∀ s ∈ V, GlobalTheory.UAut.dop z (H₀ s) = χ s • H₀ s := by
-  first | exact @GlobalTheory.EisRes.CentralEig.dop_eigen_near_rho | exact GlobalTheory.EisRes.CentralEig.dop_eigen_near_rho | (intros; apply GlobalTheory.EisRes.CentralEig.dop_eigen_near_rho <;> assumption)
+  exact @GlobalTheory.EisRes.CentralEig.dop_eigen_near_rho

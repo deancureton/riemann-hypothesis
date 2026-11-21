@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DerivationsCommuteDistinctPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.derivations_commute_distinct_places : ∀ (F E : T
     ∀ (w : InfinitePlace F) (τ : EmbOver E w) (D : Matrix (Fin n) (Fin n) ℂ →ₗ[ℂ] Module.End ℂ (SmG σ J)), IsDer σ J τ D →
     ∀ (w' : InfinitePlace F) (τ' : EmbOver E w') (D' : Matrix (Fin n) (Fin n) ℂ →ₗ[ℂ] Module.End ℂ (SmG σ J)),
     IsDer σ J τ' D' → w ≠ w' → ∀ X X', D X * D' X' = D' X' * D X := by
-  first | exact @GlobalTheory.LeviHC.der_comm_of_ne | exact GlobalTheory.LeviHC.der_comm_of_ne | (intros; apply GlobalTheory.LeviHC.der_comm_of_ne <;> assumption)
+  exact @GlobalTheory.LeviHC.der_comm_of_ne

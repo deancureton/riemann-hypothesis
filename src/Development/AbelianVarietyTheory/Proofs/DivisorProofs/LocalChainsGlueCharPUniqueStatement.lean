@@ -16,4 +16,4 @@ open GlobalTheory.ChainPts
 open GlobalTheory.ChainDesc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_chains_glue_char_p_unique : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O] (p : ℕ) [Fact p.Prime] (B : GlobalTheory.Vert.Model O) (Λ : Type) [CommRing Λ] (h o : ℕ) (Lie Om : AM B Λ) (π : Γ(B.X, ⊤)) (γ : ℕ → Γ(B.X, ⊤)) (M : Λ →+* Matrix (Fin h) (Fin h) ℤ) (E : ℕ → B.X.Modules) (ι : ∀ n, E n ⟶ freeModule B.X (Fin h)) (I : Type) (V : I → B.X.Opens) (D : ∀ i, ChainOn p h o Lie Om π γ (V i)) (hp : (p : Γ((fibI p B).subscheme, ⊤)) = 0), Lie.V.IsQuasicoherent → IsLoc M ι V D → ∀ n < o, ∀ (Q : AM B Λ) (t : E n ⟶ Q.V), IsQuot M (ι n) (latOf (ι (n + 1))) Q t → Nonempty ((frobA p hp)^[n + 1] Q ≅ cokernel (smulA Lie (p : Γ(B.X, ⊤)))) := by
-  first | exact @GlobalTheory.ChainDesc.Kap.main | exact GlobalTheory.ChainDesc.Kap.main | (intros; apply GlobalTheory.ChainDesc.Kap.main <;> assumption)
+  exact @GlobalTheory.ChainDesc.Kap.main

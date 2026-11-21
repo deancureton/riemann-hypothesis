@@ -47,7 +47,6 @@ theorem curveOver_of_weberSet (D : D7) (F : IntermediateField ℚ ℂ) {n : ℕ}
     ⟨h L hL (Set.mem_insert _ _), fun s hs =>
       h L hL (Set.mem_insert_of_mem _ ⟨_, (hL _).2 ⟨s, rfl⟩, hs, rfl⟩)⟩
 
-set_option maxHeartbeats 4000000 in
 
 theorem jointQ_of_small_field : ∀ (X : Stages) (F : IntermediateField ℚ ℂ), Rich X.B.toPre F → (∀ L : ℝ, HostSz X.B.host L → Sz F (poR X.B.R L) (poR X.B.R L)) → (∀ z, z ∈ F ↔ ∃ x ∈ X.B.Ks, X.B.embLL x = z) → JointQ X.toD7 := by
   intro X F hR hS hF

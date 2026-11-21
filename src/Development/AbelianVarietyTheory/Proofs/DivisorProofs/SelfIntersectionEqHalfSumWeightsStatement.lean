@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.self_intersection_eq_half_sum_weights : ∀ (k : T
     IsArithVar (spMap (algebraMap k k')) 0 → ∀ (c : ∀ σ : k →+* ℂ, CxPts (spMap (algebraMap k k')) σ → ℝ)
     (hc : ∀ σ y, CxPts.CInfAt (c σ) y) (hcc : ∀ σ σ', (Weight.ofFun (c σ)).IsConj (Weight.ofFun (c σ'))) (a : ℝ),
     (fnB c hc hcc).IsSelfInter a → a = 1 / 2 * ∑ᶠ σ, ∑ᶠ y, c σ y := by
-  first | exact @GlobalTheory.CurveSelf.isSelfInter_fnB_curve | exact GlobalTheory.CurveSelf.isSelfInter_fnB_curve | (intros; apply GlobalTheory.CurveSelf.isSelfInter_fnB_curve <;> assumption)
+  exact @GlobalTheory.CurveSelf.isSelfInter_fnB_curve

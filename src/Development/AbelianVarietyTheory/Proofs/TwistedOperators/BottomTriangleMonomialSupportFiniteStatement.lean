@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomTriangleMonomialSupportFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_monomial_support_finite : ∀ {D :
     IsBottomTri W i j X →
     ∃ K : Finset (FVar D WW.rank A.rank →₀ ℕ), ∀ t, ∀ h ∈ GfC WW, ∀ k ∉ K,
       X.I W.ψ W.θ t (MvPolynomial.monomial k 1) h = 0 := by
-  first | exact @GlobalTheory.BottomDeg.classSum_vanish_off_finite | exact GlobalTheory.BottomDeg.classSum_vanish_off_finite | (intros; apply GlobalTheory.BottomDeg.classSum_vanish_off_finite <;> assumption)
+  exact @GlobalTheory.BottomDeg.classSum_vanish_off_finite

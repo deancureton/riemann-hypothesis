@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffValuationLossLeAddCharNegUnfoldingPhase
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DictAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.coeffValuationLossLe_addChar_neg_unfoldingPhase : 
     (ch.S.term t Φ β P).datum X Y ≠ 0 →
     moved (locGrid ch.G t P) (keepAt ch.G P) ((repsAt ch.G t P).elt (β P)) (Tflip ch.W ch.S.B t Φ P) (fill one_le_sLen X Y e) ≠ 0 →
     ∀ w : PlL D, LossLe w ((psiAt ch.W P.1 (-phase X e) : Circle) : ℂ) 0 := by
-  first | exact @GlobalTheory.UnfoldLoss.lossLe_psi_neg_phase | exact GlobalTheory.UnfoldLoss.lossLe_psi_neg_phase | (intros; apply GlobalTheory.UnfoldLoss.lossLe_psi_neg_phase <;> assumption)
+  exact @GlobalTheory.UnfoldLoss.lossLe_psi_neg_phase

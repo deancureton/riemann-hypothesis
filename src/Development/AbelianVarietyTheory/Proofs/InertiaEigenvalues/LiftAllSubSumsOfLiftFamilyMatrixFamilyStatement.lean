@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LiftAllSubSumsOfLiftFamilyMatrixFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSummandTw
 open Formalism Formalism.MainNotions Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Module GlobalTheory.Pass Formalism.MainNotions.PairedCharacterCondition GlobalTheory.Pass.LocDual
 set_option maxHeartbeats 1000000 in
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.liftAll_subSums_of_liftFamily_matrixFamily : ∀ {
     (PD : PeriodData G Qp K₀ K B BdR) {LL O : Type} [Field LL] [Algebra Qp LL] [TopologicalSpace LL]
     [CommRing O] [Algebra O LL] {ι : Type} {k : ℕ} (Ms : ι → (G →* Matrix (Fin k) (Fin k) LL)) (e : ℕ)
     (A A' : GRep G Qp LL O), LiftFam (O := O) PD Ms e → IsSubFam Ms A → IsSubFam Ms A' → BlochKatoDuality.LiftAll PD A A' e := by
-  first | exact @GlobalTheory.Pass.LocDual.liftAll_of_liftFam | exact GlobalTheory.Pass.LocDual.liftAll_of_liftFam | (intros; apply GlobalTheory.Pass.LocDual.liftAll_of_liftFam <;> assumption)
+  exact @GlobalTheory.Pass.LocDual.liftAll_of_liftFam

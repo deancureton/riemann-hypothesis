@@ -273,6 +273,6 @@ end TestFunctionNorms
 section
 open GlobalTheory.SumSize GlobalTheory.RowClaim
 theorem _root_.GlobalTheory.Adopt.finite_infinite_psi_bounds : GlobalTheory.FunPr.Hypotheses₂ → FinPsiK ∧ InfPsiK := by
-  first | exact @TestFunctionNorms.GlobalTheory.CompanionTheory.TestVal.finPsi_infPsi | exact TestFunctionNorms.GlobalTheory.CompanionTheory.TestVal.finPsi_infPsi | (intros; apply TestFunctionNorms.GlobalTheory.CompanionTheory.TestVal.finPsi_infPsi <;> assumption)
+  exact @TestFunctionNorms.GlobalTheory.CompanionTheory.TestVal.finPsi_infPsi
 
 end

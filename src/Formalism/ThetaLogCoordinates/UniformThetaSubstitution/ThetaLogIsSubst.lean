@@ -1,6 +1,5 @@
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.KernelFromKOneK
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.FrobeniusLiftNorms.ThetaLogIsSubstitution
-import Mathlib
 import Formalism.ThetaLogCoordinates.UniformThetaSubstitution.StatementN
 
 namespace Formalism.InvariantFactorPaths.G7.Top

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactIsometryLieAlgebraBound
-import Mathlib
 open scoped Matrix
 
 set_option maxHeartbeats 1000000 in
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.compact_isometry_lie_algebra_bound : ∀ (n : ℕ)
         (∀ j, (Zb j)ᴴ * A + A * Zb j = 0 ∧ (R⁻¹ * Zb j * R)ᴴ = -(R⁻¹ * Zb j * R)) ∧
         ∀ t ∈ S, ∃ (c : Fin e → ℝ) (c' : Fin e' → ℝ), (∀ j, |c j| ≤ C) ∧ (∀ j, |c' j| ≤ C) ∧
           X = ∑ j, c j • ((m t)⁻¹ * Yb j * m t) + ∑ j, c' j • Zb j := by
-  first | exact @GlobalTheory.UniformLieDecomp.decomp | exact GlobalTheory.UniformLieDecomp.decomp | (intros; apply GlobalTheory.UniformLieDecomp.decomp <;> assumption)
+  exact @GlobalTheory.UniformLieDecomp.decomp

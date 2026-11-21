@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBHaarMeasureUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.configuration_b_haar_measure_unfolding : GlobalThe
     ∃ s₁ : ℝ, ∀ s : ℂ, s₁ < s.re → ∀ (g : UA σ G.W.J) (h : UA σ G₁.W.J) (μ' : Measure (unip σ G₁.W H₂)) (𝓕 : Set (unip σ G₁.W H₂)), μ'.IsHaarMeasure →
       IsFundamentalDomain ((ratU σ G₁.W.J).subgroupOf (unip σ G₁.W H₂)) 𝓕 μ' → μ' 𝓕 = 1 →
       HasFiniteIntegral (fun p : unip σ G₁.W H₂ × (K × (AE F E)ˣ) => G₁.M'.I om₁' (e' (G.M'.co.rho B.ψ (shiftB σ H H' p.2.2) (om' (p.2.1.1, g) Φ'))) (p.1.1 * h) * (X.ν p.2.2 : ℂ) * ((absE F E p.2.2 : ℝ) : ℂ) ^ (s + ((a : ℂ) + 1) / 2)) ((μ'.restrict 𝓕).prod (μK.prod μ)) := by
-  first | exact @GlobalTheory.ConeCTFin.hasFiniteIntegral_cone | exact GlobalTheory.ConeCTFin.hasFiniteIntegral_cone | (intros; apply GlobalTheory.ConeCTFin.hasFiniteIntegral_cone <;> assumption)
+  exact @GlobalTheory.ConeCTFin.hasFiniteIntegral_cone

@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.theta_integral_integrable : ∀ (k : Type) [Field 
     r ≤ t → IsSmoothChar μ → IsUnitaryChar μ → ∀ (h : GL (Fin (r + t)) k)
       (Φ : Matrix (Fin (r + t)) (Fin r) k → ℂ), Φ ∈ SB (Matrix (Fin (r + t)) (Fin r) k) →
       Integrable (fun g : GL (Fin r) k => om μ g h Φ (eMat k r t)) (volGL ν (Fin r)) := by
-  first | exact @GlobalTheory.GodementJacquet.integrable_om_eMat | exact GlobalTheory.GodementJacquet.integrable_om_eMat | (intros; apply GlobalTheory.GodementJacquet.integrable_om_eMat <;> assumption)
+  exact @GlobalTheory.GodementJacquet.integrable_om_eMat

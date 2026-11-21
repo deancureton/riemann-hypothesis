@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairPeriodIdentityCaseB
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.triple_pair_period_identity_case_b : GlobalTheory.
         κ • pure (coneInf B G.M' om' ei K μKi μi (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f)
           (fun v => if v ∈ T then coneFin B G.M' om' v (ev v) K (μKv v) (μv v) (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (φ v)
             else G₁.M'.vac v) := by
-  first | exact @GlobalTheory.ConeEulerConst.cone_pure_eq_const_smul | exact GlobalTheory.ConeEulerConst.cone_pure_eq_const_smul | (intros; apply GlobalTheory.ConeEulerConst.cone_pure_eq_const_smul <;> assumption)
+  exact @GlobalTheory.ConeEulerConst.cone_pure_eq_const_smul

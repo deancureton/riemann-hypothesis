@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedFrameLocalTorusAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocIdeleEqIdl
 
 open scoped TensorProduct NNReal Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.adapted_frame_local_torus_action : ∀ (F E : Type
         IsLevi (W₁ := W₁) H (GlobalTheory.JacGeom.idl hcm t (y, 1)) 1 g →
         (mat g).map (piW t) = ((GlobalTheory.LineFrame.frameGL t H hA.rank * leviEmb (Fv F v) (linePlace h2) (firstBlockScalar (Fv F v) d y) *
           (GlobalTheory.LineFrame.frameGL t H hA.rank)⁻¹ : GL (Fin d) (Fv F v)) : Matrix (Fin d) (Fin d) (Fv F v)) := by
-  first | exact @GlobalTheory.LeviFrameSplit.levi_frame_conj | exact GlobalTheory.LeviFrameSplit.levi_frame_conj | (intros; apply GlobalTheory.LeviFrameSplit.levi_frame_conj <;> assumption)
+  exact @GlobalTheory.LeviFrameSplit.levi_frame_conj

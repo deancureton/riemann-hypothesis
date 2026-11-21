@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEigenIntegralStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_isCT_integral_eq_cone_integral_add_hasLaw :
       ∃ C : ℂ, C ≠ 0 ∧ ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
       ∀ Φ ∈ PolData B G.M, ∃ A₀ : UA σ G.W.J → ℂ, HasLaw G₁.W H' X.β (((b + 2 : ℕ) : ℝ) / 2) A₀ ∧
         IsCT H' (G.M.I om Φ) (fun h => C * G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, h) Φ)) 1 + A₀ h) := by
-  first | exact @GlobalTheory.ThK.unfoldCTBigCone | exact GlobalTheory.ThK.unfoldCTBigCone | (intros; apply GlobalTheory.ThK.unfoldCTBigCone <;> assumption)
+  exact @GlobalTheory.ThK.unfoldCTBigCone

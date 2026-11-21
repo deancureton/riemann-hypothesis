@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneConstantTermFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.skew_plane_constant_term_formula : ∀ (F E : Type
       GlobalTheory.ThK.CuspTransfer.IsInd hσ W W₁ H hc₀ X' M χ Kc ψs a Ψ →
       (∀ i, GlobalTheory.StdPar.IsCuspOn σ (c₀ • W₁.J.map σ) Xf Yf S' K₁ (ψs i)) →
       (IsCompact Kc ∧ (1 : GAd σ (c₀ • W.J.map σ)) ∈ Kc ∧ ∀ k ∈ Kc, ∀ k' ∈ K', k * k' ∈ Kc) → Continuous Ψ → ∀ S : Finset (Fin (r + 1)), (insert 0 (S'.map (Fin.succEmb r))) ⊂ S → GlobalTheory.StdPar.IsConstAlong σ (c₀ • W.J.map σ) X' S Ψ 0 := by
-  first | exact @GlobalTheory.ThK.CuspTransfer.isConstAlong_zero_of_isInd | exact GlobalTheory.ThK.CuspTransfer.isConstAlong_zero_of_isInd | (intros; apply GlobalTheory.ThK.CuspTransfer.isConstAlong_zero_of_isInd <;> assumption)
+  exact @GlobalTheory.ThK.CuspTransfer.isConstAlong_zero_of_isInd

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneDarbouxEvaluationIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_darboux_evaluation_identity : ∀ (F
         co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) →
     ((Model.mk co (fun _ _ => 0) 0 ∅ : Model σ X W).Pol B.ψ B.emb).map ((ei (n := n) F hd : SInf F (Fin n × Fin d) →L[ℂ] SInf F (Fin n × Fin d₁)) : SInf F (Fin n × Fin d) →ₗ[ℂ] SInf F (Fin n × Fin d₁)) =
       M₁.Pol B.ψ B.emb := by
-  first | exact @GlobalTheory.ThK.PlaneEv.pol_map_ei | exact GlobalTheory.ThK.PlaneEv.pol_map_ei | (intros; apply GlobalTheory.ThK.PlaneEv.pol_map_ei <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.pol_map_ei

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.WeylLatticeIntegralColumnMinorExpansion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DualWeylEqSpanColProd
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.StandardWeylLatticesFockDual
 open MvPolynomial
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.weylLattice_integral_columnMinor_expansion : ∀ (
         (z J : ℚ) * Formalism.GradedWeylDivisibility.fockQ (Formalism.GradedWeylDivisibility.hw ℚ (le_refl N) (fun r : Fin N => Y.rowLen r))
           (Formalism.GradedWeylDivisibility.hw ℚ (le_refl N) (fun r : Fin N => Y.rowLen r))) ∧
       ∑ J, z J • GlobalTheory.WeylMinorDual.colProd ℤ N Y hY J = f := by
-  first | exact @GlobalTheory.WeylIntExpansion.weyl_int_expansion | exact GlobalTheory.WeylIntExpansion.weyl_int_expansion | (intros; apply GlobalTheory.WeylIntExpansion.weyl_int_expansion <;> assumption)
+  exact @GlobalTheory.WeylIntExpansion.weyl_int_expansion

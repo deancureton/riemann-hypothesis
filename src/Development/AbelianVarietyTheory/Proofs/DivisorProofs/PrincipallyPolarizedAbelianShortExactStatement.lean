@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.principally_polarized_abelian_short_exact : Global
           (GlobalTheory.VB.dual (GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A))) ∧
         Nonempty (S₂.X₃ ≅ (GlobalTheory.VB.frobPull p (GlobalTheory.VB.natCast_eq_zero T p (ZMod p))).obj
           (GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A)) := by
-  first | exact @GlobalTheory.TwoFiltrations.main | exact GlobalTheory.TwoFiltrations.main | (intros; apply GlobalTheory.TwoFiltrations.main <;> assumption)
+  exact @GlobalTheory.TwoFiltrations.main

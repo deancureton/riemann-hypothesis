@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChainStepWeightArithmetic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsTwIffCanonEq
 import Formalism.LocalToGlobal.KernelLattices.TopPin
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.chainStep_weight_arithmetic : ∀ {B : Base} {X : 
     ∃ k : (I.rec7 l Z).what₂.Tau → ℕ,
       (∀ τ, (k τ : ℤ) = shiftOf (lamTG (I.fm l u μ) i) τ + ((I.rec7 l Z).chTw u μ).sSharp i τ) ∧
       ∀ τ r, nuT (I.rec7 l Z) u i τ r = ((I.fm l u μ).lam i τ).natW r + k τ := by
-  first | exact @GlobalTheory.IntegralityCompare.weight_arith_step | exact GlobalTheory.IntegralityCompare.weight_arith_step | (intros; apply GlobalTheory.IntegralityCompare.weight_arith_step <;> assumption)
+  exact @GlobalTheory.IntegralityCompare.weight_arith_step

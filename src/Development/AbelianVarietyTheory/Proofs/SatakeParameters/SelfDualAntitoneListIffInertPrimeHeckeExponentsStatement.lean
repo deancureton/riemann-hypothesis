@@ -12,4 +12,4 @@ open GlobalTheory.Hk3
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.selfDual_antitone_list_iff_inertPrimeHeckeExponents : ∀ (n : ℕ) (d : List ℤ), (d.length = n ∧ d.Pairwise (fun a b => b ≤ a) ∧ dualLab d = d) ↔ ∃ s : List ℕ, 2 * s.length ≤ n ∧ s.Pairwise (fun a b => b ≤ a) ∧ (∀ a ∈ s, 0 < a) ∧ d = labIn n s := by
-  first | exact @GlobalTheory.Hk3.labIn_selfDual_iff | exact GlobalTheory.Hk3.labIn_selfDual_iff | (intros; apply GlobalTheory.Hk3.labIn_selfDual_iff <;> assumption)
+  exact @GlobalTheory.Hk3.labIn_selfDual_iff

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MovedVectorDefinitePairThetaFockVacuum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqConjOfInFrame
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.movedVector_definitePair_theta_fockVacuum : ∀ {D
     (S : GridChoice W U) (t : T) (p : Pair T), DefPair D.R.m p → ∀ d : FinDatum G t p, S.Z.HasVec d →
     IsThetaFunO W.ψ (G.pS p) (G.pT p) (movedVec t S d) ∧
       ∀ ρ, IsFockVacAt (heisO W.ψ (G.pS p) (G.pT p)) W.θ ρ (cplxO (G.cartS W.cart p ρ) (G.onT W.cart p ρ)) (movedVec t S d) := by
-  first | exact @GlobalTheory.RowReal.movedVec_theta_fockVac | exact GlobalTheory.RowReal.movedVec_theta_fockVac | (intros; apply GlobalTheory.RowReal.movedVec_theta_fockVac <;> assumption)
+  exact @GlobalTheory.RowReal.movedVec_theta_fockVac

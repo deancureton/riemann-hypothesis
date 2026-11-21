@@ -14,4 +14,4 @@ open scoped TensorProduct Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.top_vector_mem_extra_projection : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), PkHyp W → ∀ t (F : Fin ((W.Q.F.fc (cxW W).zs).Df1.nV t) → D.what₂.LL), topOf W t F ∈ CXP (pk W) (lvP W) t := by
-  first | exact @GlobalTheory.TopLevelP.topOf_mem_CXP | exact GlobalTheory.TopLevelP.topOf_mem_CXP | (intros; apply GlobalTheory.TopLevelP.topOf_mem_CXP <;> assumption)
+  exact @GlobalTheory.TopLevelP.topOf_mem_CXP

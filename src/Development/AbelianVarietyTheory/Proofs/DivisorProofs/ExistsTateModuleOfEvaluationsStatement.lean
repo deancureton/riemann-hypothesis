@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTateModuleOfEvaluations
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_tate_module_of_evaluations : ∀ (E : Type)
     (∀ k (o : 𝓞 E) a, ev k (o • a) = ev k a ≫ P.oA.act o) →
     (∀ k m, 0 < k → 0 < m → ∀ a, ev (k * m) a ^ m = ev k a) → (∀ a, ev 1 a = 1) →
     ∃ tι : Dw.La →+ P.T, (∀ a k, (tι a).lev k = ev (p ^ k) a) ∧ ∀ (o : 𝓞 E) a, tι (o • a) = P.actT o (tι a) := by
-  first | exact @GlobalTheory.FlatModel.tateLift_exists | exact GlobalTheory.FlatModel.tateLift_exists | (intros; apply GlobalTheory.FlatModel.tateLift_exists <;> assumption)
+  exact @GlobalTheory.FlatModel.tateLift_exists

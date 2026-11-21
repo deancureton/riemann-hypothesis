@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTripleConfigRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.seesaw_triple_config_restriction : GlobalTheory.Th
     ∃ φ ∈ G.M'.SoLoc B.ψ B.τ₁,
       coneFin B G.M' om' B.v₁ (ev B.v₁) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ ∈ G₁.M'.SoLoc B.ψ B.τ₁ ∧
       l (coneFin B G.M' om' B.v₁ (ev B.v₁) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ) ≠ 0 := by
-  first | exact @GlobalTheory.ConeLv1.coneFin_ne_zero | exact GlobalTheory.ConeLv1.coneFin_ne_zero | (intros; apply GlobalTheory.ConeLv1.coneFin_ne_zero <;> assumption)
+  exact @GlobalTheory.ConeLv1.coneFin_ne_zero

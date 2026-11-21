@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelEigenRelationSecondForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.model_eigen_relation_second_form : GlobalTheory.Th
     ∀ φ ∈ schA F (Fin n × Fin d₁), ∀ N K : ℕ, 1 ≤ N → ∃ C : ℝ, ∀ w : Fin d₁ → E, (∀ i, ∃ o : 𝓞 E, (N : E) * w i = o) →
       ‖thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) φ))‖ *
         (1 + ∑ i, ∑ v : InfinitePlace E, v (w i)) ^ K ≤ C := by
-  first | exact @GlobalTheory.IsoXDecay.thetaSum_decay | exact GlobalTheory.IsoXDecay.thetaSum_decay | (intros; apply GlobalTheory.IsoXDecay.thetaSum_decay <;> assumption)
+  exact @GlobalTheory.IsoXDecay.thetaSum_decay

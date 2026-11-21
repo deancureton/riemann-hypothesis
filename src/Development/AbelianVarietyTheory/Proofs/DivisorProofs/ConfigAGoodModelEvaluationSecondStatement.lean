@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAGoodModelEvaluationSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.stronglyMeasurable_iteratedFDeriv_coneInfInt_shift
     ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K → ∀ (z : ℕ) (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (n : ℕ) (y : Fin b × Fin (b + a') → mixedEmbedding.mixedSpace F),
       StronglyMeasurable (Function.uncurry fun (k : KAt K (evI F)) (l : idelesAt E (evI F)) =>
         iteratedFDeriv ℝ n (⇑(coneInfInt B G.M om ei (shiftA H H') X.ν z f k.1 l.1)) y) := by
-  first | exact @GlobalTheory.ThK.ConeInfDerivMeas.stronglyMeasurable_iteratedFDeriv_coneInfInt | exact GlobalTheory.ThK.ConeInfDerivMeas.stronglyMeasurable_iteratedFDeriv_coneInfInt | (intros; apply GlobalTheory.ThK.ConeInfDerivMeas.stronglyMeasurable_iteratedFDeriv_coneInfInt <;> assumption)
+  exact @GlobalTheory.ThK.ConeInfDerivMeas.stronglyMeasurable_iteratedFDeriv_coneInfInt

@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.HeckeCharEqOf
 open Formalism.BasicNotions Formalism.ConjugateSelfDual Formalism.MainNotions Formalism.MainNotions.N Polynomial NumberField IsDedekindDomain ReciprocityTheory.Gal GlobalTheory.StringRepresentationDecomposition
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conclusionG6_of_admissible : ∀ D : D7, SumRepresentations.admitted D → RbEx D → SumRepresentations.ConclusionG6 D := by
-  first | exact @GlobalTheory.ClosingSixth.conclusionG6_of_adm | exact GlobalTheory.ClosingSixth.conclusionG6_of_adm | (intros; apply GlobalTheory.ClosingSixth.conclusionG6_of_adm <;> assumption)
+  exact @GlobalTheory.ClosingSixth.conclusionG6_of_adm

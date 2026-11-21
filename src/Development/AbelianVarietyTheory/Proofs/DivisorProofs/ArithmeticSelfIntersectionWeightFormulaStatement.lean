@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.arithmetic_self_intersection_weight_formula : Glob
     (∀ σ σ', (Weight.ofFun (c σ)).IsConj (Weight.ofFun (c σ'))) → ∑ᶠ σ, ∑ᶠ y, c σ y = 0 →
     ∀ (ι : Type) [Fintype ι] (L : ι → HermLB p) (n : ι → ℤ),
       chInt (comb L n) D (fun σ y => c σ (PtsOver.map ρ hρ _ y)) = 0 := by
-  first | exact @GlobalTheory.ChIntPull.chInt_pull_eq_zero | exact GlobalTheory.ChIntPull.chInt_pull_eq_zero | (intros; apply GlobalTheory.ChIntPull.chInt_pull_eq_zero <;> assumption)
+  exact @GlobalTheory.ChIntPull.chInt_pull_eq_zero

@@ -13,4 +13,4 @@ open Matrix
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rational_isometry_normalises_isotropic_unipotent_radical : ∀ (D : D7) (V : HSp D) (r : ℕ) (C : Matrix (Fin V.rank) (Fin r) D.host.E), ∀ δ ∈ GQ V, ∀ δ₀ : Matrix (Fin V.rank) (Fin V.rank) D.host.E, (matHom V δ).1 = δ₀.map (incA D) → ∀ G : Matrix (Fin r) (Fin r) D.host.E, IsUnit G → δ₀ * C = C * G → ∀ n ∈ NI V C, δ * n * δ⁻¹ ∈ NI V C := by
-  first | exact @GlobalTheory.FrameNorm.norm | exact GlobalTheory.FrameNorm.norm | (intros; apply GlobalTheory.FrameNorm.norm <;> assumption)
+  exact @GlobalTheory.FrameNorm.norm

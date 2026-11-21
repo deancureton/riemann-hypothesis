@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.local_lattice_image_open : ∀ {F E : Type} [Field
         Set ((Fin n × Fin d → Fv F v) × (Fin n × Fin d → Fv F v))) ∧
       IsCompact (((latAtV X W v).map (GlobalTheory.LatVac.locCo co v) : AddSubgroup ((Fin n × Fin d → Fv F v) × (Fin n × Fin d → Fv F v))) :
         Set ((Fin n × Fin d → Fv F v) × (Fin n × Fin d → Fv F v))) := by
-  first | exact @GlobalTheory.LatOpenCptAny.main | exact GlobalTheory.LatOpenCptAny.main | (intros; apply GlobalTheory.LatOpenCptAny.main <;> assumption)
+  exact @GlobalTheory.LatOpenCptAny.main

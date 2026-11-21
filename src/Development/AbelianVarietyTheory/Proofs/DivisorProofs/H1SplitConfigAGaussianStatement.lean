@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigAGaussian
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.h1_split_config_a_gaussian : GlobalTheory.ThK.KP �
       ∀ φ φ' : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) φ →
         IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) φ' →
         ∀ c : ℂ, (∀ x ∈ lowPartInf B G.M R.p, φ' x = c • φ x) → φ' = c • φ := by
-  first | exact @GlobalTheory.IndLine.frobInf_eq_of_lowPart | exact GlobalTheory.IndLine.frobInf_eq_of_lowPart | (intros; apply GlobalTheory.IndLine.frobInf_eq_of_lowPart <;> assumption)
+  exact @GlobalTheory.IndLine.frobInf_eq_of_lowPart

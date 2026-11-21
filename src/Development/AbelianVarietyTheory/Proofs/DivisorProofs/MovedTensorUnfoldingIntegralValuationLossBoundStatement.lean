@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MovedTensorUnfoldingIntegralValuationLossBound
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.DictAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.movedTensor_unfolding_integral_valuation_loss_boun
         ∀ c : ℝ, 0 ≤ c → (∀ z, LossLe w (Tflip ch.W ch.S.B t Φ P z) c) →
         ∀ X Y, LossLe w ((ch.S.term t Φ β P).datum X Y) (c + c₂ * (D.R.m : ℝ) ^ 2 * (bigN D : ℝ) ^ 2 * (cosExp ch.G P : ℝ) *
           (vw w ((resCard (Kw (P : Pl D.host.E)) : ℕ) : D.what₂.LL) : ℝ)) := by
-  first | exact @GlobalTheory.UnfoldLoss.unfold_loss | exact GlobalTheory.UnfoldLoss.unfold_loss | (intros; apply GlobalTheory.UnfoldLoss.unfold_loss <;> assumption)
+  exact @GlobalTheory.UnfoldLoss.unfold_loss

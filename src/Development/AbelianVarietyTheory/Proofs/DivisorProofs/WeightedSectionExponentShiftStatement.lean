@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeightedSectionExponentShift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.weighted_section_exponent_shift : ∀ (E : Type) [
       ∀ (y' : FrPt Xo c K) (Y : ∀ b : E →+* ℂ, Matrix (Fin (Dw.mult b)) (Fin (Dw.mult b)) K) (s : Kˣ),
         (∀ b, (Y b).det ≠ 0) → GlobalTheory.Frames.FrChg (fun b => (Y b).transpose) (s : K) y₀ y' →
         (∏ b, (Y b).det ^ k b) * evR Xo c F y' = Formalism.L2.LamCM.evalFr G Y := by
-  first | exact @GlobalTheory.FieldPolyZ.exists_isHomogeneous_secZ | exact GlobalTheory.FieldPolyZ.exists_isHomogeneous_secZ | (intros; apply GlobalTheory.FieldPolyZ.exists_isHomogeneous_secZ <;> assumption)
+  exact @GlobalTheory.FieldPolyZ.exists_isHomogeneous_secZ

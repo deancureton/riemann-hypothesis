@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EquivariantIsoTransportCocyclesExtensions
-import Mathlib
 import Formalism.SharpRestriction.LevelLetterCocycles.InvariantsGenerators
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.JSmul
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdmissibleQuotientKerIffFullLattices
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.equivariantIso_transport_cocycles_extensions : ∀
       (z ∈ B1 (twCoef W χ X) ⊤ ↔ z' ∈ B1 (twCoef W' χ X) ⊤) ∧
       ∀ I : Subgroup G, (∃ b, ∀ g ∈ I, z g = twCoef W χ X g b - b) ↔
         (∃ b', ∀ g ∈ I, z' g = twCoef W' χ X g b' - b') := by
-  first | exact @GlobalTheory.TransportCoef.transport | exact GlobalTheory.TransportCoef.transport | (intros; apply GlobalTheory.TransportCoef.transport <;> assumption)
+  exact @GlobalTheory.TransportCoef.transport

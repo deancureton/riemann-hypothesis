@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibl
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mooreDeterminant_crisPlus_ne_zero : Moore := by
-  first | exact @GlobalTheory.PMon.moore_statement | exact GlobalTheory.PMon.moore_statement | (intros; apply GlobalTheory.PMon.moore_statement <;> assumption)
+  exact @GlobalTheory.PMon.moore_statement

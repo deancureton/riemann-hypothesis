@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingIntegralUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.doubling_integral_unfolding : GlobalTheory.ThK.KP 
       μ.IsHaarMeasure → μi.IsHaarMeasure → (∀ v, (μv v).IsHaarMeasure ∧ μv v {g | g.1 ∈ K} = 1) →
       ∃ (c : ℂ) (R : ℝ), c ≠ 0 ∧ ∀ s : ℂ, R < s.re → ∃ P : ℂ, HasProd (fun v : Pl F => zetaOn m om (pure f φ) i K₂ _ (μv v) s) P ∧
         zetaOn m om (pure f φ) i K₂ ⊤ μ s = c * zetaOn m om (pure f φ) i K₂ _ μi s * P := by
-  first | exact @GlobalTheory.ThK.Bot.Euler.zeta_euler | exact GlobalTheory.ThK.Bot.Euler.zeta_euler | (intros; apply GlobalTheory.ThK.Bot.Euler.zeta_euler <;> assumption)
+  exact @GlobalTheory.ThK.Bot.Euler.zeta_euler

@@ -11,4 +11,4 @@ import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.BaseSizes
 open NumberField IsDedekindDomain Formalism Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.MainNotions Formalism.MainNotions.N Formalism.WeaklyAdmissibleFiltrations GlobalTheory.NLink
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.joint_condition_adm5 : Hypotheses₂ → ∀ (D : D7) (L : SizeData₂ D) (P : ParameterChoice' D L) (nch : NChoice D) (HW : HWOf D.loc) (F : FonOf D.loc D.locA HW) (Cm : CmpOf D.loc D.locA HW F) (X : KillingConditions.HubData D) (C₂ : ℝ), Setup L nch HW X C₂ → KillingConditions.InvariantsBoundsWithCoarseColumnConstant L X 120 := by
-  first | exact @GlobalTheory.NSizes.main | exact GlobalTheory.NSizes.main | (intros; apply GlobalTheory.NSizes.main <;> assumption)
+  exact @GlobalTheory.NSizes.main

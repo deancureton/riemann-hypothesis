@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarMeasureUnfold
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_A_haar_measure_unfold : GlobalTheory.ThK.KP
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ x : UA σ G₁.V.J × UA σ G₁.W.J,
       ∀ ξ : Fin b × Fin (b + a') → F, AEStronglyMeasurable (fun p : K × (AE F E)ˣ =>
         om₁ x (e (G.M.co.rho B.ψ (shiftA H H' p.2) (om (p.1.1, 1) Ψ))) (fun i => algebraMap F (AF F) (ξ i))) (μK.prod μ) := by
-  first | exact @GlobalTheory.ConeRatPtMeas.aestronglyMeasurable_ratPt | exact GlobalTheory.ConeRatPtMeas.aestronglyMeasurable_ratPt | (intros; apply GlobalTheory.ConeRatPtMeas.aestronglyMeasurable_ratPt <;> assumption)
+  exact @GlobalTheory.ConeRatPtMeas.aestronglyMeasurable_ratPt

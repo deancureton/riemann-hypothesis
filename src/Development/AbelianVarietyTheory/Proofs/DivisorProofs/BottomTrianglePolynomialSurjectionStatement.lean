@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTrianglePolynomialSurjection
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_polynomial_surjection : GlobalTheo
       (p' : PolF D WW.rank A'.rank →ₗ[ℂ] Pi) (J : T → (Pi →ₗ[ℂ] (GA D WW → ℂ))), Function.Surjective p ∧
       (∀ t, J t = 0 ∨ Function.Injective (J t)) ∧ (∀ t, ∃ lam : ℂ, ∀ P, X.I W.ψ W.θ t P = lam • J t (p P)) ∧
       ∀ t P', X.I' W.ψ W.θ t P' = J t (p' P') := by
-  first | exact @GlobalTheory.BotFac.bottomTri_factor_real | exact GlobalTheory.BotFac.bottomTri_factor_real | (intros; apply GlobalTheory.BotFac.bottomTri_factor_real <;> assumption)
+  exact @GlobalTheory.BotFac.bottomTri_factor_real

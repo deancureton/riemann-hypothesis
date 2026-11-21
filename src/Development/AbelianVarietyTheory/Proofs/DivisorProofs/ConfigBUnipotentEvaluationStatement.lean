@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBUnipotentEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.config_b_unipotent_evaluation : GlobalTheory.FunPr
     (H' : Plane E (a + (b + 2)) (a + b)), CfgB B G G₁ H H' →
     ∀ e', IsEv B G.M' G₁.M' H.ι H'.ι (isoB H H') e' → ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ u ∈ unip σ G.V' H, ∀ Φ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))), e' (om' (u, 1) Φ) = e' Φ := by
-  first | exact @GlobalTheory.ThK.EvUnipB.unip_inv | exact GlobalTheory.ThK.EvUnipB.unip_inv | (intros; apply GlobalTheory.ThK.EvUnipB.unip_inv <;> assumption)
+  exact @GlobalTheory.ThK.EvUnipB.unip_inv

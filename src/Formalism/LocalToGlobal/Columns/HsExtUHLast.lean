@@ -112,7 +112,6 @@ theorem hs_tilG (u : d.what₂.Word) (c : PCl d) (x : (d.sp.X d.R.m).V) :
       (d.tilMv u c).1.1 (CF.crdN (d.colRec a) d.R.m le_rfl x) :=
   (hqG_crd d.R.m le_rfl ((tildeLatticeAgreement a hS hH hP u).ga c) x).trans (tilGa_mulVec u c _)
 
-set_option maxHeartbeats 4000000 in
 
 theorem stabMapTied (disc : ∀ u, AtTDisc (d.colRec a) u)
     (moves : ∀ u, AtTMoves (atTTied a hH u) (fun i hi => levelAgreement a hS hH u i hi)) :

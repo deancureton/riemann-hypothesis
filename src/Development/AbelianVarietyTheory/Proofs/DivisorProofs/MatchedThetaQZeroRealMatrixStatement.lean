@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedThetaQZeroRealMatrix
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.matched_theta_q_zero_real_matrix : GlobalTheory.Th
         ∀ k ∈ KInf σ G.W B.emb, ∀ g, GlobalTheory.HwCoef.IsReading B.emb C k g → ∀ f ∈ G.M.Pol B.ψ B.emb, R.p f = x →
           ∀ f₁ : SInf F (Fin a × Fin (a + a')), Acts (evI F) (om (1, k)) f f₁ →
             ξ (R.p f₁) = GlobalTheory.HwCoef.hwCoef B a a' G.p g := by
-  first | exact @GlobalTheory.LowCoef.exists_low_coef | exact GlobalTheory.LowCoef.exists_low_coef | (intros; apply GlobalTheory.LowCoef.exists_low_coef <;> assumption)
+  exact @GlobalTheory.LowCoef.exists_low_coef

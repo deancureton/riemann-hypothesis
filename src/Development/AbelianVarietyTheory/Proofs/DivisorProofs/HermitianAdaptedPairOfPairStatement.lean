@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPairOfPair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_pair_of_pair : ∀ (F E : Type) 
       (∀ z, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) (M.co.rho B.ψ (incM F H.ι * z * (incM F (1 : Matrix (Fin d) (Fin d) E))ᵀ) Φ)) =
         M₁.co.rho B.ψ z (e (om (g, 1) Φ))) ∧
       ∀ u ∈ {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z}, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) (M.co.rho B.ψ u Φ)) = e (om (g, 1) Φ) := by
-  first | exact @GlobalTheory.MixXUnip.twist_heis_inv | exact GlobalTheory.MixXUnip.twist_heis_inv | (intros; apply GlobalTheory.MixXUnip.twist_heis_inv <;> assumption)
+  exact @GlobalTheory.MixXUnip.twist_heis_inv

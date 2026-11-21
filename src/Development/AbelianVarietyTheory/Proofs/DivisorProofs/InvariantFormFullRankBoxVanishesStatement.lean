@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantFormFullRankBoxVanishes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShearGLTransposeMul
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.invariant_form_full_rank_box_vanishes : GlobalTheo
         (∀ Y : Matrix (Fin ρ ⊕ T) (Fin d) k, Y.rank ≤ ρ → Ψ₂.1 Y = 0) → Bf Ψ₁ Ψ₂ = 0) →
       ∀ (τ : Fin ρ → Fin d) (Ψ₁ : fullRk k n d) (f : SB (Matrix (Fin ρ ⊕ T) (Fin d) k)),
         (∀ Y : Matrix (Fin ρ ⊕ T) (Fin d) k, f.1 Y ≠ 0 → (Y.submatrix Sum.inl τ).det ≠ 0) → Bf Ψ₁ f = 0 := by
-  first | exact @GlobalTheory.RankChart.chart_form_eq_zero | exact GlobalTheory.RankChart.chart_form_eq_zero | (intros; apply GlobalTheory.RankChart.chart_form_eq_zero <;> assumption)
+  exact @GlobalTheory.RankChart.chart_form_eq_zero

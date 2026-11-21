@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_class_map_correspondence : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (T : GlobalTheory.RowTie.WDTie D.nd D.naut) (I : Ident D), ∃ rc : GlobalTheory.SerSys.Corr D, IsRc hL T I rc ∧ ∀ k v, IsClassMap D.naut.lpDim (rc k v) := by
-  first | exact @GlobalTheory.TypeRec.exists_isRc_isClassMap | exact GlobalTheory.TypeRec.exists_isRc_isClassMap | (intros; apply GlobalTheory.TypeRec.exists_isRc_isClassMap <;> assumption)
+  exact @GlobalTheory.TypeRec.exists_isRc_isClassMap

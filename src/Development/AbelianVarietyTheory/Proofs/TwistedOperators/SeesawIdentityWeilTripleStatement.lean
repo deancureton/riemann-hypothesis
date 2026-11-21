@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawIdentityWeilTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.seesaw_identity_weil_triple : GlobalTheory.FunPr.H
       ∀ i, ModInt θ ωB ν₁ 𝓕₁ ((z.sum fun k c => c • ωB (k, 1)) (Ψ i)) ∧
         ∃ u' ∈ GfC W₁, (z.sum fun k c => c • ωB (k, 1)) (ωB (u i, 1) (Ψ i)) =
           ωB (u', 1) ((z.sum fun k c => c • ωB (k, 1)) (Ψ i)) := by
-  first | exact @GlobalTheory.RegGood.regulariser | exact GlobalTheory.RegGood.regulariser | (intros; apply GlobalTheory.RegGood.regulariser <;> assumption)
+  exact @GlobalTheory.RegGood.regulariser

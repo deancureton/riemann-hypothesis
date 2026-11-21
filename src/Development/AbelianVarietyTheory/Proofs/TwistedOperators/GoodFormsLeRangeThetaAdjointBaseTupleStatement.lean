@@ -14,4 +14,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.LiftRows
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.good_forms_le_range_theta_adjoint_base_tuple : ∀ {D : D7} {G : Type} [Group G] [Fintype G] {Pl0 I0 T : Type} {A3 : FamIn3 D.what₂.LL G Pl0 I0 (List ℕ) T D.R.m} {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] (R : RealDat3 D A3 Ks) (F : Face3 D A3) {s : ℕ}, A3.fam3.Ok3 s → R.WeakCharacterisation F → R.toRealDat.ExAt → UpInjW R.toRealDat → (∀ j t, (A3.A.fam.L j t).OkH ∧ (A3.liftI j t).InertRationalAdjoint) → R.PGEquiv F → R.toRealDat.LUnif → ∀ j, U2.goodW A3 (R.toCx3 F) j ≤ LinearMap.range ((R.toCx3 F).θ' j A3.A.fam.μ0) := by
-  first | exact @GlobalTheory.LiftOntoGood.goodW_le_range | exact GlobalTheory.LiftOntoGood.goodW_le_range | (intros; apply GlobalTheory.LiftOntoGood.goodW_le_range <;> assumption)
+  exact @GlobalTheory.LiftOntoGood.goodW_le_range

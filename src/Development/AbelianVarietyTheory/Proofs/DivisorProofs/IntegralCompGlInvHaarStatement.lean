@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.integral_comp_gl_inv_haar : ∀ (F E : Type) [Fiel
         ∫ y, f (((t⁻¹ : GL (Fin n) (AE F E)) : Matrix (Fin n) (Fin n) (AE F E)) *ᵥ y) ∂μ) =
         (((adeleClass F).modu (Units.map (Algebra.norm (AF F) : AE F E →* AF F) (Matrix.GeneralLinearGroup.det t)) : ℝ) : ℂ) *
           (letI : MeasurableSpace (Fin n → AE F E) := borel _; ∫ y, f y ∂μ) := by
-  first | exact @GlobalTheory.SiegelCov.integral_mulVec_inv | exact GlobalTheory.SiegelCov.integral_mulVec_inv | (intros; apply GlobalTheory.SiegelCov.integral_mulVec_inv <;> assumption)
+  exact @GlobalTheory.SiegelCov.integral_mulVec_inv

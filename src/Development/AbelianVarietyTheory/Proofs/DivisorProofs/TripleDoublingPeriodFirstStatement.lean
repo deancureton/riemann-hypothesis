@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleDoublingPeriodFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.triple_doubling_period_first : GlobalTheory.ThK.KP
     ∀ [MeasurableSpace (Fin a × Fin (a + a') → AF F)] [BorelSpace (Fin a × Fin (a + a') → AF F)] (m : Measure (Fin a × Fin (a + a') → AF F)), m.IsAddHaarMeasure →
     ∃ f ∈ G.M.Pol B.ψ B.emb, f ≠ 0 ∧ ∀ φ : ∀ v : Pl F, (Fin a × Fin (a + a') → Fv F v) → ℂ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = G.M.vac v) → pure f φ ≠ 0 →
       ∀ μ : Measure (UAtSub σ G.V (evI F)), μ.IsHaarMeasure → ∃ z : ℂ, z ≠ 0 ∧ ∀ s : ℂ, zetaOn m om (pure f φ) i K₂ _ μ s = z := by
-  first | exact @GlobalTheory.ThK.BotReal.zetaOn_real_const | exact GlobalTheory.ThK.BotReal.zetaOn_real_const | (intros; apply GlobalTheory.ThK.BotReal.zetaOn_real_const <;> assumption)
+  exact @GlobalTheory.ThK.BotReal.zetaOn_real_const

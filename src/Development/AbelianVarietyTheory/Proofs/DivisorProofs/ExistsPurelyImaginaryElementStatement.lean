@@ -5,4 +5,4 @@ open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMas
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_purely_imaginary_element : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E),
     IsCMExt F E σ → ∃ c : E, c ≠ 0 ∧ σ c = -c := by
-  first | exact @GlobalTheory.CMImag.exists_imag_ne_zero | exact GlobalTheory.CMImag.exists_imag_ne_zero | (intros; apply GlobalTheory.CMImag.exists_imag_ne_zero <;> assumption)
+  exact @GlobalTheory.CMImag.exists_imag_ne_zero

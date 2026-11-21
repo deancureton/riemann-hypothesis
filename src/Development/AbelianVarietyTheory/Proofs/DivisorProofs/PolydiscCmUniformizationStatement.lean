@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolydiscCmUniformization
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 
 set_option autoImplicit false
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.polydisc_cm_uniformization : ∀ (E : Type) [Field
           w = fun j ↦ lam j * (2 * Real.pi * Complex.I * ((e j m : ℂ) + (e j β : ℂ) * τ (e j)))) →
       ∀ G, IsEis 𝔞 𝔟 (2 * s) G → ∀ g, IsDefSum φ (2 * s) (lattice c y) g →
         g z = (cWt E (2 * s) : ℂ) * ((∏ j, lam j)⁻¹) ^ (2 * s) * G τ := by
-  first | exact @GlobalTheory.LatSumCmp.defSum_eq_eis | exact GlobalTheory.LatSumCmp.defSum_eq_eis | (intros; apply GlobalTheory.LatSumCmp.defSum_eq_eis <;> assumption)
+  exact @GlobalTheory.LatSumCmp.defSum_eq_eis

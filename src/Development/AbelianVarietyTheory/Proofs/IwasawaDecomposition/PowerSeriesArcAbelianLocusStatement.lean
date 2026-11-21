@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PowerSeriesArcAbelianLocus
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.power_series_arc_abelian_locus : ∀ (E : Type) [F
     χ₀ ≫ Y.s = spMap (PowerSeries.C (R := O')) ≫ spMap b' →
     (∀ x : Sp (PowerSeries O'), χ₀ x ∈ abLocus Y.t.G ↔ PowerSeries.X ∉ x.asIdeal) →
     ∃ x₀ : Sp (FractionRing (PowerSeries O')) ⟶ Xo.XF c, Out.jK (PowerSeries O') ≫ χ₀ = x₀ ≫ Y.j := by
-  first | exact @GlobalTheory.PolArc.generic_factors_open | exact GlobalTheory.PolArc.generic_factors_open | (intros; apply GlobalTheory.PolArc.generic_factors_open <;> assumption)
+  exact @GlobalTheory.PolArc.generic_factors_open

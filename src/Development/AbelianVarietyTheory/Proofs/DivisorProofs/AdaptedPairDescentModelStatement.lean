@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPairDescentModel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -42,4 +41,4 @@ theorem _root_.GlobalTheory.T.adapted_pair_descent_model : GlobalTheory.FunPr.Hy
         (∀ (y : Fin n → AE F E), ∀ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), ∀ v,
           S (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y) y Φ) (GlobalTheory.ThK.Adapt.glue ε 0 v) =
             S Φ (GlobalTheory.ThK.Adapt.glue ε (fun k => ∑ j, Algebra.trace (AF F) (AE F E) (inclR (F := F) (AF F) (C k j) * y j)) v)) := by
-  first | exact @GlobalTheory.MixedModel.mixed_model | exact GlobalTheory.MixedModel.mixed_model | (intros; apply GlobalTheory.MixedModel.mixed_model <;> assumption)
+  exact @GlobalTheory.MixedModel.mixed_model

@@ -9,4 +9,4 @@ open GlobalTheory.SepRows
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_tower_convergence : GlobalTheory.FunPr.Hypotheses₂ → RowTower → RowConv := by
-  first | exact @GlobalTheory.RowConvAll.rowConv | exact GlobalTheory.RowConvAll.rowConv | (intros; apply GlobalTheory.RowConvAll.rowConv <;> assumption)
+  exact @GlobalTheory.RowConvAll.rowConv

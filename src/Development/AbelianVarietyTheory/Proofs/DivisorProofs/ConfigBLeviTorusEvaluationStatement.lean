@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLeviTorusEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_levi_torus_evaluation : GlobalTheory.FunP
     ∀ (t : (AE F E)ˣ) (h₁ : UA σ G₁.W.J) (m : UA σ G.W.J), IsLevi H' t h₁ m → ∀ u ∈ unip σ G.W H',
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))),
       e' (om' (1, u * m) Ψ) = ((X.α t : ℂ) * (((absE F E t : ℝ) ^ ((b : ℝ) / 2) : ℝ) : ℂ)) • om₁' (1, h₁) (e' Ψ) := by
-  first | exact @GlobalTheory.ThK.evLaw_isoB | exact GlobalTheory.ThK.evLaw_isoB | (intros; apply GlobalTheory.ThK.evLaw_isoB <;> assumption)
+  exact @GlobalTheory.ThK.evLaw_isoB

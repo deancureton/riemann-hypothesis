@@ -12,4 +12,4 @@ open GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.countable_matrices_and_cosets : ∀ (D : D7) (a b : ℕ), Countable (Matrix (Fin a) (Fin b) D.host.E) ∧ Countable (GlobalTheory.Eis.Cosets (P D b) (GF D b)) := by
-  first | exact @GlobalTheory.CompanionTheory.FJE.countable_mat_cosets | exact GlobalTheory.CompanionTheory.FJE.countable_mat_cosets | (intros; apply GlobalTheory.CompanionTheory.FJE.countable_mat_cosets <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FJE.countable_mat_cosets

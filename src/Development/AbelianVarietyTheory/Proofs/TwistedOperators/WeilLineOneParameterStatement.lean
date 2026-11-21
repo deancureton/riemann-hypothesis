@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLineOneParameter
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilActionUnitaryCompactStatement
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.weil_line_one_parameter : GlobalTheory.FunPr.Hypot
     ∃ T : ℝ → SInf F (Fin n × Fin d) →ₗ[ℂ] SInf F (Fin n × Fin d),
       (∀ t (f : SInf F (Fin n × Fin d)), Acts (evI F) (om (1, γ (Multiplicative.ofAdd t))) ⇑f ⇑(T t f)) ∧
       (∀ s t (f : SInf F (Fin n × Fin d)), T (s + t) f = T s (T t f)) ∧ ∀ f : SInf F (Fin n × Fin d), T 0 f = f := by
-  first | exact @GlobalTheory.ArchFamily.exists_family | exact GlobalTheory.ArchFamily.exists_family | (intros; apply GlobalTheory.ArchFamily.exists_family <;> assumption)
+  exact @GlobalTheory.ArchFamily.exists_family

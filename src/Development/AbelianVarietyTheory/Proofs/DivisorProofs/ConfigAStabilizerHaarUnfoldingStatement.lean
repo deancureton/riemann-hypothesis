@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerHaarUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_haar_unfolding : GlobalTheory.
     ∀ (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (φ : ∀ v : Pl F, (Fin (b + 2) × Fin (b + 2 + a') → Fv F v) → ℂ),
       (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = G.M.vac v) →
       cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (pure f φ) ∈ schA F (Fin b × Fin (b + a')) := by
-  first | exact @GlobalTheory.ConePure.cone_pure_mem | exact GlobalTheory.ConePure.cone_pure_mem | (intros; apply GlobalTheory.ConePure.cone_pure_mem <;> assumption)
+  exact @GlobalTheory.ConePure.cone_pure_mem

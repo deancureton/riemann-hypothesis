@@ -14,4 +14,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.LogKSChart GlobalTheo
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.existsUnique_weightDecomposition_raynaud_affine : ∀ (R : Type) [CommRing R] [IsDomain R] (Q : DegPre R) (O : Type) [CommRing O] [StarRing O] [Module O Q.X] (oa : Q.OAct O) (Y : Ray oa) (W : Q.P.A.left.Opens), IsAffineOpen W → ∀ f : Γ(Y.H.left, Y.q.left ⁻¹ᵁ W), ∃! F : Q.X →₀ Γ(Y.H.left, Y.q.left ⁻¹ᵁ W), (∀ χ, IsWt Y χ _ (F χ)) ∧ f = F.sum (fun _ t => t) := by
-  first | exact @GlobalTheory.Heat.WtDec.existsUnique_weights | exact GlobalTheory.Heat.WtDec.existsUnique_weights | (intros; apply GlobalTheory.Heat.WtDec.existsUnique_weights <;> assumption)
+  exact @GlobalTheory.Heat.WtDec.existsUnique_weights

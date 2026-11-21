@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewAdaptedDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.hermitian_skew_adapted_decomposition : ∀ (F E : 
     ∀ u : Matrix (Fin n) (Fin d) (AE F E), ∃ (y y' : Fin n → AE F E) (z z' : Fin d₁ → AE F E) (x : Matrix (Fin n₁) (Fin d₁) (AE F E)),
       u = Matrix.vecMulVec y (incV F H'.x) + Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ z) + incM F H.ι * x * (incM F H'.ι)ᵀ +
         (Matrix.vecMulVec y' (incV F H'.y) + Matrix.vecMulVec (incV F H.y) (incM F H'.ι *ᵥ z')) := by
-  first | exact @GlobalTheory.PlaneDec.point_dec | exact GlobalTheory.PlaneDec.point_dec | (intros; apply GlobalTheory.PlaneDec.point_dec <;> assumption)
+  exact @GlobalTheory.PlaneDec.point_dec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoACoCMul
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.unipotent_coordinate_additive_alt : ∀ (F E : Typ
     GlobalTheory.ThK.UnipDom.coA σ G.V.J H (n₁ * n₂) = GlobalTheory.ThK.UnipDom.coA σ G.V.J H n₁ + GlobalTheory.ThK.UnipDom.coA σ G.V.J H n₂ ∧
     GlobalTheory.ThK.UnipDom.coC σ G.V.J H (n₁ * n₂) = GlobalTheory.ThK.UnipDom.coC σ G.V.J H n₁ + GlobalTheory.ThK.UnipDom.coC σ G.V.J H n₂ +
       GlobalTheory.ThK.UnipDom.coA σ G.V.J H n₁ ⬝ᵥ GlobalTheory.UnipConj.betaOf σ G₁.V.J (GlobalTheory.ThK.UnipDom.coA σ G.V.J H n₂) := by
-  first | exact @GlobalTheory.UnipConj.MulLaw.coA_coC_mul | exact GlobalTheory.UnipConj.MulLaw.coA_coC_mul | (intros; apply GlobalTheory.UnipConj.MulLaw.coA_coC_mul <;> assumption)
+  exact @GlobalTheory.UnipConj.MulLaw.coA_coC_mul

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.metric_flag_quotient_connecting_map : ∀ (k : Typ
       (Scheme.Modules.pullback ρ).map (u ≫ v) ≫ (Scheme.Modules.pullbackComp ρ σ).hom.app E ≫
         (Scheme.Modules.pullbackCongr wσ).hom.app E) →
     ∃ M : HermLB q₁, (M.pull ρ wρ).Isometric (VMetric.grLB fl l (H.pull π w)) := by
-  first | exact @GlobalTheory.StepLine.isometric_grLB_of_steps_pull | exact GlobalTheory.StepLine.isometric_grLB_of_steps_pull | (intros; apply GlobalTheory.StepLine.isometric_grLB_of_steps_pull <;> assumption)
+  exact @GlobalTheory.StepLine.isometric_grLB_of_steps_pull

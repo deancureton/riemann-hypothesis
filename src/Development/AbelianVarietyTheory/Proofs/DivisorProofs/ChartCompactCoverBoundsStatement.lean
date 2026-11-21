@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.chart_compact_cover_bounds : ∀ (D : D7) (O : Set
         ∀ w ∈ Metric.ball ((ch j).e y) (κ * Real.exp (-(O.met.r c σ y / 2))), w ∈ (ch j).e.target ∧
           (ch j).e.symm w ∈ offBd O.Φ c σ ∧ O.met.r c σ ((ch j).e.symm w) ≤ O.met.r c σ y + B ∧
           ∀ ξ : V (O.var c).dim, P.om c σ (ch j) ((ch j).e.symm w) ξ.ofLp ≤ B * ‖ξ‖ ^ 2 := by
-  first | exact @GlobalTheory.CoverCharts.exists_charts_margin | exact GlobalTheory.CoverCharts.exists_charts_margin | (intros; apply GlobalTheory.CoverCharts.exists_charts_margin <;> assumption)
+  exact @GlobalTheory.CoverCharts.exists_charts_margin

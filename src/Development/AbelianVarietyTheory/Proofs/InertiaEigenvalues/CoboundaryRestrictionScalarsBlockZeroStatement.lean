@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CoboundaryRestrictionScalarsBlockZero
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.coboundary_restrictionScalars_block_zero : ∀ (l 
         (fun x => actSt P (g : GQ l) (β x)) - β) →
     ∃ b : n → Bst P, ∀ g : ↥(GK K), (fun i => ks P (c g i)) =
       ((σ g : Matrix n n ↥(MaximalUnramifiedExtension l)).map (ks P)).mulVec (fun i => actSt P (g : GQ l) (b i)) - b := by
-  first | exact @GlobalTheory.PMon.coboundary_block_zero | exact GlobalTheory.PMon.coboundary_block_zero | (intros; apply GlobalTheory.PMon.coboundary_block_zero <;> assumption)
+  exact @GlobalTheory.PMon.coboundary_block_zero

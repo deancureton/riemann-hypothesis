@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationAUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.configuration_a_unfolding : GlobalTheory.ThK.KP �
       ∀ N : Submodule ℂ R.Pi, N ≤ lowPartInf B G.M R.p → KStabL B G.M om R.p G₁.W H' N →
       ∀ (w : InfinitePlace F) (Y : Formalism.BasicNotions.TH.Mat (b + 2 + a' - (G.p + G.q)) (G.p + G.q)), Formalism.BasicNotions.TH.IsKC Y →
         (∀ a, Y a (.inl r₀) = 0 ∧ Y (.inl r₀) a = 0 ∧ Y a (.inr s₀) = 0 ∧ Y (.inr s₀) a = 0) → ∀ v ∈ N, fockOp (R.p ∘ₗ Φ) w Y v ∈ N := by
-  first | exact @GlobalTheory.KStabSub.sub_stab | exact GlobalTheory.KStabSub.sub_stab | (intros; apply GlobalTheory.KStabSub.sub_stab <;> assumption)
+  exact @GlobalTheory.KStabSub.sub_stab

@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.stage_factor_nonvanishing_scalars : GlobalTheory.F
     TopGrid W i j X → IsStageC W i j (pp D j) (qq D j) X → Factor X W.ψ W.θ lam →
     ∃ κ : T → ℂ, (∀ t, κ t ≠ 0 ∧ ∃ ζ : D.what₂.LL, GlobalTheory.Square.IsAwayUnit (Qn G t) ζ ∧ κ t = D.what₂.embLL ζ * κ μ₀) ∧
       ∀ (t : T) (c₀ : ℂ), RegConst W S.B ρ t i j c₀ → c₀ = κ t * lam t := by
-  first | exact @GlobalTheory.ThetaRegularizationComparison.regConst_eq | exact GlobalTheory.ThetaRegularizationComparison.regConst_eq | (intros; apply GlobalTheory.ThetaRegularizationComparison.regConst_eq <;> assumption)
+  exact @GlobalTheory.ThetaRegularizationComparison.regConst_eq

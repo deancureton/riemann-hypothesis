@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftMatchedPlaneTowerLimit
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.theta_lift_matched_plane_tower_limit : GlobalTheor
         ∀ K : Subgroup (GAd σ (c₀ • (sp i).J.map σ)), GlobalTheory.UAut.IsMaxCpt σ (c₀ • (sp i).J.map σ) K → GlobalTheory.UAut.IsAut σ (c₀ • (sp i).J.map σ) K φ' →
         ∀ (r : ℕ) (Xf Yf : Matrix (Fin (d₁ - 2 * i)) (Fin r) E), GlobalTheory.SiegelSet.IsWittFrame σ (c₀ • (sp i).J.map σ) Xf Yf →
           ∀ S : Finset (Fin r), ¬ (∀ k ∈ S, ∀ l ≤ k, l ∈ S) → GlobalTheory.StdPar.IsCuspComp σ (c₀ • (sp i).J.map σ) Xf Yf S K φ' 0 := by
-  first | exact @GlobalTheory.ThK.LevelCuspidalComponent.cuspComp_eq_zero | exact GlobalTheory.ThK.LevelCuspidalComponent.cuspComp_eq_zero | (intros; apply GlobalTheory.ThK.LevelCuspidalComponent.cuspComp_eq_zero <;> assumption)
+  exact @GlobalTheory.ThK.LevelCuspidalComponent.cuspComp_eq_zero

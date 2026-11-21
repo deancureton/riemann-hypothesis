@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ChartRestrictPullBijective
-import Mathlib
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.ConeSectionRestriction.ConeSite
 set_option backward.isDefEq.respectTransparency false
 open CategoryTheory AlgebraicGeometry GlobalTheory.LogCris ReciprocityTheory.ChartRestriction.G.Geo.Tor CrystallineSemistableComparison CrystallineSemistableComparison.Pb
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.chart_restrict_pull_bijective : ∀ {K : Type} [Fi
     (r r' : ℤ) (j : ℕ),
     ∃ h : capS (wK q i y s) S ≤ KS q s {⨅ k ∈ S, uy i y k},
       Function.Bijective ((resU (sq (thFil (smFun X q) r) (thFil (smFun X q) r')) h).pull j) := by
-  first | exact @GlobalTheory.CompanionTheory.ConeZarCap.main | exact GlobalTheory.CompanionTheory.ConeZarCap.main | (intros; apply GlobalTheory.CompanionTheory.ConeZarCap.main <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ConeZarCap.main

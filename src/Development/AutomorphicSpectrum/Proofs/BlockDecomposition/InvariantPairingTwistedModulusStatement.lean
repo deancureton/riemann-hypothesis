@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InvariantPairingTwistedModulus
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMulVec
 open Matrix MeasureTheory GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.BZMir GlobalTheory.BZMir.Leib GlobalTheory.RgGu.Leib GlobalTheory.CompanionTheory.LeibOrd GlobalTheory.SplitWeil GlobalTheory.JHMult GlobalTheory.CompanionTheory.BZShell GlobalTheory.CompanionTheory.MirPair
 set_option maxHeartbeats 1000000 in
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.invariant_pairing_twisted_modulus : ∀ {k : Type}
     (hT : ∀ x f f', B (shiftF x f) (shiftF x f') = B f f')
     (hG : ∀ g f f', B (actF X g f) (actF Y g f') = B f f'),
     ∀ f f' x, B f (shiftF x f') = B f f' := by
-  first | exact @GlobalTheory.CompanionTheory.BZCore.shift_invariant_of_exact_twist | exact GlobalTheory.CompanionTheory.BZCore.shift_invariant_of_exact_twist | (intros; apply GlobalTheory.CompanionTheory.BZCore.shift_invariant_of_exact_twist <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BZCore.shift_invariant_of_exact_twist

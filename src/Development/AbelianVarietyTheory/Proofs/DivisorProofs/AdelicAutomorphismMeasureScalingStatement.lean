@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicAutomorphismMeasureScaling
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.adelic_automorphism_measure_scaling : ∀ (F E : T
     [IsTopologicalAddGroup (Fin b → AE F E)] [LocallyCompactSpace (Fin b → AE F E)] [MeasurableSpace (Fin b → AE F E)]
     [BorelSpace (Fin b → AE F E)] (A : (Fin b → AE F E) ≃ₜ+ (Fin b → AE F E)),
     (∀ a, A a = l.1 • ((mat g₀⁻¹)ᵀ *ᵥ a)) → addEquivAddHaarChar A = absE F E l ^ b := by
-  first | exact @GlobalTheory.LeviModulus.modulus_levi | exact GlobalTheory.LeviModulus.modulus_levi | (intros; apply GlobalTheory.LeviModulus.modulus_levi <;> assumption)
+  exact @GlobalTheory.LeviModulus.modulus_levi

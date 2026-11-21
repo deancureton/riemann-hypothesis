@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingGramLatticeTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.doubling_gram_lattice_theta : GlobalTheory.ThK.KP 
       (∀ N : ℕ, ∃ C : ℝ, ∀ h, ‖f h‖ * (qht h : ℝ) ^ N ≤ C) → GlobalTheory.ThKLiftCusp.IsCuspW W f →
       ∀ h, ∫ h' in 𝓕, f h' * (GlobalTheory.Eis.cosetSum (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) (i (h, h')) * (((χX (Matrix.GeneralLinearGroup.det h'.1))⁻¹ : Circle) : ℂ)) ∂μ =
         ∫ g, ((flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) (i (1, g)) * (((χX (Matrix.GeneralLinearGroup.det g.1))⁻¹ : Circle) : ℂ)) * f (h * g) ∂μ := by
-  first | exact @GlobalTheory.DoublingUnfoldCusp.unfold_cusp | exact GlobalTheory.DoublingUnfoldCusp.unfold_cusp | (intros; apply GlobalTheory.DoublingUnfoldCusp.unfold_cusp <;> assumption)
+  exact @GlobalTheory.DoublingUnfoldCusp.unfold_cusp

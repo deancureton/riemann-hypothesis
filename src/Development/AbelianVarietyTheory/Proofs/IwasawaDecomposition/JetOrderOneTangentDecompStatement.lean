@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JetOrderOneTangentDecomp
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.jet_order_one_tangent_decomp : ∀ {S : Type} [Com
       (∀ r, ((jetTan r : Jet S ρ (0 + 1) →ₐ[S] DualNumber S) p).fst = 0) ∧
       p = ∑ r, ((jetTan r : Jet S ρ (0 + 1) →ₐ[S] DualNumber S) p).snd •
         (Ideal.Quotient.mk _ (MvPolynomial.X r) : Jet S ρ (0 + 1)) := by
-  first | exact @GlobalTheory.JetOneTan.jetOne_tan_span | exact GlobalTheory.JetOneTan.jetOne_tan_span | (intros; apply GlobalTheory.JetOneTan.jetOne_tan_span <;> assumption)
+  exact @GlobalTheory.JetOneTan.jetOne_tan_span

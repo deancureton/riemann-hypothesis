@@ -1,5 +1,4 @@
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalGramFibreIntegralEq
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FreeCell
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HyperbolicFibreFreeExtensionStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FreeCellOpenIndependentStatement

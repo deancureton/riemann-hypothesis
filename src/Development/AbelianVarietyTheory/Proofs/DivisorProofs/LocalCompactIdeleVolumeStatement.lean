@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalCompactIdeleVolume
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.local_compact_idele_volume : ∀ (F E : Type) [Fie
     ∀ C : Set (idelesAt E (evFin F v)), IsCompact C →
       (∀ p : KAt K (evFin F v) × idelesAt E (evFin F v), GlobalTheory.ConeBump.disp v x₀ p.1.1 p.2.1 ∈ V → p.2 ∈ C) →
       (∫ k, ∫ l, V.indicator (fun _ => (1 : ℂ)) (GlobalTheory.ConeBump.disp v x₀ k.1 l.1) ∂μ ∂μK) ≠ 0 := by
-  first | exact @GlobalTheory.ConeBump.integral_indicator_disp_ne_zero | exact GlobalTheory.ConeBump.integral_indicator_disp_ne_zero | (intros; apply GlobalTheory.ConeBump.integral_indicator_disp_ne_zero <;> assumption)
+  exact @GlobalTheory.ConeBump.integral_indicator_disp_ne_zero

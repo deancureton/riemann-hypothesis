@@ -19,4 +19,4 @@ open GlobalTheory.Chamber GlobalTheory.TruncKer GlobalTheory.Cusp
 open GlobalTheory.LeviShift
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_parabolic_determinant_abs_one : ∀ (D : D7) (V : HSp D) (Φ : WittFrame V) (L : _) (a : _), Φ.IsGood D.sp.cm L a → ∀ (u : SV (wittIndex V)) (k : GA D V), k ∈ levelAll D.sp.cm.sig V.gram L a → k ∈ GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.parab D.sp.cm V (AF D.host.F) (Φ.sub u) → absA D.host.F D.host.E (detU Φ D.sp.cm (AF D.host.F) u k) = 1 := by
-  first | exact @GlobalTheory.LeviShift.CptTriv.absA_detU_eq_one | exact GlobalTheory.LeviShift.CptTriv.absA_detU_eq_one | (intros; apply GlobalTheory.LeviShift.CptTriv.absA_detU_eq_one <;> assumption)
+  exact @GlobalTheory.LeviShift.CptTriv.absA_detU_eq_one

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawLeftRestrictionIsPair
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -40,4 +39,4 @@ theorem _root_.GlobalTheory.T.cm_order_l_adic_endomorphism_integral : GlobalTheo
           (∀ w, U.u.ex (fun j ↦ φ (U.e j) (a : E) * w j) = U.u.ex w ≫ α) → α.left ≫ p = p ≫ (cm.act a).left) ∧
         ∀ (v₀ : epsR R₀ ⟶ G₀) (v' : X.Lie), IsTangent v₀ →
           v'.hom.left ≫ p₀ = spMap (Chart.dualMapR R₀.subtype) ≫ v₀.left → ∃ v : X₀.Lie, Obj.LieCorr R.subtype p v v' := by
-  first | exact @GlobalTheory.LatModel.exists_obj_of_isogenous_model | exact GlobalTheory.LatModel.exists_obj_of_isogenous_model | (intros; apply GlobalTheory.LatModel.exists_obj_of_isogenous_model <;> assumption)
+  exact @GlobalTheory.LatModel.exists_obj_of_isogenous_model

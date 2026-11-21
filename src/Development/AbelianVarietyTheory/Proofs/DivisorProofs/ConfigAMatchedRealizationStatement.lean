@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAMatchedRealization
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_a_matched_realization : GlobalTheory.ThK.KP
             R₁.p g ∈ lowPartInf B G₁.M R₁.p →
           ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin (b + 2) × Fin (b + 2 + a')), Acts (evI F) (om (1, k)) f f₁ →
             s (R₁.p g) = R.p f → s (R₁.p g₁) = R.p f₁ := by
-  first | exact @GlobalTheory.LowTypeMap.exists_lowType_map | exact GlobalTheory.LowTypeMap.exists_lowType_map | (intros; apply GlobalTheory.LowTypeMap.exists_lowType_map <;> assumption)
+  exact @GlobalTheory.LowTypeMap.exists_lowType_map

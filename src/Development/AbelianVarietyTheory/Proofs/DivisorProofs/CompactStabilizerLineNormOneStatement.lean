@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactStabilizerLineNormOne
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.compact_stabilizer_line_norm_one : ∀ (F E : Type
     (X : Spc F E n) (x₀ : Fin n → E) (K : Subgroup (UA σ X.J)), IsCompact (K : Set (UA σ X.J)) → x₀ ≠ 0 →
     ∀ (v : Pl F) (k : UA σ X.J), k ∈ KAt K (evFin F v) → ∀ l : (AE F E)ˣ,
       mat k *ᵥ incV F x₀ = (l : AE F E) • incV F x₀ → absE F E l = 1 := by
-  first | exact @GlobalTheory.ConeNZ.absE_eq_one_of_eigen | exact GlobalTheory.ConeNZ.absE_eq_one_of_eigen | (intros; apply GlobalTheory.ConeNZ.absE_eq_one_of_eigen <;> assumption)
+  exact @GlobalTheory.ConeNZ.absE_eq_one_of_eigen

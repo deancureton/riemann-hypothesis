@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.rational_lagrangian_subspace_exists : ∀ (F E : T
     ∀ f : Matrix (Fin n) (Fin d) E →ₗ[F] (Fin n × Fin d → F) × (Fin n × Fin d → F),
       Function.Injective f → (∀ x, hat (f x) = M.co.e (incM F x)) →
       ∃ K : Submodule F (Matrix (Fin n) (Fin d) E), Module.finrank F K = n * d ∧ ∀ z ∈ K, (M.co.e (incM F z)).1 = 0 := by
-  first | exact @GlobalTheory.MixedLagr.rat_first_zero_dim | exact GlobalTheory.MixedLagr.rat_first_zero_dim | (intros; apply GlobalTheory.MixedLagr.rat_first_zero_dim <;> assumption)
+  exact @GlobalTheory.MixedLagr.rat_first_zero_dim

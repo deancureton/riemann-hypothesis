@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.curve_degree_data_outside_set : GlobalTheory.CovTo
     [Algebra (ZMod q) Γ(Z, ⊤)], topologicalKrullDim Z = 1 →
     GlobalTheory.PowerSumSmul.DegData O.j (q : ℝ) (fun (τ : D.what₂.Tau) (k : Fin O.N) =>
       (topSelfIntersection (ZMod q) (((h.mdl (FlagAr.setB O.Y B) c).root (FlagAr.setB O.Y B) (τ, k)).B.pull i) 1 : ℝ)) := by
-  first | exact @GlobalTheory.DegreeRootData.degData | exact GlobalTheory.DegreeRootData.degData | (intros; apply GlobalTheory.DegreeRootData.degData <;> assumption)
+  exact @GlobalTheory.DegreeRootData.degData

@@ -17,4 +17,4 @@ open scoped TensorProduct Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.base_chain_step_theta_lift : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex) (u : D.what₂.Word) (f : FamCh W u), PkHyp W → f.RowOK → ∀ j, j + 1 < D.R.m → Lift.IsIo (GlobalTheory.BaseChain.stageY W (j + 1)).ν (GlobalTheory.BaseChain.stageY W (j + 1)).fd (thetaKO (GlobalTheory.BaseChain.stepY f j).ω) (GlobalTheory.BaseChain.stepY f j).pt (GlobalTheory.BaseChain.stepY f j).It ((GlobalTheory.BaseChain.stageY W (j + 1)).CC (GlobalTheory.BaseChain.com W)) ((GlobalTheory.BaseChain.stageY W j).CC (GlobalTheory.BaseChain.com W)) (GlobalTheory.BaseChain.stepY f j).io := by
-  first | exact @GlobalTheory.BaseChain.stepY_isIo | exact GlobalTheory.BaseChain.stepY_isIo | (intros; apply GlobalTheory.BaseChain.stepY_isIo <;> assumption)
+  exact @GlobalTheory.BaseChain.stepY_isIo

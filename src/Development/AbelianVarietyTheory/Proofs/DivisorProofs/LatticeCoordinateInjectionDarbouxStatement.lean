@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.lattice_coordinate_injection_darboux : ∀ (F E : 
         ∀ z ∈ latAtV X₁ W v, schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo M₁.co v z) (fun y => φ (Function.extend j y 0)) =
           B.ψ (⅟(2 : AF F) * symp (R := AF F) (cA σ) (inclR (F := F) (AF F) (θ : E)) (incM F X₁.J) (incM F W.J) z z) •
             (fun y => φ (Function.extend j y 0)) := by
-  first | exact @GlobalTheory.VacRestr.restr_eigen | exact GlobalTheory.VacRestr.restr_eigen | (intros; apply GlobalTheory.VacRestr.restr_eigen <;> assumption)
+  exact @GlobalTheory.VacRestr.restr_eigen

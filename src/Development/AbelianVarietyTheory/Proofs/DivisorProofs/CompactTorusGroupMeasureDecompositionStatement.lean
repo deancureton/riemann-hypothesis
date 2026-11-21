@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusGroupMeasureDecomposition
-import Mathlib
 open MeasureTheory
 open scoped NNReal
 set_option maxHeartbeats 1000000 in
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.compact_torus_group_measure_decomposition : ∀ (G
     ∀ f : G → ℂ, Continuous f → (∀ q ∈ Q, ∀ x, f (q * x) = f x) →
     (∀ g, Integrable (fun p : K × T => f ((m p.2)⁻¹ * κ p.1 * g) * ((δ p.2 : ℝ) : ℂ)) (μK.prod μT)) →
     ∀ g, ∫ k, ∫ t, f ((m t)⁻¹ * κ k * g) * ((δ t : ℝ) : ℂ) ∂μT ∂μK = ∫ k, ∫ t, f ((m t)⁻¹ * κ k) * ((δ t : ℝ) : ℂ) ∂μT ∂μK := by
-  first | exact @GlobalTheory.ParabolicCoord.quotIntegral_right_invariant | exact GlobalTheory.ParabolicCoord.quotIntegral_right_invariant | (intros; apply GlobalTheory.ParabolicCoord.quotIntegral_right_invariant <;> assumption)
+  exact @GlobalTheory.ParabolicCoord.quotIntegral_right_invariant

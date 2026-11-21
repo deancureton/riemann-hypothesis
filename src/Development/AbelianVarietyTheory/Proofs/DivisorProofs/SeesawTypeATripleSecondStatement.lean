@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeATripleSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_triple_second : GlobalTheory.ThK.KP 
     ∀ e, IsEv B G.M G₁.M H.ι H'.ι (isoA H H') e →
     ∀ (k : UA σ G.V.J) (l : (AE F E)ˣ) (g₁ : UA σ G₁.V.J), mat k *ᵥ incV F H.x = (l : AE F E) • incV F H.x → (∀ z : Fin b → AE F E, ∃ a : AE F E, mat k *ᵥ (incM F H.ι *ᵥ z) = incM F H.ι *ᵥ (mat g₁ *ᵥ z) + a • incV F H.x) →
       ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e (om (k, 1) Ψ) = (((X.β / X.α) l : ℂ) * (((absE F E l : ℝ) ^ (((b + a' : ℕ) : ℝ) / 2) : ℝ) : ℂ)) • om₁ (g₁, 1) (e Ψ) := by
-  first | exact @GlobalTheory.StabLawA.evalA_stab_law | exact GlobalTheory.StabLawA.evalA_stab_law | (intros; apply GlobalTheory.StabLawA.evalA_stab_law <;> assumption)
+  exact @GlobalTheory.StabLawA.evalA_stab_law

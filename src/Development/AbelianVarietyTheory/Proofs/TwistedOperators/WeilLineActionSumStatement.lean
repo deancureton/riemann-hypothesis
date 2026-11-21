@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilLineActionSum
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weil_line_action_sum : GlobalTheory.FunPr.Hypothes
         (∀ i, ActsD (evI F) (M.heisLine ψ (v i)) f (g₁ i)) → (∀ i, ActsD (evI F) (M.heisLine ψ (u i)) (g₁ i) (g₂ i)) →
         ∀ F₁ : ℝ → SInf F (Fin n × Fin d), (∀ t, Acts (evI F) (om (1, γ (Multiplicative.ofAdd t))) f (F₁ t)) →
         ∀ y, HasDerivAt (fun t => F₁ t y) (∑ i, c i * g₂ i y + c₀ * f y) 0 := by
-  first | exact @GlobalTheory.OscQuad.deriv_line_quad | exact GlobalTheory.OscQuad.deriv_line_quad | (intros; apply GlobalTheory.OscQuad.deriv_line_quad <;> assumption)
+  exact @GlobalTheory.OscQuad.deriv_line_quad

@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_generator_multiplier_power : ∀ (R : Type)
         ∀ (Z : Scheme.{0}) (r : Z ⟶ (DegPre.BF D (FractionRing R)).left) (z : Z) (J), Good D.P.L z J →
           (val u r z J).val = gs r z ⊤ (scal (DegPre.BF D (FractionRing R)).hom a) *
             (val u₀ (r ≫ (toUnit (TF (R := R) (FractionRing R)) ▷ D.P.A).left) z J).val := by
-  first | exact @GlobalTheory.IntFam.intGen | exact GlobalTheory.IntFam.intGen | (intros; apply GlobalTheory.IntFam.intGen <;> assumption)
+  exact @GlobalTheory.IntFam.intGen

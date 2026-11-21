@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeHyperbolicPlaneResidue
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasLocType
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.hecke_hyperbolic_plane_residue : GlobalTheory.ThK.
       (∀ f ∈ S, HasLocType hcm τ W.J εW hermW hJW eW (chrW α τ) (chrW β τ) f) →
       ∀ g ∈ alphaSpan W₁ H α β ((x' : ℝ) / 2) (((x + 2 : ℕ) : ℝ) / 2) Kh S,
         HasLocType hcm τ W₁.J ε₁ herm₁ hJ₁ e₁ (chrW α τ) (chrW β τ) g := by
-  first | exact @GlobalTheory.LocTypeStep.hasLocType_alphaSpan | exact GlobalTheory.LocTypeStep.hasLocType_alphaSpan | (intros; apply GlobalTheory.LocTypeStep.hasLocType_alphaSpan <;> assumption)
+  exact @GlobalTheory.LocTypeStep.hasLocType_alphaSpan

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetHomLeviTgtBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.jacquet_hom_leviTgt_bound : ∀ (k : Type) [Field 
     HomLeOne (jacU e π) (leviTgt σ₁ ξ₁ ξ₂) →
     ∀ A A' : P →ₗ[ℂ] (GL (Fin n) k → P₁), IsGLIndMap e π σ₁ ξ₁ ξ₂ A → IsGLIndMap e π σ₁ ξ₁ ξ₂ A' →
       A = 0 ∨ ∃ c : ℂ, A' = c • A := by
-  first | exact @GlobalTheory.IndLineGL.glIndMap_proportional_of_jacquet | exact GlobalTheory.IndLineGL.glIndMap_proportional_of_jacquet | (intros; apply GlobalTheory.IndLineGL.glIndMap_proportional_of_jacquet <;> assumption)
+  exact @GlobalTheory.IndLineGL.glIndMap_proportional_of_jacquet

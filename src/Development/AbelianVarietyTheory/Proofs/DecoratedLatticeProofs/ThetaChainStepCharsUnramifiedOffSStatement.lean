@@ -14,4 +14,4 @@ open Formalism.MainNotions.SchurIrreducible (IsSplit)
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaChain_step_chars_unramified_off_S : ∀ (D : D7) (c : Com D), c.Is → ∀ k < D.R.m, ∀ v ∉ c.S, ∀ w : HeightOneSpectrum (𝓞 D.host.E), w.under (𝓞 D.host.F) = v → UnrAt (c.chS (k + 1)) w ∧ UnrAt (c.chT (k + 1)) w := by
-  first | exact @GlobalTheory.ChainOnto.step_chars_unrAt | exact GlobalTheory.ChainOnto.step_chars_unrAt | (intros; apply GlobalTheory.ChainOnto.step_chars_unrAt <;> assumption)
+  exact @GlobalTheory.ChainOnto.step_chars_unrAt

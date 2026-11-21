@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaLiftVerticalCuspidalSum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.theta_lift_vertical_cuspidal_sum : GlobalTheory.In
     (∀ h, IntegrableOn (fun g => thetaKO (G.col t j).ω g h Φ * (∑ i, (F i).1 (w i)) g) (G.measX j).fd (G.measX j).ν) →
     ∃ (k : ℕ) (F' : Fin k → (G.Xp (j + 1)).Cusp R.θ) (z : Fin k → SmT (G.Xp (j + 1)).M),
       (fun h => ∫ g in (G.measX j).fd, thetaKO (G.col t j).ω g h Φ * (∑ i, (F i).1 (w i)) g ∂(G.measX j).ν) = ∑ i, (F' i).1 (z i) := by
-  first | exact @GlobalTheory.ColFockRed.lift_finSum_smooth | exact GlobalTheory.ColFockRed.lift_finSum_smooth | (intros; apply GlobalTheory.ColFockRed.lift_finSum_smooth <;> assumption)
+  exact @GlobalTheory.ColFockRed.lift_finSum_smooth

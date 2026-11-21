@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTorsionSectionPullback
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -21,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_torsion_section_pullback : ∀ (S S' : Scheme.{0}) (G' : Over S') [GrpObj G'] (G : Over S) [GrpObj G] (f : S' ⟶ S) (φ : G'.left ⟶ G.left),
     IsGrpPullback G' G f φ → ∀ (T : Over S') (w : Over.mk (T.hom ≫ f) ⟶ G),
       ∃ σ : T ⟶ G', σ.left ≫ φ = w.left ∧ ∀ k : ℕ, w ^ k = 1 → σ ^ k = 1 := by
-  first | exact @GlobalTheory.grpPullback_lift_torsion | exact GlobalTheory.grpPullback_lift_torsion | (intros; apply GlobalTheory.grpPullback_lift_torsion <;> assumption)
+  exact @GlobalTheory.grpPullback_lift_torsion

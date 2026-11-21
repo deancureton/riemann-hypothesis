@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleFrameBaseExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsReading
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.triple_frame_base_exists : GlobalTheory.FunPr.Hypo
         (h : GlobalTheory.TripleRead.IsReading ψ A A₁ B α β e Bs Γ Xc), GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ Xc om om' ∧
         GlobalTheory.TripleRead.IsTransp ψ true Γ.M om ωA e (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W 1 h.JW) (GlobalTheory.TripleRead.toUX X e h.JX) ∧
         GlobalTheory.TripleRead.IsTransp ψ false Γ.M' om' ωB e (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W₁ (-1) h.JW₁) (GlobalTheory.TripleRead.toUX X e h.JX) := by
-  first | exact @GlobalTheory.TripleDarboux.exists_reading | exact GlobalTheory.TripleDarboux.exists_reading | (intros; apply GlobalTheory.TripleDarboux.exists_reading <;> assumption)
+  exact @GlobalTheory.TripleDarboux.exists_reading

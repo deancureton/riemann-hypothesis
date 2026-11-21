@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi 
 open GlobalTheory.Cartier
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.height_of_rational_section_via_divisor : Hypotheses2 → ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] [IsLocallyNoetherian X] (p : X ⟶ Sp k) (D : ℕ), IsArithVar p D → ∀ num : Form (Cl p) D, IsArForm D num → ∀ (M : HermLB p) (r : M.B.ι → X.functionFieldˣ) (hr : IsRatSec M.B r), (∀ σ, ∀ y ∈ offSupp p σ (M.div hr), logNorm (M.φ σ) r y = 0) → ∀ (N : Fin D → HermLB p) (ℓ : X → ℕ) (d : X → ℝ), (∀ z, (M.div hr).mult z ≠ 0 → ∃ (_ : Fact (ℓ z).Prime) (Z : Scheme.{0}) (i : Z ⟶ X) (_ : IsClosedImmersion i) (_ : IsIntegral Z) (_ : Algebra (ZMod (ℓ z)) Γ(Z, ⊤)), i (genericPoint Z) = z ∧ topologicalKrullDim Z = D ∧ d z = interNum (ZMod (ℓ z)) (structureModule Z) (fun j => (N j).B.pull i)) → num (Fin.cons (cl M) fun j => cl (N j)) = ∑ᶠ z, ((M.div hr).mult z : ℝ) * d z * Real.log (ℓ z) := by
-  first | exact @GlobalTheory.VertMix.vertMix | exact GlobalTheory.VertMix.vertMix | (intros; apply GlobalTheory.VertMix.vertMix <;> assumption)
+  exact @GlobalTheory.VertMix.vertMix

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsThetaTripleOfSquareGridLatticeCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsINeZeroKind
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_thetaTripleOfSquareGrid_latticeCompatible :
     ∃ (e : Num G i j) (Bs : Base D.host.F D.host.E) (Γ : GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.Geo G i j) (X : Chars D.host.F D.host.E)
       (om : Rep D.sp.cm.sig Γ.V Γ.W) (om' : Rep D.sp.cm.sig Γ.V' Γ.W),
       IsTripleOf W M t i j e Bs Γ X ∧ IsTriple Bs Γ X om om' ∧ IsTied t i j e Bs Γ X := by
-  first | exact @GlobalTheory.BigNZ.Tied.squareTriple_tied | exact GlobalTheory.BigNZ.Tied.squareTriple_tied | (intros; apply GlobalTheory.BigNZ.Tied.squareTriple_tied <;> assumption)
+  exact @GlobalTheory.BigNZ.Tied.squareTriple_tied

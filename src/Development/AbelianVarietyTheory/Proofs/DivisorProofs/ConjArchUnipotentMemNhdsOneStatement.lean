@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjArchUnipotentMemNhdsOne
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
 import GroundTheory.AutomorphicForms.ReductionSiegel
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.conj_archUnipotent_mem_nhds_one : ∀ (E : Type) [
       ‖GroundTheory.Automorphic.CuspidalSpectrum.archMat E a (((x⁻¹ : GA E a) : Matrix (Fin a) (Fin a) (Ad E)) *
         GroundTheory.Automorphic.AutomorphicForm.blockEntry P * (x : Matrix (Fin a) (Fin a) (Ad E)))‖ ≤ δ →
       x⁻¹ * unip P * x ∈ U := by
-  first | exact @GlobalTheory.InfConj.conj_unip_mem_nhds | exact GlobalTheory.InfConj.conj_unip_mem_nhds | (intros; apply GlobalTheory.InfConj.conj_unip_mem_nhds <;> assumption)
+  exact @GlobalTheory.InfConj.conj_unip_mem_nhds

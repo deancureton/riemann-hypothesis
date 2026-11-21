@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelEigenRankOneVecMulVec
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagonalLagrangianInvariantForm
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.model_eigen_rank_one_vecMulVec : ∀ (F E : Type) 
     ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ (y : Fin d → AE F E) (u : Matrix (Fin d) (Fin n₁) (AE F E)), ∀ Φ ∈ schA F (Fin n × Fin d),
       e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) y + incM F H.ι * uᵀ) Φ) = M₁.co.rho B.ψ uᵀ (e Φ) := by
-  first | exact @GlobalTheory.LeviEvLaw.ev_law | exact GlobalTheory.LeviEvLaw.ev_law | (intros; apply GlobalTheory.LeviEvLaw.ev_law <;> assumption)
+  exact @GlobalTheory.LeviEvLaw.ev_law

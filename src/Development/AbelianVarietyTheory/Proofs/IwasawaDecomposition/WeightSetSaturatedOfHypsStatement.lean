@@ -16,4 +16,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.HeightCounting.Up GlobalTheory.Mem.SRe GlobalTheory.Mem.R3.Rw
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_unlocalized_saturated_state_of_hypA_hypH : HypA → HypH → ExistsUnlocalizedSaturatedState := by
-  first | exact @GlobalTheory.HeightCounting.Up.w1Sat_of_hyps | exact GlobalTheory.HeightCounting.Up.w1Sat_of_hyps | (intros; apply GlobalTheory.HeightCounting.Up.w1Sat_of_hyps <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.w1Sat_of_hyps

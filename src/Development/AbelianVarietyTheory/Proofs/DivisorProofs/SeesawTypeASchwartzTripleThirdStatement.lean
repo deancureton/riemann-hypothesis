@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeASchwartzTripleThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_schwartz_triple_third : GlobalTheory
       ∀ f ∈ S, ∀ t : AE F E, (pairA F 1 0 : AF F) • t = t → ∀ y : Fin b × Fin (b + a') → AF F,
         ‖e (G.M.co.rho B.ψ (t • Matrix.vecMulVec (incV F H.x) (incV F H'.y)) (pureA F f g)) y‖ ≤
           C * ((1 + GlobalTheory.IdeleDecay.size F E t) ^ N)⁻¹ := by
-  first | exact @GlobalTheory.ConeArchDecay.norm_ev_shift_arch_le | exact GlobalTheory.ConeArchDecay.norm_ev_shift_arch_le | (intros; apply GlobalTheory.ConeArchDecay.norm_ev_shift_arch_le <;> assumption)
+  exact @GlobalTheory.ConeArchDecay.norm_ev_shift_arch_le

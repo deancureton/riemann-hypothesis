@@ -14,4 +14,4 @@ open Formalism.MainNotions.SchurIrreducible (IsSplit)
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaChainUpwardLift_heckeParam_transferred : GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Hk3.HoweUnram → ∀ D : D7, LevFacts D → UpPar D := by
-  first | exact @GlobalTheory.ChainOnto.upPar_of_transfer | exact GlobalTheory.ChainOnto.upPar_of_transfer | (intros; apply GlobalTheory.ChainOnto.upPar_of_transfer <;> assumption)
+  exact @GlobalTheory.ChainOnto.upPar_of_transfer

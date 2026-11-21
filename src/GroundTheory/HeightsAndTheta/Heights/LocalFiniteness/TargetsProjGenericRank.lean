@@ -8,7 +8,6 @@ import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PChartEnergyCocycle
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PVertPointMultChart
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PCurveSectionQuotFinite
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PCurveVertIndex
-import Mathlib
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjGenericRank
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PProjRegularNull
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PPtsPosDensMeasurable

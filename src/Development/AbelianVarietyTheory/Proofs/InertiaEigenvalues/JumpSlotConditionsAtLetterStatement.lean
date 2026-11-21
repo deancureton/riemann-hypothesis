@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.JumpPositionConditionsAtLetter
-import Mathlib
 import Formalism.SharpRestriction.LevelLetterCocycles.TableLineDegreeTwo
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.MemIntPts
 set_option maxHeartbeats 1000000 in
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.jump_position_conditions_at_letter : ∀ (l t : �
     (∀ x ∈ Formalism.MainNotions.tableLineDegreeTwo.lows up (GlobalTheory.PositionData.hS up t Fl Fc) (GlobalTheory.PositionData.etaS t Fl) (GlobalTheory.PositionData.US up Fl Fc),
       ∀ y ∈ Formalism.WachCohomologyFacts.Top.GlobalTheory (GlobalTheory.PositionData.wS up Fl Fc) t, σ + 2 < |x - y|) ∧
     Formalism.WachCohomologyFacts.V2.ResidueAvoidance l up (GlobalTheory.PositionData.hS up t Fl Fc) (GlobalTheory.PositionData.etaS t Fl) σ (GlobalTheory.PositionData.US up Fl Fc) := by
-  first | exact @GlobalTheory.PositionData.position_conditions | exact GlobalTheory.PositionData.position_conditions | (intros; apply GlobalTheory.PositionData.position_conditions <;> assumption)
+  exact @GlobalTheory.PositionData.position_conditions

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFixingVectorPreserves
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.unitary_fixing_vector_preserves : ∀ (F E : Type)
       mat m' *ᵥ incV F H.x = (t : AE F E) • incV F H.x → (t : AE F E) • (mat m' *ᵥ incV F H.y) = incV F H.y →
       (∀ z : Fin n₁ → AE F E, mat m' *ᵥ (incM F H.ι *ᵥ z) = incM F H.ι *ᵥ z) →
       m' * (u⁻¹ * u⁻¹ * (m * u * m⁻¹)) * m'⁻¹ = (u⁻¹ * u⁻¹ * (m * u * m⁻¹)) ^ (t ^ 2) := by
-  first | exact @GlobalTheory.UnipLine.conj_commutator_eq_pow | exact GlobalTheory.UnipLine.conj_commutator_eq_pow | (intros; apply GlobalTheory.UnipLine.conj_commutator_eq_pow <;> assumption)
+  exact @GlobalTheory.UnipLine.conj_commutator_eq_pow

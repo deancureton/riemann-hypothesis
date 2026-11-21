@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslatedKernelLeThetaFunctionRouteBigVertex
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.translatedKernel_le_thetaFunction_routeBigVertex :
       zdeg z ≠ 0 ∧ Φ ∈ Γ.M'.So Bs.ψ Bs.τ₁ ∧
       ∀ g u, ‖translates z (kerSmall W Θ' g g₁) u‖ ≤
         C₀ * ‖GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.theta om' Φ (a u) (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blkU _ _ e h.JWW (g, g₁))‖ := by
-  first | exact @GlobalTheory.ZConvIdent.translates_kerSmall_le_theta | exact GlobalTheory.ZConvIdent.translates_kerSmall_le_theta | (intros; apply GlobalTheory.ZConvIdent.translates_kerSmall_le_theta <;> assumption)
+  exact @GlobalTheory.ZConvIdent.translates_kerSmall_le_theta

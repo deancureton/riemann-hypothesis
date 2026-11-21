@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelMapFlatExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 
@@ -37,4 +36,4 @@ theorem _root_.GlobalTheory.T.section_value_unit_at_boundary_height_one_prime : 
       ∀ v : T.Fr, (∀ (k : Type) [Field k] (φ : T.Fr →+* k),
         SecValAt Y r ν τ.1 s.sig ξ e U₁ U₂ k (φ.comp ((algebraMap T.V T.Fr).comp (iT.comp (algebraMap A _)))) (φ v)) →
         ∃ w : T.Vˣ, algebraMap T.V T.Fr w = v := by
-  first | exact @GlobalTheory.FlatModel.BdryGeo.secVal_isUnit | exact GlobalTheory.FlatModel.BdryGeo.secVal_isUnit | (intros; apply GlobalTheory.FlatModel.BdryGeo.secVal_isUnit <;> assumption)
+  exact @GlobalTheory.FlatModel.BdryGeo.secVal_isUnit

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspFormConstantTermVanishes
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.cusp_form_constant_term_vanishes : ∀ (F E : Type
     ∀ (L : List ℂ), polyAt (GlobalTheory.LeviBlockRealization.leftTr σ J h)
         (L.map fun c => c * (((GlobalTheory.Doubling.absE F E e : ℝ) ^ (((n : ℝ) - 1) / 2 - (i : ℝ)) : ℝ) : ℂ)) φc = 0 →
       ∃ c ∈ L, ‖c‖ = (GlobalTheory.Doubling.absE F E e : ℝ) ^ (s i).re := by
-  first | exact @GlobalTheory.PositionPeel.abs_root_eq | exact GlobalTheory.PositionPeel.abs_root_eq | (intros; apply GlobalTheory.PositionPeel.abs_root_eq <;> assumption)
+  exact @GlobalTheory.PositionPeel.abs_root_eq

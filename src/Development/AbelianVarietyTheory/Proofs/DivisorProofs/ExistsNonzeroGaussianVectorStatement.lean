@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNonzeroGaussianVector
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped TensorProduct Matrix
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_nonzero_gaussian_vector : ∀ (F E : Type) 
     (n d r s r' s' : ℕ) (X : Spc F E n) (W : Spc F E d) (M : Model σ X W), B.IsGood σ → X.IsHerm σ B r s →
     W.IsSkew σ B r' s' → GlobalTheory.RealLift.DerEx → GlobalTheory.RealLift.ActsLaws →
     ∃ f₀ : SInf F (Fin n × Fin d), f₀ ≠ 0 ∧ M.IsGauss B.ψ B.emb f₀ := by
-  first | exact @GlobalTheory.FockVacuum.exists_ne_zero_isGauss | exact GlobalTheory.FockVacuum.exists_ne_zero_isGauss | (intros; apply GlobalTheory.FockVacuum.exists_ne_zero_isGauss <;> assumption)
+  exact @GlobalTheory.FockVacuum.exists_ne_zero_isGauss

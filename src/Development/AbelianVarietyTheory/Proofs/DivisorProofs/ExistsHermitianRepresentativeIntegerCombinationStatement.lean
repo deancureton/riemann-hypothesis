@@ -8,4 +8,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory GlobalTheory.ArInt GlobalTheory.CxPts GlobalTheory.Cartier GlobalTheory.VolBr GlobalTheory.HSNef
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_hermitianRepresentative_integerCombination : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k), ∀ (P : Pair p) (a b : ℤ), ∃ M : HermLB p, P.Rep a b M := by
-  first | exact @GlobalTheory.VolBr.Pair.exists_rep | exact GlobalTheory.VolBr.Pair.exists_rep | (intros; apply GlobalTheory.VolBr.Pair.exists_rep <;> assumption)
+  exact @GlobalTheory.VolBr.Pair.exists_rep

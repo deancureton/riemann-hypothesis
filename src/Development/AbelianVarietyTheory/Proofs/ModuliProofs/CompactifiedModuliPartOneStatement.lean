@@ -11,4 +11,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.compactifiedModuli_partOne : PartI := by
-  first | exact @GlobalTheory.partI_closed | exact GlobalTheory.partI_closed | (intros; apply GlobalTheory.partI_closed <;> assumption)
+  exact @GlobalTheory.partI_closed

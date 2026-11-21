@@ -39,4 +39,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_successive_projection : ∀ (k : Type)
         (∃ e : (Scheme.Modules.pullback ρ).obj (A₀ z) ≅ (fl z.1).F z.2.castSucc, e.hom ≫ (fl z.1).ι z.2.castSucc =
           (Scheme.Modules.pullback ρ).map (u z ≫ v z) ≫ (Scheme.Modules.pullbackComp ρ σ).hom.app (E z.1) ≫
             (Scheme.Modules.pullbackCongr wσ).hom.app (E z.1)) := by
-  first | exact @GlobalTheory.OmitFlag.main | exact GlobalTheory.OmitFlag.main | (intros; apply GlobalTheory.OmitFlag.main <;> assumption)
+  exact @GlobalTheory.OmitFlag.main

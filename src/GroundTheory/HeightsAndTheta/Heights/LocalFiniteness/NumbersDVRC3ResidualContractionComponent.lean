@@ -1,7 +1,6 @@
 import GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.HilbertSamuelGrowthOffHypersurfacePolynomial
 import GroundTheory.HeightsAndTheta.Heights.LocalFiniteness.IsolatedPointsCount
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalLengthPlaces
-import Mathlib
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.HeightCentredConductor
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalQuotCard
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterDivSupp

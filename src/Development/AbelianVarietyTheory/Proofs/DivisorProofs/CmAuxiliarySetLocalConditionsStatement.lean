@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmAuxiliarySetLocalConditions
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.cm_auxiliary_set_local_conditions : GlobalTheory.P
     ∀ (n : ℕ) (eH : HdR X₀.A ≃ₗ[R] (Fin n → R)),
       (Submodule.map eH.toLinearMap (Fil X₀.A)).baseChange (FractionRing R) =
         ⨆ i, GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.eigK (eH.conjRingEquiv.toRingHom.comp (act (dp0 R) (𝟙 _) cm)) (GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.bar (φK i)) := by
-  first | exact @GlobalTheory.FilEig.fil_baseChange_eq_iSup_eigK | exact GlobalTheory.FilEig.fil_baseChange_eq_iSup_eigK | (intros; apply GlobalTheory.FilEig.fil_baseChange_eq_iSup_eigK <;> assumption)
+  exact @GlobalTheory.FilEig.fil_baseChange_eq_iSup_eigK

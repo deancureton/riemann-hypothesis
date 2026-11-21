@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 open Formalism.L2.Fam.NPC Formalism.L2.Fam.NPC.BaseC GlobalTheory.HeckeLocN
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.twistConductors_over_real_places_and_conj_stable : ∀ (D : D7) (cf : CharFrame D) (C : NChoice D) (tp : TupTied D cf C), (∀ w, ¬ TwistedAt D w → C.Q w = ∅) → QOver C ∧ QConj C := by
-  first | exact @GlobalTheory.HeckeLocN.CondConj.cond_over_conj | exact GlobalTheory.HeckeLocN.CondConj.cond_over_conj | (intros; apply GlobalTheory.HeckeLocN.CondConj.cond_over_conj <;> assumption)
+  exact @GlobalTheory.HeckeLocN.CondConj.cond_over_conj

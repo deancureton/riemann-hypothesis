@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.doubled_space_darboux_character : ∀ (F E : Type)
             Matrix.fromRows (incM F H'.ι) (incM F H'.ι) →
           ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), l (omd p Ψ) = (χ t : ℂ) *
             ((((adeleClass F).modu (Units.map (Algebra.norm (AF F) : AE F E →* AF F) t) : ℝ) ^ ((n : ℝ) / 2) : ℝ) : ℂ) * l Ψ := by
-  first | exact @GlobalTheory.DiagLagrMove.siegelRule_plane | exact GlobalTheory.DiagLagrMove.siegelRule_plane | (intros; apply GlobalTheory.DiagLagrMove.siegelRule_plane <;> assumption)
+  exact @GlobalTheory.DiagLagrMove.siegelRule_plane

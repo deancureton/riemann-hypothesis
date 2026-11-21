@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCartanBasisDoubledGram
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.exists_cartan_basis_doubled_gram : ∀ (F E : Type
       HasIwasawa σ Q (KArch σ Q w (Formalism.UG.bc (compInf F E w) a)) ∧
       ∀ k : GArch σ Q w, k ∈ KArch σ Q w (Formalism.UG.bc (compInf F E w) a) ↔
         Commute ((GlobalTheory.AdelicU.matHom w.Completion σ Q k).1.map (infEmb (B.emb w))) (blkMat finSumFinEquiv (θ w) (-θ w)) := by
-  first | exact @GlobalTheory.SkewDblIwasawa.arch | exact GlobalTheory.SkewDblIwasawa.arch | (intros; apply GlobalTheory.SkewDblIwasawa.arch <;> assumption)
+  exact @GlobalTheory.SkewDblIwasawa.arch

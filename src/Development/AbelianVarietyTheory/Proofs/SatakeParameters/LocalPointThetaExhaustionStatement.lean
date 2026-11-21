@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_point_theta_exhaustion : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), ∀ i, GlobalTheory.ThetaExh.PtLocal D.nd D.naut i := by
-  first | exact @GlobalTheory.PtLocalPin.main | exact GlobalTheory.PtLocalPin.main | (intros; apply GlobalTheory.PtLocalPin.main <;> assumption)
+  exact @GlobalTheory.PtLocalPin.main

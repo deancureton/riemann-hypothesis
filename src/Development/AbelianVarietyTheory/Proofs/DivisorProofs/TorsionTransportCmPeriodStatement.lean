@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionTransportCmPeriod
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.torsion_transport_cm_period : GlobalTheory.Publish
             ∀ x ∈ lattice c (y * (upIdele K E t)⁻¹), ∀ x' ∈ lattice c (y * (upIdele K E t)⁻¹),
               ((fun j ↦ g (φ (T.U.e j) x)) ⬝ᵥ Hm.mulVec (star fun j ↦ g (φ (T.U.e j) x'))).im =
                 (modF t)⁻¹ * ∑ i, T.U.h i * (φ i x * starRingEnd ℂ (φ i x')).im := by
-  first | exact @GlobalTheory.ConjRiemann.im_conj_form_eq | exact GlobalTheory.ConjRiemann.im_conj_form_eq | (intros; apply GlobalTheory.ConjRiemann.im_conj_form_eq <;> assumption)
+  exact @GlobalTheory.ConjRiemann.im_conj_form_eq

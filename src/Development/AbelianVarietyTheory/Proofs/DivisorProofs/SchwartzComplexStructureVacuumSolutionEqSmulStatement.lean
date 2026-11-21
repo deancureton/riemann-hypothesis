@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzComplexStructureVacuumSolutionEqSmul
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TrPairApply
 open scoped TensorProduct Matrix GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels Classical
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.schwartz_complexStructure_vacuum_solution_eq_smul 
     (∀ y x, fderiv ℝ f x (J (y - (2 : ℝ) • e y)).1 - 2 * Real.pi * Complex.I * (B x (J (y - (2 : ℝ) • e y)).2 : ℝ) * f x =
       Complex.I * (fderiv ℝ f x y.1 - 2 * Real.pi * Complex.I * (B x y.2 : ℝ) * f x)) →
     ∃ z : ℂ, f = z • g := by
-  first | exact @GlobalTheory.VacCore.schwartz_vacuum_eq_smul | exact GlobalTheory.VacCore.schwartz_vacuum_eq_smul | (intros; apply GlobalTheory.VacCore.schwartz_vacuum_eq_smul <;> assumption)
+  exact @GlobalTheory.VacCore.schwartz_vacuum_eq_smul

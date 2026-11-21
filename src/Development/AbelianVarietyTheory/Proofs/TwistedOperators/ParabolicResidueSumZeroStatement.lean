@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.parabolic_residue_sum_zero : ∀ {k : ℕ} (𝔞 :
   ∑ P ∈ parP 𝔞 Q, ∑ u ∈ (P \ Q).filter (fun u => ∃ r : ℝ, rt P u = r • b),
     ((√(Matrix.gram ℝ fun v : ↥(P \ Q) => rt P v).det : ℝ) : ℂ) * (∏ _v ∈ P \ Q, Complex.I)⁻¹ * c P x *
       ((⟪rt P u, b⟫_ℝ : ℂ)⁻¹ * ∏ v ∈ (P \ Q).erase u, (⟪x, rt P v⟫_ℝ : ℂ)⁻¹) = 0 := by
-  first | exact @GlobalTheory.Chamber.ResM.residues_cancel | exact GlobalTheory.Chamber.ResM.residues_cancel | (intros; apply GlobalTheory.Chamber.ResM.residues_cancel <;> assumption)
+  exact @GlobalTheory.Chamber.ResM.residues_cancel

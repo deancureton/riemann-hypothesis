@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalEigenUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_local_eigen_unfolding : GlobalTheory.FunP
     ∀ μ : Measure (idelesAt E (evI F)), μ.IsHaarMeasure → ∀ l : SInf F (Fin b × Fin (a + b)) →L[ℂ] ℂ,
       ∀ f, ContinuousOn (GlobalTheory.ThK.InfB.coneFun B G.M' om' ei' μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l f)
         (UAt σ G.V' (evI F)) := by
-  first | exact @GlobalTheory.ThK.InfB.coneFun_continuousOn | exact GlobalTheory.ThK.InfB.coneFun_continuousOn | (intros; apply GlobalTheory.ThK.InfB.coneFun_continuousOn <;> assumption)
+  exact @GlobalTheory.ThK.InfB.coneFun_continuousOn

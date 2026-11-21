@@ -38,4 +38,4 @@ theorem _root_.GlobalTheory.T.weil_line_cm_model_action : GlobalTheory.FunPr.Hyp
     (∀ f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d), T 0 f = f) →
     ∀ f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d), ∃ g : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d),
       Filter.Tendsto (fun t : ℝ => t⁻¹ • (T t f - f)) (nhdsWithin 0 {0}ᶜ) (nhds g) := by
-  first | exact @GlobalTheory.SchwartzSlope.main | exact GlobalTheory.SchwartzSlope.main | (intros; apply GlobalTheory.SchwartzSlope.main <;> assumption)
+  exact @GlobalTheory.SchwartzSlope.main

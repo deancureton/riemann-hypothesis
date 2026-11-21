@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBTripleSeesaw
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.config_b_triple_seesaw : GlobalTheory.ThK.KP → �
     ∀ (k : UA σ G.V.J) (c : AE F E), mat k *ᵥ incV F H₀.x = c • incV F H₀.x →
     (∀ z : Fin n₁ → AE F E, ∃ d : AE F E, mat k *ᵥ (incM F H₀.ι *ᵥ z) = incM F H₀.ι *ᵥ z + d • incV F H₀.x) →
     ∃ s : ℂ, ∀ Ψ ∈ schA F (Fin a × Fin (a + (b + 2))), e₂ (om (k, 1) Ψ) = s • e₂ Ψ := by
-  first | exact @GlobalTheory.MixVPlaneRescaled.twist_scalar | exact GlobalTheory.MixVPlaneRescaled.twist_scalar | (intros; apply GlobalTheory.MixVPlaneRescaled.twist_scalar <;> assumption)
+  exact @GlobalTheory.MixVPlaneRescaled.twist_scalar

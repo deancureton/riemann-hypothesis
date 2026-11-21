@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraitPullbackSemiAbelianModelIdentification
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFrameChart
 
 set_option autoImplicit false
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.traitPullback_semiAbelianModel_identification : �
       IsGrpPullback ((Over.pullback (spMap φ)).obj G₁) G χ' ψ' ∧
       ρ' ≫ ψ' = pullback.fst _ _ ≫ α ∧
       ρ' ≫ pullback.fst G₁.hom (spMap φ) = pullback.fst _ _ ≫ pullback.fst G₁.hom (jK R) := by
-  first | exact @GlobalTheory.HodgeFrameGen.traitPullback_identification | exact GlobalTheory.HodgeFrameGen.traitPullback_identification | (intros; apply GlobalTheory.HodgeFrameGen.traitPullback_identification <;> assumption)
+  exact @GlobalTheory.HodgeFrameGen.traitPullback_identification

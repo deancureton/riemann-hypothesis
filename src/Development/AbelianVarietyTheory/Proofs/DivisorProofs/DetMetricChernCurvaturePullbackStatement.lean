@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.det_metric_chern_curvature_pullback : ∀ (k : Type) [CommRing k] (X Y : Scheme.{0}) (p : X ⟶ Sp k) (q : Y ⟶ Sp k) (π : Y ⟶ X) (hπ : π ≫ p = q) (σ : k →+* ℂ) (E : X.Modules) (r : ℕ) (h : VMetric p E r) (H : h.IsCInf) (D : ℕ) (ch : AlgChart q σ D) (cE : Chart ((Scheme.Modules.pullback π).obj E) r), ∀ y ∈ ch.e.source, y ∈ ptsIn q σ cE.U → chernMat (((VMetric.det H).pull π hπ).φ σ) ch y = Matrix.of fun a b => (curv (fun u => ((h.pull π hπ).met σ).G cE (ch.e.symm u)) (ch.e y) (bas D a) (bas D b)).trace := by
-  first | exact @GlobalTheory.MixDens.chernMat_det_pull_eq_trace_curv | exact GlobalTheory.MixDens.chernMat_det_pull_eq_trace_curv | (intros; apply GlobalTheory.MixDens.chernMat_det_pull_eq_trace_curv <;> assumption)
+  exact @GlobalTheory.MixDens.chernMat_det_pull_eq_trace_curv

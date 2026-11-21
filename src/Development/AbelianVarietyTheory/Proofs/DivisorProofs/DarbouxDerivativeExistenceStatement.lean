@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxDerivativeExistence
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped TensorProduct Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.darboux_derivative_existence : ∀ (F E : Type) [F
       (∀ u : Matrix α β (AE F E), At (evI F) u → ∀ f f₁ : SInf F κ,
         ActsD (evI F) (fun t => co.rho ψ (realAd F t • u)) f f₁ ↔ ⇑f₁ = dH (cw co u).1 (cw co u).2 ⇑f) ∧
       ∀ a b : κ → mixedEmbedding.mixedSpace F, ∃ u : Matrix α β (AE F E), At (evI F) u ∧ cw co u = (a, b) := by
-  first | exact @GlobalTheory.ThK.PlaneEv.LineDer.derivLines | exact GlobalTheory.ThK.PlaneEv.LineDer.derivLines | (intros; apply GlobalTheory.ThK.PlaneEv.LineDer.derivLines <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.LineDer.derivLines

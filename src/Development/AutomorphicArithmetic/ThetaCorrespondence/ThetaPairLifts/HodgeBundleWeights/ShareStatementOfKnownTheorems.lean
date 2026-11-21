@@ -142,5 +142,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.share_of_prints_deg_flatDeg : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → FlatDeg → Deg → Share := by
-  first | exact @_root_.GlobalTheory.CovTop.ShareRowsNef.share_of_deg | exact _root_.GlobalTheory.CovTop.ShareRowsNef.share_of_deg | (intros; apply _root_.GlobalTheory.CovTop.ShareRowsNef.share_of_deg <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.ShareRowsNef.share_of_deg
 end

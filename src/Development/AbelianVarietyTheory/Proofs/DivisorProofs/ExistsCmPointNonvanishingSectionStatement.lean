@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCmPointNonvanishingSection
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.exists_cm_point_nonvanishing_section : GlobalTheor
     ∀ F ∈ Y.V (wtOf _ la 0), F ≠ 0 →
     ∃ (z : CMPt Y.d.Xo₂ Y.d.c₂) (La : ℝ) (y : FrPt Y.d.Xo₂ Y.d.c₂ z.K),
       z.Good (Module.finrank ℚ D.host.E / 2) La ∧ y.x = z.x ∧ evR Y.d.Xo₂ Y.d.c₂ F y ≠ 0 := by
-  first | exact @GlobalTheory.CovDetect.exists_good_cmPt_frame_ne_zero | exact GlobalTheory.CovDetect.exists_good_cmPt_frame_ne_zero | (intros; apply GlobalTheory.CovDetect.exists_good_cmPt_frame_ne_zero <;> assumption)
+  exact @GlobalTheory.CovDetect.exists_good_cmPt_frame_ne_zero

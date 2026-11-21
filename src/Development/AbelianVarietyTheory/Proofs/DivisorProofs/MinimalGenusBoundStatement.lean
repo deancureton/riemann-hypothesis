@@ -23,4 +23,4 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.minimal_genus_bound : Hypotheses2 → Gram → DeepGood → Size → Gmin := by
-  first | exact @GlobalTheory.CovGminTop.gmin | exact GlobalTheory.CovGminTop.gmin | (intros; apply GlobalTheory.CovGminTop.gmin <;> assumption)
+  exact @GlobalTheory.CovGminTop.gmin

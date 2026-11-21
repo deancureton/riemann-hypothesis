@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneEvaluationClosureDerivatives
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.plane_evaluation_closure_derivatives : ∀ (F : Ty
     ∃ Q : Submodule ℂ (SInf F (Fin n × Fin d)), G ⊆ Q ∧
       (∀ (a b : Fin n × Fin d → mixedEmbedding.mixedSpace F), ∀ f ∈ Q, ∀ f₁ : SInf F (Fin n × Fin d), ⇑f₁ = dH a b ⇑f → f₁ ∈ Q) ∧
       ∀ f ∈ Q, ei F hd f ∈ P₁ := by
-  first | exact @GlobalTheory.ThK.PlaneEv.Clo.exists_dH_stable_ei_mem | exact GlobalTheory.ThK.PlaneEv.Clo.exists_dH_stable_ei_mem | (intros; apply GlobalTheory.ThK.PlaneEv.Clo.exists_dH_stable_ei_mem <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.Clo.exists_dH_stable_ei_mem

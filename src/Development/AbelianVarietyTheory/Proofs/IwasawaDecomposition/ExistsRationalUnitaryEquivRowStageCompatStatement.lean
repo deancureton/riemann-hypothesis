@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsRationalUnitaryEquivRowStageCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BrgStdR
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ReadsDeco
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.UnitaryFiniteAdelicPointAsMatrixMemFlagIwahori
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_rational_unitary_equiv_rowStage_compat : �
       (∀ γ, Bridge.ratF X.toD7.sp.X' (eΓ γ) = e (Formalism.L2.Col.ratIn X.toD7.sp.cm (X.B.R.N X.B.R.m - 1) γ)) ∧
       ∀ γ, ∃ γE : GL (Fin X.toD7.sp.X'.rank) X.toD7.host.E, Bridge.IsRatMat X.toD7.sp.X' (eΓ γ) γE ∧
         MatEq γE γ.1 := by
-  first | exact @GlobalTheory.Mem.R3.RowStdRat.stdRat_equiv | exact GlobalTheory.Mem.R3.RowStdRat.stdRat_equiv | (intros; apply GlobalTheory.Mem.R3.RowStdRat.stdRat_equiv <;> assumption)
+  exact @GlobalTheory.Mem.R3.RowStdRat.stdRat_equiv

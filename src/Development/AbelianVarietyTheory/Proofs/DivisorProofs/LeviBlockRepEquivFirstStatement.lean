@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockRepEquivFirst
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.levi_block_rep_equiv_first : ∀ {k : Type} [Field
     ∀ {W : Type} [AddCommGroup W] [Module ℂ W] (ρ : Representation ℂ (Levi k (Two (Fin 1) m)) W), IsSmooth ρ →
     ∃ (f : ∀ i, (Σ j, Fin (b.1 i j)) ≃ Two (Fin 1) m i) (g : ∀ j, (Σ i, Fin (b.1 i j)) ≃ Two (Fin 1) m j),
       Nonempty ((cellFunctor f g ρ).Equiv ρ) := by
-  first | exact @GlobalTheory.DiagCell.cellFunctor_diag_equiv | exact GlobalTheory.DiagCell.cellFunctor_diag_equiv | (intros; apply GlobalTheory.DiagCell.cellFunctor_diag_equiv <;> assumption)
+  exact @GlobalTheory.DiagCell.cellFunctor_diag_equiv

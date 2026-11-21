@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ContinuousDefiniteThetaIntegralVectorForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CharacteristicFunctionIntegralApply
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.continuous_definiteThetaIntegral_vectorForm : ∀ 
     ∀ (X : Type) [NormedAddCommGroup X] [NormedSpace ℂ X] [FiniteDimensional ℂ X] (L : X →ₗ[ℂ] (WO V W → ℂ)),
     (∀ x, IsThetaFunO ψ V W (L x)) → ∀ u : GA D V → X, Continuous u → (∀ γ ∈ GQ V, ∀ h, u (γ * h) = u h) →
     Continuous (fun g => ∫ h in 𝓕, thetaKO om h g (L (u h)) ∂ν) := by
-  first | exact @GlobalTheory.ThetaIntegralCont.continuous_theta_integral_vector | exact GlobalTheory.ThetaIntegralCont.continuous_theta_integral_vector | (intros; apply GlobalTheory.ThetaIntegralCont.continuous_theta_integral_vector <;> assumption)
+  exact @GlobalTheory.ThetaIntegralCont.continuous_theta_integral_vector

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.StandardFrameConjGLintLeSelfDualLatticeStabilize
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
@@ -45,4 +44,4 @@ theorem _root_.GlobalTheory.T.standardFrame_conj_GLint_le_selfDualLattice_stabil
               B.map (fun x => sp.proj (GlobalTheory.NJoin.tensCast hF x))).mulVec z) =
           (β'.map (fun x => sp.proj (GlobalTheory.NJoin.tensCast hF x)) *
               B.map (fun x => sp.proj (GlobalTheory.NJoin.tensCast hF x))).mulVec z' := by
-  first | exact @GlobalTheory.SplitFrameLattice.glint_mul_frame_basis | exact GlobalTheory.SplitFrameLattice.glint_mul_frame_basis | (intros; apply GlobalTheory.SplitFrameLattice.glint_mul_frame_basis <;> assumption)
+  exact @GlobalTheory.SplitFrameLattice.glint_mul_frame_basis

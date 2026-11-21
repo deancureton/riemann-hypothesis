@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedFrameLocalDeterminant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocIdeleEqIdl
 
 open scoped TensorProduct NNReal Matrix
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.adapted_frame_local_determinant : ∀ (F E : Type)
         ∃ g ∈ unip σ W H, g ∈ UAt σ W (evFin F v) ∧
           (mat g).map (piW t) = ((GlobalTheory.LineFrame.frameGL t H hA.rank * u * (GlobalTheory.LineFrame.frameGL t H hA.rank)⁻¹ :
             GL (Fin d) (Fv F v)) : Matrix (Fin d) (Fin d) (Fv F v)) := by
-  first | exact @GlobalTheory.LineFrame.exists_unip_frameGL | exact GlobalTheory.LineFrame.exists_unip_frameGL | (intros; apply GlobalTheory.LineFrame.exists_unip_frameGL <;> assumption)
+  exact @GlobalTheory.LineFrame.exists_unip_frameGL

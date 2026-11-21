@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFockVacuumGaussianFrames
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open scoped TensorProduct Matrix Classical GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_fock_vacuum_gaussian_frames : ∀ {F E : Ty
       (∀ w', u.map (piInf (τ w')) = A w' * (Pi.single w (Matrix.single a b 1) : InfinitePlace F → Matrix (Ix P Q) (Ix R S) ℂ) w' * (C w')ᵀ) →
       (∀ w', u'.map (piInf (τ w')) = A w' * (Pi.single w (Matrix.single a b Complex.I) : InfinitePlace F → Matrix (Ix P Q) (Ix R S) ℂ) w' * (C w')ᵀ) →
       D u f₀ + (lineSign a b * Complex.I) • D u' f₀ = 0 := by
-  first | exact @GlobalTheory.FockVacuum.exists_vacuum | exact GlobalTheory.FockVacuum.exists_vacuum | (intros; apply GlobalTheory.FockVacuum.exists_vacuum <;> assumption)
+  exact @GlobalTheory.FockVacuum.exists_vacuum

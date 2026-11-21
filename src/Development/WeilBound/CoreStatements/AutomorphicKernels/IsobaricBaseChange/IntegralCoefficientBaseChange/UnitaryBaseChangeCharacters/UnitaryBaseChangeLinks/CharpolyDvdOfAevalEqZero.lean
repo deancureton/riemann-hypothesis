@@ -1,6 +1,4 @@
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharpolyDvdOfAevalEqZero
-import Mathlib
-import Mathlib
 import Formalism.SatakeDualWeyl.StatementF
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.AevalRootEqZeroIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitOneAddPiOMul

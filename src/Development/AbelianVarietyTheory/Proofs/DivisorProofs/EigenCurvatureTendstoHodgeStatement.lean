@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eigen_curvature_tendsto_hodge : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (x : ToroidalCompactificationData s) (σ : κ.c.F →+* ℂ) (n : ℕ) (U : Set (V n)) (a : V n → CxFr s.T.Z σ), IsOpen U → HolFam U a → ContinuousOn (fun u => (a u).1) U → ∀ u ∈ U, Inner (a u).1 → ∀ (τ : D.host.E →+* ℂ) (ξ η : V n), Tendsto (fun R : ℝ => curv (eigGram (x.eigMetAt σ (some R)) a τ) u ξ η) atTop (𝓝 (curv (eigGram (x.hodge σ) a τ) u ξ η)) := by
-  first | exact @GlobalTheory.ArchLim.tendsto_curv_eigMetAt | exact GlobalTheory.ArchLim.tendsto_curv_eigMetAt | (intros; apply GlobalTheory.ArchLim.tendsto_curv_eigMetAt <;> assumption)
+  exact @GlobalTheory.ArchLim.tendsto_curv_eigMetAt

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmDefiniteLieIndexIdealEqNormIdeal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
 open NumberField
 set_option maxHeartbeats 1000000 in
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.cmDefinite_lieIndex_ideal_eq_norm_ideal : ∀ (E :
         (∀ a, FP.IsDiffOf FB (GlobalTheory.FlatCM.phiP X a) (MP a)) →
         ∀ τ : 𝓞 E →+* 𝓞 K, τ H.rt = ρ →
           GlobalTheory.FlatCM.idx K p (FB.eigLat X.B.t.act τ) (GlobalTheory.FlatCM.subP FP FB MP τ) = 𝔫.map τ := by
-  first | exact @GlobalTheory.FlatCM.IdealZero.idealSt_zero | exact GlobalTheory.FlatCM.IdealZero.idealSt_zero | (intros; apply GlobalTheory.FlatCM.IdealZero.idealSt_zero <;> assumption)
+  exact @GlobalTheory.FlatCM.IdealZero.idealSt_zero

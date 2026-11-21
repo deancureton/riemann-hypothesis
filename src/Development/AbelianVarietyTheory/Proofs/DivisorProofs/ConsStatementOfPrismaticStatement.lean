@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestrictio
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Vert GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4O GlobalTheory.MixedLocalChains
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cons_statement_of_prismatic : GlobalTheory.CovTop.Hypotheses2 → GlobalTheory.CovHt.HypothesesH → ConsSt := by
-  first | exact @GlobalTheory.ConsNumber.main | exact GlobalTheory.ConsNumber.main | (intros; apply GlobalTheory.ConsNumber.main <;> assumption)
+  exact @GlobalTheory.ConsNumber.main

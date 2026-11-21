@@ -37,4 +37,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_global_factor : GlobalTheo
           T (dd.rho B.ψ (Matrix.vecMulVec (incV F H'.x) y) Φ) = T Φ) →
         (∀ l ∈ (adeleClass F).adm ((Fin n × Fin d₁) ⊕ (Fin n × Fin d₁)), l ∘ₗ T ∈ (adeleClass F).adm ((Fin n × Fin d) ⊕ (Fin n × Fin d))) →
         ∃ c : ℂ, ∀ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), T Φ = c • ed Φ := by
-  first | exact @GlobalTheory.DblUniq.main | exact GlobalTheory.DblUniq.main | (intros; apply GlobalTheory.DblUniq.main <;> assumption)
+  exact @GlobalTheory.DblUniq.main

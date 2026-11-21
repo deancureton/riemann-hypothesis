@@ -12,7 +12,6 @@ import Formalism.CharacterColumnKernels.IdempotentNormalForms.SumIteLe
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.SplitFibre
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.SpacedProductLowerBound
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.IdemNormalForm
-import Mathlib
 import Formalism.CharacterColumnKernels.IdempotentNormalForms.SmulEqZeroIffCrit
 
 noncomputable section

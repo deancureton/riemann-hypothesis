@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentFrameLocalizationSpans
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingActionOfIsGrpPullback
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.tangent_frame_localization_spans : ∀ {R : Type} 
     ∀ (T : Type) [CommRing T] [IsLocalRing T] (g : R →+* T), (IsLocalRing.maximalIdeal T).comap g = p →
     ∀ (G' : Over (Sp T)) [GrpObj G'] (ψ : G'.left ⟶ G.left), IsGrpPullback G' G (spMap g) ψ →
     ∀ v : Fin n → (epsR T ⟶ G'), (∀ i, GlobalTheory.IsVecOver g ψ (w i) (v i)) → IsLieBasis v := by
-  first | exact @GlobalTheory.isLieBasis_of_local_restrict | exact GlobalTheory.isLieBasis_of_local_restrict | (intros; apply GlobalTheory.isLieBasis_of_local_restrict <;> assumption)
+  exact @GlobalTheory.isLieBasis_of_local_restrict

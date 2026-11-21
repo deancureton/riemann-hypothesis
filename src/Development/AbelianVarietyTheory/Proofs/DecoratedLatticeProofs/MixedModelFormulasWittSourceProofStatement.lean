@@ -11,4 +11,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Unf
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mixedModelFormulasWittSource_proof : ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHecke.SkewGramHalfModule.MixedSource D := by
-  first | exact @GlobalTheory.MixSourceFormulas.mixed_source | exact GlobalTheory.MixSourceFormulas.mixed_source | (intros; apply GlobalTheory.MixSourceFormulas.mixed_source <;> assumption)
+  exact @GlobalTheory.MixSourceFormulas.mixed_source

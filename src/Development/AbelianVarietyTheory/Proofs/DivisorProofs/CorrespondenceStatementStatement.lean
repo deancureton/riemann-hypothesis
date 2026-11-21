@@ -5,4 +5,4 @@ open AlgebraicGeometry CategoryTheory NumberField IsDedekindDomain ReciprocityTh
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.correspondence_statement : CorrSt := by
-  first | exact @GlobalTheory.ShFam.GalCarry.corrSt | exact GlobalTheory.ShFam.GalCarry.corrSt | (intros; apply GlobalTheory.ShFam.GalCarry.corrSt <;> assumption)
+  exact @GlobalTheory.ShFam.GalCarry.corrSt

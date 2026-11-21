@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartFold
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_fold : GlobalTheory.FunPr.Hypo
     ∀ g ∈ UAt σ G.V (evI F), ∀ (w : Matrix (Fin (b + 2)) (Fin (b + 2 + a')) (AE F E)) (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))),
       locOpInf (om (g, 1)) (locOpInf (G.M.co.rho B.ψ (partInf F w)) f) =
         locOpInf (G.M.co.rho B.ψ (partInf F (actAB (cA σ) ((g, 1) : UA σ G.V.J × UA σ G.W.J) w))) (locOpInf (om (g, 1)) f) := by
-  first | exact @GlobalTheory.ThK.LemF.InfMove.weil_moves_rho_inf | exact GlobalTheory.ThK.LemF.InfMove.weil_moves_rho_inf | (intros; apply GlobalTheory.ThK.LemF.InfMove.weil_moves_rho_inf <;> assumption)
+  exact @GlobalTheory.ThK.LemF.InfMove.weil_moves_rho_inf

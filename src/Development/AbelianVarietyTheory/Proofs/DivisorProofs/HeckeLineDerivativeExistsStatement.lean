@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeLineDerivativeExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.hecke_line_derivative_exists : ∀ {F E : Type} [F
     ∀ χ : Chr F E, IsHecke F E χ → ∀ z : ℝ,
       ∃ c : ℂ, HasDerivAt (fun s : ℝ => (χ (t (Multiplicative.ofAdd s)) : ℂ) *
         (((absE F E (t (Multiplicative.ofAdd s)) : ℝ) ^ z : ℝ) : ℂ)) c 0 := by
-  first | exact @GlobalTheory.LeviLineChar.hasDerivAt_levi_char | exact GlobalTheory.LeviLineChar.hasDerivAt_levi_char | (intros; apply GlobalTheory.LeviLineChar.hasDerivAt_levi_char <;> assumption)
+  exact @GlobalTheory.LeviLineChar.hasDerivAt_levi_char

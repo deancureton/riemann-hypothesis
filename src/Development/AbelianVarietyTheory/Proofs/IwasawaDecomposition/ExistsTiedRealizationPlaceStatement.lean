@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_tied_realization_place : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c => ∃ X : GlobalTheory.NRows.Tied hL (w.D Z), PinAt c.a X.P ∧ HEq X.X.R t.r.z.R.toRealDat := by
-  first | exact @GlobalTheory.HeightCounting.Up.tied_of_layer | exact GlobalTheory.HeightCounting.Up.tied_of_layer | (intros; apply GlobalTheory.HeightCounting.Up.tied_of_layer <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.tied_of_layer

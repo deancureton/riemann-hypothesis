@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TwistPrimeLevelIffReductionLevelConjugateCharact
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RdLevOn
 
 open scoped TensorProduct
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.twistPrimeLevel_iff_reductionLevel_conjugateCharac
     (∀ i j, g.1 i j = y.1 (finCongr e i) (finCongr e j)) →
     (g ∈ lev hc J' 1 ⟨r, h', t, s, SG, Q, P', cg, fun PP => (ξ PP)⁻¹⟩ ↔ y ∈ S.U) ∧
       ∀ hy : y ∈ S.U, ((levFn 1 ⟨r, h', t, s, SG, Q, P', cg, fun PP => (ξ PP)⁻¹⟩ g : ℂˣ) : ℂ) = star ((S.chi ⟨y, hy⟩ : ℂˣ) : ℂ) := by
-  first | exact @GlobalTheory.SeeSaw.TwLev.lev_iffQ | exact GlobalTheory.SeeSaw.TwLev.lev_iffQ | (intros; apply GlobalTheory.SeeSaw.TwLev.lev_iffQ <;> assumption)
+  exact @GlobalTheory.SeeSaw.TwLev.lev_iffQ

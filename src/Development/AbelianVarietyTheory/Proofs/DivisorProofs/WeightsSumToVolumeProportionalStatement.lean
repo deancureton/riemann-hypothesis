@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weights_sum_to_volume_proportional : Hypotheses2 → HypothesesH → OnObj fun _ O A T _ _ => (∀ c, (T.F c).Prop4 (A.w c)) ∧ O.Y.vol = ∑ c, A.w c ∧ Propor O.Y := by
-  first | exact @GlobalTheory.CompPropObj.main | exact GlobalTheory.CompPropObj.main | (intros; apply GlobalTheory.CompPropObj.main <;> assumption)
+  exact @GlobalTheory.CompPropObj.main

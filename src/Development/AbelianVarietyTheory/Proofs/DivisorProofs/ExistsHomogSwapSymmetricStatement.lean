@@ -8,4 +8,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_homog_swap_symmetric : ArCalc → RegularAlteration → ∃ G, Homog G ∧ Swap2 G := by
-  first | exact @GlobalTheory.CovTest.homog_swap_exists_of_ar_calc | exact GlobalTheory.CovTest.homog_swap_exists_of_ar_calc | (intros; apply GlobalTheory.CovTest.homog_swap_exists_of_ar_calc <;> assumption)
+  exact @GlobalTheory.CovTest.homog_swap_exists_of_ar_calc

@@ -1,5 +1,4 @@
 import Formalism.HermitianCurvature.LevelRecursionCondNeeded
-import Mathlib
 
 namespace Formalism.FourierDecayAlt.P.LevelGrowthBounds
 

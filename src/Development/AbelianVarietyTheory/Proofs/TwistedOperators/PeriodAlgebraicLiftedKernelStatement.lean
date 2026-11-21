@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.period_algebraic_lifted_kernel : ∀ {D : D7} {T :
     IsBottomTri W i j X →
     ∀ n : D.what₂.Tau → ℕ, ∃ Ω : ℂ, Ω ≠ 0 ∧ ∀ (t : T), ∀ x ∈ GfC A', ∀ h ∈ GfC WW, ∀ U : GlobalTheory.NormSum.Tup D A'.rank WW.rank n,
       IsAlgebraic ℚ (X.ker' W.ψ W.θ t (GlobalTheory.NormSum.minorPol D U) h x / Ω) := by
-  first | exact @GlobalTheory.BotDictAlg.kernel_div_period_isAlgebraic | exact GlobalTheory.BotDictAlg.kernel_div_period_isAlgebraic | (intros; apply GlobalTheory.BotDictAlg.kernel_div_period_isAlgebraic <;> assumption)
+  exact @GlobalTheory.BotDictAlg.kernel_div_period_isAlgebraic

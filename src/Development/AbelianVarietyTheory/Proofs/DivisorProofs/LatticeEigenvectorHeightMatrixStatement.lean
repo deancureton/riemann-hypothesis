@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeEigenvectorHeightMatrix
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatSectionFrameInvariance
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeExistsUniqueOfSamePoint
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.lattice_eigenvector_height_matrix : ∀ (E : Type)
       (∀ j, AvDefs.IsEig Q.Gt Q.oGt (embInt c Q.integers τ.1) (xx j)) →
       IsLatBasis ℂ_[p] (htLat c Q τ.1) (fun i => ∑ j, g i j • Q.bLie (xx j)) → ∀ a : Fin n → ℂ_[p],
         (∑ i, a i • ∑ j, g i j • Q.bLie (xx j) ∈ Q.latT ↔ ∀ i, ‖δ⁻¹ * a i‖ ≤ 1) := by
-  first | exact @GlobalTheory.CompHt.eigtau_sum_mem_latT_iff | exact GlobalTheory.CompHt.eigtau_sum_mem_latT_iff | (intros; apply GlobalTheory.CompHt.eigtau_sum_mem_latT_iff <;> assumption)
+  exact @GlobalTheory.CompHt.eigtau_sum_mem_latT_iff

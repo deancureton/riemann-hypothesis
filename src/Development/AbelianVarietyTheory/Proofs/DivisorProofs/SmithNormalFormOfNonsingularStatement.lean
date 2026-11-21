@@ -7,4 +7,4 @@ open scoped Classical
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.smith_normal_form_of_nonsingular : ∀ (R : Type) [CommRing R] [IsDomain R] [IsPrincipalIdealRing R] (N : ℕ) (A : Matrix (Fin N) (Fin N) R), A.det ≠ 0 → ∃ (u v u' v' : Matrix (Fin N) (Fin N) R) (g : Fin N → R), u * v = 1 ∧ u' * v' = 1 ∧ A = u * Matrix.diagonal g * u' := by
-  first | exact @GlobalTheory.LatChain.smith_of_det_ne_zero | exact GlobalTheory.LatChain.smith_of_det_ne_zero | (intros; apply GlobalTheory.LatChain.smith_of_det_ne_zero <;> assumption)
+  exact @GlobalTheory.LatChain.smith_of_det_ne_zero

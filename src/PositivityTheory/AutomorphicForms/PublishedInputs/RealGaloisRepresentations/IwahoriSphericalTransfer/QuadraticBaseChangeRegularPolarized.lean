@@ -10,4 +10,4 @@ open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.quadratic_base_change_regular_polarized : GlobalTheory.Mem.LiteralAutomorphy.LitN → ∀ (F K : Type) [Field F] [NumberField F] [IsTotallyReal F] [Field K] [NumberField K] [IsCMField K] [Algebra F K], Module.finrank F K = 2 → ∀ (a : ℕ), 1 ≤ a → ∀ (π : TR.CuspSub F a) (χ : HChar F) (P : CuspSub K a), π.IsRegAlg → π.Polarized χ → IsBC π P → (CG.mk P).IsRegAlg ∧ ∃ χ' : HChar (maximalRealSubfield K), GlobalTheory.ContraPair.PolarizedPair P χ' := by
-  first | exact @GlobalTheory.BcPolar.bc_regAlg_polarizedPair | exact GlobalTheory.BcPolar.bc_regAlg_polarizedPair | (intros; apply GlobalTheory.BcPolar.bc_regAlg_polarizedPair <;> assumption)
+  exact @GlobalTheory.BcPolar.bc_regAlg_polarizedPair

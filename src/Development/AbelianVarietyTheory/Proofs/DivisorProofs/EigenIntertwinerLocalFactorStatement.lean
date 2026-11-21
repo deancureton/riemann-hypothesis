@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerLocalFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_local_factor : GlobalTheory.FunP
     M₁.IsGood B.ψ → ∀ (v : Pl F) (T T' : ((Fin n × Fin d → Fv F v) → ℂ) →ₗ[ℂ] (Fin n × Fin d₁ → Fv F v) → ℂ),
     GlobalTheory.ThK.EvUniq.FinRel B M M₁ H' v T → GlobalTheory.ThK.EvUniq.FinRel B M M₁ H' v T' → (SB _).map T = SB _ → (SB _).map T' = SB _ →
     T (M.vac v) = M₁.vac v → T' (M.vac v) = M₁.vac v → ∀ φ ∈ SB (Fin n × Fin d → Fv F v), T' φ = T φ := by
-  first | exact @GlobalTheory.ThK.EvUniq.finRel_unique | exact GlobalTheory.ThK.EvUniq.finRel_unique | (intros; apply GlobalTheory.ThK.EvUniq.finRel_unique <;> assumption)
+  exact @GlobalTheory.ThK.EvUniq.finRel_unique

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerLocalIdealNotMem
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.schrodinger_local_ideal_not_mem : ∀ {F E : Type}
       ∃ γ : Matrix (Fin (b + 2)) (Fin (a + (b + 2))) (AE F E), At (evFin F v) γ ∧
         (∃ z, γ = Matrix.vecMulVec (incV F H.x) z) ∧ γ ∈ latAtV G.V' G.W v ∧
         GlobalTheory.LatVac.psiAt B.ψ v (evFin F v (symp (cA σ) (-1) (incM F G.V'.J) (incM F G.W.J) γ (shiftB σ H H' l))) ≠ 1 := by
-  first | exact @GlobalTheory.SuppOutQ.exists_lat_pair_ne_one | exact GlobalTheory.SuppOutQ.exists_lat_pair_ne_one | (intros; apply GlobalTheory.SuppOutQ.exists_lat_pair_ne_one <;> assumption)
+  exact @GlobalTheory.SuppOutQ.exists_lat_pair_ne_one

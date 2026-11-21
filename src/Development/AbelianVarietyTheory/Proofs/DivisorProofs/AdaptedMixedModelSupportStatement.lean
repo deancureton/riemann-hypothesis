@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedMixedModelSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_mixed_model_support : GlobalTheory.ThK.KP 
     (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W₁.IsSkew σ B r' s') →
     ∀ g ∈ SB (Fin n × Fin d₁ → FiniteAdeleRing (𝓞 F) F), ∃ T : SInf F (Fin n × Fin d₁) →L[ℂ] ℂ,
       ∀ f : SInf F (Fin n × Fin d₁), (∑' w : Fin d₁ → E, thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (pureA F f g)))) = T f := by
-  first | exact @GlobalTheory.ThKExpandXAdm.adm | exact GlobalTheory.ThKExpandXAdm.adm | (intros; apply GlobalTheory.ThKExpandXAdm.adm <;> assumption)
+  exact @GlobalTheory.ThKExpandXAdm.adm

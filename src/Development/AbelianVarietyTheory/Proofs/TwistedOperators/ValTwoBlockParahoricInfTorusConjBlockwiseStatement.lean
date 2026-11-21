@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValTwoBlockParahoricInfTorusConjBlockwise
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BorelParam
 open MeasureTheory ValuativeRel Matrix GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.Doubling GlobalTheory.GLDoubling GlobalTheory.IndefiniteRowSideFullHecke.VolumeFlatSection GlobalTheory.ZonalCellDecomposition GlobalTheory.SatakeBound
 set_option maxHeartbeats 1000000 in
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.val_twoBlockParahoric_inf_torusConj_blockwise : �
         x.toBlocks₂₁ ∈ {y : Matrix D A k | ∀ i j, valuation k (y i j) ≤ valuation k ((ϖ : k) ^ (1 + max 0 (e i)))} ∧
         x.toBlocks₂₂ ∈ Units.val '' (((KO k D).map (MulAut.conj (torusElt k D ϖ e)).toMonoidHom ⊓ KO k D :
           Subgroup (GL D k)) : Set (GL D k))} := by
-  first | exact @GlobalTheory.ParahoricConjBlocks.blockset | exact GlobalTheory.ParahoricConjBlocks.blockset | (intros; apply GlobalTheory.ParahoricConjBlocks.blockset <;> assumption)
+  exact @GlobalTheory.ParahoricConjBlocks.blockset

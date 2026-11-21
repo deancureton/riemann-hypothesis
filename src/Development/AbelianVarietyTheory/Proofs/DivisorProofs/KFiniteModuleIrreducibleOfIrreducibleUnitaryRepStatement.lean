@@ -12,4 +12,4 @@ open CompanionTheory.D.LK (IsKMod IsMin)
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kFiniteModule_irreducible_of_irreducible_unitaryRep : ∀ (n : ℕ) (ε : Fin n → Bool) (H : Type) [NormedAddCommGroup H] [InnerProductSpace ℂ H] (σ : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)) (D : Submodule ℂ H) (E : Fin n → Fin n → Module.End ℂ D), CompleteSpace H → IsURepOn (UJset ε) σ → IsIrredOn (UJset ε) σ → IsKMod ε σ D E → ∀ N : Submodule ℂ D, (∀ a b, ∀ x ∈ N, E a b x ∈ N) → N = ⊥ ∨ N = ⊤ := by
-  first | exact @GlobalTheory.KFinIrr.kMod_irred | exact GlobalTheory.KFinIrr.kMod_irred | (intros; apply GlobalTheory.KFinIrr.kMod_irred <;> assumption)
+  exact @GlobalTheory.KFinIrr.kMod_irred

@@ -11,4 +11,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaPoint_determines_and_end_determined_torsion : GlobalTheory.ThetaPtDeterminesSt ∧ GlobalTheory.EndDeterminedOnTorsionSt := by
-  first | exact @GlobalTheory.thetaPtDetermines_and_endDeterminedOnTorsion | exact GlobalTheory.thetaPtDetermines_and_endDeterminedOnTorsion | (intros; apply GlobalTheory.thetaPtDetermines_and_endDeterminedOnTorsion <;> assumption)
+  exact @GlobalTheory.thetaPtDetermines_and_endDeterminedOnTorsion

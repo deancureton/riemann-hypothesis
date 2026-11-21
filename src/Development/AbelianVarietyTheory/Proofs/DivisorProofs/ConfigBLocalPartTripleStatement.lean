@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalPartTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.config_B_local_part_triple : GlobalTheory.FunPr.Hy
         ‖l (((X.ν y.1 : ℂ) * ((absE F E y.1 : ℝ) : ℂ) ^ ((a - (b + 2)) / 2 + 1)) •
           ei' (locOpInf (G.M'.co.rho B.ψ (partInf F (shiftB σ H H' y.1))) φ))‖ ≤
         C * (s.sup (schwartzSeminormFamily ℂ (Fin (b + 2) × Fin (a + (b + 2)) → mixedEmbedding.mixedSpace F) ℂ)) φ * h y := by
-  first | exact @GlobalTheory.ConeBoundB.cone_integrand_bound | exact GlobalTheory.ConeBoundB.cone_integrand_bound | (intros; apply GlobalTheory.ConeBoundB.cone_integrand_bound <;> assumption)
+  exact @GlobalTheory.ConeBoundB.cone_integrand_bound

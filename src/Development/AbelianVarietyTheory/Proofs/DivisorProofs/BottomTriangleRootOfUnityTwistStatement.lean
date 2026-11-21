@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleRootOfUnityTwist
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_root_of_unity_twist : GlobalTheory
       (X : Tri T A A' WW) (c0 : T → ℂ), IsBottomTri W i j X → X.IsConst W.ψ W.θ c0 →
       ∃ (X' : Tri T A A' WW) (ζ : T → ℂ), IsBottomTri W i j X' ∧ X'.rW.β = 1 ∧ (∀ t, ∃ n : ℕ, 0 < n ∧ ζ t ^ n = 1) ∧
         X'.IsConst W.ψ W.θ fun t => ζ t * c0 t := by
-  first | exact @GlobalTheory.BottomRebase.rebase | exact GlobalTheory.BottomRebase.rebase | (intros; apply GlobalTheory.BottomRebase.rebase <;> assumption)
+  exact @GlobalTheory.BottomRebase.rebase

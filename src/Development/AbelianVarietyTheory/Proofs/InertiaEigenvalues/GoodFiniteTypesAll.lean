@@ -15,7 +15,6 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeR
 
 namespace GlobalTheory.GoodMem
 
-set_option maxHeartbeats 4000000 in
 
 theorem goodFTAll_atMem : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL,
     AtMem hL fun _ _ _ _ w Z _ _ t nch n c => GoodFTAll (w.D Z) := by

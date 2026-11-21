@@ -12,4 +12,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.doublingHeightAtRealPlace_le_one : ∀ (D : D7) (A : HSp D) (a : GL (Fin A.rank) (AE D)), IsMaj A a → ∀ (w : InfinitePlace D.host.F) (y : Gw A w), GlobalTheory.IndefiniteRowSideFullHecke.SphericalVolumeLift.hgtW A a w y ≤ 1 := by
-  first | exact @GlobalTheory.Core.Rk.HgtArch.hgtW_le_one | exact GlobalTheory.Core.Rk.HgtArch.hgtW_le_one | (intros; apply GlobalTheory.Core.Rk.HgtArch.hgtW_le_one <;> assumption)
+  exact @GlobalTheory.Core.Rk.HgtArch.hgtW_le_one

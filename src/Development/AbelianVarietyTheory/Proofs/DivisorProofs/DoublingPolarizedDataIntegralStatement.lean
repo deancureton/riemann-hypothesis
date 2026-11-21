@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPolarizedDataIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.doubling_polarized_data_integral : ∀ (F E : Type
       FiniteDimensional ℂ (Submodule.span ℂ {Ψ | ∃ k ∈ K₂, Ψ = om₂ (1, k) Φ}) ∧
       ∃ c : ℂ, c ≠ 0 ∧ ∀ x h h', theta om Φ₁ x h * starRingEnd ℂ (theta om Φ₂ x h') =
         c * (theta om₂ Φ x (i (h, h')) * chiInv χX h') := by
-  first | exact @GlobalTheory.DblDatum.exists_doubled_datum | exact GlobalTheory.DblDatum.exists_doubled_datum | (intros; apply GlobalTheory.DblDatum.exists_doubled_datum <;> assumption)
+  exact @GlobalTheory.DblDatum.exists_doubled_datum

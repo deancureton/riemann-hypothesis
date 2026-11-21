@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HalfFlagAdelicWholeSymbol
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AmpleOnAbelianBase
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.half_flag_adelic_whole_symbol : Hypotheses2 → Hy
     HalfFlag (fun k : Fin (D.R.f * O.N) => adlOf (O.Φ.C c) (O.met.hm c)
       (wholeSym (Function.update (ArIn.ind Sx) p true) (some R)
         (Sum.inl k : Fin (D.R.f * O.N) ⊕ Fin (D.R.f * O.N)))) p := by
-  first | exact @GlobalTheory.WholeFlag.halfFlag_whole | exact GlobalTheory.WholeFlag.halfFlag_whole | (intros; apply GlobalTheory.WholeFlag.halfFlag_whole <;> assumption)
+  exact @GlobalTheory.WholeFlag.halfFlag_whole

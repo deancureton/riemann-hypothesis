@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigAReal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.indLineInf_alpha_of_isMatched : GlobalTheory.ThK.K
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F b a') (Rf₁ : FinMaps F b a'),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       IndLineInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) := by
-  first | exact @GlobalTheory.IndLine.indLineInf_alpha | exact GlobalTheory.IndLine.indLineInf_alpha | (intros; apply GlobalTheory.IndLine.indLineInf_alpha <;> assumption)
+  exact @GlobalTheory.IndLine.indLineInf_alpha

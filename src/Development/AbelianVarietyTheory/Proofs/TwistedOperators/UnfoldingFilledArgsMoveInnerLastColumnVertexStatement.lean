@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnfoldingFilledArgsMoveInnerLastColumnVertex
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationGdetKapAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteUnfSupportOfNeOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unfoldingFilledArgs_moveInnerLastColumnVertex : �
     downMap hs x' e' j = (g⁻¹).val * downMap hs x e j →
     downMap hs x' e' (j + 1) = downMap hs x e (j + 1) * g.val →
     Γ.moveArgs .one (Pi.mulSingle (Γ.m, j + 1) g) (fill hs x y e) = fill hs x' y e' := by
-  first | exact @GlobalTheory.TopLevelInv.fill_moveVertex | exact GlobalTheory.TopLevelInv.fill_moveVertex | (intros; apply GlobalTheory.TopLevelInv.fill_moveVertex <;> assumption)
+  exact @GlobalTheory.TopLevelInv.fill_moveVertex

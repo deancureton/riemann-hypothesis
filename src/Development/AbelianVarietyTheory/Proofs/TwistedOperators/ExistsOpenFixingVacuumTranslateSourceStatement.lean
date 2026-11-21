@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsOpenFixingVacuumTranslateSource
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.exists_open_fixing_vacuum_translate_source : ∀ (
     ∀ u : WO S T, u.map (infPart D) = 0 →
     ∃ U : Subgroup (GA D S), IsOpen (U : Set (GA D S)) ∧ ∀ κ ∈ U, κ ∈ GfC S →
       heisO ψ S T (actO S T κ 1 u) f₀ = heisO ψ S T u f₀ := by
-  first | exact @GlobalTheory.VacTranslateLeft.exists_open_fix_translate_source | exact GlobalTheory.VacTranslateLeft.exists_open_fix_translate_source | (intros; apply GlobalTheory.VacTranslateLeft.exists_open_fix_translate_source <;> assumption)
+  exact @GlobalTheory.VacTranslateLeft.exists_open_fix_translate_source

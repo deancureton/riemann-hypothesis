@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateLatticeSpans
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.tate_lattice_spans : ∀ (E : Type) [Field E] [Num
     (Dw : Datum H) (p : ℕ) [Fact p.Prime] [StarRing (𝓞 E)] (P : PtP E p) (tι : Dw.La →+ P.T),
     (∀ x : (Over.mk (𝟙 (Sp ℂ_[p])) ⟶ P.A.A), x ^ p = 1 → ∃ a, (tι a).lev 1 = x) →
     Submodule.span ℤ_[p] (Set.range tι) = ⊤ := by
-  first | exact @GlobalTheory.TateSpan.span_range_eq_top | exact GlobalTheory.TateSpan.span_range_eq_top | (intros; apply GlobalTheory.TateSpan.span_range_eq_top <;> assumption)
+  exact @GlobalTheory.TateSpan.span_range_eq_top

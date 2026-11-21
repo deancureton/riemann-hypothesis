@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedLocalLatticeMembership
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.restricted_local_lattice_membership : ∀ (F E : T
     ∀ (L : Submodule (𝓞 E) (Fin n → E)) (a : GL (Fin n) (AF F ⊗[F] E)), GlobalTheory.EisLine.IsAdapted σ J X Y L a →
     ∀ (v : IsDedekindDomain.HeightOneSpectrum (𝓞 F)) (u : Fin (dim σ J X Y) → Fv F v ⊗[F] E),
       u ∈ latLoc F (L0 σ J X Y L) v ↔ (P σ J X Y).map (inclR (F := F) (Fv F v)) *ᵥ u ∈ latLoc F L v := by
-  first | exact @GlobalTheory.EisRestrict.mem_localLattice_restricted_iff | exact GlobalTheory.EisRestrict.mem_localLattice_restricted_iff | (intros; apply GlobalTheory.EisRestrict.mem_localLattice_restricted_iff <;> assumption)
+  exact @GlobalTheory.EisRestrict.mem_localLattice_restricted_iff

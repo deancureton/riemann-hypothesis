@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviNormalizesUnipotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.levi_normalizes_unipotent : ∀ (F E : Type) [Fiel
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ (l : (AE F E)ˣ) (g₀ : UA σ G₁.V.J) (h : UA σ G.V.J), IsLevi H l g₀ h →
     ∀ n ∈ unip σ G.V H, h * n * h⁻¹ ∈ unip σ G.V H := by
-  first | exact @GlobalTheory.LeviNormUnip.levi_normalises_unip | exact GlobalTheory.LeviNormUnip.levi_normalises_unip | (intros; apply GlobalTheory.LeviNormUnip.levi_normalises_unip <;> assumption)
+  exact @GlobalTheory.LeviNormUnip.levi_normalises_unip

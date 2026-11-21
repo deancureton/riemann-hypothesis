@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.embedding_compat_at_place : GlobalTheory.Published
   ∀ ι : KE c w →+* ℂ, (∀ x, ι (c.embW w x) = D.what₂.embLL x) →
   ∀ τ : ℂ ≃+* ℂ, (∀ a, τ (embLL0 D a) = embLL0 D a) → ∀ ψ' : Twist D Circle, ψ'.Good → ConjChar τ (twVia Z.ρ ι) ψ' →
   GlobalTheory.BigOn.Exp.TwConj.HasTuples X.core X.R.toRealDat X.geo.κ X.geo.v₀ X.geo.O (fun _ => 1) j (baseOf Z c w j) (twVia Z.ρ ι) ψ' := by
-  first | exact @GlobalTheory.PlaceTup.hasTuples_at_place | exact GlobalTheory.PlaceTup.hasTuples_at_place | (intros; apply GlobalTheory.PlaceTup.hasTuples_at_place <;> assumption)
+  exact @GlobalTheory.PlaceTup.hasTuples_at_place

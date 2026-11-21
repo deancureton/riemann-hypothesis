@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelLevelPPowerTangent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -35,4 +34,4 @@ theorem _root_.GlobalTheory.T.integral_model_level_p_power_tangent : GlobalTheor
             (fun k b => (U₂ (K₂ k) b : ℂ_[p])) fv →
           ‖fv * ((Equiv.Perm.sign σ : ℤ) : ℂ_[p]) * (pairDet (covec β T h (σ ∘ Sum.inl)) (U₁ ∘ K₁) : 𝓞_ℂ_[p]) /
             (pairDet (covec β S h (σ ∘ Sum.inr)) (U₂ ∘ K₂) : 𝓞_ℂ_[p]) - κ‖ < ‖κ‖ := by
-  first | exact @GlobalTheory.FlatModel.kap_close | exact GlobalTheory.FlatModel.kap_close | (intros; apply GlobalTheory.FlatModel.kap_close <;> assumption)
+  exact @GlobalTheory.FlatModel.kap_close

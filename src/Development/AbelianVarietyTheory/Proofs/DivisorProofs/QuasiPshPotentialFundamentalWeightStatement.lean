@@ -13,4 +13,4 @@ open AlgebraicGeometry CategoryTheory MeasureTheory Set GlobalTheory.ShFam Globa
 open ReciprocityTheory.AnForm.M
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.quasi_psh_potential_fundamental_weight : Hypotheses2 → HypothesesH → OnObj fun D O _ T _ R => ∀ c a τ (i : Fin O.N), (i : ℕ) + 1 < O.N → ∃ v : (T.M c).X a → EReal, GlobalTheory.IndefiniteRowSideFullHecke.QuasiPlurisubharmonic.IsQuasiPsh ((T.M c).A a) ((T.F c).th (fund τ i) a) v ∧ ∀ z, z ∉ (T.M c).Z a → v z = ((2 * (T.F c).ph (fund τ i) a z : ℝ) : EReal) := by
-  first | exact @GlobalTheory.FundWeightExt.exists_quasiPsh_ext | exact GlobalTheory.FundWeightExt.exists_quasiPsh_ext | (intros; apply GlobalTheory.FundWeightExt.exists_quasiPsh_ext <;> assumption)
+  exact @GlobalTheory.FundWeightExt.exists_quasiPsh_ext

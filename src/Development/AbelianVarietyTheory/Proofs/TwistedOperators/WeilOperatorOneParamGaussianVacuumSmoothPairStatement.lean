@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilOperatorOneParamGaussianVacuumSmoothPair
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.weilOperator_oneParam_gaussianVacuum_smooth_pair :
         (∀ (t : ℝ) (f : SInf F (Fin n × Fin d)), Acts (evI F) (om (1, γ (Multiplicative.ofAdd t))) f (T t f)) →
         ∀ f₀, M.IsGauss ψ τ f₀ →
           ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) (fun p : ℝ × (Fin n × Fin d → mixedEmbedding.mixedSpace F) => T p.1 f₀ p.2) ∧ ∃ f' ∈ M.Pol ψ τ, ∀ x, HasDerivAt (fun t => T t f₀ x) (f' x) 0 := by
-  first | exact @GlobalTheory.GaussLinePair.smooth_vacuum_line | exact GlobalTheory.GaussLinePair.smooth_vacuum_line | (intros; apply GlobalTheory.GaussLinePair.smooth_vacuum_line <;> assumption)
+  exact @GlobalTheory.GaussLinePair.smooth_vacuum_line

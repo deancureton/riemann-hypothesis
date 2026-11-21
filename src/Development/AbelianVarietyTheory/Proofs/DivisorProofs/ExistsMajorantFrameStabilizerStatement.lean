@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMajorantFrameStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_majorant_frame_stabilizer : ∀ (F E : Type
     ∃ a : GL (Fin n) (AF F ⊗[F] E), IsMajorantFrame σ X.Jᵀ a ∧ ∀ (w : InfinitePlace F) (k : GArch σ X.Jᵀ w),
       k ∈ stabArch σ X.Jᵀ w (Formalism.UG.bc (compInf F E w) a) ↔
         Commute ((matHom w.Completion σ X.Jᵀ k).1.map (infEmb (B.emb w))) (X.θ w) := by
-  first | exact @GlobalTheory.MajFrameCartan.exists_majorantFrame_commute_iff | exact GlobalTheory.MajFrameCartan.exists_majorantFrame_commute_iff | (intros; apply GlobalTheory.MajFrameCartan.exists_majorantFrame_commute_iff <;> assumption)
+  exact @GlobalTheory.MajFrameCartan.exists_majorantFrame_commute_iff

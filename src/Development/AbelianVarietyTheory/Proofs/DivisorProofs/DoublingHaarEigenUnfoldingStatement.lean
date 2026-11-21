@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingHaarEigenUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.doubling_haar_eigen_unfolding : GlobalTheory.ThK.K
       om₁ (1, h₁) (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ) =
         fun y => ∫ k, ∫ l, om₁ (1, h₁) (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ))) y * (X.ν l : ℂ) *
           ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ConeComm.cone_comm | exact GlobalTheory.ConeComm.cone_comm | (intros; apply GlobalTheory.ConeComm.cone_comm <;> assumption)
+  exact @GlobalTheory.ConeComm.cone_comm

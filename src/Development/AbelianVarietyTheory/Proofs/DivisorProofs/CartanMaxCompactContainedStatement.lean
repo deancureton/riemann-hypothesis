@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CartanMaxCompactContained
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.cartan_max_compact_contained : ∀ (F E : Type) [F
     (hσ : ∀ x, σ (σ x) = x) (B : Base F E), B.IsGood σ → ∀ (n : ℕ) (Y : Spc F E n), (∀ i j, σ (Y.J j i) = -Y.J i j) →
       (∀ w, IsCartan (Complex.I • Y.J.map (B.emb w).1) (Y.θ w)) → ∀ (c : E) (hc : c ≠ 0), σ c = -c →
       ∃ K, IsMaxCpt σ (c • Y.J.map σ) K ∧ ∀ x ∈ K, (toGAd hσ Y.J hc).symm x ∈ KInf σ Y B.emb := by
-  first | exact @GlobalTheory.ThK.SqIntMaxCptGen.exists_isMaxCpt_le_kInf_of_cartan | exact GlobalTheory.ThK.SqIntMaxCptGen.exists_isMaxCpt_le_kInf_of_cartan | (intros; apply GlobalTheory.ThK.SqIntMaxCptGen.exists_isMaxCpt_le_kInf_of_cartan <;> assumption)
+  exact @GlobalTheory.ThK.SqIntMaxCptGen.exists_isMaxCpt_le_kInf_of_cartan

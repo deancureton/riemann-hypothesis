@@ -17,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Chamber GlobalTheory.TruncKer GlobalTheory.Cusp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.levi_idempotent_splitting : ∀ (D : D7) (V : HSp D) (Φ : WittFrame V) (u : SV (wittIndex V)), u ≠ 0 → ∃ (ε : Matrix (Fin V.rank) (Fin V.rank) D.host.E) (hW : GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.IsIsotropic V (Φ.sub u)), ε * ε = ε ∧ 0 < ε.rank ∧ ε.rank < V.rank ∧ (∀ γ : GF V, rat V γ ∈ Φ.levi D.sp.cm (AF D.host.F) {u} → γ.1.1 * ε = ε * γ.1.1) ∧ ∀ v (τ : D.host.E →ₐ[D.host.F] Fv D.host.F v) (g : GLoc D.sp.cm.sig V.gram v), ε.map τ * ((splitHom D.sp.cm.sig V.gram τ g).1 - 1) * (1 - ε.map τ) = (splitHom D.sp.cm.sig V.gram τ g).1 - 1 → emb D.sp.cm.sig V.gram v g ∈ NA (IsoFlag.single hW) := by
-  first | exact @GlobalTheory.SignProj.exists_proj_unip | exact GlobalTheory.SignProj.exists_proj_unip | (intros; apply GlobalTheory.SignProj.exists_proj_unip <;> assumption)
+  exact @GlobalTheory.SignProj.exists_proj_unip

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalConjugateDisplacementSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_conjugate_displacement_span : �
     u ∈ GlobalTheory.SmGL.unipRad K e → ∀ (B : GL (Fin N) K) (z : Fin N → K),
     ((B * u * B⁻¹).1 - 1) *ᵥ z ∈ Submodule.span K ((fun k a => B.1 a k) ''
       {k | ∃ j, (e.symm k).1 < (e.symm j).1 ∧ ((B⁻¹).1 *ᵥ z) j ≠ 0}) := by
-  first | exact @GlobalTheory.UnipCol.conj_sub_one_mulVec_mem | exact GlobalTheory.UnipCol.conj_sub_one_mulVec_mem | (intros; apply GlobalTheory.UnipCol.conj_sub_one_mulVec_mem <;> assumption)
+  exact @GlobalTheory.UnipCol.conj_sub_one_mulVec_mem

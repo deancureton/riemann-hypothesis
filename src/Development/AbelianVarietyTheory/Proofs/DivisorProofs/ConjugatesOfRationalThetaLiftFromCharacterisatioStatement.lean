@@ -8,4 +8,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.IndefiniteRowSideFullHecke.TwistedLevelValues GlobalTheory.AdelicScalar GlobalTheory.LiftRows GlobalTheory.LowRow
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conjugatesOfRationalThetaLift_from_characterisation : ConjRatLift5 := by
-  first | exact @GlobalTheory.ConjRatLiftFive.conjRatLift5 | exact GlobalTheory.ConjRatLiftFive.conjRatLift5 | (intros; apply GlobalTheory.ConjRatLiftFive.conjRatLift5 <;> assumption)
+  exact @GlobalTheory.ConjRatLiftFive.conjRatLift5

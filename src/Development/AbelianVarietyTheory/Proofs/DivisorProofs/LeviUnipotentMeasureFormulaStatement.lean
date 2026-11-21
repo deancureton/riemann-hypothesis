@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.levi_unipotent_measure_formula : ∀ (F E : Type) 
     ∀ μN : Measure (unip σ G.V H), μN.IsHaarMeasure →
     ∀ γ ∈ ratU σ G₁.V.J, ∀ f : UA σ G.V.J → ENNReal, Measurable f →
       ∫⁻ n, f (n.1 * m 1 γ) ∂μN = ∫⁻ n, f (m 1 γ * n.1) ∂μN := by
-  first | exact @GlobalTheory.LeviConjHaar.lintegral_conj_levi | exact GlobalTheory.LeviConjHaar.lintegral_conj_levi | (intros; apply GlobalTheory.LeviConjHaar.lintegral_conj_levi <;> assumption)
+  exact @GlobalTheory.LeviConjHaar.lintegral_conj_levi

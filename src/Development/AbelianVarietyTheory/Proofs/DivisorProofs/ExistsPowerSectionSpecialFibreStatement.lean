@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPowerSectionSpecialFibre
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_power_section_special_fibre : ∀ (X : Sche
       (∀ (i : L.ι) (z : X), z ∈ L.U i → IsDiscreteValuationRing (X.presheaf.stalk z) →
         RegAt z (fnOf ⊤ trivial π ^ n * ((τ i : X.functionField) ^ M)⁻¹)) ∧
       (∀ i : L.ι, x₀ ∈ L.U i → UnitAt x₀ (fnOf ⊤ trivial π ^ n * ((τ i : X.functionField) ^ M)⁻¹)) := by
-  first | exact @GlobalTheory.ExpChoice.exists_exponents | exact GlobalTheory.ExpChoice.exists_exponents | (intros; apply GlobalTheory.ExpChoice.exists_exponents <;> assumption)
+  exact @GlobalTheory.ExpChoice.exists_exponents

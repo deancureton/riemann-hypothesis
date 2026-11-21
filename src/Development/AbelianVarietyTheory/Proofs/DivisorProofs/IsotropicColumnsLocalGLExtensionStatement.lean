@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicColumnsLocalGLExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.isotropic_columns_local_GL_extension : ∀ (F E : 
     (matHom _ σ J ((splitEquiv hcm hJ t).symm (B * g * B⁻¹))).1 *ᵥ (fun a => inclR (F := F) (Fv F v) (X a j)) -
         (fun a => inclR (F := F) (Fv F v) (X a j)) ∈
       Submodule.span (Fv F v ⊗[F] E) ((fun l a => inclR (F := F) (Fv F v) (X a l)) '' {l : Fin r | l < j ∧ l ≤ i}) := by
-  first | exact @GlobalTheory.SplitUnipFrame.mulVec_sub_mem_span | exact GlobalTheory.SplitUnipFrame.mulVec_sub_mem_span | (intros; apply GlobalTheory.SplitUnipFrame.mulVec_sub_mem_span <;> assumption)
+  exact @GlobalTheory.SplitUnipFrame.mulVec_sub_mem_span

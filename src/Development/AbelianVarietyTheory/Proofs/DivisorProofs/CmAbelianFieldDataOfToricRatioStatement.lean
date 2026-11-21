@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmAbelianFieldDataOfToricRatio
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SizeAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.TieTest
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.cm_abelian_field_data_of_toric_ratio : ∀ {D : D7
     GlobalTheory.CMVal.IsHeckeL (nuH d.G p.P.A3.A.μ0 i j * p.R.C.delAt (D.what₂.places.resChar w)) Λd →
     D.what₂.embLL z * Λd s = Λ s →
     (Formalism.DivisionValues.vw (D.plEq w) z : ℝ) ≤ (Formalism.DivisionValues.vw (D.plEq w) ((D.what₂.places.resChar w : ℕ) : D.what₂.LL) : ℝ) / ((D.what₂.places.resChar w : ℕ) : ℝ) ^ 2 := by
-  first | exact @GlobalTheory.ThmAUpper.val_bound_twisted | exact GlobalTheory.ThmAUpper.val_bound_twisted | (intros; apply GlobalTheory.ThmAUpper.val_bound_twisted <;> assumption)
+  exact @GlobalTheory.ThmAUpper.val_bound_twisted

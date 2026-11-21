@@ -11,7 +11,6 @@ namespace Formalism.RepresentationBoundsCohomology.SF
 
 open Formalism.NG Formalism.TruncatedSeriesCounting.TruncatedSeriesCountingIdentities Formalism.RepresentationBoundsCohomology.BR Formalism.RepresentationBoundsCohomology.ringDataObjects
 
-set_option maxHeartbeats 4000000 in
 theorem galois_theorem_primitive_data : GaloisTheoremPrimitiveData := by
   intro ℓ _ O _ _ _ _ X _ T d _ _ Ek Ω _ _ _ _ _ r π t ht bl χ₁ ε g₀ hyp L ϖ hϖ
   obtain ⟨eB, e₁, s, hAB, hall⟩ := chain_from_primitive_data O X T d (Ω ≃ₐ[Ek] Ω) r π t ht bl χ₁ ε g₀ hyp L ϖ hϖ

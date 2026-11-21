@@ -9,4 +9,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.Local
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weil_top_grid_stage_exists : GlobalTheory.FunPr.Hypotheses₂ →
   GBig fun {D} T _ _ G _ _ _ _ => ∀ (W : G.Weil) (i j : Fin D.R.m), ∃ X : TriG G i j, TopGrid W i j X ∧ IsStageC W i j (pp D j) (qq D j) X := by
-  first | exact @GlobalTheory.SqTower.TopGridExists.top_grid_exists | exact GlobalTheory.SqTower.TopGridExists.top_grid_exists | (intros; apply GlobalTheory.SqTower.TopGridExists.top_grid_exists <;> assumption)
+  exact @GlobalTheory.SqTower.TopGridExists.top_grid_exists

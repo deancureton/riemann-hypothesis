@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingSeesawIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.doubling_seesaw_identity : GlobalTheory.ThK.KP →
     ∀ [MeasurableSpace (Fin n × Fin d → AF F)] [BorelSpace (Fin n × Fin d → AF F)] (m : Measure (Fin n × Fin d → AF F)), m.IsAddHaarMeasure →
     ∀ Φ ∈ PolData B M, Φ ≠ 0 → M.I om Φ = 0 → ∀ μ : Measure (⊤ : Subgroup (UA σ X.J)), μ.IsHaarMeasure →
       GlobalTheory.Cont.HolValueAt (zetaOn m om Φ i K₂ ⊤ μ) (((d : ℂ) - (n : ℂ)) / 2) 0 := by
-  first | exact @GlobalTheory.ThK.Bot.NormZero.holValueAt_zero | exact GlobalTheory.ThK.Bot.NormZero.holValueAt_zero | (intros; apply GlobalTheory.ThK.Bot.NormZero.holValueAt_zero <;> assumption)
+  exact @GlobalTheory.ThK.Bot.NormZero.holValueAt_zero

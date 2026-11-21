@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTransformHasLevelCmExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.thetaTransform_hasLevel_cmExtension : ∀ (F E : T
             ∀ u ∈ U, u.map (Formalism.IndefR.DatumF.infPartF F E) = 0 →
               Formalism.IndefR.DatumF.heisOF σ JS JT ξ₀ B.ψ u (GlobalTheory.WeilSchrodinger.thetaTr F co B.ψ φ) =
                 GlobalTheory.WeilSchrodinger.thetaTr F co B.ψ φ := by
-  first | exact @GlobalTheory.ThetaLevelCM.thetaTr_level | exact GlobalTheory.ThetaLevelCM.thetaTr_level | (intros; apply GlobalTheory.ThetaLevelCM.thetaTr_level <;> assumption)
+  exact @GlobalTheory.ThetaLevelCM.thetaTr_level

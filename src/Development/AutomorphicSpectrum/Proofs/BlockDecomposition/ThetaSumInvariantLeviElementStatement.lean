@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.theta_sum_invariant_levi_element : ∀ (D : D7) (n
   ∀ Φ : schwartzA θ V.rank n,
     ∑' ξ : Matrix (Fin V.rank) (Fin n) D.host.E, (ω g Φ).1 (ξ.map (incA D)) =
       ∑' ξ : Matrix (Fin V.rank) (Fin n) D.host.E, Φ.1 (ξ.map (incA D)) := by
-  first | exact @GlobalTheory.CompanionTheory.ThetaInvLevi.theta_levi_invariant | exact GlobalTheory.CompanionTheory.ThetaInvLevi.theta_levi_invariant | (intros; apply GlobalTheory.CompanionTheory.ThetaInvLevi.theta_levi_invariant <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ThetaInvLevi.theta_levi_invariant

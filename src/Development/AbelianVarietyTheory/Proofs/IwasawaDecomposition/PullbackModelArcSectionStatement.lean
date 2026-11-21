@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcSection
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_section : ∀ (E : Type) [Field
       g ≫ m₂.φ = g₂ ≫ Y.m.φ) →
     ∀ (R : Type) [CommRing R] [IsDomain R] (g₁ g₂ : Sp R ⟶ pullback Z.s (spMap bV)),
       (∀ x : Sp R, x.asIdeal = ⊥ → pullback.fst Z.s (spMap bV) (g₁ x) ∈ Set.range Z.j) → g₁ ≫ f = g₂ ≫ f → g₁ = g₂ := by
-  first | exact @GlobalTheory.PolArc.eq_of_comp_eq_of_generic | exact GlobalTheory.PolArc.eq_of_comp_eq_of_generic | (intros; apply GlobalTheory.PolArc.eq_of_comp_eq_of_generic <;> assumption)
+  exact @GlobalTheory.PolArc.eq_of_comp_eq_of_generic

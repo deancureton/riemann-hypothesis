@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eigen_adjoint_of_read_relation : ∀ {hL : GlobalTheory.Published.LocalLanglandsGL} {K : Ctx} {B : Base} {f : Fr B.toPre} {T : TwDat B} {w : ColW B f T} {P : Pre2 K w} {x : St P} (L : LocAll (lay0 (Dof x))) (l : LC hL x) {p0 : BaseLevelRowSide (w.D (oL x L).Z)} (Y : YT x L p0), YRel L Y → EigAd Y (sbD L l) (eigD L l) := by
-  first | exact @GlobalTheory.HeightCounting.Fin3.eigAd_loc | exact GlobalTheory.HeightCounting.Fin3.eigAd_loc | (intros; apply GlobalTheory.HeightCounting.Fin3.eigAd_loc <;> assumption)
+  exact @GlobalTheory.HeightCounting.Fin3.eigAd_loc

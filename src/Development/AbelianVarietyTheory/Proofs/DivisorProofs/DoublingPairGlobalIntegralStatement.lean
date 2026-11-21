@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPairGlobalIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_global_integral : ∀ (F E : Type) [
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE M.co u) Ψ) = co.rho B.ψ u (e Ψ)) →
     ∀ K₂ : Subgroup (UA σ W₂.J), IsStab B K₂ → ∀ Φ₁ ∈ PolData B M, ∀ Φ₂ ∈ PolData B M,
       FiniteDimensional ℂ (Submodule.span ℂ {Ψ | ∃ k ∈ K₂, Ψ = om₂ (1, k) (e (boxC Φ₁ Φ₂))}) := by
-  first | exact @GlobalTheory.DblKFin.doubled_kfin | exact GlobalTheory.DblKFin.doubled_kfin | (intros; apply GlobalTheory.DblKFin.doubled_kfin <;> assumption)
+  exact @GlobalTheory.DblKFin.doubled_kfin

@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.regularLocal_of_depthZero : GlobalTheory.NRows.Hypotheses₂ → GlobalTheory.Published.DepthZeroInertia → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (Γ : GrpSide D), GreenLab Γ → RegLoc hL D := by
-  first | exact @GlobalTheory.RegType.regLoc | exact GlobalTheory.RegType.regLoc | (intros; apply GlobalTheory.RegType.regLoc <;> assumption)
+  exact @GlobalTheory.RegType.regLoc

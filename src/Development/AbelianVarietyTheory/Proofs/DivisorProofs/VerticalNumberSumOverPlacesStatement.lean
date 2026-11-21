@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VerticalNumberSumOverPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsLgOfLnSymUpdateSubLe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightBoundedByPrimeWeights
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.vertical_number_sum_over_places : ∀ (D : D7) (p 
     (g : V.X → ℝ), (Function.support g).Finite →
     ∑ᶠ y, g y * vertNum p V n N y = (letI := Formalism.L2.Geo.finPl D p;
       ∑ la : Formalism.L2.Geo.PlL D p, ∑ᶠ y, if LiesOverPl V la.1 y then g y * vertNum p V n N y else 0) := by
-  first | exact @GlobalTheory.PairTerm.finsum_vertNum_eq_sum_places | exact GlobalTheory.PairTerm.finsum_vertNum_eq_sum_places | (intros; apply GlobalTheory.PairTerm.finsum_vertNum_eq_sum_places <;> assumption)
+  exact @GlobalTheory.PairTerm.finsum_vertNum_eq_sum_places

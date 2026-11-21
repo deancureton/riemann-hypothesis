@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.grid_frames_doubling_polynomial_exists : GlobalThe
       IsFinF W.ψ W.θ true A (frSum AV AV₁) (X.f t) ∧ IsFinF W.ψ W.θ false A₁ (frSum AV AV₁) (X.f' t) ∧
       (∀ P g h, X.ker W.ψ W.θ t P h g = thetaKO (X.ω t) g h (fockF W.ψ W.θ true A (frSum AV AV₁) (X.f t) (σ P))) ∧
       ∀ P g h, X.ker' W.ψ W.θ t P h g = thetaKO (X.ω' t) g h (fockF W.ψ W.θ false A₁ (frSum AV AV₁) (X.f' t) (σ' P)) := by
-  first | exact @GlobalTheory.TopDict.top_dictionary | exact GlobalTheory.TopDict.top_dictionary | (intros; apply GlobalTheory.TopDict.top_dictionary <;> assumption)
+  exact @GlobalTheory.TopDict.top_dictionary

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.torus_element_unitary_matrix_identity : ∀ (F E :
       GlobalTheory.SiegelSet.IsTorusElt σ ((1 : E) • J.map σ) Xf Yf t a →
       ∀ a' : UA σ J, (a' : GL (Fin n) (AE F E)) = HA.mat (AF F) σ ((1 : E) • J.map σ) a →
       IsTorusU (fun i k => Xf k i) (fun i k => Yf k i) t a' := by
-  first | exact @GlobalTheory.TorusTranslate.isTorusU_of_isTorusElt | exact GlobalTheory.TorusTranslate.isTorusU_of_isTorusElt | (intros; apply GlobalTheory.TorusTranslate.isTorusU_of_isTorusElt <;> assumption)
+  exact @GlobalTheory.TorusTranslate.isTorusU_of_isTorusElt

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionTransportElliptic
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.torsion_transport_elliptic : GlobalTheory.Publishe
           (∀ (a : E) (α : T.X.A ⟶ T.X.A) [IsMonHom α] (α' : X'.A ⟶ X'.A) [IsMonHom α'], α'.left ≫ p = p ≫ α.left →
             (∀ w, U'.u.ex (fun j ↦ g (φ (U'.e j) a) * w j) = U'.u.ex w ≫ α') →
               ∀ w, T.U.u.ex (fun j ↦ φ (T.U.e j) a * w j) = T.U.u.ex w ≫ α) := by
-  first | exact @GlobalTheory.ConjCMPoint.conj_unif | exact GlobalTheory.ConjCMPoint.conj_unif | (intros; apply GlobalTheory.ConjCMPoint.conj_unif <;> assumption)
+  exact @GlobalTheory.ConjCMPoint.conj_unif

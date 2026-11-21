@@ -13,4 +13,4 @@ open scoped TensorProduct
 open GlobalTheory.ChainPts
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_normal_model_roots_of_unity : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O] (p : ℕ) [Fact p.Prime] [CharZero O] [CharP (ResidueField O) p] (B : GlobalTheory.Vert.Model O), GlobalTheory.IsNormalScheme B.X → ∀ n : ℕ, ∃ (B' : GlobalTheory.Vert.Model O) (g : GlobalTheory.Vert.Model.Hom B' B), GlobalTheory.IsNormalScheme B'.X ∧ g.relDim = 0 ∧ ∃ ζ : Γ(B'.X, ⊤), IsPrimitiveRoot ζ (p ^ n) := by
-  first | exact @GlobalTheory.ChainPts.exists_cover_primitiveRoot | exact GlobalTheory.ChainPts.exists_cover_primitiveRoot | (intros; apply GlobalTheory.ChainPts.exists_cover_primitiveRoot <;> assumption)
+  exact @GlobalTheory.ChainPts.exists_cover_primitiveRoot

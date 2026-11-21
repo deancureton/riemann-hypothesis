@@ -10,4 +10,4 @@ open GlobalTheory.LieSmooth
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eigenframe_flag_point_lift : ∀ {D : D7} {A : Amb D} {N j : ℕ} {S : Sig A N j} {κ : Lv A} {s : FinalTheorems S κ} (Φ : s.Flag) (y : Pt s) {K : Type} [Field K] [NumberField K] (io : K →+* Qb) (fK : κ.c.F →+* K) (yK : Sp K ⟶ gen s.T.Z), spMap io ≫ yK = y.y → yK ≫ genStr s.T.Z = spMap fK → ∀ g : EigFrame s.T.Z fK (yK ≫ genι s.T.Z), g.IsMap io y.frame → ∃ p : Sp K ⟶ (Φ.C (compPt s y)).Y.X, p ≫ (Φ.C (compPt s y)).π = yK ∧ (Φ.C (compPt s y)).Carries p g ∧ below p = basePt Φ y := by
-  first | exact @GlobalTheory.LieSmooth.basePt_definedOver | exact GlobalTheory.LieSmooth.basePt_definedOver | (intros; apply GlobalTheory.LieSmooth.basePt_definedOver <;> assumption)
+  exact @GlobalTheory.LieSmooth.basePt_definedOver

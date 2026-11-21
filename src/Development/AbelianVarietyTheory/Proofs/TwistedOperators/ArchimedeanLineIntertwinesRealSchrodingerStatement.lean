@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ArchimedeanLineIntertwinesRealSchrodinger
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilActionUnitaryCompactStatement
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.archimedeanLine_intertwines_realSchrodinger : ∀ 
       (∀ v, Continuous fun t => A t v) ∧
       ∀ t v (f f₁ : SInf F (Fin n × Fin d)), ⇑f₁ = schrF (trP F (Fin n × Fin d)) v ⇑f →
         ⇑(T t f₁) = schrF (trP F (Fin n × Fin d)) (A t v) ⇑(T t f) := by
-  first | exact @GlobalTheory.ArchFam.schr_equiv | exact GlobalTheory.ArchFam.schr_equiv | (intros; apply GlobalTheory.ArchFam.schr_equiv <;> assumption)
+  exact @GlobalTheory.ArchFam.schr_equiv

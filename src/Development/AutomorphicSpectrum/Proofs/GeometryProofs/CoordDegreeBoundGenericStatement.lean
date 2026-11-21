@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordDegreeBoundGeneric
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.coord_degree_bound_generic : ∀ (X : Scheme.{0}) 
         (∀ (x : F₁) (e : Li) (v : epsAt (spMap (algebraMap (𝓞 L) L) ≫ z) ⟶ G) (t : Ω) (u : L),
           e ∈ flagStep Ω b₀ (i + 1) → M.ValAt _ e v → MB.Lifts (algebraMap (𝓞 L) L) (𝟙 G.left) (x : B.carrier) v →
           IsCls b₀ i e t → ValAt ξ (spMap (algebraMap (𝓞 L) L) ≫ z) (t / gen y a e₀ c₀) u → φ x = u) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.RootHt.FinPhi.exists_phi | exact GlobalTheory.CompanionTheory.Ar.RootHt.FinPhi.exists_phi | (intros; apply GlobalTheory.CompanionTheory.Ar.RootHt.FinPhi.exists_phi <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.RootHt.FinPhi.exists_phi

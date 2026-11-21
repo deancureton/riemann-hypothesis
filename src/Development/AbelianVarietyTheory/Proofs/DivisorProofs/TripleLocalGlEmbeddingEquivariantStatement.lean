@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalGlEmbeddingEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.triple_local_gl_embedding_equivariant : ∀ (F E :
         ((((adeleClass F).modu (Units.map (Algebra.norm (AF F) : AE F E →* AF F)
           (Matrix.GeneralLinearGroup.det ((K g : UA σ G.V'.J) : GL (Fin a') (AE F E)))) : ℝ) ^
             ((Fintype.card (Fin (a + a')) : ℝ) / 2) : ℝ) : ℂ) = (((chrW X.ν t (GlobalTheory.SplitFlip.gdet g))⁻¹ : ℂˣ) : ℂ) ^ 2 := by
-  first | exact @GlobalTheory.SiegelValGood.siegel_factor_eq_sq | exact GlobalTheory.SiegelValGood.siegel_factor_eq_sq | (intros; apply GlobalTheory.SiegelValGood.siegel_factor_eq_sq <;> assumption)
+  exact @GlobalTheory.SiegelValGood.siegel_factor_eq_sq

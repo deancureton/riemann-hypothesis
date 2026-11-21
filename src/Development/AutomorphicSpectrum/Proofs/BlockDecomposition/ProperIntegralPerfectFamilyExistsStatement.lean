@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProperIntegralPerfectFamilyExists
-import Mathlib
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.LeftZeroDuality.H1StructureDimLe
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsPowMulOfAway
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.proper_integral_perfect_family_exists : ∀ (S : S
       ∀ (R' : Type) [CommRing R'] (g : R →+* R') (X' : Scheme.{0}) (π : X' ⟶ X)
         (f' : X' ⟶ Spec (CommRingCat.of R')), IsPullback π f' f (Spec.map (CommRingCat.ofHom g)) →
         (Triv (M.pull π) ↔ Locus N (Spec.map (CommRingCat.ofHom g) ≫ j)) := by
-  first | exact @GlobalTheory.CompanionTheory.TrivLoc.exists_chart_family | exact GlobalTheory.CompanionTheory.TrivLoc.exists_chart_family | (intros; apply GlobalTheory.CompanionTheory.TrivLoc.exists_chart_family <;> assumption)
+  exact @GlobalTheory.CompanionTheory.TrivLoc.exists_chart_family

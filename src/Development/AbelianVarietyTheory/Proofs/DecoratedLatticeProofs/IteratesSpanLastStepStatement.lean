@@ -14,4 +14,4 @@ open scoped TensorProduct Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.iterates_span_last_step : GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.HarishChandraModules → ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), PkHyp W → GlobalTheory.Core.Mi.ItSpans ((pk W).MY (D.R.m - 1)) (pk W).MX (pk W).ItX := by
-  first | exact @GlobalTheory.Core.Mi.SpanX.itSpans_pk | exact GlobalTheory.Core.Mi.SpanX.itSpans_pk | (intros; apply GlobalTheory.Core.Mi.SpanX.itSpans_pk <;> assumption)
+  exact @GlobalTheory.Core.Mi.SpanX.itSpans_pk

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalComponentsSchwartzMembership
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.continuous_modelI_pure_archComponent : GlobalTheor
     ∀ φ : ∀ v : Pl F, (Fin a' × Fin (a + a') → Fv F v) → ℂ, (∀ v, φ v ∈ SB (Fin a' × Fin (a + a') → Fv F v)) →
     (∀ᶠ v in cofinite, φ v = G.M'.vac v) → φ B.v₁ ∈ G.M'.SoLoc B.ψ B.τ₁ → ∀ h : UA σ G.W.J,
       Continuous fun f : SInf F (Fin a' × Fin (a + a')) => G.M'.I om' (pure f φ) h := by
-  first | exact @GlobalTheory.ThKConeB.continuous_I_pure | exact GlobalTheory.ThKConeB.continuous_I_pure | (intros; apply GlobalTheory.ThKConeB.continuous_I_pure <;> assumption)
+  exact @GlobalTheory.ThKConeB.continuous_I_pure

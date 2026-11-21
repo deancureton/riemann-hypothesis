@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZetaIntegralBlockTranslateOfFlipDatum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlipAtEq
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.zetaIntegral_block_translate_of_flip_datum : ∀ {
             (GlobalTheory.SquareFlipReach.trA t hv e (g₀.1 * Z * c₀.1 * GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.blk e K₁.1 K₂.1))) =
         smallP (haarVol (KO _ (Fin (spW₁ G i j).rank))) finSumFinEquiv (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.chrW X.ν (Bs.τ ⟨v, hP⟩))
           (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.chrW X.α (Bs.τ ⟨v, hP⟩)) Ψ := by
-  first | exact @GlobalTheory.PureMatch.pure_match | exact GlobalTheory.PureMatch.pure_match | (intros; apply GlobalTheory.PureMatch.pure_match <;> assumption)
+  exact @GlobalTheory.PureMatch.pure_match

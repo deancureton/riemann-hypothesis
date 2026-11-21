@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzValuedDoubleIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.schwartz_valued_double_integral : ∀ {V : Type} [
     (C : Set (α × β)) (hC : IsCompact C) (h0 : ∀ p ∉ C, g p.1 p.2 = 0)
     (S : SchwartzMap V ℂ) (hS : ∀ y, S y = ∫ a, ∫ b, g a b y ∂μb ∂μa) (l : SchwartzMap V ℂ →L[ℂ] ℂ),
     l S = ∫ a, ∫ b, l (g a b) ∂μb ∂μa := by
-  first | exact @GlobalTheory.SchwInt.clm_iterated_integral | exact GlobalTheory.SchwInt.clm_iterated_integral | (intros; apply GlobalTheory.SchwInt.clm_iterated_integral <;> assumption)
+  exact @GlobalTheory.SchwInt.clm_iterated_integral

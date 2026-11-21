@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentStabilizerDoubleCoset
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.unipotent_stabilizer_double_coset : ∀ (F E : Typ
     ∀ w ∈ ratPts σ J, (matHom _ σ J w).1 * adMat F (col0 Y) = adMat F (col0 X) →
     ∀ ν ∈ unipRad σ J (col0 X), ∀ t : GAd σ J, GlobalTheory.EisCT.StabL σ J (col0 X) (w * ν * t⁻¹) →
     ¬ GlobalTheory.EisCT.OrthL σ J (col0 X) t := by
-  first | exact @GlobalTheory.EisCT.not_orthL_of_stabL_swap | exact GlobalTheory.EisCT.not_orthL_of_stabL_swap | (intros; apply GlobalTheory.EisCT.not_orthL_of_stabL_swap <;> assumption)
+  exact @GlobalTheory.EisCT.not_orthL_of_stabL_swap

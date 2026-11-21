@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerHaarQuotientSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.local_stabilizer_haar_quotient_second : ∀ (F E :
     ∀ μ : Measure (stabAt σ G.V (evFin F v) H.x), μ.IsHaarMeasure →
     ∀ q : stabAt σ G.V (evFin F v) H.x, (∃ g₀ : UA σ G₁.V.J, IsLevi H 1 g₀ q.1.1 ∧ g₀ ∈ UAt σ G₁.V (evFin F v)) →
       Measure.map (· * q) μ = μ := by
-  first | exact @GlobalTheory.ThK.LemF.LeviInv.levi_map_mul_right | exact GlobalTheory.ThK.LemF.LeviInv.levi_map_mul_right | (intros; apply GlobalTheory.ThK.LemF.LeviInv.levi_map_mul_right <;> assumption)
+  exact @GlobalTheory.ThK.LemF.LeviInv.levi_map_mul_right

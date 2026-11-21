@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmHermitianTraceFormIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsHolFormConst
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.PolarisationModuleIndex
 open NumberField GlobalTheory.CMVal GlobalTheory.RealMult
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.cm_hermitian_trace_form_integral : ∀ (E : Type) 
     (∀ c : 𝔠.elt, ∃ (n : ℕ) (t : 𝓞 (maximalRealSubfield E)), n.Coprime l ∧ n • c = t • c₀) →
     mu ≠ 0 ∧ GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.GenAt l (GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.polMod L)
       ((((c₀ : maximalRealSubfield E) / (2 * c1) : maximalRealSubfield E) : E) * mu) := by
-  first | exact @GlobalTheory.PolGen.genAt_polMod | exact GlobalTheory.PolGen.genAt_polMod | (intros; apply GlobalTheory.PolGen.genAt_polMod <;> assumption)
+  exact @GlobalTheory.PolGen.genAt_polMod

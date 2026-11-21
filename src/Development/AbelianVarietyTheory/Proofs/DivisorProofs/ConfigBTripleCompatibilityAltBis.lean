@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvShiftIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.config_b_triple_compatibility_alt : ∀ {F E : Typ
         ∀ Y : Matrix (Fin b) (Fin (a + b)) (Fv F B.v₁),
           ι₁ (L (locOp B.v₁ (G.M'.co.rho B.ψ (partFin B.v₁ (shiftB σ H H' l))) φ)) Y =
             ∫ r, ∫ c, g r c * ι φ (P * insS (A * Y * A') r c x * Q) ∂(haarVec B.v₁ b) ∂(haarVec B.v₁ (a + (b + 2))) := by
-  first | exact @GlobalTheory.ConeSoB.ev_shift_integral | exact GlobalTheory.ConeSoB.ev_shift_integral | (intros; apply GlobalTheory.ConeSoB.ev_shift_integral <;> assumption)
+  exact @GlobalTheory.ConeSoB.ev_shift_integral

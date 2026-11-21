@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeckeThetaValueIdentityUnitFrames
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIsCan
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.AbsGeneratorRatioEqOneOfUnitFrameMove
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeckeIsogenyLiftsToLatticeMapScalingForms
@@ -63,4 +62,4 @@ theorem _root_.GlobalTheory.T.hecke_theta_value_identity_unitFrames : ∀ (E : T
     ∀ w, ∃ j, ⊤ ≤ (F.ex (ik k') Pm' (h w)).left ⁻¹ᵁ Xo.univ.t.PP.L.U j ∧
       Formalism.L2.PjFree.toC (t none : CAt σ) * θ' (h w) * fr' j (h w) =
         ∑ m, θ ((p : ℂ) • (w + wm m)) * fr' j (h w + h (wm m)) := by
-  first | exact @GlobalTheory.HeckeValueId.hecke_theta_value_identity | exact GlobalTheory.HeckeValueId.hecke_theta_value_identity | (intros; apply GlobalTheory.HeckeValueId.hecke_theta_value_identity <;> assumption)
+  exact @GlobalTheory.HeckeValueId.hecke_theta_value_identity

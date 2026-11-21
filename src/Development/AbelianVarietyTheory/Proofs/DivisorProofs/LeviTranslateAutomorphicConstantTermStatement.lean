@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviTranslateAutomorphicConstantTerm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.levi_translate_automorphic_constant_term : ∀ (F 
     ∀ (φ : UA σ Y.J → ℂ) (a b : ℂ) (K : Subgroup (GAd σ (c • Y.J.map σ))),
       IsAutOn σ (c • Y.J.map σ) ((unip σ Y P).map (toGAd hσ Y.J hc).toMonoidHom) K (fun x => φ ((toGAd hσ Y.J hc).symm x)) →
       IsAutOn σ (c • Y.J.map σ) ((unip σ Y P).map (toGAd hσ Y.J hc).toMonoidHom) K (fun x => a * φ (m * (toGAd hσ Y.J hc).symm x) + b * φ ((toGAd hσ Y.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThK.LeviShift.isAutOn_levi_comb | exact GlobalTheory.ThK.LeviShift.isAutOn_levi_comb | (intros; apply GlobalTheory.ThK.LeviShift.isAutOn_levi_comb <;> assumption)
+  exact @GlobalTheory.ThK.LeviShift.isAutOn_levi_comb

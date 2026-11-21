@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCommonRefinementModels
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsHodgeFrameIff
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
 import Development.AbelianVarietyTheory.Statements.HeightBoundStatement.HTBoundSt
@@ -21,4 +20,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_common_refinement_models : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (M₀ : GlobalTheory.TrueGeo.Model Y) (ι : Type) [Fintype ι] (M : ι → GlobalTheory.TrueGeo.Model Y), ∃ (P : GlobalTheory.TrueGeo.Model Y) (π : ∀ i, P.X ⟶ (M i).X), ∀ i, π i ≫ (M i).p = P.p ∧ P.j ≫ π i = (M i).j := by
-  first | exact @GlobalTheory.Member.DomFin.exists_dominating_fintype | exact GlobalTheory.Member.DomFin.exists_dominating_fintype | (intros; apply GlobalTheory.Member.DomFin.exists_dominating_fintype <;> assumption)
+  exact @GlobalTheory.Member.DomFin.exists_dominating_fintype

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameRelationIntegerExponentSectionBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.frameRelation_integerExponentSection_baseChange : 
         (Y : ∀ b : E →+* ℂ, Matrix (Fin (Dw.mult b)) (Fin (Dw.mult b)) S) (s : Sˣ),
         (∀ b, (Y b).det ≠ 0) → FrMap φ y₀ z → GlobalTheory.Frames.FrChg (fun b => (Y b).transpose) (s : S) z z' →
         (∏ b, (Y b).det ^ k b) * evR Xo c F z' = Formalism.L2.LamCM.evalFr (MvPolynomial.map φ.toRingHom G) Y := by
-  first | exact @GlobalTheory.FrameRelBC.relation_baseChange_field | exact GlobalTheory.FrameRelBC.relation_baseChange_field | (intros; apply GlobalTheory.FrameRelBC.relation_baseChange_field <;> assumption)
+  exact @GlobalTheory.FrameRelBC.relation_baseChange_field

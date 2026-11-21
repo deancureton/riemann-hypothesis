@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppellHumbertHomCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.appell_humbert_hom_compatible : ∀ (g : ℕ) (A :
     (∀ z w, z ⬝ᵥ H₂.mulVec (star w) = z ⬝ᵥ H₁.mulVec (star (Fl w))) →
     (∀ z w, Fl z ⬝ᵥ H₁.mulVec (star w) = z ⬝ᵥ H₁.mulVec (star (Fl w))) →
     LBIso (abelian₂ A M₂) ((abelian₂ A M₁).pull (lift (fst A A) (snd A A ≫ f)).left) := by
-  first | exact @GlobalTheory.TorusRM.lbIso_lam_pull_of_selfAdjoint | exact GlobalTheory.TorusRM.lbIso_lam_pull_of_selfAdjoint | (intros; apply GlobalTheory.TorusRM.lbIso_lam_pull_of_selfAdjoint <;> assumption)
+  exact @GlobalTheory.TorusRM.lbIso_lam_pull_of_selfAdjoint

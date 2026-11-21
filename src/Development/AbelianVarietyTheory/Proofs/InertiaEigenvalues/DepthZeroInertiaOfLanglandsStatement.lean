@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.De
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.depth_zero_inertia_of_langlands : GlobalTheory.Published.DepthZeroTypeInertia → GlobalTheory.Published.GlobalArtinReciprocity → GlobalTheory.Published.LocalLanglandsGL → GlobalTheory.Published.DepthZeroInertia := by
-  first | exact @GlobalTheory.DepthZeroBridge.depthZeroInertia_of_depthZeroTypeInertia | exact GlobalTheory.DepthZeroBridge.depthZeroInertia_of_depthZeroTypeInertia | (intros; apply GlobalTheory.DepthZeroBridge.depthZeroInertia_of_depthZeroTypeInertia <;> assumption)
+  exact @GlobalTheory.DepthZeroBridge.depthZeroInertia_of_depthZeroTypeInertia

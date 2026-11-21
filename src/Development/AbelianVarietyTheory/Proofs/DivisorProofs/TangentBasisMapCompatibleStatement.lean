@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisMapCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.tangent_basis_map_compatible : ∀ (E : Type) [Fie
       (∀ i, IsTanAtG Y.oF.t yL (w i)) → (∀ i, IsEigAt c σ (w i ≫ ν.φ)) →
       ∃ g₁ : Matrix (Fin (Dw.mult σ)) (Fin (Dw.mult σ)) L, IsUnit g₁.det ∧
         ∀ i, IsCombAt z₀.x (z₀.u σ) (g₁ i) (w i ≫ ν.φ) := by
-  first | exact @GlobalTheory.FrameCoordUnit.coord_unit | exact GlobalTheory.FrameCoordUnit.coord_unit | (intros; apply GlobalTheory.FrameCoordUnit.coord_unit <;> assumption)
+  exact @GlobalTheory.FrameCoordUnit.coord_unit

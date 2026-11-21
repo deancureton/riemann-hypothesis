@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizationGluesOverCover
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.polarization_glues_over_cover : ∀ {E : Type} [Fi
     (∀ i, IsPullback (ψ i) (C i).s F (spMap (b i))) → (∀ i k, IsPullback (p i k) (q i k) (ψ i) (ψ k)) →
     (∀ i, Nonempty (SABMap (C i).t t (ψ i))) → (∀ i, IsPol φ m (C i) (BD i)) →
     (∀ i k, (BD i).idealSheaf.comap (p i k) = (BD k).idealSheaf.comap (q i k)) → IsProjOver F := by
-  first | exact @GlobalTheory.GlueProj.isProjOver_of_glue | exact GlobalTheory.GlueProj.isProjOver_of_glue | (intros; apply GlobalTheory.GlueProj.isProjOver_of_glue <;> assumption)
+  exact @GlobalTheory.GlueProj.isProjOver_of_glue

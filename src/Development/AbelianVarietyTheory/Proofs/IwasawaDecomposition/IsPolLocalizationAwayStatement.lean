@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPolLocalizationAway
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.isPol_localization_away : ∀ {E : Type} [Field E]
     ∃ (C' : Model Xo c ω') (BD' : EffCartierData C'.X) (v : C'.X ⟶ C.X),
       IsPullback v C'.s C.s (spMap (algebraMap R (Localization.Away x))) ∧ C'.j ≫ v = C.j ∧ IsPol φ m C' BD' ∧
         BD'.idealSheaf = BD.idealSheaf.comap v := by
-  first | exact @GlobalTheory.PolRestr.exists_isPol_away | exact GlobalTheory.PolRestr.exists_isPol_away | (intros; apply GlobalTheory.PolRestr.exists_isPol_away <;> assumption)
+  exact @GlobalTheory.PolRestr.exists_isPol_away

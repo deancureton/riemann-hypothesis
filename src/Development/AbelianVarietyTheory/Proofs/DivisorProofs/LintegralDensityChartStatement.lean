@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralDensityChart
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticDensityPushforwardIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubsetPartitionNull
@@ -17,4 +16,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lintegral_density_chart : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (σ : k →+* ℂ) (D : ℕ) [SecondCountableTopology (CxPts p σ)] (ρ : AlgChart p σ D → CxPts p σ → ℝ), IsDens ρ → ∀ (c : AlgChart p σ D) (T : Set (CxPts p σ)), MeasurableSet T → T ⊆ c.e.source → ∀ h : CxPts p σ → ℝ≥0∞, Measurable h → ∫⁻ y in T, h y ∂part ρ = ∫⁻ v in c.e '' T, h (c.e.symm v) * ENNReal.ofReal (ρ c (c.e.symm v)) := by
-  first | exact @GlobalTheory.MixDens.lintegral_part_chart | exact GlobalTheory.MixDens.lintegral_part_chart | (intros; apply GlobalTheory.MixDens.lintegral_part_chart <;> assumption)
+  exact @GlobalTheory.MixDens.lintegral_part_chart

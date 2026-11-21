@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBCompactSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RatStab
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.configuration_b_compact_support : ∀ (F E : Type)
     ∀ Φ' ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))), ∀ C : Set (UA σ G.V'.J × UA σ G.W.J), IsCompact C →
     ∃ U : Set (Fin (Module.finrank F E) → Af F), IsCompact U ∧ ∀ p ∈ C, ∀ l : (AE F E)ˣ,
       (fun i => (GlobalTheory.XTermMaj.crd F E (l : AE F E) i).2) ∉ U → e' (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' p Φ')) = 0 := by
-  first | exact @GlobalTheory.ConeFinSuppUnif.finsupp | exact GlobalTheory.ConeFinSuppUnif.finsupp | (intros; apply GlobalTheory.ConeFinSuppUnif.finsupp <;> assumption)
+  exact @GlobalTheory.ConeFinSuppUnif.finsupp

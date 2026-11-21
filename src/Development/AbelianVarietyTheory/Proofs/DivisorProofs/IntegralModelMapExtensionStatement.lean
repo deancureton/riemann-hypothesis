@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelMapExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.integral_model_map_extension : GlobalTheory.CovTop
       IsUnit (pairDet h₁ U₁) → IsUnit (pairDet h₂ U₂) →
     ∀ 𝔭 : PrimeSpectrum A, ξ 𝔭 ∈ Set.range Y.j → ∃ u : (Localization.AtPrime 𝔭.asIdeal)ˣ,
       ∀ (k : Type) [Field k] (φ : Localization.AtPrime 𝔭.asIdeal →+* k), SecValAt Y r ν τ.1 s.sig ξ e U₁ U₂ k (φ.comp (algebraMap A _)) (φ u) := by
-  first | exact @GlobalTheory.FlatModelOpen.unit_loc | exact GlobalTheory.FlatModelOpen.unit_loc | (intros; apply GlobalTheory.FlatModelOpen.unit_loc <;> assumption)
+  exact @GlobalTheory.FlatModelOpen.unit_loc

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSignatureDiagonalisingBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.CcGASmoothAndRderMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxCompactConjugate
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_signature_diagonalising_basis : ∀ (F E : 
         C.1ᴴ * J.map τ.1 * C.1 = Matrix.diagonal (fun i => if ε i then 1 else -1) ∧
         ∀ y : GArch σ J w, ((C⁻¹).1 * GlobalTheory.Orb.archMat σ J τ y * C.1)ᴴ * ((C⁻¹).1 * GlobalTheory.Orb.archMat σ J τ y * C.1) = 1 →
           k⁻¹ * embArch σ J w y * k ∈ K' := by
-  first | exact @GlobalTheory.ArchFrameConj.exists_frame_mem_conj | exact GlobalTheory.ArchFrameConj.exists_frame_mem_conj | (intros; apply GlobalTheory.ArchFrameConj.exists_frame_mem_conj <;> assumption)
+  exact @GlobalTheory.ArchFrameConj.exists_frame_mem_conj

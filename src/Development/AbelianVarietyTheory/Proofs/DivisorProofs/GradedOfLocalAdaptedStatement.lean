@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.graded_of_local_adapted : ∀ {k : Type} [CommRing
     {E E' : ι → X.Modules} {r : ι → ℕ} (hL : VMetric p L g) {m : ℕ} (o : ι ≃ Fin m) (h : ∀ a, VMetric p (E a) (r a))
     (T : ∀ a, E a ⟶ L) (u : ∀ a, E a ⟶ E' a), (∀ a, Mono (u a)) →
     (∀ x : X, ∃ V : X.Opens, x ∈ V ∧ LocAdapted r (fun a => (o a : ℕ)) T u V) → OrthEmb hL h T → IsGraded hL o h u := by
-  first | exact @GlobalTheory.GrFilt.isGraded_of_locAdapted | exact GlobalTheory.GrFilt.isGraded_of_locAdapted | (intros; apply GlobalTheory.GrFilt.isGraded_of_locAdapted <;> assumption)
+  exact @GlobalTheory.GrFilt.isGraded_of_locAdapted

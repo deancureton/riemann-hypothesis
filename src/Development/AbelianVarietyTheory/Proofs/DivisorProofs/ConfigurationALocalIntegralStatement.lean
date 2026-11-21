@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationALocalIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.configuration_a_local_integral : ∀ (F E : Type) 
       (∀ v, ev v (G.M.vac v) = G₁.M.vac v) →
       (∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = G.M.vac v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v)) →
     ∀ g, GaussD G.M B.emb g → GaussD G₁.M B.emb (ei g) := by
-  first | exact @GlobalTheory.ThK.VacImg.vac_img | exact GlobalTheory.ThK.VacImg.vac_img | (intros; apply GlobalTheory.ThK.VacImg.vac_img <;> assumption)
+  exact @GlobalTheory.ThK.VacImg.vac_img

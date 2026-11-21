@@ -4,4 +4,4 @@ import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.Archim
 open GlobalTheory.BCT GlobalTheory.UnitaryBC PositivityTheory.Rg.Bc.ArchbcB.B PositivityTheory.Rg.BcB.F.MT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finite_unitary_multiplication : FUMul := by
-  first | exact @GlobalTheory.CompanionTheory.FUMulPf.fuMul | exact GlobalTheory.CompanionTheory.FUMulPf.fuMul | (intros; apply GlobalTheory.CompanionTheory.FUMulPf.fuMul <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FUMulPf.fuMul

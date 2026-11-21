@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralPositiveNegativeParts
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticDensityPushforwardIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubsetPartitionNull
@@ -17,4 +16,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lintegral_positive_negative_parts : ∀ (α : Type) [MeasurableSpace α] (μ : Measure α) (a G : ℝ) (φ : α → ℝ), AEMeasurable φ μ → ∫ x, φ x ∂μ = G → (ENNReal.ofReal |a| * ENNReal.ofReal |G| ≤ ∫⁻ x, ENNReal.ofReal |a| * ENNReal.ofReal |φ x| ∂μ) ∧ ((∫⁻ x, ENNReal.ofReal |a| * ENNReal.ofReal |φ x| ∂μ) ≠ ⊤ → (∫⁻ x, (ENNReal.ofReal a * ENNReal.ofReal (φ x) + ENNReal.ofReal (-a) * ENNReal.ofReal (-φ x)) ∂μ) + (ENNReal.ofReal a * ENNReal.ofReal (-G) + ENNReal.ofReal (-a) * ENNReal.ofReal G) = (∫⁻ x, (ENNReal.ofReal a * ENNReal.ofReal (-φ x) + ENNReal.ofReal (-a) * ENNReal.ofReal (φ x)) ∂μ) + (ENNReal.ofReal a * ENNReal.ofReal G + ENNReal.ofReal (-a) * ENNReal.ofReal (-G))) := by
-  first | exact @GlobalTheory.FibreParts.fibre_parts | exact GlobalTheory.FibreParts.fibre_parts | (intros; apply GlobalTheory.FibreParts.fibre_parts <;> assumption)
+  exact @GlobalTheory.FibreParts.fibre_parts

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CMColumnLocalGLStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.CM_column_local_GL_stabilizer : ∀ (F E : Type) [
     (∀ l : Fin r, l ≤ i → (((Formalism.UG.cT (σ : E →+* E) X * J).map (inclR (F := F) (Fv F v))) *ᵥ y) l = 0) →
     (matHom _ σ J ((splitEquiv hcm hJ t).symm (B * g * B⁻¹))).1 *ᵥ y - y ∈
       Submodule.span (Fv F v ⊗[F] E) ((fun l a => inclR (F := F) (Fv F v) (X a l)) '' {l : Fin r | l ≤ i}) := by
-  first | exact @GlobalTheory.LeviBlockFrame.mulVec_sub_mem_span_frame | exact GlobalTheory.LeviBlockFrame.mulVec_sub_mem_span_frame | (intros; apply GlobalTheory.LeviBlockFrame.mulVec_sub_mem_span_frame <;> assumption)
+  exact @GlobalTheory.LeviBlockFrame.mulVec_sub_mem_span_frame

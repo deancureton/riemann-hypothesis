@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealSheafAlongLocalSpecNormalisedBlowupPrincipa
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdlAlongComapEq
@@ -17,4 +16,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.idealSheafAlongLocalSpec_normalisedBlowup_principal : ∀ {S Z : Scheme.{0}} (π : S ⟶ Z) (J : Z.IdealSheafData), IsNormBl π J → ∀ (R : Type) [CommRing R] [IsLocalRing R]
     (ξ : Sp R ⟶ S), ∃ g₀ : R, idlAlong (J.comap π) ξ = Ideal.span {g₀} := by
-  first | exact @GlobalTheory.NormBlPrincipal.idlAlong_comap_principal | exact GlobalTheory.NormBlPrincipal.idlAlong_comap_principal | (intros; apply GlobalTheory.NormBlPrincipal.idlAlong_comap_principal <;> assumption)
+  exact @GlobalTheory.NormBlPrincipal.idlAlong_comap_principal

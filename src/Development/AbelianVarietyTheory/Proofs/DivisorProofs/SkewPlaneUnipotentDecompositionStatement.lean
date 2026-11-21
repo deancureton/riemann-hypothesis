@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneUnipotentDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.skew_plane_unipotent_decomposition : ∀ (F E : Ty
       (∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i) → ∀ S' : Finset (Fin r),
       ∀ g : GAd σ (c₀ • W.J.map σ), g ∈ GlobalTheory.StdPar.unip σ (c₀ • W.J.map σ) X' (insert 0 (S'.map (Fin.succEmb r))) ↔
         ∃ v ∈ unip σ W H, ∃ u ∈ GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S', g = GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ v * GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ (M ((GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀).symm u)) := by
-  first | exact @GlobalTheory.FlagDecomp.mem_unip_insert_iff | exact GlobalTheory.FlagDecomp.mem_unip_insert_iff | (intros; apply GlobalTheory.FlagDecomp.mem_unip_insert_iff <;> assumption)
+  exact @GlobalTheory.FlagDecomp.mem_unip_insert_iff

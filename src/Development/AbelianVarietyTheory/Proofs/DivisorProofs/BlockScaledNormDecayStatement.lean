@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockScaledNormDecay
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.block_scaled_norm_decay : ∀ (F : Type) [Field F]
       ((1 + ∑ j, ∑ w : InfinitePlace F, mixedEmbedding.normAtPlace w (evI F (blkScale blk t (fun j => algebraMap F (AF F) (ξ j)) j))) ^ ((q + 1) * N))⁻¹ ≤
         C * ((∏ i, (1 + t i * ∑ j ∈ blk i, ∑ w : InfinitePlace F, w (ξ j)) ^ N) *
           (1 + ∑ j, ∑ w : InfinitePlace F, w (ξ j)) ^ N)⁻¹ := by
-  first | exact @GlobalTheory.ThKTorus.MajCompare.weight_le_majorant | exact GlobalTheory.ThKTorus.MajCompare.weight_le_majorant | (intros; apply GlobalTheory.ThKTorus.MajCompare.weight_le_majorant <;> assumption)
+  exact @GlobalTheory.ThKTorus.MajCompare.weight_le_majorant

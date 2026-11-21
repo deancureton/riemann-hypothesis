@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBiextensionGeneratorBezoutCombination
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvTranspose
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsFactorNontrivial
 import Development.AbelianVarietyTheory.Proofs.ThetaShiftProofs.NonemptyFiniteNormalising
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_biextension_generator_bezout_combination : 
       ∀ (a b : D.X) (z : (TK R).left) (J : ((TK R).left ⟶ D.P.A.left) → D.P.L.ι), Good D.P.L z J →
         val (D.tau a b) (𝟙 _) z J = val u (lift (toUnit (TK R) ≫ D.c a) (toUnit (TK R) ≫ D.c b)).left z J *
           ∏ j, val (D.tau a (c j • b)) (𝟙 _) z J ^ e j := by
-  first | exact @GlobalTheory.Mum.LamComb.exists_gen_lam_comb | exact GlobalTheory.Mum.LamComb.exists_gen_lam_comb | (intros; apply GlobalTheory.Mum.LamComb.exists_gen_lam_comb <;> assumption)
+  exact @GlobalTheory.Mum.LamComb.exists_gen_lam_comb

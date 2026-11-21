@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawWeilGlobalFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_global_factor : GlobalTheory.Published
       GlobalTheory.TripleRead.IsTransp ψ false Γ.M' om' ωB e (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU W₁ (-1) h.JW₁) (GlobalTheory.TripleRead.toUX X e h.JX) →
       ∀ R Rf, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsMatched Bs Γ Xc om om' R Rf →
         IsIrred X (ModuleCat.of ℂ (GlobalTheory.TripleAssembly.PiT R Γ Rf)) (GlobalTheory.TripleAssembly.opFin ωA (algF ψ θ true A B) (GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf)) (GlobalTheory.TripleAssembly.opLie θ ωA (algF ψ θ true A B) (GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf)) := by
-  first | exact @GlobalTheory.TripleAssembly.Irred.isIrred_piT | exact GlobalTheory.TripleAssembly.Irred.isIrred_piT | (intros; apply GlobalTheory.TripleAssembly.Irred.isIrred_piT <;> assumption)
+  exact @GlobalTheory.TripleAssembly.Irred.isIrred_piT

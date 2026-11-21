@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedTowerAdaptedPlanesFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftDef
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.matched_tower_adapted_planes_first : GlobalTheory.
       ∀ Φ ∈ schA F (Fin a' × Fin (d₁ - 2 * i)), ∀ (μ : Measure (UA σ (sp i).J)) (𝓕 : Set (UA σ (sp i).J)), μ.IsHaarMeasure →
         IsFundamentalDomain (ratU σ (sp i).J) 𝓕 μ →
       ∃ T : Finset (Pl F), ∀ v : Pl F, v ∉ T → SplitsFully E v → ∃ 𝒦 : Set (Subgroup (UA σ G.V'.J)), SmAdm (UAtSub σ G.V' (evFin F v)) (liftSpace (X := G.V') (W := sp i) om₁ Φ μ 𝓕 f v) 𝒦 := by
-  first | exact @GlobalTheory.ThK.SplitAdm.smAdm_lift | exact GlobalTheory.ThK.SplitAdm.smAdm_lift | (intros; apply GlobalTheory.ThK.SplitAdm.smAdm_lift <;> assumption)
+  exact @GlobalTheory.ThK.SplitAdm.smAdm_lift

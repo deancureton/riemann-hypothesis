@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilDatumTransportArchimedeanSliceSchwartzBounds
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsContOnOfLocal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedWeilDatumCMPreservesSchwartzHeisenberStatement
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.weilDatumTransport_archimedeanSlice_schwartz_bound
               GlobalTheory.WeilSchrodinger.IsTransportF σ B.ψ co ω om → ∀ Φ ∈ schA F κ, ∀ (y : κ → FiniteAdeleRing (𝓞 F) F) p0 (k n : ℕ), ∃ C : ℝ,
       ∀ᶠ p in nhds p0, ∀ x : κ → mixedEmbedding.mixedSpace F,
         ‖x‖ ^ k * ‖iteratedFDeriv ℝ n (fun x => om p Φ (GlobalTheory.WeilCont.adeleJoin F x y)) x‖ ≤ C := by
-  first | exact @GlobalTheory.WeilContF.slice_bounds | exact GlobalTheory.WeilContF.slice_bounds | (intros; apply GlobalTheory.WeilContF.slice_bounds <;> assumption)
+  exact @GlobalTheory.WeilContF.slice_bounds

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawWeilDoublingFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_doubling_factor : GlobalTheory.Publish
           (φ : ∀ v : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl D.host.F, (Fin W.rank × Fin (W.rank + W₁.rank) → Fv D.host.F v) → ℂ),
           Γ.M.IsGauss Bs.ψ Bs.emb f₀ → (∀ v, φ v ∈ GlobalTheory.WeilM.SB _) → (∀ᶠ v in Filter.cofinite, φ v = Γ.M.vac v) →
           GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f₀ φ) ∈ algF ψ θ true A B := by
-  first | exact @GlobalTheory.GaussThetaAlg.thO_gauss_mem_algF | exact GlobalTheory.GaussThetaAlg.thO_gauss_mem_algF | (intros; apply GlobalTheory.GaussThetaAlg.thO_gauss_mem_algF <;> assumption)
+  exact @GlobalTheory.GaussThetaAlg.thO_gauss_mem_algF

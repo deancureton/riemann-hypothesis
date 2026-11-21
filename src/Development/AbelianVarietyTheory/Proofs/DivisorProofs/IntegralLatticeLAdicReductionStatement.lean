@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralLatticeLAdicReduction
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -37,4 +36,4 @@ theorem _root_.GlobalTheory.T.integral_lattice_l_adic_reduction : ∀ (E : Type)
       IsMonHom α ∧ IsFinite α.left ∧ Flat α.left ∧ Surjective α.left ∧ 1 ≤ N ∧
       (∀ (T : Over (Sp ℂ)) (x : T ⟶ A'), x ≫ α = 1 → x ^ N = 1) ∧ (∀ w, U.u.ex (M w) = u.ex w ≫ α) ∧
       M (Pi.single j₀ 1) = (fun _ ↦ (n : ℂ)) ∧ 0 < n ∧ Sz l lam (a0 𝔣 l) ((n : ℂ)⁻¹) := by
-  first | exact @GlobalTheory.CMPowerIsogeny.exists_isogeny | exact GlobalTheory.CMPowerIsogeny.exists_isogeny | (intros; apply GlobalTheory.CMPowerIsogeny.exists_isogeny <;> assumption)
+  exact @GlobalTheory.CMPowerIsogeny.exists_isogeny

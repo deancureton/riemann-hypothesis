@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagGenericFibreIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingHomOfGeneric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
@@ -17,4 +16,4 @@ open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_generic_fibre_integral : ∀ {D : D7} {Bs Y₀ : Scheme.{0}} (q : Bs ⟶ Sp (𝓞 D.what₂.LL)) (π₀ : Y₀ ⟶ Bs) (n : ℕ),
     IsArithVar (π₀ ≫ q) n → IsIntegral (GlobalTheory.FlagGenFib.Gf q π₀) := by
-  first | exact @GlobalTheory.FlagGenFib.isIntegral_Gf | exact GlobalTheory.FlagGenFib.isIntegral_Gf | (intros; apply GlobalTheory.FlagGenFib.isIntegral_Gf <;> assumption)
+  exact @GlobalTheory.FlagGenFib.isIntegral_Gf

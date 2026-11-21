@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenRelationModelsMatrixSet
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.eigen_relation_models_matrix_set : GlobalTheory.Th
     (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W₁.IsSkew σ B r' s') →
     ∀ φ ∈ schA F (Fin n × Fin d₁), ∃ N : ℕ, 1 ≤ N ∧ ∀ w : Fin d₁ → E,
       e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) φ) ≠ 0 → ∀ i, ∃ o : 𝓞 E, (N : E) * w i = o := by
-  first | exact @GlobalTheory.ExpandXDenom.main | exact GlobalTheory.ExpandXDenom.main | (intros; apply GlobalTheory.ExpandXDenom.main <;> assumption)
+  exact @GlobalTheory.ExpandXDenom.main

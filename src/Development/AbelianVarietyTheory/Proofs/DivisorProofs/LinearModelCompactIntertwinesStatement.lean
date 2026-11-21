@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearModelCompactIntertwines
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.linear_model_compact_intertwines : GlobalTheory.Fu
       Acts (evFin F v) (om (1, h)) φ φ₁ → ι φ₁ = κ h • fun Y => ι φ (Y * (GlobalTheory.SplitFlip.invT (locMat t c h)).val)) →
     ∀ h ∈ UAt σ W (evFin F v), κ h = (chrW χX t (GlobalTheory.SplitFlip.gdet (locMat t c h)) : ℂ) *
       GlobalTheory.SplitFlip.apow (GlobalTheory.SplitFlip.gdet (locMat t c h)) (-(n : ℂ) / 2) := by
-  first | exact @GlobalTheory.DblScal.scalW_main | exact GlobalTheory.DblScal.scalW_main | (intros; apply GlobalTheory.DblScal.scalW_main <;> assumption)
+  exact @GlobalTheory.DblScal.scalW_main

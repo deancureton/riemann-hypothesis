@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationStabiliserIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.configuration_stabiliser_integral : GlobalTheory.T
       ∀ μY : Measure (Fin b × Fin (b + a') → AF F), μY.IsAddHaarMeasure →
       Integrable (fun p : K × ((AE F E)ˣ × (Fin b × Fin (b + a') → AF F)) => e (G.M.co.rho B.ψ (shiftA H H' p.2.1) (om (p.1.1, 1) Ψ)) p.2.2 * (X.ν p.2.1 : ℂ) *
           ((absE F E p.2.1 : ℝ) : ℂ) ^ ((b + 2 - a') / 2) * starRingEnd ℂ (φ p.2.2)) (μK.prod (μ.prod μY)) := by
-  first | exact @GlobalTheory.ConeIntegrand.integrable_cone_pair | exact GlobalTheory.ConeIntegrand.integrable_cone_pair | (intros; apply GlobalTheory.ConeIntegrand.integrable_cone_pair <;> assumption)
+  exact @GlobalTheory.ConeIntegrand.integrable_cone_pair

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModpFramesPowerSectionsLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.modp_frames_power_sections_lift : ∀ (X : Scheme.
     ∀ (L : Fin N → LB X) (hL : ∀ i, (L i).IsLB) (m : ℕ), (∀ i, GlobalTheory.FrameGlue.PowOfFrames p U (fun a => c a i) m (L i)) →
     ∀ (Z : Scheme.{0}) [IsIntegral Z] (ι' : Z ⟶ X), (p : Γ(Z, ⊤)) = 0 →
       ∃ g : Fin N → Pic Z, FlagOfTriv g ∧ ∀ i, CechPic.pull ι' (cls (L i) (hL i)) = m • g i := by
-  first | exact @GlobalTheory.FrameGlue.flagOfTriv_of_modPFrames | exact GlobalTheory.FrameGlue.flagOfTriv_of_modPFrames | (intros; apply GlobalTheory.FrameGlue.flagOfTriv_of_modPFrames <;> assumption)
+  exact @GlobalTheory.FrameGlue.flagOfTriv_of_modPFrames

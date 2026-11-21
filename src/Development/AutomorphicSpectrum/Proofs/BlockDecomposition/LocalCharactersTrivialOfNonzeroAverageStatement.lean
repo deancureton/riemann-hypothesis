@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalCharactersTrivialOfNonzeroAverage
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CharacterTrivialOfNonzeroSumStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValuationVectorHomomorphismStatement
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.local_characters_trivial_of_nonzero_average : ∀ 
   (M : ∀ v : Pl, LM c v), AdmM M → ∀ R : Finset (Pl →₀ ℤ), IsReps M R → ∀ Sv : Finset Pl, GoodSv M Sv →
   (∀ κ ∈ K1 K, ∏ᶠ v, (M v).ct (k1 (M v) κ) = 1) → (∑ m ∈ R, ∫ u, ctM M Sv m u ∂muU Sv) ≠ 0 →
   ∀ (v : Pl) (x : (Qv v)ˣ), (M v).ct x = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.Orth.weights_trivial | exact GlobalTheory.CompanionTheory.FexTheta.Orth.weights_trivial | (intros; apply GlobalTheory.CompanionTheory.FexTheta.Orth.weights_trivial <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.Orth.weights_trivial

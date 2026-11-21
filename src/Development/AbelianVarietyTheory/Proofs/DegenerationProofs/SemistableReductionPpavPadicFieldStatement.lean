@@ -12,4 +12,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.SS
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.semistableReduction_ppav_padicField : GlobalTheory.Published.SemistableReductionSt := by
-  first | exact @GlobalTheory.SS.semistableReductionSt | exact GlobalTheory.SS.semistableReductionSt | (intros; apply GlobalTheory.SS.semistableReductionSt <;> assumption)
+  exact @GlobalTheory.SS.semistableReductionSt

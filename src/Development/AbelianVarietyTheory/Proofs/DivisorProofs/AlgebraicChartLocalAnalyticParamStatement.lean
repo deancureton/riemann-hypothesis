@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicChartLocalAnalyticParam
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpMapCompSpMap
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.HorComp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.algebraic_chart_local_analytic_param : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (σ : κ.c.F →+* ℂ) [CompactSpace (CxPts (genStr s.T.Z) σ)] (Y : Scheme.{0}) [IsIntegral Y] (q : Y ⟶ Sp (𝓞 κ.c.F)) (jm : Y ⟶ s.T.Z.X) [IsClosedImmersion jm] (hq : jm ≫ s.T.Z.s = q) (n : ℕ), IsArithVar q n → ∀ (ch : AlgChart q (σ.comp (algebraMap (𝓞 κ.c.F) κ.c.F)) n) (y : CxPts q (σ.comp (algebraMap (𝓞 κ.c.F) κ.c.F))), y ∈ ch.e.source → ∃ ψ, GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions.IsStraightening (manifold s.T.Z σ).finAtlas (Set.range (up jm hq σ)) n ψ ∧ up jm hq σ y ∈ ψ.source := by
-  first | exact @GlobalTheory.HorComp.exists_straightening_range_up | exact GlobalTheory.HorComp.exists_straightening_range_up | (intros; apply GlobalTheory.HorComp.exists_straightening_range_up <;> assumption)
+  exact @GlobalTheory.HorComp.exists_straightening_range_up

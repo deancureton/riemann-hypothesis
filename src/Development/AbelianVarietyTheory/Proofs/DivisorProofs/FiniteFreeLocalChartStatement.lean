@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteFreeLocalChart
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.weil_doubled_darboux_coordinates : ∀ (F E : Type
     (∀ (p : UG (cA σ) (GlobalTheory.WeilM.dbl (incM F JB))) (t : GL (Fin b) (AE F E)),
       (p.1.1 : Matrix _ _ (AE F E)) * diagCols (Fin b) = diagCols (Fin b) * t.1 → ∀ φ ∈ schA F κ, l (omd p φ) = l (omd₁ p φ)) →
     ∀ p, ∀ φ ∈ schA F κ, omd p φ = omd₁ p φ := by
-  first | exact @GlobalTheory.SplitUnique.splitting_unique | exact GlobalTheory.SplitUnique.splitting_unique | (intros; apply GlobalTheory.SplitUnique.splitting_unique <;> assumption)
+  exact @GlobalTheory.SplitUnique.splitting_unique

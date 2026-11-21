@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.rho_sub_self_le_of_fderiv_le : ∀ (k : Type) [Com
       |rho a E g y t| ≤ Cc / t ^ (2 * d) * ∫ v in Metric.ball (c.e y) (Cc * t), |g (c.e.symm v)|) →
     (∀ w ∈ Metric.ball (c.e y) (Cc * t), DifferentiableAt ℝ (f ∘ c.e.symm) w ∧ ‖fderiv ℝ (f ∘ c.e.symm) w‖ ≤ M) →
     rho a E f y t - f y ≤ Cc * (volume (Metric.ball (0 : V d) 1)).toReal * Cc ^ (2 * d) * Cc * M * t := by
-  first | exact @GlobalTheory.AvgMV.avg_sub_le | exact GlobalTheory.AvgMV.avg_sub_le | (intros; apply GlobalTheory.AvgMV.avg_sub_le <;> assumption)
+  exact @GlobalTheory.AvgMV.avg_sub_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieGenericEigenMetricSetup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseAt
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
@@ -37,4 +36,4 @@ theorem _root_.GlobalTheory.T.lie_generic_eigen_metric_setup : ∀ (D : D7) (O :
         ‖ratVal ((((r a i ch)⁻¹ : G.functionFieldˣ) : G.functionField) *
           φ ((prodPow t (rootEx O.S.Dw (DV.tauEmb D a.1) (cond a.2 0 O.j + i)) : (O.var c).Fnˣ) : (O.var c).Fn)) z‖ ^ 2 *
           (O.Φ.C c).genSq (Gm (embOf O.κ.e σ)) (rootEx O.S.Dw (DV.tauEmb D a.1) (cond a.2 0 O.j + i)) g := by
-  first | exact @GlobalTheory.FlagCovWeight.weight_lie | exact GlobalTheory.FlagCovWeight.weight_lie | (intros; apply GlobalTheory.FlagCovWeight.weight_lie <;> assumption)
+  exact @GlobalTheory.FlagCovWeight.weight_lie

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TameKernelVectorUnitMulDilatedFlat
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NabBaseChange
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice IsDedekindDomain NumberField Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR
 open Formalism.IndefR.Links Formalism.IndefR.Datum Formalism.IndefR.FWT Formalism.L2.Pj
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.tameKernel_vector_unit_mul_dilated_flat : ∀ (D :
     ∀ ϖ : 𝓞 D.host.E, ϖ ≠ 0 → (∀ PP ∈ Q, ϖ ∈ PP.asIdeal ∧ ϖ ∉ PP.asIdeal ^ 2) →
       ∃ Gc : ℂ, UnitOff N Gc ∧ IsSBHalf eQ (lattice₂ R i) (fun x => Gc * flatDat R i Q ξR eQ (dil i (ϖ : D.host.E) x)) ∧
         ∀ Tm, IsModel R i eQ fg Tm → φ = Tm (fun x => Gc * flatDat R i Q ξR eQ (dil i (ϖ : D.host.E) x)) := by
-  first | exact @GlobalTheory.BaseCmp.liftKer_of_ne | exact GlobalTheory.BaseCmp.liftKer_of_ne | (intros; apply GlobalTheory.BaseCmp.liftKer_of_ne <;> assumption)
+  exact @GlobalTheory.BaseCmp.liftKer_of_ne

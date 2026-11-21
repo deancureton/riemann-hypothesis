@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.mod_q_curve_height_lower_bound : GlobalTheory.CovT
     [Algebra (ZMod q) Γ(Z, ⊤)], topologicalKrullDim Z = 1 →
     ∃ μ : ℝ, 0 < μ ∧ GlobalTheory.CurveSemiAbelianConjecture.CurveData q O.j (fun (τ : D.what₂.Tau) (k : Fin O.N) =>
       μ * (topSelfIntersection (ZMod q) (((h.mdl (FlagAr.setB O.Y B) c).root (FlagAr.setB O.Y B) (τ, k)).B.pull i) 1 : ℝ)) := by
-  first | exact @GlobalTheory.CurveRootGeometry.curveData_roots | exact GlobalTheory.CurveRootGeometry.curveData_roots | (intros; apply GlobalTheory.CurveRootGeometry.curveData_roots <;> assumption)
+  exact @GlobalTheory.CurveRootGeometry.curveData_roots

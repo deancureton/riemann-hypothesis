@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBTripleSixthForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_sixth_form : GlobalTheory.ThK
     IsNormK K (evFin F B.v₁) μKv → IsNormE E B.v₁ μv →
     ∀ h ∈ UAt σ G₁.W (evFin F B.v₁), ∀ φ ∈ (Submodule.span ℂ (coneFin B G.M' om' B.v₁ (ev B.v₁) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) '' G.M'.SoLoc B.ψ B.τ₁) ⊔ augAt om₁' B.v₁), ∀ φ₁ ∈ SB (Fin b × Fin (a + b) → Fv F B.v₁),
       Acts (evFin F B.v₁) (om₁' (1, h)) φ φ₁ → φ₁ ∈ (Submodule.span ℂ (coneFin B G.M' om' B.v₁ (ev B.v₁) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) '' G.M'.SoLoc B.ψ B.τ₁) ⊔ augAt om₁' B.v₁) := by
-  first | exact @GlobalTheory.ConeStabLv.span_cone_aug_stable | exact GlobalTheory.ConeStabLv.span_cone_aug_stable | (intros; apply GlobalTheory.ConeStabLv.span_cone_aug_stable <;> assumption)
+  exact @GlobalTheory.ConeStabLv.span_cone_aug_stable

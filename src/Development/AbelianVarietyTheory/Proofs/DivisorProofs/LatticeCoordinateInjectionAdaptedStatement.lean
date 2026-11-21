@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.lattice_coordinate_injection_adapted : ∀ (F E : 
         (∀ γ ∈ latAtV X W v, schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo co v γ) φ =
           B.ψ (⅟(2 : AF F) * symp (R := AF F) (cA σ) (inclR (F := F) (AF F) (θ : E)) (incM F X.J) (incM F W.J) γ γ) • φ) →
         ∀ x, φ x ≠ 0 → φ (Function.extend j (x ∘ j) 0) ≠ 0 := by
-  first | exact @GlobalTheory.VacResNonvan.nonvan | exact GlobalTheory.VacResNonvan.nonvan | (intros; apply GlobalTheory.VacResNonvan.nonvan <;> assumption)
+  exact @GlobalTheory.VacResNonvan.nonvan

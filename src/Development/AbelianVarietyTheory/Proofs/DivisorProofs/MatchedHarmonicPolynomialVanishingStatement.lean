@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedHarmonicPolynomialVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.matched_harmonic_polynomial_vanishing : GlobalTheo
       (Φ : Tens F P Q Rn Sn →ₗ[ℂ] SInf F (Fin a × Fin (a + a'))), GlobalTheory.FockBridge.IsFockData B G.M A C Φ →
       ∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ (tensHarm F P Q Rn Sn (halfKap B)).map Φ, ∀ f₁ : SInf F (Fin a × Fin (a + a')),
         Acts (evI F) (om (1, k)) f f₁ → f₁ ∈ (tensHarm F P Q Rn Sn (halfKap B)).map Φ := by
-  first | exact @GlobalTheory.HarmKStab.kInf_mem_tensHarm | exact GlobalTheory.HarmKStab.kInf_mem_tensHarm | (intros; apply GlobalTheory.HarmKStab.kInf_mem_tensHarm <;> assumption)
+  exact @GlobalTheory.HarmKStab.kInf_mem_tensHarm

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerTwoPlanes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_two_planes : GlobalTheory.FunPr.
     (H' : Plane E d d₁) (M : Model σ X W) (M₁ : Model σ X₁ W₁), B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' →
     M.IsGood B.ψ → H.IsAdapted σ B X X₁ j₀ j₁ → H'.IsAdapted σ B W W₁ i₀ i₁ → M₁.IsGood B.ψ →
     ∃ (Ma : Model σ X W) (e : Fn F n d →ₗ[ℂ] Fn F n₁ d₁), Ma.IsGood B.ψ ∧ IsEv B Ma M₁ H.ι H'.ι (isoB H H') e := by
-  first | exact @GlobalTheory.ThK.PlaneCo.exists_ev_isoB | exact GlobalTheory.ThK.PlaneCo.exists_ev_isoB | (intros; apply GlobalTheory.ThK.PlaneCo.exists_ev_isoB <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.exists_ev_isoB

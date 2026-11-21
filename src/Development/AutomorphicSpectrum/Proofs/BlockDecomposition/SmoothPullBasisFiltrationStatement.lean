@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothPullBasisFiltration
-import Mathlib
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.PerfectoidPullbacks.SplittingFieldLattices.BasisB
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.CechPairings.Imports
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ZKApply
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.smooth_pull_basis_filtration : ∀ {O A : Type} [C
     (x : HdR q j),
     ((smO γ q l s 𝒱).sqC a ha hb).pull j (GlobalTheory.CompanionTheory.BasisBase.zK q (TO q l s 𝒱) t u ht j x) =
       quoM (TS γ q l s 𝒱) r j (a • muB γ q l s 𝒱 j x) := by
-  first | exact @GlobalTheory.CompanionTheory.BasisBase.sqC_zK | exact GlobalTheory.CompanionTheory.BasisBase.sqC_zK | (intros; apply GlobalTheory.CompanionTheory.BasisBase.sqC_zK <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BasisBase.sqC_zK

@@ -9,4 +9,4 @@ open scoped ENNReal Classical
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.ShFam.Pad GlobalTheory.VertForm GlobalTheory.CoverNorm
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.combined_metrized_bundle_nef_antitone : Hypotheses2 → HypothesesH → OnObj fun D O _ _ _ _ => ∀ (c : O.s.Comp) (Q : Finset ℕ) (l : ℕ), l ∈ Q → l.Prime → ∃ (V : Cover (O.var c)) (M : DV.Rt D.what₂.Tau O.N → HermLB V.p), (∀ x, Norms V (M x) (fun z => genAt (O.root0 c Q x).D z) (fun σ y => lnAdl (O.root0 c Q x) σ y) (fun v e y => (O.root0 c Q x).lg v e y)) ∧ ∀ n : D.what₂.Tau → Fin O.N → ℤ, (∀ τ, Antitone (n τ)) → NefOver (ArInt.comb M fun x => -n x.1 x.2) l := by
-  first | exact @GlobalTheory.HtNefCore.exists_cover_nefOver | exact GlobalTheory.HtNefCore.exists_cover_nefOver | (intros; apply GlobalTheory.HtNefCore.exists_cover_nefOver <;> assumption)
+  exact @GlobalTheory.HtNefCore.exists_cover_nefOver

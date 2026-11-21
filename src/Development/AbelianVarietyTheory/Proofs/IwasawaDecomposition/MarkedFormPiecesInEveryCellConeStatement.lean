@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MarkedFormPiecesInEveryCellCone
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EqZeroOfIsOrbFormConst
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullAddInjective
 open NumberField ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.Toroidal GlobalTheory.LocM GlobalTheory.TorRef GlobalTheory.PolFan GlobalTheory.PolFan.OrbMark
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.marked_form_pieces_in_every_cell_cone : ∀ (E : T
   ∀ (m : ℕ) (δ : Fin m → LinearMap.BilinForm ℤ X), IsCell H.bar φ δ →
   ∀ c : Fin m → ℝ, (∀ j, 0 ≤ c j) → toReal β = ∑ j, c j • toReal (δ j) →
   ∀ i, 0 < t i → InRCone δ (pullAdd f (u i)) := by
-  first | exact @GlobalTheory.PolFan.OrbMark.inRCone_pullAdd_of_isCell | exact GlobalTheory.PolFan.OrbMark.inRCone_pullAdd_of_isCell | (intros; apply GlobalTheory.PolFan.OrbMark.inRCone_pullAdd_of_isCell <;> assumption)
+  exact @GlobalTheory.PolFan.OrbMark.inRCone_pullAdd_of_isCell

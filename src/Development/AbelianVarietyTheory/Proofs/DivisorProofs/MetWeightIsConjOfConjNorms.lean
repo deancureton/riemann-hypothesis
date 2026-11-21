@@ -45,6 +45,6 @@ section
 open CategoryTheory AlgebraicGeometry NumberField ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.ArInt GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CxPts GlobalTheory.Mean4O.CombForm
 theorem _root_.GlobalTheory.Adopt.metWeight_isConj_of_conj_norms : ∀ (F : Type) [Field F] [NumberField F] (C : CxSt F) (Y : Var F) (Δ : Y.Dv) (m : ∀ σ, C.Met Y σ Δ) (hm : ∀ σ y, PosAt (m σ) y), (∀ (σ σ' : F →+* ℂ) (y : Pts Y σ) (y' : Pts Y σ'), y'.1 = spMap (starRingEnd ℂ) ≫ y.1 → C.pn Y σ' Δ (m σ') (C.cx Y σ' (genAt Δ (under y'))) y' = C.pn Y σ Δ (m σ) (C.cx Y σ (genAt Δ (under y))) y) → ∀ σ σ', (metWeight Δ (m σ) (hm σ)).IsConj (metWeight Δ (m σ') (hm σ')) := by
-  first | exact @MetricConjugation.GlobalTheory.CompanionTheory.MetConj.metWeight_isConj | exact MetricConjugation.GlobalTheory.CompanionTheory.MetConj.metWeight_isConj | (intros; apply MetricConjugation.GlobalTheory.CompanionTheory.MetConj.metWeight_isConj <;> assumption)
+  exact @MetricConjugation.GlobalTheory.CompanionTheory.MetConj.metWeight_isConj
 
 end

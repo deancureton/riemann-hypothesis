@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_first : GlobalTheory.ThK
     ∀ (V₁ : Spc F E d₂) (M₁ : Model σ V₁ W) (e : Fn F n d →ₗ[ℂ] Fn F d₂ d),
       V₁.J = H.ιᵀ * X.J * H.ι.map σ → M₁.IsGood B.ψ → IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ u ∈ unip σ X H, ∀ Ψ ∈ schA F (Fin n × Fin d), e (om (u, 1) Ψ) = e Ψ := by
-  first | exact @GlobalTheory.MixXUnipPlain.evalX_unip_invariant | exact GlobalTheory.MixXUnipPlain.evalX_unip_invariant | (intros; apply GlobalTheory.MixXUnipPlain.evalX_unip_invariant <;> assumption)
+  exact @GlobalTheory.MixXUnipPlain.evalX_unip_invariant

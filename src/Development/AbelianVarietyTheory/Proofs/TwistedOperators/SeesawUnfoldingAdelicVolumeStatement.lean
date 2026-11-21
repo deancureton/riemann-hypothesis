@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawUnfoldingAdelicVolume
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.isDer_of_hasDerivAt_kapX_oneP : GlobalTheory.FunPr
     ∀ τ, ∀ Y ∈ lieAt X τ, ∀ ΦD ∈ algD Γ.M' Bs.ψ Bs.emb, ∀ Ψ ∈ algD Γ.M' Bs.ψ Bs.emb,
     (∀ x, HasDerivAt (fun t : ℝ => om' (1, kapX X e hO.JX (oneP θ X τ Y t)) ΦD x) (Ψ x) 0) → ∀ Φ Φ',
     IsDatum Γ.M' ψ cB ΦD Φ → IsDatum Γ.M' ψ cB Ψ Φ' → IsDer θ X (fun h => ωB (1, h)) τ Y Φ Φ' := by
-  first | exact @GlobalTheory.SquareAgree.LineDerFunB.isDer_of_datum | exact GlobalTheory.SquareAgree.LineDerFunB.isDer_of_datum | (intros; apply GlobalTheory.SquareAgree.LineDerFunB.isDer_of_datum <;> assumption)
+  exact @GlobalTheory.SquareAgree.LineDerFunB.isDer_of_datum

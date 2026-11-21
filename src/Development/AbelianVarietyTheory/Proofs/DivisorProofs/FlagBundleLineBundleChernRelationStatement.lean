@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleLineBundleChernRelation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FsOne
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_line_bundle_chern_relation : ∀ (k : 
               (PtsOver.map π w (spMap σ) ⁻¹' S ∩ v ⁻¹' J) =
             ∫⁻ b in S, (∫⁻ x : ℂ, J.indicator (fun _ => (1 : ENNReal)) (GlobalTheory.FibCos.cos (G b) x) *
               ENNReal.ofReal (GlobalTheory.FibCos.fs (G b) x)) ∂((hB.atlas σ).part φ (-ε)) := by
-  first | exact @GlobalTheory.FibLoc.local_product | exact GlobalTheory.FibLoc.local_product | (intros; apply GlobalTheory.FibLoc.local_product <;> assumption)
+  exact @GlobalTheory.FibLoc.local_product

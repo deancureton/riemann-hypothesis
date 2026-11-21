@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationCompactSetBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.evaluation_compact_set_bound : GlobalTheory.ThK.KP
         ‖e (om (κ, h) (pureA F f φ)) z‖ ≤
           C * semK (Fin n × Fin d) k f * (ht h : ℝ) ^ k * ((1 + ∑ j, ∑ w : InfinitePlace F, mixedEmbedding.normAtPlace w (evI F (z j))) ^ N)⁻¹ ∧
         (e (om (κ, h) (pureA F f φ)) z ≠ 0 → ∀ j (v : Pl F), evFin F v ((m : AF F) * z j) ∈ v.adicCompletionIntegers F) := by
-  first | exact @GlobalTheory.ThKTorusBound.major_bound | exact GlobalTheory.ThKTorusBound.major_bound | (intros; apply GlobalTheory.ThKTorusBound.major_bound <;> assumption)
+  exact @GlobalTheory.ThKTorusBound.major_bound

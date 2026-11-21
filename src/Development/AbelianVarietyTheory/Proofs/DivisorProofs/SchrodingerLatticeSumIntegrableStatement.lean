@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerLatticeSumIntegrable
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -15,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.schrodinger_lattice_sum_integrable : ∀ (F : Type) [Field F] [NumberField F] (ψ : AddChar (AF F) ℂ), IsStd ψ → ∀ (κ : Type) [Fintype κ] (r : ℕ) (u : Fin r → (κ → F) × (κ → F)), LinearIndependent F (fun j => (u j).1) →
     ∀ μ : @Measure (Fin r → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ →
     ∀ φ ∈ schA F κ, Integrable (fun x : Fin r → AF F => schr ψ (∑ j, x j • ((fun k => algebraMap F (AF F) ((u j).1 k)), (fun k => algebraMap F (AF F) ((u j).2 k)))) φ 0) μ := by
-  first | exact @GlobalTheory.LagrIntg.integrable_lagrForm | exact GlobalTheory.LagrIntg.integrable_lagrForm | (intros; apply GlobalTheory.LagrIntg.integrable_lagrForm <;> assumption)
+  exact @GlobalTheory.LagrIntg.integrable_lagrForm

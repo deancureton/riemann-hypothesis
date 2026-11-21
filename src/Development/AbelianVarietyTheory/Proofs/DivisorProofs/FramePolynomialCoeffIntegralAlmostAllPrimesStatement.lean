@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FramePolynomialCoeffIntegralAlmostAllPrimes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.framePolynomial_coeff_integral_almost_all_primes :
           (∀ b, (Y b).det ≠ 0) → GlobalTheory.Frames.FrChg (fun b => (Y b).transpose) (s : z.K) z.y y' →
           (∏ b, (Y b).det ^ k b) * evR Xo c F y' = Formalism.L2.LamCM.evalFr G Y) →
         ∀ μ, p.valuation z.K (MvPolynomial.coeff μ G) ≤ 1 := by
-  first | exact @GlobalTheory.CoeffInt.coeff_valuation_le_one_almost_all | exact GlobalTheory.CoeffInt.coeff_valuation_le_one_almost_all | (intros; apply GlobalTheory.CoeffInt.coeff_valuation_le_one_almost_all <;> assumption)
+  exact @GlobalTheory.CoeffInt.coeff_valuation_le_one_almost_all

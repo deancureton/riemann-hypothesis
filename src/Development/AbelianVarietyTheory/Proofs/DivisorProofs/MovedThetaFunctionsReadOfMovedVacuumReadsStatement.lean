@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MovedThetaFunctionsReadOfMovedVacuumReads
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
 
 open NumberField MeasureTheory
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.movedThetaFunctions_read_of_movedVacuum_reads : �
   ∀ (x : Formalism.MainNotions.StandardLatticesGL3.GA D a) (y : Formalism.MainNotions.StandardLatticesGL3.GA D d) (g : GA D S) (h : GA D T), IsFinPt S g x → IsFinPt T h y →
   ∀ (c : ℂ) (f₀ : WO S T → ℂ), Reads ψ θ hS hT cc δ r e0 f₀ → Reads ψ θ hS hT cc δ r (c • W.Om x y e0) (om (g, h) f₀) →
   ∀ G ∈ TT D (tor0 D cc δ) a d, ∀ f, Reads ψ θ hS hT cc δ r G f → Reads ψ θ hS hT cc δ r (c • W.Om x y G) (om (g, h) f) := by
-  first | exact @GlobalTheory.NormExact.reads_om_of_vacuum | exact GlobalTheory.NormExact.reads_om_of_vacuum | (intros; apply GlobalTheory.NormExact.reads_om_of_vacuum <;> assumption)
+  exact @GlobalTheory.NormExact.reads_om_of_vacuum

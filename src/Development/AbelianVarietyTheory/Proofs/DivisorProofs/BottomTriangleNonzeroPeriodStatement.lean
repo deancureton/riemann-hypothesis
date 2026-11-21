@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleNonzeroPeriod
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_nonzero_period : GlobalTheory.FunP
           ∀ (ea : P.a = A.rank) (ed : P.d = WW.rank) (h : GA D P.d) (g : GA D WW) (x : GA D P.a) (y : GA D A),
             GlobalTheory.BotFormula.IsFinPt WW g h → GlobalTheory.BotFormula.IsFinPt A y x →
             ∀ T, X.ker W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T) g y = Ω₀ * u * starRingEnd ℂ (P.term x h T) := by
-  first | exact @GlobalTheory.KerFin.bottom_kernel | exact GlobalTheory.KerFin.bottom_kernel | (intros; apply GlobalTheory.KerFin.bottom_kernel <;> assumption)
+  exact @GlobalTheory.KerFin.bottom_kernel

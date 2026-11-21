@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneUnitaryStabiliser
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -35,4 +34,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_unitary_stabiliser : ∀ (F E : T
       ∃ Kf : Subgroup (GAd σ (c₀ • W.J.map σ)), IsCompact (Kf : Set (GAd σ (c₀ • W.J.map σ))) ∧ Kf ≤ finPts σ (c₀ • W.J.map σ) ∧
       (∃ U : Subgroup (GAd σ (c₀ • W.J.map σ)), IsOpen (U : Set (GAd σ (c₀ • W.J.map σ))) ∧ U ⊓ finPts σ (c₀ • W.J.map σ) ≤ Kf) ∧
       ∀ g : GAd σ (c₀ • W.J.map σ), ∃ (t : (AE F E)ˣ) (y : GAd σ (c₀ • W₁.J.map σ)) (p : GAd σ (c₀ • W.J.map σ)), GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y p ∧ ∃ k ∈ K', ∃ k₂ ∈ Kf, g = p * (k * k₂) := by
-  first | exact @GlobalTheory.IwLineGen.iwasawa | exact GlobalTheory.IwLineGen.iwasawa | (intros; apply GlobalTheory.IwLineGen.iwasawa <;> assumption)
+  exact @GlobalTheory.IwLineGen.iwasawa

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DvdOfValuationLeAllDvr
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.PsiCoordExistsUniqueUpToUnitLocal
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.dvd_of_valuation_le_all_dvr : ∀ (R : Type) [Comm
     ∀ r s : R, r ≠ 0 →
     (∀ (W : Type) [CommRing W] [IsDomain W] [IsLocalRing W], CDvr W → ∀ ϖ : W, Irreducible ϖ → ∀ f : R →+* W,
       Function.Injective f → ∀ n m : ℕ, Associated (f r) (ϖ ^ n) → Associated (f s) (ϖ ^ m) → n ≤ m) → r ∣ s := by
-  first | exact @GlobalTheory.dvd_of_forall_complete_dvr_order_le | exact GlobalTheory.dvd_of_forall_complete_dvr_order_le | (intros; apply GlobalTheory.dvd_of_forall_complete_dvr_order_le <;> assumption)
+  exact @GlobalTheory.dvd_of_forall_complete_dvr_order_le

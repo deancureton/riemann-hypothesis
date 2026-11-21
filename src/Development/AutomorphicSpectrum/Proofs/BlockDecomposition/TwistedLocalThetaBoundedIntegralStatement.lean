@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.twisted_local_theta_bounded_integral : ∀ (K : Ty
   L.ok → ∀ g₀ : GL (Fin 2) (Qv v), L.plus g₀ → ∀ T : Set (Qv v)ˣ, IsCompact T → ∃ (B : ℝ) (N : ℕ), N ≠ 0 ∧
     ∀ τ ∈ T, ∀ ξ : K, ‖(L.tw τ).val g₀ ξ‖ ≤ B ∧ ((L.tw τ).val g₀ ξ ≠ 0 →
       ∀ w : PlK K, w.asIdeal.LiesOver v.asIdeal → algebraMap K (Kv K w) ((N : K) * ξ) ∈ 𝒪[Kv K w]) := by
-  first | exact @GlobalTheory.CompanionTheory.ThetaBound.bound | exact GlobalTheory.CompanionTheory.ThetaBound.bound | (intros; apply GlobalTheory.CompanionTheory.ThetaBound.bound <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ThetaBound.bound

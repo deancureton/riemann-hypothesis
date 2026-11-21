@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModuleActionOfFieldFibres
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingActionOfIsGrpPullback
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.module_action_of_field_fibres : ∀ (R O : Type) [
       Module.Invertible (K ⊗[ℤ] O) N) →
     letI : Module (R ⊗[ℤ] O) M := TensorProduct.Algebra.module
     Module.Invertible (R ⊗[ℤ] O) M := by
-  first | exact @GlobalTheory.invertible_of_fibres_invertible | exact GlobalTheory.invertible_of_fibres_invertible | (intros; apply GlobalTheory.invertible_of_fibres_invertible <;> assumption)
+  exact @GlobalTheory.invertible_of_fibres_invertible

@@ -4,4 +4,4 @@ import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExist
 open ReciprocityTheory.Ty.Fin
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cuspidal_vanishing : ReciprocityTheory.Ty.Fin.St.CuspVanish := by
-  first | exact @GlobalTheory.CompanionTheory.TyFin.CuspVan.cuspVanish | exact GlobalTheory.CompanionTheory.TyFin.CuspVan.cuspVanish | (intros; apply GlobalTheory.CompanionTheory.TyFin.CuspVan.cuspVanish <;> assumption)
+  exact @GlobalTheory.CompanionTheory.TyFin.CuspVan.cuspVanish

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentFundamentalDomain
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.unipotent_fundamental_domain : ∀ (F E : Type) [F
       (∀ k l, form σ W.J (fun a => Y a k) (fun a => Y a l) = 0) →
       ∃ (ν : Measure (GlobalTheory.ThKLiftCusp.unipSp σ W Y)) (𝓕 : Set (GlobalTheory.ThKLiftCusp.unipSp σ W Y)), ν.IsHaarMeasure ∧
         IsFundamentalDomain ((ratU σ W.J).subgroupOf (GlobalTheory.ThKLiftCusp.unipSp σ W Y)) 𝓕 ν ∧ ν 𝓕 = 1 := by
-  first | exact @GlobalTheory.UnipSpMass.exists_haar_unipSp_mass_one | exact GlobalTheory.UnipSpMass.exists_haar_unipSp_mass_one | (intros; apply GlobalTheory.UnipSpMass.exists_haar_unipSp_mass_one <;> assumption)
+  exact @GlobalTheory.UnipSpMass.exists_haar_unipSp_mass_one

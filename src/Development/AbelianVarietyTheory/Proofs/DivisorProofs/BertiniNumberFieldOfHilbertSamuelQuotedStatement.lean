@@ -9,4 +9,4 @@ open ReciprocityTheory.ChartRestriction.G.Out (nonzeroLocus)
 open GlobalTheory GlobalTheory.ChowHt GlobalTheory.Adelic GlobalTheory.HSCore GlobalTheory.HSChoice GlobalTheory.HSShort
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bertiniNumberField_of_hilbertSamuel₂ : Quoted → BertiniNF := by
-  first | exact @GlobalTheory.HSShort.bertiniNumberField_of_hilbertSamuel | exact GlobalTheory.HSShort.bertiniNumberField_of_hilbertSamuel | (intros; apply GlobalTheory.HSShort.bertiniNumberField_of_hilbertSamuel <;> assumption)
+  exact @GlobalTheory.HSShort.bertiniNumberField_of_hilbertSamuel

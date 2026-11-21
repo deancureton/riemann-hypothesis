@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalPreservingInSiegelParabolic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryGroupIsoGLStatement
@@ -19,4 +18,4 @@ open Formalism.UG (IsUnifV qV)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.diagonal_preserving_in_siegel_parabolic : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E), IsCMExt F E σ → ∀ (n : ℕ) (J : Matrix (Fin n) (Fin n) E) (X₂ : Spc F E (n + n)), J.det ≠ 0 → X₂.J = dblGram finSumFinEquiv J → ∀ (v : Pl F) (t : E →ₐ[F] Fv F v) (p : UA σ X₂.J), p ∈ UAt σ X₂ (evFin F v) → KeepsDiag finSumFinEquiv ((mat p).map (piW t)) → p ∈ siegelOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype := by
-  first | exact @GlobalTheory.ThK.SplitSiegel.mem_siegel_of_split | exact GlobalTheory.ThK.SplitSiegel.mem_siegel_of_split | (intros; apply GlobalTheory.ThK.SplitSiegel.mem_siegel_of_split <;> assumption)
+  exact @GlobalTheory.ThK.SplitSiegel.mem_siegel_of_split

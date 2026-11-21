@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaGridSquareRankInequalities
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.thetaGridSquare_rank_inequalities : ∀ {D : D7} {
     (spW₁ G i j).rank < (spW G i j).rank ∧ Even ((spW G i j).rank + (spW₁ G i j).rank) ∧
     2 * ((D.R.m - j - 1) / 2 + (D.R.m - j) / 2) + 1 < ((spW G i j).rank - (spW₁ G i j).rank) / 2 ∧
     2 * ((D.R.m - j - 1) / 2 + (D.R.m - j) / 2) + 1 < (spW₁ G i j).rank := by
-  first | exact @GlobalTheory.Div.SquareRanks.square_ranks | exact GlobalTheory.Div.SquareRanks.square_ranks | (intros; apply GlobalTheory.Div.SquareRanks.square_ranks <;> assumption)
+  exact @GlobalTheory.Div.SquareRanks.square_ranks

@@ -14,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.induced_metric_of_isometric : ∀ {F : Type} [Field F] [NumberField F] {C : TrueGeo.CxSt F} {Yv : ProjVar.Var F}
     (V : Cover Yv) (A : TrueGeo.Adl C Yv) (L M : HermLB V.p) (k : ℕ),
     V.Induces A L k → L.Isometric M → V.Induces A M k := by
-  first | exact @GlobalTheory.InducesIsom.main | exact GlobalTheory.InducesIsom.main | (intros; apply GlobalTheory.InducesIsom.main <;> assumption)
+  exact @GlobalTheory.InducesIsom.main

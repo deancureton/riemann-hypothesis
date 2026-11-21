@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CardSmulTwistedProjectorMemIntegralForms
-import Mathlib
 import Formalism.LocalToGlobal.IndefiniteReal.GramCEqTranspose
 open NumberField
 set_option maxHeartbeats 1000000 in
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.card_smul_twistedProjector_mem_integralForms : ∀
     (∀ g h, eC (h * g * h⁻¹) = eC g) → (∀ g, IsIntegral ℤ ((Fintype.card G0 : LL) * eC g)) →
     (∀ g f, f ∈ A.MK → A.ρ g f ∈ A.MK) → ∀ (J0 : Subgroup G0) (lam0 : J0 →* LLˣ),
     ∀ x ∈ A.Mall J0 lam0, ((Fintype.card G0 : ℕ) : LL) • A.eOp eC x ∈ A.Mall J0 lam0 := by
-  first | exact @GlobalTheory.card_smul_eOp_mem_Mall | exact GlobalTheory.card_smul_eOp_mem_Mall | (intros; apply GlobalTheory.card_smul_eOp_mem_Mall <;> assumption)
+  exact @GlobalTheory.card_smul_eOp_mem_Mall

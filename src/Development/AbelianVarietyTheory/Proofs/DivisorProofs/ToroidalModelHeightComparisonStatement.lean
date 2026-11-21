@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_height_comparison : ∀ {E : Type} 
     ∀ {M : X.Modules} {r g : ℕ} (τ : E →+* ℂ) (t : FrAssign Z M r jB), IsLieFrames Z e jB πB M r τ false t →
     ∀ (ch : VB.Chart (omega Z.t.G) g) (V : X.Opens), V ≤ ρ ⁻¹ᵁ ch.U → IsAffineOpen V →
     ∀ (f : Fin r → Γ(M, V)) (hf : VB.IsFrame f), ∃ A, GenCoord Z jB πB t ch hf A := by
-  first | exact @GlobalTheory.LieFilt.exists_genCoord | exact GlobalTheory.LieFilt.exists_genCoord | (intros; apply GlobalTheory.LieFilt.exists_genCoord <;> assumption)
+  exact @GlobalTheory.LieFilt.exists_genCoord

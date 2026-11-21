@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.lattice_invariant_vector_local_support : ∀ (F E 
       (w : (Fin n × Fin d → Fv F v) × (Fin n × Fin d → Fv F v)),
       (∀ γ ∈ latAtV X W v, GlobalTheory.LatVac.psiAt B.ψ v ((GlobalTheory.LatVac.locCo co v γ).1 ⬝ᵥ w.2 - w.1 ⬝ᵥ (GlobalTheory.LatVac.locCo co v γ).2) = 1) →
       w ∈ (latAtV X W v).map (GlobalTheory.LatVac.locCo co v) := by
-  first | exact @GlobalTheory.LatSelfDualCo.latAtV_selfDual_locCo | exact GlobalTheory.LatSelfDualCo.latAtV_selfDual_locCo | (intros; apply GlobalTheory.LatSelfDualCo.latAtV_selfDual_locCo <;> assumption)
+  exact @GlobalTheory.LatSelfDualCo.latAtV_selfDual_locCo

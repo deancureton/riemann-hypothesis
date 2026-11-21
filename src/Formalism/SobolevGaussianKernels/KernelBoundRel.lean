@@ -1,5 +1,4 @@
 import Formalism.SobolevGaussianKernels.GaussianKernelBounds.EichlerEquivalenceHolds
-import Mathlib
 import Formalism.SobolevGaussianKernels.StatementCS
 import Formalism.SobolevGaussianKernels.GaussianKernelBounds.LfProd
 import Formalism.SobolevGaussianKernels.GaussianKernelBounds.NeighbourhoodHilbertSchmidtHolds

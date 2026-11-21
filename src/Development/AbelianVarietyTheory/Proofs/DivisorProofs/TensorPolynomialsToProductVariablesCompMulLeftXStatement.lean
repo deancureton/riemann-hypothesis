@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TensorPolynomialsToProductVariablesCompMulLeftX
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEval
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.tensorPolynomialsToProductVariables_comp_mulLeft_X
     GlobalTheory.CCRFock.polMap W Λ ∘ₗ GlobalTheory.RealLift.atPl (V := fun _ : W => MvPolynomial Λ ℂ) w
                  (LinearMap.mulLeft ℂ (MvPolynomial.X l)) =
       LinearMap.mulLeft ℂ (MvPolynomial.X (w, l)) ∘ₗ GlobalTheory.CCRFock.polMap W Λ := by
-  first | exact @GlobalTheory.CCRFock.polMap_comp_atPl_mulLeft_X | exact GlobalTheory.CCRFock.polMap_comp_atPl_mulLeft_X | (intros; apply GlobalTheory.CCRFock.polMap_comp_atPl_mulLeft_X <;> assumption)
+  exact @GlobalTheory.CCRFock.polMap_comp_atPl_mulLeft_X

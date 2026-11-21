@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.boundary_potential_section_bound : ∀ (d : ℕ) (
     (∀ k, 1 ≤ e 0 k → (∃ i : Fin m, 1 ≤ e i.succ k) → RankDropAlong A μ B (W k)) →
     chartSumInt B ((poincarePot α Λ σ c).pullback μ hμ.1) (μ ⁻¹' boundary σ)ᶜ
       (fun y => absLogNorm L s (μ y)) < ∞ := by
-  first | exact @GlobalTheory.LogResInt.onResolution | exact GlobalTheory.LogResInt.onResolution | (intros; apply GlobalTheory.LogResInt.onResolution <;> assumption)
+  exact @GlobalTheory.LogResInt.onResolution

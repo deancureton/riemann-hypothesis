@@ -9,4 +9,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hodge_tate_power_sum_and_siegel : Hypotheses2 → HypothesesH → RegularAlteration → ScholzeWeinsteinB → OnObj fun _ O _ _ _ _ => PrimeLocalSplitCondition O.Y ∧ SiegRead O.Y := by
-  first | exact @GlobalTheory.WholeHT.hodge_tate_power_sum_siegel_read | exact GlobalTheory.WholeHT.hodge_tate_power_sum_siegel_read | (intros; apply GlobalTheory.WholeHT.hodge_tate_power_sum_siegel_read <;> assumption)
+  exact @GlobalTheory.WholeHT.hodge_tate_power_sum_siegel_read

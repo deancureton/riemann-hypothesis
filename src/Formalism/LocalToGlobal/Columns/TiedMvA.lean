@@ -19,7 +19,6 @@ def SameOffC {E : Type} [Field E] [NumberField E] [StarRing E] {n : ℕ} (P : Id
 
 variable {D : ColRec} {u : D.what₂.Word} (A : CF.AtTTied u) (P : ∀ i hi, CF.LvTied u A i hi)
 
-set_option maxHeartbeats 4000000 in
 
 structure AtTMovesC where
 

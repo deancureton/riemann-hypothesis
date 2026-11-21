@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodicCompactSupportFiniteSum
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenScaledInt
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.periodic_compact_support_finite_sum : ∀ (F : Typ
     (∀ y, ∀ u ∈ GlobalTheory.EvAdm.scaledInt F κ d, g (y + u) = g y) →
     ∃ R : Finset (κ → FiniteAdeleRing (𝓞 F) F),
       g = ∑ r ∈ R, g r • Set.indicator {y | y - r ∈ GlobalTheory.EvAdm.scaledInt F κ d} (fun _ => (1 : ℂ)) := by
-  first | exact @GlobalTheory.EvAdm.eq_sum_coset_indicator_scaledInt | exact GlobalTheory.EvAdm.eq_sum_coset_indicator_scaledInt | (intros; apply GlobalTheory.EvAdm.eq_sum_coset_indicator_scaledInt <;> assumption)
+  exact @GlobalTheory.EvAdm.eq_sum_coset_indicator_scaledInt

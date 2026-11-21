@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 set_option maxHeartbeats 1000000 in
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_theta : ∀ {F E : Type} [Fiel
     IsNormK K (evFin F B.v₁) μK₁ → IsNormE E B.v₁ μ₁ →
     ∀ φ ∈ G.M'.SoLoc B.ψ B.τ₁,
       coneFin B G.M' om' B.v₁ (ev B.v₁) K μK₁ μ₁ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ ∈ G₁.M'.SoLoc B.ψ B.τ₁ := by
-  first | exact @GlobalTheory.ConeSoB.coneFin_mem_soLoc | exact GlobalTheory.ConeSoB.coneFin_mem_soLoc | (intros; apply GlobalTheory.ConeSoB.coneFin_mem_soLoc <;> assumption)
+  exact @GlobalTheory.ConeSoB.coneFin_mem_soLoc

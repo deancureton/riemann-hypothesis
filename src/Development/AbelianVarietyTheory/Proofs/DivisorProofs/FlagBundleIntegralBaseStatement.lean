@@ -9,4 +9,4 @@ open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_bundle_integral_base : ∀ (Y Y₁ : Scheme.{0}) (ρ : Y ⟶ Y₁) (E₁ : Y₁.Modules) (fl₁ : Vert.Flag ((Scheme.Modules.pullback ρ).obj E₁) 2),
     IsIntegral Y → GlobalTheory.VB.IsVB E₁ 2 → IsFlagBundle ρ (fun _ : Unit => E₁) (fun _ => 2) (fun _ => fl₁) → IsIntegral Y₁ := by
-  first | exact @GlobalTheory.FlagBase.isIntegral_base | exact GlobalTheory.FlagBase.isIntegral_base | (intros; apply GlobalTheory.FlagBase.isIntegral_base <;> assumption)
+  exact @GlobalTheory.FlagBase.isIntegral_base

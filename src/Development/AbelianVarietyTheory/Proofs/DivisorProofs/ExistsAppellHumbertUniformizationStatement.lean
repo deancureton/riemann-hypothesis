@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_appell_humbert_uniformization : ∀ (F : Ty
     IsTotPos (c : F) → ∀ u : HolUnif X.A (X.diag c) (Module.finrank ℚ F),
     ∃ (u' : HolUnif X.A (X.diag c) (Module.finrank ℚ F)) (Hm : Matrix (Fin (Module.finrank ℚ F)) (Fin (Module.finrank ℚ F)) ℂ)
       (χ : u'.Λ → ℂ), u'.ex = u.ex ∧ u'.IsAH Hm χ := by
-  first | exact @GlobalTheory.RealMult.Obj.exists_isAH_diag | exact GlobalTheory.RealMult.Obj.exists_isAH_diag | (intros; apply GlobalTheory.RealMult.Obj.exists_isAH_diag <;> assumption)
+  exact @GlobalTheory.RealMult.Obj.exists_isAH_diag

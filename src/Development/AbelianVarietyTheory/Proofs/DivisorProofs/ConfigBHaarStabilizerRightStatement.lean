@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBHaarStabilizerRight
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_B_haar_stabilizer_right : GlobalTheory.ThK.
     ∀ T : Set (UA σ G.W.J), GlobalTheory.ConeSmallCT.IsReps T H'.x → ∀ h,
       HasSum (fun t : T => C₀ * c * GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2) (t.1 * h))
         (∫ g in 𝓓, theta om' Φ' g h * (hf g : ℂ) ^ (s + (((b + 2 : ℕ) : ℂ) - 1) / 2) ∂G.M'.μ) := by
-  first | exact @GlobalTheory.ConeRearr.rearrangement | exact GlobalTheory.ConeRearr.rearrangement | (intros; apply GlobalTheory.ConeRearr.rearrangement <;> assumption)
+  exact @GlobalTheory.ConeRearr.rearrangement

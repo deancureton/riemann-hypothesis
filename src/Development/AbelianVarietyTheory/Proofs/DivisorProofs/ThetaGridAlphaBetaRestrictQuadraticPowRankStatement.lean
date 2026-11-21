@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaGridAlphaBetaRestrictQuadraticPowRank
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -21,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaGrid_alpha_beta_restrict_quadratic_pow_rank : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts} {G : GridData L sc} {μ₀ : T} (_hL : L.Is μ₀) (t : T)
     (i j : Fin D.R.m), GlobalTheory.LFun.ResEta D.host.F D.host.E (alpha G t i j) (spW₁ G i j).rank ∧
       GlobalTheory.LFun.ResEta D.host.F D.host.E (beta G i j) (spW G i j).rank := by
-  first | exact @GlobalTheory.SquareResChars.resEta_alpha_beta | exact GlobalTheory.SquareResChars.resEta_alpha_beta | (intros; apply GlobalTheory.SquareResChars.resEta_alpha_beta <;> assumption)
+  exact @GlobalTheory.SquareResChars.resEta_alpha_beta

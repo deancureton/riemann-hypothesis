@@ -37,4 +37,4 @@ theorem _root_.GlobalTheory.T.chain_frame_signature_relation : GlobalTheory.Publ
             p' (GlobalTheory.SquareComm.fockF ψ θ false FA' FW f P) = e (q' P ⊗ₜ r' f)) →
     ∃ ρ : ℂ, ρ ≠ 0 ∧ ∀ (n : D.what₂.Tau → ℕ) (T : Tup D A.rank WW.rank n), ∃ ε : ℤˣ,
       q (GlobalTheory.BotFormula.minorF rfl rfl T) = (ρ * ((ε : ℤ) : ℂ)) • q' (GlobalTheory.BotFormula.minorF rfl rfl (GlobalTheory.BotMatch.complTup D had T)) := by
-  first | exact @GlobalTheory.BotMatch.real_quot_compl_minor | exact GlobalTheory.BotMatch.real_quot_compl_minor | (intros; apply GlobalTheory.BotMatch.real_quot_compl_minor <;> assumption)
+  exact @GlobalTheory.BotMatch.real_quot_compl_minor

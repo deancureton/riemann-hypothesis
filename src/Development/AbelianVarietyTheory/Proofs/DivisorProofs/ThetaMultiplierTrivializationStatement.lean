@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaMultiplierTrivialization
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.theta_multiplier_trivialization : ∀ (g : ℕ) (A
     HasGen ((abelian₂ A M).pull (lift (fst A (𝟙_ (Over (Sp ℂ)))) (snd A (𝟙_ (Over (Sp ℂ))) ≫ u.ex w)).left) →
     ∃ θ : (Fin g → ℂ) → ℂ, Differentiable ℂ θ ∧ (∀ z, θ z ≠ 0) ∧
       ∀ l ∈ u.Λ, ∀ z, θ (z + l) = Complex.exp (Real.pi * (w ⬝ᵥ Hm.mulVec (star l))) * θ z := by
-  first | exact @GlobalTheory.TorusRM.exists_theta_of_hasGen_lam_pull | exact GlobalTheory.TorusRM.exists_theta_of_hasGen_lam_pull | (intros; apply GlobalTheory.TorusRM.exists_theta_of_hasGen_lam_pull <;> assumption)
+  exact @GlobalTheory.TorusRM.exists_theta_of_hasGen_lam_pull

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticBundleGenericFibreData
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.arithmetic_bundle_generic_fibre_data : ∀ (D : D7
     ∀ ch, ∀ x ∈ (((fl₀ a).root i).pull j).U ch, ∀ t : (O.var c).Fnˣ,
       ((O.Φ.C c).gr (embB D a) (Fin.cast hr (cond a.2 i i.rev))).IsEqn (πG x) t →
       UnitAt x (φ (t : (O.var c).Fn) ^ (cond a.2 (-1 : ℤ) 1) * (r a i ch : G.functionField)) := by
-  first | exact @GlobalTheory.FlagCovDivCore.unitAt_frameSec | exact GlobalTheory.FlagCovDivCore.unitAt_frameSec | (intros; apply GlobalTheory.FlagCovDivCore.unitAt_frameSec <;> assumption)
+  exact @GlobalTheory.FlagCovDivCore.unitAt_frameSec

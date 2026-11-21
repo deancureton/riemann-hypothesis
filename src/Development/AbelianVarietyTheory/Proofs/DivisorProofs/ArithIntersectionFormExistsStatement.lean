@@ -9,4 +9,4 @@ open scoped ENNReal Classical
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory GlobalTheory.ArInt GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.ShFam.Pad GlobalTheory.VertForm GlobalTheory.CoverNorm
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arith_intersection_form_exists : GlobalTheory.Published.ArCalc → ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k) (D : ℕ), IsArithVar p D → ∃ num : Form (Cl p) D, IsArForm D num ∧ IsSymm num := by
-  first | exact @GlobalTheory.VertForm.exists_symm_arForm | exact GlobalTheory.VertForm.exists_symm_arForm | (intros; apply GlobalTheory.VertForm.exists_symm_arForm <;> assumption)
+  exact @GlobalTheory.VertForm.exists_symm_arForm

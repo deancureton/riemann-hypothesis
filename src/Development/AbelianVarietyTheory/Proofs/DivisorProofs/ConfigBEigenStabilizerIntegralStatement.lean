@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenStabilizerIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_b_eigen_stabilizer_integral : GlobalTheory.
       ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
       ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h,
         ∀ (k : K) (l : (AE F E)ˣ), e' (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (k.1, h) Φ')) ∈ G₁.M'.So B.ψ B.τ₁ := by
-  first | exact @GlobalTheory.ShiftSupport.shifted_mem_So | exact GlobalTheory.ShiftSupport.shifted_mem_So | (intros; apply GlobalTheory.ShiftSupport.shifted_mem_So <;> assumption)
+  exact @GlobalTheory.ShiftSupport.shifted_mem_So

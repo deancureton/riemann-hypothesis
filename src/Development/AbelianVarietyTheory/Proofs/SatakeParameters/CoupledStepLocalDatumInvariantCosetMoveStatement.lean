@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CoupledStepLocalDatumInvariantCosetMove
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.FirstCoupledKernelEquivariantCosets
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.Ker Formalism.L2.DIV GlobalTheory.TwU GlobalTheory.TwV Formalism.UG
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.coupledStep_localDatum_invariant_coset_move : ∀ 
     (∀ s l, IntAt P.1 ((((qOf P.1 : ℕ) : X.E) ^ (cst.D P))⁻¹ * (k.1 (Pi.single s 1) l - (Pi.single s 1 : Sp X.E (R.N (m2 + 1))) l))) →
     SameCoset sel mu cst P (k.1.symm w₁) w →
     PsiAt Ch sel mu cst m2 P (L.h m2 al P) x₀ w₁ = PsiAt Ch sel mu cst m2 P (L.h m2 al P) x₀ w := by
-  first | exact @GlobalTheory.PsiCosetInv.psiAt_coset | exact GlobalTheory.PsiCosetInv.psiAt_coset | (intros; apply GlobalTheory.PsiCosetInv.psiAt_coset <;> assumption)
+  exact @GlobalTheory.PsiCosetInv.psiAt_coset

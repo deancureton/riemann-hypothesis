@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorCharacter
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.archimedean_polynomial_tensor_character : GlobalTh
     GlobalTheory.RealLift.ActsBy B.emb A (om.comp (MonoidHom.inl _ _)) Φ (Formalism.BasicNotions.TH.fockAct1 P Q R S) (fun w => -((c w : ℚ) : ℂ)) →
     (∀ g, ∀ l ∈ (adeleClass F).adm (Fin n × Fin d), l ∘ₗ om g ∈ (adeleClass F).adm (Fin n × Fin d)) →
     ∀ T, IsKFix B om (Φ T) ↔ T ∈ GlobalTheory.KFixIrr.chiPart (InfinitePlace F) P Q R S c := by
-  first | exact @GlobalTheory.KFixIrr.kFix_iff_mem_chiPart | exact GlobalTheory.KFixIrr.kFix_iff_mem_chiPart | (intros; apply GlobalTheory.KFixIrr.kFix_iff_mem_chiPart <;> assumption)
+  exact @GlobalTheory.KFixIrr.kFix_iff_mem_chiPart

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaNonvanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_nonvanishing : GlobalTheory.ThK.KP 
         ∀ φ φ' : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) φ →
           IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) φ' →
           (∀ v ∈ V, φ v = 0) ∨ ∃ c : ℂ, ∀ v ∈ V, φ' v = c • φ v := by
-  first | exact @GlobalTheory.IndLine.config_b_real_place_h1 | exact GlobalTheory.IndLine.config_b_real_place_h1 | (intros; apply GlobalTheory.IndLine.config_b_real_place_h1 <;> assumption)
+  exact @GlobalTheory.IndLine.config_b_real_place_h1

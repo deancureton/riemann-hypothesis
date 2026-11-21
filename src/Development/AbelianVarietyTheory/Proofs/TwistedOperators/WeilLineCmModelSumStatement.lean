@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.weil_line_cm_model_sum : GlobalTheory.FunPr.Hypoth
       GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Acts (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) (om (1, γ (Multiplicative.ofAdd t))) ⇑f ⇑(T t f)) →
     (∀ s t (f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d)), T (s + t) f = T s (T t f)) →
     (∀ f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d), T 0 f = f) → ∀ t, Continuous (T t) := by
-  first | exact @GlobalTheory.ArchCont.continuous_line | exact GlobalTheory.ArchCont.continuous_line | (intros; apply GlobalTheory.ArchCont.continuous_line <;> assumption)
+  exact @GlobalTheory.ArchCont.continuous_line

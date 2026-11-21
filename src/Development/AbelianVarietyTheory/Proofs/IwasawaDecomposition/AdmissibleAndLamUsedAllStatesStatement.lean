@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.admissible_and_lam_used_all_states : PrN → GlobalTheory.NRows.HypothesesX → AllSt fun _ _ _ _ _ _ x => SumRepresentations.adm8 (Dof x) ∧ GlobalTheory.NRows.LamUsed (Dof x) := by
-  first | exact @GlobalTheory.HeightCounting.Up.RowsAtStates.parts_lam_allSt | exact GlobalTheory.HeightCounting.Up.RowsAtStates.parts_lam_allSt | (intros; apply GlobalTheory.HeightCounting.Up.RowsAtStates.parts_lam_allSt <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.RowsAtStates.parts_lam_allSt

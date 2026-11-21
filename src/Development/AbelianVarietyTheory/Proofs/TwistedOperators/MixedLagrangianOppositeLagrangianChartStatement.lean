@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MixedLagrangianOppositeLagrangianChart
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.mixedLagrangian_oppositeLagrangian_chart : ∀ {D 
         (fun u => (xiAt w)⁻¹ • chart jj (finCongr (rankW₁ G t i j w)) (colsEq t e w) (invT g) (invT cc)
           (coX (Bs.τ v) (Γ.V'.bas v) (Γ.W.bas v) u))
         (Assignment.one.block _ _) := by
-  first | exact @GlobalTheory.FlipMatch.chartOpp_isMixChart | exact GlobalTheory.FlipMatch.chartOpp_isMixChart | (intros; apply GlobalTheory.FlipMatch.chartOpp_isMixChart <;> assumption)
+  exact @GlobalTheory.FlipMatch.chartOpp_isMixChart

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConjEqAddKummerTorusTorsionPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.conj_eq_add_kummer_torusTorsionPoint : ∀ (R : Ty
       ∀ (χ : D.X) (x : (FractionRing R)ˣ), GlobalTheory.IndefiniteRowSideFullHecke.GeneratorValues.IsTauCoord D p.y χ x →
         ∃ s : F, s ≠ 0 ∧ O.valuation s ^ k = O.valuation (algebraMap (FractionRing R) F x) ∧
           σ s = (τ (Multiplicative.ofAdd χ) : F) * s := by
-  first | exact @GlobalTheory.KummerConj.conj_eq_add_tor | exact GlobalTheory.KummerConj.conj_eq_add_tor | (intros; apply GlobalTheory.KummerConj.conj_eq_add_tor <;> assumption)
+  exact @GlobalTheory.KummerConj.conj_eq_add_tor

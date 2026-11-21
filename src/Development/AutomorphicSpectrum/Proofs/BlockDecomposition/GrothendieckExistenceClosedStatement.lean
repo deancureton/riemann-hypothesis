@@ -5,4 +5,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.FormalAlge
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Out PositivityTheory.FormalThickening
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.grothendieck_existence_closed : GEClosed := by
-  first | exact @GlobalTheory.CompanionTheory.GE.geClosed | exact GlobalTheory.CompanionTheory.GE.geClosed | (intros; apply GlobalTheory.CompanionTheory.GE.geClosed <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GE.geClosed

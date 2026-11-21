@@ -9,4 +9,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory GlobalTheory.Ex
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.torsionCoordinates_eq_degenerationSeries : HV → BrGtSt → BrFamSt → EVSt := by
-  first | exact @GlobalTheory.Ex.CoordSeries.coord_eq_series | exact GlobalTheory.Ex.CoordSeries.coord_eq_series | (intros; apply GlobalTheory.Ex.CoordSeries.coord_eq_series <;> assumption)
+  exact @GlobalTheory.Ex.CoordSeries.coord_eq_series

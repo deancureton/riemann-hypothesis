@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalModelNormalSchemeExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrBasis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_normal_scheme_extension : ∀ {E : 
       (n : Γ(X, V.1)) ∈ (Ideal.span (Set.range A)).radical ∧
       ∀ (R' : Type) [CommRing R'] [IsDomain R'] [CharZero R'] (ψ : Γ(X, V.1) →+* R'), (∃ k, ∀ k', ψ (A k) ∣ ψ (A k')) →
         GlobalTheory.TwoLat.GrBasis Z (spMap ψ ≫ V.2.fromSpec ≫ ρ) τ (Dw.mult τ) := by
-  first | exact @GlobalTheory.TwoLat.exists_grChart | exact GlobalTheory.TwoLat.exists_grChart | (intros; apply GlobalTheory.TwoLat.exists_grChart <;> assumption)
+  exact @GlobalTheory.TwoLat.exists_grChart

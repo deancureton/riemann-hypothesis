@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi 
 open GlobalTheory.Cartier
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.prime_divisor_integral_subscheme_dimension : Hypotheses2 → ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] [IsLocallyNoetherian X] (p : X ⟶ Sp k) (D : ℕ), IsArithVar p D → ∀ num : Form (Cl p) D, IsArForm D num → ∀ (N : Fin D → HermLB p) (l : ℕ) [Fact l.Prime] (d : X → ℝ), (∀ z, Scheme.ord ((l : X.functionField)) z ≠ 0 → ∃ (Z : Scheme.{0}) (i : Z ⟶ X) (_ : IsClosedImmersion i) (_ : IsIntegral Z) (_ : Algebra (ZMod l) Γ(Z, ⊤)), i (genericPoint Z) = z ∧ topologicalKrullDim Z = D ∧ d z = interNum (ZMod l) (structureModule Z) (fun j => (N j).B.pull i)) → ∑ᶠ z, (Scheme.ord ((l : X.functionField)) z : ℝ) * d z = num (Fin.cons (cl (oneB p)) fun j => cl (N j)) := by
-  first | exact @GlobalTheory.VertFibre.finsum_ord_mul_deg_eq | exact GlobalTheory.VertFibre.finsum_ord_mul_deg_eq | (intros; apply GlobalTheory.VertFibre.finsum_ord_mul_deg_eq <;> assumption)
+  exact @GlobalTheory.VertFibre.finsum_ord_mul_deg_eq

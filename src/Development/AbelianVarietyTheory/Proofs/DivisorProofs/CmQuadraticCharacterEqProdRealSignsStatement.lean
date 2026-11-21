@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmQuadraticCharacterEqProdRealSigns
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Formalism.LocalToGlobal.IndefiniteReal.DatumF
 open scoped TensorProduct Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.cmQuadraticCharacter_eq_prod_realSigns : ∀ (F E 
     B.IsGood σ → ∀ η : (AF F)ˣ →* Circle, IsEtaF E η → ∀ a : (AF F)ˣ, At (evI F) ((a : AF F) - 1) →
       (η a : ℂ) = ∏ w, piInf (B.emb w) ((idFF F E a : (AF F ⊗[F] E)ˣ) : AF F ⊗[F] E) /
         ((‖piInf (B.emb w) ((idFF F E a : (AF F ⊗[F] E)ˣ) : AF F ⊗[F] E)‖ : ℝ) : ℂ) := by
-  first | exact @GlobalTheory.EtaSignReal.eta_eq_prod_sign | exact GlobalTheory.EtaSignReal.eta_eq_prod_sign | (intros; apply GlobalTheory.EtaSignReal.eta_eq_prod_sign <;> assumption)
+  exact @GlobalTheory.EtaSignReal.eta_eq_prod_sign

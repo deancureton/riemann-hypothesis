@@ -8,4 +8,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.smooth_extension_of_phase_function : Hypotheses2 → HypothesesH → OnObj fun D O _ T _ _ => ∀ (τ : D.what₂.Tau) c,
     ∃ g : (T.M c).Fun, (T.M c).Smooth g ∧
       ∀ σ x, x ∉ (T.M c).Z σ → g σ x = (T.F c).ph (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0) σ x := by
-  first | exact @GlobalTheory.DetHodgeExt.exists_smooth_ext | exact GlobalTheory.DetHodgeExt.exists_smooth_ext | (intros; apply GlobalTheory.DetHodgeExt.exists_smooth_ext <;> assumption)
+  exact @GlobalTheory.DetHodgeExt.exists_smooth_ext

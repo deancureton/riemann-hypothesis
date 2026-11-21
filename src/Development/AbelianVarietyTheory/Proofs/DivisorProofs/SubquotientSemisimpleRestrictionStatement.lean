@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubquotientSemisimpleRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsUnitarisableOfCharIff
 open GlobalTheory.PRep GlobalTheory.SmGL
 set_option maxHeartbeats 1000000 in
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.subquotient_semisimple_restriction : ∀ (L H : Ty
       (η : Representation ℂ H Y) (F : S.toRepresentation.IntertwiningMap η), F ≠ 0 →
       ∃ R : Subrepresentation η, R.toRepresentation.IsIrreducible ∧
         R.toSubmodule ≤ LinearMap.range F.toLinearMap := by
-  first | exact @GlobalTheory.IrrSubImage.exists_irreducible_le_range | exact GlobalTheory.IrrSubImage.exists_irreducible_le_range | (intros; apply GlobalTheory.IrrSubImage.exists_irreducible_le_range <;> assumption)
+  exact @GlobalTheory.IrrSubImage.exists_irreducible_le_range

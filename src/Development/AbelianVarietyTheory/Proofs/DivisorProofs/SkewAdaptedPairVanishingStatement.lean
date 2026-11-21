@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_vanishing : ∀ (F E : Type) [Fi
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ g ∈ GlobalTheory.UnipEv.stabilizer₂ σ W H', ∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, g) (M.co.rho B.ψ u Φ)) = e (om (1, g) Φ) := by
-  first | exact @GlobalTheory.UnipEv.evalZero_inv_after_stab | exact GlobalTheory.UnipEv.evalZero_inv_after_stab | (intros; apply GlobalTheory.UnipEv.evalZero_inv_after_stab <;> assumption)
+  exact @GlobalTheory.UnipEv.evalZero_inv_after_stab

@@ -14,4 +14,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeR
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.spherical_away_from_types : PrN → OverRows fun _ _ _ _ w Z _ _ z _ Y => ∀ (σ : (w.st Z).toD7.what₂.FT) (s : ReciprocityTheory.Aut.SplitPlace (w.st Z).toD7.host.E), (∀ k : Fin 2, s.w ∉ placesOver (w.st Z).toD7.host.E ((w.st Z).toD7.host.g k)) → ∃ τ, IsLocS (repOf Y σ).S s τ ∧ GlobalTheory.SmGL.IsSpherical τ.ρ := by
-  first | exact @GlobalTheory.RowSphOff.rowSph_overRows | exact GlobalTheory.RowSphOff.rowSph_overRows | (intros; apply GlobalTheory.RowSphOff.rowSph_overRows <;> assumption)
+  exact @GlobalTheory.RowSphOff.rowSph_overRows

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxAdaptedPlaneEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesInsertZero
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.darboux_adapted_plane_evaluation : ∀ (F E : Type
     ∃ u u' : Matrix (Fin n) (Fin d) (AE F E), At (evI F) u ∧ At (evI F) u' ∧
       (∀ w, u'.map (piInf (B.emb w)) = (((ε w : ℤ) : ℂ) * Complex.I) • (X.θ w * u.map (piInf (B.emb w)) * (W.θ w)ᵀ)) ∧
       cw co u = (γ, 0) ∧ (cw co u').1 = 0 ∧ IsPl hd (cw co u').2 := by
-  first | exact @GlobalTheory.ThK.PlaneEv.exists_plane_pair | exact GlobalTheory.ThK.PlaneEv.exists_plane_pair | (intros; apply GlobalTheory.ThK.PlaneEv.exists_plane_pair <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.exists_plane_pair

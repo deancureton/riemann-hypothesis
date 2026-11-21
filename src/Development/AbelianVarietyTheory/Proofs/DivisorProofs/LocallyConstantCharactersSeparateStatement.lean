@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyConstantCharactersSeparate
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.locally_constant_characters_separate : ∀ (Z : Ty
     (∀ (a : ℂ), ∀ f ∈ SB Z, ∀ g ∈ SB Z, β (a • f) g = a * β f g ∧ β f (a • g) = starRingEnd ℂ a * β f g) →
     (∀ x y : Z, x ≠ y → ∃ χ : Z → ℂ, IsLocallyConstant χ ∧ (∀ z, ‖χ z‖ = 1) ∧ χ x ≠ χ y ∧ ∀ f ∈ SB Z, ∀ g ∈ SB Z, β (χ * f) (χ * g) = β f g) →
     ∀ f ∈ SB Z, ∀ g ∈ SB Z, (∀ x, f x * g x = 0) → β f g = 0 := by
-  first | exact @GlobalTheory.SBOrth.sesq_eq_zero_of_mul_eq_zero | exact GlobalTheory.SBOrth.sesq_eq_zero_of_mul_eq_zero | (intros; apply GlobalTheory.SBOrth.sesq_eq_zero_of_mul_eq_zero <;> assumption)
+  exact @GlobalTheory.SBOrth.sesq_eq_zero_of_mul_eq_zero

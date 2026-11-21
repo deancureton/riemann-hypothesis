@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairPeriodIdentityCaseAFour
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.triple_pair_period_identity_case_a_four : GlobalTh
         GlobalTheory.ConeBump.integ B G.M om v (ev v) (shiftA H H') φ k l =
           (((X.β / X.α) l : ℂ) * (((absE F E l : ℝ) ^ (((b + a' : ℕ) : ℝ) / 2) : ℝ) : ℂ)) •
             locOp v (om₁ (g₁, 1)) (GlobalTheory.ConeBump.integ B G.M om v (ev v) (shiftA H H') φ 1 1) := by
-  first | exact @GlobalTheory.ConeLaw.integ_law | exact GlobalTheory.ConeLaw.integ_law | (intros; apply GlobalTheory.ConeLaw.integ_law <;> assumption)
+  exact @GlobalTheory.ConeLaw.integ_law

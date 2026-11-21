@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.darboux_doubling_schrodinger_formula : ∀ (F E : 
       (φ : ((Fin n × Fin d) ⊕ (Fin n × Fin d) → AF F) → ℂ),
       dd.rho ψ (Matrix.vecMulVec (incV F H'.x) y) (dd.rho ψ (incM F H'.ι * z) φ) =
         dd.rho ψ (Matrix.vecMulVec (incV F H'.x) y + incM F H'.ι * z) φ := by
-  first | exact @GlobalTheory.OrthHeisPhase.rho_vecMulVec_add_orth | exact GlobalTheory.OrthHeisPhase.rho_vecMulVec_add_orth | (intros; apply GlobalTheory.OrthHeisPhase.rho_vecMulVec_add_orth <;> assumption)
+  exact @GlobalTheory.OrthHeisPhase.rho_vecMulVec_add_orth

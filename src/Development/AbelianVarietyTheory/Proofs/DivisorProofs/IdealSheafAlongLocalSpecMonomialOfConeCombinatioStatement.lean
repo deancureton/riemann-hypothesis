@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealSheafAlongLocalSpecMonomialOfConeCombinatio
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdlAlongComapEq
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.idealSheafAlongLocalSpec_monomial_of_cone_combinat
       (x : Sp W ⟶ Z) (s : Fin m → W), Function.Bijective σ → jK T.V ≫ spMap σ ≫ x = T.y ≫ i →
       (∀ k, Associated (σ (s k)) (T.ϖ ^ c k)) → (∀ a b, T.β a b = ∑ k, (c k : ℤ) * δ k (e' a) (e' b)) →
       idlAlong J x = Ideal.span {∏ k, s k ^ b k} := by
-  first | exact @GlobalTheory.Poinc.Arith.idlAlong_monomial | exact GlobalTheory.Poinc.Arith.idlAlong_monomial | (intros; apply GlobalTheory.Poinc.Arith.idlAlong_monomial <;> assumption)
+  exact @GlobalTheory.Poinc.Arith.idlAlong_monomial

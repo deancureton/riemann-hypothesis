@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.vertical_bound_on_objects : Hypotheses2 → HypothesesH → OnObj fun _ _ _ T _ _ => VertBd T := by
-  first | exact @GlobalTheory.VertObj.vertBd_onObj | exact GlobalTheory.VertObj.vertBd_onObj | (intros; apply GlobalTheory.VertObj.vertBd_onObj <;> assumption)
+  exact @GlobalTheory.VertObj.vertBd_onObj

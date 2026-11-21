@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RosatiGeneratorValueAddEndomorphismsCubical
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BalTau
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsTauLattice
 import Development.AbelianVarietyTheory.Proofs.AbelianSchemeLawProofs.GlobalFnsHolds
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.rosatiGenerator_value_add_endomorphisms_cubical : 
     ∀ {T : Over S} {z : T.left} {J : (T.left ⟶ A.left) → Lr.L.ι}, Good Lr.L z J → ∀ x y : T ⟶ A,
     val₂ u z J x y * cubV cu z J (y ≫ g₁) (y ≫ g₂) x =
       cubV cu z J (x ≫ f₁) (x ≫ f₂) y * (val₂ u₁ z J x y * val₂ u₂ z J x y) := by
-  first | exact @GlobalTheory.RosAddPair.ros_val_padd | exact GlobalTheory.RosAddPair.ros_val_padd | (intros; apply GlobalTheory.RosAddPair.ros_val_padd <;> assumption)
+  exact @GlobalTheory.RosAddPair.ros_val_padd

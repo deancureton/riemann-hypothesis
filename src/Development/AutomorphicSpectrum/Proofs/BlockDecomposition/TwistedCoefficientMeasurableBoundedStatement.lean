@@ -11,4 +11,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.twisted_coefficient_measurable_bounded : ∀ (K : Type) [Field K] [NumberField K] (c : HeckeCharacter K) (M : ∀ v : Pl, LM c v) (Sv : Finset Pl) (m : Pl →₀ ℤ),
   Measurable (fun u => ctM M Sv m u) ∧ ∀ u, ‖ctM M Sv m u‖ ≤ 1 := by
-  first | exact @GlobalTheory.CompanionTheory.CtMeas.measurable_ctM_norm_le | exact GlobalTheory.CompanionTheory.CtMeas.measurable_ctM_norm_le | (intros; apply GlobalTheory.CompanionTheory.CtMeas.measurable_ctM_norm_le <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CtMeas.measurable_ctM_norm_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.DeRhamTrivialRationalCocycleRestrictionScalars
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.deRham_trivial_rational_cocycle_restrictionScalars
     ∃ β : n × Fin r → P.R.BdR, ∀ g : ↥(GK K), (fun x => algebraMap ℚ_[l] P.R.BdR (c₀ g x)) =
       ((ρ₀ g : Matrix (n × Fin r) (n × Fin r) ℚ_[l]).map (algebraMap ℚ_[l] P.R.BdR)).mulVec
         (fun x => P.actQdR (g : GQ l) (β x)) - β := by
-  first | exact @GlobalTheory.PMon.DRvec.ratCocycle_trivial | exact GlobalTheory.PMon.DRvec.ratCocycle_trivial | (intros; apply GlobalTheory.PMon.DRvec.ratCocycle_trivial <;> assumption)
+  exact @GlobalTheory.PMon.DRvec.ratCocycle_trivial

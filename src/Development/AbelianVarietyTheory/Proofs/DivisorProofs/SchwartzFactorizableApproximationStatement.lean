@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFactorizableApproximation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_open_subgroup_fixing_pure_tensor : ∀ (F E
       (∀ v, φ v ∈ GlobalTheory.WeilM.SB (Fin n × Fin d → Fv F v)) → (∀ᶠ v in Filter.cofinite, φ v = M.vac v) →
       ∃ U : Subgroup (UA σ W.J), IsOpen (U : Set (UA σ W.J)) ∧ ∀ k ∈ U,
         (mat k).map (Algebra.TensorProduct.map (fstA F) (AlgHom.id F E)) = 1 → om (1, k) (pure f φ) = pure f φ := by
-  first | exact @GlobalTheory.FixPure.fix_pure | exact GlobalTheory.FixPure.fix_pure | (intros; apply GlobalTheory.FixPure.fix_pure <;> assumption)
+  exact @GlobalTheory.FixPure.fix_pure

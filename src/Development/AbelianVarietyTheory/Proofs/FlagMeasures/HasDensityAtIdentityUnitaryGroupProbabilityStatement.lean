@@ -8,4 +8,4 @@ open MeasureTheory Matrix Filter Topology Formalism.QuantumDeterminants Formalis
 open scoped InnerProductSpace ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hasDensityAtIdentity_unitaryGroup_probability : ∀ (j : ℕ) (μ : Measure (PI.MtM j)), PI.IsHaarOnM (UH (1 : Matrix (Fin j) (Fin j) ℂ)) μ → μ Set.univ = 1 → HasDens (UH (1 : Matrix (Fin j) (Fin j) ℂ)) μ (ENNReal.ofReal (volUn j)⁻¹) := by
-  first | exact @GlobalTheory.UnitaryVolume.hasDens_unitary | exact GlobalTheory.UnitaryVolume.hasDens_unitary | (intros; apply GlobalTheory.UnitaryVolume.hasDens_unitary <;> assumption)
+  exact @GlobalTheory.UnitaryVolume.hasDens_unitary

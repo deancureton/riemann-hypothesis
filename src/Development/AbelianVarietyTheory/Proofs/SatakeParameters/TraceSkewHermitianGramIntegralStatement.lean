@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.TraceSkewHermitianGramIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SelfDualOne
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.Gam0
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.trace_skewHermitian_gram_integral_alt : ∀ (L : T
   (∀ i j, (JT : Matrix (Fin n') (Fin n') L) i j ∈ Formalism.UG.intL L) → (∀ i j, (y * (a : Matrix (Fin n) (Fin n) L)) i j ∈ Formalism.UG.intL L) →
   (∀ i k, (((a⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L) * M) i k * ϖ ^ e k ∈ Formalism.UG.intL L) → Γ ∈ GlobalTheory.Hk3.GramSep.gam0 σ ϖ e →
   δ * Matrix.trace (Γ * (Formalism.UG.cT σ (y * M) * (JT : Matrix (Fin n') (Fin n') L) * (y * M))) ∈ Formalism.UG.intL L := by
-  first | exact @GlobalTheory.Hk3.GramSep.trace_skewHermitian_gram_integral | exact GlobalTheory.Hk3.GramSep.trace_skewHermitian_gram_integral | (intros; apply GlobalTheory.Hk3.GramSep.trace_skewHermitian_gram_integral <;> assumption)
+  exact @GlobalTheory.Hk3.GramSep.trace_skewHermitian_gram_integral

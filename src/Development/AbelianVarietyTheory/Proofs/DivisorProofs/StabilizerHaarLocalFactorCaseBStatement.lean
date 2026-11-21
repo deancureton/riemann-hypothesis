@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerHaarLocalFactorCaseB
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeLin
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.stabilizer_haar_local_factor_case_b : GlobalTheory
       (∀ t g₀ m, IsLevi H t g₀ m → m ∈ UAt σ G.V' (evFin F v) → g₀ ∈ UAt σ G₁.V' (evFin F v) →
         ∀ g ∈ UAt σ G.V' (evFin F v), f (m * g) = ((absE F E t : ℝ) : ℂ) ^ (b + 1) * f g) →
       ∀ g ∈ UAt σ G.V' (evFin F v), ∫ k, f (k.1 * g) ∂μK = ∫ k, f k.1 ∂μK := by
-  first | exact @GlobalTheory.IwKInt.integral_KAt_right_invariant | exact GlobalTheory.IwKInt.integral_KAt_right_invariant | (intros; apply GlobalTheory.IwKInt.integral_KAt_right_invariant <;> assumption)
+  exact @GlobalTheory.IwKInt.integral_KAt_right_invariant

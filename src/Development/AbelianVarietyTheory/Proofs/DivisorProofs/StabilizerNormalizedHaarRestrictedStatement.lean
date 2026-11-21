@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerNormalizedHaarRestricted
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.stabilizer_normalized_haar_restricted : ∀ {F E :
       Integrable (fun k : K => a (compArch σ X.J k.1) * ∏ v ∈ T, b v (compAt σ X.J v k.1)) μK ∧
       ∫ k : K, a (compArch σ X.J k.1) * ∏ v ∈ T, b v (compAt σ X.J v k.1) ∂μK =
         κK * (∫ k : KAt K (evI F), a k.1 ∂μKI) * ∏ v ∈ T, ∫ k : KAt K (evFin F v), b v k.1 ∂(μKv v) := by
-  first | exact @GlobalTheory.ThK.ConeEuler.CompIntegral.integral_components | exact GlobalTheory.ThK.ConeEuler.CompIntegral.integral_components | (intros; apply GlobalTheory.ThK.ConeEuler.CompIntegral.integral_components <;> assumption)
+  exact @GlobalTheory.ThK.ConeEuler.CompIntegral.integral_components

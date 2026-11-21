@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.InvariantPairingIteratedDerivative
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousMulVec
 open Matrix MeasureTheory GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.BZMir GlobalTheory.BZMir.Leib GlobalTheory.RgGu.Leib GlobalTheory.CompanionTheory.LeibOrd GlobalTheory.SplitWeil GlobalTheory.JHMult GlobalTheory.CompanionTheory.BZShell GlobalTheory.CompanionTheory.MirPair
 set_option maxHeartbeats 1000000 in
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.invariant_pairing_iterated_derivative : ∀ {k : T
     ∃ B' : (iterN ψ m (gres π)).V →ₗ[ℂ] (iterN ψ⁻¹ m (gres π')).V →ₗ[ℂ] ℂ,
       (∀ p v v', B' ((iterN ψ m (gres π)).ρ p v) ((iterN ψ⁻¹ m (gres π')).ρ p v') = B' v v') ∧
       ∀ v, v ≠ 0 → ∃ v', B' v v' ≠ 0 := by
-  first | exact @GlobalTheory.CompanionTheory.BZShell.pair_iterN | exact GlobalTheory.CompanionTheory.BZShell.pair_iterN | (intros; apply GlobalTheory.CompanionTheory.BZShell.pair_iterN <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BZShell.pair_iterN

@@ -5,4 +5,4 @@ open MvPolynomial Formalism.BasicNotions Formalism.L2.Forms Formalism.L2.Ker Glo
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.howeSpan_families_of_places : ∀ (ι : Type) [Fintype ι], HoweSpan ι := by
-  first | exact @GlobalTheory.KJInf.howeSpan_all | exact GlobalTheory.KJInf.howeSpan_all | (intros; apply GlobalTheory.KJInf.howeSpan_all <;> assumption)
+  exact @GlobalTheory.KJInf.howeSpan_all

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MaxCompactCuspRepBlockEmbedding
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.max_compact_cusp_rep_block_embedding : GlobalTheor
       ∀ (ψ : GAd σ J → ℂ), GlobalTheory.StdPar.IsCuspOn σ J Xf Yf S K ψ → ∀ g₀ : GAd σ J,
         (∀ k : GlobalTheory.CuspRep.Kinf E d, g₀⁻¹ * ι (GlobalTheory.CuspRep.infGL E d (Unitary.toUnits k)) * g₀ ∈ K) →
         ∃ f : GlobalTheory.CuspRep.Sm E d, (∀ x, f.1 x = ψ (ι x * g₀)) ∧ GlobalTheory.CuspRep.IsCuspForm f := by
-  first | exact @GlobalTheory.BlockForms.exists_isCuspForm_comp_blockEmb | exact GlobalTheory.BlockForms.exists_isCuspForm_comp_blockEmb | (intros; apply GlobalTheory.BlockForms.exists_isCuspForm_comp_blockEmb <;> assumption)
+  exact @GlobalTheory.BlockForms.exists_isCuspForm_comp_blockEmb

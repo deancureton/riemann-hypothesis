@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TensorLatticeMulTransposeStableIff
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolMatchFiniteSetVacuum
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.tensorLattice_mul_transpose_stable_iff : ∀ (F E 
           GlobalTheory.AdelicU.evFin F w b ∈ w.adicCompletionIntegers F ∧
           ∃ y' ∈ W.L, z = b • fun i => Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.inclR (F := F) (AF F) (y' i)}) →
     ∀ γ, γ * Kᵀ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.latAtV X W w ↔ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.latAtV X W w := by
-  first | exact @GlobalTheory.LatStab.latAtV_mul_transpose_iff | exact GlobalTheory.LatStab.latAtV_mul_transpose_iff | (intros; apply GlobalTheory.LatStab.latAtV_mul_transpose_iff <;> assumption)
+  exact @GlobalTheory.LatStab.latAtV_mul_transpose_iff

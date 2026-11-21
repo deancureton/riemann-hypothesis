@@ -13,4 +13,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.one_mem_A0_of_wittIndex_eq_zero : ∀ {D : D7} {θ : InfFam D} {A B : HSp D} {sA : RealMat A} {sB : RealMat B} {t : ℕ} {cA : CptF A}, HidaSetting θ A B sA sB t cA → wittIndex A = 0 → (fun _ : GA D A => (1 : ℂ)) ∈ A0 θ A cA := by
-  first | exact @GlobalTheory.constant_one_mem_cuspForms_of_wittIndex_zero | exact GlobalTheory.constant_one_mem_cuspForms_of_wittIndex_zero | (intros; apply GlobalTheory.constant_one_mem_cuspForms_of_wittIndex_zero <;> assumption)
+  exact @GlobalTheory.constant_one_mem_cuspForms_of_wittIndex_zero

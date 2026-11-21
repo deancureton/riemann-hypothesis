@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomTriangleIntegralLeftInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_integral_left_invariant : ∀ {D :
     {i j : Fin D.R.m} {A A' WW : HSp D} {X : Tri T A A' WW}, GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → L.Is μ₀ →
     IsBottomTri W i j X →
     ∀ t P, ∀ γ ∈ GQ WW, ∀ x, X.I W.ψ W.θ t P (γ * x) = X.I W.ψ W.θ t P x := by
-  first | exact @GlobalTheory.RowTest.BottomRat.I_rat_left | exact GlobalTheory.RowTest.BottomRat.I_rat_left | (intros; apply GlobalTheory.RowTest.BottomRat.I_rat_left <;> assumption)
+  exact @GlobalTheory.RowTest.BottomRat.I_rat_left

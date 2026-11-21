@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameLocalCompactUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.witt_frame_local_compact_unitary : GlobalTheory.Th
           ∀ g : GL (Fin d) (Fv F v), ∀ u ∈ U,
             Λ (fun j => π (GlobalTheory.SmGL.leviEmb (Fv F v) (tripPlace hld) (midHom (Fv F v) l d n g)) (u j)) =
               GlobalTheory.CuspRep.finRep E d (GlobalTheory.CuspRep.locGL E d (splitPrime t) (glEquiv d (complEquiv t (splitPrime_under t)) g)) (Λ u) := by
-  first | exact @GlobalTheory.BlockForms.block_forms | exact GlobalTheory.BlockForms.block_forms | (intros; apply GlobalTheory.BlockForms.block_forms <;> assumption)
+  exact @GlobalTheory.BlockForms.block_forms

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedFramesAgreeOnOverlap
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_frames_agree_on_overlap : ∀ {ι : Type} 
     Loc.Adapted g fl' V G → Loc.Adapted g fl' W H →
     T.homOfLE (inf_le_left : V ⊓ W ≤ V) ≫ hV.isoSpec.hom ≫ flagPt (Prod.fst : ι × Fin (N + 1) → ι) Prod.snd G =
       T.homOfLE (inf_le_right : V ⊓ W ≤ W) ≫ hW.isoSpec.hom ≫ flagPt (Prod.fst : ι × Fin (N + 1) → ι) Prod.snd H := by
-  first | exact @GlobalTheory.FlagZ.Loc.flagPt_inf_eq | exact GlobalTheory.FlagZ.Loc.flagPt_inf_eq | (intros; apply GlobalTheory.FlagZ.Loc.flagPt_inf_eq <;> assumption)
+  exact @GlobalTheory.FlagZ.Loc.flagPt_inf_eq

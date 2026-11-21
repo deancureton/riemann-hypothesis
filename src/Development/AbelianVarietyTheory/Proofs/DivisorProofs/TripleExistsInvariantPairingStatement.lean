@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleExistsInvariantPairing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.triple_exists_invariant_pairing : GlobalTheory.ThK
     (∀ v : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F, ∀ h ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UAt σ G.W (GlobalTheory.AdelicU.evFin F v), ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∀ Ψ ∈ GlobalTheory.ThK.PolData B G.M,
       Bf (om (1, h) Φ) (om (1, h) Ψ) = Bf Φ Ψ) ∧
     (∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, Bf Φ Φ = 0 ↔ G.M.I om Φ = 0) := by
-  first | exact @GlobalTheory.ThKL2.l2form | exact GlobalTheory.ThKL2.l2form | (intros; apply GlobalTheory.ThKL2.l2form <;> assumption)
+  exact @GlobalTheory.ThKL2.l2form

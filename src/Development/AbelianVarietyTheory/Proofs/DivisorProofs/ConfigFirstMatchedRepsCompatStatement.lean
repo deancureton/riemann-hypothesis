@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigFirstMatchedRepsCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_first_matched_reps_compat : GlobalTheory.Th
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F b a') (Rf₁ : FinMaps F b a'),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       FiniteDimensional ℂ (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.LowPartFin.lowPartInf_finiteDimensional | exact GlobalTheory.LowPartFin.lowPartInf_finiteDimensional | (intros; apply GlobalTheory.LowPartFin.lowPartInf_finiteDimensional <;> assumption)
+  exact @GlobalTheory.LowPartFin.lowPartInf_finiteDimensional

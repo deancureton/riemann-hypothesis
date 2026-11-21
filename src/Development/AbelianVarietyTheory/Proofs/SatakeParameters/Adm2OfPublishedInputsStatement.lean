@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adm2_of_prints_localLanglands : GlobalTheory.NRows.Hypotheses₂ → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), Formalism.MainNotions.SumRepresentations.adm2 D := by
-  first | exact @GlobalTheory.GalClose.main | exact GlobalTheory.GalClose.main | (intros; apply GlobalTheory.GalClose.main <;> assumption)
+  exact @GlobalTheory.GalClose.main

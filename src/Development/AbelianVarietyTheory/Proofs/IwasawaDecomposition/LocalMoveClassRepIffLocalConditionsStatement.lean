@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.localMove_classRep_iff_localConditions : ∀ {B : 
     LocMv I u a i c s κ ↔ ((I.stp u a i).gam c.1 κ = 1 ∧
       cosetIn ((I.stp u a i).act c.1 κ ((I.stp u a i).rep c)) = cosetIn ((I.stp u a i).rep c) ∧
       LocalCondMoveDecoratedLattice u (B.R.N i) s κ.2.1.1 ∧ LocCQ (I.Q a) (B.R.N i) s κ.2.2.1) := by
-  first | exact @GlobalTheory.Mem.Col2.TC.ChTw.Match.locMv_iff | exact GlobalTheory.Mem.Col2.TC.ChTw.Match.locMv_iff | (intros; apply GlobalTheory.Mem.Col2.TC.ChTw.Match.locMv_iff <;> assumption)
+  exact @GlobalTheory.Mem.Col2.TC.ChTw.Match.locMv_iff

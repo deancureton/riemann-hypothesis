@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerTranslationOperatorShift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.schrodinger_translation_operator_shift : ∀ (F : 
     (w : (κ → mixedEmbedding.mixedSpace F) × (κ → mixedEmbedding.mixedSpace F)) (a b : κ → mixedEmbedding.mixedSpace F),
     ∃ t : ℂ, ∀ f g g' : SInf F κ, ⇑g = schrF (trP F κ) w ⇑f → ⇑g' = schrF (trP F κ) w ⇑(dOp a b f) →
       g' = dOp a b g + t • g := by
-  first | exact @GlobalTheory.ThK.EvAt0.PolD.schrF_dOp_conj | exact GlobalTheory.ThK.EvAt0.PolD.schrF_dOp_conj | (intros; apply GlobalTheory.ThK.EvAt0.PolD.schrF_dOp_conj <;> assumption)
+  exact @GlobalTheory.ThK.EvAt0.PolD.schrF_dOp_conj

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_local_factor : GlobalTheor
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ (g₁ : UA σ X₁.J) (m : UA σ X.J), IsLevi H 1 g₁ m → ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (m, 1) Φ) = om₁ (g₁, 1) (e Φ) := by
-  first | exact @GlobalTheory.MixXLeviU.evalZero_levi_unit | exact GlobalTheory.MixXLeviU.evalZero_levi_unit | (intros; apply GlobalTheory.MixXLeviU.evalZero_levi_unit <;> assumption)
+  exact @GlobalTheory.MixXLeviU.evalZero_levi_unit

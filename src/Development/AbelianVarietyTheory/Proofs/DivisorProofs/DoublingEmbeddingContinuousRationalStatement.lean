@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingEmbeddingContinuousRational
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.doubling_embedding_continuous_rational : ∀ (F E 
     (J : Matrix (Fin d) (Fin d) E) (J₂ : Matrix (Fin (d + d)) (Fin (d + d)) E),
     ∀ i : UA σ J × UA σ J →* UA σ J₂, (∀ h h', mat (i (h, h')) = blkMat finSumFinEquiv (mat h) (mat h')) →
       Continuous i ∧ ∀ δ ∈ ratU σ J, i (1, δ) ∈ ratU σ J₂ := by
-  first | exact @GlobalTheory.DoublingCont.continuous_and_rat | exact GlobalTheory.DoublingCont.continuous_and_rat | (intros; apply GlobalTheory.DoublingCont.continuous_and_rat <;> assumption)
+  exact @GlobalTheory.DoublingCont.continuous_and_rat

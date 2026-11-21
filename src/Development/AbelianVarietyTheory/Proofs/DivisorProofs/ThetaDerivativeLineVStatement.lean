@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.theta_derivative_line_V : ∀ (F E : Type) [Field 
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ γ ∈ Lines σ G.V', ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ Φ₁ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁,
       (∀ x, HasDerivAt (fun t : ℝ => om' (γ (Multiplicative.ofAdd t), 1) Φ x) (Φ₁ x) 0) → G.M'.I om' Φ₁ = 0 := by
-  first | exact @GlobalTheory.ThKLieTriple.lie_kills | exact GlobalTheory.ThKLieTriple.lie_kills | (intros; apply GlobalTheory.ThKLieTriple.lie_kills <;> assumption)
+  exact @GlobalTheory.ThKLieTriple.lie_kills

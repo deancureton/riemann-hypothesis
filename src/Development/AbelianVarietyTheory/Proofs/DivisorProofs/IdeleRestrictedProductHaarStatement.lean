@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleRestrictedProductHaar
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.idele_restricted_product_haar : ∀ {F E : Type} [
       ∫ l, h (unitArch F E l) * (∏ v ∈ T, q v (unitAt E v l)) * ∏ᶠ (v : Pl F) (_ : v ∉ T), g v (unitAt E v l) ∂ν =
         (∫ l : idelesAt E (evI F), h l.1 ∂μI) * (∏ v ∈ T, ∫ l : idelesAt E (evFin F v), q v l.1 ∂(μv v)) *
           ∏' v : {v : Pl F // v ∉ T}, ∫ l : idelesAt E (evFin F v.1), g v.1 l.1 ∂(μv v.1) := by
-  first | exact @GlobalTheory.ThK.ConeEuler.integral_euler_ideles | exact GlobalTheory.ThK.ConeEuler.integral_euler_ideles | (intros; apply GlobalTheory.ThK.ConeEuler.integral_euler_ideles <;> assumption)
+  exact @GlobalTheory.ThK.ConeEuler.integral_euler_ideles

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalVacuumEigenLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvFinMkPt
 
 open scoped TensorProduct
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_vacuum_eigen_lattice : ∀ {F E : Type} [Fie
     (∀ γ ∈ latAtV X W v, locOp B.ψ v (locPt v (M.co.e γ)) (M.vac v) = t γ • M.vac v) →
     ∀ φ ∈ SB (Fin n × Fin d → Fv F v), (∀ γ ∈ latAtV X W v, locOp B.ψ v (locPt v (M.co.e γ)) φ = t γ • φ) →
       ∃ a : ℂ, φ = a • M.vac v := by
-  first | exact @GlobalTheory.VacEigenLine.eigen_line | exact GlobalTheory.VacEigenLine.eigen_line | (intros; apply GlobalTheory.VacEigenLine.eigen_line <;> assumption)
+  exact @GlobalTheory.VacEigenLine.eigen_line

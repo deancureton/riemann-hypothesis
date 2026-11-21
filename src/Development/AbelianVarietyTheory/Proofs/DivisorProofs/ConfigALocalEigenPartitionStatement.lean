@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalEigenPartition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_a_local_eigen_partition : GlobalTheory.FunP
     ∀ t h₁ m, IsLevi H' t h₁ m → m ∈ UAt σ G.W (evFin F v) → h₁ ∈ UAt σ G₁.W (evFin F v) →
     ∀ u ∈ unip σ G.W H', u ∈ UAt σ G.W (evFin F v) → ∀ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v),
       ev v (locOp v (om (1, u * m)) φ) = GlobalTheory.ThK.LemF.fac X.β (((b + 2 : ℕ) : ℝ) / 2) t • locOp v (om₁ (1, h₁)) (ev v φ) := by
-  first | exact @GlobalTheory.ThK.LemF.evLocLaw_isoA | exact GlobalTheory.ThK.LemF.evLocLaw_isoA | (intros; apply GlobalTheory.ThK.LemF.evLocLaw_isoA <;> assumption)
+  exact @GlobalTheory.ThK.LemF.evLocLaw_isoA

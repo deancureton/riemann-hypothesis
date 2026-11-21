@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalPartIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_local_part_integral : GlobalTheory.FunPr.
       ∀ u ∈ unip σ G.W H', u ∈ UAt σ G.W (evFin F v) → ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v),
         coneFin B G.M' om' v (ev' v) K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (locOp v (om' (1, u)) φ) =
           coneFin B G.M' om' v (ev' v) K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ := by
-  first | exact @GlobalTheory.ThK.LemF.coneFin_unipB | exact GlobalTheory.ThK.LemF.coneFin_unipB | (intros; apply GlobalTheory.ThK.LemF.coneFin_unipB <;> assumption)
+  exact @GlobalTheory.ThK.LemF.coneFin_unipB

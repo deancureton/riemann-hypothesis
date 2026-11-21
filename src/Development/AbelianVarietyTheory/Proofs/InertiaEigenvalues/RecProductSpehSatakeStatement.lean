@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rec_product_speh_satake : GlobalTheory.Published.GenericUnitaryDualGL → GlobalTheory.Published.StandardCosocleGL → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) {R : Ranks} {H : Host R} {what₂ : Rows.Data R} (N : NData R H what₂) (A : NAut N) (T : GlobalTheory.RowTie.WDTie N A), RecProd (recT T hL) ∧ RecSpeh (recT T hL) ∧ RecSatake (recT T hL) := by
-  first | exact @GlobalTheory.FormDict.RecTLaws.recLaws_recT | exact GlobalTheory.FormDict.RecTLaws.recLaws_recT | (intros; apply GlobalTheory.FormDict.RecTLaws.recLaws_recT <;> assumption)
+  exact @GlobalTheory.FormDict.RecTLaws.recLaws_recT

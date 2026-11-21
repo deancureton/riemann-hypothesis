@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilVacuumLatticeIndicator
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.weil_vacuum_lattice_indicator : GlobalTheory.FunPr
       ∃ φ₁ ∈ SB (Fin n × Fin d → Fv F v), Acts (evFin F v) (om (g, 1)) (M.vac v) φ₁ ∧
         ι φ₁ = ((chrW χW t ϖ : ℂ) ^ (∑ j, e j) * (((qV F v : ℝ) ^ ((d : ℝ) / 2 * ((∑ j, e j : ℤ) : ℝ)) : ℝ) : ℂ)) •
           Set.indicator {Y : Matrix (Fin n) (Fin d) (Fv F v) | ∀ i j, (((k₁ * T * k₂)⁻¹).1 * Y) i j ∈ v.adicCompletionIntegers F} 1 := by
-  first | exact @GlobalTheory.KSplit.vac_act_torus | exact GlobalTheory.KSplit.vac_act_torus | (intros; apply GlobalTheory.KSplit.vac_act_torus <;> assumption)
+  exact @GlobalTheory.KSplit.vac_act_torus

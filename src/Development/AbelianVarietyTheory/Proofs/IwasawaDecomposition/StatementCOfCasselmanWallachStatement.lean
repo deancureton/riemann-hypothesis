@@ -9,4 +9,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.statement_c_of_casselman_wallach : GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.CasselmanWallach → GlobalTheory.Published.HarishChandraModules → PrN → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, SCk hL := by
-  first | exact @GlobalTheory.LevCmp.choices_exist_for | exact GlobalTheory.LevCmp.choices_exist_for | (intros; apply GlobalTheory.LevCmp.choices_exist_for <;> assumption)
+  exact @GlobalTheory.LevCmp.choices_exist_for

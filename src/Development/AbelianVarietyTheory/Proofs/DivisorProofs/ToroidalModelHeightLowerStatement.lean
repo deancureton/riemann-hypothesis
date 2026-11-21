@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_height_lower : ∀ {E : Type} [Fiel
       ∀ (f : Fin r → Γ(M, V)) (hf : VB.IsFrame f), ∃ A₀ : Matrix (Fin g) (Fin r) Γ(X, V),
         GenCoord Z jB πB t ch hf (A₀.map (jB.app V))) →
     ∃ T : M ⟶ L, TanCoord Z jB πB t ρ hℓ T := by
-  first | exact @GlobalTheory.LieFilt.exists_tanCoord | exact GlobalTheory.LieFilt.exists_tanCoord | (intros; apply GlobalTheory.LieFilt.exists_tanCoord <;> assumption)
+  exact @GlobalTheory.LieFilt.exists_tanCoord

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverChartMinorDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam.Pad GlobalTheory.TrivFlag GlobalTheory.WholeFlag GlobalTheory.ConstLat
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.cover_chart_minor_decomposition : ∀ {F : Type} [
     AtTest V W p (fun _ e _ z yt => ⊤ ≤ yt ⁻¹ᵁ U → ∀ i j,
       e.w (valAt (z ≫ V.j) ((Um.transpose * J.map (Int.castRingHom V.X.functionField) * Um) i j)) ≤
         e.w (p : AlgebraicClosure F) ^ k) := by
-  first | exact @GlobalTheory.ConstLat.form_frame_small | exact GlobalTheory.ConstLat.form_frame_small | (intros; apply GlobalTheory.ConstLat.form_frame_small <;> assumption)
+  exact @GlobalTheory.ConstLat.form_frame_small

@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.differentiable_intertwining_pair : GlobalTheory.Fu
     {A : FamIn D.what₂.LL Γ Pl0 T D.R.m} {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] {R : RealDat D A Ks}
     (ch : Choice R), ch.Is → ∀ (p : Pair T), DefPair D.R.m p → ∀ (x : FinPt ch.G p.small) (y : FinPt ch.G p.big),
     Differentiable ℂ (Iop D (tor0 D D.host.ccK ch.S.Z.δ) (La0 D (tor0 D D.host.ccK ch.S.Z.δ) _ _) (Formalism.MainNotions.TaylorLogMetric.La D (tor0 D D.host.ccK ch.S.Z.δ) (GlobalTheory.MovedDict.srcLat ch.S.toGridChoice p x y) (GlobalTheory.MovedDict.tgtLat ch.S.toGridChoice p x y)) (ch.S.Z.e0 p)) := by
-  first | exact @GlobalTheory.MovedDict.Entire.differentiable_intertwining_moved | exact GlobalTheory.MovedDict.Entire.differentiable_intertwining_moved | (intros; apply GlobalTheory.MovedDict.Entire.differentiable_intertwining_moved <;> assumption)
+  exact @GlobalTheory.MovedDict.Entire.differentiable_intertwining_moved

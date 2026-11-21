@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianBlockDecompositionHyperbolic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
 open scoped TensorProduct NNReal Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.hermitian_block_decomposition_hyperbolic : ∀ {F 
           (Matrix.of fun i l => z' (Fin.castAdd 2 i) l) +
         Algebra.trace (AF F) (AE F E) (-∑ j, ∑ l, z (Fin.natAdd n₁ 0) j * incM F K j l * cA σ (z' (Fin.natAdd n₁ 1) l)) +
         Algebra.trace (AF F) (AE F E) (-∑ j, ∑ l, z (Fin.natAdd n₁ 1) j * incM F K j l * cA σ (z' (Fin.natAdd n₁ 0) l)) := by
-  first | exact @GlobalTheory.symp_split_hyperbolic_plane | exact GlobalTheory.symp_split_hyperbolic_plane | (intros; apply GlobalTheory.symp_split_hyperbolic_plane <;> assumption)
+  exact @GlobalTheory.symp_split_hyperbolic_plane

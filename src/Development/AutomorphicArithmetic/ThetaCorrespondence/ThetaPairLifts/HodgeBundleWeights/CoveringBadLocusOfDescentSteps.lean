@@ -51,5 +51,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_bad_locus_criterion : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → GlobalTheory.Published.GreenCuspidal → Gram → DeepEx → DeepGood → Size → FlatDeg → Deg → Share → Bad := by
-  first | exact @_root_.GlobalTheory.CovTop.covering_bad_locus_of_descent_steps | exact _root_.GlobalTheory.CovTop.covering_bad_locus_of_descent_steps | (intros; apply _root_.GlobalTheory.CovTop.covering_bad_locus_of_descent_steps <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.covering_bad_locus_of_descent_steps
 end

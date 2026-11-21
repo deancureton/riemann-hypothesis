@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSpanConjugateInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_span_conjugate_invariant : GlobalTheory.ThK.
     ∀ f ∈ thetaSpanV B G X om R Rf ⊔ thetaSpanV' B G X om' R Rf,
     ∀ K : Subgroup (GAd σ (c • G.W.J.map σ)), (∀ x ∈ K, (toGAd hσ G.W.J hc).symm x ∈ KInf σ G.W B.emb) →
       IsAut σ (c • G.W.J.map σ) K (fun x => f ((toGAd hσ G.W.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThKSpanAut.isAut_of_mem_thetaSpan_sup | exact GlobalTheory.ThKSpanAut.isAut_of_mem_thetaSpan_sup | (intros; apply GlobalTheory.ThKSpanAut.isAut_of_mem_thetaSpan_sup <;> assumption)
+  exact @GlobalTheory.ThKSpanAut.isAut_of_mem_thetaSpan_sup

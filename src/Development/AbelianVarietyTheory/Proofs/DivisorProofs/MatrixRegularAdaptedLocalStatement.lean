@@ -14,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_adapted_triangular_bounded : ∀ {K : Type} [NormedField K] [IsUltrametricDist K] {κ : Type} [Fintype κ] (bl : κ → ℕ) {g : ℕ}
     (P : Matrix (Fin g) κ K) (w : κ ≃ Fin g), IntAdapted bl P → (∀ k : ℕ, ‖minor bl w k P‖ = 1) →
     ∀ Q : Matrix κ κ K, BlockUni bl Q → (∀ z z', bl z < bl z' → (P * Q) (w z) z' = 0) → ∀ b z, ‖(P * Q) b z‖ ≤ 1 := by
-  first | exact @GlobalTheory.LieFilt.IntForm.norm_mul_le_one | exact GlobalTheory.LieFilt.IntForm.norm_mul_le_one | (intros; apply GlobalTheory.LieFilt.IntForm.norm_mul_le_one <;> assumption)
+  exact @GlobalTheory.LieFilt.IntForm.norm_mul_le_one

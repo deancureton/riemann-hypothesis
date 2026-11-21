@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMixedChartThroughWCoordinate
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMixModelB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAwayUnitOfPowEqOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Theta Formalism.L2.DIV IsDedekindDomain NumberField MeasureTheory Matrix
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_mixed_chart_through_W_coordinate : ∀ {D :
         (Assignment.one.block _ _)ᶜ ∧
       ∀ u, chart jj (finCongr (rankW G t i j w)) (colsEq t e w) g (invT cc) (coX (Bs.τ v) (Γ.V.bas v) (Γ.W.bas v) u) =
         linA B t i j w (ptA e u) := by
-  first | exact @GlobalTheory.TopFlip.ChartA.exists_mixChart_lin | exact GlobalTheory.TopFlip.ChartA.exists_mixChart_lin | (intros; apply GlobalTheory.TopFlip.ChartA.exists_mixChart_lin <;> assumption)
+  exact @GlobalTheory.TopFlip.ChartA.exists_mixChart_lin

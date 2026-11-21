@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgIntegrableAdm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_restriction_alt : GlobalTheory.
       ∀ μ : @Measure (Fin d → AE F E) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ →
         (∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), Integrable (GlobalTheory.DblSiegelX.avgFun dd B.ψ (GlobalTheory.DblSiegelX.zs H) (l₁ ∘ₗ ed) Φ) μ) ∧
         GlobalTheory.DblSiegelX.avgL dd B.ψ (GlobalTheory.DblSiegelX.zs H) (l₁ ∘ₗ ed) μ ∈ (adeleClass F).adm (Fin n × Fin d ⊕ Fin n × Fin d) := by
-  first | exact @GlobalTheory.DblSiegelX.avg_integrable_adm | exact GlobalTheory.DblSiegelX.avg_integrable_adm | (intros; apply GlobalTheory.DblSiegelX.avg_integrable_adm <;> assumption)
+  exact @GlobalTheory.DblSiegelX.avg_integrable_adm

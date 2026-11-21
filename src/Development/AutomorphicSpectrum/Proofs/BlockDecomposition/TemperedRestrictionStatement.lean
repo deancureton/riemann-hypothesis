@@ -4,4 +4,4 @@ import Development.WeilBound.CoreStatements.AutomorphicKernels.LocalGlobalCompat
 open LocalGlobalAboveLAlt
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.tempered_restriction : TempRes := by
-  first | exact @GlobalTheory.CompanionTheory.TempRes.tempRes | exact GlobalTheory.CompanionTheory.TempRes.tempRes | (intros; apply GlobalTheory.CompanionTheory.TempRes.tempRes <;> assumption)
+  exact @GlobalTheory.CompanionTheory.TempRes.tempRes

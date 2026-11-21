@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibl
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.existsIndependentFrobSolutionsCris_proof : ExI := by
-  first | exact @GlobalTheory.PMon.exI_main | exact GlobalTheory.PMon.exI_main | (intros; apply GlobalTheory.PMon.exI_main <;> assumption)
+  exact @GlobalTheory.PMon.exI_main

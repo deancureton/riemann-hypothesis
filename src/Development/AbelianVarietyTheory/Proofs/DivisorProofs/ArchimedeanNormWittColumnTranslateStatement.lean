@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanNormWittColumnTranslate
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.archimedean_norm_witt_column_translate : ∀ (F E 
           GlobalTheory.EisMidHt.normInf a w (fun i => compInf F E w (GlobalTheory.EisMidHt.adVec F y i)) +
             ‖Algebra.norm w.Completion (inclR (F := F) w.Completion c)‖ *
               GlobalTheory.EisMidHt.normInf a w (fun i => compInf F E w (GlobalTheory.EisMidHt.adVec F (GlobalTheory.EisMidHt.firstColumn X) i)) := by
-  first | exact @GlobalTheory.ArchOrth.archimedean_norm_add_smul_first_column | exact GlobalTheory.ArchOrth.archimedean_norm_add_smul_first_column | (intros; apply GlobalTheory.ArchOrth.archimedean_norm_add_smul_first_column <;> assumption)
+  exact @GlobalTheory.ArchOrth.archimedean_norm_add_smul_first_column

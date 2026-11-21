@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatBoundTuple
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.seesaw_left_restriction_global : ∀ (F E : Type) 
             Matrix.GeneralLinearGroup.det t = Matrix.GeneralLinearGroup.det t₁) ∧
         ∀ z : Matrix (Fin d) (Fin n) (AE F E), ∃ z₁ : Matrix (Fin d) (Fin n₁) (AE F E), ∃ u ∈ isoD d H,
           z * (g₀.1.1 * (diagCols (Fin n) : Matrix (Fin n ⊕ Fin n) (Fin n) (AE F E)))ᵀ = z₁ * ((diagCols (Fin n₁) : Matrix (Fin n₁ ⊕ Fin n₁) (Fin n₁) (AE F E)))ᵀ * (dblEmb H.ι)ᵀ + u := by
-  first | exact @GlobalTheory.DoubledPlaneEmb.exists_dbl_emb | exact GlobalTheory.DoubledPlaneEmb.exists_dbl_emb | (intros; apply GlobalTheory.DoubledPlaneEmb.exists_dbl_emb <;> assumption)
+  exact @GlobalTheory.DoubledPlaneEmb.exists_dbl_emb

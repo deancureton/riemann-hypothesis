@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_siegel_domain_reduction : GlobalTheory.Publ
     ∃ (q : ℕ) (x y : Fin q → Fin n → E), IsFrameU σ X.J x y ∧ ∃ (Cc : Set (UA σ X.J)) (c C : ℝ) (A : ℕ),
       IsCompact Cc ∧ 0 < c ∧ ∀ g : UA σ X.J, ∃ γ ∈ ratU σ X.J, ∃ (t : Fin q → ℝ) (a κ : UA σ X.J),
         (∀ i, c ≤ t i) ∧ IsTorusU x y t a ∧ κ ∈ Cc ∧ γ * g = a * κ ∧ (ht (a * κ) : ℝ) ≤ C * (1 + ∏ i, t i) ^ A := by
-  first | exact @GlobalTheory.SiegelHt.siegel_reduction | exact GlobalTheory.SiegelHt.siegel_reduction | (intros; apply GlobalTheory.SiegelHt.siegel_reduction <;> assumption)
+  exact @GlobalTheory.SiegelHt.siegel_reduction

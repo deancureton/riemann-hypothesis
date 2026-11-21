@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VerticalModelEmbeddingDecompUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsBaseEqChain
 import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.vertical_model_embedding_decomp_unique : ∀ {D : 
       ∀ (τ : Emb D p) (r : ℕ) vb vb' iso, IsLatPres z.Z (f.f ≫ (nmodel z.Z).compι c) (xOm S jc τ) true
         ⟨r, (partF (fun k => B.const (cf τ k)) b).obj P.E, (partF (fun k => B.const (cf τ k)) b).obj P.E', vb, vb',
           (partF (fun k => B.const (cf τ k)) b).map P.ψ, iso⟩ := by
-  first | exact @GlobalTheory.ChainPts.PartDual.isLatPres_part_om | exact GlobalTheory.ChainPts.PartDual.isLatPres_part_om | (intros; apply GlobalTheory.ChainPts.PartDual.isLatPres_part_om <;> assumption)
+  exact @GlobalTheory.ChainPts.PartDual.isLatPres_part_om

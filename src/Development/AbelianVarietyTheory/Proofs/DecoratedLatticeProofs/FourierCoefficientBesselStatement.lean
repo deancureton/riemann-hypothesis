@@ -11,4 +11,4 @@ open scoped TensorProduct InnerProductSpace Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.fourier_coefficient_bessel : ∀ (D : D7) (X : Formalism.L2.SG.HidaSetting.HidaSetting D) (h : X.B.I = Formalism.L2.SG.InstExistsPf.instOf D) (u : D.what₂.Word) (ψ : AddChar (AF D.host.F) ℂ) (A : HSp D) (B : SBes X h u ψ A) (hK : X.LevelSubgroupCharacter) (T : Cu X u hK), (∀ ξ, IsContAut A (B.colForm T.1 ξ)) ∧ ∀ n ∈ flagN B.d, ∀ (a : GA D A) (y : X.B.I.Ginf), Ph X u hK T (iotaX X h (n * embA B.d B.o a) * (y, X.xu u)) = star (psiBes ψ B.d 1 (vecB B.o B.ζ) n) * B.colForm T.1 (X.Wu u y) a := by
-  first | exact @GlobalTheory.Core.Mi.PhCol.ph_colForm | exact GlobalTheory.Core.Mi.PhCol.ph_colForm | (intros; apply GlobalTheory.Core.Mi.PhCol.ph_colForm <;> assumption)
+  exact @GlobalTheory.Core.Mi.PhCol.ph_colForm

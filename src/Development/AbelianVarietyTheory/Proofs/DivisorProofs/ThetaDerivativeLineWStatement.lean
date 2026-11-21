@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_derivative_line_W : ∀ (F E : Type) [Field 
     ∀ γ ∈ Lines σ G.W, ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ Φ₁ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁,
       (∀ x, HasDerivAt (fun t : ℝ => om' (1, γ (Multiplicative.ofAdd t)) Φ x) (Φ₁ x) 0) →
       ∀ h, HasDerivAt (fun t : ℝ => G.M'.I om' Φ (h * γ (Multiplicative.ofAdd t))) (G.M'.I om' Φ₁ h) 0 := by
-  first | exact @GlobalTheory.ThetaDerivTriple.hasDerivAt_thetaIntegral_triple | exact GlobalTheory.ThetaDerivTriple.hasDerivAt_thetaIntegral_triple | (intros; apply GlobalTheory.ThetaDerivTriple.hasDerivAt_thetaIntegral_triple <;> assumption)
+  exact @GlobalTheory.ThetaDerivTriple.hasDerivAt_thetaIntegral_triple

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedProjectionExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_projection_exists : ∀ (F E : Type) 
     ∃ p : (Fin d ⊕ Fin d → AE F E) → (Fin d → AE F E) →ₗ[AF F] AF F, (∀ a b, p (a + b) = p a + p b) ∧
       (∀ c u, p c u = symp (cA σ) (-1) (incM F X.J) (dbl (incM F W.J)) (GlobalTheory.DblSiegelX.zs H u) (Matrix.vecMulVec (incV F H.x) c)) ∧
       ∀ u, (∀ c, B.ψ (p c u) = 1) → u = 0 := by
-  first | exact @GlobalTheory.DblSiegelChar.main | exact GlobalTheory.DblSiegelChar.main | (intros; apply GlobalTheory.DblSiegelChar.main <;> assumption)
+  exact @GlobalTheory.DblSiegelChar.main

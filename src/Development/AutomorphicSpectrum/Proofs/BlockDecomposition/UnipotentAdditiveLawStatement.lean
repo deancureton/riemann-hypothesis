@@ -12,4 +12,4 @@ open GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unipotent_heisenberg_mul : ∀ {D : D7} {n ρ p : ℕ} {hn : ρ + p = n} (M : Maps D hn) (z z' : hermA D ρ) (x x' : Mx D ρ p), M.nzx z x * M.nzx z' x' = M.nzx (z + z') (x + x') := by
-  first | exact @GlobalTheory.CompanionTheory.NzxAdd.nzx_add | exact GlobalTheory.CompanionTheory.NzxAdd.nzx_add | (intros; apply GlobalTheory.CompanionTheory.NzxAdd.nzx_add <;> assumption)
+  exact @GlobalTheory.CompanionTheory.NzxAdd.nzx_add

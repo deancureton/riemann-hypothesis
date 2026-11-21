@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MixedModelVacuumEqSmulIntegralMatrixIndicator
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMixModelB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAwayUnitOfPowEqOne
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Theta Formalism.L2.DIV IsDedekindDomain NumberField MeasureTheory Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.mixedModel_vacuum_eq_smul_integralMatrix_indicator
       (om : Rep D.sp.cm.sig Γ.V Γ.W) (om' : Rep D.sp.cm.sig Γ.V' Γ.W), IsTripleOf W M t i j e Bs Γ X →
       GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ X om om' → IsDoublyCompatible t i j e Bs Γ X → ∀ w ∈ locPl G t, ∀ ι : ToB G t i j w, IsMixModelB W B t e Γ w ι →
       ι (Γ.M'.vac _) = ι (Γ.M'.vac _) 0 • Set.indicator {Z | ∀ r s, Z r s ∈ (ValuativeRel.valuation (Kw w)).integer} 1 := by
-  first | exact @GlobalTheory.TopFlip.MixVacSmall.mixVac_eq_indicator | exact GlobalTheory.TopFlip.MixVacSmall.mixVac_eq_indicator | (intros; apply GlobalTheory.TopFlip.MixVacSmall.mixVac_eq_indicator <;> assumption)
+  exact @GlobalTheory.TopFlip.MixVacSmall.mixVac_eq_indicator

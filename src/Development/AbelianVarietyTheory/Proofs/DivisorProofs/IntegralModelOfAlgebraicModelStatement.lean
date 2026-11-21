@@ -10,4 +10,4 @@ import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ConjugateOrderDa
 open GlobalTheory.LatVal GlobalTheory.LatJet
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_model_of_algebraic_model : GlobalTheory.Published.PeriodComparison → GlobalTheory.Published.SerreTateGoodReductionSt → GlobalTheory.Published.AbelianDeRham → GlobalTheory.Published.AbelianDualCrystal → GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.PolarisationModule → GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.Statement → ModelAlg → ModelInt := by
-  first | exact @GlobalTheory.LatModel.modelInt | exact GlobalTheory.LatModel.modelInt | (intros; apply GlobalTheory.LatModel.modelInt <;> assumption)
+  exact @GlobalTheory.LatModel.modelInt

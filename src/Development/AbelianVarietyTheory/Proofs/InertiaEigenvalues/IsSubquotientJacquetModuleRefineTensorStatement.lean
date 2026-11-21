@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSubquotientJacquetModuleRefineTensor
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroInduction
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.isSubquotient_jacquetModule_refine_tensor : ∀ (k
     (∀ a, IsSubquotient (piTensor (ρ' a)) (jac (e' a) (ρ a))) →
     ∃ E : (Σ c : Fin (∑ a, t a), Fin (d' (finSigmaFinEquiv.symm c).1 (finSigmaFinEquiv.symm c).2)) ≃ Fin n,
       IsSubquotient (piTensor fun c => ρ' (finSigmaFinEquiv.symm c).1 (finSigmaFinEquiv.symm c).2) (jac E π) := by
-  first | exact @GlobalTheory.JacStages.isSubquotient_jac_refine | exact GlobalTheory.JacStages.isSubquotient_jac_refine | (intros; apply GlobalTheory.JacStages.isSubquotient_jac_refine <;> assumption)
+  exact @GlobalTheory.JacStages.isSubquotient_jac_refine

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelMapCompatibility
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.integral_model_map_compatibility : GlobalTheory.Co
         EigRowsAt Y.t (spMap φ ≫ ξ) (φ.comp (β.comp (embV c' W (conjEmb τ.1)))) (bcV Y.t φ e) fun k b => φ (U₂ k b)) →
       IsUnit (pairDet h₁ U₁) → IsUnit (pairDet h₂ U₂) →
     ∃ (k : Type) (_ : Field k) (φ : A →+* k), Function.Injective φ ∧ ∀ v v', SecValAt Y r ν τ.1 s.sig ξ e U₁ U₂ k φ v → SecValAt Y r ν τ.1 s.sig ξ e U₁ U₂ k φ v' → v = v' := by
-  first | exact @GlobalTheory.FlatModel.secValAt_unique_generic | exact GlobalTheory.FlatModel.secValAt_unique_generic | (intros; apply GlobalTheory.FlatModel.secValAt_unique_generic <;> assumption)
+  exact @GlobalTheory.FlatModel.secValAt_unique_generic

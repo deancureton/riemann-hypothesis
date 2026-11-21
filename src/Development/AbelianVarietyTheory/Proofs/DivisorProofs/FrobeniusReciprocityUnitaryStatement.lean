@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusReciprocityUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.frobenius_reciprocity_unitary : ∀ (k : Type) [Fi
           L Ψ' = ((χ (Matrix.GeneralLinearGroup.det g) : ℂ) * GlobalTheory.SplitFlip.apow (Matrix.GeneralLinearGroup.det g) (s : ℂ)) * L Ψ) ∧
         (∀ Ψ₂ : GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + b)) k), L Ψ₂ = 0 → ∃ U ∈ nhds (GlobalTheory.SplitFlip.X0 k (finSumFinEquiv : Fin a ⊕ Fin b ≃ Fin (a + b))),
           ∀ Ψ₁ : GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + b)) k), (∀ Y ∉ U, Ψ₁.1 Y = 0) → Bf Ψ₁ Ψ₂ = 0) := by
-  first | exact @GlobalTheory.BlockDiagonalOmegaIdentities.frobenius_X0 | exact GlobalTheory.BlockDiagonalOmegaIdentities.frobenius_X0 | (intros; apply GlobalTheory.BlockDiagonalOmegaIdentities.frobenius_X0 <;> assumption)
+  exact @GlobalTheory.BlockDiagonalOmegaIdentities.frobenius_X0

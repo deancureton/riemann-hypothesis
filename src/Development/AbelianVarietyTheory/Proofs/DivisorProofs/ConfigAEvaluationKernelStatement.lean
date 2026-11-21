@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEvaluationKernel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.config_A_evaluation_kernel : ∀ (F E : Type) [Fie
       ∫ q : UA σ G.V.J × (AE F E)ˣ, coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f q.1 q.2 y
         ∂((μKi.map Subtype.val).prod (μEi.map Subtype.val)) =
         coneInfFun B G.M om ei K μKi μEi (shiftA H H') X.ν ((b + 2 - a') / 2) f y := by
-  first | exact @GlobalTheory.ThK.ConeEulerInf.cone_inf_iter | exact GlobalTheory.ThK.ConeEulerInf.cone_inf_iter | (intros; apply GlobalTheory.ThK.ConeEulerInf.cone_inf_iter <;> assumption)
+  exact @GlobalTheory.ThK.ConeEulerInf.cone_inf_iter

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmOrderActionDescends
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.cm_order_action_descends : ∀ {E : Type} [Field E
     ∀ t : orderC c ⊗[ℤ] R, ∃ T : X₀.Lie →ₗ[R] X₀.Lie, ∀ v j, cd (T v) j =
       Algebra.TensorProduct.productMap ((φ (U.e j)).comp (orderC c).subtype).toIntAlgHom
         (algebraMap R ℂ).toIntAlgHom t * cd v j := by
-  first | exact @GlobalTheory.LatModel.exists_lie_end_diagonal_of_tensor | exact GlobalTheory.LatModel.exists_lie_end_diagonal_of_tensor | (intros; apply GlobalTheory.LatModel.exists_lie_end_diagonal_of_tensor <;> assumption)
+  exact @GlobalTheory.LatModel.exists_lie_end_diagonal_of_tensor

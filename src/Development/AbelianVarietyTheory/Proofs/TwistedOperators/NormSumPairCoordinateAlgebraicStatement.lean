@@ -19,4 +19,4 @@ open GlobalTheory.RowEx MeasureTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_sum_pair_coordinate_algebraic : GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → ∀ (D : D7) (δ t0 : ℂ) (Q : ℕ) (P : GlobalTheory.NormSum.Pair D ⊤ δ t0 Q)
     (h : Formalism.MainNotions.StandardLatticesGL3.GA D P.d) (U : GlobalTheory.NormSum.Tup D P.a P.d P.n), IsAlgebraic ℚ (P.coord h U) := by
-  first | exact @GlobalTheory.NormSum.CoordAlg.coord_isAlgebraic | exact GlobalTheory.NormSum.CoordAlg.coord_isAlgebraic | (intros; apply GlobalTheory.NormSum.CoordAlg.coord_isAlgebraic <;> assumption)
+  exact @GlobalTheory.NormSum.CoordAlg.coord_isAlgebraic

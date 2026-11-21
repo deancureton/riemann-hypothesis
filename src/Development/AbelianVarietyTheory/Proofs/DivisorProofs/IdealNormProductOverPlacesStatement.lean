@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealNormProductOverPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHeightSmulInvariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsEvEqProdNormZpow
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicCharacterFrequenciesAndConductorProduct
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.ideal_norm_product_over_places : ∀ (F E : Type) 
     (I : FractionalIdeal (𝓞 E)⁰ E), I ≠ 0 →
       ∏ᶠ v : HeightOneSpectrum (𝓞 F), ∏ w ∈ Formalism.L2.Host.aboveF (L := E) F v,
         (Ideal.absNorm w.asIdeal : ℝ) ^ FractionalIdeal.count E w I = (FractionalIdeal.absNorm I : ℝ) := by
-  first | exact @GlobalTheory.RegroupAbsNorm.finprod_aboveF_absNorm_zpow_count | exact GlobalTheory.RegroupAbsNorm.finprod_aboveF_absNorm_zpow_count | (intros; apply GlobalTheory.RegroupAbsNorm.finprod_aboveF_absNorm_zpow_count <;> assumption)
+  exact @GlobalTheory.RegroupAbsNorm.finprod_aboveF_absNorm_zpow_count

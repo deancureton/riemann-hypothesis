@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearHomPowEqOfKillsComplexTorsion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLinearHomProd
 open NumberField
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_linearHom_pow_eq_of_kills_complex_torsion :
     (ψ : A.t.G ⟶ B.t.G), GlobalTheory.Serre.IsLinearHom A.t.act B.t.act ψ → ∀ n : ℕ, 0 < n →
     (∀ u : Over.mk (spMap (σ.comp (algebraMap (𝓞 K) K))) ⟶ A.t.G, u ^ n = 1 → u ≫ ψ = 1) →
     ∃ χ : A.t.G ⟶ B.t.G, GlobalTheory.Serre.IsLinearHom A.t.act B.t.act χ ∧ χ ^ n = ψ := by
-  first | exact @GlobalTheory.DivisibleLinear.exists_linear_pow_eq | exact GlobalTheory.DivisibleLinear.exists_linear_pow_eq | (intros; apply GlobalTheory.DivisibleLinear.exists_linear_pow_eq <;> assumption)
+  exact @GlobalTheory.DivisibleLinear.exists_linear_pow_eq

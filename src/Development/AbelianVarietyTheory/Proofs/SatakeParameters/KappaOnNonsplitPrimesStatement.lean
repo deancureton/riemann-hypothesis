@@ -10,4 +10,4 @@ open Formalism.L2.Th1.E (IntCurve curveL Unif)
 open Formalism.DworkPowerSeriesWeights (JetsIntegral)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kappa_on_nonsplit_primes : ∀ D : D7, KappaOn (fun D p => ¬ SplitK D p) D := by
-  first | exact @GlobalTheory.ThLoc.kappaNonSplit | exact GlobalTheory.ThLoc.kappaNonSplit | (intros; apply GlobalTheory.ThLoc.kappaNonSplit <;> assumption)
+  exact @GlobalTheory.ThLoc.kappaNonSplit

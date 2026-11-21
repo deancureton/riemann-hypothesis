@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticTraceBasisExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.symplectic_trace_basis_exists : ∀ (F E : Type) [
       symp (R := AF F) (cA σ) (-1) (incM F J) (incM F J')
         (inclR (F := F) (AF F) (Module.finBasis F E j) • Matrix.vecMulVec (incV F x) (incV F y'))
         (Matrix.vecMulVec (inclR (F := F) (AF F) (t i) • incV F y) (incV F x')) = if i = j then 1 else 0 := by
-  first | exact @GlobalTheory.ArchDualPair.dualPair | exact GlobalTheory.ArchDualPair.dualPair | (intros; apply GlobalTheory.ArchDualPair.dualPair <;> assumption)
+  exact @GlobalTheory.ArchDualPair.dualPair

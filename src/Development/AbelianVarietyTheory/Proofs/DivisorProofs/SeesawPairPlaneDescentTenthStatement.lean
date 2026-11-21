@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentTenth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_tenth : GlobalTheory.ThK
       V₁.J = H.ιᵀ * X.J * H.ι.map σ → M₁.IsGood B.ψ → IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ Ψ ∈ schA F (Fin n × Fin d), ∀ K : Set (unip σ X H), IsCompact K → ∃ C : ℝ, ∀ u ∈ K,
       Summable (fun w : Fin d → E => ‖thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ)))‖) ∧ ∑' w : Fin d → E, ‖thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) Ψ)))‖ ≤ C := by
-  first | exact @GlobalTheory.ThKCptBoundX.sum_norm_bdd | exact GlobalTheory.ThKCptBoundX.sum_norm_bdd | (intros; apply GlobalTheory.ThKCptBoundX.sum_norm_bdd <;> assumption)
+  exact @GlobalTheory.ThKCptBoundX.sum_norm_bdd

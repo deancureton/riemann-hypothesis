@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalInvariantFormUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.diagonal_invariant_form_unique : ∀ (F : Type) [F
     ∀ (κ : Type) [Fintype κ] (l : ((κ ⊕ κ → AF F) → ℂ) →ₗ[ℂ] ℂ), l ∈ (adeleClass F).adm (κ ⊕ κ) →
       (∀ x y : κ → AF F, ∀ Φ ∈ schA F (κ ⊕ κ), l (schr ψ (Sum.elim x x, Sum.elim y (-y)) Φ) = l Φ) →
       ∃ c : ℂ, ∀ Φ ∈ schA F (κ ⊕ κ), l Φ = c * GlobalTheory.DiagForm.lDiag F κ Φ := by
-  first | exact @GlobalTheory.DiagUniq.eq_smul_lDiag | exact GlobalTheory.DiagUniq.eq_smul_lDiag | (intros; apply GlobalTheory.DiagUniq.eq_smul_lDiag <;> assumption)
+  exact @GlobalTheory.DiagUniq.eq_smul_lDiag

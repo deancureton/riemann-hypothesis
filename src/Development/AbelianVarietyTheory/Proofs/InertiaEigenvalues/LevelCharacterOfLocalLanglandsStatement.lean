@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LevelCharacterOfLocalLanglands
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EigenCompatibleOfBadSet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AtMemAnd
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
@@ -17,4 +16,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_character_of_local_langlands : PrN → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t _ _ c =>
     ∃ θ : ∀ kk : Fin 2, Multiplicative (ZMod ((w.D Z).host.g kk)) →* (↥(w.D Z).LL0)ˣ, HEq θ c.a.nt.θ ∧
       GlobalTheory.HeightCounting.RatSide.LvlPsi t.r.z.R t.r.z.F t.r.z.cG θ := by
-  first | exact @GlobalTheory.GalLoc.PsiLvl.lvlPsi_at | exact GlobalTheory.GalLoc.PsiLvl.lvlPsi_at | (intros; apply GlobalTheory.GalLoc.PsiLvl.lvlPsi_at <;> assumption)
+  exact @GlobalTheory.GalLoc.PsiLvl.lvlPsi_at

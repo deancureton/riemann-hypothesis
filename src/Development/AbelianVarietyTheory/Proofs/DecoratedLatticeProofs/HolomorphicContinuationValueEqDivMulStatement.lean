@@ -12,4 +12,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.holomorphicContinuationValue_eq_div_mul : ∀ (Z L d Y : ℂ → ℂ) (s₀ z l : ℂ) (s₁ : ℝ), 0 < s₀.re → s₁ < s₀.re → AnalyticOnNhd ℂ d (rightOf 0) → (∀ s : ℂ, 0 < s.re → d s ≠ 0) → DifferentiableOn ℂ Y (rightOf s₁) → EqRight Z (fun s => L s / d s * Y s) → HolValueAt Z s₀ z → HolValueAt L s₀ l → z = l / d s₀ * Y s₀ := by
-  first | exact @GlobalTheory.Core.Rk.IP.holValueAt_eq_div_mul | exact GlobalTheory.Core.Rk.IP.holValueAt_eq_div_mul | (intros; apply GlobalTheory.Core.Rk.IP.holValueAt_eq_div_mul <;> assumption)
+  exact @GlobalTheory.Core.Rk.IP.holValueAt_eq_div_mul

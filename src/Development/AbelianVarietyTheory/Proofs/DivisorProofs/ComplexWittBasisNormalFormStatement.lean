@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexWittBasisNormalForm
-import Mathlib
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.complex_witt_basis_normal_form : ∀ (n r : ℕ) (J : Matrix (Fin n) (Fin n) ℂ), J.conjTranspose = J →
     ∀ (X Y : Matrix (Fin n) (Fin r) ℂ), X.conjTranspose * J * X = 0 → Y.conjTranspose * J * Y = 0 → X.conjTranspose * J * Y = 1 →
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.complex_witt_basis_normal_form : ∀ (n r : ℕ) (
           let G : Matrix (Fin n) (Fin n) ℂ := 1 + Xb * (m.1 - 1) * (Yb.conjTranspose * J) + Yb * ((m⁻¹).1.conjTranspose - 1) * (Xb.conjTranspose * J)
           let M : Matrix (Fin n) (Fin n) ℂ := (c⁻¹).1 * u.1 * G * (u⁻¹).1 * c.1
           M.conjTranspose * M = 1 := by
-  first | exact @GlobalTheory.MajPosCpx.exists_unip_conj_unitary | exact GlobalTheory.MajPosCpx.exists_unip_conj_unitary | (intros; apply GlobalTheory.MajPosCpx.exists_unip_conj_unitary <;> assumption)
+  exact @GlobalTheory.MajPosCpx.exists_unip_conj_unitary

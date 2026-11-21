@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawDoublingIntegralIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.seesaw_doubling_integral_identity : GlobalTheory.F
       ∃ z : GA D W₁ →₀ ℂ, (∀ k ∈ z.support, k ∈ GfC W₁ ∧ k ∈ Set.range (GlobalTheory.AdelicU.emb D.sp.cm.sig W₁.gram v)) ∧
         GlobalTheory.FunObj.zdeg z ≠ 0 ∧ ∀ i, ∃ Φ₀D, IsDatum Γ.M' ψ cB Φ₀D ((z.sum fun k c => c • ωB (k, 1)) (Ψ i)) ∧
           Φ₀D ∈ Γ.M'.So Bs.ψ t := by
-  first | exact @GlobalTheory.RegSo.exists_comb_mem_So | exact GlobalTheory.RegSo.exists_comb_mem_So | (intros; apply GlobalTheory.RegSo.exists_comb_mem_So <;> assumption)
+  exact @GlobalTheory.RegSo.exists_comb_mem_So

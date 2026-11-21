@@ -9,4 +9,4 @@ open GlobalTheory.SepRows
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.top_separation : GlobalTheory.FunPr.Hypotheses₂ → TopSep := by
-  first | exact @GlobalTheory.SepRows.SepProof.topSep_of_classicalTheorems | exact GlobalTheory.SepRows.SepProof.topSep_of_classicalTheorems | (intros; apply GlobalTheory.SepRows.SepProof.topSep_of_classicalTheorems <;> assumption)
+  exact @GlobalTheory.SepRows.SepProof.topSep_of_classicalTheorems

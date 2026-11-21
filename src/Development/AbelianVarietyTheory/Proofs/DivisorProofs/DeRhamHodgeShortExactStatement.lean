@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.de_rham_hodge_short_exact : GlobalTheory.CovTop.Hy
     ∀ H : T.Modules, GlobalTheory.DeRhamSheaf.IsDeRhamSheaf A H →
       ∃ S : ShortComplex T.Modules, S.ShortExact ∧ Nonempty (S.X₂ ≅ H) ∧
         Nonempty (S.X₁ ≅ GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A) ∧ Nonempty (S.X₃ ≅ GlobalTheory.VB.dual (GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A)) := by
-  first | exact @GlobalTheory.HodgeSeqSheaf.main | exact GlobalTheory.HodgeSeqSheaf.main | (intros; apply GlobalTheory.HodgeSeqSheaf.main <;> assumption)
+  exact @GlobalTheory.HodgeSeqSheaf.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ArithmeticVarietyPointDimension
-import Mathlib
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
@@ -13,4 +12,4 @@ open GlobalTheory.ArithmeticHeightTower GlobalTheory.CompanionTheory.MPDict Reci
 open GlobalTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arithmetic_variety_point_dimension : ∀ (m : ℕ) (n : Fin (m + 1) → ℕ) (x : MP ℤ m n) (d : ℕ), CharZero ((MP ℤ m n).residueField x) → topologicalKrullDim (closure ({x} : Set (MP ℤ m n))) = (d : ℕ) → Geo.IsArithVar (ptIdeal x) d := by
-  first | exact @GlobalTheory.CompanionTheory.MPDict.DimVar.isArithVar_ptIdeal | exact GlobalTheory.CompanionTheory.MPDict.DimVar.isArithVar_ptIdeal | (intros; apply GlobalTheory.CompanionTheory.MPDict.DimVar.isArithVar_ptIdeal <;> assumption)
+  exact @GlobalTheory.CompanionTheory.MPDict.DimVar.isArithVar_ptIdeal

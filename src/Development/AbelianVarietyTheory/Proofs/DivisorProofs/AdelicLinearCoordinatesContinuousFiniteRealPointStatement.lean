@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLinearCoordinatesContinuousFiniteRealPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoMulInvOf
 open scoped TensorProduct Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.adelicLinearCoordinates_continuous_finite_real_poi
     Continuous e ∧ Continuous e.symm ∧
       (∀ x : Formalism.IndefR.DatumF.WOF F E nS nT, x.map (Formalism.IndefR.DatumF.finPartF F E) = 0 ↔ GlobalTheory.SWQ.fin (e x).1 = 0 ∧ GlobalTheory.SWQ.fin (e x).2 = 0) ∧
       (∀ x : Formalism.IndefR.DatumF.WOF F E nS nT, x.map (Formalism.IndefR.DatumF.infPartF F E) = 0 ↔ GlobalTheory.SWQ.inf (e x).1 = 0 ∧ GlobalTheory.SWQ.inf (e x).2 = 0) := by
-  first | exact @GlobalTheory.AdelicCoordF.coord | exact GlobalTheory.AdelicCoordF.coord | (intros; apply GlobalTheory.AdelicCoordF.coord <;> assumption)
+  exact @GlobalTheory.AdelicCoordF.coord

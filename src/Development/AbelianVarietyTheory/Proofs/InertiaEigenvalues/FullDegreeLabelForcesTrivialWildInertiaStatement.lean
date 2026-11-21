@@ -7,4 +7,4 @@ open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.full_degree_label_forces_trivial_wild_inertia : ∀ (D : D7) (T : GlobalTheory.RowTie.WDTie D.nd D.naut), GlobalTheory.HeightCounting.LabTrue D T → GlobalTheory.TypeLeaf.WildOne D := by
-  first | exact @GlobalTheory.WildFull.main | exact GlobalTheory.WildFull.main | (intros; apply GlobalTheory.WildFull.main <;> assumption)
+  exact @GlobalTheory.WildFull.main

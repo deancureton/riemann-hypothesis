@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinUnfoldingRapidDecay
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.eisenstein_unfolding_rapid_decay : ∀ (F E : Type
       GlobalTheory.CuspDbl.IsRegFam (fun h : UA σ W.J => (qht h : ℝ)) s₀ Ez →
       (∀ s : ℂ, R₀ < s.re → IsCT H' (fun h => ∫ h' in 𝓕, f h' * Ez s h h' ∂μ) 0) →
       IsCT H' (fun h => ∫ h' in 𝓕, f h' * Ez s₀ h h' ∂μ) 0 := by
-  first | exact @GlobalTheory.CuspCont.isCT_integral_of_regFam | exact GlobalTheory.CuspCont.isCT_integral_of_regFam | (intros; apply GlobalTheory.CuspCont.isCT_integral_of_regFam <;> assumption)
+  exact @GlobalTheory.CuspCont.isCT_integral_of_regFam

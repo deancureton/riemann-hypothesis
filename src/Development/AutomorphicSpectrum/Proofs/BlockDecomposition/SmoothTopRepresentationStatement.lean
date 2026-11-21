@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothTopRepresentation
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ExistsUMOfMem
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemTwKerIffAverage
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UnipotentTopMemParabolicStatement
@@ -19,4 +18,4 @@ open scoped TensorProduct
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.smooth_top_representation : ∀ (k : Type) [Field k] [ValuativeRel k] [TopologicalSpace k] [IsNonarchimedeanLocalField k] (i : ℕ) {V W : Type} [AddCommGroup V] [Module ℂ V] [AddCommGroup W] [Module ℂ W] (τ : Representation ℂ (Mir k i) V), IsSmooth τ → IsSmooth (topRep τ W) := by
-  first | exact @GlobalTheory.CompanionTheory.BZPsiPG.FibKer.isSmooth_topRep | exact GlobalTheory.CompanionTheory.BZPsiPG.FibKer.isSmooth_topRep | (intros; apply GlobalTheory.CompanionTheory.BZPsiPG.FibKer.isSmooth_topRep <;> assumption)
+  exact @GlobalTheory.CompanionTheory.BZPsiPG.FibKer.isSmooth_topRep

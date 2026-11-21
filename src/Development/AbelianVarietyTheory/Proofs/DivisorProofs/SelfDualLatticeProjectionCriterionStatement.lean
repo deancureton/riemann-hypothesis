@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfDualLatticeProjectionCriterion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.self_dual_lattice_projection_criterion : ∀ (F E 
       X * (cT (σ : E →+* E) Y * J) + I * Q + Y * (cT (σ : E →+* E) X * J) = 1 →
       ∃ L₀' : Submodule (𝓞 E) (Fin m → E), Submodule.IsLattice E L₀' ∧
         ∀ v, IsSelfDualAt σ (cT (σ : E →+* E) I * J * I) L₀' v := by
-  first | exact @GlobalTheory.HypAdapt.Cmpl.exists_selfDual_complement | exact GlobalTheory.HypAdapt.Cmpl.exists_selfDual_complement | (intros; apply GlobalTheory.HypAdapt.Cmpl.exists_selfDual_complement <;> assumption)
+  exact @GlobalTheory.HypAdapt.Cmpl.exists_selfDual_complement

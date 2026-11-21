@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsLocalIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolMatchFiniteSetVacuum
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.matched_maps_local_identity : GlobalTheory.FunPr.H
     ∀ (T : Finset (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F)) (v : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F), v ∈ T →
     ∀ h ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UAt σ G.W (GlobalTheory.AdelicU.evFin F v), ∀ Φ Φ',
     GlobalTheory.ThK.PolynomialMatching.PolMatchOn B G X R Rf T Φ Φ' → GlobalTheory.ThK.PolynomialMatching.PolMatchOn B G X R Rf T (om (1, h) Φ) (om' (1, h) Φ') := by
-  first | exact @GlobalTheory.ThK.PolMatchStep.polMatchOn_step | exact GlobalTheory.ThK.PolMatchStep.polMatchOn_step | (intros; apply GlobalTheory.ThK.PolMatchStep.polMatchOn_step <;> assumption)
+  exact @GlobalTheory.ThK.PolMatchStep.polMatchOn_step

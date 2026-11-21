@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_fourier_degree_bound : ∀ {D : D7} {T : Ty
           (∀ p, Finsupp.mapDomain Prod.fst (kk p) = dg) ∧
           ∫ g, X.ker W.ψ W.θ t (MvPolynomial.monomial k 1) h (x * (g : GA D A)) ∂κ =
             ∑ p, r p * X.ker W.ψ W.θ t (MvPolynomial.monomial (kk p) 1) h x := by
-  first | exact @GlobalTheory.RealAvg.avg_kernel_alg | exact GlobalTheory.RealAvg.avg_kernel_alg | (intros; apply GlobalTheory.RealAvg.avg_kernel_alg <;> assumption)
+  exact @GlobalTheory.RealAvg.avg_kernel_alg

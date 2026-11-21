@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFamilyCoefficientIntegralTorusPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SepAtBIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueScalar
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.thetaFamily_coefficient_integral_torusPoint : ∀ 
         sval (θ : LB.Sec (LB.LinComb D.P.L (D.famφB 0) (DegPre.famε 1)))
           ((toUnit (TF (R := V) (FractionRing V))).left ≫ (b * D.c χ).left) z J *
         (val (g.s χ) (𝟙 _) z J).val * (val w (𝟙 _) z J).val := by
-  first | exact @GlobalTheory.UT.CoefInt.coef_int | exact GlobalTheory.UT.CoefInt.coef_int | (intros; apply GlobalTheory.UT.CoefInt.coef_int <;> assumption)
+  exact @GlobalTheory.UT.CoefInt.coef_int

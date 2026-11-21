@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftToPrimeLocalization
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.lift_to_prime_localization : ∀ (U X : Scheme.{0}
     (K' : Type) [Field K'] (χ : R →+* K') (yy : Sp K' ⟶ U), spMap χ ≫ ξ = yy ≫ j →
     ∀ (q : Ideal R) [q.IsPrime], RingHom.ker χ = q →
       ∃ yq : Sp (Localization.AtPrime q) ⟶ U, spMap (algebraMap R (Localization.AtPrime q)) ≫ ξ = yq ≫ j := by
-  first | exact @GlobalTheory.spec_factor_localization_of_field_point | exact GlobalTheory.spec_factor_localization_of_field_point | (intros; apply GlobalTheory.spec_factor_localization_of_field_point <;> assumption)
+  exact @GlobalTheory.spec_factor_localization_of_field_point

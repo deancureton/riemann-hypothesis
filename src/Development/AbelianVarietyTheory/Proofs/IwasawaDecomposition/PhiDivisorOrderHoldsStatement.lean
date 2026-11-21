@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPo
 open GlobalTheory.TorRef GlobalTheory.ShFam
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.phi_divisor_order_holds : PhiDivOSt := by
-  first | exact @GlobalTheory.TorRef.phiDivO | exact GlobalTheory.TorRef.phiDivO | (intros; apply GlobalTheory.TorRef.phiDivO <;> assumption)
+  exact @GlobalTheory.TorRef.phiDivO

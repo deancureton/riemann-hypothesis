@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIdelesHaarSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_ideles_haar_second : GlobalThe
           (fun h => κ * ∑' γ : T₁, ∫ c, Gf (w * nn c * emb γ.1 * h) ∂ν) ∧
         (∀ h, Summable fun γ : T₁ => ‖∫ c, Gf (w * nn c * emb γ.1 * h) ∂ν‖) ∧
         ∀ h (γ : T₁), Integrable (fun c => Gf (w * nn c * emb γ.1 * h)) ν := by
-  first | exact @GlobalTheory.ConeSmallMidJB.ctMid_unfold | exact GlobalTheory.ConeSmallMidJB.ctMid_unfold | (intros; apply GlobalTheory.ConeSmallMidJB.ctMid_unfold <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.ctMid_unfold

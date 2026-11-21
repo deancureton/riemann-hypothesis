@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalWeilHomFinitePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInertLocalUniformizerImports
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
 open scoped TensorProduct Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_localWeilHom_finitePlace : ∀ (F E : Type)
         φ₁ ∈ SB (Fin a' × Fin (a + a') → Fv F v) →
         (Acts (evFin F v) (om' (ιS g, ιT h)) (m : (Fin a' × Fin (a + a') → Fv F v) → ℂ) φ₁ ↔
           ((ω (g, h) m : SB (Fin a' × Fin (a + a') → Fv F v)) : (Fin a' × Fin (a + a') → Fv F v) → ℂ) = φ₁)) := by
-  first | exact @GlobalTheory.LocalWeilHom.local_weil_hom | exact GlobalTheory.LocalWeilHom.local_weil_hom | (intros; apply GlobalTheory.LocalWeilHom.local_weil_hom <;> assumption)
+  exact @GlobalTheory.LocalWeilHom.local_weil_hom

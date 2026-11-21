@@ -14,4 +14,4 @@ open GlobalTheory.Unf
 open scoped ComplexOrder ENNReal NNReal ContDiff
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mixedModelSource_support_finiteComponentInBox : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ), IsStdChar D ψ (-1) → ∀ (S S₀ T : HSp D) (ρ : ℕ) (d : HypDec S S₀ ρ) (v : VolM D T.rank ρ) (U : AddSubgroup (WO S T)), IsOpen (U : Set (WO S T)) → ∃ K : Set (Mx D T.rank ρ), IsCompact K ∧ ∀ f ∈ GlobalTheory.Size.thetaLevel ψ S T U, ∀ x w, d.mixS T ψ v.μ v.𝓕 f x w ≠ 0 → InBox K x := by
-  first | exact @GlobalTheory.Unf.mixS_support_inBox | exact GlobalTheory.Unf.mixS_support_inBox | (intros; apply GlobalTheory.Unf.mixS_support_inBox <;> assumption)
+  exact @GlobalTheory.Unf.mixS_support_inBox

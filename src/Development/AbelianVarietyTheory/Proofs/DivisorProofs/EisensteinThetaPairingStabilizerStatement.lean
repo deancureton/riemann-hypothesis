@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinThetaPairingStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.eisenstein_theta_pairing_stabilizer : GlobalTheory
     IsFundamentalDomain ((ratU σ G.W.J).subgroupOf (unip σ G.W H')) 𝓕 μ₁ → μ₁ 𝓕 = 1 → ∀ h,
       (∀ s₀ : ℂ, MeromorphicAt (fun s => ∫ u in 𝓕, GlobalTheory.ConeSmallCT.Bint G.M' om' Φ' Eis s (u.1 * h) ∂μ₁) s₀) ∧
       AnalyticAt ℂ (fun s => ∫ u in 𝓕, GlobalTheory.ConeSmallCT.Bint G.M' om' Φ' Eis s (u.1 * h) ∂μ₁) (-((((b + 2 : ℕ) : ℂ) - 1) / 2)) := by
-  first | exact @GlobalTheory.ConeSmallMero.ct_mero | exact GlobalTheory.ConeSmallMero.ct_mero | (intros; apply GlobalTheory.ConeSmallMero.ct_mero <;> assumption)
+  exact @GlobalTheory.ConeSmallMero.ct_mero

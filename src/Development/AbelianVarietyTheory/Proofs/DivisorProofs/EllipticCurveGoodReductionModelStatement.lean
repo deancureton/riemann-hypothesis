@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EllipticCurveGoodReductionModel
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.elliptic_curve_good_reduction_model : GlobalTheory
         (∀ w, w ∈ u.Λ ↔ w 0 ∈ Λ.lattice) ∧ IsTangent v ∧ IsTangent v' ∧
         v'.left ≫ φ' = spMap (Chart.dualMapR R₁.subtype) ≫ v.left ∧
         u.IsDiff (fun _ ↦ t) v' ∧ t ≠ 0 ∧ Sz l lam 0 ((t * Ω)⁻¹) := by
-  first | exact @GlobalTheory.CMPlaceCurve.exists_curve | exact GlobalTheory.CMPlaceCurve.exists_curve | (intros; apply GlobalTheory.CMPlaceCurve.exists_curve <;> assumption)
+  exact @GlobalTheory.CMPlaceCurve.exists_curve

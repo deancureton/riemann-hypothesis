@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingMultiplicative
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_multiplicative : ∀ (F E : Type) [
     (∀ q ∈ GlobalTheory.IwLine.lineStab σ X.J H.x, ∃! z : unip σ X H × ((AE F E)ˣ × UA σ X₁.J), q = z.1.1 * m z.2.1 z.2.2) ∧
     IsClosed (GlobalTheory.IwLine.lineStab σ X.J H.x : Set (UA σ X.J)) ∧ IsClosed (unip σ X H : Set (UA σ X.J)) ∧
     unip σ X H ≤ GlobalTheory.IwLine.lineStab σ X.J H.x ∧ ∀ q ∈ GlobalTheory.IwLine.lineStab σ X.J H.x, ∀ u ∈ unip σ X H, q * u * q⁻¹ ∈ unip σ X H := by
-  first | exact @GlobalTheory.LeviSec.leviSection_props | exact GlobalTheory.LeviSec.leviSection_props | (intros; apply GlobalTheory.LeviSec.leviSection_props <;> assumption)
+  exact @GlobalTheory.LeviSec.leviSection_props

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaIntegrability
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_integrability : GlobalTheory.ThK.KP
       ∀ φ φ' : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) φ →
         IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) φ' → ∀ c : ℂ,
         IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) (φ' - c • φ) := by
-  first | exact @GlobalTheory.FrobInfLin.isFrobInf_sub_smul | exact GlobalTheory.FrobInfLin.isFrobInf_sub_smul | (intros; apply GlobalTheory.FrobInfLin.isFrobInf_sub_smul <;> assumption)
+  exact @GlobalTheory.FrobInfLin.isFrobInf_sub_smul

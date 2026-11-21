@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBTripleLocalZeta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.configuration_b_triple_local_zeta : ∀ {F E : Typ
     ∀ (f : SInf F (Fin (b + 2) × Fin (a + (b + 2)))) (y : Fin b × Fin (a + b) → mixedEmbedding.mixedSpace F),
       ∃ g : idelesAt E (evI F) → ℝ, Integrable g μI ∧
         ∀ k ∈ KAt K (evI F), ∀ l : idelesAt E (evI F), ‖coneInfInt B G.M' om' ei' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f k l.1 y‖ ≤ g l := by
-  first | exact @GlobalTheory.ThK.RealBBound.coneInfInt_bound | exact GlobalTheory.ThK.RealBBound.coneInfInt_bound | (intros; apply GlobalTheory.ThK.RealBBound.coneInfInt_bound <;> assumption)
+  exact @GlobalTheory.ThK.RealBBound.coneInfInt_bound

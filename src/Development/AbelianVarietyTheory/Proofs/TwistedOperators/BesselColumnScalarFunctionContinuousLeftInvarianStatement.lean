@@ -6,4 +6,4 @@ open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheor
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.besselColumnScalarFunction_continuous_leftInvariant : Big fun ch => ∀ a, Continuous (colFn ch a) ∧
     ∀ γ ∈ GQ (ch.G.V (.top 0)), ∀ g, colFn ch a (γ * g) = colFn ch a g := by
-  first | exact @GlobalTheory.RowClaim.colFn_cont_left | exact GlobalTheory.RowClaim.colFn_cont_left | (intros; apply GlobalTheory.RowClaim.colFn_cont_left <;> assumption)
+  exact @GlobalTheory.RowClaim.colFn_cont_left

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneOrthogonalBasisExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -45,4 +44,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_orthogonal_basis_extension : ∀ 
         ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) fun t : Fin e → ℝ => a i (k * k₂ * (List.ofFn fun j => γ j (t j)).prod)) ∧
       (∃ (e : ℕ) (b : Fin e → GAd σ (c₀ • W.J.map σ) → ℂ), (∀ j, ContinuousOn (b j) {g : GAd σ (c₀ • W.J.map σ) | ∃ k ∈ K', ∃ k₂ ∈ Kf, g = k * k₂}) ∧ (∀ i, ∃ c : Fin e → ℂ, ∀ g ∈ {g : GAd σ (c₀ • W.J.map σ) | ∃ k ∈ K', ∃ k₂ ∈ Kf, g = k * k₂}, a i g = ∑ j, c j * b j g) ∧
         ∀ j, ∀ k' ∈ K', ∃ c : Fin e → ℂ, ∀ g ∈ {g : GAd σ (c₀ • W.J.map σ) | ∃ k ∈ K', ∃ k₂ ∈ Kf, g = k * k₂}, b j (g * k') = ∑ l, c l * b l g) := by
-  first | exact @GlobalTheory.ThK.InducedCoeff.exists_coeff | exact GlobalTheory.ThK.InducedCoeff.exists_coeff | (intros; apply GlobalTheory.ThK.InducedCoeff.exists_coeff <;> assumption)
+  exact @GlobalTheory.ThK.InducedCoeff.exists_coeff

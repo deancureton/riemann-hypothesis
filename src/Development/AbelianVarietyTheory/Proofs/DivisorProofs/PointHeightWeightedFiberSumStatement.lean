@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.point_height_weighted_fiber_sum : ∀ (F : Type) [
     IsPtHt (fnB u hu hc) (V.j w)
       ((∑ᶠ σ, ∑ᶠ y ∈ {y : GlobalTheory.CxPts V.p σ | y.1 (IsLocalRing.closedPoint ℂ) = V.j w}, u σ y) /
         (2 * (Nat.card (V.X.residueField (V.j w) →+* ℂ) : ℝ))) := by
-  first | exact @GlobalTheory.Mean4O.WeightHt.main | exact GlobalTheory.Mean4O.WeightHt.main | (intros; apply GlobalTheory.Mean4O.WeightHt.main <;> assumption)
+  exact @GlobalTheory.Mean4O.WeightHt.main

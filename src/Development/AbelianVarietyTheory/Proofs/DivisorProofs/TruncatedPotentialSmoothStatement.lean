@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.truncated_potential_smooth : Hypotheses2 → HypothesesH → OnObj fun _ O _ T _ _ => ∀ c u σ (R : ℝ), 2 ≤ R → ((T.M c).A σ).Smooth ((T.F c).phR R u σ) := by
-  first | exact @GlobalTheory.InterpChgSmooth.smooth_phR | exact GlobalTheory.InterpChgSmooth.smooth_phR | (intros; apply GlobalTheory.InterpChgSmooth.smooth_phR <;> assumption)
+  exact @GlobalTheory.InterpChgSmooth.smooth_phR

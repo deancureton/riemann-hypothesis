@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackDivisorAmpleMapSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.pullback_divisor_ample_map_support : ∀ (E : Type
     (((BY.idealSheaf ^ n).comap (genι Y)).map (ρ ≫ genι X)).comap (ρ ≫ genι X) = (BY.idealSheaf ^ n).comap (genι Y) →
     FinalTheorems.Blowup b (((BY.idealSheaf ^ n).comap (genι Y)).map (ρ ≫ genι X)) → q ≫ b = ρ ≫ genι X →
     ∀ x : X', (q ⁻¹' {x}).Finite := by
-  first | exact @GlobalTheory.BlowQF.finite_preimage_of_blowup | exact GlobalTheory.BlowQF.finite_preimage_of_blowup | (intros; apply GlobalTheory.BlowQF.finite_preimage_of_blowup <;> assumption)
+  exact @GlobalTheory.BlowQF.finite_preimage_of_blowup

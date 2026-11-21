@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SliceSectionHaarDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OmAOneApply
 open Matrix MeasureTheory ValuativeRel GlobalTheory.SplitFlip GlobalTheory.SmGL GlobalTheory.WeilM GlobalTheory.RankFibre GlobalTheory.SplitWeil GlobalTheory.RankFibreKer
 
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.isLocallyConstant_indicator_mul_slice : ∀ (k : T
     (∀ (Z : Matrix (Fin a) (Fin d) k) (g : GL (Fin a) k), Z ∈ slice k a d → g.val * Z ∈ slice k a d → g = 1) →
     IsLocallyConstant (Set.indicator {Y : Matrix (Fin a) (Fin d) k | ∃ x ∈ K, ∃ Z ∈ slice k a d, Y = x.val * Z}
       (1 : Matrix (Fin a) (Fin d) k → ℂ)) := by
-  first | exact @GlobalTheory.RankFibreKer.indicator_slice_orbit_isLocallyConstant | exact GlobalTheory.RankFibreKer.indicator_slice_orbit_isLocallyConstant | (intros; apply GlobalTheory.RankFibreKer.indicator_slice_orbit_isLocallyConstant <;> assumption)
+  exact @GlobalTheory.RankFibreKer.indicator_slice_orbit_isLocallyConstant

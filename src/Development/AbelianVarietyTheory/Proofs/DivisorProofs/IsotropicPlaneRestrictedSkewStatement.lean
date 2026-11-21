@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicPlaneRestrictedSkew
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.isotropic_plane_restricted_skew : ∀ (F E : Type)
     (∀ i j, σ (Y.J j i) = -Y.J i j) → form σ Y.J H.x H.x = 0 → form σ Y.J H.y H.y = 0 → form σ Y.J H.x H.y = 1 →
     (∀ u, form σ Y.J (H.ι *ᵥ u) H.x = 0 ∧ form σ Y.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * Y.J * H.ι.map σ = Y₁.J →
     Y₁.J.det ≠ 0 → ∀ γ ∈ ratU σ Y₁.J, ∃ m ∈ ratU σ Y.J, IsLevi (W₁ := Y₁) H 1 γ m := by
-  first | exact @GlobalTheory.LeviRatSkew.exists_rat_isLevi_one_skew | exact GlobalTheory.LeviRatSkew.exists_rat_isLevi_one_skew | (intros; apply GlobalTheory.LeviRatSkew.exists_rat_isLevi_one_skew <;> assumption)
+  exact @GlobalTheory.LeviRatSkew.exists_rat_isLevi_one_skew

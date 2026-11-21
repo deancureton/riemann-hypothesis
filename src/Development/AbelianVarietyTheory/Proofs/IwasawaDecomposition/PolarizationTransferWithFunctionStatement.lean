@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.polarization_transfer_with_function : ∀ (E : Typ
     (ν : TwMap σ Z'.oF.t Z.oF.t r), IsDedFrac β → IsDedFrac β' → Algebra.FiniteType ℤ O' → IsTwInv H φ → σ H.w0 = H.w0 →
     IsPhiDiv φ Z BD → IsPhiDiv φ Z' BD' → ∀ π : Z'.X ⟶ Z.X, Z'.j ≫ π = r ≫ Z.j →
     BD'.idealSheaf = BD.idealSheaf.comap π := by
-  first | exact @GlobalTheory.PolDiv.idealSheaf_eq_comap | exact GlobalTheory.PolDiv.idealSheaf_eq_comap | (intros; apply GlobalTheory.PolDiv.idealSheaf_eq_comap <;> assumption)
+  exact @GlobalTheory.PolDiv.idealSheaf_eq_comap

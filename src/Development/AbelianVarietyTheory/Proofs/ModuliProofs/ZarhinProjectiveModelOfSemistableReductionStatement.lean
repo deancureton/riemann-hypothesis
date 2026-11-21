@@ -12,4 +12,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.zarhinProjectiveModel_of_semistableReduction : GlobalTheory.Published.SemistableReductionSt → GlobalTheory.ZH.ZHSt := by
-  first | exact @GlobalTheory.zh_of_semistableReduction | exact GlobalTheory.zh_of_semistableReduction | (intros; apply GlobalTheory.zh_of_semistableReduction <;> assumption)
+  exact @GlobalTheory.zh_of_semistableReduction

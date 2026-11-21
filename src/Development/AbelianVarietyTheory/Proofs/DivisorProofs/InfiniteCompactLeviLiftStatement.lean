@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InfiniteCompactLeviLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.infinite_compact_levi_lift : ∀ (F E : Type) [Fie
     (B : Base F E) (a b : ℕ) (G : Geo σ a (b + 2)) (G₁ : Geo σ a b) (H : Plane E (b + 2) b)
     (H' : Plane E (a + (b + 2)) (a + b)), CfgB B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
       ∀ k₁ ∈ KInf σ G₁.W B.emb, ∃ k ∈ KInf σ G.W B.emb, IsLevi H' 1 k₁ k := by
-  first | exact @GlobalTheory.LeviKInf.exists_kInf_isLevi | exact GlobalTheory.LeviKInf.exists_kInf_isLevi | (intros; apply GlobalTheory.LeviKInf.exists_kInf_isLevi <;> assumption)
+  exact @GlobalTheory.LeviKInf.exists_kInf_isLevi

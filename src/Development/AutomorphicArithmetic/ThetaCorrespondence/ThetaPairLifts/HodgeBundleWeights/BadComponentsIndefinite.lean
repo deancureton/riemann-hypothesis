@@ -66,5 +66,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.indefinite_at_bad_places : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → GlobalTheory.Published.GreenCuspidal → Gram → DeepGood → Size → FlatDeg → Deg → Share → Covers fun _ _ _ _ p i _ _ _ => BadAt p i := by
-  first | exact @_root_.GlobalTheory.BadIndef.bad_components_indefinite | exact _root_.GlobalTheory.BadIndef.bad_components_indefinite | (intros; apply _root_.GlobalTheory.BadIndef.bad_components_indefinite <;> assumption)
+  exact @_root_.GlobalTheory.BadIndef.bad_components_indefinite
 end

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdelicProductOperator
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.exists_adelic_product_operator : ∀ (F : Type) [F
     ∃ H : ((ι → AF F) → ℂ) →ₗ[ℂ] ((ι → AF F) → ℂ),
       ∀ (f : SchwartzMap (ι → mixedEmbedding.mixedSpace F) ℂ) (g : (ι → FiniteAdeleRing (𝓞 F) F) → ℂ),
         H (pureA F f g) = pureA F (A f) (B g) := by
-  first | exact @GlobalTheory.TensorGlue.exists_pure_operator | exact GlobalTheory.TensorGlue.exists_pure_operator | (intros; apply GlobalTheory.TensorGlue.exists_pure_operator <;> assumption)
+  exact @GlobalTheory.TensorGlue.exists_pure_operator

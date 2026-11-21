@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameEigenvectorColumnForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsIdTorusEltOne
 open NumberField Matrix Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.StdPar GlobalTheory.IdTorus
 open Formalism.UG (cT)
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.witt_frame_eigenvector_column_form : ∀ {F E : Ty
     (matHom _ σ J g⁻¹).1 *ᵥ (fun i => adMat F Y i k) = γ • (fun i => adMat F Y i k) → ∀ i,
     (adMat F (cT (σ : E →+* E) Y * J) * (matHom _ σ J g).1) k i =
       (adMat F (cT (σ : E →+* E) Y * J) * (matHom _ σ J g).1 * adMat F X) k k * adMat F (cT (σ : E →+* E) Y * J) k i := by
-  first | exact @GlobalTheory.TorusCentRow.row_scalar | exact GlobalTheory.TorusCentRow.row_scalar | (intros; apply GlobalTheory.TorusCentRow.row_scalar <;> assumption)
+  exact @GlobalTheory.TorusCentRow.row_scalar

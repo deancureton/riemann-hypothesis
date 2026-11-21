@@ -9,4 +9,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.RawLift
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.definiteUnitaryFundamentalDomain_volume_pos_finite : ∀ (D : D7) (G : Type) [Group G] [Fintype G] (Pl0 T : Type) (A : FamIn D.what₂.LL G Pl0 T D.R.m) (Ks : Type) [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] (R : RealDat D A Ks) (F : Face D A), Laws R F → ∀ (i : Fin D.R.m) (t : T), 0 < R.νV i t (R.fdV i t) ∧ R.νV i t (R.fdV i t) < ⊤ := by
-  first | exact @GlobalTheory.DefVol.fdV_measure_pos_lt_top | exact GlobalTheory.DefVol.fdV_measure_pos_lt_top | (intros; apply GlobalTheory.DefVol.fdV_measure_pos_lt_top <;> assumption)
+  exact @GlobalTheory.DefVol.fdV_measure_pos_lt_top

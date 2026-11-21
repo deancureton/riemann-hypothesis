@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicFrobeniusPointComparison
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatSectionFrameInvariance
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeExistsUniqueOfSamePoint
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.p_adic_frobenius_point_comparison : ∀ (E : Type)
     letI := H.starRing; ∀ (Q : PtP E p) (π : Q.G.left ⟶ Z.t.G.left) (ψ : Q.A.A.left ⟶ Z.oF.t.G.left),
       PtAt Z yb (GlobalTheory.AllWt.ptF P) Q π ψ → ∀ (σ : E →+* ℂ) (j : Fin (Dw.mult σ)) (xx : LieG Q.Gt),
       LieTie Q (ψ ≫ Z.m0.toSABMap.φ) xx (z.u σ j) → LieTie Q (Q.gen ≫ π) xx ((frameOf Z z).v σ j) := by
-  first | exact @GlobalTheory.DetHT.lieTie_frameOf_of_ptAt | exact GlobalTheory.DetHT.lieTie_frameOf_of_ptAt | (intros; apply GlobalTheory.DetHT.lieTie_frameOf_of_ptAt <;> assumption)
+  exact @GlobalTheory.DetHT.lieTie_frameOf_of_ptAt

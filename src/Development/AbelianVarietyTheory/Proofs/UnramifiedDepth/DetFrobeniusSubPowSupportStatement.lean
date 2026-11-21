@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.det_frobenius_sub_pow_support_bounds : (∀ (l i E
       MvPolynomial.rename Sum.inl (cayDet n₀ ℤ) ^ (l ^ i) →
     ∀ m ∈ (ψ ^ s).support, (∑ q, m (Sum.inr q)) ≤ n₀ * s ∧ (∑ q, m (Sum.inl q)) + l ^ i * ∑ q, m (Sum.inr q) = n₀ * l ^ i * s ∧
       (l : ℤ) ^ (E * (∑ q, m (Sum.inr q)) + (s - ∑ q, m (Sum.inr q))) ∣ MvPolynomial.coeff m (ψ ^ s)) := by
-  first | exact @GlobalTheory.det_frobenius_sub_pow_support | exact GlobalTheory.det_frobenius_sub_pow_support | (intros; apply GlobalTheory.det_frobenius_sub_pow_support <;> assumption)
+  exact @GlobalTheory.det_frobenius_sub_pow_support

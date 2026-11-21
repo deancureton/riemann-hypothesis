@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isogeny_finite_flat : ∀ (A X : Over (Sp ℂ)) [GrpObj A] [GrpObj X] (g : ℕ), IsAbelianScheme A → IsAbelianScheme X →
     SmoothOfRelativeDimension g A.hom → SmoothOfRelativeDimension g X.hom →
     ∀ (ψ : A ⟶ X) [IsMonHom ψ] [Surjective ψ.left], IsFinite ψ.left ∧ Flat ψ.left := by
-  first | exact @GlobalTheory.SurjHomFlat.finite_flat | exact GlobalTheory.SurjHomFlat.finite_flat | (intros; apply GlobalTheory.SurjHomFlat.finite_flat <;> assumption)
+  exact @GlobalTheory.SurjHomFlat.finite_flat

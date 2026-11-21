@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelResidueCharacterPow
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.weil_model_residue_character_pow : ∀ (F E : Type
         (∀ (t : ℝ) (f : SInf F (Fin n × Fin d)), Acts (evI F) (om (γ (Multiplicative.ofAdd t), 1)) f (T t f)) →
         ∀ (μ : MeasureTheory.Measure (Fin n × Fin d → mixedEmbedding.mixedSpace F)), μ.IsAddHaarMeasure →
         ∀ (t : ℝ) (f : SInf F (Fin n × Fin d)), ∫ x, ‖T t f x‖ ^ 2 ∂μ = ∫ x, ‖f x‖ ^ 2 ∂μ := by
-  first | exact @GlobalTheory.ArchimedeanUnitaryL2.integral_norm_sq_eq_pair_left | exact GlobalTheory.ArchimedeanUnitaryL2.integral_norm_sq_eq_pair_left | (intros; apply GlobalTheory.ArchimedeanUnitaryL2.integral_norm_sq_eq_pair_left <;> assumption)
+  exact @GlobalTheory.ArchimedeanUnitaryL2.integral_norm_sq_eq_pair_left

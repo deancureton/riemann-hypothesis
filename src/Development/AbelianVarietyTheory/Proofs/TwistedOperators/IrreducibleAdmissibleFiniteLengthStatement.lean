@@ -14,4 +14,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.irreducible_admissible_finite_length : GlobalTheory.Published.KFiniteCoefficientsAnalytic → ∀ (n : ℕ) (ε : Fin n → Bool) (H : Type) [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H] (π : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)), IsIrrAdm ε π → (∀ Y : Submodule ℂ H, IsGKSub ε π Y → Y = ⊥ ∨ Y = kFinVec ε π) ∧ HasFiniteLength ε π := by
-  first | exact @GlobalTheory.HCChar.simple_of_isIrrAdm | exact GlobalTheory.HCChar.simple_of_isIrrAdm | (intros; apply GlobalTheory.HCChar.simple_of_isIrrAdm <;> assumption)
+  exact @GlobalTheory.HCChar.simple_of_isIrrAdm

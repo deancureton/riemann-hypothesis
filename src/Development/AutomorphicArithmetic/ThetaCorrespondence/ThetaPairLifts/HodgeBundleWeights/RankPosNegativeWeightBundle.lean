@@ -84,5 +84,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covers_rk_pos_of_semiAbelianLieSeminegative : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → Covers fun Fm x _ ι p i Y _ _ => 0 < Y.rk (Gs p i (-(cZero (Fm.D x ι) ((i : ℕ) + 1)))) := by
-  first | exact @_root_.GlobalTheory.CovTop.LowPos.covers_rk_Gs_neg_cZero_pos | exact _root_.GlobalTheory.CovTop.LowPos.covers_rk_Gs_neg_cZero_pos | (intros; apply _root_.GlobalTheory.CovTop.LowPos.covers_rk_Gs_neg_cZero_pos <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.LowPos.covers_rk_Gs_neg_cZero_pos
 end

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenIntegralMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_eigen_integral_measure : GlobalTheory.ThK
       ∃ C : ℂ, C ≠ 0 ∧ ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
       ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∃ fa : UA σ G.W.J → ℂ, HasLaw G₁.W H' X.α (((b + 2 : ℕ) : ℝ) / 2) fa ∧
         IsCT H' (G.M'.I om' Φ') (fa + fun h => C * GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (((a - (b + 2)) / 2 + 1 : ℕ) : ℂ) h) := by
-  first | exact @GlobalTheory.ConeSmallCT.ctSmall_eq_cone | exact GlobalTheory.ConeSmallCT.ctSmall_eq_cone | (intros; apply GlobalTheory.ConeSmallCT.ctSmall_eq_cone <;> assumption)
+  exact @GlobalTheory.ConeSmallCT.ctSmall_eq_cone

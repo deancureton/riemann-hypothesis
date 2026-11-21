@@ -38,4 +38,4 @@ theorem _root_.GlobalTheory.T.restriction_omd_intertwines_of_fixes_incV : Global
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (incV F H'.y) (0 : Fin d → AE F E) = Sum.elim (incV F H'.y) (0 : Fin d → AE F E) →
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (0 : Fin d → AE F E) (incV F H'.y) = Sum.elim (0 : Fin d → AE F E) (incV F H'.y) →
         ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), Ed (omd g Φ) = omd₁ g₁ (Ed Φ) := by
-  first | exact @GlobalTheory.DblCompare.main | exact GlobalTheory.DblCompare.main | (intros; apply GlobalTheory.DblCompare.main <;> assumption)
+  exact @GlobalTheory.DblCompare.main

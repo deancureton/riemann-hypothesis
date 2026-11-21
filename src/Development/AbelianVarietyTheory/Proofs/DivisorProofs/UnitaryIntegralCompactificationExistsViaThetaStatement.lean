@@ -10,4 +10,4 @@ open scoped CategoryTheory.Obj
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unitary_integral_compactification_exists_via_theta : UMinSt := by
-  first | exact @GlobalTheory.umin_theta_compactification_exists | exact GlobalTheory.umin_theta_compactification_exists | (intros; apply GlobalTheory.umin_theta_compactification_exists <;> assumption)
+  exact @GlobalTheory.umin_theta_compactification_exists

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrallyClosedGenericExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.integrally_closed_generic_extension : ∀ (E : Typ
       ∀ (e σ : Over.mk y ⟶ Y.oF.t.G), e.left = y ≫ (Y.oF.etaA a).left → σ ^ (p ^ n) = 1 →
         Out.WeilIs Y.oF.t.G Y.oF.t.PP.L ((p ^ n : ℕ) : ℤ) e σ
           (unitOn (Units.map (algebraMap R (FractionRing R)).toMonoidHom (κ (σ.left ≫ Y.m.φ)))) := by
-  first | exact @GlobalTheory.HTLocWeil.weil_kappa | exact GlobalTheory.HTLocWeil.weil_kappa | (intros; apply GlobalTheory.HTLocWeil.weil_kappa <;> assumption)
+  exact @GlobalTheory.HTLocWeil.weil_kappa

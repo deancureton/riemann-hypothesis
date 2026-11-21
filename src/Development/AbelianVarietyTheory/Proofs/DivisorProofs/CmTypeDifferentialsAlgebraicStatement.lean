@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.cm_type_differentials_algebraic : GlobalTheory.Pub
       IsPolForm (dp0 ℂ) (𝟙 _) X.A (X.diag U.c) ψ ∧ admitted X₀ N ∧
       ∀ i, U.IsCMVec i (yv i) (w i) ∧ w i ≠ 0 ∧ IsAlgebraic ℚ (w i / a i) ∧
         ∀ x₀ x, m.Corr x₀ x → m.Corr (N i x₀) ((ψ.flip (yv i)).smulRight (yv i) x) := by
-  first | exact @GlobalTheory.CMEigen.eigen_ops | exact GlobalTheory.CMEigen.eigen_ops | (intros; apply GlobalTheory.CMEigen.eigen_ops <;> assumption)
+  exact @GlobalTheory.CMEigen.eigen_ops

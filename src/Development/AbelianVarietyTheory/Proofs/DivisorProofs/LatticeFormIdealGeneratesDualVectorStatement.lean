@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeFormIdealGeneratesDualVector
-import Mathlib
 open NumberField
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in
@@ -8,4 +7,4 @@ theorem _root_.GlobalTheory.T.lattice_form_ideal_generates_dual_vector : ∀ {F 
     ∀ (J : FractionalIdeal (𝓞 F)⁰ F), J ≠ 0 → (∀ z ∈ L, ∀ w ∈ L, B z w ∈ J) →
     (∀ t ∈ J, t ∈ Submodule.span (𝓞 F) {t | ∃ z ∈ L, ∃ w ∈ L, t = B z w}) →
     ∀ {v : V}, v ≠ 0 → ∃ K : FractionalIdeal (𝓞 F)⁰ F, K ≠ 0 ∧ ∀ t, t ∈ K ↔ ∃ z ∈ L, t = B z v := by
-  first | exact @GlobalTheory.exists_fractionalIdeal_pairing_values | exact GlobalTheory.exists_fractionalIdeal_pairing_values | (intros; apply GlobalTheory.exists_fractionalIdeal_pairing_values <;> assumption)
+  exact @GlobalTheory.exists_fractionalIdeal_pairing_values

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.lie_lattice_semi_fibration_exists : Hypotheses2 �
     (h : HermFam K (Fin (D.R.f * O.N) → K)), IsLieAt O y K L h ∧
     ∃ (F : SemiFib K) (h' : HermFam K (Fin F.P₀.g → K)) (r : ℕ) (ε : Fin r → Fin (D.R.f * O.N) → K)
       (q : (Fin (D.R.f * O.N) → K) →ₗ[K] (Fin F.P₀.g → K)), F.IsHerm h' ∧ TorusExt h L ε q h' F.lieLat C := by
-  first | exact @GlobalTheory.HeightParts.lieLat_torusExt_at_boundary | exact GlobalTheory.HeightParts.lieLat_torusExt_at_boundary | (intros; apply GlobalTheory.HeightParts.lieLat_torusExt_at_boundary <;> assumption)
+  exact @GlobalTheory.HeightParts.lieLat_torusExt_at_boundary

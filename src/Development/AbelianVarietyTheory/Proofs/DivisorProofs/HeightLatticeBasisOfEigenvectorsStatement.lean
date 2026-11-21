@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightLatticeBasisOfEigenvectors
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducesPl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatSectionFrameInvariance
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FrameChangeExistsUniqueOfSamePoint
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.height_lattice_basis_of_eigenvectors : ∀ (E : Ty
       (∀ j, AvDefs.IsEig Q.Gt Q.oGt (embInt c Q.integers (conjEmb τ.1)) (xx j)) →
       IsLatBasis ℂ_[p] (htLat c Q (conjEmb τ.1)) (fun i => ∑ j, g i j • Q.bLie (xx j)) → ∀ a : Fin n → ℂ_[p],
         (∑ i, a i • ∑ j, g i j • Q.bLie (xx j) ∈ Q.latT ↔ ∀ i, ‖(1 : ℂ_[p]) * a i‖ ≤ 1) := by
-  first | exact @GlobalTheory.eigconj_sum_mem_latT_iff | exact GlobalTheory.eigconj_sum_mem_latT_iff | (intros; apply GlobalTheory.eigconj_sum_mem_latT_iff <;> assumption)
+  exact @GlobalTheory.eigconj_sum_mem_latT_iff

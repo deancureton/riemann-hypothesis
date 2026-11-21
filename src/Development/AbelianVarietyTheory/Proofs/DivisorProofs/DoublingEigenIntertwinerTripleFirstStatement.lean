@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingEigenIntertwinerTripleFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.doubling_eigen_intertwiner_triple_first : GlobalTh
     ∀ e, IsEv B G.M G₁.M H.ι H'.ι (isoA H H') e → ∀ (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W) (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W), IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ ∈ PolData B G.M, ∀ h, ∀ q ∈ (ratU σ G.V.J ⊓ Subgroup.closure {g : UA σ G.V.J | mat g *ᵥ incV F H.x = incV F H.x}), ∀ g,
       thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (q * g, h) Φ))) = thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (g, h) Φ))) := by
-  first | exact @GlobalTheory.ThK.StabInv.xTerm_left_inv | exact GlobalTheory.ThK.StabInv.xTerm_left_inv | (intros; apply GlobalTheory.ThK.StabInv.xTerm_left_inv <;> assumption)
+  exact @GlobalTheory.ThK.StabInv.xTerm_left_inv

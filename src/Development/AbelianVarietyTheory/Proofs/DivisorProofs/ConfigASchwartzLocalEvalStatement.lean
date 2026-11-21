@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigASchwartzLocalEval
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_A_schwartz_local_eval : GlobalTheory.ThK.KP
     ∀ g ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → FiniteAdeleRing (𝓞 F) F), ∀ S : Set (SInf F (Fin (b + 2) × Fin (b + 2 + a'))),
       IsCompact S → ∃ m : ℕ, 0 < m ∧ ∀ N : ℕ, ∃ C : ℝ, ∀ f ∈ S, ∀ (l : (AE F E)ˣ) (y : Fin b × Fin (b + a') → AF F),
         ‖e (G.M.co.rho B.ψ (shiftA H H' l) (pureA F f g)) y‖ ≤ C * GlobalTheory.IdeleDecay.decay F E N m l := by
-  first | exact @GlobalTheory.PureBound.norm_ev_shiftA_pure_le | exact GlobalTheory.PureBound.norm_ev_shiftA_pure_le | (intros; apply GlobalTheory.PureBound.norm_ev_shiftA_pure_le <;> assumption)
+  exact @GlobalTheory.PureBound.norm_ev_shiftA_pure_le

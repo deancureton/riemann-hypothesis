@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_galois_side : PrN → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c => ∃ G : GlobalTheory.TwInputs.GalSide (w.st Z).toD7, G.cf = (TC.cf w.I w.l Z) ∧ G.lam.C = (TC.cf w.I w.l Z) ∧ Nonempty (CGTrue hL _ G.wd) := by
-  first | exact @GlobalTheory.GalLoc.galSide_at | exact GlobalTheory.GalLoc.galSide_at | (intros; apply GlobalTheory.GalLoc.galSide_at <;> assumption)
+  exact @GlobalTheory.GalLoc.galSide_at

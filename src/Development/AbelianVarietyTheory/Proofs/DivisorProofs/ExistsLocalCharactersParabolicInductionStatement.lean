@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalCharactersParabolicInduction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability GlobalTheory.SplitWeil GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.LeviBlockExponent
 open scoped TensorProduct
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_local_characters_parabolic_induction : ∀ 
           (mat h).map (piW B.τ₁) = g.1 →
           ∀ φ ∈ GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Fv F B.v₁),
             Acts (evFin F B.v₁) (om (1, h)) φ φ₁ → Z φ₁ = pairInd (Fv F B.v₁) b hb χ g (Z φ) := by
-  first | exact @GlobalTheory.ThetaIsoGood.exists_map_onto_pairInd | exact GlobalTheory.ThetaIsoGood.exists_map_onto_pairInd | (intros; apply GlobalTheory.ThetaIsoGood.exists_map_onto_pairInd <;> assumption)
+  exact @GlobalTheory.ThetaIsoGood.exists_map_onto_pairInd

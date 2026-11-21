@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.potential_smooth_off_boundary : Hypotheses2 → HypothesesH → OnObj fun _ O _ T _ _ => ∀ c u σ, ((T.M c).A σ).SmoothOn ((T.M c).Z σ)ᶜ ((T.F c).ph u σ) := by
-  first | exact @GlobalTheory.HodgeChgSmooth.smoothOn_ph | exact GlobalTheory.HodgeChgSmooth.smoothOn_ph | (intros; apply GlobalTheory.HodgeChgSmooth.smoothOn_ph <;> assumption)
+  exact @GlobalTheory.HodgeChgSmooth.smoothOn_ph

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_seesaw_identity : GlobalTheory.
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ (t : (AE F E)ˣ) (g₁ : UA σ X₁.J) (m : UA σ X.J), IsLevi H t g₁ m → ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (m, 1) Φ) = ((χW t : ℂ) * (((absE F E t : ℝ) ^ ((d : ℝ) / 2) : ℝ) : ℂ)) • om₁ (g₁, 1) (e Φ) := by
-  first | exact @GlobalTheory.MixXLevi.evalZero_levi | exact GlobalTheory.MixXLevi.evalZero_levi | (intros; apply GlobalTheory.MixXLevi.evalZero_levi <;> assumption)
+  exact @GlobalTheory.MixXLevi.evalZero_levi

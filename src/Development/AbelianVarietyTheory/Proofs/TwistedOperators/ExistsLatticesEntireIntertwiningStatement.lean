@@ -40,4 +40,4 @@ theorem _root_.GlobalTheory.T.exists_lattices_entire_intertwining : GlobalTheory
           Formalism.MainNotions.GL3Theta.applyAt0 D (MvPolynomial.monomial k 1) fun z => κ *
             Iop D (tor0 D D.host.ccK ch.S.Z.δ) (La0 D (tor0 D D.host.ccK ch.S.Z.δ) _ _)
               (Formalism.MainNotions.TaylorLogMetric.La D (tor0 D D.host.ccK ch.S.Z.δ) Ls Lt) (ch.S.Z.e0 p) z) := by
-  first | exact @GlobalTheory.MovedDict.movedVacuum_dict | exact GlobalTheory.MovedDict.movedVacuum_dict | (intros; apply GlobalTheory.MovedDict.movedVacuum_dict <;> assumption)
+  exact @GlobalTheory.MovedDict.movedVacuum_dict

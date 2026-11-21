@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_dual_period_algebraic : ∀ {D : D
     {i j : Fin D.R.m} {A A' WW : HSp D} {X : Tri T A A' WW}, GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → L.Is μ₀ →
     IsBottomTri W i j X →
     ∃ Ω : ℂ, Ω ≠ 0 ∧ ∀ t, ∀ h ∈ GfC WW, ∀ k, IsAlgebraic ℚ (X.I' W.ψ W.θ t (MvPolynomial.monomial k 1) h / Ω) := by
-  first | exact @GlobalTheory.BotAlgI'.classSums'_algebraic | exact GlobalTheory.BotAlgI'.classSums'_algebraic | (intros; apply GlobalTheory.BotAlgI'.classSums'_algebraic <;> assumption)
+  exact @GlobalTheory.BotAlgI'.classSums'_algebraic

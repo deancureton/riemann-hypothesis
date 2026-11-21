@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RankTwoFlagBundleSection
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcFlag
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.rank_two_flag_bundle_section : ∀ (k : Type) [Com
     IsFlagBundle π (fun _ : Unit => E) (fun _ => 2) (fun _ => fl) →
     ∃ (Z : Scheme.{0}) (_ : IsIntegral Z) (i : Z ⟶ Y), IsArithVar (i ≫ p) d ∧
       (i ≫ π) (genericPoint Z) = genericPoint B ∧ (i ≫ π).residueDegree (genericPoint Z) ≠ 0 := by
-  first | exact @GlobalTheory.CovTest.Multisection.exists_multisection | exact GlobalTheory.CovTest.Multisection.exists_multisection | (intros; apply GlobalTheory.CovTest.Multisection.exists_multisection <;> assumption)
+  exact @GlobalTheory.CovTest.Multisection.exists_multisection

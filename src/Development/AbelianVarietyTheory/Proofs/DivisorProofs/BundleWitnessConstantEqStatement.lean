@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BundleWitnessConstantEq
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MapBaseTiedSel
 import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.IsLinked
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RealPins3RealTOf
@@ -11,4 +10,4 @@ open GlobalTheory.EX GlobalTheory.EX.OB GlobalTheory.Mem GlobalTheory.Mem.Top Gl
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bundle_witness_constant_eq : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (p : Prm hL), GlobalTheory.Fc.EvP fun _ K => ∀ (q : WPt p.s K) (c : ℝ) (b : GlobalTheory.Fc.Bundle (q.w.D q.Z) q.O c) (w : BWit q b), q.O.L.sc = K.s → w.x.R.C = b.R.T.n.cf := by
-  first | exact @GlobalTheory.Mem.Top.Bl.bwit_cf_eq | exact GlobalTheory.Mem.Top.Bl.bwit_cf_eq | (intros; apply GlobalTheory.Mem.Top.Bl.bwit_cf_eq <;> assumption)
+  exact @GlobalTheory.Mem.Top.Bl.bwit_cf_eq

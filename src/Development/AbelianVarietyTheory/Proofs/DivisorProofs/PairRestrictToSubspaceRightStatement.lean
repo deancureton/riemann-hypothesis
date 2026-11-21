@@ -39,4 +39,4 @@ theorem _root_.GlobalTheory.T.pair_restrict_to_subspace_right : GlobalTheory.ThK
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (incV F H'.y) (0 : Fin d → AE F E) = Sum.elim (incV F H'.y) (0 : Fin d → AE F E) ∧
         (g.1.1 : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) *ᵥ Sum.elim (0 : Fin d → AE F E) (incV F H'.y) = Sum.elim (0 : Fin d → AE F E) (incV F H'.y)) →
       ∀ a : ℂ, (∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), Ed (omd g Φ) = a • omd₁ p₁ (Ed Φ)) → a = 1 := by
-  first | exact @GlobalTheory.DblSiegel.scalar_eq_one | exact GlobalTheory.DblSiegel.scalar_eq_one | (intros; apply GlobalTheory.DblSiegel.scalar_eq_one <;> assumption)
+  exact @GlobalTheory.DblSiegel.scalar_eq_one

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankCoinvariantFormZero
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.full_rank_coinvariant_form_zero : GlobalTheory.ThK
         Ψ₁'.1 = (fun Y => Ψ₁.1 (Y * h.1)) → Ψ₂'.1 = (fun Y => Ψ₂.1 (Y * h.1)) → (m : ℂ) * Bf Ψ₁' Ψ₂' = Bf Ψ₁ Ψ₂) →
       ∀ (g : GL (Fin n) k) (Ψ₁ Ψ₂ Ψ₂' : GlobalTheory.FullRankCoinv.fullRk k n d), Ψ₂'.1 = GlobalTheory.FullRankCoinv.lact ν g Ψ₂.1 →
         Bf Ψ₁ Ψ₂' = Bf Ψ₁ Ψ₂ := by
-  first | exact @GlobalTheory.FullRankCoinv.form_lact_right_invariant | exact GlobalTheory.FullRankCoinv.form_lact_right_invariant | (intros; apply GlobalTheory.FullRankCoinv.form_lact_right_invariant <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.form_lact_right_invariant

@@ -20,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hermitian_line_bundle_smooth_metric : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (L : HermLB p)
     (t : LB.Gen L.B), t.IsGen → ∃ (c : ∀ σ : k →+* ℂ, CxPts p σ → ℝ) (hc : ∀ σ y, CxPts.CInfAt (c σ) y)
       (hcc : ∀ σ σ', (Weight.ofFun (c σ)).IsConj (Weight.ofFun (c σ'))), (fnB c hc hcc).Isometric L := by
-  first | exact @GlobalTheory.HermLB.isometric_fnB_of_gen | exact GlobalTheory.HermLB.isometric_fnB_of_gen | (intros; apply GlobalTheory.HermLB.isometric_fnB_of_gen <;> assumption)
+  exact @GlobalTheory.HermLB.isometric_fnB_of_gen

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTripleLocalPartCaseBSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocOpInfMul
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_triple_local_part_case_b_second : GlobalTheo
     ∀ (s : (AE F E)ˣ) (f : SInf F (Fin (b + 2) × Fin (a + (b + 2)))),
       ei' (locOpInf (G.M'.co.rho B.ψ (partInf F (shiftB σ H H' s))) (locOpInf (om' (n, 1)) f)) =
         ei' (locOpInf (G.M'.co.rho B.ψ (partInf F (shiftB σ H H' s))) f) := by
-  first | exact @GlobalTheory.ThK.InfBUnip.unip_cone_law | exact GlobalTheory.ThK.InfBUnip.unip_cone_law | (intros; apply GlobalTheory.ThK.InfBUnip.unip_cone_law <;> assumption)
+  exact @GlobalTheory.ThK.InfBUnip.unip_cone_law

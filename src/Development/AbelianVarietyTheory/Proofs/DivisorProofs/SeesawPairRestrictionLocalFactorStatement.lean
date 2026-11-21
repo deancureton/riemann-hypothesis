@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_local_factor : GlobalTheor
         (∀ l ∈ (adeleClass F).adm ((Fin n × Fin d₁) ⊕ (Fin n × Fin d₁)), l ∘ₗ ed ∈ (adeleClass F).adm ((Fin n × Fin d) ⊕ (Fin n × Fin d))) ∧
         ∃ Φ₂ ∈ schA F (Fin n × Fin d), ∃ Ψ₂ ∈ schA F (Fin n × Fin d₁), Ψ₂ ≠ 0 ∧
           ∀ Φ₁ ∈ schA F (Fin n × Fin d), ed (boxFun Φ₁ Φ₂) = boxFun (e Φ₁) Ψ₂ := by
-  first | exact @GlobalTheory.MixWOneDbl.exists_dblEv0 | exact GlobalTheory.MixWOneDbl.exists_dblEv0 | (intros; apply GlobalTheory.MixWOneDbl.exists_dblEv0 <;> assumption)
+  exact @GlobalTheory.MixWOneDbl.exists_dblEv0

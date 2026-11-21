@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteOrbitOrthogonalComplement
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
 open scoped Topology
 set_option maxHeartbeats 1000000 in
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.finite_orbit_orthogonal_complement : ∀ {V G : Ty
     ∀ (K : Subgroup G), ∀ y ∈ D, {x | ∃ k ∈ K, ρ k y = x}.Finite →
     ∃ e ∈ Submodule.span ℂ {x | ∃ k ∈ K, ρ k y = x}, (∀ k ∈ K, ρ k e = e) ∧
       ∀ v ∈ D, (∀ k ∈ K, ρ k v = v) → B e v = B y v := by
-  first | exact @GlobalTheory.orbit_average_fixed_same_pairing | exact GlobalTheory.orbit_average_fixed_same_pairing | (intros; apply GlobalTheory.orbit_average_fixed_same_pairing <;> assumption)
+  exact @GlobalTheory.orbit_average_fixed_same_pairing

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerHaarIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_haar_integral : GlobalTheory.T
         G₁.M'.I om₁' (cone B G.M' om' e' K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (om' (1, h) Φ')) h₁ =
           ∫ k, ∫ l, G₁.M'.I om₁' (e' (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (k.1, h) Φ'))) h₁ * (X.ν l : ℂ) *
             ((absE F E l : ℝ) : ℂ) ^ ((a - (b + 2)) / 2 + 1) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ConeFubini.theta_cone_eq | exact GlobalTheory.ConeFubini.theta_cone_eq | (intros; apply GlobalTheory.ConeFubini.theta_cone_eq <;> assumption)
+  exact @GlobalTheory.ConeFubini.theta_cone_eq

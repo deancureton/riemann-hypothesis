@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.tame_ramified_type_at_place : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), ∀ S : Reading P.T, IsTrue P S → ∀ i w hw, (∀ k, w ∉ placesOver D.host.E (D.host.g k)) → GlobalTheory.SplitWeil.IsTame (S i w hw).mu → ¬ GlobalTheory.SplitWeil.IsUnram (S i w hw).mu → TypeTame S i w hw := by
-  first | exact @GlobalTheory.TypeTame.typeTame_of_ramified | exact GlobalTheory.TypeTame.typeTame_of_ramified | (intros; apply GlobalTheory.TypeTame.typeTame_of_ramified <;> assumption)
+  exact @GlobalTheory.TypeTame.typeTame_of_ramified

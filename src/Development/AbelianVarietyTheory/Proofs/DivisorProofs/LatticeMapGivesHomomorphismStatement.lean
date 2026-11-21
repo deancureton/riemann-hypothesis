@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.lattice_map_gives_homomorphism : ∀ (A A' : Over 
     SmoothOfRelativeDimension g A.hom → SmoothOfRelativeDimension g A'.hom →
     ∀ (L : LB A.left) (L' : LB A'.left) (u : HolUnif A L g) (u' : HolUnif A' L' g) (M : (Fin g → ℂ) →ₗ[ℂ] (Fin g → ℂ)),
       (∀ x ∈ u.Λ, M x ∈ u'.Λ) → ∃ α : A ⟶ A', IsMonHom α ∧ ∀ w, u'.ex (M w) = u.ex w ≫ α := by
-  first | exact @GlobalTheory.HolUnifHom.exists_isMonHom_of_map_lattice | exact GlobalTheory.HolUnifHom.exists_isMonHom_of_map_lattice | (intros; apply GlobalTheory.HolUnifHom.exists_isMonHom_of_map_lattice <;> assumption)
+  exact @GlobalTheory.HolUnifHom.exists_isMonHom_of_map_lattice

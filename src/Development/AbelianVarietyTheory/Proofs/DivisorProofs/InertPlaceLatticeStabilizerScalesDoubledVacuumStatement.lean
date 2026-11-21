@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceLatticeStabilizerScalesDoubledVacuum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.inertPlace_latticeStabilizer_scales_doubledVacuum 
     ∀ g ∈ GlobalTheory.DblVac.KD σ G.W v, ∃ μ : ℂ,
       omd g (boxFun (tens (evFin F v) (G.M.vac v) r) (fun x => star (tens (evFin F v) (G.M.vac v) r x))) =
         μ • boxFun (tens (evFin F v) (G.M.vac v) r) (fun x => star (tens (evFin F v) (G.M.vac v) r x)) := by
-  first | exact @GlobalTheory.DblVacEigen.eigen_box | exact GlobalTheory.DblVacEigen.eigen_box | (intros; apply GlobalTheory.DblVacEigen.eigen_box <;> assumption)
+  exact @GlobalTheory.DblVacEigen.eigen_box

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcLimit
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.GenericSectionExtendsNormalStatement
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_limit : ∀ (E : Type) [Field E
       ∀ z J, ReciprocityTheory.ChartRestriction.G.Geo.Tor.Good (polOf Z m BD) z J →
         ReciprocityTheory.ChartRestriction.G.Geo.Tor.val (L := polOf Z m BD) (φ := fun _ : PUnit => x₀ ≫ Z.j) (ε := fun _ => 1) e (spMap gam) z J =
         ReciprocityTheory.ChartRestriction.G.Geo.Tor.val (L := polOf Z m BD) (φ := fun _ : PUnit => χ) (ε := fun _ => 1) e' (Out.jK V) z J := by
-  first | exact @GlobalTheory.TraitGen.exists_polGen_extends | exact GlobalTheory.TraitGen.exists_polGen_extends | (intros; apply GlobalTheory.TraitGen.exists_polGen_extends <;> assumption)
+  exact @GlobalTheory.TraitGen.exists_polGen_extends

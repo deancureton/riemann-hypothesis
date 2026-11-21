@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointPairingCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_pairing_compatible : ∀ (E : Type) [
       P.bLie x = ∑ i, (cf i : ℂ_[p]) • P.bLie (xs i)) ∧
     ∀ (σ : 𝓞 E →+* 𝓞_ℂ_[p]) (x : LieG P.Gt) (u : Sp (DualNumber 𝓞_ℂ_[p]) ⟶ Y.t.G.left), IsTanAtG Y.t yb u →
       ITie P π x u → (IsEigG Y.t σ u ↔ AvDefs.IsEig P.Gt P.oGt σ x) := by
-  first | exact @GlobalTheory.FlatModel.tanTie | exact GlobalTheory.FlatModel.tanTie | (intros; apply GlobalTheory.FlatModel.tanTie <;> assumption)
+  exact @GlobalTheory.FlatModel.tanTie

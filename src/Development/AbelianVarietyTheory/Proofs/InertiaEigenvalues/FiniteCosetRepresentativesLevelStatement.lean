@@ -13,4 +13,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finite_coset_representatives_level : ∀ {D : D7} {S T : HSp D} (B : Base S T), B.Good → ∀ (ψ : Twist D Circle), B.admitted ψ.Q →
     ∃ F : Finset (Bridge.Gf S), (∀ u ∈ F, u ∈ B.levJ ψ) ∧
       ∀ κ ∈ B.levJ ψ, ∃! u, u ∈ F ∧ u⁻¹ * κ ∈ (GlobalTheory.FlatVecSum.princ B).levJ ψ := by
-  first | exact @GlobalTheory.LevReps.reps | exact GlobalTheory.LevReps.reps | (intros; apply GlobalTheory.LevReps.reps <;> assumption)
+  exact @GlobalTheory.LevReps.reps

@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.row_local_all : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, OverRows fun _ _ _ _ w Z _ _ z _ Y => ∀ Rw, ParIn hL (w.st Z).toD7 (TC.cf w.I w.l Z) (repOf Y) Rw → ∀ σ, RowLoc (w.st Z).toD7 Rw σ := by
-  first | exact @GlobalTheory.RowSphSmall.rowLoc_overRows | exact GlobalTheory.RowSphSmall.rowLoc_overRows | (intros; apply GlobalTheory.RowSphSmall.rowLoc_overRows <;> assumption)
+  exact @GlobalTheory.RowSphSmall.rowLoc_overRows

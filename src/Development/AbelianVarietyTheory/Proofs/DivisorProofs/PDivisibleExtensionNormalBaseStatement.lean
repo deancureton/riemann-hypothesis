@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivisibleExtensionNormalBase
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HenselianLocalRingOfIsAdicComplete
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.p_divisible_extension_normal_base : GlobalTheory.P
       ∃ (GG : PDivGroup p U.Bp) (act : Action (𝓞 E) GG) (pol : GG ≅ GG.dual) (θ : TorsionMap t.G GG)
         (ε : (PDivGroup.mu p U.Bp).Tate) (τ : Dw.La →+ GG.Tate),
         IsPropG Dw t GG act pol θ ε τ ∧ IsRestr m.φ act pol θ ε τ m₀.φ act₀ pol₀ θ₀ ε₀ τ₀ := by
-  first | exact @GlobalTheory.GroupBplus.Aff.propG_affine | exact GlobalTheory.GroupBplus.Aff.propG_affine | (intros; apply GlobalTheory.GroupBplus.Aff.propG_affine <;> assumption)
+  exact @GlobalTheory.GroupBplus.Aff.propG_affine

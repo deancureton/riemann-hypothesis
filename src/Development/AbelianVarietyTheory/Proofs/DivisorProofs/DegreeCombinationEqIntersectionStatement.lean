@@ -13,4 +13,4 @@ open scoped Classical
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.degree_combination_eq_intersection : GlobalTheory.Published.ChernDegree → ∀ (ι : Type) [Fintype ι] (N : ℕ) (Y : GlobalTheory.ProjVar.Var ℚ) (j : Y.X ⟶ GlobalTheory.FlagZ.Fl ι N), IsPullback j Y.str (GlobalTheory.FlagZ.flStr ι N) (spMap (algebraMap ℤ ℚ)) → ∀ (gr : ι × Fin N → Y.Dv), (∀ x, ∃ r, GlobalTheory.Cartier.Presents (gr x) ((GlobalTheory.FlagZ.grLine x).B.pull j) r) → ∀ n : ι × Fin N → ℤ, gdeg (comb (GlobalTheory.FlagZ.grLine (ι := ι) (N := N)) n) Y.dim = ((Y.inter fun _ => ∑ x, n x • gr x : ℤ) : ℝ) := by
-  first | exact @GlobalTheory.FlagDeg.gdeg_comb_grLine | exact GlobalTheory.FlagDeg.gdeg_comb_grLine | (intros; apply GlobalTheory.FlagDeg.gdeg_comb_grLine <;> assumption)
+  exact @GlobalTheory.FlagDeg.gdeg_comb_grLine

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmPointEigenbasisChangeDetIntegralAlmostAllPrime
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.cmPoint_eigenbasis_change_det_integral_almost_all_
         φ.toRingHom = iK → FrMap φ z.y yT → GlobalTheory.Frames.FrChg g a yT y' → (∀ b, IsUnit (g b).det) →
         GlobalTheory.LamT.LieInt T (iK.comp (algebraMap c.F z.K)) M.m1 M.m2 y'.u →
         (∏ b, (g b).det) ∈ Set.range (algebraMap T.V T.Fr) := by
-  first | exact @GlobalTheory.DetInt.det_integral | exact GlobalTheory.DetInt.det_integral | (intros; apply GlobalTheory.DetInt.det_integral <;> assumption)
+  exact @GlobalTheory.DetInt.det_integral

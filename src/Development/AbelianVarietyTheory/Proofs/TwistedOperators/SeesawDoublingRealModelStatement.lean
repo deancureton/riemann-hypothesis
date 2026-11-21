@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawDoublingRealModel
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.seesaw_doubling_real_model : GlobalTheory.FunPr.Hy
     (∀ i, Ψ i ∈ algD Γ.M Bs.ψ Bs.emb ∧
         ∀ x, HasDerivAt (fun t : ℝ => om (1, kapX X e hJ (oneP θ X (l.get i).1 (l.get i).2 t)) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) x) (Ψ i x) 0) →
     ∀ x, HasDerivAt (fun t : ℝ => om (1, kapX X e hJ ((l.map fun q => oneP θ X q.1 q.2 t).prod)) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) x) (∑ i, Ψ i x) 0 := by
-  first | exact @GlobalTheory.PureProdRule.main | exact GlobalTheory.PureProdRule.main | (intros; apply GlobalTheory.PureProdRule.main <;> assumption)
+  exact @GlobalTheory.PureProdRule.main

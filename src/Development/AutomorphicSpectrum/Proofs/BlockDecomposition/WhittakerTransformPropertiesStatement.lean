@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.whittaker_transform_properties : (∀ (W : G3 → 
   (∀ W : G3 → ℂ, (∀ x y z g, W (uni x y z * g) = (adelicChar ℚ (x + z) : ℂ) * W g) →
     ∀ x y z g, tr W (uni x y z * g) = (adelicChar ℚ (x + z) : ℂ) * tr W g) ∧
   (∀ W : G3 → ℂ, (∀ (a : (𝔸[ℚ])ˣ) g, W (dg a a a * g) = W g) → ∀ (a : (𝔸[ℚ])ˣ) g, tr W (dg a a a * g) = tr W g) := by
-  first | exact @GlobalTheory.CompanionTheory.UnfoldingAlt.TrBasic.main | exact GlobalTheory.CompanionTheory.UnfoldingAlt.TrBasic.main | (intros; apply GlobalTheory.CompanionTheory.UnfoldingAlt.TrBasic.main <;> assumption)
+  exact @GlobalTheory.CompanionTheory.UnfoldingAlt.TrBasic.main

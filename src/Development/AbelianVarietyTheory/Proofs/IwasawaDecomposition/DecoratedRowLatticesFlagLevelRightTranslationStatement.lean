@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DecoratedRowLatticesFlagLevelRightTranslation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ReadsDeco
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.decoratedRowLattices_flagLevel_rightTranslation : 
           RowAd.decoAd X I t h) ∧
       X.toD7.what₂.embLL (((Formalism.L2.Col.rowTyKK I.Ch I.sel t.1).inv.chr u : X.B.fields.Kˣ) : X.B.fields.K) =
         (((levEnv X.toD7.sp.X' L.βX (L.datXt t)).ch q : ℂˣ) : ℂ) := by
-  first | exact @GlobalTheory.Mem.R3.RowDeco.deco_tie | exact GlobalTheory.Mem.R3.RowDeco.deco_tie | (intros; apply GlobalTheory.Mem.R3.RowDeco.deco_tie <;> assumption)
+  exact @GlobalTheory.Mem.R3.RowDeco.deco_tie

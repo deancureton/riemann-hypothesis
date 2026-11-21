@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleSplitCharactersExist
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.triple_split_characters_exist : ∀ (F E : Type) [
           IsCompAt σ (c • G.W.J.map σ) B.τ₁ 1 g x → ∀ φ₀ ∈ G.M'.SoLoc B.ψ B.τ₁, ∃ φ₁ ∈ G.M'.SoLoc B.ψ B.τ₁,
             Acts (evFin F B.v₁) (om' (1, (toGAd hσ G.W.J hc).symm (GlobalTheory.AdelicU.emb σ (c • G.W.J.map σ) B.v₁ x))) φ₀ φ₁ ∧
             P φ₁ = pairInd (Fv F B.v₁) b hb χ g (P φ₀) := by
-  first | exact @GlobalTheory.ThetaAtGoodLocal.localHalf | exact GlobalTheory.ThetaAtGoodLocal.localHalf | (intros; apply GlobalTheory.ThetaAtGoodLocal.localHalf <;> assumption)
+  exact @GlobalTheory.ThetaAtGoodLocal.localHalf

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaDiagonalSiegelParabolicRule
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
@@ -49,4 +48,4 @@ theorem _root_.GlobalTheory.T.thetaDiagonal_siegelParabolic_rule : ∀ (D : D7) 
                 (Fintype.card (Fin S.rank)) t *
               GlobalTheory.DiagSiegel.thetaDiagInt ν 𝓕 (GlobalTheory.WeilSchrodinger.thetaTr D.host.F
                 (GlobalTheory.WeilSchrodinger.transD (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.cA D.sp.cm.sig) co) ψ Φ) := by
-  first | exact @GlobalTheory.DblTargetTheta.thetaDiag_rule | exact GlobalTheory.DblTargetTheta.thetaDiag_rule | (intros; apply GlobalTheory.DblTargetTheta.thetaDiag_rule <;> assumption)
+  exact @GlobalTheory.DblTargetTheta.thetaDiag_rule

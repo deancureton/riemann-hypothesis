@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.real_weil_action_local_bound_continuous : ∀ (n : ℤ) (t : ℝ) (g₀ : GL (Fin 2) ℝ), 0 < (g₀.val).det → ∃ W ∈ nhds g₀, ∃ A : ℝ,
   (∀ g ∈ W, ∀ x : ℂ, ‖piRc (chC n (Complex.I * t)) g (PhiInf n) x‖ ≤ A * ((1 + ‖x‖) ^ 4)⁻¹) ∧
   ∀ x : ℂ, ContinuousAt (fun g => piRc (chC n (Complex.I * t)) g (PhiInf n) x) g₀ := by
-  first | exact @GlobalTheory.CompanionTheory.ArchDecay.piRc_decay | exact GlobalTheory.CompanionTheory.ArchDecay.piRc_decay | (intros; apply GlobalTheory.CompanionTheory.ArchDecay.piRc_decay <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ArchDecay.piRc_decay

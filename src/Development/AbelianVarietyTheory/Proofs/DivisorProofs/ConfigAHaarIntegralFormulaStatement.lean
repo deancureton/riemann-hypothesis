@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarIntegralFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_integral_formula : GlobalTheory.ThK.
           thetaSum F (om₁ (g₀, 1) (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, h) Φ)))) ∂G₁.M.μ ∂μ ∂μK =
         ∫ g₀ in G₁.M.dom, ∫ k, ∫ l, (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) *
           thetaSum F (om₁ (g₀, 1) (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, h) Φ)))) ∂μ ∂μK ∂G₁.M.μ := by
-  first | exact @GlobalTheory.XTermFubini.fubini_xTerm | exact GlobalTheory.XTermFubini.fubini_xTerm | (intros; apply GlobalTheory.XTermFubini.fubini_xTerm <;> assumption)
+  exact @GlobalTheory.XTermFubini.fubini_xTerm

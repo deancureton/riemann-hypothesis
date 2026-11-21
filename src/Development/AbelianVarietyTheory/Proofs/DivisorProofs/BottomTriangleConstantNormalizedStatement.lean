@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleConstantNormalized
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_constant_normalized : GlobalTheory
           ∀ (hd : P'.d = P.d) (h : GA D P.d),
             (∀ T, starRingEnd ℂ (P.coord h T) = κ * u * c0 s * ∑ T', (M T T' : ℂ) * P'.coord (hd ▸ h) T') ∧
             ∀ T', P'.coord (hd ▸ h) T' * (κ * u * c0 s) = ∑ T, (M' T' T : ℂ) * starRingEnd ℂ (P.coord h T) := by
-  first | exact @GlobalTheory.BotFormula.bottom_formula | exact GlobalTheory.BotFormula.bottom_formula | (intros; apply GlobalTheory.BotFormula.bottom_formula <;> assumption)
+  exact @GlobalTheory.BotFormula.bottom_formula

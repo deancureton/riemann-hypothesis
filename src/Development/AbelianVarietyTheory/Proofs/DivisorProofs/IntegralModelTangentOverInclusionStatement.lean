@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelTangentOverInclusion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.integral_model_tangent_over_inclusion : ∀ (E : T
       (∀ i, IsCombAtG Y.t (yL ≫ Y.j) (bcV Y.t io e) (fun b => io (U₁ i b)) (w₁ i ≫ Y.m.φ)) ∧
       (∀ i, IsCombAtG Y.t (yL ≫ Y.j) (bcV Y.t io e) (fun b => io (U₂ i b)) (w₂ i ≫ Y.m.φ)) ∧
       (∀ i, z.u τ.1 i = w₁ i ≫ ν.φ) ∧ ∀ i, z.u (conjEmb τ.1) i = w₂ i ≫ ν.φ := by
-  first | exact @GlobalTheory.FlatModel.FrameLoc.exists_frPt_of_chart | exact GlobalTheory.FlatModel.FrameLoc.exists_frPt_of_chart | (intros; apply GlobalTheory.FlatModel.FrameLoc.exists_frPt_of_chart <;> assumption)
+  exact @GlobalTheory.FlatModel.FrameLoc.exists_frPt_of_chart

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitUnitaryFixesOrthogonalComplement
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.split_unitary_fixes_orthogonal_complement : ∀ {F
     {n : ℕ} {J : Matrix (Fin n) (Fin n) E}, IsHermND σ J → ∀ {v : HeightOneSpectrum (𝓞 F)} (τ : E →ₐ[F] Fv F v)
     (x : GLoc σ J v) (W : Submodule (Fv F v) (Fin n → Fv F v)), (∀ z, ((splitHom σ J τ x).1 - 1) *ᵥ z ∈ W) →
     ∀ (u : Fin n → Fv F v), (∀ w ∈ W, u ⬝ᵥ (J.map τ *ᵥ w) = 0) → (splitHom σ J (τ.comp σ) x).1 *ᵥ u = u := by
-  first | exact @GlobalTheory.ConjFix.conj_fix | exact GlobalTheory.ConjFix.conj_fix | (intros; apply GlobalTheory.ConjFix.conj_fix <;> assumption)
+  exact @GlobalTheory.ConjFix.conj_fix

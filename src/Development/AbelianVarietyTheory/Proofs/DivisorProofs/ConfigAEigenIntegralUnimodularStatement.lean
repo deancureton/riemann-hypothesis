@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEigenIntegralUnimodular
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_a_eigen_integral_unimodular : GlobalTheory.
     ∀ 𝓓 : Set (UA σ G.V.J), IsFundamentalDomain ↥(ratU σ G.V.J ⊓ Subgroup.closure {g : UA σ G.V.J | mat g *ᵥ incV F H.x = incV F H.x}) 𝓓 G.M.μ →
     ∀ Φ ∈ PolData B G.M, ∀ h,
       ∫ g in 𝓓, thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (g, h) Φ))) ∂G.M.μ = C₂ * G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, h) Φ)) 1 := by
-  first | exact @GlobalTheory.ThKIwasawa.iwasawaConeTerm | exact GlobalTheory.ThKIwasawa.iwasawaConeTerm | (intros; apply GlobalTheory.ThKIwasawa.iwasawaConeTerm <;> assumption)
+  exact @GlobalTheory.ThKIwasawa.iwasawaConeTerm

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_constant : GlobalTheory.Fu
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       (∀ h₁ m, IsLevi H' 1 h₁ m → ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, m) Φ) = c • om₁ (1, h₁) (e Φ)) →
       ∀ h₁ m, IsLevi H' 1 h₁ m → ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, m) Φ) = om₁ (1, h₁) (e Φ) := by
-  first | exact @GlobalTheory.MixedPlaneP.levi_scalar_eq_one₂ | exact GlobalTheory.MixedPlaneP.levi_scalar_eq_one₂ | (intros; apply GlobalTheory.MixedPlaneP.levi_scalar_eq_one₂ <;> assumption)
+  exact @GlobalTheory.MixedPlaneP.levi_scalar_eq_one₂

@@ -27,4 +27,4 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_nonzero_cusp_form : GlobalTheory.Published.ScholzeWeinsteinB → Hypotheses2 → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalChartsForFan → GlobalTheory.Published.SemiAbelianLieSeminegative → Covers fun Fm x _ ι p i Y _ _ => ∃ Z : Comp Y.d.Xo₂ Y.d.c₂, ∃ f ∈ cuspOn Y.U Z (wtOf (dat p i) (uM p i) 0), f ≠ 0 := by
-  first | exact @GlobalTheory.CovTop.LowNonzero.exists_cusp_uM | exact GlobalTheory.CovTop.LowNonzero.exists_cusp_uM | (intros; apply GlobalTheory.CovTop.LowNonzero.exists_cusp_uM <;> assumption)
+  exact @GlobalTheory.CovTop.LowNonzero.exists_cusp_uM

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFundamentalDomainUnipotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_fundamental_domain_unipotent : ∀ (F E : T
     B.IsGood σ → W.IsSkew σ B r s → H'.IsAdapted σ B W W₁ i₀ i₁ →
     ∃ (μ : Measure (unip σ W H')) (𝓕 : Set (unip σ W H')), μ.IsHaarMeasure ∧
       IsFundamentalDomain ((ratU σ W.J).subgroupOf (unip σ W H')) 𝓕 μ ∧ μ 𝓕 = 1 := by
-  first | exact @GlobalTheory.UnipFDAdapted.exists_fd_mass_one | exact GlobalTheory.UnipFDAdapted.exists_fd_mass_one | (intros; apply GlobalTheory.UnipFDAdapted.exists_fd_mass_one <;> assumption)
+  exact @GlobalTheory.UnipFDAdapted.exists_fd_mass_one

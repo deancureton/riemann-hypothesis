@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFrobFixOfEisenstein
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsUniqueHcharOfFiniteOrder
 open NumberField IsDedekindDomain Neutral.B1 ReciprocityTheory.Neutral.Bridge.HCFR Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.L2.Host GlobalTheory.HeckeGal
 set_option maxHeartbeats 1000000 in
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_frob_of_eisenstein_root : GlobalTheory.Publ
     ∃ τ : G E Ω, IsFrob (F := E) A (normV v) τ ∧ τ π = π ∧
       ∀ c : (v.adicCompletion E)ˣ, (c : v.adicCompletion E) = (-1) ^ normV v * algebraMap E (v.adicCompletion E) (ϖ : E) →
         toAb E Ω τ⁻¹ = art (localIdele E v c) := by
-  first | exact @GlobalTheory.TameRecip.exists_frob_fix_of_eisenstein | exact GlobalTheory.TameRecip.exists_frob_fix_of_eisenstein | (intros; apply GlobalTheory.TameRecip.exists_frob_fix_of_eisenstein <;> assumption)
+  exact @GlobalTheory.TameRecip.exists_frob_fix_of_eisenstein

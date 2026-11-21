@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagAtAdelicRootSymbols
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AmpleOnAbelianBase
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.flag_at_adelic_root_symbols : Hypotheses2 → Hypo
       numL ((arIn O.s O.Φ O.met.hm).num c) (dimFl D.what₂.Tau O.N + 1)
         ((∑ i, X (A i) ^ k) * ((X ((arIn O.s O.Φ O.met.hm).root (Function.update (ArIn.ind Sx) p false) R y c) -
           X ((arIn O.s O.Φ O.met.hm).root (Function.update (ArIn.ind Sx) p true) R y c)) * G)) = 0 := by
-  first | exact @GlobalTheory.PowerSumVert.powerSum_vert_mul | exact GlobalTheory.PowerSumVert.powerSum_vert_mul | (intros; apply GlobalTheory.PowerSumVert.powerSum_vert_mul <;> assumption)
+  exact @GlobalTheory.PowerSumVert.powerSum_vert_mul

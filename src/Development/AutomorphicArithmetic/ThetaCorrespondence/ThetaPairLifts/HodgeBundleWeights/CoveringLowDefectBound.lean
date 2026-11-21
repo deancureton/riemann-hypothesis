@@ -48,5 +48,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_low_defect_bound : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Gram → Anchor → LowDef := by
-  first | exact @_root_.GlobalTheory.CovTop.DefLow.covering_low_defect | exact _root_.GlobalTheory.CovTop.DefLow.covering_low_defect | (intros; apply _root_.GlobalTheory.CovTop.DefLow.covering_low_defect <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DefLow.covering_low_defect
 end

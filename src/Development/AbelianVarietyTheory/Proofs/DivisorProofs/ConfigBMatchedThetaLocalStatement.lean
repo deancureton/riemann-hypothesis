@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBMatchedThetaLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.config_B_matched_theta_local : GlobalTheory.ThK.KP
         ∀ N : Submodule ℂ R.Pi, N ≤ lowPartInf B G.M R.p → KStabL B G.M om R.p G₁.W H' N →
           ∀ w X, Formalism.BasicNotions.TH.IsKC X → (∀ a, X a (.inl r₀) = 0 ∧ X (.inl r₀) a = 0 ∧ X a (.inr s₀) = 0 ∧ X (.inr s₀) a = 0) →
             ∀ v ∈ N, act w X v ∈ N := by
-  first | exact @GlobalTheory.FockBottom.bridge_beta | exact GlobalTheory.FockBottom.bridge_beta | (intros; apply GlobalTheory.FockBottom.bridge_beta <;> assumption)
+  exact @GlobalTheory.FockBottom.bridge_beta

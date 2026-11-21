@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticBlockBasisOrthogonal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
 import Development.AbelianVarietyTheory.Proofs.CovolumeBounds.DualRestrictSurjectiveOfIsTorsionFreeQuotient
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.symplectic_block_basis_orthogonal : ∀ {F E : Typ
       (∀ m : Matrix (Fin n) (Fin d) E, ∃ u v : Fin n × Fin d → F,
         co.e (incM F m) = (fun i => algebraMap F (AF F) (u i), fun i => algebraMap F (AF F) (v i))) ∧
       IsFrameCo σ J K x y co blk := by
-  first | exact @GlobalTheory.ThKTorus.exists_frameCo_of_basis | exact GlobalTheory.ThKTorus.exists_frameCo_of_basis | (intros; apply GlobalTheory.ThKTorus.exists_frameCo_of_basis <;> assumption)
+  exact @GlobalTheory.ThKTorus.exists_frameCo_of_basis

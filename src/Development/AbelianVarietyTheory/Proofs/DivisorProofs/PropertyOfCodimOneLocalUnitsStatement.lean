@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PropertyOfCodimOneLocalUnits
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.property_of_codim_one_local_units : ∀ (A : Type)
     (∀ (k : Type) [Field k] (φ : A →+* k) (v : k),
       (⟨RingHom.ker φ, RingHom.ker_isPrime φ⟩ : PrimeSpectrum A) ∉ good → P k φ v) →
     ∃ f : Aˣ, ∀ (k : Type) [Field k] (φ : A →+* k), P k φ (φ f) := by
-  first | exact @GlobalTheory.HartogsUnit.exists_unit_of_local_units | exact GlobalTheory.HartogsUnit.exists_unit_of_local_units | (intros; apply GlobalTheory.HartogsUnit.exists_unit_of_local_units <;> assumption)
+  exact @GlobalTheory.HartogsUnit.exists_unit_of_local_units

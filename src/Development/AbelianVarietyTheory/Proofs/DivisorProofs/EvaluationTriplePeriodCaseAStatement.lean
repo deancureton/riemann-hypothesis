@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseA
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.evaluation_triple_period_case_a : GlobalTheory.ThK
     ∀ x : UA σ G₁.V.J × UA σ G₁.W.J, ∃ (c : ℂ) (g : UA σ G.V.J × UA σ G.W.J),
       mat g.1 *ᵥ incV F H.x = incV F H.x ∧ mat g.2 *ᵥ incV F H'.y = incV F H'.y ∧
       ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), om₁ x (e Φ) = c • e (om g Φ) := by
-  first | exact @GlobalTheory.ThK.weil_ev_exchange | exact GlobalTheory.ThK.weil_ev_exchange | (intros; apply GlobalTheory.ThK.weil_ev_exchange <;> assumption)
+  exact @GlobalTheory.ThK.weil_ev_exchange

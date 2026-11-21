@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.CoordDegreeBoundOfFlag
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.coord_degree_bound_of_flag : ∀ (X : Scheme.{0}) 
         (∀ j, M.ValAt _ (ef j) (vf j) ∧ MB.Lifts (algebraMap (𝓞 L) L) (𝟙 G.left) (f j) (vf j)) ∧
         M.ValAt _ e ve ∧ MB.Lifts (algebraMap (𝓞 L) L) (𝟙 G.left) s ve ∧
         IsCls b₀ i e t ∧ ValAt ξ (spMap (algebraMap (𝓞 L) L) ≫ z) (t / gen y a e₀ c₀) u ∧ u ≠ 0 := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.RootHt.Pick.pick | exact GlobalTheory.CompanionTheory.Ar.RootHt.Pick.pick | (intros; apply GlobalTheory.CompanionTheory.Ar.RootHt.Pick.pick <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.RootHt.Pick.pick

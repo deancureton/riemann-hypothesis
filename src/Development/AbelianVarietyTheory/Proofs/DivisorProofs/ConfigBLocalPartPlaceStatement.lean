@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalPartPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_B_local_part_place : GlobalTheory.FunPr.Hyp
     ∃ C : Set (Fv F v ⊗[F] E), IsCompact C ∧ ∀ l ∈ idelesAt E (evFin F v),
       ((GlobalTheory.Doubling.unitFin F E v l : (Fv F v ⊗[F] E)ˣ) : Fv F v ⊗[F] E) ∉ C →
         ev' v (locOp v (G.M'.co.rho B.ψ (partFin v (shiftB σ H H' l))) ψ) = 0 := by
-  first | exact @GlobalTheory.ThK.LemF.ShiftSupp.ev_shift_eq_zero_off_compact | exact GlobalTheory.ThK.LemF.ShiftSupp.ev_shift_eq_zero_off_compact | (intros; apply GlobalTheory.ThK.LemF.ShiftSupp.ev_shift_eq_zero_off_compact <;> assumption)
+  exact @GlobalTheory.ThK.LemF.ShiftSupp.ev_shift_eq_zero_off_compact

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlueZeroEqExtZero
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.evaluation_adapted_good_model : ∀ {F E : Type} [
       (μ : Measure (UA σ X.J)) (D : Set (UA σ X.J)) (v : Pl F),
       Model.IsVac (Model.mk (glueDarboux M₁.co eq T hf) (fun v => vacGlue eq (vacS σ X W H H' v) (M₁.vac v)) μ D) B.ψ v
         (vacGlue eq (vacS σ X W H H' v) (M₁.vac v)) := by
-  first | exact @GlobalTheory.ThK.PlaneCo.isVac_vacGlue | exact GlobalTheory.ThK.PlaneCo.isVac_vacGlue | (intros; apply GlobalTheory.ThK.PlaneCo.isVac_vacGlue <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.isVac_vacGlue

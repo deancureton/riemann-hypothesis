@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingHyperbolicSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_hyperbolic_second : ∀ (F E : Type
       ∀ (w : InfinitePlace F) (τ : EmbOver E w) (Z : Matrix (Fin n₁) (Fin n₁) ℂ) (γ : ℝ → GAd σ (c • Y₁.J.map σ)),
         IsLineOf σ (c • Y₁.J.map σ) τ Z γ →
         IsLineOf σ (c • Y.J.map σ) τ (H.ι.map τ.1 * Z * (R.submatrix mid id).map τ.1) fun t => ι (γ t) := by
-  first | exact @GlobalTheory.LeviEmbHC.leviEmb | exact GlobalTheory.LeviEmbHC.leviEmb | (intros; apply GlobalTheory.LeviEmbHC.leviEmb <;> assumption)
+  exact @GlobalTheory.LeviEmbHC.leviEmb

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLocalFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_a_theta_local_factor : GlobalTheory.ThK.KP 
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       FiniteDimensional ℂ (twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p)) ∧ KStabL B G.M om R.p G₁.W H' (twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p)) ∧
       ∀ N : Submodule ℂ R.Pi, N ≤ twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p) → KStabL B G.M om R.p G₁.W H' N → N = ⊥ ∨ N = twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.IndLine.twPart_lowPart_irreducible | exact GlobalTheory.IndLine.twPart_lowPart_irreducible | (intros; apply GlobalTheory.IndLine.twPart_lowPart_irreducible <;> assumption)
+  exact @GlobalTheory.IndLine.twPart_lowPart_irreducible

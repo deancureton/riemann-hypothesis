@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaNu
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TamagawaSpecialUnitary
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.tamagawa_special_unitary_of_su : GlobalTheory.Published.TamagawaNumberSU → GlobalTheory.Published.TamagawaSpecialUnitary := by
-  first | exact @GlobalTheory.TamUnfoldSU.tamagawaSpecialUnitary | exact GlobalTheory.TamUnfoldSU.tamagawaSpecialUnitary | (intros; apply GlobalTheory.TamUnfoldSU.tamagawaSpecialUnitary <;> assumption)
+  exact @GlobalTheory.TamUnfoldSU.tamagawaSpecialUnitary

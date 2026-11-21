@@ -11,4 +11,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Unf
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.transvectionLemma_of_wittCoreDescent : ∀ D : D7, Descent D → GlobalTheory.IndefiniteRowSideFullHecke.TransvectionAction.TransvLemma D := by
-  first | exact @GlobalTheory.Unf.transvLemma_of_descent | exact GlobalTheory.Unf.transvLemma_of_descent | (intros; apply GlobalTheory.Unf.transvLemma_of_descent <;> assumption)
+  exact @GlobalTheory.Unf.transvLemma_of_descent

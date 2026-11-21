@@ -10,4 +10,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.Inhab Fo
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_level_data_ray_field : GlobalTheory.Published.GlobalArtinReciprocity → GlobalTheory.Published.WeberRayFieldSt → GlobalTheory.NT.RayField → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (p : Prm hL) (K : Ctx) (q : WPt p.s K), Formalism.L2.Host.LevelTied (q.w.D q.Z) → Formalism.L2.Rows.ZetaCompatible (q.w.D q.Z) → EntC q.x.ker → ∃ R : Formalism.L2.RecT q.O.ex, RecPinE q R := by
-  first | exact @GlobalTheory.Mem.Top.Bl.WPt.exists_recPinE | exact GlobalTheory.Mem.Top.Bl.WPt.exists_recPinE | (intros; apply GlobalTheory.Mem.Top.Bl.WPt.exists_recPinE <;> assumption)
+  exact @GlobalTheory.Mem.Top.Bl.WPt.exists_recPinE

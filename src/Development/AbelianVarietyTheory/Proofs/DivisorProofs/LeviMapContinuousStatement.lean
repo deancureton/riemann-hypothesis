@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.levi_map_continuous : ∀ (F E : Type) [Field F] [
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ m : (AE F E)ˣ → UA σ G₁.V.J → UA σ G.V.J, (∀ l g₀, IsLevi H l g₀ (m l g₀)) →
     Continuous (fun p : (AE F E)ˣ × UA σ G₁.V.J => m p.1 p.2) := by
-  first | exact @GlobalTheory.LeviSectionCont.continuous_levi_section | exact GlobalTheory.LeviSectionCont.continuous_levi_section | (intros; apply GlobalTheory.LeviSectionCont.continuous_levi_section <;> assumption)
+  exact @GlobalTheory.LeviSectionCont.continuous_levi_section

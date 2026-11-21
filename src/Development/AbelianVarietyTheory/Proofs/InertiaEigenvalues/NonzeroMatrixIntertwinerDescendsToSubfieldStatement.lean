@@ -15,4 +15,4 @@ set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 800000
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.nonzero_matrix_intertwiner_descends_to_subfield : ∀ (K : Type) [Field K] (e : K →+* ℂ) (Γ m p : Type) [Fintype m] [Fintype p] (A : Γ → Matrix m m K) (B : Γ → Matrix p p K), (∃ X : Matrix p m ℂ, X ≠ 0 ∧ ∀ γ, X * (A γ).map e = (B γ).map e * X) → ∃ X : Matrix p m K, X ≠ 0 ∧ ∀ γ, X * A γ = B γ * X := by
-  first | exact @GlobalTheory.matrix_intertwiner_descends | exact GlobalTheory.matrix_intertwiner_descends | (intros; apply GlobalTheory.matrix_intertwiner_descends <;> assumption)
+  exact @GlobalTheory.matrix_intertwiner_descends

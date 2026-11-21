@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DvrPlaceTopFormOrdersApi
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.dvrPlace_topForm_orders_api : ∀ {k K : Type} [Fi
     (∀ η : Forms c n, η ≠ 0 → E.IsFormOrd η (E.formOrd η)) ∧
     (∀ (η : Forms c n) (f : K), η ≠ 0 → f ≠ 0 → E.formOrd (f • η) = E.ord f + E.formOrd η) ∧
     (∀ (η : Forms c n) (a : ℤ), η ≠ 0 → E.IsFormOrd η a → E.formOrd η = a) := by
-  first | exact @GlobalTheory.FieldPair.formOrd_api | exact GlobalTheory.FieldPair.formOrd_api | (intros; apply GlobalTheory.FieldPair.formOrd_api <;> assumption)
+  exact @GlobalTheory.FieldPair.formOrd_api

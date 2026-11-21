@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviElementLocalIdeleExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.levi_element_local_idele_exists : ∀ (F E : Type)
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' → ∀ v : Pl F,
     ∃ m : (AE F E)ˣ → UA σ G.V.J, ∀ t ∈ idelesAt E (evFin F v),
       IsLevi H t (1 : UA σ G₁.V.J) (m t) ∧ m t ∈ UAt σ G.V (evFin F v) := by
-  first | exact @GlobalTheory.PlaneLeviHermAt.exists_isLevi_herm_at | exact GlobalTheory.PlaneLeviHermAt.exists_isLevi_herm_at | (intros; apply GlobalTheory.PlaneLeviHermAt.exists_isLevi_herm_at <;> assumption)
+  exact @GlobalTheory.PlaneLeviHermAt.exists_isLevi_herm_at

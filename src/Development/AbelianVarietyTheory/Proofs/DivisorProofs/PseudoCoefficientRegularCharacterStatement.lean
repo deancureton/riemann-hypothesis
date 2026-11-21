@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.pseudo_coefficient_regular_character : DiscreteSer
     frameMat M ρ (y⁻¹ * s * y) = Matrix.diagonal (fun a => Complex.exp (θ a * Complex.I)) →
     ∀ (dt : Measure (cent s)) [dt.IsHaarMeasure] [dt.IsMulRightInvariant],
     HasOrbInt μ s dt f (conj (dsChar (M.ε ρ) (M.lam ρ) θ) / dt.real univ) := by
-  first | exact @GlobalTheory.EllipticOrb.orbInt_elliptic | exact GlobalTheory.EllipticOrb.orbInt_elliptic | (intros; apply GlobalTheory.EllipticOrb.orbInt_elliptic <;> assumption)
+  exact @GlobalTheory.EllipticOrb.orbInt_elliptic

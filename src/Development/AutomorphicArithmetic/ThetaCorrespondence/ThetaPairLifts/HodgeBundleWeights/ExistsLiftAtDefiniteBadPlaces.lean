@@ -64,5 +64,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_lift_at_definite_bad_places : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GreenCuspidal → Gram → Lifts fun Fm x _ ι p i _ _ => (i : ℕ) + 1 = (Fm.D x ι).R.m → BadAt p i := by
-  first | exact @_root_.GlobalTheory.CovTop.definite_bad_place_lift | exact _root_.GlobalTheory.CovTop.definite_bad_place_lift | (intros; apply _root_.GlobalTheory.CovTop.definite_bad_place_lift <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.definite_bad_place_lift
 end

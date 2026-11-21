@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneEvaluationRepresentation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_evaluation_representation : GlobalTh
     H'.IsAdapted σ B W W₁ i₀ i₁ → M₁.IsGood B.ψ → ∀ (e₀ : Fn F n d →ₗ[ℂ] Fn F n d₁), IsEv B M M₁ 1 H'.ι (iso0 n H') e₀ → ∀ (χX χW : Chr F E) (om : Rep σ X W) (r s r' s' : ℕ), IsPair B M χX χW om r s r' s' → ∀ Ψ ∈ schA F (Fin n × Fin d),
       ∀ K : Set (unip σ W H'), IsCompact K → ∃ C : ℝ, ∀ u ∈ K, Summable (fun ξ : Fin n → E => ‖thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (om (1, u.1) Ψ)))‖) ∧
         ∑' ξ : Fin n → E, ‖thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (om (1, u.1) Ψ)))‖ ≤ C := by
-  first | exact @GlobalTheory.ThKSwapLoc.sum_norm_bdd | exact GlobalTheory.ThKSwapLoc.sum_norm_bdd | (intros; apply GlobalTheory.ThKSwapLoc.sum_norm_bdd <;> assumption)
+  exact @GlobalTheory.ThKSwapLoc.sum_norm_bdd

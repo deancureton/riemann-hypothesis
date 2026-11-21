@@ -88,7 +88,6 @@ local notation "𝔹dR" => BDeRham (normInteger ℂ_[p]) p
 variable {ε : PreTilt (normInteger ℂ_[p]) p} (hε : PreTilt.untilt ε = 1)
   (hζ : PreTilt.untilt ((_root_.frobeniusEquiv (PreTilt (normInteger ℂ_[p]) p) p).symm ε) ≠ 1)
 
-set_option maxHeartbeats 4000000 in
 
 theorem fundamental_exact_sequence :
     Function.Injective (fixedIncl (phiB hε) (phiB_algebraMap_padic' hε)) ∧

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdmissibleCMBaseDataOfSquareTupleStanding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -21,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isAdmissibleCMBaseData_of_squareTupleStanding : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts} {G : GridData L sc} {μ₀ : T} (_hL : L.Is μ₀) (W : G.Weil) (t : T),
     SquareStanding G t → ∀ B : Base D.host.F D.host.E, B.ψ = W.ψ →
       (∀ v ∈ B.P, ∃ w ∈ locPl G t, w.under (𝓞 D.host.F) = v) → B.IsGood D.sp.cm.sig := by
-  first | exact @GlobalTheory.FunObj.base_isGood_of_standing | exact GlobalTheory.FunObj.base_isGood_of_standing | (intros; apply GlobalTheory.FunObj.base_isGood_of_standing <;> assumption)
+  exact @GlobalTheory.FunObj.base_isGood_of_standing

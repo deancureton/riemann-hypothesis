@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arith_calc_swap_regular : ArCalc → SwapReg swapG := by
-  first | exact @GlobalTheory.BlockPoint.swapReg_swapG | exact GlobalTheory.BlockPoint.swapReg_swapG | (intros; apply GlobalTheory.BlockPoint.swapReg_swapG <;> assumption)
+  exact @GlobalTheory.BlockPoint.swapReg_swapG

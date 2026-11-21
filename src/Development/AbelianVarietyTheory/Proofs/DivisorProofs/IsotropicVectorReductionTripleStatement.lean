@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicVectorReductionTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.isotropic_vector_reduction_triple : GlobalTheory.T
     (∃ z : Fin (a + b) → E, z ≠ 0 ∧ form σ G₁.W.J z z = 0) →
     ∃ (V : Spc F E a) (V' : Spc F E b) (W₁' : Spc F E (a + b)), IsTriple B (reG G₁ V V' W₁') X om₁ om₁' ∧
       ∃ (e : ℕ) (W₂ : Spc F E e) (H₂ : Plane E (a + b) e) (i₀ i₁ : ℕ), H₂.IsAdapted σ B (reG G₁ V V' W₁').W W₂ i₀ i₁ := by
-  first | exact @GlobalTheory.ConeSmallMidJB.exists_adapted_plane_of_isotropic | exact GlobalTheory.ConeSmallMidJB.exists_adapted_plane_of_isotropic | (intros; apply GlobalTheory.ConeSmallMidJB.exists_adapted_plane_of_isotropic <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.exists_adapted_plane_of_isotropic

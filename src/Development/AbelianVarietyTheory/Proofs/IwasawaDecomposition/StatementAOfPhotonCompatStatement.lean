@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.statement_a_of_point_compat : PrN → PhtCmp → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, SAk hL := by
-  first | exact @GlobalTheory.HeightCounting.Up.sak_of_prN | exact GlobalTheory.HeightCounting.Up.sak_of_prN | (intros; apply GlobalTheory.HeightCounting.Up.sak_of_prN <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.sak_of_prN

@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.tendsto_mixed_integral_boundary : Hypotheses2 → 
       Filter.Tendsto (fun R => (T.M c).int (fun _ => (T.K B c).c1 (T.L B c u + (T.K B c).ar ((T.F c).phR R u)))
           ((T.F c).phR R (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0)) -
         (T.M c).int (fun _ => (T.K B c).c1 (T.L B c u + (T.K B c).ar ((T.F c).phR R u))) g) Filter.atTop (nhds 0) := by
-  first | exact @GlobalTheory.DetLineIntZero.tendsto_int_sub | exact GlobalTheory.DetLineIntZero.tendsto_int_sub | (intros; apply GlobalTheory.DetLineIntZero.tendsto_int_sub <;> assumption)
+  exact @GlobalTheory.DetLineIntZero.tendsto_int_sub

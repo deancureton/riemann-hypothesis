@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedPrincipalSeriesIrreducible
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
 open NumberField IsDedekindDomain
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unramified_principal_series_irreducible : ∀ (E :
         (GlobalTheory.SmGL.detRep (Fin 1) (χ₁ * GlobalTheory.SmGL.absPow (w.adicCompletion E) (s₁ : ℂ)))
         (GlobalTheory.SmGL.detRep (Fin 1) (χ₂ * GlobalTheory.SmGL.absPow (w.adicCompletion E) (s₂ : ℂ)))) →
       ∀ f : Q.IntertwiningMap (τ.locRep w), f ≠ 0 → False := by
-  first | exact @GlobalTheory.JSPrinBound.jsBound_no_map | exact GlobalTheory.JSPrinBound.jsBound_no_map | (intros; apply GlobalTheory.JSPrinBound.jsBound_no_map <;> assumption)
+  exact @GlobalTheory.JSPrinBound.jsBound_no_map

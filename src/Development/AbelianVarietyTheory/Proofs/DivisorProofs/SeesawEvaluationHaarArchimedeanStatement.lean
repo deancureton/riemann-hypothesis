@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarArchimedean
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_evaluation_haar_archimedean : GlobalTheory.
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ (z : ℂ) (u : UA σ G.W.J), u ∈ unip σ G.W H' → ∀ h : UA σ G.W.J,
       GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' z (u * h) = GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' z h := by
-  first | exact @GlobalTheory.ConeSmall.coneI_unip | exact GlobalTheory.ConeSmall.coneI_unip | (intros; apply GlobalTheory.ConeSmall.coneI_unip <;> assumption)
+  exact @GlobalTheory.ConeSmall.coneI_unip

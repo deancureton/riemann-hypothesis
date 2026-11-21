@@ -7,4 +7,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.source_statement_of_slope : GlobalTheory.CovTop.HypothesesXH → Hypotheses2 → HypothesesH → RegSt → SlopeSt → SrcSt := by
-  first | exact @GlobalTheory.CovHt.Link.srcSt_of_slopeSt | exact GlobalTheory.CovHt.Link.srcSt_of_slopeSt | (intros; apply GlobalTheory.CovHt.Link.srcSt_of_slopeSt <;> assumption)
+  exact @GlobalTheory.CovHt.Link.srcSt_of_slopeSt

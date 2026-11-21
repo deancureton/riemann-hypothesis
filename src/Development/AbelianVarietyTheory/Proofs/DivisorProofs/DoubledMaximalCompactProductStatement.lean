@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledMaximalCompactProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -14,4 +13,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.glue_local_elements : ∀ (B : Type) [CommRing B] (s : Set B), (∀ P : PrimeSpectrum B, ∃ f ∈ s, f ∉ P.asIdeal) → ∀ v : ∀ f : s, Localization.Away (f : B), (∀ (f g : s) (D : Type) [CommRing D] [Algebra B D] (α : Localization.Away (f : B) →ₐ[B] D) (β : Localization.Away (g : B) →ₐ[B] D), α (v f) = β (v g)) → ∃ b : B, ∀ f : s, algebraMap B (Localization.Away (f : B)) b = v f := by
-  first | exact @GlobalTheory.localizationAway_glue_of_forall_prime | exact GlobalTheory.localizationAway_glue_of_forall_prime | (intros; apply GlobalTheory.localizationAway_glue_of_forall_prime <;> assumption)
+  exact @GlobalTheory.localizationAway_glue_of_forall_prime

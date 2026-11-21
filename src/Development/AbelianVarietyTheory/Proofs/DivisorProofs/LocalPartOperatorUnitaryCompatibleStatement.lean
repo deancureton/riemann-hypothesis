@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPartOperatorUnitaryCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.local_part_operator_unitary_compatible : ∀ {F E 
       (∀ Φ ∈ schA F (Fin n × Fin d), e (T Φ) = c • T₁ (e Φ)) →
       ∀ φ φ₁ ψ₁, φ ∈ SB (Fin n × Fin d → Fv F v) → φ₁ ∈ SB (Fin n × Fin d → Fv F v) → ψ₁ ∈ SB (Fin n₁ × Fin d₁ → Fv F v) →
         Acts (evFin F v) T φ φ₁ → Acts (evFin F v) T₁ (ev v φ) ψ₁ → ev v φ₁ = c • ψ₁ := by
-  first | exact @GlobalTheory.ThK.LemF.LocPartLaw.locPart_law | exact GlobalTheory.ThK.LemF.LocPartLaw.locPart_law | (intros; apply GlobalTheory.ThK.LemF.LocPartLaw.locPart_law <;> assumption)
+  exact @GlobalTheory.ThK.LemF.LocPartLaw.locPart_law

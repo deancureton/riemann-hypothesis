@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusRealMultAppellHumbert
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductAbelianUniformizationStatement
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.torus_real_mult_appell_humbert : ∀ (F : Type) [F
     ∀ x y x' y' : Fin (Module.finrank ℚ F) → ℂ,
       hermForm H (Fin.append x y) (Fin.append x' y') =
         (hermForm (Matrix.diagonal fun j ↦ (h j : ℂ)) x y' + hermForm (Matrix.diagonal fun j ↦ (h j : ℂ)) y x') / 2 := by
-  first | exact @GlobalTheory.RosatiAH.hermForm_prod_halfDiag | exact GlobalTheory.RosatiAH.hermForm_prod_halfDiag | (intros; apply GlobalTheory.RosatiAH.hermForm_prod_halfDiag <;> assumption)
+  exact @GlobalTheory.RosatiAH.hermForm_prod_halfDiag

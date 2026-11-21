@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairExistsArchimedeanTranslates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.pair_exists_archimedean_translates : ∀ (F E : Ty
     ∃ u u' : Matrix (Fin n) (Fin d) (AE F E), At (evI F) u ∧ At (evI F) u' ∧
       (∀ w, u'.map (piInf (B.emb w)) = (((ε w : ℤ) : ℂ) * Complex.I) • (X.θ w * u.map (piInf (B.emb w)) * (W.θ w)ᵀ)) ∧
       (∀ i, evI F ((M.co.e u).1 i) = 0) ∧ ∀ i, evI F ((M.co.e u').1 i) = α i := by
-  first | exact @GlobalTheory.FockTransv.transversal | exact GlobalTheory.FockTransv.transversal | (intros; apply GlobalTheory.FockTransv.transversal <;> assumption)
+  exact @GlobalTheory.FockTransv.transversal

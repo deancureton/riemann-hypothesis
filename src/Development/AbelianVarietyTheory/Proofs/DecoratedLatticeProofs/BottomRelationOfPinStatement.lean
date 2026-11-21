@@ -13,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.MiTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bottom_relation_of_pin : GlobalTheory.Published.DiscreteSeriesClassification → GlobalTheory.Published.CuspRapidDecay → ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), BotHyp W → ∀ z ∈ GfC (D.sp.Y 0), z ∈ Subgroup.center (GA D (D.sp.Y 0)) → ∀ u (d : BotDat W u), d.Pin z → BotRel W z d := by
-  first | exact @GlobalTheory.MiTop.botRel_two | exact GlobalTheory.MiTop.botRel_two | (intros; apply GlobalTheory.MiTop.botRel_two <;> assumption)
+  exact @GlobalTheory.MiTop.botRel_two

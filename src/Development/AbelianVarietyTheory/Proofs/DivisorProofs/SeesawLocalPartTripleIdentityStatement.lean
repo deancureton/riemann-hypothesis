@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawLocalPartTripleIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.seesaw_local_part_triple_identity : GlobalTheory.F
         ev' v (locOp v (G.M'.co.rho B.ψ (partFin v (shiftB σ H H' l))) (locOp v (om' (k, 1)) (locOp v (om' (1, m)) φ))) =
           fac X.α ((b : ℝ) / 2) t • locOp v (om₁' (1, h₁)) (ev' v (locOp v (G.M'.co.rho B.ψ
             (partFin v (shiftB σ H H' (l * Units.map (cA σ : AE F E →* AE F E) t⁻¹)))) (locOp v (om' (k, 1)) φ))) := by
-  first | exact @GlobalTheory.ThK.LemF.leviPointB | exact GlobalTheory.ThK.LemF.leviPointB | (intros; apply GlobalTheory.ThK.LemF.leviPointB <;> assumption)
+  exact @GlobalTheory.ThK.LemF.leviPointB

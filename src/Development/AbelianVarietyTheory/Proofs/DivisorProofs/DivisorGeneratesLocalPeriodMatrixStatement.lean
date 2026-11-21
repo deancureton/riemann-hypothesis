@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorGeneratesLocalPeriodMatrix
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.divisor_generates_local_period_matrix : Hypotheses
       (∀ τ, (1 - (Zm τ v)ᴴ * Zm τ v).PosDef) ∧ (∀ τ, IsUnit (GW τ v).det) ∧ (∀ τ, IsUnit (GΩ τ v).det) ∧
       ∀ x, GlobalTheory.Mean4O.lnN (O.met.hm c none ((h.man c).ε a) (O.ex x)) (f x) ((h.man c).pt a ((((T.M c).A a).chart j).symm v)) =
         Real.log ‖g x v‖ + Real.log (rootNorm O.N O.j (cW x.1) (cΩ x.1) (GW x.1 v) (GΩ x.1 v) (Zm x.1 v) x.2) / 2 := by
-  first | exact @GlobalTheory.HodgeLocGeo.lnN_root_local | exact GlobalTheory.HodgeLocGeo.lnN_root_local | (intros; apply GlobalTheory.HodgeLocGeo.lnN_root_local <;> assumption)
+  exact @GlobalTheory.HodgeLocGeo.lnN_root_local

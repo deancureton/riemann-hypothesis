@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.WeilWhittakerContinuityQuadraticExtension
-import Mathlib
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.SquareIntegrable.SSmooth
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TemperedBoundGL2
@@ -17,4 +16,4 @@ open scoped Topology
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weil_whittaker_continuity_quadratic_extension : ∀ (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F] [IsNonarchimedeanLocalField F] [MeasurableSpace F] [BorelSpace F] (E : Type) [Field E] [ValuativeRel E] [TopologicalSpace E] [IsNonarchimedeanLocalField E] [MeasurableSpace E] [BorelSpace E] [Algebra F E] [ValuativeExtension F E] [FiniteDimensional F E] [Algebra.IsSeparable F E] [Fact (Module.finrank F E = 2)] (χ : AddChar F Circle), Continuous χ → ∀ (μ : Measure E) [μ.IsAddHaarMeasure] (Φ : E → ℂ), IsLocallyConstant Φ → HasCompactSupport Φ → Continuous fun p : F × E => gaussI χ μ Φ p.1 p.2 := by
-  first | exact @GlobalTheory.CompanionTheory.WcB.continuous_gaussI | exact GlobalTheory.CompanionTheory.WcB.continuous_gaussI | (intros; apply GlobalTheory.CompanionTheory.WcB.continuous_gaussI <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WcB.continuous_gaussI

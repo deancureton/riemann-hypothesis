@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.chain_frame_triple_haar_identity : GlobalTheory.Fu
   ∀ ωA ωB Pi rf rl p p', GlobalTheory.SquareComm.IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
   ∀ Φ' ∈ GlobalTheory.SquareComm.algF ψ θ false A₁ B, p' Φ' ≠ 0 → GlobalTheory.SquareComm.thetaInt ωB ν₁ 𝓕₁ Φ' = 0 →
   ∀ Φ'' ∈ GlobalTheory.SquareComm.algF ψ θ false A₁ B, GlobalTheory.SquareComm.thetaInt ωB ν₁ 𝓕₁ Φ'' = 0 := by
-  first | exact @GlobalTheory.DefiniteSmallIrred.vanish_all | exact GlobalTheory.DefiniteSmallIrred.vanish_all | (intros; apply GlobalTheory.DefiniteSmallIrred.vanish_all <;> assumption)
+  exact @GlobalTheory.DefiniteSmallIrred.vanish_all

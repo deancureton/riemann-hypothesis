@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormSqUniformizerCharacterMulResidueCardPowEqOne
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntIndMemSB
 
 open MeasureTheory Matrix ValuativeRel
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.normSq_uniformizer_character_mul_residueCard_pow_e
     (∀ μ : @Measure (Fin n × Fin d → k) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ → ∀ T T' : Fin d → GlobalTheory.SplitFlip.Res k 1, T ≠ T' →
       ∫ y, Tr (GlobalTheory.HeisUnit.cosetRep ϖ i0 T) φ0 y * (starRingEnd ℂ) (Tr (GlobalTheory.HeisUnit.cosetRep ϖ i0 T') φ0 y) ∂μ = 0) →
     ‖(χ ϖ : ℂ)‖ ^ 2 * (GlobalTheory.SplitWeil.resCard k : ℝ) ^ d = 1 := by
-  first | exact @GlobalTheory.HeisUnit.normSq_unif_mul_resCard_pow_eq_one | exact GlobalTheory.HeisUnit.normSq_unif_mul_resCard_pow_eq_one | (intros; apply GlobalTheory.HeisUnit.normSq_unif_mul_resCard_pow_eq_one <;> assumption)
+  exact @GlobalTheory.HeisUnit.normSq_unif_mul_resCard_pow_eq_one

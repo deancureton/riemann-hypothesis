@@ -57,5 +57,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.deepGood_of_published_inputs : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood := by
-  first | exact @_root_.GlobalTheory.CovTop.DeepGoodAll.deepGood_alt | exact _root_.GlobalTheory.CovTop.DeepGoodAll.deepGood_alt | (intros; apply _root_.GlobalTheory.CovTop.DeepGoodAll.deepGood_alt <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DeepGoodAll.deepGood_alt
 end

@@ -8,4 +8,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.swap_symmetric_implies_swap_flag : ArCalc → ∀ G, Homog G → Swap2 G → SwapFl G := by
-  first | exact @GlobalTheory.CovTest.SwapFlProof.swapFl_of_swap2 | exact GlobalTheory.CovTest.SwapFlProof.swapFl_of_swap2 | (intros; apply GlobalTheory.CovTest.SwapFlProof.swapFl_of_swap2 <;> assumption)
+  exact @GlobalTheory.CovTest.SwapFlProof.swapFl_of_swap2

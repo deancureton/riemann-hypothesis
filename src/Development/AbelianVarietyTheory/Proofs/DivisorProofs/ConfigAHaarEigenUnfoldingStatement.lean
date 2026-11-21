@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarEigenUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdelicSchwartzSpaceOfLevelCompactSchwartz
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_eigen_unfolding : GlobalTheory.ThK.K
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')),
       ∀ x : Fin b × Fin (b + a') → AF F, ∃ g : SInf F (Fin b × Fin (b + a')),
         ∀ t, g t = cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ (x + GlobalTheory.ThetaTransform.embR t) := by
-  first | exact @GlobalTheory.ConeSlices.cone_slice_schwartz | exact GlobalTheory.ConeSlices.cone_slice_schwartz | (intros; apply GlobalTheory.ConeSlices.cone_slice_schwartz <;> assumption)
+  exact @GlobalTheory.ConeSlices.cone_slice_schwartz

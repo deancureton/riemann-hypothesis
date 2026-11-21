@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAtInvertibleP
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
 
 set_option autoImplicit false
@@ -18,4 +17,4 @@ attribute [local instance] algPadicInt algPadicField towerPadic factPadic Global
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unit_chart_at_invertible_p : ∀ (p : ℕ) [Fact p.Prime] (X : Scheme.{0}) (Xw : X.Opens) (K : (Sp 𝓞_ℂ_[p] ⟶ X) → Set ℂ_[p]) (x : X),
     x ∈ X.basicOpen (p : Γ(X, ⊤)) → UnitChartAt p Xw K x := by
-  first | exact @GlobalTheory.FlatModel.unitChartAt_of_mem_basicOpen_p | exact GlobalTheory.FlatModel.unitChartAt_of_mem_basicOpen_p | (intros; apply GlobalTheory.FlatModel.unitChartAt_of_mem_basicOpen_p <;> assumption)
+  exact @GlobalTheory.FlatModel.unitChartAt_of_mem_basicOpen_p

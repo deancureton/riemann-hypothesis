@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmallPlaceBlockDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSystemOf
 open NumberField IsDedekindDomain TensorProduct
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.L2.Pj GlobalTheory.BigTop GlobalTheory.BigOn
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.small_place_block_decomposition : ∀ {D : D7} {L 
       (labOf p j (p.R.mu w) Q).under (𝓞 (maximalRealSubfield D.host.E)) = (plOf p j (p.R.mu w) Q).under (𝓞 (maximalRealSubfield D.host.E)) ∧
       Ideal.absNorm (labOf p j (p.R.mu w) Q).asIdeal = (blk p j (p.R.mu w)).q Q ∧
       (((Formalism.EigenvalueLevelCeiling.plc w : ℕ) : 𝓞 D.host.E) ∈ (labOf p j (p.R.mu w) Q).asIdeal ↔ ((Formalism.EigenvalueLevelCeiling.plc w : ℕ) : 𝓞 D.host.E) ∈ (plOf p j (p.R.mu w) Q).asIdeal) := by
-  first | exact @GlobalTheory.FrameLab.labels_ok | exact GlobalTheory.FrameLab.labels_ok | (intros; apply GlobalTheory.FrameLab.labels_ok <;> assumption)
+  exact @GlobalTheory.FrameLab.labels_ok

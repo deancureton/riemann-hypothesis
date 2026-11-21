@@ -11,4 +11,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.existsArcFamilyPointWithFrames_proof : GlobalTheory.LN.ArcFamSt := by
-  first | exact @GlobalTheory.arcFam_closed | exact GlobalTheory.arcFam_closed | (intros; apply GlobalTheory.arcFam_closed <;> assumption)
+  exact @GlobalTheory.arcFam_closed

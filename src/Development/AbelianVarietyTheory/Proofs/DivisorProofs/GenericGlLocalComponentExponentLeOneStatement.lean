@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.generic_gl_local_component_exponent_le_one : ∀ (
     (w : HeightOneSpectrum (𝓞 E)) (ρ : GlobalTheory.CuspRep.SmIrr (GL (Fin n) (w.adicCompletion E))) (x x' : ℕ)
     (χ₁ χ₂ : (w.adicCompletion E)ˣ →* ℂˣ), GlobalTheory.Published.GenericityGL → 1 ≤ n → τ.IsLocComp w ρ → IsUnramAt w χ₁ →
     IsUnramAt w χ₂ → IsDetProdConstAt w x x' χ₁ χ₂ ρ.ρ → x ≤ 1 ∧ x' ≤ 1 := by
-  first | exact @GlobalTheory.ThK.DetProd.blocks_le_one_of_isLocComp | exact GlobalTheory.ThK.DetProd.blocks_le_one_of_isLocComp | (intros; apply GlobalTheory.ThK.DetProd.blocks_le_one_of_isLocComp <;> assumption)
+  exact @GlobalTheory.ThK.DetProd.blocks_le_one_of_isLocComp

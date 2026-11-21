@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPairSplittingMatrix
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalDarbouxHermitianTensorAdeles
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_pair_splitting_matrix : ∀ {F E : Type
       (∀ t i, (Pᵀ * J * P.map σ) (Fin.natAdd n₁ t) (Fin.castAdd 2 i) = 0) ∧
       (Pᵀ * J * P.map σ) (Fin.natAdd n₁ 0) (Fin.natAdd n₁ 0) = 0 ∧ (Pᵀ * J * P.map σ) (Fin.natAdd n₁ 1) (Fin.natAdd n₁ 1) = 0 ∧
       (Pᵀ * J * P.map σ) (Fin.natAdd n₁ 0) (Fin.natAdd n₁ 1) = 1 ∧ (Pᵀ * J * P.map σ) (Fin.natAdd n₁ 1) (Fin.natAdd n₁ 0) = 1 := by
-  first | exact @GlobalTheory.GramAdapted.gram_adapted | exact GlobalTheory.GramAdapted.gram_adapted | (intros; apply GlobalTheory.GramAdapted.gram_adapted <;> assumption)
+  exact @GlobalTheory.GramAdapted.gram_adapted

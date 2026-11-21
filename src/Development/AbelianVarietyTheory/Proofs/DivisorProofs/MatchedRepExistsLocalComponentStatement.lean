@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedRepExistsLocalComponent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.matched_rep_exists_local_component : GlobalTheory.
         IsSmooth π ∧ Nonempty (π.Equiv (prod₂ (detRep (Fin a) (chrW X.α t)) (detRep (Fin a') (chrW X.β t)))) ∧
         ∀ h ∈ UAt σ G.W (evFin F v), ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v), ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
           Acts (evFin F v) (om (1, h)) φ φ₁ → Rf.p v φ₁ = π (GlobalTheory.KSplit.locMat t c h) (Rf.p v φ) := by
-  first | exact @GlobalTheory.LocRepSplit.locRep | exact GlobalTheory.LocRepSplit.locRep | (intros; apply GlobalTheory.LocRepSplit.locRep <;> assumption)
+  exact @GlobalTheory.LocRepSplit.locRep

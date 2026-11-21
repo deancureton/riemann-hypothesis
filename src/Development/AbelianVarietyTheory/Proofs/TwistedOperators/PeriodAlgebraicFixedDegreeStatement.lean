@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.period_algebraic_fixed_degree : ∀ {D : D7} {T : 
       ∀ k : FVar D WW.rank A.rank →₀ ℕ, Finsupp.mapDomain Prod.fst k = dg →
         IsAlgebraic ℚ (pureTensorO W.ψ W.θ (GlobalTheory.Grid.neg A) WW (fun τ => -X.rA.s τ) X.rW.s X.rA.B X.rW.B
           (heisO W.ψ (GlobalTheory.Grid.neg A) WW u X.vac) (MvPolynomial.monomial k 1) 0 / Ω) := by
-  first | exact @GlobalTheory.BotTransJet.jets_div_period_isAlgebraic | exact GlobalTheory.BotTransJet.jets_div_period_isAlgebraic | (intros; apply GlobalTheory.BotTransJet.jets_div_period_isAlgebraic <;> assumption)
+  exact @GlobalTheory.BotTransJet.jets_div_period_isAlgebraic

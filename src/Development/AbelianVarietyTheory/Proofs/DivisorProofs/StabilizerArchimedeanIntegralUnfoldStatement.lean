@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerArchimedeanIntegralUnfold
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.stabilizer_archimedean_integral_unfold : ∀ (F E 
     (∀ p ∈ UAt σ X (evI F), ∀ g ∈ UAt σ X (evI F), ∀ t : (AE F E)ˣ, mat p *ᵥ incV F H.x = t.1 • incV F H.x →
       Ψ (p * g) = (((absE F E t : ℝ) ^ (n₁ + 1) : ℝ) : ℂ) * Ψ g) →
     ∀ g ∈ UAt σ X (evI F), ∫ k, Ψ (k.1 * g) ∂μK = ∫ k, Ψ k.1 ∂μK := by
-  first | exact @GlobalTheory.IwasawaKAvgInt.kInt_right_inv_of_integrable | exact GlobalTheory.IwasawaKAvgInt.kInt_right_inv_of_integrable | (intros; apply GlobalTheory.IwasawaKAvgInt.kInt_right_inv_of_integrable <;> assumption)
+  exact @GlobalTheory.IwasawaKAvgInt.kInt_right_inv_of_integrable

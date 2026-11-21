@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedEmbeddingDualBasisExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsBaseEqChain
 import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.unramified_embedding_dual_basis_exists : ∀ {D : 
       (∀ σ' : D.host.E →+* ℂ, ∃ σ : Emb D p, σ' = jc.comp σ) ∧
       (∀ τ σ : Emb D p, ∑ k, cf τ k * ev σ (b k) = if σ = τ then 1 else 0) ∧
       (∀ τ k, ∃ v : z.Z.i.c.V W, cf (phiPow D 1 τ) k = cf τ k ^ p + p * v) := by
-  first | exact @GlobalTheory.IdemCoef.exists_coef | exact GlobalTheory.IdemCoef.exists_coef | (intros; apply GlobalTheory.IdemCoef.exists_coef <;> assumption)
+  exact @GlobalTheory.IdemCoef.exists_coef

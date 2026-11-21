@@ -8,4 +8,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.ModerateGrowthSchwartz (schwartzA)
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eisenstein_siegel_parabolic_invariance : PositivityTheory.GramSchwartzFunctions.EC.PInv := by
-  first | exact @GlobalTheory.CompanionTheory.EisCellsPInv.pInv | exact GlobalTheory.CompanionTheory.EisCellsPInv.pInv | (intros; apply GlobalTheory.CompanionTheory.EisCellsPInv.pInv <;> assumption)
+  exact @GlobalTheory.CompanionTheory.EisCellsPInv.pInv

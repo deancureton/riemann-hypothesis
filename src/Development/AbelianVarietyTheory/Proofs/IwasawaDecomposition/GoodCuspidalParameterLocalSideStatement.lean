@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.good_cuspidal_parameter_local_side : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL (fun _ _ _ _ w Z _ _ _ _ _ c => ∀ Rw : RowSide (w.D Z), HEq Rw.locR c.a.nt.A.row.locR → GlobalTheory.IndefiniteRowSideFullHecke.CMTypeEmbeddings.GoodRowCuspParam (w.D Z) Rw) := by
-  first | exact @GlobalTheory.HeightCounting.Up.goodRowCuspParam_atMem | exact GlobalTheory.HeightCounting.Up.goodRowCuspParam_atMem | (intros; apply GlobalTheory.HeightCounting.Up.goodRowCuspParam_atMem <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.goodRowCuspParam_atMem

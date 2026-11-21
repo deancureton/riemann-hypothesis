@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagCompactificationAdelicUnitHeight
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.DegFrame
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HalfFlag
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.flag_compactification_adelic_unit_height : ∀ {E 
         -(adlOf Y hm (wholeSym a R (Sum.inl (Fin.rev k) : Fin g ⊕ Fin g))).lg v ε y +
         Real.log (ε.w (GlobalTheory.TrueGeo.valAt y.1 (genAt (adlOf Y hm (wholeSym a R (Sum.inr k : Fin g ⊕ Fin g))).D (below y.1) *
           genAt (adlOf Y hm (wholeSym a R (Sum.inl (Fin.rev k) : Fin g ⊕ Fin g))).D (below y.1)))) := by
-  first | exact @GlobalTheory.WholeDual.whole_inr_dual | exact GlobalTheory.WholeDual.whole_inr_dual | (intros; apply GlobalTheory.WholeDual.whole_inr_dual <;> assumption)
+  exact @GlobalTheory.WholeDual.whole_inr_dual

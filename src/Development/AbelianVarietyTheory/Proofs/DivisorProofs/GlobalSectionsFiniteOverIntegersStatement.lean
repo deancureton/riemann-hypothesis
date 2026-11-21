@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlobalSectionsFiniteOverIntegers
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrdEqZeroOfUnderEqBot
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
@@ -19,4 +18,4 @@ open CategoryTheory AlgebraicGeometry GlobalTheory GlobalTheory.Mean4O GlobalThe
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.global_sections_finite_over_integers : ∀ (F : Type) [Field F] [NumberField F] (X : Scheme.{0}) (p : X ⟶ Sp (𝓞 F)),
     IsArithVar (spMap (ReciprocityTheory.ChartRestriction.G.DVR.FlatBC.algX p ⊤)) 0 → Module.Finite ℤ Γ(X, ⊤) := by
-  first | exact @GlobalTheory.GlobalFunFinite.moduleFinite_int | exact GlobalTheory.GlobalFunFinite.moduleFinite_int | (intros; apply GlobalTheory.GlobalFunFinite.moduleFinite_int <;> assumption)
+  exact @GlobalTheory.GlobalFunFinite.moduleFinite_int

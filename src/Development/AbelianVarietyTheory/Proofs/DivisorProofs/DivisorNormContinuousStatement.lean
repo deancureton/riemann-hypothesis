@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.divisor_norm_continuous : ∀ {k : Type} [CommRing k] {Y : Scheme.{0}} {p : Y ⟶ Sp k} {σ : k →+* ℂ} {d : ℕ} (R : AnRead p σ d) (C : Closeds Y) (n : CxPts p σ → ℝ), IsDivNorm R C n → Continuous n := by
-  first | exact @GlobalTheory.ShFam.IsDivNorm.continuous | exact GlobalTheory.ShFam.IsDivNorm.continuous | (intros; apply GlobalTheory.ShFam.IsDivNorm.continuous <;> assumption)
+  exact @GlobalTheory.ShFam.IsDivNorm.continuous

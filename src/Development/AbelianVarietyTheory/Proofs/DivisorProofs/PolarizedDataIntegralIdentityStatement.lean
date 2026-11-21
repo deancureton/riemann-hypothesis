@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizedDataIntegralIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.polarized_data_integral_identity : GlobalTheory.Th
     ∃ 𝓓 : Set (UA σ G.V'.J), IsFundamentalDomain (ratStab σ G.V'.J H.x) 𝓓 G.M'.μ ∧ ∃ s₀ : ℝ, ∀ s : ℂ, s₀ < s.re → ∀ h,
       GlobalTheory.ConeSmallCT.Bint G.M' om' Φ' Eis s h = ∫ g in 𝓓, theta om' Φ' g h * (hf g : ℂ) ^ (s + (((b + 2 : ℕ) : ℂ) - 1) / 2) ∂G.M'.μ ∧
       IntegrableOn (fun g => theta om' Φ' g h * (hf g : ℂ) ^ (s + (((b + 2 : ℕ) : ℂ) - 1) / 2)) 𝓓 G.M'.μ := by
-  first | exact @GlobalTheory.ConeSmallUnfEis.unfold_eis | exact GlobalTheory.ConeSmallUnfEis.unfold_eis | (intros; apply GlobalTheory.ConeSmallUnfEis.unfold_eis <;> assumption)
+  exact @GlobalTheory.ConeSmallUnfEis.unfold_eis

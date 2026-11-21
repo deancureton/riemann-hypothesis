@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelEvaluationIntertwines
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingTrRep
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.model_evaluation_intertwines : GlobalTheory.FunPr.
     ∀ d' d₁' : Darboux (symp (cA σ) (-1) (incM F W.J) (incM F X.J)) (Fin n × Fin d),
       (∀ x : Matrix (Fin n) (Fin d) (AE F E), d'.e xᵀ = M.co.e x) → (∀ x : Matrix (Fin n) (Fin d) (AE F E), d₁'.e xᵀ = M₁.co.e x) →
       HasDbl (cA σ) (adeleClass F) B.ψ (-1) (incM F W.J) (incM F X.J) d' d₁' T := by
-  first | exact @GlobalTheory.DblTr.hasDbl_transp | exact GlobalTheory.DblTr.hasDbl_transp | (intros; apply GlobalTheory.DblTr.hasDbl_transp <;> assumption)
+  exact @GlobalTheory.DblTr.hasDbl_transp

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmAuxiliarySetAbelianGalois
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -46,4 +45,4 @@ theorem _root_.GlobalTheory.T.cm_auxiliary_set_abelian_galois : GlobalTheory.Pub
     ∀ i, (Real.pi : ℂ) * (U.h i : ℂ) * ((D : ℂ) / ψ (ev i) (yv i)) * w i ^ 2 ≠ 0 ∧
       Sz l lam (c_vp 𝔣 l + if l = d then 1 / 2 else 0)
         (a i * (a i * ((Real.pi : ℂ) * (U.h i : ℂ) * ((D : ℂ) / ψ (ev i) (yv i)) * w i ^ 2) / (D : ℂ)) * (Real.sqrt d : ℝ) / (2 * Real.pi))⁻¹ := by
-  first | exact @GlobalTheory.CxPtSizes.scale_size | exact GlobalTheory.CxPtSizes.scale_size | (intros; apply GlobalTheory.CxPtSizes.scale_size <;> assumption)
+  exact @GlobalTheory.CxPtSizes.scale_size

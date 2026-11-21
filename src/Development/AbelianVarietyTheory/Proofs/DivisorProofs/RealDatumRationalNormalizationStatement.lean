@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.real_datum_rational_normalization : GlobalTheory.P
         ∃ c : ℂ, (∃ m : ℕ, m ≠ 0 ∧ c ^ m = 1) ∧
           ∑ k, τ (ρ.e ((Fm.ex x hx i).nch.twI w) ((Fm.ex x hx i).nch.sd w) (a k)) • evW p.nexp p.v₀ j (g k).val =
             c • ∑ k, ρ.e ((Fm.ex x hx i).nch.twI w) ((Fm.ex x hx i).nch.sd w) (a k) • evW p.nexp p.v₀ j (g k).val := by
-  first | exact @GlobalTheory.BigOn.Exp.expConj | exact GlobalTheory.BigOn.Exp.expConj | (intros; apply GlobalTheory.BigOn.Exp.expConj <;> assumption)
+  exact @GlobalTheory.BigOn.Exp.expConj

@@ -32,4 +32,4 @@ theorem _root_.GlobalTheory.T.real_phase_smooth_unit_bound : GlobalTheory.CovTop
       0 < m ∧ IsArithVar (spMap (algebraMap (𝓞 D.what₂.LL) k')) 0 ∧
       (comb (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (fnB ((T.M c).pull ε π ((2 : ℝ) • (g - (fun _ _ => O.Y.htDetT B c τ : (T.M c).Fun)))) hu hc)
       ((h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).gens (GlobalTheory.FlagAr.setB O.Y B))) (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => (m : ℤ) * o.elim (1 : ℤ) fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℤ) else 0)).Isometric (M.pull ρ hρ) := by
-  first | exact @GlobalTheory.FlatPullCurve.exists_isometric_pull_curve | exact GlobalTheory.FlatPullCurve.exists_isometric_pull_curve | (intros; apply GlobalTheory.FlatPullCurve.exists_isometric_pull_curve <;> assumption)
+  exact @GlobalTheory.FlatPullCurve.exists_isometric_pull_curve

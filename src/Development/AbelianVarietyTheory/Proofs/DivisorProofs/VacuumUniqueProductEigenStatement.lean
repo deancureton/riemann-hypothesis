@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumUniqueProductEigen
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvFinMkPt
 
 open scoped TensorProduct
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.vacuum_unique_product_eigen : ∀ {F : Type} [Fiel
     (∀ v, vac v ∈ SB (κ → Fv F v)) → (∀ v, vac v ≠ 0) → (∀ᶠ v in cofinite, vac v = indO v) →
     (∀ v, ∀ φ ∈ SB (κ → Fv F v), (∀ q ∈ Q v, locOp ψ v q.1 φ = q.2 • φ) → ∃ a : ℂ, φ = a • vac v) →
     ∀ g ∈ SB (κ → Af F), (∀ v, ∀ q ∈ Q v, finOp ψ v q.1 g = q.2 • g) → ∃ a : ℂ, g = a • vacProd vac := by
-  first | exact @GlobalTheory.VacFactor.eq_smul_vacProd | exact GlobalTheory.VacFactor.eq_smul_vacProd | (intros; apply GlobalTheory.VacFactor.eq_smul_vacProd <;> assumption)
+  exact @GlobalTheory.VacFactor.eq_smul_vacProd

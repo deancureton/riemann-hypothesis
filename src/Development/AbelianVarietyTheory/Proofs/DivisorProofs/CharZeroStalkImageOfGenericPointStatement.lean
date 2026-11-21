@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CharZeroStalkImageOfGenericPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.ShimuraVarieties.IsOpenOfMemIrreducibleComponentsOfFinite
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormIdeal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FamIdeal
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.charZero_stalk_imageOfGenericPoint : ∀ (Y Z : Sc
     ∀ (hK : IsField (Z.presheaf.stalk (GlobalTheory.NormSheafDescent.genPt π))),
     letI := GlobalTheory.NormSheafDescent.fieldK π hK
     CharZero (Z.presheaf.stalk (GlobalTheory.NormSheafDescent.genPt π)) := by
-  first | exact @GlobalTheory.NormSheafDescent.charZero_stalk_genPt | exact GlobalTheory.NormSheafDescent.charZero_stalk_genPt | (intros; apply GlobalTheory.NormSheafDescent.charZero_stalk_genPt <;> assumption)
+  exact @GlobalTheory.NormSheafDescent.charZero_stalk_genPt

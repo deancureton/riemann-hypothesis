@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelArchimedeanExponent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.weil_model_archimedean_exponent : GlobalTheory.Fun
     GlobalTheory.RealDict.PublishedHyps D Xs Ws Mo ψ' χX χW om τ → GlobalTheory.RealDict.IsPairReading ψ ε A B ω Xs Ws Mo ψ' om τ →
     ∃ Φ : PolF D X.rank M.rank →ₗ[ℂ] GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf D.host.F (Fin M.rank × Fin X.rank),
       Function.Injective Φ ∧ LinearMap.range Φ = Mo.Pol ψ' τ ∧ GlobalTheory.RealDict.IsFockMap ψ θ ε A B Mo Φ := by
-  first | exact @GlobalTheory.RealDict.FockMap.exists_fockMap | exact GlobalTheory.RealDict.FockMap.exists_fockMap | (intros; apply GlobalTheory.RealDict.FockMap.exists_fockMap <;> assumption)
+  exact @GlobalTheory.RealDict.FockMap.exists_fockMap

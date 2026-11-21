@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentBlockTriangularNilpotent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.unipotent_block_triangular_nilpotent : ∀ (F E : 
     ∀ u : UA σ Y.J, (∀ i j, blk n₁ j < blk n₁ i + 1 → (incM F R * (mat u - 1 : Matrix (Fin n) (Fin n) (AE F E)) * incM F (frame H) :
         Matrix (Fin (1 + n₁ + 1)) (Fin (1 + n₁ + 1)) (AE F E)) i j = 0) →
       u ∈ unip σ Y H := by
-  first | exact @GlobalTheory.LeviHC.UnipFrame.mem_unip_of_strictBlockTri | exact GlobalTheory.LeviHC.UnipFrame.mem_unip_of_strictBlockTri | (intros; apply GlobalTheory.LeviHC.UnipFrame.mem_unip_of_strictBlockTri <;> assumption)
+  exact @GlobalTheory.LeviHC.UnipFrame.mem_unip_of_strictBlockTri

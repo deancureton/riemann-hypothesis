@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairFrameBlockEigenRelation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.pair_frame_block_eigen_relation : GlobalTheory.ThK
     ∃ ex : Fin q → ℝ, ∀ (t : Fin q → ℝ) (a : UA σ X.J), (∀ i, 0 < t i) → IsTorusU x y t a →
       ∀ (f : SInf F (Fin n × Fin d)) (κ : UA σ X.J) (h : UA σ W.J) (z : Fin n × Fin d → AF F),
         ‖e (om (a * κ, h) (pureA F f φ)) z‖ ≤ (∏ i, t i ^ ex i) * ‖e (om (κ, h) (pureA F f φ)) (blkScale blk t z)‖ := by
-  first | exact @GlobalTheory.ThKTorus.Scale.norm_eval_torus_le | exact GlobalTheory.ThKTorus.Scale.norm_eval_torus_le | (intros; apply GlobalTheory.ThKTorus.Scale.norm_eval_torus_le <;> assumption)
+  exact @GlobalTheory.ThKTorus.Scale.norm_eval_torus_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleTransferAlongConfigAThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.triple_transfer_along_config_a_third : GlobalTheor
       ∃ f ∈ G.M.Pol B.ψ B.emb, ∃ φ : ∀ v : Pl F, (Fin (b + 2) × Fin (b + 2 + a') → Fv F v) → ℂ,
         (∀ v, φ v ∈ SB _) ∧ (∀ v ∉ T, φ v = G.M.vac v) ∧
         G₁.M.I om₁ (pure (coneInf B G.M om ei K μKi μi (shiftA H H') X.ν ((b + 2 - a') / 2) f) (fun v => if v ∈ T then coneFin B G.M om v (ev v) K (μKf v) (μf v) (shiftA H H') X.ν ((b + 2 - a') / 2) (φ v) else G₁.M.vac v)) h₁ ≠ 0 := by
-  first | exact @GlobalTheory.ThK.exists_local_data_cone_ne_zero | exact GlobalTheory.ThK.exists_local_data_cone_ne_zero | (intros; apply GlobalTheory.ThK.exists_local_data_cone_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.exists_local_data_cone_ne_zero

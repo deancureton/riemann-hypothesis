@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ColumnsMemPeriodLatticeIffFinitePartMovedLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaAtEqProdAhG
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.L2.DIV Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.FWT Formalism.L2.Pj Formalism.IndefR.Datum ReciprocityTheory.ChartRestriction.G.PullbackSections ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open NumberField Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.columns_mem_periodLattice_iff_finitePart_movedLatt
       (∀ a, GlobalTheory.IndefiniteRowSideFullHecke.OrthonormalLatticeThetaValues.perVec Wt (GlobalTheory.AHPhase.colB b Yr a) ∈ Set.range Wt.Pm) ↔
         actO (Vc D i) (Wc D i) 1 (γ * g)⁻¹ (ratW (Wc D i) (Vc D i) Yr - GlobalTheory.IndefiniteRowSideFullHecke.OrthonormalLatticeThetaValues.realPt (Vc D i) (Wc D i) Yr) ∈
           latO (Vc D i) (Wc D i) (R.ΛV i) (R.ΛW i) fun _ => True := by
-  first | exact @GlobalTheory.AHPhase.cols_per_iff_latO | exact GlobalTheory.AHPhase.cols_per_iff_latO | (intros; apply GlobalTheory.AHPhase.cols_per_iff_latO <;> assumption)
+  exact @GlobalTheory.AHPhase.cols_per_iff_latO

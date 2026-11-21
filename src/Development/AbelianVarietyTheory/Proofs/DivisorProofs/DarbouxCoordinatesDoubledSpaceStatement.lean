@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesDoubledSpace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.darboux_coordinates_doubled_space : ∀ (F E : Typ
         co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) ∧
       (∀ u, (∀ i, u i ∈ diagSub (AE F E) finSumFinEquiv) → (co.e u).1 = 0) ∧
       (∀ u, (∀ i, u i ∈ antiSub (AE F E) finSumFinEquiv) → (co.e u).2 = 0) := by
-  first | exact @GlobalTheory.SWAniso.exists_rational_dblCoord_right | exact GlobalTheory.SWAniso.exists_rational_dblCoord_right | (intros; apply GlobalTheory.SWAniso.exists_rational_dblCoord_right <;> assumption)
+  exact @GlobalTheory.SWAniso.exists_rational_dblCoord_right

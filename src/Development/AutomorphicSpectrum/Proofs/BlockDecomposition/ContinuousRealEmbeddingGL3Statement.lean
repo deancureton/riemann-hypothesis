@@ -16,4 +16,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 open GlobalTheory.CompanionTheory.GL2Factorization
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.continuous_real_embedding_GL3 : Continuous GL2LocalData.emR := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Factorization.EmRCont.continuous_emR | exact GlobalTheory.CompanionTheory.GL2Factorization.EmRCont.continuous_emR | (intros; apply GlobalTheory.CompanionTheory.GL2Factorization.EmRCont.continuous_emR <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Factorization.EmRCont.continuous_emR

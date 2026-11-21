@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerGlobalEval
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.exists_schwartz_eq_coneInfFun_shiftB : GlobalTheor
     ∀ (μKi : Measure (KAt K (evI F))) (μi : Measure (idelesAt E (evI F))), IsNormK K (evI F) μKi → μi.IsHaarMeasure →
     ∀ f : SInf F (Fin (b + 2) × Fin (a + (b + 2))), ∃ g : SInf F (Fin b × Fin (a + b)),
       ⇑g = coneInfFun B G.M' om' ei K μKi μi (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f := by
-  first | exact @GlobalTheory.ConeArchB.coneInfFun_schwartz | exact GlobalTheory.ConeArchB.coneInfFun_schwartz | (intros; apply GlobalTheory.ConeArchB.coneInfFun_schwartz <;> assumption)
+  exact @GlobalTheory.ConeArchB.coneInfFun_schwartz

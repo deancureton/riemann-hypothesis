@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusUnitaryCharUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.frobenius_unitary_char_unique : ∀ (k : Type) [Fi
       (∀ (z : Fin (a + b) → k) (Ψ₁ Ψ₂ Ψ₂' : GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + b)) k)),
         Ψ₂'.1 = (fun Y => ψv (ℓ ⬝ᵥ (Y *ᵥ z)) * Ψ₂.1 Y) → Bf Ψ₁ Ψ₂' = Bf Ψ₁ Ψ₂) →
       Bf = 0 := by
-  first | exact @GlobalTheory.LiftLowerLoc.form_eq_zero | exact GlobalTheory.LiftLowerLoc.form_eq_zero | (intros; apply GlobalTheory.LiftLowerLoc.form_eq_zero <;> assumption)
+  exact @GlobalTheory.LiftLowerLoc.form_eq_zero

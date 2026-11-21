@@ -12,4 +12,4 @@ open NumberField Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.height_indicator_bounded : Hypotheses2 → HypothesesH → GlobalTheory.Published.ScholzeWeinsteinB → OnObj fun D O _ _ H _ => ∃ C : ℝ, ∀ (τ : D.what₂.Tau) (y : Pt O.s), |H.h0 (fun τ' _ => if τ' = τ then 1 else 0) y| ≤ C := by
-  first | exact @GlobalTheory.RefFlatHt.refHt | exact GlobalTheory.RefFlatHt.refHt | (intros; apply GlobalTheory.RefFlatHt.refHt <;> assumption)
+  exact @GlobalTheory.RefFlatHt.refHt

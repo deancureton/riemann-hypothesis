@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerHaarAdelic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_haar_adelic : GlobalTheory.ThK
         (∀ j (T : SchwartzMap (Fin b × Fin (a + b) → mixedEmbedding.mixedSpace F) ℂ →L[ℂ] ℂ),
           Continuous (fun p : K × (AE F E)ˣ => T (f j p.1 p.2))) ∧
         (∀ j (m n : ℕ), ∃ c : (AE F E)ˣ → ℝ, Continuous c ∧ Integrable c μ ∧ ∀ k l, SchwartzMap.seminorm ℂ m n (f j k l) ≤ c l) := by
-  first | exact @GlobalTheory.ConeDecompWeil.cone_integrand_decomp | exact GlobalTheory.ConeDecompWeil.cone_integrand_decomp | (intros; apply GlobalTheory.ConeDecompWeil.cone_integrand_decomp <;> assumption)
+  exact @GlobalTheory.ConeDecompWeil.cone_integrand_decomp

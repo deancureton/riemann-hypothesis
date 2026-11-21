@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemeLiftAlongNilpotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.abelian_scheme_lift_along_split_surjection : ∀ (
     ∀ (A₀ : Over (Sp R₀)) [GrpObj A₀] (g : ℕ), IsAbelianScheme A₀ → SmoothOfRelativeDimension g A₀.hom →
       ∃ (A : Over (Sp R)) (_ : GrpObj A) (i : A₀.left ⟶ A.left) (_ : IsGrpPullback A₀ A (spMap π) i),
         IsAbelianScheme A ∧ SmoothOfRelativeDimension g A.hom := by
-  first | exact @GlobalTheory.abelianScheme_constLift | exact GlobalTheory.abelianScheme_constLift | (intros; apply GlobalTheory.abelianScheme_constLift <;> assumption)
+  exact @GlobalTheory.abelianScheme_constLift

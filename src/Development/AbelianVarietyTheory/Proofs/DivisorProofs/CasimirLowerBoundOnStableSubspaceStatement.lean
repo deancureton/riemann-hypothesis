@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.casimir_lower_bound_on_stable_subspace : ∀ (R S 
     (∀ w, w ∈ ⨆ μ : Ix R S → ℚ, wtSub actW μ) → IsUnitary actW B → ∀ U : Submodule ℂ W, KStable actW U →
     (∀ (ν : Ix R S → ℚ) y, y ∈ U → IsHW actW ν y → c₀ < GlobalTheory.BlockReps.casVal ν) →
     ∀ x ∈ U, x ≠ 0 → (c₀ : ℝ) * (B x x).re < (B x (GlobalTheory.BlockReps.casK actW x)).re := by
-  first | exact @GlobalTheory.CasimirBound.casimir_form_gt | exact GlobalTheory.CasimirBound.casimir_form_gt | (intros; apply GlobalTheory.CasimirBound.casimir_form_gt <;> assumption)
+  exact @GlobalTheory.CasimirBound.casimir_form_gt

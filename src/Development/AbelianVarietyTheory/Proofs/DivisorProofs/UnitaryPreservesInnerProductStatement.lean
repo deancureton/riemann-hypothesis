@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryPreservesInnerProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unitary_preserves_inner_product : ∀ (F : Type) [
       ∫⁻ x, ‖T φ x‖ₑ ^ 2 ∂μ = ∫⁻ x, ‖φ x‖ₑ ^ 2 ∂μ) →
     ∀ μ : @Measure (κ → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ → ∀ f ∈ schA F κ, ∀ g ∈ schA F κ,
       ∫ x, T f x * starRingEnd ℂ (T g x) ∂μ = ∫ x, f x * starRingEnd ℂ (g x) ∂μ := by
-  first | exact @GlobalTheory.L2PairingPolar.pairing_eq | exact GlobalTheory.L2PairingPolar.pairing_eq | (intros; apply GlobalTheory.L2PairingPolar.pairing_eq <;> assumption)
+  exact @GlobalTheory.L2PairingPolar.pairing_eq

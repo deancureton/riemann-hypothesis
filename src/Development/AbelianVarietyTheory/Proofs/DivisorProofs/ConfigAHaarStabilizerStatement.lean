@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_stabilizer : GlobalTheory.ThK.KP →
           ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK) =
         ∫ k, ∫ l, (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) *
           thetaSum F (om₁ x (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)))) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ThetaSumCone.thetaSum_cone_exch | exact GlobalTheory.ThetaSumCone.thetaSum_cone_exch | (intros; apply GlobalTheory.ThetaSumCone.thetaSum_cone_exch <;> assumption)
+  exact @GlobalTheory.ThetaSumCone.thetaSum_cone_exch

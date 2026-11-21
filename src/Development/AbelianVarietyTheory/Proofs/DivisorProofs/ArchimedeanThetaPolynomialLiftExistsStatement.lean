@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanThetaPolynomialLiftExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.archimedean_theta_polynomial_lift_exists : GlobalT
     GlobalTheory.RealLift.Framed τ (incM F X.J) (incM F W.J) 1 Complex.I A C → (∀ w, X.θ w * A w = A w * Formalism.BasicNotions.TH.Jm P Q) →
     (∀ w, W.θ w * C w = C w * Formalism.BasicNotions.TH.Jm R S) → GlobalTheory.RealLift.IsFockMap ψ τ M.co A C Φ →
     ∀ k, fockDeg M ψ τ k = (GlobalTheory.KFixIrr.degLE (InfinitePlace F) P Q R S k).map Φ := by
-  first | exact @GlobalTheory.FockDegPf.fockDeg_eq_map | exact GlobalTheory.FockDegPf.fockDeg_eq_map | (intros; apply GlobalTheory.FockDegPf.fockDeg_eq_map <;> assumption)
+  exact @GlobalTheory.FockDegPf.fockDeg_eq_map

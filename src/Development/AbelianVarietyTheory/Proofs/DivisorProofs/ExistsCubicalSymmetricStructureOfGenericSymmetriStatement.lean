@@ -10,4 +10,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.Mum
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_cubicalSymmetricStructure_of_genericSymmetric : ∀ (R : Type) [CommRing R] [IsDomain R] [IsLocalRing R] [IsNoetherianRing R] [IsIntegrallyClosed R], ∀ (G : Over (Sp R)) [GrpObj G] [IsCommMonObj G], IsSemiAbelian G → IsProper (pullback.snd G.hom (jK R)) → ∀ L : LB G.left, L.IsLB → Out.Sym ((Over.pullback (jK R)).obj G) (L.pull (pullback.fst G.hom (jK R))) → ∃ P : GlobalTheory.UU.CP G, P.L.L = L := by
-  first | exact @GlobalTheory.CubSymPkg.exists_cp_of_generic_sym | exact GlobalTheory.CubSymPkg.exists_cp_of_generic_sym | (intros; apply GlobalTheory.CubSymPkg.exists_cp_of_generic_sym <;> assumption)
+  exact @GlobalTheory.CubSymPkg.exists_cp_of_generic_sym

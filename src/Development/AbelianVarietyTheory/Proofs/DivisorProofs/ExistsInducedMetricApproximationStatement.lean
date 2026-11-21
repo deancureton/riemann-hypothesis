@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInducedMetricApproximation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsCompModel
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_induced_metric_approximation : Hypotheses2 
     ∀ (A : SlopeTestRemainingChoices O.Y) (T : Real0 O.Y) (H : Ht O.Y), O.Reads A T H → ∃ s₀ : ℝ, 0 < s₀ ∧ ∀ L ∈ approx A s₀, ∀ c : O.s.Comp,
       ∃ (M : TrueGeo.Model (O.var c)) (L' : HermLB M.p) (k : ℕ+) (cf : HeightOneSpectrum (𝓞 D.what₂.LL) → ℝ),
         (L c).Induced M L' k cf := by
-  first | exact @GlobalTheory.ApproxModel.approx_induced | exact GlobalTheory.ApproxModel.approx_induced | (intros; apply GlobalTheory.ApproxModel.approx_induced <;> assumption)
+  exact @GlobalTheory.ApproxModel.approx_induced

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SobolevBoundFiniteFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegralImports
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.sobolev_bound_finite_family : GlobalTheory.ThK.KP 
     ∃ (s : Finset (ℕ × ℕ)) (C : ENNReal), C ≠ ⊤ ∧ ∀ f : Fin m → SInf F (Fin b × Fin (b + a')),
       ∫⁻ g₀ in G₁.M.dom, ‖thetaSum F (om₁ (g₀, 1) (∑ j, pureA F (f j) (φ j)))‖ₑ ∂G₁.M.μ ≤
         C * ∑ j, ENNReal.ofReal ((s.sup (schwartzSeminormFamily ℂ _ ℂ)) (f j)) := by
-  first | exact @GlobalTheory.WeilSeminorm.lintegral_thetaSum_le | exact GlobalTheory.WeilSeminorm.lintegral_thetaSum_le | (intros; apply GlobalTheory.WeilSeminorm.lintegral_thetaSum_le <;> assumption)
+  exact @GlobalTheory.WeilSeminorm.lintegral_thetaSum_le

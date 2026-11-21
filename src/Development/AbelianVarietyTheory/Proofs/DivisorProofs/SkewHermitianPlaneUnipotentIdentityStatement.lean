@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianPlaneUnipotentIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementDet
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.skew_hermitian_plane_unipotent_identity : ∀ (F E
     (∀ u, form σ W.J (H.ι *ᵥ u) H.x = 0 ∧ form σ W.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * W.J * H.ι.map σ = W₁.J →
     ∀ ε : F, (∀ i j, σ (W.J j i) = algebraMap F E ε * W.J i j) → W.J.det ≠ 0 → W₁.J.det ≠ 0 →
     ∃ K : Set (unip σ W H), IsCompact K ∧ ∀ u : unip σ W H, ∃ γ ∈ (ratU σ W.J).subgroupOf (unip σ W H), γ * u ∈ K := by
-  first | exact @GlobalTheory.UnipCocptHerm.cocompact_unip_eps | exact GlobalTheory.UnipCocptHerm.cocompact_unip_eps | (intros; apply GlobalTheory.UnipCocptHerm.cocompact_unip_eps <;> assumption)
+  exact @GlobalTheory.UnipCocptHerm.cocompact_unip_eps

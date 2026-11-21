@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.adelic_height_off_boundary_decomposition : ∀ (D 
       (O.adl0 c (detSym O.S.Dw a none (DV.tauEmb D τ))).ht b + (∑ σ : D.what₂.LL →+* ℂ, ∑ᶠ (z : Pts (O.var c) σ) (_ : under z = b),
           O.chg c none (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0) σ z) /
         ((Module.finrank ℚ D.what₂.LL : ℝ) * (Nat.card {y : AlgPt (O.var c) // below y.1 = b} : ℝ)) := by
-  first | exact @GlobalTheory.DetMet.det_metric | exact GlobalTheory.DetMet.det_metric | (intros; apply GlobalTheory.DetMet.det_metric <;> assumption)
+  exact @GlobalTheory.DetMet.det_metric

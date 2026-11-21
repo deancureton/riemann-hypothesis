@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingLocalMeasurable
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_local_measurable : ∀ (F E : Type)
     ∀ m₀ : idelesAt E (evFin F v) →* UAtSub σ G.V (evFin F v), (∀ t, IsLevi H t.1 (1 : UA σ G₁.V.J) (m₀ t).1) →
       IsClosed (stabAt σ G.V (evFin F v) H.x : Set (UAtSub σ G.V (evFin F v))) ∧
       IsClosed {x : UAtSub σ G.V (evFin F v) | ∃ q ∈ stabAt σ G.V (evFin F v) H.x, ∃ t, x = q * m₀ t} := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.isClosed_stab_and_lineStab | exact GlobalTheory.ThK.LemF.QuotInv.isClosed_stab_and_lineStab | (intros; apply GlobalTheory.ThK.LemF.QuotInv.isClosed_stab_and_lineStab <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.isClosed_stab_and_lineStab

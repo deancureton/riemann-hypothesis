@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeIntoDeRhamInjective
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.hodge_into_de_rham_injective : GlobalTheory.CovTop
         LinearMap.range ((e V hV).toLinearMap ∘ₗ GlobalTheory.QCoh.appLinear i V) =
           GlobalTheory.DeRham.PrimitiveSubmodule (GlobalTheory.DeRhamSheaf.onAff A hV) ∧
         ∃ N : Submodule Γ(T, V) Γ(H, V), IsCompl (LinearMap.range (GlobalTheory.QCoh.appLinear i V)) N := by
-  first | exact @GlobalTheory.HodgeSub.main | exact GlobalTheory.HodgeSub.main | (intros; apply GlobalTheory.HodgeSub.main <;> assumption)
+  exact @GlobalTheory.HodgeSub.main

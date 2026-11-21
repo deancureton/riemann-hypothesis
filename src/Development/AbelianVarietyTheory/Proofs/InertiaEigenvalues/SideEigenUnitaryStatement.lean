@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.side_eigen_unitary : HeckeStdPlain → ∀ (D : D7
         (D.what₂.places.resChar (L.X.nd.w i)) (C.Q (L.X.nd.w i))).Finite ∧
       ptSys (withLoc L) i x ∈ EigSet (M (D.what₂.muTw (L.X.nd.w i)) (L.X.nd.j i) (L.X.nd.j_range i).1 (L.X.nd.j_range i).2)
         (D.what₂.places.resChar (L.X.nd.w i)) (C.Q (L.X.nd.w i)) := by
-  first | exact @GlobalTheory.EigPlace.built_finite_and_mem | exact GlobalTheory.EigPlace.built_finite_and_mem | (intros; apply GlobalTheory.EigPlace.built_finite_and_mem <;> assumption)
+  exact @GlobalTheory.EigPlace.built_finite_and_mem

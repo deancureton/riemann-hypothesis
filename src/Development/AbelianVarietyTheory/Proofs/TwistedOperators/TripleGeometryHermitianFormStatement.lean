@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleGeometryHermitianForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.triple_geometry_hermitian_form : GlobalTheory.FunP
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ Xc om om' → ∀ (hJ : Γ.W.J = D.host.xi0 • reindex e e X.gramᵀ)
     (N' : Submodule ℂ ((Fin a' × Fin (a + a') → AF D.host.F) → ℂ)),
     IsThetaSubG Γ.M' Bs.ψ Bs.emb om' N' → ∀ g ∈ GfC X, ∀ Φ ∈ N', om' (1, kapX X e hJ g) Φ ∈ N' := by
-  first | exact @GlobalTheory.StabFinAdelic.stab_kapX_of_isThetaSubG | exact GlobalTheory.StabFinAdelic.stab_kapX_of_isThetaSubG | (intros; apply GlobalTheory.StabFinAdelic.stab_kapX_of_isThetaSubG <;> assumption)
+  exact @GlobalTheory.StabFinAdelic.stab_kapX_of_isThetaSubG

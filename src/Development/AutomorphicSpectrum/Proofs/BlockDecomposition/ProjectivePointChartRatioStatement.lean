@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ProjectivePointChartRatio
-import Mathlib
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.ArakelovCycleHeights.QpSndStr
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ResidueDegreeOfIsClosedImmersion
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ArFormExists
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.projective_point_chart_ratio : ∀ (N : ℕ) (c : 
   (∀ i, GlobalTheory.CompanionTheory.MPSmooth.ptP N c w ∈ ptsIn (PSpace.str ℤ N) σ₀ (chart ℤ N i) ↔ w i ≠ 0) ∧
   ∀ i j, GlobalTheory.CompanionTheory.MPSmooth.ptP N c w ∈ ptsIn (PSpace.str ℤ N) σ₀ (chart ℤ N i) →
     CxPts.ev (PSpace.str ℤ N) σ₀ (chart ℤ N i) (ratio ℤ N i j) (GlobalTheory.CompanionTheory.MPSmooth.ptP N c w) = w j / w i := by
-  first | exact @GlobalTheory.CompanionTheory.MPSmooth.ptP_chart | exact GlobalTheory.CompanionTheory.MPSmooth.ptP_chart | (intros; apply GlobalTheory.CompanionTheory.MPSmooth.ptP_chart <;> assumption)
+  exact @GlobalTheory.CompanionTheory.MPSmooth.ptP_chart

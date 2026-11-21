@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeterminantGeneratorRuleBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitObj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.determinant_generator_rule_base_change : ∀ (F : 
       ∀ (h : IsUnit ((6 : ℕ) : R₀ ⊗[ℤ] A)) (δ : YC.DetGen), s.val _ YC h δ = t.val _ YC h δ) →
     IsUnit ((6 : ℕ) : A) → (∀ (B : Type) [CommRing B] [Algebra R₀ B] (σ : A →+* B) (Y' : Obj F 𝔠 (Sp B)) (φ : Y'.A.left ⟶ Y.A.left),
     Y'.IsPullBy Y (spMap σ) φ → ∀ (h : IsUnit ((6 : ℕ) : B)) (δ : Y'.DetGen), s.val B Y' h δ = t.val B Y' h δ) := by
-  first | exact @GlobalTheory.RealMult.Rule.eq_of_eq_extScalars | exact GlobalTheory.RealMult.Rule.eq_of_eq_extScalars | (intros; apply GlobalTheory.RealMult.Rule.eq_of_eq_extScalars <;> assumption)
+  exact @GlobalTheory.RealMult.Rule.eq_of_eq_extScalars

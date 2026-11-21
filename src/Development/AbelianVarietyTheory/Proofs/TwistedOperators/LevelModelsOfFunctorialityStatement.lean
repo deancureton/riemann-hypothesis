@@ -9,4 +9,4 @@ open GlobalTheory.SepRows
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_models_of_functoriality : GlobalTheory.FunPr.Hypotheses₂ → RowModels := by
-  first | exact @GlobalTheory.SepRows.rowModels_of_functoriality | exact GlobalTheory.SepRows.rowModels_of_functoriality | (intros; apply GlobalTheory.SepRows.rowModels_of_functoriality <;> assumption)
+  exact @GlobalTheory.SepRows.rowModels_of_functoriality

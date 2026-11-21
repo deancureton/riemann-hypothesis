@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleChernIntegralPullThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_chern_integral_pull_third : ∀ (k : T
       (hY.atlas σ).integral ((fld (hY.atlas σ) (c1F hY σ (fam5 π w H flB fl A 0)) + fld (hY.atlas σ) (omF hY σ (h.pull π w) fl)) ^ m * pullF hB hY σ π w φ) = 0 ∧
       (hY.atlas σ).integral (fld (hY.atlas σ) (omF hY σ (h.pull π w) fl) * (fld (hY.atlas σ) (c1F hY σ (fam5 π w H flB fl A 0)) + fld (hY.atlas σ) (omF hY σ (h.pull π w) fl)) ^ m * pullF hB hY σ π w φ) =
         1 / (m + 1 : ℝ) * (hB.atlas σ).integral (evalF (hB.atlas σ) (fam4 hB σ H flB A) (aeval ![X 1 + X 2, X 3] (hs m)) * φ) := by
-  first | exact @GlobalTheory.FibGlob.integral_fibre | exact GlobalTheory.FibGlob.integral_fibre | (intros; apply GlobalTheory.FibGlob.integral_fibre <;> assumption)
+  exact @GlobalTheory.FibGlob.integral_fibre

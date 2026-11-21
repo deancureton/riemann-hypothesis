@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneGramOfComplement
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.skew_plane_gram_of_complement : ∀ (F E : Type) [
       form σ Y.J H.x H.x = 0 → form σ Y.J H.y H.y = 0 → form σ Y.J H.x H.y = 1 →
       (∀ u, form σ Y.J (H.ι *ᵥ u) H.x = 0 ∧ form σ Y.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * Y.J * H.ι.map σ = J₁ → J₁.det ≠ 0 →
       ∃ (Z : Spc F E n₁) (r₁ s₁ : ℕ), Z.J = J₁ ∧ Z.IsSkew σ B r₁ s₁ := by
-  first | exact @GlobalTheory.PlaneCompl.complement_skew | exact GlobalTheory.PlaneCompl.complement_skew | (intros; apply GlobalTheory.PlaneCompl.complement_skew <;> assumption)
+  exact @GlobalTheory.PlaneCompl.complement_skew

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamHodgeFiltrationExists
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CubeTheorem
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ConjugateFiltration
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.de_rham_conjugate_filtration_exists : GlobalTheory
           (GlobalTheory.VB.dual (GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A))) ∧
         Nonempty (S.X₃ ≅ (GlobalTheory.VB.frobPull p (GlobalTheory.VB.natCast_eq_zero T p (ZMod p))).obj
           (GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A)) := by
-  first | exact @GlobalTheory.ConjSeq.conjugate_sequence | exact GlobalTheory.ConjSeq.conjugate_sequence | (intros; apply GlobalTheory.ConjSeq.conjugate_sequence <;> assumption)
+  exact @GlobalTheory.ConjSeq.conjugate_sequence

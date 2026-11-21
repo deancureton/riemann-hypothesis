@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawLeftRestrictionLevi
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.seesaw_left_restriction_is_pair : ∀ (F E : Type)
         (∀ l ∈ (adeleClass F).adm ((Fin n₁ × Fin d) ⊕ (Fin n₁ × Fin d)),
           (∀ z : Matrix (Fin d) (Fin n₁) (AE F E), ∀ φ ∈ schA F ((Fin n₁ × Fin d) ⊕ (Fin n₁ × Fin d)), l (dd₁.rho B.ψ (z * ((diagCols (Fin n₁) : Matrix (Fin n₁ ⊕ Fin n₁) (Fin n₁) (AE F E)))ᵀ) φ) = l φ) →
           (∃ φ ∈ schA F ((Fin n₁ × Fin d) ⊕ (Fin n₁ × Fin d)), l φ ≠ 0) → ∃ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), l (et Φ) ≠ 0) := by
-  first | exact @GlobalTheory.MixXDblEv.exists_dblEv | exact GlobalTheory.MixXDblEv.exists_dblEv | (intros; apply GlobalTheory.MixXDblEv.exists_dblEv <;> assumption)
+  exact @GlobalTheory.MixXDblEv.exists_dblEv

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LanglandsLemmaUnitaryLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.SplitWeil GlobalTheory.LeviBlockExponent GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.UAut GlobalTheory.SiegelSet GlobalTheory.ThK.SquareIntegrability
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.langlands_lemma_unitary_local : ∀ (F E : Type) [
       polyAt (GlobalTheory.LeviBlockRealization.leftTr σ J (emb σ J v x₀))
         (L.map fun c => c * ((deltaHalf (Fv F v) (fun j : Fin (i.val + 2) => Fin (blockSizes₂ n i j))
           (blockScalar₂ (Fv F v) n i ϖ) : ℂˣ) : ℂ)) φc = 0 := by
-  first | exact @GlobalTheory.JacRel.polyAt_leftTr_cuspComp_eq_zero | exact GlobalTheory.JacRel.polyAt_leftTr_cuspComp_eq_zero | (intros; apply GlobalTheory.JacRel.polyAt_leftTr_cuspComp_eq_zero <;> assumption)
+  exact @GlobalTheory.JacRel.polyAt_leftTr_cuspComp_eq_zero

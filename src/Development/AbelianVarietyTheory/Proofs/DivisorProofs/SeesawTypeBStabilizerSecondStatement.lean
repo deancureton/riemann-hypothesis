@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBStabilizerSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_stabilizer_second : GlobalTheory.Fun
     ∀ y : Fin b × Fin (a + b) → AF F,
       StronglyMeasurable (Function.uncurry fun (k : K) (l : (AE F E)ˣ) =>
         coneInt B G.M' om' e' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (pure f φ) k.1 l y) := by
-  first | exact @GlobalTheory.ConeMeasPure.coneInt_pure_stronglyMeasurable | exact GlobalTheory.ConeMeasPure.coneInt_pure_stronglyMeasurable | (intros; apply GlobalTheory.ConeMeasPure.coneInt_pure_stronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeMeasPure.coneInt_pure_stronglyMeasurable

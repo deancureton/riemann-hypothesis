@@ -32,7 +32,6 @@ theorem org_of_kept {hL : GlobalTheory.Published.LocalLanglandsGL} {cDep : ℝ} 
   obtain ⟨P, x, l, h1, h2, h3⟩ := h
   exact ⟨P, x, l, h1, h2, kept_trans_layer h3 hk⟩
 
-set_option maxHeartbeats 4000000 in
 
 theorem lv3Mv_true : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (cDep : ℝ) (S : SExt) (Γ : GeoP), LevelThreeCondition (prmR (NEo hL cDep) S Γ).s ∧ LevelThreeCondition (prmR (NEog hL cDep) S Γ).s := by
   intro hL cDep S Γ

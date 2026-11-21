@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeALocalPartHypothesis
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_local_part_hypothesis : ∀ {F E : T
     ∀ (v : Pl F) (u : Matrix (Fin (b + 2)) (Fin (b + 2 + a')) (AE F E)), u ∈ isoA H H' → At (evFin F v) u →
     ∀ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v),
       ev v (schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M.co v u) φ) = ev v φ := by
-  first | exact @GlobalTheory.VanishLocInvA.inv_local | exact GlobalTheory.VanishLocInvA.inv_local | (intros; apply GlobalTheory.VanishLocInvA.inv_local <;> assumption)
+  exact @GlobalTheory.VanishLocInvA.inv_local

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviConjugationHaar
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.levi_conjugation_haar : ∀ (F E : Type) [Field F]
     ∀ (l : (AE F E)ˣ) (g₀ : UA σ G₁.V.J) (h : UA σ G.V.J), IsLevi H l g₀ h →
     ∀ f : UA σ G.V.J → ℝ≥0∞, Measurable f →
       ∫⁻ n, f (h * n.1 * h⁻¹) ∂μN = ((absE F E l : ℝ≥0∞) ^ (b + 1))⁻¹ * ∫⁻ n, f n.1 ∂μN := by
-  first | exact @GlobalTheory.UnipConj.lintegral_conj_levi | exact GlobalTheory.UnipConj.lintegral_conj_levi | (intros; apply GlobalTheory.UnipConj.lintegral_conj_levi <;> assumption)
+  exact @GlobalTheory.UnipConj.lintegral_conj_levi

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneParamSubgroupFockOrbitFiniteDimensional
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.oneParamSubgroup_fockOrbit_finiteDimensional : ∀
     (∀ τ, Formalism.UG.HasSignature (gramAt D X τ) X.rank 0) →
     ∀ τ, ∀ Y ∈ lieAt X τ, ∀ Φ ∈ algF ψ θ false A B,
       ∃ V : Submodule ℂ (WO M X → ℂ), FiniteDimensional ℂ V ∧ ∀ t : ℝ, ω (1, oneP θ X τ Y t) Φ ∈ V := by
-  first | exact @GlobalTheory.OneParamOrbit.orbit_finiteDimensional | exact GlobalTheory.OneParamOrbit.orbit_finiteDimensional | (intros; apply GlobalTheory.OneParamOrbit.orbit_finiteDimensional <;> assumption)
+  exact @GlobalTheory.OneParamOrbit.orbit_finiteDimensional

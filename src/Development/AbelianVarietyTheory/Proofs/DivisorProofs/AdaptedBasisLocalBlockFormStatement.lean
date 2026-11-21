@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedBasisLocalBlockForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.adapted_basis_local_block_form : ∀ (F E : Type) 
       (l = 0 ∨ ∃ p ∈ S, p.val + 1 = l) → ∀ (hld : l + d ≤ n),
       ∀ g ∈ GlobalTheory.SmGL.unipRad (Fv F v) (tripPlace hld), ∀ x : GLoc σ J v,
         IsCompAt σ J t (Matrix.GeneralLinearGroup.map (t : E →+* Fv F v) C) g x → emb σ J v x ∈ GlobalTheory.StdPar.unip σ J Xf S := by
-  first | exact @GlobalTheory.UnipEmb.emb_mem_unip | exact GlobalTheory.UnipEmb.emb_mem_unip | (intros; apply GlobalTheory.UnipEmb.emb_mem_unip <;> assumption)
+  exact @GlobalTheory.UnipEmb.emb_mem_unip

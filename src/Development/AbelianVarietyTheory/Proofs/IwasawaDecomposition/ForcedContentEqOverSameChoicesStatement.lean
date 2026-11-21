@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ForcedContentEqOverSameChoices
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RowsAre
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsIsBIffCoreB
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.WeilRepresentationUnitaryPair
@@ -16,4 +15,4 @@ open GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.Mem.Top GlobalTheory.Me
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.F0K_eq_of_kapDef : ∀ (K : Ctx) (B : Base) (f : Fr B.toPre) (T : TwDat B) (w : ColW B f T) (Z Z' : w.Lt), DV.KapDef (w.D Z) →
     DV.KapDef (w.D Z') → F0K K.s (w.D Z) = F0K K.s (w.D Z') := by
-  first | exact @GlobalTheory.Mem.Top.Bl.RowWt.forcedContent_eq_over_same_choices | exact GlobalTheory.Mem.Top.Bl.RowWt.forcedContent_eq_over_same_choices | (intros; apply GlobalTheory.Mem.Top.Bl.RowWt.forcedContent_eq_over_same_choices <;> assumption)
+  exact @GlobalTheory.Mem.Top.Bl.RowWt.forcedContent_eq_over_same_choices

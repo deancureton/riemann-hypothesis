@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeviCommutesSplitTorus
-import Mathlib
 import Formalism.PeriodIntegrals.DSInfCharCap
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
@@ -18,4 +17,4 @@ open GlobalTheory.RealInd.Stages Finset GlobalTheory.FlagMeas Formalism.REAL
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.levi_commutes_split_torus : ∀ {n a : ℕ} {ε : Fin n → Bool} {j : Fin a → ℕ} {W : Flag n a}, IsIsoFlag ε j W → ∀ {x : Fin a → ℝ} {t : UJ ε}, IsSplit ε W x t → ∀ m ∈ flagM ε W, m * t = t * m := by
-  first | exact @GlobalTheory.RealInd.isSplit_commute_flagM | exact GlobalTheory.RealInd.isSplit_commute_flagM | (intros; apply GlobalTheory.RealInd.isSplit_commute_flagM <;> assumption)
+  exact @GlobalTheory.RealInd.isSplit_commute_flagM

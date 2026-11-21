@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviLineEigenvectorAdelicPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.levi_line_eigenvector_adelic_point : ∀ (F E : Ty
       (Y : Matrix (Fin n) (Fin n) ℂ) (l : ℂ), Y *ᵥ (fun i => τ.1 (x i)) = l • (fun i => τ.1 (x i)) →
       ∀ β : ℝ → GAd σ J, GlobalTheory.LeviHC.IsLineOf σ J τ Y β → ∀ s, ∃ t : AF F ⊗[F] E,
         (matHom _ σ J (β s)).1 *ᵥ (fun i => inclR (F := F) (AF F) (x i)) = t • fun i => inclR (F := F) (AF F) (x i) := by
-  first | exact @GlobalTheory.TorFin.line_mulVec_eq_smul | exact GlobalTheory.TorFin.line_mulVec_eq_smul | (intros; apply GlobalTheory.TorFin.line_mulVec_eq_smul <;> assumption)
+  exact @GlobalTheory.TorFin.line_mulVec_eq_smul

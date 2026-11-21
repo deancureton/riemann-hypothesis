@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericPointLiftToField
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.generic_point_lift_to_field : ∀ (E : Type) [Fiel
     p.Prime → (p : ℂ) ∈ W.nonunits → ∀ (R : Type) [CommRing R] [IsDomain R] (ξ : Sp R ⟶ Y.X),
     ξ (⟨⊥, Ideal.isPrime_bot⟩ : PrimeSpectrum R) ∈ Set.range Y.j →
     ∃ y : Sp (FractionRing R) ⟶ Xo'.XF c', spMap (algebraMap R (FractionRing R)) ≫ ξ = y ≫ Y.j := by
-  first | exact @GlobalTheory.GenericFactor.exists_factor_generic | exact GlobalTheory.GenericFactor.exists_factor_generic | (intros; apply GlobalTheory.GenericFactor.exists_factor_generic <;> assumption)
+  exact @GlobalTheory.GenericFactor.exists_factor_generic

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaIntegralUnfold
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.config_A_theta_integral_unfold : ∀ (hKP : Global
     (l : SInf F (Fin b × Fin (b + a')) →L[ℂ] ℂ) (hl : l ≠ 0)
     (hinv : ∀ g ∈ UAt σ G₁.V (evI F), ∀ f f₁ : SInf F (Fin b × Fin (b + a')), Acts (evI F) (om₁ (g, 1)) f f₁ → l f₁ = l f) (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))),
     Continuous fun p : KAt K (evI F) × idelesAt E (evI F) => coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f p.1.1 p.2.1 := by
-  first | exact @GlobalTheory.ConeInfCont.continuous_coneInfInt | exact GlobalTheory.ConeInfCont.continuous_coneInfInt | (intros; apply GlobalTheory.ConeInfCont.continuous_coneInfInt <;> assumption)
+  exact @GlobalTheory.ConeInfCont.continuous_coneInfInt

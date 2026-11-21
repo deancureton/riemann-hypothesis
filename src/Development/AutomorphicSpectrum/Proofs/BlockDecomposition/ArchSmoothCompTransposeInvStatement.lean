@@ -10,4 +10,4 @@ open GlobalTheory.CompanionTheory.UnfoldingAlt
 open scoped NumberField.AdeleRing ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.archSmooth_comp_transposeInv : ∀ (F : G3 → ℂ), IsArchSmooth F → ∀ c : G3, IsArchSmooth (fun g : G3 => F (c * ti g)) := by
-  first | exact @GlobalTheory.CompanionTheory.TiArch.isArchSmooth_comp_ti | exact GlobalTheory.CompanionTheory.TiArch.isArchSmooth_comp_ti | (intros; apply GlobalTheory.CompanionTheory.TiArch.isArchSmooth_comp_ti <;> assumption)
+  exact @GlobalTheory.CompanionTheory.TiArch.isArchSmooth_comp_ti

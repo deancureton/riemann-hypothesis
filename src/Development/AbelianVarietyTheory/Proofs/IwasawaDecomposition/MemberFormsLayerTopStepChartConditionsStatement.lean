@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemberFormsLayerTopStepChartConditions
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TiedColumnData
 import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.memberFormsLayer_topStep_chart_conditions : ∀ {K
       ∀ (i : ℕ) (hi : i + 1 ≤ (w.D Z).R.m), i + 1 = (w.D Z).R.m →
       ∃ (Fo : FormsIn ((w.D Z).fm u) (i + 1) hi) (_ : Finite Fo.Ch) (S : StepD t.g.herm u v hg Fo),
         StepTiesD t.g.herm u v hg hi Fo S t.cmp := by
-  first | exact @GlobalTheory.Mem.Top.KerOne.CertEq.TopStep.stepTies_top | exact GlobalTheory.Mem.Top.KerOne.CertEq.TopStep.stepTies_top | (intros; apply GlobalTheory.Mem.Top.KerOne.CertEq.TopStep.stepTies_top <;> assumption)
+  exact @GlobalTheory.Mem.Top.KerOne.CertEq.TopStep.stepTies_top

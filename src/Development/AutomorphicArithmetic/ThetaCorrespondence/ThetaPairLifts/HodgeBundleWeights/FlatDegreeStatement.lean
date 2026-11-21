@@ -20,5 +20,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flatDeg_of_scholze_weinstein : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → FlatDeg := by
-  first | exact @_root_.GlobalTheory.CovTop.FlatDegProof.flatDeg_alt | exact _root_.GlobalTheory.CovTop.FlatDegProof.flatDeg_alt | (intros; apply _root_.GlobalTheory.CovTop.FlatDegProof.flatDeg_alt <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.FlatDegProof.flatDeg_alt
 end

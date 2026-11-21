@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.nef_induced_bundle_restriction_to_curves : GlobalT
   ∀ (c : O.s.Comp) (M : TrueGeo.Model (O.var c)) (L : HermLB M.p) (k : ℕ+) (cf : HeightOneSpectrum (𝓞 D.what₂.LL) → ℝ),
   (O.Mb B u s c).Induced M L k cf → ∀ (Z : Scheme.{0}) (i : Z ⟶ M.X) [IsClosedImmersion i] [IsIntegral Z] (q : ℕ)
   [Fact q.Prime] [Algebra (ZMod q) Γ(Z, ⊤)], q ∉ FlagAr.setB O.Y B → topologicalKrullDim Z = 1 → 0 ≤ topSelfIntersection (ZMod q) (L.B.pull i) 1 := by
-  first | exact @GlobalTheory.NefDeRhamAt.nefAt_dR | exact GlobalTheory.NefDeRhamAt.nefAt_dR | (intros; apply GlobalTheory.NefDeRhamAt.nefAt_dR <;> assumption)
+  exact @GlobalTheory.NefDeRhamAt.nefAt_dR

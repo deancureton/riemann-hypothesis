@@ -17,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Chamber GlobalTheory.TruncKer GlobalTheory.Cusp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.truncated_kernel_orbit_sum : ∀ (D : D7) (V : HSp D) (Φ : WittFrame V) (K : Subgroup (GA D V)) (f : GA D V → ℂ), (∀ 𝔉 : IsoFlag V, 𝔉.Proper → GlobalTheory.IndefiniteRowSideFullHecke.ConstantTermVanishing.UnipIntegralsVanish 𝔉 f) → ∀ 𝔬 : Set (GF V), (∀ δ ∈ 𝔬, ∀ g, g * δ * g⁻¹ ∈ 𝔬) → ∀ Tr x, kT Φ K 𝔬 f Tr x = ∑' δ : 𝔬, f (x⁻¹ * rat V δ * x) := by
-  first | exact @GlobalTheory.TruncKer.kT_eq_of_unipIntegralsVanish | exact GlobalTheory.TruncKer.kT_eq_of_unipIntegralsVanish | (intros; apply GlobalTheory.TruncKer.kT_eq_of_unipIntegralsVanish <;> assumption)
+  exact @GlobalTheory.TruncKer.kT_eq_of_unipIntegralsVanish

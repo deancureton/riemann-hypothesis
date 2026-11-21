@@ -14,4 +14,4 @@ open ReciprocityTheory.L2DbarEstimates (V cHess bas)
 open scoped ContDiff ComplexOrder Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.minors_nonzero_ae : ∀ (m : ℕ) (g : Matrix (Fin m) (Fin m) ℂ), IsUnit g.det → ∀ᵐ x : Low m → ℂ, ∀ l : Fin (m + 1), ((g * uni x).submatrix (Fin.castLE l.is_le) (Fin.castLE l.is_le)).det ≠ 0 := by
-  first | exact @GlobalTheory.FlagCell.ae_leading_minors_mul_uni_ne_zero | exact GlobalTheory.FlagCell.ae_leading_minors_mul_uni_ne_zero | (intros; apply GlobalTheory.FlagCell.ae_leading_minors_mul_uni_ne_zero <;> assumption)
+  exact @GlobalTheory.FlagCell.ae_leading_minors_mul_uni_ne_zero

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarValuationIntegralBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.linear_bar_valuation_integral_bound : GlobalTheory
       ValuativeRel.valuation (Fv F B.v₁) ((mat h).map (piW B.τ₁)).det = 1 → ∀ c : ℂ,
       (∀ φ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁),
         Acts (evFin F B.v₁) (om' (1, h)) φ φ₁ → ι φ₁ = c • fun Y => ι φ (Y * (mat h).map (piW B.τ₁))) → c = 1 := by
-  first | exact @GlobalTheory.WRightUnram.scalar_eq_one | exact GlobalTheory.WRightUnram.scalar_eq_one | (intros; apply GlobalTheory.WRightUnram.scalar_eq_one <;> assumption)
+  exact @GlobalTheory.WRightUnram.scalar_eq_one

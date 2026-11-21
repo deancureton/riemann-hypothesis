@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightBoundedByBadPrimes
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsLgOfLnSymUpdateSubLe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightBoundedByPrimeWeights
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.height_bounded_by_bad_primes : ∀ (F : Type) [Fie
       (∀ σ, ∀ y ∈ offSupp V.p σ (M.div hr), logNorm (M.φ σ) r y = 0) ∧
       (∀ z, |((M.div hr).mult z : ℝ)| ≤ ∑ l ∈ S, a l * (Scheme.ord ((l : V.X.functionField)) z : ℝ)) ∧
       RatNorms V M r lg := by
-  first | exact @GlobalTheory.PairTerm.exists_ratSec_orders_le_ratNorms | exact GlobalTheory.PairTerm.exists_ratSec_orders_le_ratNorms | (intros; apply GlobalTheory.PairTerm.exists_ratSec_orders_le_ratNorms <;> assumption)
+  exact @GlobalTheory.PairTerm.exists_ratSec_orders_le_ratNorms

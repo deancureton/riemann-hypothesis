@@ -20,4 +20,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_dominant_geometricGenericPoint_spec_domain : ∀ (A : CommRingCat.{0}) [IsDomain A], ∃ (Ω : Type) (_ : Field Ω) (_ : IsAlgClosed Ω) (y : Sp Ω ⟶ Spec A), (∀ x, (y x).asIdeal = ⊥) ∧ IsDominant y := by
-  first | exact @GlobalTheory.exists_geomGeneric_dominant | exact GlobalTheory.exists_geomGeneric_dominant | (intros; apply GlobalTheory.exists_geomGeneric_dominant <;> assumption)
+  exact @GlobalTheory.exists_geomGeneric_dominant

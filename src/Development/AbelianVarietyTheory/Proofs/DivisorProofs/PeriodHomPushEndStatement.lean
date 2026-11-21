@@ -12,4 +12,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.G
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.periodHom_push_end' : PEnd := by
-  first | exact @GlobalTheory.AnPer.periodHom_push_end | exact GlobalTheory.AnPer.periodHom_push_end | (intros; apply GlobalTheory.AnPer.periodHom_push_end <;> assumption)
+  exact @GlobalTheory.AnPer.periodHom_push_end

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DetBundleTrivialOnFibers
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ClsLinCombSingle
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.det_bundle_trivial_on_fibers : ∀ (E : Type) [Fie
     (hY : (GlobalTheory.FlagMod.detOm Y).IsLB), Y.jQ ≫ ρ = X.jQ →
     ∀ (W : Scheme.{0}) (K : Type) [Field K] (g : W ⟶ gen Y) (a : W ⟶ Sp K) (y0 : Sp K ⟶ gen X), g ≫ ρ = a ≫ y0 →
     GlobalTheory.CechPic.pull (g ≫ genι Y) (GlobalTheory.CechPic.cls _ hY) = 0 := by
-  first | exact @GlobalTheory.DetTriv.detOm_trivial_of_point | exact GlobalTheory.DetTriv.detOm_trivial_of_point | (intros; apply GlobalTheory.DetTriv.detOm_trivial_of_point <;> assumption)
+  exact @GlobalTheory.DetTriv.detOm_trivial_of_point

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLocalUnitaryRepresentationExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.matched_local_unitary_representation_exists : Glob
         ∃ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v), Acts (evFin F v) (om (1, (h : UA σ G.W.J))) φ φ₁) ∧
       ∀ h : GlobalTheory.SphLine.locU σ G.W v, ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v), ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
         Acts (evFin F v) (om (1, (h : UA σ G.W.J))) φ φ₁ → ρ h (Rf.p v φ) = Rf.p v φ₁ := by
-  first | exact @GlobalTheory.SphLine.exists_locRep | exact GlobalTheory.SphLine.exists_locRep | (intros; apply GlobalTheory.SphLine.exists_locRep <;> assumption)
+  exact @GlobalTheory.SphLine.exists_locRep

@@ -29,5 +29,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_measure_reduction_bound : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Meas := by
-  first | exact @_root_.GlobalTheory.CovTop.MeasRd.covering_measure_reduction | exact _root_.GlobalTheory.CovTop.MeasRd.covering_measure_reduction | (intros; apply _root_.GlobalTheory.CovTop.MeasRd.covering_measure_reduction <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.MeasRd.covering_measure_reduction
 end

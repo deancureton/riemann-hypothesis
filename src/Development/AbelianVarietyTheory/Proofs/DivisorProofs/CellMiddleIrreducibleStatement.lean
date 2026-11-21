@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellMiddleIrreducible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.cell_middle_irreducible : ∀ (k : Type) [Field k]
     (∀ x, ‖((α₀ x : ℂˣ) : ℂ)‖ = 1) → (∀ x, ‖((β₀ x : ℂˣ) : ℂ)‖ = 1) →
     ∀ b : SizeMatrix (Two (Fin a) (Fin a')) (fun j : Fin 3 => Fin (blk3 m j)), b.1 false 0 = b.1 false 2 →
       (cellMid k α₀ β₀ b.1).IsIrreducible := by
-  first | exact @GlobalTheory.IndLineGL.cellMid_isIrreducible_of_eq | exact GlobalTheory.IndLineGL.cellMid_isIrreducible_of_eq | (intros; apply GlobalTheory.IndLineGL.cellMid_isIrreducible_of_eq <;> assumption)
+  exact @GlobalTheory.IndLineGL.cellMid_isIrreducible_of_eq

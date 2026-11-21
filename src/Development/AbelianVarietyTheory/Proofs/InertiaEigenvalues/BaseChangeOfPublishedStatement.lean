@@ -11,4 +11,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.base_change_of_hypotheses : GlobalTheory.Published.BaseChangeDefiniteUnitary → GlobalTheory.Published.BernsteinUnitaryProductIrreducible → GlobalTheory.Published.DiscreteSpectrumGL → GlobalTheory.Published.GenericUnitaryDualGL → GlobalTheory.Published.StandardCosocleGL → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (T : GlobalTheory.RowTie.WDTie D.nd D.naut) (A : AUSide D), CGTrue hL D T → AUTrue hL D T A → SphericalInertData.Conclusion1 D := by
-  first | exact @GlobalTheory.BaseChangeClosing.conclusion1_of_baseChange | exact GlobalTheory.BaseChangeClosing.conclusion1_of_baseChange | (intros; apply GlobalTheory.BaseChangeClosing.conclusion1_of_baseChange <;> assumption)
+  exact @GlobalTheory.BaseChangeClosing.conclusion1_of_baseChange

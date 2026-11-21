@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SphericalFunctionLatticeSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.spherical_function_lattice_support : ∀ (F : Type
     ∀ T' : GL (Fin n) (Fv F v), T'.1 = Matrix.diagonal (fun i => ϖ.1 ^ max (e i) 0) → ∀ Y : Matrix (Fin n) (Fin d) (Fv F v),
       (∀ i j, (((k₁ * T')⁻¹).1 * Y) i j ∈ v.adicCompletionIntegers F) ↔
         (∀ i j, (((k₁ * T * k₂)⁻¹).1 * Y) i j ∈ v.adicCompletionIntegers F) ∧ ∀ i j, Y i j ∈ v.adicCompletionIntegers F := by
-  first | exact @GlobalTheory.ThK.Bot.inter_kdiag_int_iff | exact GlobalTheory.ThK.Bot.inter_kdiag_int_iff | (intros; apply GlobalTheory.ThK.Bot.inter_kdiag_int_iff <;> assumption)
+  exact @GlobalTheory.ThK.Bot.inter_kdiag_int_iff

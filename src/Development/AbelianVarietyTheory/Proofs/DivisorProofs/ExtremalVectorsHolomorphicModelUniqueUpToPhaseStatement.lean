@@ -13,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.OneMapRef GlobalTheory.WeilParts GlobalTheory.IndefiniteRowSideFullHecke.WeilGramSignature GlobalTheory.GalLift GlobalTheory.GalOne
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.extremal_vectors_holomorphic_model_unique_up_to_phase : ∀ (D : D7) (V : HSp D) (S : D.what₂.Tau → SPar) (M : DSModel V S), GlobalTheory.HolDict.HolShape M → ExtLine M := by
-  first | exact @GlobalTheory.HolLowOnce.extLine_of_holShape | exact GlobalTheory.HolLowOnce.extLine_of_holShape | (intros; apply GlobalTheory.HolLowOnce.extLine_of_holShape <;> assumption)
+  exact @GlobalTheory.HolLowOnce.extLine_of_holShape

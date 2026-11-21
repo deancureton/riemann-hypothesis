@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingDarbouxPairSetting
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.doubling_darboux_pair_setting : GlobalTheory.FunPr
       (∀ x : Matrix (Fin n) (Fin (d + d)) E, ∃ y z : Fin n × Fin (d + d) → F,
         co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) →
     ∃ om₂ : Rep σ Xs W₂, IsUWeilPair (cA σ) (adeleClass F) B.ψ (-1) (incM F Xs.J) (incM F W₂.J) co χX 1 om₂ := by
-  first | exact @GlobalTheory.DblWeilCoord.exists_weil | exact GlobalTheory.DblWeilCoord.exists_weil | (intros; apply GlobalTheory.DblWeilCoord.exists_weil <;> assumption)
+  exact @GlobalTheory.DblWeilCoord.exists_weil

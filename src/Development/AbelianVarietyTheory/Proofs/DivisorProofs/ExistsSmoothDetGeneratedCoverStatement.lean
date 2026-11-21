@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSmoothDetGeneratedCover
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_smooth_det_generated_cover : ∀ (F : Type)
     ∃ (B' : Type) (_ : CommRing B') (_ : Algebra ℂ B') (_ : Algebra.Smooth ℂ B') (X₁ : Obj F 𝔠 (Sp B'))
       (_ : X₁.DetGen) (k : B →ₐ[ℂ] B') (j' : B' →ₐ[ℂ] R) (q : X₁.A.left ⟶ X.A.left),
       X₁.IsPullBy X (spMap (k : B →+* B')) q ∧ j'.comp k = j := by
-  first | exact @GlobalTheory.RealMult.Obj.exists_detGen_away | exact GlobalTheory.RealMult.Obj.exists_detGen_away | (intros; apply GlobalTheory.RealMult.Obj.exists_detGen_away <;> assumption)
+  exact @GlobalTheory.RealMult.Obj.exists_detGen_away

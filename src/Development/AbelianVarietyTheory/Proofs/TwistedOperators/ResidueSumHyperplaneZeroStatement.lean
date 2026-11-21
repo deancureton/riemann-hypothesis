@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.residue_sum_hyperplane_zero : ∀ {k : ℕ} {J K :
       g j x * ((⟪v j a, b⟫_ℝ : ℂ)⁻¹ * ∏ a' ∈ (m j).erase a, (⟪x, v j a'⟫_ℝ : ℂ)⁻¹) = 0) →
   ∃ F : A0 k → ℂ, ContDiff ℝ ∞ F ∧ ∀ x, (∀ j ∈ s, ∀ a ∈ m j, ⟪x, v j a⟫_ℝ ≠ 0) →
     F x = ∑ j ∈ s, g j x * ∏ a ∈ m j, (⟪x, v j a⟫_ℝ : ℂ)⁻¹ := by
-  first | exact @GlobalTheory.smooth_extension_of_residues_cancel | exact GlobalTheory.smooth_extension_of_residues_cancel | (intros; apply GlobalTheory.smooth_extension_of_residues_cancel <;> assumption)
+  exact @GlobalTheory.smooth_extension_of_residues_cancel

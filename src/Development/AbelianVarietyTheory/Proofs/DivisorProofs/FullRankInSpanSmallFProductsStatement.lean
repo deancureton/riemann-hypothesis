@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankInSpanSmallFProducts
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.fullRank_in_span_smallF_products : ∀ (k : Type) 
     ∀ φ ∈ GlobalTheory.FullRankCoinv.fullRk k n d, φ ∈ Submodule.span ℂ {ψ : Matrix (Fin n) (Fin d) k → ℂ |
       ∃ Ψ₁ ∈ GlobalTheory.FullRankCoinv.fullRk k n d, ∃ Ψ₂ ∈ GlobalTheory.FullRankCoinv.fullRk k n d,
         ψ = fun Y => GlobalTheory.SplitFlip.smallF (GlobalTheory.SplitFlip.haarVol (GlobalTheory.SplitWeil.KO k (Fin n))) ν Ψ₁ Y * (starRingEnd ℂ) (Ψ₂ Y)} := by
-  first | exact @GlobalTheory.FullRankCoinv.mem_span_smallF_mul_conj | exact GlobalTheory.FullRankCoinv.mem_span_smallF_mul_conj | (intros; apply GlobalTheory.FullRankCoinv.mem_span_smallF_mul_conj <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.mem_span_smallF_mul_conj

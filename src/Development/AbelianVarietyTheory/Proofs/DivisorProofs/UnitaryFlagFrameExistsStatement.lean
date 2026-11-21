@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFlagFrameExists
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.unitary_flag_frame_exists : ∀ (E : Type) [Normed
     (H : (ι → ℂ) → Matrix (Fin n) (Fin n) ℂ) (Y : Set E) (π : E → ι → ℂ)
     (A : E → Matrix (Fin n) (Fin n) ℂ),
     IsPosFrame U H → IsFlagFamily Y U π A → ∃ e, IsUnitaryFlagFrame Y H π A e := by
-  first | exact @GlobalTheory.FlagFrame.exists_unitaryFlagFrame | exact GlobalTheory.FlagFrame.exists_unitaryFlagFrame | (intros; apply GlobalTheory.FlagFrame.exists_unitaryFlagFrame <;> assumption)
+  exact @GlobalTheory.FlagFrame.exists_unitaryFlagFrame

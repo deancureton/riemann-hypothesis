@@ -1,5 +1,4 @@
 import Formalism.LogVandermondeBounds.LogVandermondeVariationUnbounded
-import Mathlib
 
 namespace Formalism.LogVandermondeBounds.StandardLattice
 

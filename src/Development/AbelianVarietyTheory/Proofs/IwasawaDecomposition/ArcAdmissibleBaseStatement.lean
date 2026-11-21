@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ArcAdmissibleBase
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsPAdicArcBase
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.arc_admissible_base : ∀ (E : Type) [Field E] [Nu
     ∀ χ χ' : Sp R ⟶ Z.X, Set.range (Out.jK R ≫ χ) ⊆ Set.range Z.j → Set.range (Out.jK R ≫ χ') ⊆ Set.range Z.j →
       χ ≫ Z.s = spMap f ≫ spMap b → χ' ≫ Z.s = spMap f ≫ spMap b → Z.HasArcData a I f u χ → Z.HasArcData a I f u χ' →
       χ = χ' := by
-  first | exact @GlobalTheory.ArcUniqueGlobal.eq_of_hasArcData_global | exact GlobalTheory.ArcUniqueGlobal.eq_of_hasArcData_global | (intros; apply GlobalTheory.ArcUniqueGlobal.eq_of_hasArcData_global <;> assumption)
+  exact @GlobalTheory.ArcUniqueGlobal.eq_of_hasArcData_global

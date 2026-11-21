@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleTransferAlongConfigA
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.triple_transfer_along_config_a : GlobalTheory.ThK.
       ∃ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v),
         coneFin B G.M om v (ev v) K μKv μv (shiftA H H') X.ν ((b + 2 - a') / 2) φ ∈ SB (Fin b × Fin (b + a') → Fv F v) ∧
         l (coneFin B G.M om v (ev v) K μKv μv (shiftA H H') X.ν ((b + 2 - a') / 2) φ) ≠ 0 := by
-  first | exact @GlobalTheory.ConeBump.nonzero_coneFin | exact GlobalTheory.ConeBump.nonzero_coneFin | (intros; apply GlobalTheory.ConeBump.nonzero_coneFin <;> assumption)
+  exact @GlobalTheory.ConeBump.nonzero_coneFin

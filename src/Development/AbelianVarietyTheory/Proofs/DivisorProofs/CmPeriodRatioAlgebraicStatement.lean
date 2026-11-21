@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.cm_period_ratio_algebraic : GlobalTheory.Published
       ∃ (v₀ : I → X₀.Lie) (v : I → X.Lie) (a : I → ℂ),
         ∀ i, Obj.LieCorr (algebraMap Qb ℂ) p (v₀ i) (v i) ∧ U.u.IsDiff (Pi.single (U.e.symm i) (a i)) (v i).hom ∧
           a i ≠ 0 ∧ IsAlgebraic ℚ (a i * Ω₀) := by
-  first | exact @GlobalTheory.CMLiePeriod.exists_lie_frame | exact GlobalTheory.CMLiePeriod.exists_lie_frame | (intros; apply GlobalTheory.CMLiePeriod.exists_lie_frame <;> assumption)
+  exact @GlobalTheory.CMLiePeriod.exists_lie_frame

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneLeviActionFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.skew_plane_levi_action_formula : GlobalTheory.ThK.
       (IsCompact Kc ∧ (1 : GAd σ (c₀ • W.J.map σ)) ∈ Kc ∧ ∀ k ∈ Kc, ∀ k' ∈ K', k * k' ∈ Kc) → (∀ i, ContinuousOn (a i) Kc) → (∀ i, ∀ k ∈ Kc, ∀ (e : ℕ) (γ : Fin e → ℝ → GAd σ (c₀ • W.J.map σ)), (∀ j, GlobalTheory.SiegelSet.IsRealLine σ (c₀ • W.J.map σ) (γ j)) → (∀ j s, γ j s ∈ K') →
         ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) fun t : Fin e → ℝ => a i (k * (List.ofFn fun j => γ j (t j)).prod)) → (∃ (e : ℕ) (b : Fin e → GAd σ (c₀ • W.J.map σ) → ℂ), (∀ j, ContinuousOn (b j) Kc) ∧ (∀ i, ∃ c : Fin e → ℂ, ∀ k ∈ Kc, a i k = ∑ j, c j * b j k) ∧
         ∀ j, ∀ k' ∈ K', ∃ c : Fin e → ℂ, ∀ k ∈ Kc, b j (k * k') = ∑ l, c l * b l k) → FiniteDimensional ℂ (Submodule.span ℂ {f | ∃ z, GlobalTheory.UAut.IsCentral σ (c₀ • W.J.map σ) z ∧ f = GlobalTheory.UAut.dop z Ψ}) := by
-  first | exact @GlobalTheory.ThK.IndCentre.finite_centre_of_isInd_of | exact GlobalTheory.ThK.IndCentre.finite_centre_of_isInd_of | (intros; apply GlobalTheory.ThK.IndCentre.finite_centre_of_isInd_of <;> assumption)
+  exact @GlobalTheory.ThK.IndCentre.finite_centre_of_isInd_of

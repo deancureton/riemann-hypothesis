@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingLFunctionSpecialValue
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.doubling_l_function_special_value : GlobalTheory.T
       ∃ f ∈ M.Pol B.ψ B.emb, f ≠ 0 ∧ ∀ φ : ∀ v : Pl F, (Fin n × Fin d → Fv F v) → ℂ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = M.vac v) → pure f φ ≠ 0 →
         ∀ μ : Measure (UAtSub σ X (evI F)), μ.IsHaarMeasure → ∃ z : ℂ, z ≠ 0 ∧ ∀ s : ℂ, zetaOn m om (pure f φ) i K₂ _ μ s = z) →
     ∃ Φ ∈ PolData B M, M.I om Φ ≠ 0 := by
-  first | exact @GlobalTheory.ThK.Bot.Asm.exists_polData_I_ne_zero | exact GlobalTheory.ThK.Bot.Asm.exists_polData_I_ne_zero | (intros; apply GlobalTheory.ThK.Bot.Asm.exists_polData_I_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.Bot.Asm.exists_polData_I_ne_zero

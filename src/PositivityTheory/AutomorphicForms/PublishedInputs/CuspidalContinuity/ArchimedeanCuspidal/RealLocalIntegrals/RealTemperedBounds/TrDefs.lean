@@ -1,5 +1,4 @@
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.RealSharpBounds.MatrixMulApply
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DegenerateTermsVanish
 
 noncomputable section

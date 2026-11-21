@@ -96,5 +96,5 @@ open GlobalTheory.FlagTan (dimFlag)
 open GlobalTheory.HSApp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_pos_phi_at_centred_point : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → DeepGood → Size → FlatDeg → Covers fun Fm x _ ι p i Y PP _ => ∀ (Z : Comp Y.d.Xo₂ Y.d.c₂) (TF : TorFlag Y.d.Xo₂ Y.d.c₂), ∀ y ∈ (U₀ TF.X Z : Set (Y₀ TF.X Z))ᶜ, ∀ ν, Centred y ν → ∃ φ : ℝ, 0 < φ ∧ PhiAt TF.X Z y ν φ := by
-  first | exact @_root_.GlobalTheory.DegVal.exists_phiAt_pos_alt | exact _root_.GlobalTheory.DegVal.exists_phiAt_pos_alt | (intros; apply _root_.GlobalTheory.DegVal.exists_phiAt_pos_alt <;> assumption)
+  exact @_root_.GlobalTheory.DegVal.exists_phiAt_pos_alt
 end

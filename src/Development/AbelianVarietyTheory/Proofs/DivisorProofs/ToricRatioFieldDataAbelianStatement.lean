@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToricRatioFieldDataAbelian
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.SizeAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.TieTest
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.toric_ratio_field_data_abelian : ∀ {D : D7} {L :
             ∀ a : ℤ, jk (BlochKatoReduction.Gen.thEval D.ntw (ex.nch.twI w) (ex.nch.Q w) lam (ex.nch.k' w) (BlochKatoReduction.Gen.psiAt (D.ntw.sideL (ex.nch.twI w) lam) (ex.nch.psi' w ^ a))) *
                 GlobalTheory.ToricDenom.atSide D.ntw b ι T₀ =
               jk (BlochKatoReduction.Gen.kMap D.ntw (ex.nch.twI w) (ex.nch.k' w) (∑ δ, D.ntw.th (ex.nch.twI w) ∅ lam δ)) * GlobalTheory.ToricDenom.atSide D.ntw b ι (T (ψc ^ (c * a)))) := by
-  first | exact @GlobalTheory.ThmAUpper.read_twisted | exact GlobalTheory.ThmAUpper.read_twisted | (intros; apply GlobalTheory.ThmAUpper.read_twisted <;> assumption)
+  exact @GlobalTheory.ThmAUpper.read_twisted

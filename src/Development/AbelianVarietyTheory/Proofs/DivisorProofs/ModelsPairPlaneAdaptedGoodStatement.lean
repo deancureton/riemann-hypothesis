@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelsPairPlaneAdaptedGood
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.models_pair_plane_adapted_good : GlobalTheory.ThK.
     M.IsGood B.ψ → M₂.IsGood B.ψ → H.IsAdapted σ B X X₁ j₀ j₁ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     ∀ e e₂ : Fn F n d →ₗ[ℂ] Fn F n₁ d₁, IsEv B M M₂ H.ι H'.ι (isoA H H') e → IsEv B M M₂ H.ι H'.ι (isoA H H') e₂ →
       ∃ c : ℂ, ∀ Ψ ∈ schA F (Fin n × Fin d), e₂ Ψ = c • e Ψ := by
-  first | exact @GlobalTheory.ThK.IsoUniq.main | exact GlobalTheory.ThK.IsoUniq.main | (intros; apply GlobalTheory.ThK.IsoUniq.main <;> assumption)
+  exact @GlobalTheory.ThK.IsoUniq.main

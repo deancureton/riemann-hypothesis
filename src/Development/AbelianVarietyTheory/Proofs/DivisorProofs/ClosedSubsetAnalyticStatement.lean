@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.matrix_regular_adapted_local : ∀ {F : Type} [Fie
     ∃ (V' : X.Opens) (hV' : V' ≤ V), x₀ ∈ V' ∧ Function.Injective (jB.app V') ∧
       ∃ (C : Matrix (Fin g) κ Γ(X, V')) (C' : Matrix κ (Fin g) Γ(X, V')) (Q : Matrix κ κ Γ(W, jB ⁻¹ᵁ V')),
         C * C' = 1 ∧ C' * C = 1 ∧ BlockUni bl Q ∧ C.map (jB.app V') = A.map (resG W (jB.preimage_mono hV')) * Q := by
-  first | exact @GlobalTheory.LieFilt.exists_regular_blockUni_change | exact GlobalTheory.LieFilt.exists_regular_blockUni_change | (intros; apply GlobalTheory.LieFilt.exists_regular_blockUni_change <;> assumption)
+  exact @GlobalTheory.LieFilt.exists_regular_blockUni_change

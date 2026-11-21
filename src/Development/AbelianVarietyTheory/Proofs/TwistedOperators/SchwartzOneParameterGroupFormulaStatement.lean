@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.schwartz_one_parameter_group_formula : GlobalTheor
     (∀ (h : GlobalTheory.RealWeil.Sch l) (x : EuclideanSpace ℝ l), Continuous fun t => T t h x) →
     ∃ a : ℂ, ∀ f : GlobalTheory.RealWeil.Sch l,
       Filter.Tendsto (fun t : ℝ => t⁻¹ • (T t f - f)) (nhdsWithin 0 {0}ᶜ) (nhds (a • f + GlobalTheory.RealWeil.quad Z f)) := by
-  first | exact @GlobalTheory.MetaplecticScalarDeriv.main | exact GlobalTheory.MetaplecticScalarDeriv.main | (intros; apply GlobalTheory.MetaplecticScalarDeriv.main <;> assumption)
+  exact @GlobalTheory.MetaplecticScalarDeriv.main

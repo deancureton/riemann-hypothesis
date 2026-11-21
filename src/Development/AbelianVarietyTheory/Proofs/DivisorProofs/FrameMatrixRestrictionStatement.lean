@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.frame_matrix_restriction : ∀ {X W : Scheme.{0}} 
       (Q : Matrix (Σ a, Fin (r a)) (Σ a, Fin (r a)) Γ(W, jB ⁻¹ᵁ V')), C * C' = 1 → C' * C = 1 →
       BlockUni (fun s : Σ a, Fin (r a) => o s.1) Q → C.map (jB.app V') = A.map (resG W (jB.preimage_mono hV')) * Q →
     LocAdapted r o T u V' := by
-  first | exact @GlobalTheory.LieFilt.locAdapted_of_matrix | exact GlobalTheory.LieFilt.locAdapted_of_matrix | (intros; apply GlobalTheory.LieFilt.locAdapted_of_matrix <;> assumption)
+  exact @GlobalTheory.LieFilt.locAdapted_of_matrix

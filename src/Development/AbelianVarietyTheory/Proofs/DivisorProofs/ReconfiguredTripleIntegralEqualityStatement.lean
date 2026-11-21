@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReconfiguredTripleIntegralEquality
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.reconfigured_triple_integral_equality : ∀ (F E :
     ∀ T : Set (UA σ G.W.J), GlobalTheory.ConeSmallCT.IsReps T H'.x →
     ∃ T₁ : Set (UA σ G₁.W.J), T₁ ⊆ ratU σ G₁.W.J ∧ ∃ ε : GlobalTheory.ConeSmallSer.midSet H'.x T ≃ T₁ × E, ∀ t,
       GlobalTheory.ConeSmallSer.StabLn H'.x (w * nn (inclR (F := F) (AF F) (ε t).2) * emb (ε t).1.1 * t.1⁻¹) := by
-  first | exact @GlobalTheory.MidLineParam.midSet_equiv | exact GlobalTheory.MidLineParam.midSet_equiv | (intros; apply GlobalTheory.MidLineParam.midSet_equiv <;> assumption)
+  exact @GlobalTheory.MidLineParam.midSet_equiv

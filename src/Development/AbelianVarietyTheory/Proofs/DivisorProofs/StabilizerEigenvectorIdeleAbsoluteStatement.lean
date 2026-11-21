@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerEigenvectorIdeleAbsolute
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.stabilizer_eigenvector_idele_absolute : ∀ (F E :
     (G : Geo σ (b + 2) a') (G₁ : Geo σ b a') (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' →
     B.IsGood σ → G.IsGood B → ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K →
     ∀ k ∈ KAt K (evI F), ∀ t ∈ idelesAt E (evI F), mat k *ᵥ incV F H.x = t.1 • incV F H.x → absE F E t = 1 := by
-  first | exact @GlobalTheory.ThK.absE_eq_one_of_KInf_eigen | exact GlobalTheory.ThK.absE_eq_one_of_KInf_eigen | (intros; apply GlobalTheory.ThK.absE_eq_one_of_KInf_eigen <;> assumption)
+  exact @GlobalTheory.ThK.absE_eq_one_of_KInf_eigen

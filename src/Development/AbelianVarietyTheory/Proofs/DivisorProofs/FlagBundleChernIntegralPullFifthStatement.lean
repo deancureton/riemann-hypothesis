@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleChernIntegralPullFifth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_chern_integral_pull_fifth : ∀ (k : T
     ∀ K : MvPolynomial (Fin 5) ℝ,
       wInt (hY.atlas σ) (fun y => Real.log (1 - v y) / 2) (evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) ((X 0 - X 3) * ((X 4 - X 0) * K))) =
         1 / 2 * ((hY.atlas σ).integral (fld (hY.atlas σ) (omF hY σ (h.pull π w) fl) * evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) ((X 4 - X 0) * K)) - (hY.atlas σ).integral (pullF hB hY σ π w (fld (hB.atlas σ) (omF hB σ h flB)) * evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) ((X 4 - X 0) * K))) := by
-  first | exact @GlobalTheory.LineForm.PLStep.pl_step | exact GlobalTheory.LineForm.PLStep.pl_step | (intros; apply GlobalTheory.LineForm.PLStep.pl_step <;> assumption)
+  exact @GlobalTheory.LineForm.PLStep.pl_step

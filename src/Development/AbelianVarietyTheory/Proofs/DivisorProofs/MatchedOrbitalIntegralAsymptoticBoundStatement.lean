@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedOrbitalIntegralAsymptoticBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.matched_orbital_integral_asymptotic_bound : Global
         Ψ₁'.1 = GlobalTheory.SplitFlip.omA ν₀ β₀ 1 h Ψ₁.1 → Ψ₂'.1 = GlobalTheory.SplitFlip.omA ν₀ β₀ 1 h Ψ₂.1 → Bf Ψ₁' Ψ₂' = Bf Ψ₁ Ψ₂) ∧
       (∀ (z : Fin (a + a') → Fv F B.v₁) (Ψ₁ Ψ₂ Ψ₂' : GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + a')) (Fv F B.v₁))),
         Ψ₂'.1 = (fun Y => ψv (ℓ ⬝ᵥ (Y *ᵥ z)) * Ψ₂.1 Y) → Bf Ψ₁ Ψ₂' = Bf Ψ₁ Ψ₂) := by
-  first | exact @GlobalTheory.ThK.GlobLocal.form_of_integral_ne_zero | exact GlobalTheory.ThK.GlobLocal.form_of_integral_ne_zero | (intros; apply GlobalTheory.ThK.GlobLocal.form_of_integral_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.GlobLocal.form_of_integral_ne_zero

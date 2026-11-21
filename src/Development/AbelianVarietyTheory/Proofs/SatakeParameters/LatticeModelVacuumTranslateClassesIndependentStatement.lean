@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemIntMat
 set_option maxHeartbeats 1000000 in
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.latticeModel_vacuumTranslate_classes_independent :
     iSupIndep (fun c : Matrix (Fin n') (Fin n) L ⧸ GlobalTheory.Hk3.HoweDuality.intMat L n' n =>
       Submodule.span ℂ {w : M | ∃ x : Matrix (Fin n') (Fin n) L,
         (QuotientAddGroup.mk x : Matrix (Fin n') (Fin n) L ⧸ GlobalTheory.Hk3.HoweDuality.intMat L n' n) = c ∧ w = ρ x s}) := by
-  first | exact @GlobalTheory.Hk3.locVac_span_classes_indep | exact GlobalTheory.Hk3.locVac_span_classes_indep | (intros; apply GlobalTheory.Hk3.locVac_span_classes_indep <;> assumption)
+  exact @GlobalTheory.Hk3.locVac_span_classes_indep

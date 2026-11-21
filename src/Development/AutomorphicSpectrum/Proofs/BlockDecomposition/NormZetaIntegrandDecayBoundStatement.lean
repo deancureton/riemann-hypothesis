@@ -16,4 +16,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 open GlobalTheory.CompanionTheory.GL2Factorization
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_zeta_integrand_decay_bound : ∀ (x₃ x₂ s : ℂ) (A B C m : ℝ) (T N : ℕ), 0 < A → 0 < B → ‖x₃‖ ≤ C / (A * B) ^ T / ((1 + A) * (1 + B)) ^ N → ‖x₂‖ ≤ A ^ m → ‖x₃ * x₂ * ((A : ℂ) ^ (s - 3 / 2)) * ((B : ℂ) ^ (2 * s - 1))‖ ≤ C * (A ^ (s.re - 3 / 2 + m - T) * (1 + A) ^ (-(N : ℝ))) * (B ^ (2 * s.re - 1 - T) * (1 + B) ^ (-(N : ℝ))) := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Factorization.real_integrand_norm_le_ptw | exact GlobalTheory.CompanionTheory.GL2Factorization.real_integrand_norm_le_ptw | (intros; apply GlobalTheory.CompanionTheory.GL2Factorization.real_integrand_norm_le_ptw <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Factorization.real_integrand_norm_le_ptw

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelMapOverInclusion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.integral_model_map_over_inclusion : ∀ (E : Type)
         ∀ x' : LieG P.Gt, AvDefs.IsEig P.Gt P.oGt (embInt c P.integers σ) x' →
         ∃ M : Fin g → 𝓞_ℂ_[p], ((discr E : ℤ) : ℂ_[p]) • P.bLie x' =
           ∑ k, (M k : ℂ_[p]) • ∑ b, (U k b : ℂ_[p]) • P.bLie (x b) := by
-  first | exact @GlobalTheory.FlatModel.htAt_discr_smul_eigen_mem_span_rows | exact GlobalTheory.FlatModel.htAt_discr_smul_eigen_mem_span_rows | (intros; apply GlobalTheory.FlatModel.htAt_discr_smul_eigen_mem_span_rows <;> assumption)
+  exact @GlobalTheory.FlatModel.htAt_discr_smul_eigen_mem_span_rows

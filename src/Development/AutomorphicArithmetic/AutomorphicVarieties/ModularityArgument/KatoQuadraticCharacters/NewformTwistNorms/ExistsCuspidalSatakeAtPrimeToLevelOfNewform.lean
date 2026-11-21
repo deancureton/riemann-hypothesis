@@ -160,6 +160,6 @@ theorem _root_.GlobalTheory.T.exists_cuspidal_satake_at_prime_to_level_of_newfor
     ∃ π : TR.CuspSub ℚ 2, π.IsRegAlg ∧ AttR ι V π ∧ ∀ w : HeightOneSpectrum (𝓞 ℚ), ((l : ℕ) : 𝓞 ℚ) ∈ w.asIdeal →
       ∃ B, π.HasSat w B ∧
         ((algSat 2 l B).map fun b => Polynomial.X - Polynomial.C ((l : ℂ) ^ e * b)).prod = g.heckePoly l := by
-  first | exact @GlobalTheory.NewformAutAtL.newformAut_atL | exact GlobalTheory.NewformAutAtL.newformAut_atL | (intros; apply GlobalTheory.NewformAutAtL.newformAut_atL <;> assumption)
+  exact @GlobalTheory.NewformAutAtL.newformAut_atL
 
 end

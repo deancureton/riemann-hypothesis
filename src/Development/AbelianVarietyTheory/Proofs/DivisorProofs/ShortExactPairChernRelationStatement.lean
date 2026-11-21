@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.short_exact_pair_chern_relation : ∀ (O : Type) [
     (φB : Z.GenIso B B') (φC : Z.GenIso C C'),
     Z.genRes.map g ≫ φC.hom = φB.hom ≫ Z.genRes.map g' →
     ∃ γ : Z.GenIso A A', γ.hom ≫ Z.genRes.map f' = Z.genRes.map f ≫ φB.hom := by
-  first | exact @GlobalTheory.Vert.Model.exists_genIso_ker | exact GlobalTheory.Vert.Model.exists_genIso_ker | (intros; apply GlobalTheory.Vert.Model.exists_genIso_ker <;> assumption)
+  exact @GlobalTheory.Vert.Model.exists_genIso_ker

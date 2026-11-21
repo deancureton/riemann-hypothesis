@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalTriplePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_a_local_triple_place : GlobalTheory.FunPr.H
     ∀ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v),
       ev v (locOp v (G.M.co.rho B.ψ (partFin v (shiftA H H' l * (mat u)ᵀ))) φ) =
         ev v (locOp v (G.M.co.rho B.ψ (partFin v (shiftA H H' l))) φ) := by
-  first | exact @GlobalTheory.ThK.ShiftUnip.shiftUnip | exact GlobalTheory.ThK.ShiftUnip.shiftUnip | (intros; apply GlobalTheory.ThK.ShiftUnip.shiftUnip <;> assumption)
+  exact @GlobalTheory.ThK.ShiftUnip.shiftUnip

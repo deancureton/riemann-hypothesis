@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocalRingOfVarietyPointLocalizationPlaceTensor
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.isLocalRingOfVarietyPoint_localization_placeTensor
     (E : Place (algebraMap ℂ K)) (𝔭 : Ideal (tens (κ' := κ') (placeAlg E))) [𝔭.IsPrime],
   (∃ O' : Subring κ', IsLocModel (algebraMap ℂ κ') O') →
   IsLocModel (algebraMap ℂ L) (locAt (L := L) 𝔭) := by
-  first | exact @GlobalTheory.GraphLocal.isLocModel_locAt | exact GlobalTheory.GraphLocal.isLocModel_locAt | (intros; apply GlobalTheory.GraphLocal.isLocModel_locAt <;> assumption)
+  exact @GlobalTheory.GraphLocal.isLocModel_locAt

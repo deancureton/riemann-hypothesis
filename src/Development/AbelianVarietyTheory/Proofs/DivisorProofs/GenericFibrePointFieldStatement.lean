@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericFibrePointField
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 
@@ -17,4 +16,4 @@ open GlobalTheory.FlatModel
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.generic_fibre_point_field : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host E) (Dw : Datum H) (l' : Level H) (Xo' : Moduli Dw l') (c' : Coeff l') (W : ValuationSubring ℂ) (Y : Model Xo' c' (c'.V W).subtype) (p : ℕ), p.Prime → (p : ℂ) ∈ W.nonunits → (p : c'.F) ∈ (c'.V W).nonunits → ∀ (A : Type) [CommRing A] [IsDomain A] (ξ : Sp A ⟶ Y.X), ξ (⟨⊥, Ideal.isPrime_bot⟩ : PrimeSpectrum A) ∈ Set.range Y.j → ∀ (K : Type) [Field K] (ψ : A →+* K), Function.Injective ψ → ∃ yy : Sp K ⟶ Xo'.XF c', yy ≫ Y.j = spMap ψ ≫ ξ := by
-  first | exact @GlobalTheory.FlatModel.GenPt.exists_lift_genericFibre | exact GlobalTheory.FlatModel.GenPt.exists_lift_genericFibre | (intros; apply GlobalTheory.FlatModel.GenPt.exists_lift_genericFibre <;> assumption)
+  exact @GlobalTheory.FlatModel.GenPt.exists_lift_genericFibre

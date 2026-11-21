@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaPolynomialLinesInvariance
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.theta_polynomial_lines_invariance : GlobalTheory.T
         ActsD (evI F) (fun t => om' (1, γ (Multiplicative.ofAdd t))) f f₂ → f₂ = f₁) ∧
     (∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ G.M'.Pol B.ψ B.emb, ∃ f₁ ∈ G.M'.Pol B.ψ B.emb,
       Acts (evI F) (om' (1, k)) f f₁ ∧ ∀ f₂ : SInf F (Fin a' × Fin (a + a')), Acts (evI F) (om' (1, k)) f f₂ → f₂ = f₁) := by
-  first | exact @GlobalTheory.PolStabInfW.polStab' | exact GlobalTheory.PolStabInfW.polStab' | (intros; apply GlobalTheory.PolStabInfW.polStab' <;> assumption)
+  exact @GlobalTheory.PolStabInfW.polStab'

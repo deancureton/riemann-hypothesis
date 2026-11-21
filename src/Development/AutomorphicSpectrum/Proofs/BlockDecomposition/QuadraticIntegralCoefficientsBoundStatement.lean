@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.QuadraticIntegralCoefficientsBound
-import Mathlib
 import Development.WeilBound.ThetaLifts.LatticeBasics.HypothesesE
 import Development.WeilBound.ThetaLifts.LatticeBasics.UnfoldC
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EmbBar
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.quadratic_integral_coefficients_bound : ∀ (F E :
     x ^ 2 - algebraMap F E y₁ * x + algebraMap F E y₂ = 0 ∧ ∀ (v : Pl F) (τ : E →ₐ[F] FvBar F v),
       ‖algebraMap F (Fv F v) y₁‖₊ ≤ max (absBar F v (τ x)) (absBar F v (τ (σ x))) ∧
       ‖algebraMap F (Fv F v) y₂‖₊ = absBar F v (τ x) * absBar F v (τ (σ x)) := by
-  first | exact @GlobalTheory.CompanionTheory.GodementH.trace_norm_local_sizes | exact GlobalTheory.CompanionTheory.GodementH.trace_norm_local_sizes | (intros; apply GlobalTheory.CompanionTheory.GodementH.trace_norm_local_sizes <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GodementH.trace_norm_local_sizes

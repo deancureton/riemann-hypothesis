@@ -15,4 +15,4 @@ set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 800000
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_place_residue_map_eq_reduction : ∀ (L : Type) [Field L] [NumberField L] [IsCMField L] (s : ReciprocityTheory.Aut.SplitPlace L) (g : ℕ), g.Prime → ∀ (red : s.v.adicCompletionIntegers (maximalRealSubfield L) →+* ZMod g) (iso : ZMod g ≃+* kP s.w) (x : s.v.adicCompletionIntegers (maximalRealSubfield L)) (u : 𝓞 L), Valued.v (s.i (u : L) - (x : s.v.adicCompletion (maximalRealSubfield L))) < 1 ↔ iso (red x) = Ideal.Quotient.mk s.w.asIdeal u := by
-  first | exact @GlobalTheory.splitPlace_red_eq_reduction | exact GlobalTheory.splitPlace_red_eq_reduction | (intros; apply GlobalTheory.splitPlace_red_eq_reduction <;> assumption)
+  exact @GlobalTheory.splitPlace_red_eq_reduction

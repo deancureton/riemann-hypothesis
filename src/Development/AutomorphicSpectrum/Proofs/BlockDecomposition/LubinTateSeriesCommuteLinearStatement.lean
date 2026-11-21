@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LubinTateSeriesCommuteLinear
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EvalMod
 noncomputable section
 open NumberField IsDedekindDomain Neutral.B1 Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.L2.Host Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_series_commute_linear : ∀ {B : Type} 
     ∀ Q ∈ S, (∃ M : ℕ, 0 < M ∧ Near S ϖ (F 1) 1 (Q ^ M)) →
       (∀ m, EvalMod S F ϖ h φ Q (σ Q) m) →
     ∀ t, Tends S F ϖ (fun n => ϖ' ^ n * ltIter ϖ q n Q) t → σ t = h (PowerSeries.coeff 1 φ) * t := by
-  first | exact @GlobalTheory.CompanionTheory.LTPer.galois_log | exact GlobalTheory.CompanionTheory.LTPer.galois_log | (intros; apply GlobalTheory.CompanionTheory.LTPer.galois_log <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LTPer.galois_log

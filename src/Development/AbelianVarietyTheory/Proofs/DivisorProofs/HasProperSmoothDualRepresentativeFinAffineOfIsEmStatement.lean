@@ -8,4 +8,4 @@ open scoped CategoryTheory.Obj
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hasProperSmoothDualRepresentativeFinAffine_of_isEmpty : ∀ (S : Scheme.{0}) (A S' : Over S) [GrpObj A] (g : ℕ), IsEmpty S'.left → HasRepAF A g S' := by
-  first | exact @GlobalTheory.DualCon.hasRepAF_of_isEmpty | exact GlobalTheory.DualCon.hasRepAF_of_isEmpty | (intros; apply GlobalTheory.DualCon.hasRepAF_of_isEmpty <;> assumption)
+  exact @GlobalTheory.DualCon.hasRepAF_of_isEmpty

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_seesaw_identity : GlobalTheory.
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ t m, IsLevi (W₁ := W₁) H' t 1 m → ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (1, m) Φ) = ((χX t : ℂ) * (((absE F E t : ℝ) ^ ((n : ℝ) / 2) : ℝ) : ℂ)) • e Φ := by
-  first | exact @GlobalTheory.MixWTorus.evalZero_torus | exact GlobalTheory.MixWTorus.evalZero_torus | (intros; apply GlobalTheory.MixWTorus.evalZero_torus <;> assumption)
+  exact @GlobalTheory.MixWTorus.evalZero_torus

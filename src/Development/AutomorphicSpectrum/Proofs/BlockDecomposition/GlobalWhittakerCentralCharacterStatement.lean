@@ -19,4 +19,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.global_whittaker_central_character : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (n : ℤ) (t : ℝ) (M : ∀ v : Pl, LM c v), AdmM M → ∀ (z : Jd) (g : G2), WM n t M (dg2 z z * g) = uW n t M z * WM n t M g := by
-  first | exact @GlobalTheory.CompanionTheory.CenTheta.WM_central | exact GlobalTheory.CompanionTheory.CenTheta.WM_central | (intros; apply GlobalTheory.CompanionTheory.CenTheta.WM_central <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenTheta.WM_central

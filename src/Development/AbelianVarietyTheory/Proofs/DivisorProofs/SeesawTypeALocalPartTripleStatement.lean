@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeALocalPartTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_local_part_triple : GlobalTheory.Fun
     ∀ (t : (AE F E)ˣ) (g₁ : UA σ G₁.V.J) (m : UA σ G.V.J), IsLevi H t g₁ m → m ∈ UAt σ G.V (evFin F v) →
     g₁ ∈ UAt σ G₁.V (evFin F v) → ∀ φ ∈ SB (Fin (b + 2) × Fin (b + 2 + a') → Fv F v),
       ev v (locOp v (om (m, 1)) φ) = fac (X.β / X.α) (((b + a' : ℕ) : ℝ) / 2) t • locOp v (om₁ (g₁, 1)) (ev v φ) := by
-  first | exact @GlobalTheory.ThK.LemF.evLocLaw_isoA_leviV | exact GlobalTheory.ThK.LemF.evLocLaw_isoA_leviV | (intros; apply GlobalTheory.ThK.LemF.evLocLaw_isoA_leviV <;> assumption)
+  exact @GlobalTheory.ThK.LemF.evLocLaw_isoA_leviV

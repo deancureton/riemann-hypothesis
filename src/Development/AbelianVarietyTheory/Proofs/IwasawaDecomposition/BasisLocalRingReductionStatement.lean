@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.basis_local_ring_reduction : ∀ (E : Type) [Field
     ∃ z : LB.Sec (LPow t.G t.PP.L (N : ℤ) (Over.mk (spMap ((residue W).comp φ)))),
       Lin t.G t.PP.L N (toBase ((residue W).comp φ)) b (fun i => GlobalTheory.OneBasis.fnR (residue W (c i))) z ∧
       Lin t.G t.PP.L N (toBase ((residue W).comp φ)) b (fun _ => 0) z := by
-  first | exact @GlobalTheory.TorRef.lin_residue_of_linA | exact GlobalTheory.TorRef.lin_residue_of_linA | (intros; apply GlobalTheory.TorRef.lin_residue_of_linA <;> assumption)
+  exact @GlobalTheory.TorRef.lin_residue_of_linA

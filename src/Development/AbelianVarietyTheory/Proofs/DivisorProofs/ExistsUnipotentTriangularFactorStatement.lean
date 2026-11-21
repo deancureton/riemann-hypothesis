@@ -15,4 +15,4 @@ open GlobalTheory.FlagCell GlobalTheory.FlagConnect
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_unipotent_triangular_factor : ∀ (R : Type) [CommRing R] (m : ℕ) (A : Matrix (Fin m) (Fin m) R), (∀ l : Fin (m + 1), IsUnit (A.submatrix (Fin.castLE l.is_le) (Fin.castLE l.is_le)).det) → ∃ (n : Low m → R) (M : Matrix (Fin m) (Fin m) R), M.BlockTriangular id ∧ IsUnit M.det ∧ A = uniR n * M := by
-  first | exact @GlobalTheory.FlagCell.exists_lu | exact GlobalTheory.FlagCell.exists_lu | (intros; apply GlobalTheory.FlagCell.exists_lu <;> assumption)
+  exact @GlobalTheory.FlagCell.exists_lu

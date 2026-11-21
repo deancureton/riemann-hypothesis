@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PreconnectedSpaceOfFinGenSubfieldBaseChanges
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.QuasiCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppTopBijectiveAndSurjectiveNormalDomain
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj IsLocalRing NumberField
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.preconnectedSpace_of_finGen_subfield_baseChanges :
           L = Subfield.closure (Set.range i₀ ∪ Set.range c) →
           PreconnectedSpace (pullback f (spMap (i₀.codRestrict L hL)) : Scheme.{0})) →
         PreconnectedSpace (pullback f (spMap i₀) : Scheme.{0}) := by
-  first | exact @GlobalTheory.GeomConnDesc.preconnectedSpace_of_finGen | exact GlobalTheory.GeomConnDesc.preconnectedSpace_of_finGen | (intros; apply GlobalTheory.GeomConnDesc.preconnectedSpace_of_finGen <;> assumption)
+  exact @GlobalTheory.GeomConnDesc.preconnectedSpace_of_finGen

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.elliptic_curve_lattice_period_form : ∀ (d : ℕ)
   ∃ (A₀ : Over (Sp Qb)) (_ : GrpObj A₀) (A : Over (Sp ℂ)) (_ : GrpObj A) (p : A.left ⟶ A₀.left) (L : LB A.left)
     (u : HolUnif A L 1) (c : ℂ), IsAbelianScheme A₀ ∧ SmoothOfRelativeDimension 1 A₀.hom ∧
     IsGrpPullback A A₀ (spMap (algebraMap Qb ℂ)) p ∧ L.IsLB ∧ c ≠ 0 ∧ ∀ z ∈ u.Λ, ∃ a b : ℤ, z 0 = c * (a + b * τ) := by
-  first | exact @GlobalTheory.CMModel.exists_curve_lattice | exact GlobalTheory.CMModel.exists_curve_lattice | (intros; apply GlobalTheory.CMModel.exists_curve_lattice <;> assumption)
+  exact @GlobalTheory.CMModel.exists_curve_lattice

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_second_variable : GlobalTheory.FunPr
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ g t h₁ m, IsLevi H' t h₁ m → ∀ u ∈ unip σ W H', ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (g, u * m) Φ) = ((χX t : ℂ) * (((absE F E t : ℝ) ^ ((n : ℝ) / 2) : ℝ) : ℂ)) • om₁ (g, h₁) (e Φ) := by
-  first | exact @GlobalTheory.MixW.evalZero_law | exact GlobalTheory.MixW.evalZero_law | (intros; apply GlobalTheory.MixW.evalZero_law <;> assumption)
+  exact @GlobalTheory.MixW.evalZero_law

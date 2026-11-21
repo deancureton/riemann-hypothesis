@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.toroidal_nonarchimedean_point : ∀ {E : Type} [Fi
       ((∃ a : Fin (r τ) → C, (∀ i, ‖a i‖ ≤ 1) ∧ IsCombAtG Z.t x (u τ) a w) ↔ InGr Z φ x (latDR Z.t x) τ w)) →
     ∀ P : Matrix (Fin g) (Σ τ, Fin (r τ)) C, IsTanMat Z x ch (fun s : Σ τ, Fin (r τ) => u s.1 s.2) P →
     GrCond (fun s : Σ τ, Fin (r τ) => (Fintype.equivFin (E →+* ℂ) s.1 : ℕ)) P := by
-  first | exact @GlobalTheory.LieFilt.grCond_tanMat_of_inGr | exact GlobalTheory.LieFilt.grCond_tanMat_of_inGr | (intros; apply GlobalTheory.LieFilt.grCond_tanMat_of_inGr <;> assumption)
+  exact @GlobalTheory.LieFilt.grCond_tanMat_of_inGr

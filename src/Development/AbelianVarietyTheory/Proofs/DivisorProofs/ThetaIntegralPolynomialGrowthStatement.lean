@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_integral_polynomial_growth : ∀ (F E : Type
     ∀ (c : E) (hc : c ≠ 0), σ c = -c →
     ∃ N : ℕ, ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∃ C : ℝ, ∀ g : GAd σ (c • G.W.J.map σ),
       ‖G.M.I om Φ ((toGAd hσ G.W.J hc).symm g)‖ ≤ C * (height σ (c • G.W.J.map σ) g : ℝ) ^ N := by
-  first | exact @GlobalTheory.ThKGrowthBd.growth_bd | exact GlobalTheory.ThKGrowthBd.growth_bd | (intros; apply GlobalTheory.ThKGrowthBd.growth_bd <;> assumption)
+  exact @GlobalTheory.ThKGrowthBd.growth_bd

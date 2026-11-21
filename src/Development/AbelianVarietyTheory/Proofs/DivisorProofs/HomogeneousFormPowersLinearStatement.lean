@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HomogeneousFormPowersLinear
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -13,4 +12,4 @@ open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.homogeneous_form_powers_linear : ∀ (D : ℕ) (F : MvPolynomial (Fin 5) ℝ), F.IsHomogeneous D →
     ∃ (s : Finset (Fin 5 → ℤ)) (c : (Fin 5 → ℤ) → ℝ), F = ∑ n ∈ s, c n • lin (fun i => (n i : ℝ)) ^ D := by
-  first | exact @GlobalTheory.IntLinPow.homog_eq_sum_pow_intLin | exact GlobalTheory.IntLinPow.homog_eq_sum_pow_intLin | (intros; apply GlobalTheory.IntLinPow.homog_eq_sum_pow_intLin <;> assumption)
+  exact @GlobalTheory.IntLinPow.homog_eq_sum_pow_intLin

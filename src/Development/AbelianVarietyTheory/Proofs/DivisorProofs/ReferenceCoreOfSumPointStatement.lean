@@ -10,4 +10,4 @@ open GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.SlopeRec GlobalTheory
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.reference_core_of_sum_point : Size → SumPt → RefCore := by
-  first | exact @GlobalTheory.RefSum.refCore_of_sumPt | exact GlobalTheory.RefSum.refCore_of_sumPt | (intros; apply GlobalTheory.RefSum.refCore_of_sumPt <;> assumption)
+  exact @GlobalTheory.RefSum.refCore_of_sumPt

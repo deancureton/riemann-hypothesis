@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_seesaw : ∀ (F E : Type) [Field
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ y, (LinearMap.proj y : Fn F n d₁ →ₗ[ℂ] ℂ).comp e ∈ (adeleClass F).adm (Fin n × Fin d) := by
-  first | exact @GlobalTheory.EvZeroAdm.main | exact GlobalTheory.EvZeroAdm.main | (intros; apply GlobalTheory.EvZeroAdm.main <;> assumption)
+  exact @GlobalTheory.EvZeroAdm.main

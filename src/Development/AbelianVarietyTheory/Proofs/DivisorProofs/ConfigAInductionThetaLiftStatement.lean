@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAInductionThetaLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_induction_theta_lift : GlobalTheory.ThK.K
       ∀ φ φ' : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) φ →
         IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) φ' →
         (∀ x ∈ lowPartInf B G.M R.p, φ x = 0) ∨ ∃ c : ℂ, ∀ x ∈ lowPartInf B G.M R.p, φ' x = c • φ x := by
-  first | exact @GlobalTheory.IndLine.lowPart_frobInf_line | exact GlobalTheory.IndLine.lowPart_frobInf_line | (intros; apply GlobalTheory.IndLine.lowPart_frobInf_line <;> assumption)
+  exact @GlobalTheory.IndLine.lowPart_frobInf_line

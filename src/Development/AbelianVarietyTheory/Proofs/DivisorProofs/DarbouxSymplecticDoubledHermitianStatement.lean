@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxSymplecticDoubledHermitian
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.darboux_symplectic_doubled_hermitian : ∀ (F E : 
     ∀ Φ ∈ schA F (Fin m × Fin (n + n)), FiniteDimensional ℂ (Submodule.span ℂ {Ψ | ∃ k ∈ K, Ψ = om₂ (1, k) Φ}) →
       (fun g => om₂ (1, g) Φ 0) ∈ degPSOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K χ
         (((m : ℂ) - (n : ℂ)) / 2) := by
-  first | exact @GlobalTheory.DblEvalLaw.apply_mem_degPSOf | exact GlobalTheory.DblEvalLaw.apply_mem_degPSOf | (intros; apply GlobalTheory.DblEvalLaw.apply_mem_degPSOf <;> assumption)
+  exact @GlobalTheory.DblEvalLaw.apply_mem_degPSOf

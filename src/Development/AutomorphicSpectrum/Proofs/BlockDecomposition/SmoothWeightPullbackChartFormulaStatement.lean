@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SmoothWeightPullbackChartFormula
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnSourceIffOfDensity
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.smooth_weight_pullback_chart_formula : ∀ {k : Ty
       locDens A (fun _ => φ.locPot.pullback F hF) j u =
         ‖LinearMap.det (fderiv ℂ (c.finChart ∘ F ∘ (A.chart j).symm) u :
           (Fin D → ℂ) →ₗ[ℂ] (Fin D → ℂ))‖ ^ 2 * c.chernDens φ (F ((A.chart j).symm u)) := by
-  first | exact @GlobalTheory.CompanionTheory.MixZ.PullDens.locDens_pullback_eq | exact GlobalTheory.CompanionTheory.MixZ.PullDens.locDens_pullback_eq | (intros; apply GlobalTheory.CompanionTheory.MixZ.PullDens.locDens_pullback_eq <;> assumption)
+  exact @GlobalTheory.CompanionTheory.MixZ.PullDens.locDens_pullback_eq

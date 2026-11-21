@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ServedPlaceLevelsClassesComparisonMaps
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TiedColumnData
 import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FixedVectorEqOfStandardData
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.served_place_levels_classes_comparison_maps : ∀ 
         (∀ j, j + 1 ≤ (w.D Z).R.m → Submodule.span ((w.D Z).gat u v hg).O
           (up.cmpS j '' ((((w.tw Z).fm u ((w.D Z).what₂.muAt v)).lat (j + 1)).L :
             Set (((w.tw Z).fm u ((w.D Z).what₂.muAt v)).lat (j + 1)).V)) = Lv.Int (j + 1)) := by
-  first | exact @GlobalTheory.Mem.Top.KerOne.levels_cls_cmp_at_served | exact GlobalTheory.Mem.Top.KerOne.levels_cls_cmp_at_served | (intros; apply GlobalTheory.Mem.Top.KerOne.levels_cls_cmp_at_served <;> assumption)
+  exact @GlobalTheory.Mem.Top.KerOne.levels_cls_cmp_at_served

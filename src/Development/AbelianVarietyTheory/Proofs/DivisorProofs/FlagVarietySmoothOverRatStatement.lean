@@ -8,4 +8,4 @@ open CategoryTheory.Limits
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_variety_smooth_over_rat : ∀ (ι : Type) [Fintype ι] (N : ℕ), SmoothOfRelativeDimension (dimFl ι N) (pullback.snd (GlobalTheory.FlagZ.flStr ι N) (spMap (algebraMap ℤ ℚ))) := by
-  first | exact @GlobalTheory.FlagQ.smoothOfRelativeDimension_genericFibre | exact GlobalTheory.FlagQ.smoothOfRelativeDimension_genericFibre | (intros; apply GlobalTheory.FlagQ.smoothOfRelativeDimension_genericFibre <;> assumption)
+  exact @GlobalTheory.FlagQ.smoothOfRelativeDimension_genericFibre

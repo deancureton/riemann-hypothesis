@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.compact_projective_analytic : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (σ : k →+* ℂ) (d : ℕ) (R : AnRead p σ d) [CompactSpace (CxPts p σ)], IsProjOver p → IsProjective R.finAtlas := by
-  first | exact @GlobalTheory.ProjEmbed.isProjective_finAtlas | exact GlobalTheory.ProjEmbed.isProjective_finAtlas | (intros; apply GlobalTheory.ProjEmbed.isProjective_finAtlas <;> assumption)
+  exact @GlobalTheory.ProjEmbed.isProjective_finAtlas

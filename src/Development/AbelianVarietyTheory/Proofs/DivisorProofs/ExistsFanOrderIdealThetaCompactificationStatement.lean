@@ -8,4 +8,4 @@ open scoped CategoryTheory.Obj
 open GlobalTheory.Poinc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_fanOrder_ideal_thetaCompactification : IdealSt := by
-  first | exact @GlobalTheory.Poinc.idealSt_holds | exact GlobalTheory.Poinc.idealSt_holds | (intros; apply GlobalTheory.Poinc.idealSt_holds <;> assumption)
+  exact @GlobalTheory.Poinc.idealSt_holds

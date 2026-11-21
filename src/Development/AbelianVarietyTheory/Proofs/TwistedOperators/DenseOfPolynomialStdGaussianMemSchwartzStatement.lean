@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DenseOfPolynomialStdGaussianMemSchwartz
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Foundations.HermitianSpaceBaseLatticeEqFrameLattice
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_dual_integral_arrowKernel_fock_eq_fockComp_
             Λ (realAct W.θ S.N.fr (.top j) ((k : GA D (G.V (.top j)))⁻¹) v) ∂κ =
           Λ' (realAct W.θ S.N.fr (.top (j + 1)) h⁻¹
             (fockComp W S.N.frC (.top t j) (S.Z.vec d) (x * S.N.u _) (finOf _ h * S.N.u _) v)) := by
-  first | exact @GlobalTheory.AvgCol.avg_col | exact GlobalTheory.AvgCol.avg_col | (intros; apply GlobalTheory.AvgCol.avg_col <;> assumption)
+  exact @GlobalTheory.AvgCol.avg_col

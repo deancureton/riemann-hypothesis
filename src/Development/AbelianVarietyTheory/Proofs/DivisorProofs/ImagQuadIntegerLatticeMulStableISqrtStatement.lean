@@ -10,4 +10,4 @@ open GlobalTheory.CMVal GlobalTheory.HeckeGal
 open ModularForm (E₄ E₆)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.imagQuadIntegerLattice_mulStable_I_sqrt : ∀ (d : ℕ) (Λ : PeriodPair), 0 < d → GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds.IsIntLattice d Λ → MulStable Λ (Complex.I * (Real.sqrt d : ℝ)) ∧ (Complex.I * (Real.sqrt d : ℝ)).im ≠ 0 := by
-  first | exact @GlobalTheory.IntLatMul.main | exact GlobalTheory.IntLatMul.main | (intros; apply GlobalTheory.IntLatMul.main <;> assumption)
+  exact @GlobalTheory.IntLatMul.main

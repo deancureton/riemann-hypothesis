@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionPairReal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_restriction_pair_real : ∀ (F E : T
         Matrix.GeneralLinearGroup.det T = t ∧
         ((g : GL (Fin n ⊕ Fin n) (AE F E)) : Matrix (Fin n ⊕ Fin n) (Fin n ⊕ Fin n) (AE F E)) * Cy =
           (diagCols (Fin n) : Matrix (Fin n ⊕ Fin n) (Fin n) (AE F E)) * (S : Matrix (Fin n) (Fin n) (AE F E)) := by
-  first | exact @GlobalTheory.MixedPlane.exists_mixed_model | exact GlobalTheory.MixedPlane.exists_mixed_model | (intros; apply GlobalTheory.MixedPlane.exists_mixed_model <;> assumption)
+  exact @GlobalTheory.MixedPlane.exists_mixed_model

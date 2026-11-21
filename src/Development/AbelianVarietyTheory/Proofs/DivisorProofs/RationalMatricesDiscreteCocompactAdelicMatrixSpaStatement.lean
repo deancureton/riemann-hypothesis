@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalMatricesDiscreteCocompactAdelicMatrixSpa
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InfPartFPlaceIdem
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.rationalMatrices_discrete_cocompact_adelicMatrixSp
     IsTopologicalAddGroup (WOF F E nS nT) ∧ LocallyCompactSpace (WOF F E nS nT) ∧
     SecondCountableTopology (WOF F E nS nT) ∧ T2Space (WOF F E nS nT) ∧ DiscreteTopology (ratLF F E nS nT) ∧
     ∃ K : Set (WOF F E nS nT), IsCompact K ∧ ∀ x : WOF F E nS nT, ∃ γ ∈ ratLF F E nS nT, γ + x ∈ K := by
-  first | exact @GlobalTheory.AdelicMatrixLatticeF.lattice | exact GlobalTheory.AdelicMatrixLatticeF.lattice | (intros; apply GlobalTheory.AdelicMatrixLatticeF.lattice <;> assumption)
+  exact @GlobalTheory.AdelicMatrixLatticeF.lattice

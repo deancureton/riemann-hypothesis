@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedHarmonicPolynomialDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.matched_harmonic_polynomial_decomposition : Global
     ∀ (P Q Rn Sn : ℕ) (A : InfinitePlace F → Matrix (Fin a) (Ix P Q) ℂ) (C : InfinitePlace F → Matrix (Fin (a + a')) (Ix Rn Sn) ℂ)
       (Φ : Tens F P Q Rn Sn →ₗ[ℂ] SInf F (Fin a × Fin (a + a'))), GlobalTheory.FockBridge.IsFockData B G.M A C Φ →
       ∀ f ∈ (tensHarm F P Q Rn Sn (halfKap B)).map Φ, Rm.p f = 0 → f = 0 := by
-  first | exact @GlobalTheory.HarmInj.pInf_injOn_harm | exact GlobalTheory.HarmInj.pInf_injOn_harm | (intros; apply GlobalTheory.HarmInj.pInf_injOn_harm <;> assumption)
+  exact @GlobalTheory.HarmInj.pInf_injOn_harm

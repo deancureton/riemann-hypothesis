@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.witt_frame_theta_integral_dual : ∀ (F E : Type) 
           ∀ S s, GlobalTheory.StdPar.IsCuspExp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) s →
             (∀ k ∈ S, ∀ i, i ≤ k → i ∈ S) →
             ∀ k ∈ S, ∃ j : ℕ, j ≤ k.val ∧ ((s k).re = (1 - (a : ℝ)) / 2 + j ∨ (s k).re = (1 - (a' : ℝ)) / 2 + j) := by
-  first | exact @GlobalTheory.ThK.ExpVExps.re_cuspExp | exact GlobalTheory.ThK.ExpVExps.re_cuspExp | (intros; apply GlobalTheory.ThK.ExpVExps.re_cuspExp <;> assumption)
+  exact @GlobalTheory.ThK.ExpVExps.re_cuspExp

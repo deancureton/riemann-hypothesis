@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MuCharacterDetLevelEqLocalTameProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.UnderTie
 import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.XiEntryInvariant
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.Ker Formalism.L2.DIV GlobalTheory.TwU GlobalTheory.TwV
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.muCharacter_det_level_eq_local_tame_product : Unde
             iA D.host.F D.host.E (t.seam.iE (e P)) - 1))) →
       muOf t u μ dtU (i + 1) (Matrix.GeneralLinearGroup.det κ.1) * t.seam.σ₀ (∏ P, rhoS t.Ch t.sel (t.tup μ) i P (e P)) = 1 ∧
       muOf t u μ dtU (i + 1) (Matrix.GeneralLinearGroup.det κ.1) = t.seam.σ₀ (∏ P, rhoT t.Ch t.sel (t.tup μ) i P (e P))) := by
-  first | exact @GlobalTheory.LevMuDet.muOf_det_lev | exact GlobalTheory.LevMuDet.muOf_det_lev | (intros; apply GlobalTheory.LevMuDet.muOf_det_lev <;> assumption)
+  exact @GlobalTheory.LevMuDet.muOf_det_lev

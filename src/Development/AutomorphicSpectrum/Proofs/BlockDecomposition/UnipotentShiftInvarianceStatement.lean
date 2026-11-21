@@ -13,4 +13,4 @@ open GlobalTheory.CompanionTheory.ColumnSplitting
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unipotent_shift_invariance : Shift := by
-  first | exact @GlobalTheory.CompanionTheory.ColumnSplitting.shift | exact GlobalTheory.CompanionTheory.ColumnSplitting.shift | (intros; apply GlobalTheory.CompanionTheory.ColumnSplitting.shift <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ColumnSplitting.shift

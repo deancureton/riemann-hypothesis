@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CentralElementCommutesTranslates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.central_element_commutes_translates : ∀ (F E : T
     ∀ (w : InfinitePlace F) (τ : EmbOver E w) (D : Matrix (Fin n) (Fin n) ℂ →ₗ[ℂ] Module.End ℂ (SmG σ J)), IsDer σ J τ D →
     ∀ u ∈ Algebra.adjoin ℂ (Set.range D), (∀ X, D X * u = u * D X) → ∀ (a : GAd σ J) (f f' : SmG σ J),
       (f'.1 = fun x => f.1 (x * a)) → (u f').1 = fun x => (u f).1 (x * a) := by
-  first | exact @GlobalTheory.LeviHC.RightTr.comm_rtr | exact GlobalTheory.LeviHC.RightTr.comm_rtr | (intros; apply GlobalTheory.LeviHC.RightTr.comm_rtr <;> assumption)
+  exact @GlobalTheory.LeviHC.RightTr.comm_rtr

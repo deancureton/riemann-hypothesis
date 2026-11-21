@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiniteSchwartzSetIntegralShift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.finite_schwartz_set_integral_shift : ∀ (F E : Ty
     ∃ S : Set (Fn F n d), S.Finite ∧ S ⊆ schA F (Fin n × Fin d) ∧ ∀ ξ : Fin n → E, (∀ i, ∃ o : 𝓞 E, (N : E) * ξ i = o) →
       ∃ Φ ∈ S, M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F y)) Ψ =
         M.co.rho B.ψ (realAd F 1 • Matrix.vecMulVec (incV F ξ) (incV F y)) Φ := by
-  first | exact @GlobalTheory.FinPartHeis.finPart | exact GlobalTheory.FinPartHeis.finPart | (intros; apply GlobalTheory.FinPartHeis.finPart <;> assumption)
+  exact @GlobalTheory.FinPartHeis.finPart

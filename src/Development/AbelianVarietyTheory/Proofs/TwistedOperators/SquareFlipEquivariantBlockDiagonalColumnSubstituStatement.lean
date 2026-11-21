@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SquareFlipEquivariantBlockDiagonalColumnSubstitu
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ValuationGdetKapAt
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory Matrix ValuativeRel GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.ExpansionInvariance GlobalTheory.SplitFlip GlobalTheory.SplitWeil GlobalTheory.RootEx
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.squareFlip_equivariant_blockDiagonal_columnSubstit
       squareFlip μ σ ψ ν ϖ e (Assignment.one.block D₁ D₂) (fun Z => Φ (Z * fromBlocks M₁.val 0 0 M₂.val)) X =
         (ν (gdet M₁) : ℂ) * (((ν (gdet M₂))⁻¹ : ℂˣ) : ℂ) *
           squareFlip μ σ ψ ν ϖ e (Assignment.one.block D₁ D₂) Φ (X * fromBlocks M₁.val 0 0 M₂.val) := by
-  first | exact @GlobalTheory.SquareFlipCols.squareFlip_blockDiag_cols | exact GlobalTheory.SquareFlipCols.squareFlip_blockDiag_cols | (intros; apply GlobalTheory.SquareFlipCols.squareFlip_blockDiag_cols <;> assumption)
+  exact @GlobalTheory.SquareFlipCols.squareFlip_blockDiag_cols

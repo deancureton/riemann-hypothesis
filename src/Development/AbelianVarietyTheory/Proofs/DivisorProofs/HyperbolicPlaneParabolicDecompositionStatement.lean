@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneParabolicDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_parabolic_decomposition : ∀ (F 
       (∀ k, X' k 0 = H.x k) → (∀ k, Y' k 0 = c₀⁻¹ * H.y k) →
       (∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i) → ∀ (t : (AE F E)ˣ) (y : GAd σ (c₀ • W₁.J.map σ)) (g : GAd σ (c₀ • W.J.map σ)), GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g →
       ∃ t₁ : (AE F E)ˣ, GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t₁ (ofInf σ _ (projInf σ _ y)) (ofInf σ _ (projInf σ _ g)) := by
-  first | exact @GlobalTheory.ThK.InducedCons.isParDec_realPart | exact GlobalTheory.ThK.InducedCons.isParDec_realPart | (intros; apply GlobalTheory.ThK.InducedCons.isParDec_realPart <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.isParDec_realPart

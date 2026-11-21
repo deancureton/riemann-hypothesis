@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleSchwartzSeminormBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.triple_schwartz_seminorm_bound : ∀ (F E : Type) 
       ∀ f : SInf F (Fin a × Fin (a + a')),
         (s.sup (schwartzSeminormFamily ℂ (Fin a × Fin (a + a') → mixedEmbedding.mixedSpace F) ℂ)) (locOpInf (om (k, 1)) f) ≤
           C * (s'.sup (schwartzSeminormFamily ℂ (Fin a × Fin (a + a') → mixedEmbedding.mixedSpace F) ℂ)) f := by
-  first | exact @GlobalTheory.ArchKXPr.locOpInf_unif_bound | exact GlobalTheory.ArchKXPr.locOpInf_unif_bound | (intros; apply GlobalTheory.ArchKXPr.locOpInf_unif_bound <;> assumption)
+  exact @GlobalTheory.ArchKXPr.locOpInf_unif_bound

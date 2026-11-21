@@ -8,4 +8,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flat_bound_and_flat_limit_values : GlobalTheory.CovTop.HypothesesXH → Hypotheses2 → HypothesesH → GlobalTheory.Published.ScholzeWeinsteinB → ∃ Cf : ℝ, OnObj fun _ O A _ _ _ => FewBad O.Y → FlatBd O.Y Cf ∧ ∀ Φ : ℝ → Fn O.Y, LimFam Φ → FlatVal A Φ := by
-  first | exact @GlobalTheory.FlatObj.flat_line_onObj | exact GlobalTheory.FlatObj.flat_line_onObj | (intros; apply GlobalTheory.FlatObj.flat_line_onObj <;> assumption)
+  exact @GlobalTheory.FlatObj.flat_line_onObj

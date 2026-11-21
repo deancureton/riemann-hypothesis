@@ -102,5 +102,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.log_top_dimension_bound_covering : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Size → Covers fun Fm x _ ι p i Y PP _ => ∀ Z, Real.log (Module.finrank Y.d.c₂.F (cuspOn Y.U Z (wtOf (dat p i) ((⟨uW p i, cZero (Fm.D x ι) ((i : ℕ) + 1), (Fm.D x ι).R.k - 2, lenT p i PP⟩ : WtPar (dat p i)).wt (lenT p i PP)) 0)) : ℝ) ≤ PP := by
-  first | exact @_root_.GlobalTheory.CovTop.DimLogTop.log_top_dimension_le | exact _root_.GlobalTheory.CovTop.DimLogTop.log_top_dimension_le | (intros; apply _root_.GlobalTheory.CovTop.DimLogTop.log_top_dimension_le <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DimLogTop.log_top_dimension_le
 end

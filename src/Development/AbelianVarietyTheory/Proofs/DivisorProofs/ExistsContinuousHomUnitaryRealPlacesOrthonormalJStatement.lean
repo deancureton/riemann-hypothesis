@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_continuous_hom_unitary_realPlaces_orthonorm
     ∃ k : UG (cA σ) J →* (InfinitePlace F → Mat R S), Continuous k ∧
       (∀ g w, (g.1 : Matrix β β (AE F E)).map (piInf (τ w)) * C w = C w * k g w) ∧
       (∀ g w, (k g w)ᴴ * Jm R S * k g w = Jm R S) ∧ ∀ w (M M' : Mat R S), C w * M = C w * M' → M = M' := by
-  first | exact @GlobalTheory.RealLiftComp.exists_comp | exact GlobalTheory.RealLiftComp.exists_comp | (intros; apply GlobalTheory.RealLiftComp.exists_comp <;> assumption)
+  exact @GlobalTheory.RealLiftComp.exists_comp

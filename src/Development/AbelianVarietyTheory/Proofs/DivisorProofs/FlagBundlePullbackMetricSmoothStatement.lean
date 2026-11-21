@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundlePullbackMetricSmooth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.arFun_aeval_gr_sum_eq_zero_of_flagBundle_rank_two 
       IsGeoFun ![VMetric.grLB fl 0 (H.pull π w), VMetric.grLB fl 1 (H.pull π w), A.pull π w] (d + 1) Ψ →
       ∀ P : MvPolynomial (Fin 2) ℝ, P.IsHomogeneous (d + 2) →
         Φ (aeval (![X 0 + X 1, X 2] : Fin 2 → MvPolynomial (Fin 3) ℝ) P) = 0 := by
-  first | exact @GlobalTheory.CovTest.SwapLine.arFun_sumLine_base_eq_zero | exact GlobalTheory.CovTest.SwapLine.arFun_sumLine_base_eq_zero | (intros; apply GlobalTheory.CovTest.SwapLine.arFun_sumLine_base_eq_zero <;> assumption)
+  exact @GlobalTheory.CovTest.SwapLine.arFun_sumLine_base_eq_zero

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBTripleEigenFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_b_triple_eigen_factor : GlobalTheory.ThK.KP
     (∃ Φ₁' ∈ PolData B G₁.M' ⊓ G₁.M'.So B.ψ B.τ₁, G₁.M'.I om₁' Φ₁' ≠ 0) →
     ∃ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∃ (h : UA σ G.W.J) (h₁ : UA σ G₁.W.J) (m : UA σ G.W.J), IsLevi (W₁ := G₁.W) H' 1 h₁ m ∧
       G₁.M'.I om₁' (cone B G.M' om' e' K μK μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (om' (1, h) Φ')) h₁ ≠ 0 := by
-  first | exact @GlobalTheory.ConeBNZ.nonzero | exact GlobalTheory.ConeBNZ.nonzero | (intros; apply GlobalTheory.ConeBNZ.nonzero <;> assumption)
+  exact @GlobalTheory.ConeBNZ.nonzero

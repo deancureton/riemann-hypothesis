@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinEvaluationTripleTorus
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.eisenstein_evaluation_triple_torus : GlobalTheory.
       ∀ (t : (AE F E)ˣ) (m : UA σ G.W.J), IsLevi (W₁ := G₁.W) H' t 1 m →
         ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))),
           e' (om' (1, m) Ψ) = ((X.α t : ℂ) * (((absE F E t : ℝ) ^ ((b : ℝ) / 2) : ℝ) : ℂ)) • e' Ψ := by
-  first | exact @GlobalTheory.ThK.TorusEvB.torus_evB | exact GlobalTheory.ThK.TorusEvB.torus_evB | (intros; apply GlobalTheory.ThK.TorusEvB.torus_evB <;> assumption)
+  exact @GlobalTheory.ThK.TorusEvB.torus_evB

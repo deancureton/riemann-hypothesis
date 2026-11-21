@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.exists_maximal_compact_invariant : ∀ (F E : Type
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M,
       ∃ K, IsMaxCpt σ (c • G.W.J.map σ) K ∧
         IsAut σ (c • G.W.J.map σ) K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThKAutV.isAut_thetaIntegral | exact GlobalTheory.ThKAutV.isAut_thetaIntegral | (intros; apply GlobalTheory.ThKAutV.isAut_thetaIntegral <;> assumption)
+  exact @GlobalTheory.ThKAutV.isAut_thetaIntegral

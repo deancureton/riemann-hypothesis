@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LinearFormsOnCones
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.linear_forms_on_cones : ∀ (E : Type) [Field E] [
           (∃ c : Fin m → ℝ, (∀ i, 0 ≤ c i) ∧ GlobalTheory.PolFan.toReal be = ∑ i, c i • GlobalTheory.PolFan.toReal (γ i)) →
             ψ.evalZ be = ℓ be ∧ 0 ≤ ℓ be) →
     HasCones Cn Z → ∃ BD, IsPhiDiv ψ Z BD := by
-  first | exact @GlobalTheory.TorRef.exists_isPhiDiv_of_cones | exact GlobalTheory.TorRef.exists_isPhiDiv_of_cones | (intros; apply GlobalTheory.TorRef.exists_isPhiDiv_of_cones <;> assumption)
+  exact @GlobalTheory.TorRef.exists_isPhiDiv_of_cones

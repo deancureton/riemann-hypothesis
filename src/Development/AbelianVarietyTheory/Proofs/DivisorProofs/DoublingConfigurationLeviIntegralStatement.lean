@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.doubling_configuration_levi_integral : GlobalTheor
     ∀ Φ ∈ PolData B G.M, ∀ h,
       ∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ‖thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (m l g₀ * k.1, h) Φ)))‖ₑ *
         ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK < ⊤ := by
-  first | exact @GlobalTheory.XTermConv.conv | exact GlobalTheory.XTermConv.conv | (intros; apply GlobalTheory.XTermConv.conv <;> assumption)
+  exact @GlobalTheory.XTermConv.conv

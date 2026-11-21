@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NonNormWeilConstantValue
-import Mathlib
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
 import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.non_norm_weil_constant_value : (∀ (F E : Type) [
   ∃ n₁ ≤ N₀, ∃ n₂ ≤ N₀,
     (∫ u in (valBall E n₁ : Set E), (χ (Algebra.norm F u) : ℂ) ∂muE E χ) +
       ((modulus (a : F) : ℝ) : ℂ) * ∫ u in (valBall E n₂ : Set E), (χ ((a : F) * Algebra.norm F u) : ℂ) ∂muE E χ = 0 := by
-  first | exact @GlobalTheory.CompanionTheory.WeilGaussNon.ball_integrals_cancel | exact GlobalTheory.CompanionTheory.WeilGaussNon.ball_integrals_cancel | (intros; apply GlobalTheory.CompanionTheory.WeilGaussNon.ball_integrals_cancel <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WeilGaussNon.ball_integrals_cancel

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspidalNormLeOfAlternatingSumScaledUnipFD
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
 import GroundTheory.AutomorphicForms.ReductionSiegel
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.cuspidal_norm_le_of_alternatingSum_scaledUnipFD : 
       (∀ y : Fin m → BlockIx a r → Ad E, (∀ i, y i ∈ GroundTheory.Automorphic.scaledUnipFD E a r M) →
         ‖∑ ε : Fin m → Bool, (GroundTheory.Automorphic.altSign ε : ℂ) * φ (unip (GroundTheory.Automorphic.altPoint y ε) * x)‖ ≤ B) →
       ‖φ x‖ ≤ B := by
-  first | exact @GlobalTheory.CuspTail.norm_le_of_altSum_scaledUnipFD | exact GlobalTheory.CuspTail.norm_le_of_altSum_scaledUnipFD | (intros; apply GlobalTheory.CuspTail.norm_le_of_altSum_scaledUnipFD <;> assumption)
+  exact @GlobalTheory.CuspTail.norm_le_of_altSum_scaledUnipFD

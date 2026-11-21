@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_weight_data_integral : GlobalTheory.Publish
         ∀ (t : D.what₂.Tau) (sh : ℂ) (lam : Fin D.R.nV → ℤ),
           D.naut.infG D.naut.etaT (embT D t) = {sh} → NX.HWAtF (NX.cE D) (wt.rhoW i j b).dual (kEmbT D T i b t) lam →
           NG.infOf lam = NG.paramV D.R (D.hc t) ⟨j - 1, by omega⟩ sh := by
-  first | exact @GlobalTheory.HeightCounting.FormsStep.wt_weights | exact GlobalTheory.HeightCounting.FormsStep.wt_weights | (intros; apply GlobalTheory.HeightCounting.FormsStep.wt_weights <;> assumption)
+  exact @GlobalTheory.HeightCounting.FormsStep.wt_weights

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFiniteDecompositionStable
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.schwartz_finite_decomposition_stable : GlobalTheor
       ∃ (n : ℕ) (g : Fin n → (Fin a × Fin (a + a') → FiniteAdeleRing (𝓞 F) F) → ℂ) (S : Set (SInf F (Fin a × Fin (a + a'))))
         (f : K → Fin n → SInf F (Fin a × Fin (a + a'))), (∀ i, g i ∈ SB (Fin a × Fin (a + a') → FiniteAdeleRing (𝓞 F) F)) ∧
         IsCompact S ∧ (∀ k i, f k i ∈ S) ∧ ∀ k : K, om (k.1, 1) Ψ = ∑ i, pureA F (f k i) (g i) := by
-  first | exact @GlobalTheory.OrbitDecomp.exists_orbit_decomp | exact GlobalTheory.OrbitDecomp.exists_orbit_decomp | (intros; apply GlobalTheory.OrbitDecomp.exists_orbit_decomp <;> assumption)
+  exact @GlobalTheory.OrbitDecomp.exists_orbit_decomp

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeASchwartzTripleIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_schwartz_triple_identity : GlobalThe
         ¬ (∀ i v, evFin F v ((m : AF F) * GlobalTheory.IdeleDecay.coord F E l.1 i) ∈ v.adicCompletionIntegers F) →
         ∀ (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (y : Fin b × Fin (b + a') → AF F),
           e (G.M.co.rho B.ψ (shiftA H H' l) (pureA F f g)) y = 0 := by
-  first | exact @GlobalTheory.ConeFinVanish.ev_shiftA_pure_eq_zero | exact GlobalTheory.ConeFinVanish.ev_shiftA_pure_eq_zero | (intros; apply GlobalTheory.ConeFinVanish.ev_shiftA_pure_eq_zero <;> assumption)
+  exact @GlobalTheory.ConeFinVanish.ev_shiftA_pure_eq_zero

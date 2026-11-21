@@ -38,4 +38,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_archimedean : GlobalTheory
       ∀ (p : UG (cA σ) (dbl (incM F X.J))) (t : GL (Fin n) (AE F E)),
         ((p : GL (Fin n ⊕ Fin n) (AE F E)) : Matrix (Fin n ⊕ Fin n) (Fin n ⊕ Fin n) (AE F E)) * diagCols (Fin n) = diagCols (Fin n) * t.1 →
         cd p = 1 := by
-  first | exact @GlobalTheory.MixWSiegel.siegel_scalar_eq_one | exact GlobalTheory.MixWSiegel.siegel_scalar_eq_one | (intros; apply GlobalTheory.MixWSiegel.siegel_scalar_eq_one <;> assumption)
+  exact @GlobalTheory.MixWSiegel.siegel_scalar_eq_one

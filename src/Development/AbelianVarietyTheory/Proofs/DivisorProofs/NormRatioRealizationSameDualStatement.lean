@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.norm_ratio_realization_same_dual : GlobalTheory.Pu
     ∀ f, rdAt p w j hρ ν f = ρ.theta ((Fm.ex x hx i).nch.twI w) j ((Fm.ex x hx i).nch.sd w) h P →
       ∃ c : ℂ, (∃ n : ℕ, n ≠ 0 ∧ c ^ n = 1) ∧
         rdAt p w j hρ' ν f = c • ρ.theta ((Fm.ex x hx i).nch.twI w) j ((Fm.ex x hx i).nch.sd w) h P := by
-  first | exact @GlobalTheory.BigOn.Exp.conjRoot | exact GlobalTheory.BigOn.Exp.conjRoot | (intros; apply GlobalTheory.BigOn.Exp.conjRoot <;> assumption)
+  exact @GlobalTheory.BigOn.Exp.conjRoot

@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_datum_field_containment : ∀ (D : D7) (K : IntermediateField ℚ ℂ), FiniteDimensional ℚ K → ∃ D' : D7, D'.R = D.R ∧ HEq D'.host D.host ∧ K ≤ GlobalTheory.ShFam.fieldLL D' := by
-  first | exact @GlobalTheory.FieldEnlarge.exists_record_le_fieldLL | exact GlobalTheory.FieldEnlarge.exists_record_le_fieldLL | (intros; apply GlobalTheory.FieldEnlarge.exists_record_le_fieldLL <;> assumption)
+  exact @GlobalTheory.FieldEnlarge.exists_record_le_fieldLL

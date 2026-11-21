@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentThirteenth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_thirteenth : GlobalTheor
     ∀ γ : UA σ X.J, γ ∈ unip σ X H → γ ∈ ratU σ X.J → ∀ Ψ ∈ schA F (Fin n × Fin d),
       thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) (om (γ, 1) Ψ))) =
         thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) Ψ)) := by
-  first | exact @GlobalTheory.UnipHermRatInv.main | exact GlobalTheory.UnipHermRatInv.main | (intros; apply GlobalTheory.UnipHermRatInv.main <;> assumption)
+  exact @GlobalTheory.UnipHermRatInv.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaLocalSupportIdempotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.theta_local_support_idempotent : ∀ {D : D7} {T :
     IsBottomTri W i j X → ∀ (t : T) (N : ℕ) (e : AE D) (P : Pl D.host.E), Formalism.L2.NTheta.IsIdemAt e P → ((N : ℕ) : 𝓞 D.host.E) ∉ P.asIdeal →
     ∀ h ∈ GfC WW, Formalism.L2.Theta.SuppAt e WW h →
       GlobalTheory.MovedAlg.IsAlgComb W.ψ (GlobalTheory.Grid.neg A) WW X.vac (X.ω t (1, h) X.vac) := by
-  first | exact @GlobalTheory.SplitVacAlg.split_algComb | exact GlobalTheory.SplitVacAlg.split_algComb | (intros; apply GlobalTheory.SplitVacAlg.split_algComb <;> assumption)
+  exact @GlobalTheory.SplitVacAlg.split_algComb

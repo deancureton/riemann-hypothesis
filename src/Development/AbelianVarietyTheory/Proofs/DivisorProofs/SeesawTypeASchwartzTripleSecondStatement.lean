@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeASchwartzTripleSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_schwartz_triple_second : GlobalTheor
           ∃ j, ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')),
             G.M.co.rho B.ψ (shiftA H H' l) (pureA F f g) =
               G.M.co.rho B.ψ (((pairA F 1 0 : AF F) • l.1) • Matrix.vecMulVec (incV F H.x) (incV F H'.y)) (pureA F f (gs j)) := by
-  first | exact @GlobalTheory.FinFinite.rho_shiftA_pureA_finite | exact GlobalTheory.FinFinite.rho_shiftA_pureA_finite | (intros; apply GlobalTheory.FinFinite.rho_shiftA_pureA_finite <;> assumption)
+  exact @GlobalTheory.FinFinite.rho_shiftA_pureA_finite

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentEighth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_eighth : GlobalTheory.Th
     ∀ (V₁ : Spc F E d₂) (M₁ : Model σ V₁ W) (e : Fn F n d →ₗ[ℂ] Fn F d₂ d),
       V₁.J = H.ιᵀ * X.J * H.ι.map σ → M₁.IsGood B.ψ → IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
     ∀ w : Fin d → E, w ≠ 0 → form σ W.J w w = 0 → ∃ γ ∈ ratU σ W.J, mat γ *ᵥ incV F w = incV F H'.x := by
-  first | exact @GlobalTheory.ThKWitt.exists_ratU_to_plane | exact GlobalTheory.ThKWitt.exists_ratU_to_plane | (intros; apply GlobalTheory.ThKWitt.exists_ratU_to_plane <;> assumption)
+  exact @GlobalTheory.ThKWitt.exists_ratU_to_plane

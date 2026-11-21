@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FormallyUnramifiedUniformization
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.formally_unramified_uniformization : ∀ (E : Type
     ((residue R).comp (Scheme.stalkClosedPointTo ξ).hom).FormallyUnramified → P.TorsionIso →
     ∀ y : Sp (FractionRing R) ⟶ Xo.XF c, y ≫ Y.j = jK R ≫ ξ →
     Module.Projective (𝓞 E) P.D.toPre.X ∧ Module.finrank (𝓞 E) P.D.toPre.X ≤ min D.p D.q := by
-  first | exact @GlobalTheory.ChartCharRank.projective_and_finrank_le_min | exact GlobalTheory.ChartCharRank.projective_and_finrank_le_min | (intros; apply GlobalTheory.ChartCharRank.projective_and_finrank_le_min <;> assumption)
+  exact @GlobalTheory.ChartCharRank.projective_and_finrank_le_min

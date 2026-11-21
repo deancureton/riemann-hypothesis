@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomTriangleOpenSubgroupField
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_open_subgroup_field : ∀ {D : D7}
     IsBottomTri W i j X →
     ∃ (J : Subgroup (GA D WW)) (M₂ : IntermediateField ℚ ℂ), IsOpen (J : Set (GA D WW)) ∧ FiniteDimensional ℚ M₂ ∧
       ∀ t, ∀ κ ∈ J, κ ∈ GfC WW → ∃ ℓ ∈ M₂, ∀ P x, X.I W.ψ W.θ t P (x * κ) = ℓ * X.I W.ψ W.θ t P x := by
-  first | exact @GlobalTheory.BottomLevel.rightTranslate_level | exact GlobalTheory.BottomLevel.rightTranslate_level | (intros; apply GlobalTheory.BottomLevel.rightTranslate_level <;> assumption)
+  exact @GlobalTheory.BottomLevel.rightTranslate_level

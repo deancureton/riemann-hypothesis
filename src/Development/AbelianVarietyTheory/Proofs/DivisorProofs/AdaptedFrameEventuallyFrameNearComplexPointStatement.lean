@@ -9,4 +9,4 @@ open GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts G
 open scoped Matrix ContDiff ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adaptedFrame_eventually_frame_near_complex_point : ∀ (F : Type) [Field F] (σ : F →+* ℂ) (X : Var F) (ι : Type) [Finite ι] (m k : ι → ℕ) (E : Fr (ratOf X) m k) (y : CxPts X.str σ), ∀ A ∈ E.S (under y), ∀ᶠ z in 𝓝 y, A ∈ E.S (under z) := by
-  first | exact @GlobalTheory.ChernCalc.frame_eventually_near | exact GlobalTheory.ChernCalc.frame_eventually_near | (intros; apply GlobalTheory.ChernCalc.frame_eventually_near <;> assumption)
+  exact @GlobalTheory.ChernCalc.frame_eventually_near

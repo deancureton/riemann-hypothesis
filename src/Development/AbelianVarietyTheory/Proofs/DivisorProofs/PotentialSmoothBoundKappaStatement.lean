@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PotentialSmoothBoundKappa
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.potential_smooth_bound_kappa : ∀ {F : Type} [Fie
       0 ≤ ∑ i, t i * (Real.pi / 2 * curvMet (m i (I.ε a)) c y ξ) + c.levi g y ξ +
         κ * c.levi (fun z => (M.Om a).φ x ((I.pt a).symm z)) y ξ) →
     IsPsh (M.A a) (P a + LocPot.ofFun (fun z => g (I.pt a z)) + (M.Om a).rsmul κ) := by
-  first | exact @GlobalTheory.PshTrans.isPsh_of_levi_algChart | exact GlobalTheory.PshTrans.isPsh_of_levi_algChart | (intros; apply GlobalTheory.PshTrans.isPsh_of_levi_algChart <;> assumption)
+  exact @GlobalTheory.PshTrans.isPsh_of_levi_algChart

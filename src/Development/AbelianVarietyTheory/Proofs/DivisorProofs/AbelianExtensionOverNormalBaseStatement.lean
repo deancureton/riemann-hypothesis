@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianExtensionOverNormalBase
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
 open CategoryTheory AlgebraicGeometry Limits MonoidalCategory CartesianMonoidalCategory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.abelian_extension_over_normal_base : GlobalTheory.
     ∃ P : LB (A ⊗ A).left, IsSelfDual c i P ∧ ∀ m : (Q.A ⊗ Q.A).left ⟶ (A ⊗ A).left,
       m ≫ (fst A A).left = (fst Q.A Q.A).left ≫ φ → m ≫ (snd A A).left = (snd Q.A Q.A).left ≫ φ →
       LBIso (P.pull m) (abelian₂ Q.A Q.L) := by
-  first | exact @GlobalTheory.SelfDualSpread.exists_selfDual | exact GlobalTheory.SelfDualSpread.exists_selfDual | (intros; apply GlobalTheory.SelfDualSpread.exists_selfDual <;> assumption)
+  exact @GlobalTheory.SelfDualSpread.exists_selfDual

@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.eigen_gram_smooth : ∀ (D : D7) (A : Amb D) (N j 
     (G : EigMet s.T.Z σ) (T : Set (CxPts (genStr s.T.Z) σ)), IsOpen T → G.SmoothOn (manifold s.T.Z σ) T →
     ∀ (n : ℕ) (U : Set (V n)) (a : V n → CxFr s.T.Z σ), IsOpen U → HolFam U a → ContinuousOn (fun u => (a u).1) U →
     ∀ u ∈ U, (a u).1 ∈ T → ∀ (τ : D.host.E →+* ℂ) i k, ContDiffAt ℝ (∞ : WithTop ℕ∞) (fun v => eigGram G a τ v i k) u := by
-  first | exact @GlobalTheory.GramSmooth.contDiffAt_eigGram | exact GlobalTheory.GramSmooth.contDiffAt_eigGram | (intros; apply GlobalTheory.GramSmooth.contDiffAt_eigGram <;> assumption)
+  exact @GlobalTheory.GramSmooth.contDiffAt_eigGram

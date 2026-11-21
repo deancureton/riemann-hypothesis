@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.polarization_base_change_models : ∀ (E : Type) [
     (m : ℕ) (b : O →+* O') (σ : 𝓞 E ≃+* 𝓞 E) (π : Z'.X ⟶ Z.X) (hπ : π ≫ Z.s = Z'.s ≫ spMap b)
     (mu : TwMap σ Z'.t Z.t π), GlobalTheory.IsAmpleLB (polOf Z m BD) → GlobalTheory.IsAmpleLB (polOf Z' m BD') →
     BD'.idealSheaf = BD.idealSheaf.comap π → IsFinite (pullback.lift π Z'.s hπ) := by
-  first | exact @GlobalTheory.PolFin.isFinite_lift | exact GlobalTheory.PolFin.isFinite_lift | (intros; apply GlobalTheory.PolFin.isFinite_lift <;> assumption)
+  exact @GlobalTheory.PolFin.isFinite_lift

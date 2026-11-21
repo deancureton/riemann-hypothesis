@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneStabilizerAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.skew_plane_stabilizer_action : ∀ (F E : Type) [F
         Continuous π ∧ Continuous T ∧
         ∃ A : Matrix (Fin n₁) (Fin n) E, A * H.ι = 1 ∧ ∀ p : P, (matHom _ σ _ (π p)).1 =
           GlobalTheory.SiegelSet.adMat F A * (matHom _ σ _ (p : GAd σ (c₀ • W.J.map σ))).1 * GlobalTheory.SiegelSet.adMat F H.ι := by
-  first | exact @GlobalTheory.StabLine.exists_stab_decomp | exact GlobalTheory.StabLine.exists_stab_decomp | (intros; apply GlobalTheory.StabLine.exists_stab_decomp <;> assumption)
+  exact @GlobalTheory.StabLine.exists_stab_decomp

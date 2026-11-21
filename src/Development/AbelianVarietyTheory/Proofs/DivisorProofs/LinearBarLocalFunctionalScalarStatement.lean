@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarLocalFunctionalScalar
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.linear_bar_local_functional_scalar : GlobalTheory.
       (∀ φ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F B.v₁),
         Acts (evFin F B.v₁) (om' (1, h)) φ φ₁ → ι φ₁ = c • fun Y => ι φ (Y * (mat h).map (piW B.τ₁))) →
       ‖c‖ = ‖GlobalTheory.SplitFlip.apow (GlobalTheory.SplitFlip.gdet (GlobalTheory.LocalUnitSubgroupClosure.cmpGL B.τ₁ h)) ((a' : ℂ) / 2)‖ := by
-  first | exact @GlobalTheory.WRightNorm.norm_scalar_eq | exact GlobalTheory.WRightNorm.norm_scalar_eq | (intros; apply GlobalTheory.WRightNorm.norm_scalar_eq <;> assumption)
+  exact @GlobalTheory.WRightNorm.norm_scalar_eq

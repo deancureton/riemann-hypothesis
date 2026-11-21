@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.TMatBlockDiagDetFactors
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.DetMemSubring
 open AlgebraicGeometry CategoryTheory NumberField Matrix
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.tMat_blockDiag_det_factors : ∀ {Ψ : Type} {p q 
     IsBlockDiag p (tMat Ts τ) ∧ (tMat Ts τ).det = (Ts (.inr τ)).det * (Ts (.inl τ)).det ∧
       ∀ i : Fin (p + q), detFac p i (tMat Ts τ) =
         (if p ≤ (i : ℕ) + 1 then (Ts (.inl τ)).det else 1) * (if (i : ℕ) + 1 = p + q then (Ts (.inr τ)).det else 1) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.tMat_main | exact GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.tMat_main | (intros; apply GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.tMat_main <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.tMat_main

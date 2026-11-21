@@ -12,4 +12,4 @@ open GlobalTheory.FormTies
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_levelChangeAction_on_cuspForms : ∀ (D : D7) (T : Top D) (h : LawsP T) (j : ℕ) (hj : InR D j) (w : WeightFamilies.Wt D j) (P : Type) (ℓ : P → (LaMod (T.Q.Dw j) T.Q.l ≃ₗ[𝓞 D.host.E] LaMod (T.Q.Dw j) T.Q.l)), ∃ act, IsLevAct T h j w ℓ act := by
-  first | exact @GlobalTheory.FormTies.exists_isLevAct | exact GlobalTheory.FormTies.exists_isLevAct | (intros; apply GlobalTheory.FormTies.exists_isLevAct <;> assumption)
+  exact @GlobalTheory.FormTies.exists_isLevAct

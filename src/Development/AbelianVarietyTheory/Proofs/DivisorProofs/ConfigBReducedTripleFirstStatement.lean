@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBReducedTripleFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_levi_embedding_swap_shear_of_isAdapted : �
     ∀ (e : ℕ) (W₂ : Spc F E e) (H₂ : Plane E (a + b) e) (i₀ i₁ : ℕ), H₂.IsAdapted σ B (reG G₁ V V' W₁').W W₂ i₀ i₁ →
     ∃ emb : UA σ G₁.W.J → UA σ G.W.J, (∀ h₁, IsLevi H' 1 h₁ (emb h₁)) ∧ (∃ w : UA σ G.W.J, IsSwap H' H₂ w) ∧
       ∃ nn : AE F E → UA σ G.W.J, IsShear H' H₂ nn := by
-  first | exact @GlobalTheory.ConeSmallMidJB.exists_levi_swap_shear | exact GlobalTheory.ConeSmallMidJB.exists_levi_swap_shear | (intros; apply GlobalTheory.ConeSmallMidJB.exists_levi_swap_shear <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.exists_levi_swap_shear

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.witt_frame_dual_so_bound : ∀ (F E : Type) [Field
           ∀ S s, GlobalTheory.StdPar.IsCuspExp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) s →
             (∀ k ∈ S, ∀ i ≤ k, i ∈ S) → ∀ i ∈ S, ∃ j : ℕ, j ≤ i.val ∧
               ((s i).re = (1 - (a : ℝ)) / 2 + j ∨ (s i).re = (1 - (a' : ℝ)) / 2 + j) := by
-  first | exact @GlobalTheory.ThK.RealPartAlt.realPart | exact GlobalTheory.ThK.RealPartAlt.realPart | (intros; apply GlobalTheory.ThK.RealPartAlt.realPart <;> assumption)
+  exact @GlobalTheory.ThK.RealPartAlt.realPart

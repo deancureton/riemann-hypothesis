@@ -188,7 +188,6 @@ theorem inputs_from_selmer_inj : SelmerInjConditions := by
   exact selmer_inj_column_place O A T' G M L V r χ (D (colIdx l)) iL qV tens a1 a2 a3 a4 a5 a6 a7 (Ff l)
     (j (colIdx l)) (κ l) (κz l) b1 b2 b3 b4 b5
 
-set_option maxHeartbeats 4000000 in
 theorem theorem_n_five_top_variant : WachTwistTheoremVariant := by
   intro O _ _ _ X X' T T' Z p q b ha hb d _ _ R' _ hc Tc _ _ _ _ G _ r χ E e₁ δ ι _ _ colIdx hinj
     D j e' Kc k0 hEE hee hpts g₀ n hspan π' ρπ hρπ t ht bl hbl ρk hsurj hblk _ _ _ _ hcard hcard1

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbeddingSectionCompatibility
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.embedding_section_compatibility : ∀ (E : Type) [
     (yL : Sp L ⟶ Xo'.XF c') (σ : E →+* ℂ) (s : 𝓞 E →+* L), (∀ a, algebraMap c.F L (embK c σ a) = s a) →
     ∀ w : Sp (DualNumber L) ⟶ Y.oF.t.G.left, IsTanAtG Y.oF.t yL w → IsEigG Y.t s (w ≫ Y.m.φ) →
       IsTanAt (yL ≫ r ≫ pullback.fst _ _) (w ≫ ν.φ) ∧ IsEigAt c σ (w ≫ ν.φ) := by
-  first | exact @GlobalTheory.FlatModel.tan_eig_push | exact GlobalTheory.FlatModel.tan_eig_push | (intros; apply GlobalTheory.FlatModel.tan_eig_push <;> assumption)
+  exact @GlobalTheory.FlatModel.tan_eig_push

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaKernelArchimedeanUnipotentSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.theta_kernel_archimedean_unipotent_support : ∀ (
       (@MeasureTheory.integral _ ℂ _ _ (borel _) μ fun x =>
           om' (g, h) Φ x * starRingEnd ℂ (G.M'.co.rho B.ψ u (om' (g, h) Φ) x)) =
         @MeasureTheory.integral _ ℂ _ _ (borel _) μ fun x => Φ x * starRingEnd ℂ (G.M'.co.rho B.ψ u Φ x) := by
-  first | exact @GlobalTheory.CptCoeff.matrix_coeff | exact GlobalTheory.CptCoeff.matrix_coeff | (intros; apply GlobalTheory.CptCoeff.matrix_coeff <;> assumption)
+  exact @GlobalTheory.CptCoeff.matrix_coeff

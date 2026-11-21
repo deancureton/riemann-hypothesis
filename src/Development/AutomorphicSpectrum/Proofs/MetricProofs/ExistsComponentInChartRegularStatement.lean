@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsComponentInChartRegular
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.DetMemSubring
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameCoeffsRegularInChart
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecializesOfUnits
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_component_in_chart_regular : ∀ {X : Schem
     (hQ : Q.IsPrime) (hle : mCoordIdeal y ≤ Q) (c : ∀ k, J k)
     (hc : ∀ k, (MvPolynomial.X ⟨k, c k⟩ : MRing J) ∉ Q),
     ∃ P : Cpt ξ, InChart ξ (seg y) c P ∧ ∀ a ∈ regAt ξ P, RegAt y Q a := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.exists_point_of_prime | exact GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.exists_point_of_prime | (intros; apply GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.exists_point_of_prime <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.exists_point_of_prime

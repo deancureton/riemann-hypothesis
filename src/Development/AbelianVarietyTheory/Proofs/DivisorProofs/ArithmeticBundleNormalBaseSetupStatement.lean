@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticBundleNormalBaseSetup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagAgree
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.arithmetic_bundle_normal_base_setup : Hypotheses2 
     G.fromSpecStalk (genericPoint G) ≫ πG = spMap φ ≫ (O.var c).X.fromSpecStalk (genericPoint (O.var c).X) ∧
     ∀ a (hr : rkB D.what₂.Tau O.N O.j a = O.S.Dw.mult (embB D a)),
       GlobalTheory.FlagCov.FlagAgree (fun a => (h a).isVB) jB πB u π₀ fl₀ j φ jG a hr := by
-  first | exact @GlobalTheory.BcRead.classifyingMap | exact GlobalTheory.BcRead.classifyingMap | (intros; apply GlobalTheory.BcRead.classifyingMap <;> assumption)
+  exact @GlobalTheory.BcRead.classifyingMap

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CentralFrameSplitPlaceNontrivial
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.central_frame_split_place_nontrivial : ∀ hL : Gl
       (b : GL (Fin (w.st Z).toD7.R.nV) (Formalism.L2.DIV.kP s'.w)), s'.w ∈ t.r.z.R.Pg → GlobalTheory.CenFrame.IsResidue s' φ →
         GlobalTheory.CenFrame.FrameRed (GlobalTheory.FrameBlockDiagonal.rankV (w.st Z).toD7 k) (ad.PV k) (t.r.z.R.βV k) s' φ b →
         b ∈ Formalism.L2.DIV.blockTri (Formalism.L2.DIV.blk2 (w.st Z).toD7.R.r) := by
-  first | exact @GlobalTheory.FrameBlockTriangular.blockTri_at | exact GlobalTheory.FrameBlockTriangular.blockTri_at | (intros; apply GlobalTheory.FrameBlockTriangular.blockTri_at <;> assumption)
+  exact @GlobalTheory.FrameBlockTriangular.blockTri_at

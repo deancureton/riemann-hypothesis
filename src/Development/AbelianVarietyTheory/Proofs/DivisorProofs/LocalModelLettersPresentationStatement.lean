@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_model_letters_presentation : ∀ {E : Type} 
   (h : B.X ⟶ Z.X) {r : ℕ} (x : Fin r → Letter Dw) (oo : EPres B (𝓞 E)) (π : Γ(B.X, ⊤)) (u : oo.E ⟶ oo.E'),
   u ≫ oo.ψ = smulA _ π → IsEqLatPres Z h (fun k => x k.rev) true oo →
     ∃ (lw : EPres B (𝓞 E)) (wl : lw.E ⟶ lw.E'), lw.ψ ≫ wl = smulA _ π ∧ IsEqLatPres Z h x false lw := by
-  first | exact @GlobalTheory.ChainPts.DualPres.exists_dual_pres | exact GlobalTheory.ChainPts.DualPres.exists_dual_pres | (intros; apply GlobalTheory.ChainPts.DualPres.exists_dual_pres <;> assumption)
+  exact @GlobalTheory.ChainPts.DualPres.exists_dual_pres

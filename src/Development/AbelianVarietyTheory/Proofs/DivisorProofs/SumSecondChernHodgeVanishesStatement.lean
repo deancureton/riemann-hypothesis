@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.sum_second_chern_hodge_vanishes : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (x : ToroidalCompactificationData s) (σ : κ.c.F →+* ℂ) (n : ℕ) (U : Set (V n)) (a : V n → CxFr s.T.Z σ), IsOpen U → HolFam U a → ContinuousOn (fun u => (a u).1) U → ∀ u ∈ U, Inner (a u).1 → ∀ ξ₁ η₁ ξ₂ η₂ : V n, ∑ τ : D.host.E →+* ℂ, chTwo (eigGram (x.hodge σ) a τ) u ξ₁ η₁ ξ₂ η₂ = 0 := by
-  first | exact @GlobalTheory.HodgeChTwo.sum_chTwo_hodge | exact GlobalTheory.HodgeChTwo.sum_chTwo_hodge | (intros; apply GlobalTheory.HodgeChTwo.sum_chTwo_hodge <;> assumption)
+  exact @GlobalTheory.HodgeChTwo.sum_chTwo_hodge

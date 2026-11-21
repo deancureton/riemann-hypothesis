@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.exists_degree_bound_fourier_lifted : ∀ {D : D7} 
         ∃ (m : ℕ) (r : Fin m → ℂ) (U : Fin m → GlobalTheory.NormSum.Tup D A'.rank WW.rank n), (∀ p, IsAlgebraic ℚ (r p)) ∧
           ∫ g, X.ker' W.ψ W.θ t (MvPolynomial.monomial k 1) h (x * (g : GA D A')) ∂κ =
             ∑ p, r p * X.ker' W.ψ W.θ t (GlobalTheory.NormSum.minorPol D (U p)) h x := by
-  first | exact @GlobalTheory.RealProj.avg_monomial | exact GlobalTheory.RealProj.avg_monomial | (intros; apply GlobalTheory.RealProj.avg_monomial <;> assumption)
+  exact @GlobalTheory.RealProj.avg_monomial

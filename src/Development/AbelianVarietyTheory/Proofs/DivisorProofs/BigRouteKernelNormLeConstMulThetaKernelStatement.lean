@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BigRouteKernelNormLeConstMulThetaKernel
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.bigRoute_kernel_norm_le_const_mul_thetaKernel : �
       (χ χ' : (AE D)ˣ →* Circle) (Φ : WO (G.V (.grid (i + 1) (j + 1))) (GlobalTheory.Doubling.hsum (G.V (.grid i (j + 1))) (G.V (.grid (i + 1) j))) → ℂ) (C₀ : ℝ),
       GlobalTheory.Grid.IsWeil W.ψ ε _ _ χ χ' ω ∧ IsThetaFunO W.ψ (GlobalTheory.Grid.sgn ε (G.V (.grid (i + 1) (j + 1)))) _ Φ ∧
       ∀ g u, ‖kerBig W Θ g g₁ u‖ ≤ C₀ * ‖thetaKO ω u (GlobalTheory.SquareComm.blk _ _ (g, g₁)) Φ‖ := by
-  first | exact @GlobalTheory.BigRouteIdent.kerBig_norm_le_thetaKO | exact GlobalTheory.BigRouteIdent.kerBig_norm_le_thetaKO | (intros; apply GlobalTheory.BigRouteIdent.kerBig_norm_le_thetaKO <;> assumption)
+  exact @GlobalTheory.BigRouteIdent.kerBig_norm_le_thetaKO

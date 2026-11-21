@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.limit_family_relabel : Hypotheses2 → HypothesesH → OnObj fun _ O _ _ _ _ => ∀ Φ : ℝ → Fn O.Y, LimFam Φ → Relabel Φ := by
-  first | exact @GlobalTheory.Mean4O.RelabelObj.relabel_onObj | exact GlobalTheory.Mean4O.RelabelObj.relabel_onObj | (intros; apply GlobalTheory.Mean4O.RelabelObj.relabel_onObj <;> assumption)
+  exact @GlobalTheory.Mean4O.RelabelObj.relabel_onObj

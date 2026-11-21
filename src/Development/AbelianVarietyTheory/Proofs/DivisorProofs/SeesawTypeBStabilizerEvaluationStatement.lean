@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBStabilizerEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_stabilizer_evaluation : GlobalTheory
       ∀ (k : K) (l : (AE F E)ˣ), ‖coneInt B G.M' om' e' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (pure f φ) k.1 l y‖ ≤
         g l * (if ∀ v : Pl F, compFin F E v (l : AE F E) ∈ locId v 𝔞 then (1 : ℝ) else 0) *
           (absE F E l : ℝ) ^ ((a - (b + 2)) / 2 + 1) := by
-  first | exact @GlobalTheory.ConeMajorant.coneInt_pure_le | exact GlobalTheory.ConeMajorant.coneInt_pure_le | (intros; apply GlobalTheory.ConeMajorant.coneInt_pure_le <;> assumption)
+  exact @GlobalTheory.ConeMajorant.coneInt_pure_le

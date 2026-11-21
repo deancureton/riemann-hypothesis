@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_first_variable : GlobalTheory.FunPr.
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ h t g₁ m, IsLevi H t g₁ m → ∀ u ∈ unip σ X H, ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (u * m, h) Φ) = ((χW t : ℂ) * (((absE F E t : ℝ) ^ ((d : ℝ) / 2) : ℝ) : ℂ)) • om₁ (g₁, h) (e Φ) := by
-  first | exact @GlobalTheory.ThKMixX.mixed_model_plane_X | exact GlobalTheory.ThKMixX.mixed_model_plane_X | (intros; apply GlobalTheory.ThKMixX.mixed_model_plane_X <;> assumption)
+  exact @GlobalTheory.ThKMixX.mixed_model_plane_X

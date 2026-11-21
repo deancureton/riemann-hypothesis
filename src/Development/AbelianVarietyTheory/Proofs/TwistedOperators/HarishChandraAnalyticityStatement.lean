@@ -15,4 +15,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.harish_chandra_analyticity : GlobalTheory.Published.IrreducibleUnitaryAdmissible → GlobalTheory.Published.KFiniteCoefficientsAnalytic → GlobalTheory.Published.HarishChandraAnalyticity := by
-  first | exact @GlobalTheory.Published.harishChandraAnalyticity_of_admissible_of_analytic | exact GlobalTheory.Published.harishChandraAnalyticity_of_admissible_of_analytic | (intros; apply GlobalTheory.Published.harishChandraAnalyticity_of_admissible_of_analytic <;> assumption)
+  exact @GlobalTheory.Published.harishChandraAnalyticity_of_admissible_of_analytic

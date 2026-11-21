@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AlgebraicModelInvariantSub
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.algebraic_model_invariant_sub : GlobalTheory.FunPr
     ∃ U : Submodule ℂ ((Fin a × Fin (a + a') → AF F) → ℂ), FiniteDimensional ℂ U ∧
       U ≤ GlobalTheory.SquareAgree.algD Γ.M Bs.ψ Bs.emb ∧ ΦD ∈ U ∧
       ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf σ Γ.V Bs.emb, ∀ x ∈ U, om (k, 1) x ∈ U := by
-  first | exact @GlobalTheory.SquareAgree.KFinAlg.algD_kFinite | exact GlobalTheory.SquareAgree.KFinAlg.algD_kFinite | (intros; apply GlobalTheory.SquareAgree.KFinAlg.algD_kFinite <;> assumption)
+  exact @GlobalTheory.SquareAgree.KFinAlg.algD_kFinite

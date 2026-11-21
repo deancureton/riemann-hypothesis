@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardCharHalfSymplecticMovedFinitePointTrivia
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharLem
 
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.standardChar_halfSymplectic_movedFinitePoint_trivi
   ∀ z : Matrix (Fin d) (Fin a) D.host.E,
   ∃ n : ℕ, 0 < n ∧ ∀ z', Formalism.MainNotions.StandardLatticesGL3.CloseTo D cc n (x : GL (Fin a) (Formalism.MainNotions.StandardLatticesGL3.AE D)) (y : GL (Fin d) (Formalism.MainNotions.StandardLatticesGL3.AE D)) z z' →
     ψ (symplOH S T (finPt hS hT r z') (actO S T g h (finPt hS hT r z) - finPt hS hT r z')) = 1 := by
-  first | exact @GlobalTheory.MovedTrChar.psi_sympl_moved_eq_one | exact GlobalTheory.MovedTrChar.psi_sympl_moved_eq_one | (intros; apply GlobalTheory.MovedTrChar.psi_sympl_moved_eq_one <;> assumption)
+  exact @GlobalTheory.MovedTrChar.psi_sympl_moved_eq_one

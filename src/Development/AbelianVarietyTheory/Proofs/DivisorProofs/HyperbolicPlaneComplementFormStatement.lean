@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_form : ∀ {F E : Type
     (∀ u, form σ Y.J (H.ι *ᵥ u) H.x = 0 ∧ form σ Y.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * Y.J * H.ι.map σ = Y₁.J → Y₁.J.det ≠ 0 →
     ∃ M : UA σ Y₁.J → UA σ Y.J, Continuous M ∧ (∀ h₁, IsLevi (W₁ := Y₁) H 1 h₁ (M h₁)) ∧
       ∀ γ ∈ ratU σ Y₁.J, M γ ∈ ratU σ Y.J := by
-  first | exact @GlobalTheory.LeviPlaneSection.leviSection | exact GlobalTheory.LeviPlaneSection.leviSection | (intros; apply GlobalTheory.LeviPlaneSection.leviSection <;> assumption)
+  exact @GlobalTheory.LeviPlaneSection.leviSection

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PartialFourierOpenSubgroupSupport
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.WeilM GlobalTheory.AdelicU Filter Topology
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.partial_fourier_open_subgroup_support : ∀ {F : T
         (fun i => (l.1 i).2) ∈ Mo → (fun i => (l.2 i).2) ∈ Mo →
         @MeasureTheory.integral _ ℂ _ _ (borel _) μ (fun x => Φ x * starRingEnd ℂ (GlobalTheory.WeilM.schr ψ (w + l) Φ x)) =
           @MeasureTheory.integral _ ℂ _ _ (borel _) μ (fun x => Φ x * starRingEnd ℂ (GlobalTheory.WeilM.schr ψ w Φ x)) := by
-  first | exact @GlobalTheory.CoefFinPer.coef_transl_fin | exact GlobalTheory.CoefFinPer.coef_transl_fin | (intros; apply GlobalTheory.CoefFinPer.coef_transl_fin <;> assumption)
+  exact @GlobalTheory.CoefFinPer.coef_transl_fin

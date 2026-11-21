@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairRestrictsToAdaptedPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_restricts_to_adapted_plane : GlobalTheory.ThK
     ∀ u ∈ unip σ X H, ∃ v : Fin d₂ → AE F E, (∃ a : AE F E, mat u⁻¹ *ᵥ incV F H.y = incV F H.y + incM F H.ι *ᵥ v + a • incV F H.x) ∧
       ∀ Ψ ∈ schA F (Fin n × Fin d), e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) (om (u, 1) Ψ)) =
         M₁.co.rho B.ψ (Matrix.vecMulVec v (incV F H'.x)) (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F H'.x)) Ψ)) := by
-  first | exact @GlobalTheory.ThK.UnipXStep.ev_step | exact GlobalTheory.ThK.UnipXStep.ev_step | (intros; apply GlobalTheory.ThK.UnipXStep.ev_step <;> assumption)
+  exact @GlobalTheory.ThK.UnipXStep.ev_step

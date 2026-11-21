@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_of_pair : ∀ (F E : Type)
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ →
       ∀ t : (AE F E)ˣ, ∃ m : UA σ W.J, IsLevi (W₁ := W₁) H' t 1 m := by
-  first | exact @GlobalTheory.LeviTorusExists.levi_torus_exists | exact GlobalTheory.LeviTorusExists.levi_torus_exists | (intros; apply GlobalTheory.LeviTorusExists.levi_torus_exists <;> assumption)
+  exact @GlobalTheory.LeviTorusExists.levi_torus_exists

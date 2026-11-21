@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLatticeInvariantSchwartzGlobal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFactorPureTensorComponentAtPlace
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.triple_lattice_invariant_schwartz_global : GlobalT
       (∀ i, ∀ γ ∈ latAtV G.V' G.W w, ∀ c : ℂ, Acts (evFin F w) (G.M'.co.rho B.ψ γ) (G.M'.vac w) (c • G.M'.vac w) →
         Acts (evFin F w) (G.M'.co.rho B.ψ γ) (g i) (c • g i)) ∧
       Ψ = ∑ i, pure (f i) (Function.update (φ i) w (g i)) := by
-  first | exact @GlobalTheory.VacAvg.avg_eigen | exact GlobalTheory.VacAvg.avg_eigen | (intros; apply GlobalTheory.VacAvg.avg_eigen <;> assumption)
+  exact @GlobalTheory.VacAvg.avg_eigen

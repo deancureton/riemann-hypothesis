@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundedCountLatticeStabilizers
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.Doubling
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.bounded_count_lattice_stabilizers : ∀ (F E : Typ
       (∀ v, ∀ y ∈ latLoc F L v, m • ((matHom (Fv F v) σ J (proj σ J v g)).1 *ᵥ y) ∈ latLoc F L v ∧
         m • ((matHom (Fv F v) σ J (proj σ J v g)⁻¹).1 *ᵥ y) ∈ latLoc F L v) →
       ∃ x ∈ T, ∀ v, (proj σ J v x)⁻¹ * proj σ J v g ∈ stabLoc σ J L v := by
-  first | exact @GlobalTheory.StabClassCount.exists_card_le | exact GlobalTheory.StabClassCount.exists_card_le | (intros; apply GlobalTheory.StabClassCount.exists_card_le <;> assumption)
+  exact @GlobalTheory.StabClassCount.exists_card_le

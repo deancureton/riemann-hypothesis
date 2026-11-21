@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adm8_and_lamUsed_of_parameterChoice : PrN → GlobalTheory.NRows.HypothesesX → OverRows fun _ _ _ _ w Z _ _ z p0 Y => ReadL z.R z.F p0 Y → (∃ L : SizeData₂ (w.st Z).toD7, Nonempty (ParameterChoice' (w.st Z).toD7 L)) → SumRepresentations.adm8 (w.st Z).toD7 ∧ GlobalTheory.NRows.LamUsed (w.st Z).toD7 := by
-  first | exact @GlobalTheory.NRows.OverX.parts_lam | exact GlobalTheory.NRows.OverX.parts_lam | (intros; apply GlobalTheory.NRows.OverX.parts_lam <;> assumption)
+  exact @GlobalTheory.NRows.OverX.parts_lam

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeMultiplicationStable
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 
 set_option autoImplicit false
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.lattice_multiplication_stable : ∀ (F : Type) [Fi
       (∀ w, w ∈ u.Λ ↔ w ∈ Λ) ∧
       (∀ (a : 𝓞 F) w, u.ex (fun i ↦ (e i (a : F) : ℂ) * w i) = u.ex w ≫ X.rm.act a) ∧
       ∃ χ, u.IsAH (Matrix.diagonal fun i ↦ ((2 * (e i (c : F) * r i) : ℝ) : ℂ)) χ := by
-  first | exact @GlobalTheory.TorusRM.exists_obj_of_polarised_torus | exact GlobalTheory.TorusRM.exists_obj_of_polarised_torus | (intros; apply GlobalTheory.TorusRM.exists_obj_of_polarised_torus <;> assumption)
+  exact @GlobalTheory.TorusRM.exists_obj_of_polarised_torus

@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eventually_hundred_le_hermitianRank_columnChoices : EvLgG fun K B f _ => KPx B f → ∀ (T : TwDat B) (w : ColW B f T) (Z : w.Lt), 100 ≤ (w.D Z).R.r := by
-  first | exact @GlobalTheory.Mem.RankSize.rank_ge_hundred | exact GlobalTheory.Mem.RankSize.rank_ge_hundred | (intros; apply GlobalTheory.Mem.RankSize.rank_ge_hundred <;> assumption)
+  exact @GlobalTheory.Mem.RankSize.rank_ge_hundred

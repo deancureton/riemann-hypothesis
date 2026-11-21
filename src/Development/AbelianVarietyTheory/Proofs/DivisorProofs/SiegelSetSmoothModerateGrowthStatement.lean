@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelSetSmoothModerateGrowth
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.siegel_set_smooth_moderate_growth : GlobalTheory.P
     ∀ (φ : UA σ J → ℂ) (φ' : GAd σ (c₀ • J.map σ) → ℂ), (∀ (g : UA σ J) (g' : GAd σ (c₀ • J.map σ)), g.1 = g'.1 → φ' g' = φ g) →
     GlobalTheory.SiegelSet.IsSmoothModerate σ (c₀ • J.map σ) φ' → GlobalTheory.SiegelSet.IsCuspidal σ (c₀ • J.map σ) φ' →
     ∀ N : ℕ, ∃ C : ℝ, ∀ h, ‖φ h‖ * (qht h : ℝ) ^ N ≤ C := by
-  first | exact @GlobalTheory.SiegelSet.rapidDecay_qht | exact GlobalTheory.SiegelSet.rapidDecay_qht | (intros; apply GlobalTheory.SiegelSet.rapidDecay_qht <;> assumption)
+  exact @GlobalTheory.SiegelSet.rapidDecay_qht

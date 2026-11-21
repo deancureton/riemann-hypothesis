@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsExponentsGeneratingDivisorAtPoint
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.exists_exponents_generating_divisor_at_point : Hyp
       fun v => -Real.log (GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram.pairWeightNormSq (fun τ x => (a' τ : ℂ) • GlobalTheory.HermFrame.quotGram (ψ τ x))
           (fun τ x => (b' τ : ℂ) • -GlobalTheory.HermFrame.subGram (ψ τ x)) π AW Aω (fun τ k => u τ (Fin.cast (hpq τ) k)) v) / 2 +
         ∑ x : DV.Rt D.what₂.Tau O.N, u x.1 x.2 * Real.log ‖g x v‖ := by
-  first | exact @GlobalTheory.HodgeLocGeo.hodge_potential_local | exact GlobalTheory.HodgeLocGeo.hodge_potential_local | (intros; apply GlobalTheory.HodgeLocGeo.hodge_potential_local <;> assumption)
+  exact @GlobalTheory.HodgeLocGeo.hodge_potential_local

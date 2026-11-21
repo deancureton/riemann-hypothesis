@@ -8,4 +8,4 @@ open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hecke_preserves_supLattice_and_commutes_typeGroup : ∀ (D : D7) (X : RealSide D) (E : IntegralHeckeForms.XD D) (Y : SerSide X E), (∀ j, GlobalTheory.IndefiniteRowSideFullHecke.LatticesOverBalls.HkSupAt X.core X.R.toRealDat j) → SupHk D ∧ CommG D := by
-  first | exact @GlobalTheory.TwInputs.supHk_commG | exact GlobalTheory.TwInputs.supHk_commG | (intros; apply GlobalTheory.TwInputs.supHk_commG <;> assumption)
+  exact @GlobalTheory.TwInputs.supHk_commG

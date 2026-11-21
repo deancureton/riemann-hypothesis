@@ -15,4 +15,4 @@ open GlobalTheory.IrrAn
 open scoped GlobalTheory.AffinePoints
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.algebraic_chart_analytic_regular_functions : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (σ : k →+* ℂ) (D : ℕ) (R : AnRead p σ D) (C : Type) [CommRing C] [Algebra ℂ C] (d' : ℕ) (ι : (C →ₐ[ℂ] ℂ) → CxPts p σ), Continuous ι → (∀ (U : X.Opens) (f : Γ(X, U)) (e : OpenPartialHomeomorph (C →ₐ[ℂ] ℂ) (Fin d' → ℂ)), GlobalTheory.AffinePoints.IsAlgebraicChart e → AnalyticOnNhd ℂ (GlobalTheory.CxPts.ev p σ U f ∘ ι ∘ e.symm) (e.target ∩ e.symm ⁻¹' (ι ⁻¹' GlobalTheory.CxPts.ptsIn p σ U))) → ∀ (O : Set (CxPts p σ)) (g : CxPts p σ → ℂ), IsOpen O → R.HoloOn O g → ∀ e : OpenPartialHomeomorph (C →ₐ[ℂ] ℂ) (Fin d' → ℂ), GlobalTheory.AffinePoints.IsAlgebraicChart e → AnalyticOnNhd ℂ (g ∘ ι ∘ e.symm) (e.target ∩ e.symm ⁻¹' (ι ⁻¹' O)) := by
-  first | exact @GlobalTheory.analyticOnNhd_comp_algChart | exact GlobalTheory.analyticOnNhd_comp_algChart | (intros; apply GlobalTheory.analyticOnNhd_comp_algChart <;> assumption)
+  exact @GlobalTheory.analyticOnNhd_comp_algChart

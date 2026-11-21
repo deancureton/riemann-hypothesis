@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DatumTransformUnderSymplectic
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorsionFormCongrOfEventuallyEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelActionPreservesFlatForm
@@ -23,4 +22,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.datum_transform_under_symplectic : ∀ (g : ℕ) (γ : GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe.Sp g) (L : Submodule ℤ (Fl g)), IsLat L → L ≤ stdLat g → ∀ (j : Fl g → Pt (symMat g) g → ℂ) (m : Pt (symMat g) g → ℝ), IsDatum (siegel g) tauU (stdLat g) j m → IsDatum (siegel g) (fun s => moeb γ (tauU s)) L (fun l P => j l (actB γ P.1, P.2)) (fun P => m (actB γ P.1, P.2)) := by
-  first | exact @GlobalTheory.ThetaPull.isDatum_pull | exact GlobalTheory.ThetaPull.isDatum_pull | (intros; apply GlobalTheory.ThetaPull.isDatum_pull <;> assumption)
+  exact @GlobalTheory.ThetaPull.isDatum_pull

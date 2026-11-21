@@ -16,4 +16,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 open GlobalTheory.CompanionTheory.GL2Factorization
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.continuous_real_whittaker : ∀ n : ℤ, Continuous (GL2LocalData.WthR n) := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Factorization.WthCont.WthR_continuous | exact GlobalTheory.CompanionTheory.GL2Factorization.WthCont.WthR_continuous | (intros; apply GlobalTheory.CompanionTheory.GL2Factorization.WthCont.WthR_continuous <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Factorization.WthCont.WthR_continuous

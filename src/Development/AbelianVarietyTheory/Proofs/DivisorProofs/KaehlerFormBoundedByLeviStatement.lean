@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KaehlerFormBoundedByLevi
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.kaehler_form_bounded_by_levi : ∀ {F : Type} [Fie
     ∃ K : ℝ, 0 < K ∧ ∀ (c : AlgChart Y.str (I.ε a) Y.dim), ∀ y ∈ c.e.source, ∀ x, (I.pt a).symm y ∈ (M.Om a).U x →
       ∀ ξ, 0 ≤ c.levi (fun z => (M.Om a).φ x ((I.pt a).symm z)) y ξ ∧
         om c y ξ ≤ K * c.levi (fun z => (M.Om a).φ x ((I.pt a).symm z)) y ξ := by
-  first | exact @GlobalTheory.KaehlerCmp.kaehler_le_levi_Om | exact GlobalTheory.KaehlerCmp.kaehler_le_levi_Om | (intros; apply GlobalTheory.KaehlerCmp.kaehler_le_levi_Om <;> assumption)
+  exact @GlobalTheory.KaehlerCmp.kaehler_le_levi_Om

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaDecompositionLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
 open scoped TensorProduct NNReal ENNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.AdelicU GlobalTheory.Doubling
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.iwasawa_decomposition_local : ∀ (F E : Type) [Fi
       ∃ c : Fv F v, c ≠ 0 ∧ ‖c‖₊ ≤ 1 ∧ hgtFin σ Q L v (ioH (Fv F v) σ hQ (g, 1)) = ‖c‖₊ ∧
         ∀ m : ℕ, ‖(m : Fv F v)‖₊ ≤ ‖c‖₊ → ∀ y ∈ latLoc F L v,
           m • ((matHom (Fv F v) σ J g).1 *ᵥ y) ∈ latLoc F L v ∧ m • ((matHom (Fv F v) σ J g⁻¹).1 *ᵥ y) ∈ latLoc F L v := by
-  first | exact @GlobalTheory.Doubling.HgtDenom.main | exact GlobalTheory.Doubling.HgtDenom.main | (intros; apply GlobalTheory.Doubling.HgtDenom.main <;> assumption)
+  exact @GlobalTheory.Doubling.HgtDenom.main

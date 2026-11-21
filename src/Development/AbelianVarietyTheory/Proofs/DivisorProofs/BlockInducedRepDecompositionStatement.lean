@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockInducedRepDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.block_induced_rep_decomposition : ∀ (k : Type) [
         (GlobalTheory.SmGL.ofChar (ψ.comp (MonoidHom.mulSingle (fun j => GlobalTheory.SmGL.Levi k (c j)) j₀))))
         (ν.comp (MonoidHom.mulSingle (fun j => GL (m' j) k) j₀))),
       ∀ F x, (E F).1.1 x = l (F.1.1 (Function.update y j₀ x)) := by
-  first | exact @GlobalTheory.ColumnEval.exists_evalMap | exact GlobalTheory.ColumnEval.exists_evalMap | (intros; apply GlobalTheory.ColumnEval.exists_evalMap <;> assumption)
+  exact @GlobalTheory.ColumnEval.exists_evalMap

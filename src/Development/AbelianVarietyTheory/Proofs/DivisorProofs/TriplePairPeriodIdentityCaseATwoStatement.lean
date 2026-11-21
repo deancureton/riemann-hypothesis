@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePairPeriodIdentityCaseATwo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.triple_pair_period_identity_case_a_two : ∀ (F E 
         K * (1 + ∑ j, |GlobalTheory.ArchUniq.omega (GlobalTheory.ArchUniq.trP F (Fin (b + 2) × Fin (b + 2 + a')))
           (GlobalTheory.ArchUniq.Coord.coordI G.M (shiftA H H' l))
           (GlobalTheory.ArchUniq.Coord.coordI G.M (Matrix.vecMulVec (y j) (incV F H'.x)))|) := by
-  first | exact @GlobalTheory.ConeCoords.main | exact GlobalTheory.ConeCoords.main | (intros; apply GlobalTheory.ConeCoords.main <;> assumption)
+  exact @GlobalTheory.ConeCoords.main

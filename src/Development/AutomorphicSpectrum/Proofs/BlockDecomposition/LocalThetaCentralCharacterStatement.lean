@@ -12,4 +12,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_theta_central_character : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (m : LM c v), m.ok → ¬ m.IsSp → ∀ (a : (Qv v)ˣ) (g : GL (Fin 2) (Qv v)) (ξ : K), m.val (dg2 a a * g) ξ = omW m a * m.val g ξ := by
-  first | exact @GlobalTheory.CompanionTheory.CenThetaNs.val_central | exact GlobalTheory.CompanionTheory.CenThetaNs.val_central | (intros; apply GlobalTheory.CompanionTheory.CenThetaNs.val_central <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenThetaNs.val_central

@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.multiplier_power_unit_constant : ∀ (R : Type) [C
     (α mu : D.toPre.X) (r s : R), PsiCoord D.toPre α r → PsiCoord D.toPre (α + k • mu) (r * s) →
     ∀ (ξ : Spec (CommRingCat.of (FractionRing R))) (J), Good D.toPre.P.L ξ J → GlobalTheory.IntFam.IntegralCharts D.toPre J →
       ∃ u : Rˣ, (val (GlobalTheory.UU.IntGen.multK D.toPre k mu α) (𝟙 _) ξ J).val ^ k = GlobalTheory.PeriodBalance.cst ξ (u * s) := by
-  first | exact @GlobalTheory.IntFam.CoordPow.main | exact GlobalTheory.IntFam.CoordPow.main | (intros; apply GlobalTheory.IntFam.CoordPow.main <;> assumption)
+  exact @GlobalTheory.IntFam.CoordPow.main

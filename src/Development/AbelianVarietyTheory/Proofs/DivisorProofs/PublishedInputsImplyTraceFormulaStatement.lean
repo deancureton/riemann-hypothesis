@@ -23,4 +23,4 @@ open GlobalTheory.TrMult
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.published_inputs_imply_trace_formula : GlobalTheory.Published.HarishChandraAnalyticity → GlobalTheory.Published.DiscreteSeriesClassification → GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.HarishChandraFinite → GlobalTheory.Published.CuspTraceClass → GlobalTheory.Published.DixmierMalliavinFactorisation → GlobalTheory.Published.FlathFactorisation → GlobalTheory.Published.PseudoCoefficientUpq → GlobalTheory.Published.HarishChandraCharacters → GlobalTheory.Published.LanglandsClassification → GlobalTheory.Published.LabesseWaldspurger → GlobalTheory.Published.ZelevinskyPolynomialRing → GlobalTheory.Published.GeometricLemma → TRCusp := by
-  first | exact @GlobalTheory.EqualMultAssembly.trCusp_of_classicalTheorems | exact GlobalTheory.EqualMultAssembly.trCusp_of_classicalTheorems | (intros; apply GlobalTheory.EqualMultAssembly.trCusp_of_classicalTheorems <;> assumption)
+  exact @GlobalTheory.EqualMultAssembly.trCusp_of_classicalTheorems

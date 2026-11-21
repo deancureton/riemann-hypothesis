@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackFreeModuleIso
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -13,4 +12,4 @@ open Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs GlobalT
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.pullback_free_module_iso : ∀ (S T : Scheme.{0}) (f : S ⟶ T) (n : ℕ), Nonempty ((Scheme.Modules.pullback f).obj (GlobalTheory.QCoh.freeModule (X := T) (Fin n)) ≅ GlobalTheory.QCoh.freeModule (X := S) (Fin n)) := by
-  first | exact @GlobalTheory.pullback_freeModule_iso_free | exact GlobalTheory.pullback_freeModule_iso_free | (intros; apply GlobalTheory.pullback_freeModule_iso_free <;> assumption)
+  exact @GlobalTheory.pullback_freeModule_iso_free

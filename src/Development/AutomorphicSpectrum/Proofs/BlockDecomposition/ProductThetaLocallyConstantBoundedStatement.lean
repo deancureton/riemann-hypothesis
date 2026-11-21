@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.product_theta_locally_constant_bounded : ∀ (K : 
     (∀ u, (∀ v : Sv, u v ∈ unQ v.1) → ∀ ξ : K, ‖∏ᶠ v, (twM M Sv m u v).val (finAt v g₀) ξ‖ ≤ B ∧
       (∏ᶠ v, (twM M Sv m u v).val (finAt v g₀) ξ ≠ 0 → ∃ a : 𝓞 K, (N : K) * ξ = a)) ∧
     ∀ ξ : K, Measurable (fun u => ∏ᶠ v, (twM M Sv m u v).val (finAt v g₀) ξ) := by
-  first | exact @GlobalTheory.CompanionTheory.ThetaFin.finitePart | exact GlobalTheory.CompanionTheory.ThetaFin.finitePart | (intros; apply GlobalTheory.CompanionTheory.ThetaFin.finitePart <;> assumption)
+  exact @GlobalTheory.CompanionTheory.ThetaFin.finitePart

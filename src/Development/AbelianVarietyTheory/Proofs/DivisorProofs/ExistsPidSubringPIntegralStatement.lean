@@ -7,4 +7,4 @@ open scoped Classical
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_pid_subring_p_integral : ∀ (K : Type) [Field K] [CharZero K] (p : ℕ), p.Prime → ∀ s : Finset K, (∀ f ∈ s, IsIntegral ℤ f) → ∃ R : Subring K, IsPrincipalIdealRing R ∧ (∀ f ∈ s, f ∈ R) ∧ ∀ f ∈ R, PInt p f := by
-  first | exact @GlobalTheory.LatChain.exists_pid_subring_pInt | exact GlobalTheory.LatChain.exists_pid_subring_pInt | (intros; apply GlobalTheory.LatChain.exists_pid_subring_pInt <;> assumption)
+  exact @GlobalTheory.LatChain.exists_pid_subring_pInt

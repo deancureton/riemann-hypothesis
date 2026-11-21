@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviCharacterCuspIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegralBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentHaarFundamentalDomainExists
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.levi_character_cusp_integral : ∀ (F E : Type) [F
         SplitZ W₁ H α β za zb f fa fb → f ∈ D ∧ Λ f = fa) ∧
       (∀ f ∈ D, ∀ y : UA σ W.J, (fun z => f (z * y)) ∈ D ∧ Λ (fun z => f (z * y)) = fun z => Λ f (z * y)) ∧
       ∀ f ∈ D, HasLaw W₁ H α za (Λ f) ∧ ∀ u ∈ unip σ W H, ∀ z, Λ f (u * z) = Λ f z := by
-  first | exact @GlobalTheory.CTFirst.ct_first_linear | exact GlobalTheory.CTFirst.ct_first_linear | (intros; apply GlobalTheory.CTFirst.ct_first_linear <;> assumption)
+  exact @GlobalTheory.CTFirst.ct_first_linear

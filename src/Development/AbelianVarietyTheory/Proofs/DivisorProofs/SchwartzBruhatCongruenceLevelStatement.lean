@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatCongruenceLevel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.schwartz_bruhat_congruence_level : ∀ {F : Type} 
         (∀ v, ∃ c ∈ v.adicCompletionIntegers F, evFin F v (a k) = (M₀ : Fv F v) * c) ∧
         (∀ v, ∃ c ∈ v.adicCompletionIntegers F, evFin F v (b k) = (M₀ : Fv F v) * c)) →
       schr ψ (a, b) (pureA F f g) = pureA F f g := by
-  first | exact @GlobalTheory.SchrUnifDen.schr_fix_pure_uniform | exact GlobalTheory.SchrUnifDen.schr_fix_pure_uniform | (intros; apply GlobalTheory.SchrUnifDen.schr_fix_pure_uniform <;> assumption)
+  exact @GlobalTheory.SchrUnifDen.schr_fix_pure_uniform

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LubinTateTorsionSequence
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormLtOneOfNotIsUnit
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_torsion_sequence : ∀ (l : ℕ) [Fact 
       ∀ g : ↥(GK K), ∃ a : ↥(OL K), (a : ↥K.1) = (χ g : ↥K.1) ∧ ∀ n,
         HasSum (fun i => ((intToOC K (PowerSeries.coeff i (lubinTateHom hπ hF hF a).toPowerSeries) * v n ^ i : OC l) : ℂ_[l]))
           ((Per.σO (g : GQ l) (v n) : OC l) : ℂ_[l]) := by
-  first | exact @GlobalTheory.PZ.ltData_read_OC | exact GlobalTheory.PZ.ltData_read_OC | (intros; apply GlobalTheory.PZ.ltData_read_OC <;> assumption)
+  exact @GlobalTheory.PZ.ltData_read_OC

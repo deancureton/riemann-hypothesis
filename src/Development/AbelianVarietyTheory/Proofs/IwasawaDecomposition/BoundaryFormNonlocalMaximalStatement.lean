@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BoundaryFormNonlocalMaximal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcPeriod
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FormallyUnramifiedUniformization
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.boundary_form_nonlocal_maximal : ∀ (E : Type) [F
     Irreducible ϖ' → ∀ be' ∈ levelForms H 1 P'.D.toPre.X, IsMonomial P'.D.toPre ![ϖ'] ![be'] →
     ∃ (r : P.D.toPre.X →ₗ[𝓞 E] P'.D.toPre.X) (e : ℕ), Function.Surjective r ∧ Associated (f ϖ) (ϖ' ^ e) ∧
       ∀ a b, be' (r a) (r b) = e * be a b := by
-  first | exact @GlobalTheory.TraitQuotForm.main | exact GlobalTheory.TraitQuotForm.main | (intros; apply GlobalTheory.TraitQuotForm.main <;> assumption)
+  exact @GlobalTheory.TraitQuotForm.main

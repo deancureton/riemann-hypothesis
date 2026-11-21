@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinrankCharacterEigenspaceTwistedComplexificatio
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.BadElt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComplexificationBaseChangeLinearOneTmul
 open GlobalTheory.BadCount
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.finrank_characterEigenspace_twistedComplexificatio
       Module.finrank ℂ (eig (GlobalTheory.DefRead.twBC σ ρ0 χ) J ((Units.map σ.toMonoidHom).comp μ) ⊓
         LinearMap.ker (Representation.asAlgebraHom (GlobalTheory.DefRead.twBC σ ρ0 χ) (∑ g, MonoidAlgebra.single g (σ (c g)))) :
           Submodule ℂ (GlobalTheory.DefRead.VC σ W)) := by
-  first | exact @GlobalTheory.DefRead.finrank_eig_twBC | exact GlobalTheory.DefRead.finrank_eig_twBC | (intros; apply GlobalTheory.DefRead.finrank_eig_twBC <;> assumption)
+  exact @GlobalTheory.DefRead.finrank_eig_twBC

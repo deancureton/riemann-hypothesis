@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_local_factor : GlobalTheory.FunP
       ∀ t m, IsLevi (W₁ := W₁) H' t 1 m →
         ∀ k : ℂ, (∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, m) Φ) = k • e Φ) → (∃ Φ ∈ schA F (Fin n × Fin d), e Φ ≠ 0) →
         k = (χX t : ℂ) * (((absE F E t : ℝ) ^ ((n : ℝ) / 2) : ℝ) : ℂ) := by
-  first | exact @GlobalTheory.TorusValueP.torus_evalZero_value | exact GlobalTheory.TorusValueP.torus_evalZero_value | (intros; apply GlobalTheory.TorusValueP.torus_evalZero_value <;> assumption)
+  exact @GlobalTheory.TorusValueP.torus_evalZero_value

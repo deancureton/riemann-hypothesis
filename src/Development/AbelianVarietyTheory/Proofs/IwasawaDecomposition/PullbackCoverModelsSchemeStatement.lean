@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackCoverModelsScheme
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pullback_cover_models_scheme : ∀ {E : Type} [Fie
     (∀ x : A, ∃ i, x ∈ Set.range (ψ i)) ∧ Geo.Tor.IsNormalScheme A ∧ Flat F ∧ (∃ z : A ⟶ Sp ℤ, LocallyOfFiniteType z ∧ Flat z) ∧
       ∀ i, IsPreimmersion ((C i).j ≫ ψ i) ∧ Flat ((C i).j ≫ ψ i) ∧ IsDominant ((C i).j ≫ ψ i) ∧
         QuasiCompact ((C i).j ≫ ψ i) := by
-  first | exact @GlobalTheory.GlueLoc.glue_local | exact GlobalTheory.GlueLoc.glue_local | (intros; apply GlobalTheory.GlueLoc.glue_local <;> assumption)
+  exact @GlobalTheory.GlueLoc.glue_local

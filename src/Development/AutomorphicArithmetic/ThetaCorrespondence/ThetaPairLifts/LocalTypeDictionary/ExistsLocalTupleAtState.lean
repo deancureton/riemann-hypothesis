@@ -75,5 +75,5 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_local_tuple_at_state : _root_.GlobalTheory.HeightCounting.Up.PublishedInputsThirdLayer → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AllSt fun _ _ _ T w P x => ∀ (l : StrictHenselianAcyclic hL x) (ch : NChoice (Dof x)) (tp : TupTied (Dof x) (cfOf x) ch), tp.xi = w.I.xi → tp.psi = T.psi → ch.Q = QOf P → (∀ v, TwistedAt (Dof x) v → ch.k' v = T.k v) → ChoiceSide (Dof x) (cfOf x) l.mt.M l.b.Bs.exp ch tp → ∀ v, TwistedAt (Dof x) v → IntegralHeckeForms.TwOK (ch.twI v) (ch.k' v) (ch.Q v) (GlobalTheory.PlaceRead.chr ch v) →
   IntegralHeckeForms.ClsQ (D := Dof x) (ch.Q v) ∧ ∀ (j : Fin (Dof x).R.m) (ι : GlobalTheory.PlaceRead.KE ch v →+* ℂ), (∀ y, ι (ch.embW v y) = (Dof x).what₂.embLL y) →
     GlobalTheory.ConjTwist.IsTupOf x.m.z.R.toRealDat (l.b.ser.ex.ρ.B (ch.twI v) j (ch.sd v)) (GlobalTheory.PlaceRead.twVia l.b.ser.ex.ρ ι) (x.r.Y.tupT ((Dof x).what₂.muTw v)) := by
-  first | exact @_root_.GlobalTheory.PlaceRead.TupAt.local_tuple_at_state | exact _root_.GlobalTheory.PlaceRead.TupAt.local_tuple_at_state | (intros; apply _root_.GlobalTheory.PlaceRead.TupAt.local_tuple_at_state <;> assumption)
+  exact @_root_.GlobalTheory.PlaceRead.TupAt.local_tuple_at_state
 end

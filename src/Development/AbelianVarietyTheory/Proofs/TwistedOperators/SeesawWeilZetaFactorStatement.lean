@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawWeilZetaFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.seesaw_weil_zeta_factor : GlobalTheory.Published.H
         (∑ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (f i) (φ i)) ∈ GlobalTheory.TripleAssembly.darbAlg Γ.M Bs.ψ Bs.emb →
         GlobalTheory.TripleAssembly.mapA ψ e Bs Γ R Rf (GlobalTheory.TripleRead.thO Γ.M ψ (sgn true W).gram e (∑ i, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure (f i) (φ i))) =
           ∑ i, R.p (f i) ⊗ₜ[ℂ] GlobalTheory.SmallThetaModules.pureT (GlobalTheory.TripleAssembly.vacIm Γ Rf) (fun v => Rf.p v (φ i v)) := by
-  first | exact @GlobalTheory.TripleAssembly.PureImage.mapA_thO_sum_pure | exact GlobalTheory.TripleAssembly.PureImage.mapA_thO_sum_pure | (intros; apply GlobalTheory.TripleAssembly.PureImage.mapA_thO_sum_pure <;> assumption)
+  exact @GlobalTheory.TripleAssembly.PureImage.mapA_thO_sum_pure

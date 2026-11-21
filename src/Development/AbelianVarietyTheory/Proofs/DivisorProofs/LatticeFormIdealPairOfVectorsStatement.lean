@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeFormIdealPairOfVectors
-import Mathlib
 open NumberField
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.lattice_form_ideal_pair_of_vectors : ∀ {F V : Ty
     ∀ {v w : V}, v ≠ 0 → ∀ (I K : FractionalIdeal (𝓞 F)⁰ F), (∀ a : F, a ∈ I ↔ a • v ∈ L) →
     (∀ t, t ∈ K ↔ ∃ z ∈ L, t = B z v) → B w v = 1 → (∀ t ∈ K, t • w ∈ L) →
     (∀ x, x ∈ L ↔ ∃ a ∈ I, ∃ t ∈ K, x = a • v + t • w) ∧ I * K = J := by
-  first | exact @GlobalTheory.lattice_eq_ideal_sum_and_mul_eq | exact GlobalTheory.lattice_eq_ideal_sum_and_mul_eq | (intros; apply GlobalTheory.lattice_eq_ideal_sum_and_mul_eq <;> assumption)
+  exact @GlobalTheory.lattice_eq_ideal_sum_and_mul_eq

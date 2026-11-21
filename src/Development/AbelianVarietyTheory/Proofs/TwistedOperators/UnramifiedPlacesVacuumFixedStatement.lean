@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnramifiedPlacesVacuumFixed
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DarbouxModelAlgebraicVectorsLeAdelicSchwartzStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.unramified_places_vacuum_fixed : GlobalTheory.FunP
         GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Acts (GlobalTheory.AdelicU.evFin F v) (om (k, 1)) (G.M.vac v) (G.M.vac v)) ∧
       ∀ k ∈ GlobalTheory.InertSph.KAt σ G.V' v,
         GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Acts (GlobalTheory.AdelicU.evFin F v) (om' (k, 1)) (G.M'.vac v) (G.M'.vac v) := by
-  first | exact @GlobalTheory.LatStabVac.vacuum_fixed_off_finite | exact GlobalTheory.LatStabVac.vacuum_fixed_off_finite | (intros; apply GlobalTheory.LatStabVac.vacuum_fixed_off_finite <;> assumption)
+  exact @GlobalTheory.LatStabVac.vacuum_fixed_off_finite

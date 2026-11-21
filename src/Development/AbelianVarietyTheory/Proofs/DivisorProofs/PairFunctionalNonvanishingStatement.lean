@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairFunctionalNonvanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.pair_functional_nonvanishing : GlobalTheory.ThK.KP
     (∀ z : Fin d → AE F E, At (evFin F B.v₁) z → (∀ l, piW (B.τ₁.comp σ) (z l) = 0) →
       ∀ Ψ ∈ schA F (Fin n × Fin d), Λ (M.co.rho B.ψ (Matrix.vecMulVec c z) Ψ) = Λ Ψ) →
     ∀ Φ ∈ M.So B.ψ B.τ₁, Λ Φ = 0 := by
-  first | exact @GlobalTheory.ThKSoKill.so_kill | exact GlobalTheory.ThKSoKill.so_kill | (intros; apply GlobalTheory.ThKSoKill.so_kill <;> assumption)
+  exact @GlobalTheory.ThKSoKill.so_kill

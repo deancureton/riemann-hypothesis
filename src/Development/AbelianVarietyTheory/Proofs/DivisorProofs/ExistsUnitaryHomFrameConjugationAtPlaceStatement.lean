@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryHomFrameConjugationAtPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_unitary_hom_frame_conjugation_at_place : �
         mat (iW h) = (1 - ι 1) • (1 : Matrix (Fin n) (Fin n) (AE F E)) +
           ((P : Matrix (Fin n) (Fin n) L) * ((h : GL (Fin n) L) : Matrix (Fin n) (Fin n) L) *
             ((P⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L)).map ι := by
-  first | exact @GlobalTheory.InertLocFrame.HomW.homW | exact GlobalTheory.InertLocFrame.HomW.homW | (intros; apply GlobalTheory.InertLocFrame.HomW.homW <;> assumption)
+  exact @GlobalTheory.InertLocFrame.HomW.homW

@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions NumberField IsDedekindDomain F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eV0_mem_goodF_rows : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Y : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Y cX} {Csz : ℝ} (p : PtAt ex Csz), p.Rows → ∀ (t : Tup p) (y : Fin ((Df p).nV t) → D.what₂.LL), eV0 p t y ∈ (p.P.A3.A.fam.R t).goodF p.P.A3.A.fam.X := by
-  first | exact @GlobalTheory.BigTop.Fun.eV0_mem_goodF | exact GlobalTheory.BigTop.Fun.eV0_mem_goodF | (intros; apply GlobalTheory.BigTop.Fun.eV0_mem_goodF <;> assumption)
+  exact @GlobalTheory.BigTop.Fun.eV0_mem_goodF

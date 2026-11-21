@@ -12,4 +12,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.StepData GlobalTheory.SplitWeil
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.true_geometry_lattice_measure_step : ∀ {B : GlobalTheory.Mem.Base} {X : PreX B.toPre} {I : TC B X} {l : I.Laws} {Z : TC.Later B (I.cols l)} {L : SizeData₂ (I.rec7 l Z)} {hT : GatTies (I.rec7 l Z)} {Gi : Formalism.MainNotions.G.Inst (I.rec7 l Z) L} {Gl : Formalism.MainNotions.G.LatInst (I.rec7 l Z)} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX (I.rec7 l Z)} {cX : ExtraC} {ex : Extra (I.rec7 l Z) L hT Gi Gl Kc Yd cX} (W : RealPack ex), AllTrue W → ∀ (u : B.Word) (a : GeoAll W u), a.Is → a.True → ∀ j (hj : j + 2 ≤ B.R.m), ∀ t (J : QJ a t), J.Reads → ∀ (α : J.Ch j) i, GlobalTheory.LevProd.H J j hj α i ≤ KO (J.G i).k _ := by
-  first | exact @GlobalTheory.LevProd.H_le_KO | exact GlobalTheory.LevProd.H_le_KO | (intros; apply GlobalTheory.LevProd.H_le_KO <;> assumption)
+  exact @GlobalTheory.LevProd.H_le_KO

@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.exists_weighted_average_haar_lifted : ∀ {D : D7}
       (∀ l, 0 < w l) ∧ κ.IsMulLeftInvariant ∧ IsProbabilityMeasure κ ∧
       ∀ (t : T) (P : PolF D WW.rank A'.rank), ∀ h ∈ GfC WW,
         X.I' W.ψ W.θ t P h = (v : ℂ) * ∑ l, ((w l : ℂ))⁻¹ * ∫ g, X.ker' W.ψ W.θ t P h (z l * (g : GA D A')) ∂κ := by
-  first | exact @GlobalTheory.RowTest.BottomClassSum.integral_eq_classSum_bottom | exact GlobalTheory.RowTest.BottomClassSum.integral_eq_classSum_bottom | (intros; apply GlobalTheory.RowTest.BottomClassSum.integral_eq_classSum_bottom <;> assumption)
+  exact @GlobalTheory.RowTest.BottomClassSum.integral_eq_classSum_bottom

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemilinearDualBasisBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.semilinear_dual_basis_base_change : ∀ {R R' : Ty
     (b : Module.Dual R M ≃ₗ[R] (Fin n → R)) (x : Fin n → Module.Dual R' M')
     (hx : ∀ k c, x k (f c) = algebraMap R R' (b.symm (Pi.single k 1) c)),
    LinearIndependent R' x ∧ Submodule.span R' (Set.range x) = ⊤ := by
-  first | exact @GlobalTheory.dualBasis_baseChange | exact GlobalTheory.dualBasis_baseChange | (intros; apply GlobalTheory.dualBasis_baseChange <;> assumption)
+  exact @GlobalTheory.dualBasis_baseChange

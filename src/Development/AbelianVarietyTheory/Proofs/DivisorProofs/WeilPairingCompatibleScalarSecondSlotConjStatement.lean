@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingSmulRightConj
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.CM
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.weilPairingCompatible_scalar_second_position_conj 
     WeilEq B.t.PP.L f g A.t.PP.L (A.t.act.act r) (𝟙 _) (spMap (σ₁.comp (algebraMap (𝓞 K) K))) →
     WeilEq B.t.PP.L f (A.t.act.act s ≫ g) A.t.PP.L (A.t.act.act (r * H.bar s)) (𝟙 _)
       (spMap (σ₁.comp (algebraMap (𝓞 K) K))) := by
-  first | exact @GlobalTheory.CM.ActRight.weilEq_act_right | exact GlobalTheory.CM.ActRight.weilEq_act_right | (intros; apply GlobalTheory.CM.ActRight.weilEq_act_right <;> assumption)
+  exact @GlobalTheory.CM.ActRight.weilEq_act_right

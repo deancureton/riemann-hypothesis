@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AugmentedSpanTranslateGenerators
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.augmented_span_translate_generators : GlobalTheory
     ∀ x ∈ augAt om' B.v₁, x ∈ Submodule.span ℂ (G.M'.SoLoc B.ψ B.τ₁) →
       x ∈ Submodule.span ℂ {y | ∃ g ∈ UAt σ G.V' (evFin F B.v₁), ∃ ψ ∈ G.M'.SoLoc B.ψ B.τ₁, ∃ ψ' ∈ G.M'.SoLoc B.ψ B.τ₁,
         Acts (evFin F B.v₁) (om' (g, 1)) ψ ψ' ∧ y = ψ' - ψ} := by
-  first | exact @GlobalTheory.CoinvFullRank.mem_span_diff_of_mem_augAt | exact GlobalTheory.CoinvFullRank.mem_span_diff_of_mem_augAt | (intros; apply GlobalTheory.CoinvFullRank.mem_span_diff_of_mem_augAt <;> assumption)
+  exact @GlobalTheory.CoinvFullRank.mem_span_diff_of_mem_augAt

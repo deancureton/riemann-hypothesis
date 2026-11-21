@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaFunOfSmoothRealHeisenbergLevel
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAE
 open scoped TensorProduct Matrix BoundedContinuousFunction ContDiff
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.IndefR.DatumF MeasureTheory Matrix GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.isThetaFun_of_smooth_real_heisenberg_level : ∀ (
         (∃ U : AddSubgroup (WOF F E nS nT), IsOpen (U : Set (WOF F E nS nT)) ∧
           ∀ u ∈ U, u.map (infPartF F E) = 0 → heisOF σ JS JT ξ₀ B.ψ u f.1 = f.1) →
         IsThetaFunOF σ JS JT ξ₀ B.ψ f.1 := by
-  first | exact @GlobalTheory.ThetaOfSmF.theta_of_smF | exact GlobalTheory.ThetaOfSmF.theta_of_smF | (intros; apply GlobalTheory.ThetaOfSmF.theta_of_smF <;> assumption)
+  exact @GlobalTheory.ThetaOfSmF.theta_of_smF

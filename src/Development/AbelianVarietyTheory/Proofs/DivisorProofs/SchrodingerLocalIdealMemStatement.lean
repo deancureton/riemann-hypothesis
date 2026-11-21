@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerLocalIdealMem
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.schrodinger_local_ideal_mem : ∀ {F E : Type} [Fi
     ∀ (v : Pl F) (l : (AE F E)ˣ), l ∈ idelesAt E (evFin F v) →
       compFin F E v (l : AE F E) ∈ locId v (H.𝔟⁻¹ * conjI σ H'.𝔟) →
       schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M'.co v (shiftB σ H H' l)) (G.M'.vac v) = G.M'.vac v := by
-  first | exact @GlobalTheory.VacShiftB.vac_fixed | exact GlobalTheory.VacShiftB.vac_fixed | (intros; apply GlobalTheory.VacShiftB.vac_fixed <;> assumption)
+  exact @GlobalTheory.VacShiftB.vac_fixed

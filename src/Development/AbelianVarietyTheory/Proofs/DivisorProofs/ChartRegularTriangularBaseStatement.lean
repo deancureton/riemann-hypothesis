@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChartRegularTriangularBase
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam.Pad GlobalTheory.TrivFlag GlobalTheory.WholeFlag GlobalTheory.ConstLat
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.chart_regular_triangular_base : ∀ {F : Type} [Fi
     ∃ (U' : V.X.Opens) (Um : Matrix (Fin (g + g)) (Fin g) V.X.functionField)
       (Lf : Matrix (Fin g) (Fin (g + g)) V.X.functionField) (c : Fin g → V.G.functionFieldˣ),
       U' ≤ U ∧ x ∈ U' ∧ FrameOn V W U' H d T A p Um Lf c := by
-  first | exact @GlobalTheory.ConstLat.CramerFrame.frameOn_near | exact GlobalTheory.ConstLat.CramerFrame.frameOn_near | (intros; apply GlobalTheory.ConstLat.CramerFrame.frameOn_near <;> assumption)
+  exact @GlobalTheory.ConstLat.CramerFrame.frameOn_near

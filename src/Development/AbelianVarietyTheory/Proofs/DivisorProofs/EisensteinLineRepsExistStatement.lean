@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinLineRepsExist
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.eisenstein_line_reps_exist : ∀ (F E : Type) [Fie
         ∃ f : GlobalTheory.EisCT.midSet σ J (col0 X) T → Yr × E, Function.Injective f ∧
           ∀ t, ∃ μ : E, μ ≠ 0 ∧ (matHom _ σ J t.1.1⁻¹).1 *ᵥ GlobalTheory.EisMidHt.adVec F (GlobalTheory.EisMidHt.firstColumn X) =
             GlobalTheory.EisMidHt.adVec F (μ • ((f t).1.1 + (f t).2 • GlobalTheory.EisMidHt.firstColumn X)) := by
-  first | exact @GlobalTheory.EisMidParam.midSet_param | exact GlobalTheory.EisMidParam.midSet_param | (intros; apply GlobalTheory.EisMidParam.midSet_param <;> assumption)
+  exact @GlobalTheory.EisMidParam.midSet_param

@@ -193,5 +193,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rk_small_scale_le_of_share : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → FlatDeg → Deg → Share → Covers fun Fm x _ ι p i Y PP _ => ∀ s : ℕ, 1 ≤ s → s ≤ 2 → (Y.rk (Gs p i (s * cZero (Fm.D x ι) ((i : ℕ) + 1))) : ℝ) ≤ (1 + min (1 / 2) ((Fm.L x ι).sc.b / (PP * kap p i))) * Y.rk (Gs p i (-(cZero (Fm.D x ι) ((i : ℕ) + 1)))) := by
-  first | exact @_root_.GlobalTheory.CovTop.HodgeSteps.rk_le_one_add_min_mul_rk_neg | exact _root_.GlobalTheory.CovTop.HodgeSteps.rk_le_one_add_min_mul_rk_neg | (intros; apply _root_.GlobalTheory.CovTop.HodgeSteps.rk_le_one_add_min_mul_rk_neg <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.HodgeSteps.rk_le_one_add_min_mul_rk_neg
 end

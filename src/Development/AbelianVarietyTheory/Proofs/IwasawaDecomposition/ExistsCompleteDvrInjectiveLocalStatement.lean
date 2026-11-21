@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCompleteDvrInjectiveLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InRealConeSelf
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PhiDivisorArcBlowup
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsMonomialLevelFormDvr
@@ -10,4 +9,4 @@ open GlobalTheory GlobalTheory.Toroidal GlobalTheory.Models GlobalTheory.LN Glob
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_complete_dvr_injective_local : ∀ (O : Type) [CommRing O] [IsDomain O] [IsLocalRing O], IsIntegrallyClosed O → IsNoetherianRing O → ringKrullDim O = 1 → CharZero O → ∃ (W : Type) (_ : CommRing W) (_ : IsDomain W) (_ : IsLocalRing W) (g : O →+* W), CDvr W ∧ Function.Injective g ∧ IsLocalHom g := by
-  first | exact @GlobalTheory.LocalCompletion.exists_cDvr_embedding | exact GlobalTheory.LocalCompletion.exists_cDvr_embedding | (intros; apply GlobalTheory.LocalCompletion.exists_cDvr_embedding <;> assumption)
+  exact @GlobalTheory.LocalCompletion.exists_cDvr_embedding

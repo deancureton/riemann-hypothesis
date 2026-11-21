@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEigenStabilizerIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdelicSchwartzSpaceOfLevelCompactSchwartz
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_eigen_stabilizer_integral : ∀ (F E : Ty
       ∃ C : Set (Fin b × Fin (b + a') → FiniteAdeleRing (𝓞 F) F), IsCompact C ∧
         ∀ (k : K) (l : (AE F E)ˣ) (x : Fin b × Fin (b + a') → AF F), (fun i => (x i).2) ∉ C →
           e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)) x = 0 := by
-  first | exact @GlobalTheory.ConeSupp.supp | exact GlobalTheory.ConeSupp.supp | (intros; apply GlobalTheory.ConeSupp.supp <;> assumption)
+  exact @GlobalTheory.ConeSupp.supp

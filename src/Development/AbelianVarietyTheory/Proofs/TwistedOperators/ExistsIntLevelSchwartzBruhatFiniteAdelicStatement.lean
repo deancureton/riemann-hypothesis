@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIntLevelSchwartzBruhatFiniteAdelic
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import GroundTheory.GlobalFields.TateThesis.AdelicCharDual
 
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_int_level_schwartzBruhat_finiteAdelic : ∀
       (∀ i, ∀ v : HeightOneSpectrum (𝓞 F),
         (algebraMap F (FiniteAdeleRing (𝓞 F) F) ((d : F)⁻¹) * u i) v ∈ v.adicCompletionIntegers F) →
       g (x + u) = g x := by
-  first | exact @GlobalTheory.SBLevel.exists_int_level | exact GlobalTheory.SBLevel.exists_int_level | (intros; apply GlobalTheory.SBLevel.exists_int_level <;> assumption)
+  exact @GlobalTheory.SBLevel.exists_int_level

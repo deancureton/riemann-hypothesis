@@ -10,4 +10,4 @@ open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.base_change_dual_compatible : Cr.BcDual := by
-  first | exact @GlobalTheory.PolarBc.bcDual_of_polarized | exact GlobalTheory.PolarBc.bcDual_of_polarized | (intros; apply GlobalTheory.PolarBc.bcDual_of_polarized <;> assumption)
+  exact @GlobalTheory.PolarBc.bcDual_of_polarized

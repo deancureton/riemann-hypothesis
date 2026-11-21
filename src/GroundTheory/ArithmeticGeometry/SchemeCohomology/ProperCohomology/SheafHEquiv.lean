@@ -71,7 +71,6 @@ lemma overEquivalence_inverse_left (W : U.toScheme.Opens) :
   · rintro ⟨y, hy, rfl⟩
     exact ⟨y, hy, rfl⟩
 
-set_option maxHeartbeats 4000000 in
 
 def restrictAbIso (F : X.Modules) :
     (sheafCongrAb ((Opens.grothendieckTopology X.toTopCat).over U)

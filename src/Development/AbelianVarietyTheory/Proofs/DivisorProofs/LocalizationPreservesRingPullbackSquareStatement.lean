@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationPreservesRingPullbackSquare
-import Mathlib
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.localization_preserves_ring_pullback_square : ∀ {A R₀ A' B₀ : Type} [CommRing A] [CommRing R₀] [CommRing A'] [CommRing B₀]
     (φ : A →+* R₀) (ψ : A →+* A') (α : R₀ →+* B₀) (κ : A' →+* B₀), α.comp φ = κ.comp ψ →
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.localization_preserves_ring_pullback_square : ∀ 
     Aα.comp (algebraMap R₀ LR) = (algebraMap B₀ LB).comp α →
     Kκ.comp (algebraMap A' LA') = (algebraMap B₀ LB).comp κ →
     (∀ t, Φ t = 0 → Ψ t = 0 → t = 0) ∧ ∀ a b, Aα a = Kκ b → ∃ t, Φ t = a ∧ Ψ t = b := by
-  first | exact @GlobalTheory.locPullback | exact GlobalTheory.locPullback | (intros; apply GlobalTheory.locPullback <;> assumption)
+  exact @GlobalTheory.locPullback

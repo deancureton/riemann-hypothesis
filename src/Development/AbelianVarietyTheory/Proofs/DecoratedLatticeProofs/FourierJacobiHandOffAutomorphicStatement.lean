@@ -11,4 +11,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Unf
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.fourierJacobiHandOff_automorphic : ∀ D : D7, HandFBLaw D := by
-  first | exact @GlobalTheory.handFBLaw | exact GlobalTheory.handFBLaw | (intros; apply GlobalTheory.handFBLaw <;> assumption)
+  exact @GlobalTheory.handFBLaw

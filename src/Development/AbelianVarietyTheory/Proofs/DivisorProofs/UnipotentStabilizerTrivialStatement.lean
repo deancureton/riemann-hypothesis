@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentStabilizerTrivial
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unipotent_stabilizer_trivial : ∀ (F E : Type) [F
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     ∀ w ∈ ratPts σ J, (matHom _ σ J w).1 * adMat F (col0 Y) = adMat F (col0 X) →
     ∀ ν ∈ unipRad σ J (col0 X), GlobalTheory.EisCT.StabL σ J (col0 X) (w * ν * w⁻¹) → ν = 1 := by
-  first | exact @GlobalTheory.EisCT.bigCell_uniq | exact GlobalTheory.EisCT.bigCell_uniq | (intros; apply GlobalTheory.EisCT.bigCell_uniq <;> assumption)
+  exact @GlobalTheory.EisCT.bigCell_uniq

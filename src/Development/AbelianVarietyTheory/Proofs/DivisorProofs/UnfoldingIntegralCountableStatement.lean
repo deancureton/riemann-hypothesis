@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.unfolding_integral_countable : ∀ {G G₁ L Kt : 
     ∀ 𝓓 : Set G, IsFundamentalDomain Q 𝓓 μG →
     ∀ φ : G → ENNReal, Measurable φ → (∀ q ∈ Q, ∀ g, φ (q * g) = φ g) → (∀ n ∈ N, ∀ g, φ (n * g) = φ g) →
       ∫⁻ g in 𝓓, φ g ∂μG = c * μN 𝓕 * ∫⁻ k, ∫⁻ l, ∫⁻ g₀ in dom, φ (m l g₀ * kk k) * w l ∂ν ∂μL ∂μK := by
-  first | exact @GlobalTheory.UnfoldSemidirect.lintegral_fundamentalDomain_eq | exact GlobalTheory.UnfoldSemidirect.lintegral_fundamentalDomain_eq | (intros; apply GlobalTheory.UnfoldSemidirect.lintegral_fundamentalDomain_eq <;> assumption)
+  exact @GlobalTheory.UnfoldSemidirect.lintegral_fundamentalDomain_eq

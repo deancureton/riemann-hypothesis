@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftHypPlaneSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.theta_lift_hyp_plane_split : GlobalTheory.ThK.KP �
       (∀ z : Fin (a + a') → Fv F B.v₁, ∃ u ∈ {u : Matrix (Fin a) (Fin (a + a')) (AE F E) | ∃ z, u = Matrix.vecMulVec (incV F H.x) z},
         At (evFin F B.v₁) u ∧ ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁), ∃ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁),
           Acts (evFin F B.v₁) (G.M.co.rho B.ψ u) φ φ₁ ∧ ι φ₁ = fun Y => ψv (ℓ ⬝ᵥ (Y *ᵥ z)) * ι φ Y) := by
-  first | exact @GlobalTheory.PairingVecMulVec.goodPlace_model | exact GlobalTheory.PairingVecMulVec.goodPlace_model | (intros; apply GlobalTheory.PairingVecMulVec.goodPlace_model <;> assumption)
+  exact @GlobalTheory.PairingVecMulVec.goodPlace_model

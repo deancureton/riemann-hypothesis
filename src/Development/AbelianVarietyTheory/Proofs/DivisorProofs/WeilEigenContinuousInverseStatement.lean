@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilEigenContinuousInverse
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingTrRep
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.weil_eigen_continuous_inverse : ∀ (F E : Type) [
             (Fin n × Fin d → mixedEmbedding.mixedSpace F) × (Fin n × Fin d → mixedEmbedding.mixedSpace F),
           ∀ w (f g : SInf F (Fin n × Fin d)), (g : (Fin n × Fin d → mixedEmbedding.mixedSpace F) → ℂ) = schr ψ w f →
             (ei g : (Fin n × Fin d → mixedEmbedding.mixedSpace F) → ℂ) = schr ψ (A w) (ei f) := by
-  first | exact @GlobalTheory.ArchIntertw.ei_schr | exact GlobalTheory.ArchIntertw.ei_schr | (intros; apply GlobalTheory.ArchIntertw.ei_schr <;> assumption)
+  exact @GlobalTheory.ArchIntertw.ei_schr

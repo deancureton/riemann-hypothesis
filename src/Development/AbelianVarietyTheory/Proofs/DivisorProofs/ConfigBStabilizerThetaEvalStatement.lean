@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerThetaEval
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_B_stabilizer_theta_eval : GlobalTheory.FunP
     ∀ (v : Pl F) (μKv : Measure (KAt K (evFin F v))) (μv : Measure (idelesAt E (evFin F v))),
     IsNormK K (evFin F v) μKv → IsNormE E v μv → ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v),
     coneFin B G.M' om' v (ev v) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ ∈ SB (Fin b × Fin (a + b) → Fv F v) := by
-  first | exact @GlobalTheory.ConeSoB.coneFin_mem_SB_of_norm | exact GlobalTheory.ConeSoB.coneFin_mem_SB_of_norm | (intros; apply GlobalTheory.ConeSoB.coneFin_mem_SB_of_norm <;> assumption)
+  exact @GlobalTheory.ConeSoB.coneFin_mem_SB_of_norm

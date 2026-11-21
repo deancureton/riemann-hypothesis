@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelRankOneBoundedDenominator
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.model_rank_one_bounded_denominator : ∀ {F E : Ty
     (hM : M.IsGood ψ) (x : Fin d → E), ∃ D : ℕ, 1 ≤ D ∧ ∀ β : Fin n → 𝓞 E, ∃ y z : Fin n × Fin d → 𝓞 F,
       M.co.e (incM F (Matrix.vecMulVec (fun i => (β i : E)) x)) =
         (fun k => algebraMap F (AF F) ((y k : F) / D), fun k => algebraMap F (AF F) ((z k : F) / D)) := by
-  first | exact @GlobalTheory.DarbouxDenom.exists_uniform_denom | exact GlobalTheory.DarbouxDenom.exists_uniform_denom | (intros; apply GlobalTheory.DarbouxDenom.exists_uniform_denom <;> assumption)
+  exact @GlobalTheory.DarbouxDenom.exists_uniform_denom

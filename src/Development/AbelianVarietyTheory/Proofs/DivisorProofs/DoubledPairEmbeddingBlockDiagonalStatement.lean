@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledPairEmbeddingBlockDiagonal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.doubled_pair_embedding_block_diagonal : ∀ (F E :
     ∀ om₂ : Rep σ Xs W₂, IsUWeilPair (cA σ) (adeleClass F) B.ψ (-1) (incM F Xs.J) (incM F W₂.J) co χX 1 om₂ →
     ∀ h : UA σ W.J, ∀ Φ ∈ schA F (Fin n × Fin (d + d)),
       om₂ (1, i (h, h)) Φ 0 = ((χX (Matrix.GeneralLinearGroup.det h.1) : Circle) : ℂ) * Φ 0 := by
-  first | exact @GlobalTheory.DblDiagValue.apply_zero_diag | exact GlobalTheory.DblDiagValue.apply_zero_diag | (intros; apply GlobalTheory.DblDiagValue.apply_zero_diag <;> assumption)
+  exact @GlobalTheory.DblDiagValue.apply_zero_diag

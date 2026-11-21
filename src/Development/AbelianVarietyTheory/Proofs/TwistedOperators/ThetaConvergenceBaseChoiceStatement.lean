@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaConvergenceBaseChoice
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.FormulaAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_convergence_base_choice : GlobalTheory.FunPr
     HidaSetting large₂ R F → ∀ (ch : Choice R), ch.IsBase → ∀ (CF : ℝ), ch.AtScale CF large₂.sc.b → ∀ (a : Fin ch.n) (u : R.HE.H),
     ThetaConv ch.W ch.M ch.ρ (ch.Phi a) (ch.form u) ∧
       IsAutFun (ch.G.V (.grid D.R.m 0)) (thetaChi ch.W ch.M ch.ρ (ch.Phi a) (ch.form u)) := by
-  first | exact @GlobalTheory.RowLift.row_lifts_base | exact GlobalTheory.RowLift.row_lifts_base | (intros; apply GlobalTheory.RowLift.row_lifts_base <;> assumption)
+  exact @GlobalTheory.RowLift.row_lifts_base

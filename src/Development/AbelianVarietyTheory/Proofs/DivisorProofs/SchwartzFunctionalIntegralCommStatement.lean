@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFunctionalIntegralComm
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
 open MeasureTheory GlobalTheory.RealWeil
 open scoped SchwartzMap
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.schwartz_functional_integral_comm : ∀ (W : Type)
     (c : W → ℂ) (g : Sch (Fin n)), Continuous G → Continuous c →
     (∀ k m : ℕ, Integrable (fun w => ‖c w‖ * SchwartzMap.seminorm ℂ k m (G w)) ν) →
     (∀ x, g x = ∫ w, c w * G w x ∂ν) → L g = ∫ w, c w * L (G w) ∂ν := by
-  first | exact @GlobalTheory.SchwartzIntegral.clm_integral_interchange | exact GlobalTheory.SchwartzIntegral.clm_integral_interchange | (intros; apply GlobalTheory.SchwartzIntegral.clm_integral_interchange <;> assumption)
+  exact @GlobalTheory.SchwartzIntegral.clm_integral_interchange

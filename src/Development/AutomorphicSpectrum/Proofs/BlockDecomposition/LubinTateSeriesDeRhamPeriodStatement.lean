@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LubinTateSeriesDeRhamPeriod
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.EvalMod
 noncomputable section
 open NumberField IsDedekindDomain Neutral.B1 Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.L2.Host Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibleFiltrations
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_series_de_rham_period : ∀ {l : ℕ} [
     ∀ (x y : Tl l), ‖thB l (tch l x)‖ < 1 → ∀ (φ : PowerSeries ↥(OL K)),
       (∀ D, x ^ D ∣ y - ∑ i ∈ Finset.range D, r (PowerSeries.coeff i φ) * x ^ i) →
       EvalMod S (FB l) (oB K μ π) (oB K μ) φ (tch l x) (tch l y) 1 := by
-  first | exact @GlobalTheory.CompanionTheory.LTPer.Glue.evalMod_teichmuller | exact GlobalTheory.CompanionTheory.LTPer.Glue.evalMod_teichmuller | (intros; apply GlobalTheory.CompanionTheory.LTPer.Glue.evalMod_teichmuller <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LTPer.Glue.evalMod_teichmuller

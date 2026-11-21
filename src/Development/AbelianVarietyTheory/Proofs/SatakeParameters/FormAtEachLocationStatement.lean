@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.form_at_each_location : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), ∀ (X : GlobalTheory.NJoin.RealAt D P.cf P.C P.tp) (_ : GlobalTheory.NJoin.Agree X P.M P.rep), ∀ i, MtForm D P.M i := by
-  first | exact @GlobalTheory.FormAllLevels.main | exact GlobalTheory.FormAllLevels.main | (intros; apply GlobalTheory.FormAllLevels.main <;> assumption)
+  exact @GlobalTheory.FormAllLevels.main

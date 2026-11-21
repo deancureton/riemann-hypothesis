@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetFiniteLength
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.abelian_lift_de_rham_unique : GlobalTheory.Publish
       HasGen (Q.pull (lift (1 : A ⟶ A) (𝟙 A)).left) → HasGen (Q.pull (lift (𝟙 A) (1 : A ⟶ A)).left) →
       HasGen (S.pull (lift (1 : A ⟶ A) (𝟙 A)).left) → HasGen (S.pull (lift (𝟙 A) (1 : A ⟶ A)).left) →
       LBIso (P.pull l) P₀ → LBIso (Q.pull l) Q₀ → LBIso (S.pull l) S₀ → LBIso Q (LB.div S P) := by
-  first | exact @GlobalTheory.BirigidLift.lift_div | exact GlobalTheory.BirigidLift.lift_div | (intros; apply GlobalTheory.BirigidLift.lift_div <;> assumption)
+  exact @GlobalTheory.BirigidLift.lift_div

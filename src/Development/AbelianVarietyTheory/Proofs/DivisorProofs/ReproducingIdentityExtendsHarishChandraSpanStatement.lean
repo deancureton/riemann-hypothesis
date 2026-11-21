@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReproducingIdentityExtendsHarishChandraSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
 import GroundTheory.AutomorphicForms.ReductionSiegel
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.reproducingIdentity_extends_harishChandraSpan : �
     ContDiff ℝ ∞ β → HasCompactSupport β → tsupport β ⊆ invSet E a →
     (∀ φ ∈ formsGL E a L W X N, ∀ g : GA E a, ∫ x, chart φ.1 g x * β x = φ.1 g) →
     ∀ φ ∈ Submodule.span ℂ (formsGL E a L W X N), ∀ g : GA E a, ∫ x, chart φ.1 g x * β x = φ.1 g := by
-  first | exact @GlobalTheory.HCF.repro_span | exact GlobalTheory.HCF.repro_span | (intros; apply GlobalTheory.HCF.repro_span <;> assumption)
+  exact @GlobalTheory.HCF.repro_span

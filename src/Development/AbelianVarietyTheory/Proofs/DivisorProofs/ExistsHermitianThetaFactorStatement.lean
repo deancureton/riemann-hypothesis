@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_hermitian_theta_factor : ∀ (A : Over (Sp 
       ∀ (l : u'.Λ) i z, ⊤ ≤ (u'.ex z).left ⁻¹ᵁ L.U i →
         u'.fr i z = χ l * Complex.exp (Real.pi * (z ⬝ᵥ Hm.mulVec (star (l : Fin g → ℂ))) +
           Real.pi / 2 * ((l : Fin g → ℂ) ⬝ᵥ Hm.mulVec (star (l : Fin g → ℂ)))) * u'.fr i (z + l) := by
-  first | exact @GlobalTheory.exists_appellHumbert_frame_of_isLB | exact GlobalTheory.exists_appellHumbert_frame_of_isLB | (intros; apply GlobalTheory.exists_appellHumbert_frame_of_isLB <;> assumption)
+  exact @GlobalTheory.exists_appellHumbert_frame_of_isLB

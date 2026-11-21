@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalGoodPlaceIntertwiner
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFirstApply
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.triple_local_good_place_intertwiner : GlobalTheory
         ι φ₁ = ((GlobalTheory.CtTyp.twAbs X.α ((a' : ℝ) / 2) (locIdele F w x) : ℂˣ) : ℂ) • fun Y => ι φ (Y * (GlobalTheory.JacBlock₂.diagFirst (e x)).1)) ∧
     ∀ x : (w.adicCompletion E)ˣ, ((GlobalTheory.CtTyp.twAbs X.α ((a' : ℝ) / 2) (locIdele F w x) : ℂˣ) : ℂ) * (((ν₀ (e x))⁻¹ : ℂˣ) : ℂ) *
         GlobalTheory.SplitFlip.apow (e x) ((((a + a' : ℕ) : ℂ) - 2 * (a' : ℂ)) / 2) = ((GlobalTheory.CtTyp.twAbs X.β ((a : ℝ) / 2) (locIdele F w x) : ℂˣ) : ℂ) := by
-  first | exact @GlobalTheory.JacBridge.bridge | exact GlobalTheory.JacBridge.bridge | (intros; apply GlobalTheory.JacBridge.bridge <;> assumption)
+  exact @GlobalTheory.JacBridge.bridge

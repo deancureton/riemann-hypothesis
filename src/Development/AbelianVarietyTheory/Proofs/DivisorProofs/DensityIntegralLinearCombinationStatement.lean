@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.density_integral_linear_combination : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (σ : k →+* ℂ) (D : ℕ) [SecondCountableTopology (CxPts p σ)] (I : Type) [Fintype I] (c : I → ℝ) (ρ : I → AlgChart p σ D → CxPts p σ → ℝ) (f : CxPts p σ → ℝ), (∀ j, IsDens (ρ j)) → (∀ j, IntegrableDens (ρ j) f) → IntegrableDens (fun ch y => ∑ j, c j * ρ j ch y) f ∧ densInt (fun ch y => ∑ j, c j * ρ j ch y) f = ∑ j, c j * densInt (ρ j) f := by
-  first | exact @GlobalTheory.DensLinear.densInt_sum | exact GlobalTheory.DensLinear.densInt_sum | (intros; apply GlobalTheory.DensLinear.densInt_sum <;> assumption)
+  exact @GlobalTheory.DensLinear.densInt_sum

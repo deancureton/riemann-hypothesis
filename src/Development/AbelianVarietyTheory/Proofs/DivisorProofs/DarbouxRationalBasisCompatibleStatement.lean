@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxRationalBasisCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealisedOne
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.darboux_rational_basis_compatible : ∀ (F E : Typ
   (∀ x : Matrix α β E, ∃ u v : κ → F, d₂.e (incM F x) = (fun i => algebraMap F (AF F) (u i), fun i => algebraMap F (AF F) (v i))) →
   ∃ g : Matrix (κ ⊕ κ) (κ ⊕ κ) F, gᵀ * Matrix.fromBlocks 0 1 (-1) 0 * g = Matrix.fromBlocks 0 1 (-1) 0 ∧
     ∀ w, d₂.e w = GlobalTheory.AdelicSvN.act g (d₀.e w) := by
-  first | exact @GlobalTheory.RatDarboux.exists_rat_symplectic | exact GlobalTheory.RatDarboux.exists_rat_symplectic | (intros; apply GlobalTheory.RatDarboux.exists_rat_symplectic <;> assumption)
+  exact @GlobalTheory.RatDarboux.exists_rat_symplectic

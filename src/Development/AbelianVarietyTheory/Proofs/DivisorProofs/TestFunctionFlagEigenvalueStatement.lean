@@ -9,4 +9,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.test_function_flag_eigenvalue : GlobalTheory.CovTop.Hypotheses2 → GlobalTheory.Published.ArDegree → ArCalc → RegularAlteration → ∀ (D : D7) (Y : DV.ShimX D.what₂.Tau) (hh : Fn Y), GlobalTheory.FlagZ.IsHh D.what₂.Tau Y.N hh → hh (testF Y) = (1 / (Y.j : ℝ) - 1 / ((Y.N : ℝ) - Y.j) - 1) * testI Y := by
-  first | exact @GlobalTheory.CovTest.hh_testF | exact GlobalTheory.CovTest.hh_testF | (intros; apply GlobalTheory.CovTest.hh_testF <;> assumption)
+  exact @GlobalTheory.CovTest.hh_testF

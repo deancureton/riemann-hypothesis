@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineGramCurvatureAllFormula
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.lineChern_weightNormSq_eq_vertForm_add_horizForm :
         + ∑ l ∈ Finset.Iio i, thetaSq H π e i l y ξ η) →
     ∀ (lam : Fin n → ℝ) ξ η, lineChern (weightNormSq H π A lam) y ξ η =
       vertForm H π e lam y ξ η + horizForm H π e lam y ξ η := by
-  first | exact @GlobalTheory.ChernWeight.lineChern_weightNormSq | exact GlobalTheory.ChernWeight.lineChern_weightNormSq | (intros; apply GlobalTheory.ChernWeight.lineChern_weightNormSq <;> assumption)
+  exact @GlobalTheory.ChernWeight.lineChern_weightNormSq

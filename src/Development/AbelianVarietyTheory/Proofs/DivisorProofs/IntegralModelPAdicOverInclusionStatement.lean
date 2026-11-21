@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicOverInclusion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.integral_model_p_adic_over_inclusion : ∀ (E : Ty
       IsCombAtG Y.t (yy ≫ Y.j) (bcV Y.t (algebraMap 𝓞_ℂ_[p] ℂ_[p]) e) (fun b => (U b : ℂ_[p])) (w ≫ Y.m.φ) ∧
       IsCombAt y.x (y.u σ) cf (w ≫ ν.φ) ∧
       ∑ b, (U b : ℂ_[p]) • P.bLie (xb b) = ∑ j, cf j • ∑ l, gm σ j l • P.bLie (x σ l) := by
-  first | exact @GlobalTheory.FlatModel.htComb_lift | exact GlobalTheory.FlatModel.htComb_lift | (intros; apply GlobalTheory.FlatModel.htComb_lift <;> assumption)
+  exact @GlobalTheory.FlatModel.htComb_lift

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPairUnfoldingMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_unfolding_measure : ∀ (F E : Type)
       (∀ u, (∀ i, u i ∈ antiSub (AE F E) finSumFinEquiv) → (co.e u).2 = 0) →
     ∀ om₂ : Rep σ Xs W₂, IsUWeilPair (cA σ) (adeleClass F) B.ψ (-1) (incM F Xs.J) (incM F W₂.J) co χX 1 om₂ →
     ∀ Ψ ∈ schA F (Fin n × Fin (d + d)), ∃ N ∈ 𝓝 (1 : UA σ W₂.J), ∀ u ∈ N, u ∈ UAt σ W₂ (sndA F) → om₂ (1, u) Ψ = Ψ := by
-  first | exact @GlobalTheory.DblFinSmooth.fix_near_one | exact GlobalTheory.DblFinSmooth.fix_near_one | (intros; apply GlobalTheory.DblFinSmooth.fix_near_one <;> assumption)
+  exact @GlobalTheory.DblFinSmooth.fix_near_one

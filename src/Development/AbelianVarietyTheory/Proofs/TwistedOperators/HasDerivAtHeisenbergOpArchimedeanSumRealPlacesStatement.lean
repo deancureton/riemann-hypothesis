@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasDerivAtHeisenbergOpArchimedeanSumRealPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.hasDerivAt_heisenbergOp_archimedean_sum_realPlaces
     ∀ w : WO S T, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.At (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI D.host.F) w → ∀ x : WO S T,
       HasDerivAt (fun t : ℝ => heisO ψ S T (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.realAd D.host.F t • w) f x)
         (∑ τ, dRho (heisO ψ S T) θ τ (compAt θ τ w) f x) 0 := by
-  first | exact @GlobalTheory.ArchLineSum.hasDerivAt_realAd_smul | exact GlobalTheory.ArchLineSum.hasDerivAt_realAd_smul | (intros; apply GlobalTheory.ArchLineSum.hasDerivAt_realAd_smul <;> assumption)
+  exact @GlobalTheory.ArchLineSum.hasDerivAt_realAd_smul

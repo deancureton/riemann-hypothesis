@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLinearBarModelTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.exists_linear_bar_model_triple : ∀ {F E : Type} 
     (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' →
     ∃ ι : ((Fin a' × Fin (a + a') → Fv F B.v₁) → ℂ) →ₗ[ℂ] (Matrix (Fin a') (Fin (a + a')) (Fv F B.v₁) → ℂ),
       G.M'.IsLinBar B.ψ B.τ₁ 1 1 ι := by
-  first | exact @GlobalTheory.LinBarAt.exists_isLinBar_v₁ | exact GlobalTheory.LinBarAt.exists_isLinBar_v₁ | (intros; apply GlobalTheory.LinBarAt.exists_isLinBar_v₁ <;> assumption)
+  exact @GlobalTheory.LinBarAt.exists_isLinBar_v₁

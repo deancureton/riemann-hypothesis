@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasSumOverCosetRepresentatives
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.hasSum_over_coset_representatives : ∀ {H A : Typ
   (∀ m ∈ T, ∃! r, r ∈ R ∧ ∃ h, m = r + φ h) → Finite {h : H // φ h = 0} →
   ∀ (F : A → ℂ) (s : ℂ), HasSum (fun m : T => F m) s →
     HasSum (fun h : H => ∑ r ∈ R, F (r + φ h)) ((Nat.card {h : H // φ h = 0} : ℂ) * s) := by
-  first | exact @GlobalTheory.CompanionTheory.OrbitSums.orbit_sum_unfold | exact GlobalTheory.CompanionTheory.OrbitSums.orbit_sum_unfold | (intros; apply GlobalTheory.CompanionTheory.OrbitSums.orbit_sum_unfold <;> assumption)
+  exact @GlobalTheory.CompanionTheory.OrbitSums.orbit_sum_unfold

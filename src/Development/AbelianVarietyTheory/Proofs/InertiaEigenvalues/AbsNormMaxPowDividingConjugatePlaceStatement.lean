@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AbsNormMaxPowDividingConjugatePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsFlipDet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FlipIdxNeZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IdemSumMulOfSubset
@@ -25,4 +24,4 @@ open GlobalTheory.LevelSeries
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.absNorm_maxPowDividing_conjugatePlace : ∀ (D : D7) (P : Formalism.L2.DIV.Pl D.host.E) (N : ℕ), Ideal.absNorm ((Formalism.L2.DIV.conjPl P).maxPowDividing (Ideal.span {((N : ℕ) : 𝓞 D.host.E)})) = Ideal.absNorm (P.maxPowDividing (Ideal.span {((N : ℕ) : 𝓞 D.host.E)})) := by
-  first | exact @GlobalTheory.ConjNormPow.absNorm_maxPowDividing_conjPl | exact GlobalTheory.ConjNormPow.absNorm_maxPowDividing_conjPl | (intros; apply GlobalTheory.ConjNormPow.absNorm_maxPowDividing_conjPl <;> assumption)
+  exact @GlobalTheory.ConjNormPow.absNorm_maxPowDividing_conjPl

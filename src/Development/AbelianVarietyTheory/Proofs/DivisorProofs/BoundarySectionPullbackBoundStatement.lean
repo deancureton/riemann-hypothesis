@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundarySectionPullbackBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.boundary_section_pullback_bound : ∀ (d : ℕ) (X
         -(K * (1 + ∑ i, Real.log (rFun (Λ i) (σ i) x))) ≤ w R x ∧ w R x ≤ 0) →
     ∃ C : ℝ, ∀ (R : ℕ) (T : Fin n → LocPot Y), (∀ k, T k = (α + LocPot.ofFun (w R)).pullback μ hμ.1 ∨ T k = α.pullback μ hμ.1) →
       mInt B (Fin.cons (L.pullback μ hμ.1) T) (fun y => w R (μ y)) ≤ C := by
-  first | exact @GlobalTheory.LogResCurv.curvature_term_bounded | exact GlobalTheory.LogResCurv.curvature_term_bounded | (intros; apply GlobalTheory.LogResCurv.curvature_term_bounded <;> assumption)
+  exact @GlobalTheory.LogResCurv.curvature_term_bounded

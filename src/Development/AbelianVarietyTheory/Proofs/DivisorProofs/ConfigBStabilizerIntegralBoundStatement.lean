@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIntegralBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_integral_bound : GlobalTheory.
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h, AEStronglyMeasurable (fun p : K × (AE F E)ˣ =>
       G₁.M'.I om₁' (e' (G.M'.co.rho B.ψ (shiftB σ H H' p.2) (om' (p.1.1, h) Φ'))) 1) (μK.prod μ) := by
-  first | exact @GlobalTheory.ConeMeasSmall.coneIntegrand_aestronglyMeasurable | exact GlobalTheory.ConeMeasSmall.coneIntegrand_aestronglyMeasurable | (intros; apply GlobalTheory.ConeMeasSmall.coneIntegrand_aestronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeMeasSmall.coneIntegrand_aestronglyMeasurable

@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_cm_lattice_embedding_data : Hypotheses2 →
         (fun i : Fin (D.R.f * O.N) => adlOf (O.Φ.C c) (O.met.hm c)
           (eigSym O.S.Dw (ArIn.ind T) (some R) (Sum.inl i : Fin (D.R.f * O.N) ⊕ Fin (D.R.f * O.N))))
         β (fun τ => if τ ∈ Φ then vDiff D.host.E p else 0) ρ J p k := by
-  first | exact @GlobalTheory.EqHalf.eqData_geo | exact GlobalTheory.EqHalf.eqData_geo | (intros; apply GlobalTheory.EqHalf.eqData_geo <;> assumption)
+  exact @GlobalTheory.EqHalf.eqData_geo

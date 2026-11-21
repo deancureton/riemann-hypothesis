@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingLocalStabilizerMem
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_local_stabilizer_mem : ∀ (F E : T
     ∀ (K : Subgroup (UA σ G.V.J)), IsStab B K →
     ∀ m₀ : idelesAt E (evFin F v) →* UAtSub σ G.V (evFin F v), (∀ t, IsLevi H t.1 (1 : UA σ G₁.V.J) (m₀ t).1) →
     ∀ x : UAtSub σ G.V (evFin F v), ∃ q ∈ stabAt σ G.V (evFin F v) H.x, ∃ t k, x = q * (m₀ t)⁻¹ * kIncl K (evFin F v) k := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.IwasawaAt.iwasawa_at | exact GlobalTheory.ThK.LemF.QuotInv.IwasawaAt.iwasawa_at | (intros; apply GlobalTheory.ThK.LemF.QuotInv.IwasawaAt.iwasawa_at <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.IwasawaAt.iwasawa_at

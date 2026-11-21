@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedSphericalVacuumFixed
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.KFinLoc
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.unramified_spherical_vacuum_fixed : ∀ (F E : Typ
     (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' →
     ∀ v : Pl F, Nonempty (E →ₐ[F] Fv F v) → v ∉ X.T →
     ∀ k ∈ GlobalTheory.InertSph.KAt σ G.V v, Acts (evFin F v) (om (k, 1)) (G.M.vac v) (G.M.vac v) := by
-  first | exact @GlobalTheory.SplitSphV.vacV_fixed_split | exact GlobalTheory.SplitSphV.vacV_fixed_split | (intros; apply GlobalTheory.SplitSphV.vacV_fixed_split <;> assumption)
+  exact @GlobalTheory.SplitSphV.vacV_fixed_split

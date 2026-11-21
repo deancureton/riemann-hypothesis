@@ -14,4 +14,4 @@ open Formalism.MainNotions.SchurIrreducible (IsSplit)
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.sphericalParameterTransfer_all_finitePlaces : GlobalTheory.Hk3.HoweUnram → ∀ D : D7, TransferOn D fun _ => True := by
-  first | exact @GlobalTheory.ChainOnto.transferOn_all | exact GlobalTheory.ChainOnto.transferOn_all | (intros; apply GlobalTheory.ChainOnto.transferOn_all <;> assumption)
+  exact @GlobalTheory.ChainOnto.transferOn_all

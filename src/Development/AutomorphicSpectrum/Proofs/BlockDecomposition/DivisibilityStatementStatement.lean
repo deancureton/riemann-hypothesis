@@ -4,4 +4,4 @@ import Development.WeilBound.RepresentationTheoryGL.EisensteinSeries.SiegelEisen
 open ResidueKilled.Tr
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.divisibility_statement : Div := by
-  first | exact @GlobalTheory.CompanionTheory.DivMult.div_multiplier | exact GlobalTheory.CompanionTheory.DivMult.div_multiplier | (intros; apply GlobalTheory.CompanionTheory.DivMult.div_multiplier <;> assumption)
+  exact @GlobalTheory.CompanionTheory.DivMult.div_multiplier

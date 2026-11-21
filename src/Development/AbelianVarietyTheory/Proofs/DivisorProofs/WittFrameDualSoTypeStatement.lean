@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.witt_frame_dual_so_type : ∀ (F E : Type) [Field 
           IsAut σ (c • G.W.J.map σ) K (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) →
           ∀ S s, GlobalTheory.StdPar.IsCuspExp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) s →
             ∀ k ∈ S, ∀ i ≤ k, i ∈ S := by
-  first | exact @GlobalTheory.ThK.ExponentNeZero.blocks_initial | exact GlobalTheory.ThK.ExponentNeZero.blocks_initial | (intros; apply GlobalTheory.ThK.ExponentNeZero.blocks_initial <;> assumption)
+  exact @GlobalTheory.ThK.ExponentNeZero.blocks_initial

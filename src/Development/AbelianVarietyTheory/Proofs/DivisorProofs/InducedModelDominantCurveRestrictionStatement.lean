@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.induced_model_dominant_curve_restriction : Hypothe
   ∀ (c : O.s.Comp) (M : TrueGeo.Model (O.var c)) (L : HermLB M.p) (k : ℕ+) (cf : HeightOneSpectrum (𝓞 D.what₂.LL) → ℝ),
   (O.Mb B u s c).Induced M L k cf → ∀ (Z : Scheme.{0}) (i : Z ⟶ M.X) [IsClosedImmersion i] [IsIntegral Z] (q : ℕ)
   [Fact q.Prime] [Algebra (ZMod q) Γ(Z, ⊤)], q ∈ FlagAr.setB O.Y B → topologicalKrullDim Z = 1 → 0 ≤ topSelfIntersection (ZMod q) (L.B.pull i) 1 := by
-  first | exact @GlobalTheory.NefHodgeTateAt.nefAt_HT | exact GlobalTheory.NefHodgeTateAt.nefAt_HT | (intros; apply GlobalTheory.NefHodgeTateAt.nefAt_HT <;> assumption)
+  exact @GlobalTheory.NefHodgeTateAt.nefAt_HT

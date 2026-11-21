@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.KTypeClassAddMem
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DecompAtZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ open scoped InnerProductSpace
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.K_type_class_add_mem : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → GlobalTheory.FunPr.Hypotheses₂ → ∀ (N : GlobalTheory.Grid.Node D) (U : Subgroup (GA D N.V)) (f f' : GA D N.V → ℂ), f ∈ Cls θ N U → f' ∈ Cls θ N U → f + f' ∈ Cls θ N U := by
-  first | exact @GlobalTheory.KFinDecomp.cls_add | exact GlobalTheory.KFinDecomp.cls_add | (intros; apply GlobalTheory.KFinDecomp.cls_add <;> assumption)
+  exact @GlobalTheory.KFinDecomp.cls_add

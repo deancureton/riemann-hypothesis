@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairHypPlaneSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.pair_hyp_plane_split : GlobalTheory.ThK.KP → ∀
       ∀ Ψ ∈ schA F (Fin n × Fin d), Continuous (fun h : UA σ W.J => thetaSum F (e (om (1, h) Ψ))) ∧
         (∀ γ ∈ ratU σ W.J, ∀ h, thetaSum F (e (om (1, γ * h) Ψ)) = thetaSum F (e (om (1, h) Ψ))) ∧
         ∃ (C : ℝ) (k : ℕ), ∀ h, ‖thetaSum F (e (om (1, h) Ψ))‖ ≤ C * (ht h : ℝ) ^ k := by
-  first | exact @GlobalTheory.ThKEvKernel.kernel_basic | exact GlobalTheory.ThKEvKernel.kernel_basic | (intros; apply GlobalTheory.ThKEvKernel.kernel_basic <;> assumption)
+  exact @GlobalTheory.ThKEvKernel.kernel_basic

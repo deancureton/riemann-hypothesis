@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_archimedean_matrices_triple : GlobalTheory.
       LinearMap.range Φ = Γ.M.Pol Bs.ψ Bs.emb ∧
       GlobalTheory.RealLift.ActsBy Bs.emb A (om.comp (MonoidHom.inl _ _)) Φ
         (Formalism.BasicNotions.TH.fockAct1 (a - Γ.p) Γ.p (a + a' - (Γ.p + Γ.q)) (Γ.p + Γ.q)) c := by
-  first | exact @GlobalTheory.RealLift.FockFirst.exists_fockMap_first | exact GlobalTheory.RealLift.FockFirst.exists_fockMap_first | (intros; apply GlobalTheory.RealLift.FockFirst.exists_fockMap_first <;> assumption)
+  exact @GlobalTheory.RealLift.FockFirst.exists_fockMap_first

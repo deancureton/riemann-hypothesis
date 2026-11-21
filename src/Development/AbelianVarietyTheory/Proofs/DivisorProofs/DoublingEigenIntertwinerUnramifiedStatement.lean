@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingEigenIntertwinerUnramified
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.doubling_eigen_intertwiner_unramified : GlobalTheo
       thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (m * k, h) Φ))) =
         (X.ν l : ℂ)⁻¹ * (((absE F E l : ℝ) ^ (((b + a' : ℕ) : ℝ) / 2) : ℝ) : ℂ) *
           thetaSum F (om₁ (g₀, 1) (e (G.M.co.rho B.ψ (shiftA H H' l⁻¹) (om (k, h) Φ)))) := by
-  first | exact @GlobalTheory.XTermLaw.law | exact GlobalTheory.XTermLaw.law | (intros; apply GlobalTheory.XTermLaw.law <;> assumption)
+  exact @GlobalTheory.XTermLaw.law

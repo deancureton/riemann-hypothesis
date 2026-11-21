@@ -9,4 +9,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory GlobalTheory.Ex
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.degenerationRecognition_of_abelianPartsIsoLabels : UrCSt → URecSt := by
-  first | exact @GlobalTheory.Ex.Recognition.urec_of_abelian | exact GlobalTheory.Ex.Recognition.urec_of_abelian | (intros; apply GlobalTheory.Ex.Recognition.urec_of_abelian <;> assumption)
+  exact @GlobalTheory.Ex.Recognition.urec_of_abelian

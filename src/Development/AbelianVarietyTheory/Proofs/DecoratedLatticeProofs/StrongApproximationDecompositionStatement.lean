@@ -8,4 +8,4 @@ open scoped TensorProduct Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.strong_approximation_decomposition : GlobalTheory.Published.StrongApproxSU → ∀ (D : D7) (V : HSp D) (n : ℕ) (hn : V.rank = n), V.gram = 1 → ∀ g ∈ GfC V, ∃ r s k, IsRatFin V r ∧ s ∈ splitPart V ∧ k ∈ GfC V ∧ Moves V hn k (Formalism.L2.Col.stdLat D.host.E n) ∧ g = r * s * k := by
-  first | exact @GlobalTheory.SplitDec.exists_rat_split_stab | exact GlobalTheory.SplitDec.exists_rat_split_stab | (intros; apply GlobalTheory.SplitDec.exists_rat_split_stab <;> assumption)
+  exact @GlobalTheory.SplitDec.exists_rat_split_stab

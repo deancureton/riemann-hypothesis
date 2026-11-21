@@ -70,7 +70,6 @@ theorem twY_de (T : Formalism.L2.Herm.TwChTied D inQ) (F : ∀ u, FormsTied D u)
   rw [this, h3]
   rfl
 
-set_option maxHeartbeats 4000000 in
 
 structure TwFormsTied (D : D7) (Tw : TwForms D) {inQ : D.what₂.Tup → HeightOneSpectrum (𝓞 D.host.F) → Prop}
     (T : Formalism.L2.Herm.TwChTied D inQ) (F : ∀ u, FormsTied D u) where

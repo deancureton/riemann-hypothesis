@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalTorusSectionsBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatMatTransposeMulGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthLetters
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.toroidal_torus_sections_basis : ∀ (E : Type) [Fi
     ∀ χ : Fin N → (TorsK Z.t ξ q →* Kˣ), (∀ m, IsWeilHom Z.oF.t Z.m.φ (s m) (χ m)) →
     ∀ (α : 𝓞 E) (k k' : TorsK Z.t ξ q), k'.1 = k.1 ≫ Z.t.act.act α →
       ∀ m, χ m k' = ∏ m', χ m' k ^ GlobalTheory.EqHalf.chiAct Dw b α m m' := by
-  first | exact @GlobalTheory.WeilEquivar.equivar_field | exact GlobalTheory.WeilEquivar.equivar_field | (intros; apply GlobalTheory.WeilEquivar.equivar_field <;> assumption)
+  exact @GlobalTheory.WeilEquivar.equivar_field

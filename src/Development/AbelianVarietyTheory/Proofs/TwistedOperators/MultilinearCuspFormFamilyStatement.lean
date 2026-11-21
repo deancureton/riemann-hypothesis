@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MultilinearCuspFormFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.multilinear_cusp_form_family : GlobalTheory.FunPr.
           F (Function.update u τ w) = Rder θ V τ X (F u)) →
       ∃ T : Formalism.IndefR.Mult.MMap M, Formalism.IndefR.Mult.IsMultMap θ M ∅ 1 T ∧
         ∀ u : ∀ τ, GlobalTheory.IndefiniteRowSideFullHecke.FinitePartTypes.kFin (M.ε τ) (M.σ τ), ∃ v : M.Vec, (∀ τ, (v τ : M.H τ) = u τ) ∧ T v = F u := by
-  first | exact @GlobalTheory.GKGlobalise.globalise | exact GlobalTheory.GKGlobalise.globalise | (intros; apply GlobalTheory.GKGlobalise.globalise <;> assumption)
+  exact @GlobalTheory.GKGlobalise.globalise

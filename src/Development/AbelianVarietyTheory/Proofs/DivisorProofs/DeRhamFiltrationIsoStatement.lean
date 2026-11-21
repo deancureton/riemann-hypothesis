@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamFiltrationIso
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.de_rham_filtration_iso : GlobalTheory.CovTop.Hypot
     ∀ F : GlobalTheory.VB.Sub H, (∀ (V : T.Opens) (hV : IsAffineOpen V) (s : Γ(H, V)),
       s ∈ F.sec V ↔ e V hV s ∈ PrimitiveSubmodule (onAff A hV)) →
     Nonempty (F.toMod ≅ GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A) := by
-  first | exact @GlobalTheory.HodgeIso.main | exact GlobalTheory.HodgeIso.main | (intros; apply GlobalTheory.HodgeIso.main <;> assumption)
+  exact @GlobalTheory.HodgeIso.main

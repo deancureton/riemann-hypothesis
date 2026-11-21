@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LastColumnArrowRealAverageFunctional
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Foundations.HermitianSpaceBaseLatticeEqFrameLattice
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.lastColumnArrow_realAverage_functional : ∀ {D : 
             Λ (realAct W.θ S.N.fr (.grid i D.R.m) ((k : GA D (G.V (.grid i D.R.m)))⁻¹) v) ∂κ =
           Λ' (realAct W.θ S.N.fr (.grid (i + 1) D.R.m) h⁻¹
             (fockComp W S.N.frC (.chi i D.R.m : Pair T) (S.Z.vec d) (x * S.N.u _) (finOf _ h * S.N.u _) v)) := by
-  first | exact @GlobalTheory.LastColAvg.real_average | exact GlobalTheory.LastColAvg.real_average | (intros; apply GlobalTheory.LastColAvg.real_average <;> assumption)
+  exact @GlobalTheory.LastColAvg.real_average

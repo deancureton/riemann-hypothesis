@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetFamilyPullbackFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.jet_family_pullback_first : GlobalTheory.Published
     ∀ {i' : X₁.A.left ⟶ Z'.A.left} (hi' : X₁.IsPullBy Z' (spMap J'.π) i'), i' ≫ q = p ≫ Y.i →
     ∀ (mor' : GrpMor (dp0 R') (𝟙 _) X₁.A J'.κ (spMap J'.π) X₁.A (algebraMap R' J'.B) (𝟙 _) (Over.Hom.left (𝟙 X₁.A))),
     ∀ x ∈ Fil X₁.A, ∀ d, IsJetElt J' X₁ N₁ mor' x d → d ∈ liftFil J'.κ hi'.grp := by
-  first | exact @GlobalTheory.LatJet.baseChange_liftFil | exact GlobalTheory.LatJet.baseChange_liftFil | (intros; apply GlobalTheory.LatJet.baseChange_liftFil <;> assumption)
+  exact @GlobalTheory.LatJet.baseChange_liftFil

@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.translation_invariant_functional_schwartz : ∀ (F
           L (pureA F f (Set.indicator {y | y - r ∈ GlobalTheory.EvAdm.scaledInt F κ a} fun _ => (1 : ℂ))) =
             c * thetaSum F (pureA F f (Set.indicator {y | y - r ∈ GlobalTheory.EvAdm.scaledInt F κ a} fun _ => (1 : ℂ)))) →
       ∃ c : ℂ, ∀ Ψ ∈ schA F κ, L Ψ = c * thetaSum F Ψ := by
-  first | exact @GlobalTheory.ThetaGlue.main | exact GlobalTheory.ThetaGlue.main | (intros; apply GlobalTheory.ThetaGlue.main <;> assumption)
+  exact @GlobalTheory.ThetaGlue.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ExistsIntGramOfFixed
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.MemIntMat
 set_option maxHeartbeats 1000000 in
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_int_gram_of_fixed_alt : ∀ (L : Type) [Fie
           v = ρ (((h : GL (Fin n') L) : Matrix (Fin n') (Fin n') L) * x) s}) →
     ∃ l ∈ GlobalTheory.Hk3.HoweDuality.intMat L n' n,
       ∀ i j, ((x - l) * ((JS⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L) * Matrix.transpose ((x - l).map σ)) i j ∈ Formalism.UG.intL L := by
-  first | exact @GlobalTheory.Hk3.HoweDuality.exists_int_gram_of_fixed | exact GlobalTheory.Hk3.HoweDuality.exists_int_gram_of_fixed | (intros; apply GlobalTheory.Hk3.HoweDuality.exists_int_gram_of_fixed <;> assumption)
+  exact @GlobalTheory.Hk3.HoweDuality.exists_int_gram_of_fixed

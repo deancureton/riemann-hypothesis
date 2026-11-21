@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHeightSmulInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.eisenstein_height_smul_invariant : ∀ (F E : Type
     (a : GL (Fin n) (AF F ⊗[F] E)) (h : GAd σ J → ℝ), HidaSetting σ J X Y L a h →
       ∀ (μ : E), μ ≠ 0 → ∀ z : Fin n → E,
         GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F (μ • z)) = GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F z) := by
-  first | exact @GlobalTheory.EisMidHtScale.ht_smul_eq | exact GlobalTheory.EisMidHtScale.ht_smul_eq | (intros; apply GlobalTheory.EisMidHtScale.ht_smul_eq <;> assumption)
+  exact @GlobalTheory.EisMidHtScale.ht_smul_eq

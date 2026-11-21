@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilOperatorArchimedeanSliceSchwartzSeminormBoun
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryPartnerDiagStatement
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.weilOperator_archimedeanSlice_schwartzSeminorm_bou
   ∀ Φ ∈ GlobalTheory.WeilM.schA D.host.F κ, ∀ (y : κ → FiniteAdeleRing (𝓞 D.host.F) D.host.F) p0 (k n : ℕ), ∃ C : ℝ,
       ∀ᶠ p in nhds p0, ∀ x : κ → mixedEmbedding.mixedSpace D.host.F,
         ‖x‖ ^ k * ‖iteratedFDeriv ℝ n (fun x => om p Φ (GlobalTheory.WeilCont.adeleJoin D.host.F x y)) x‖ ≤ C := by
-  first | exact @GlobalTheory.WeilCont.slice_bounds | exact GlobalTheory.WeilCont.slice_bounds | (intros; apply GlobalTheory.WeilCont.slice_bounds <;> assumption)
+  exact @GlobalTheory.WeilCont.slice_bounds

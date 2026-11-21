@@ -60,5 +60,5 @@ open ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestric
 open Formalism.MainNotions
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covolume_lower_bound_of_cover : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Closed FamHyp fun Fm _ => ∃ K : ℝ, 0 ≤ K ∧ EvTied Fm fun _ _ _ p => ∀ i, -(K * unitE p) ≤ Real.log (ratAt p i) := by
-  first | exact @_root_.GlobalTheory.CovTop.MeasLow.nef_share_lower_bound | exact _root_.GlobalTheory.CovTop.MeasLow.nef_share_lower_bound | (intros; apply _root_.GlobalTheory.CovTop.MeasLow.nef_share_lower_bound <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.MeasLow.nef_share_lower_bound
 end

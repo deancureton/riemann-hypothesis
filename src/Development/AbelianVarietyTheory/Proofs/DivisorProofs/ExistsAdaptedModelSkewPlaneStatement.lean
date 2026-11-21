@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsAdaptedModelSkewPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_adapted_model_skew_plane : GlobalTheory.Fun
         (Ma.Pol B.ψ B.emb).map (ei : SInf F (Fin n × Fin d) →ₗ[ℂ] SInf F (Fin n × Fin d₁)) = M₁.Pol B.ψ B.emb ∧
         (∀ v, ev v (Ma.vac v) = M₁.vac v ∧ (SB _).map (ev v) = SB _) ∧
         ∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = Ma.vac v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v) := by
-  first | exact @GlobalTheory.ThK.PlaneEv.evalZero_adapted | exact GlobalTheory.ThK.PlaneEv.evalZero_adapted | (intros; apply GlobalTheory.ThK.PlaneEv.evalZero_adapted <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.evalZero_adapted

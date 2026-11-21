@@ -11,4 +11,4 @@ open GlobalTheory.TrMult
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.real_stable_of_characters : GlobalTheory.Published.HarishChandraCharacters → RealStable := by
-  first | exact @GlobalTheory.TrMult.realStable_of_harishChandra | exact GlobalTheory.TrMult.realStable_of_harishChandra | (intros; apply GlobalTheory.TrMult.realStable_of_harishChandra <;> assumption)
+  exact @GlobalTheory.TrMult.realStable_of_harishChandra

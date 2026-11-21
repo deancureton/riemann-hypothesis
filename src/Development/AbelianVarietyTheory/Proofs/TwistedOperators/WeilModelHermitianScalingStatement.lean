@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelHermitianScaling
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaTransformDarbouxModelLinearInjectiveStatement
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.weil_model_hermitian_scaling : GlobalTheory.FunPr.
     (∀ t : ℝ, GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU M (GlobalTheory.RealDict.sgE (D := D) ε) hJ (g t) = γ (Multiplicative.ofAdd t)) ∧
     ∀ P : PolF D X.rank M.rank, ∃ Q ∈ GlobalTheory.RealQuot.coinv ε A B eT, ∀ z,
       HasDerivAt (fun t : ℝ => ω (g t, 1) (ptF (V := sgn ε M) ψ θ (frSgn ε A) B f₀ P) z) (ptF ψ θ (frSgn ε A) B f₀ Q z) 0 := by
-  first | exact @GlobalTheory.OmegaDer.line_deriv_mem_coinv | exact GlobalTheory.OmegaDer.line_deriv_mem_coinv | (intros; apply GlobalTheory.OmegaDer.line_deriv_mem_coinv <;> assumption)
+  exact @GlobalTheory.OmegaDer.line_deriv_mem_coinv

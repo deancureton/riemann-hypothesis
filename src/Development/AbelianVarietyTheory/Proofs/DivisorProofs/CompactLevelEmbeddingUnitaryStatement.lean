@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactLevelEmbeddingUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.compact_level_embedding_unitary : ∀ (F E : Type)
     (g : GL (Fin d) (Fv F v)) (x : GLoc σ (c • W.J.map σ) v), IsCompAt σ (c • W.J.map σ) t 1 g x →
     (toGAd hσ W.J hc).symm (GlobalTheory.AdelicU.emb σ (c • W.J.map σ) v x) ∈ UAt σ W (evFin F v) ∧
       (mat ((toGAd hσ W.J hc).symm (GlobalTheory.AdelicU.emb σ (c • W.J.map σ) v x))).map (piW t) = g.1 := by
-  first | exact @GlobalTheory.ThetaLocalBridge.emb_mem_uAt_piW | exact GlobalTheory.ThetaLocalBridge.emb_mem_uAt_piW | (intros; apply GlobalTheory.ThetaLocalBridge.emb_mem_uAt_piW <;> assumption)
+  exact @GlobalTheory.ThetaLocalBridge.emb_mem_uAt_piW

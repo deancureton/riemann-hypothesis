@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsNonzeroKFinite
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.AdmissibleCoefficientsAnalytic
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.PseudoCoefficientSeparation
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HarishChandraModulesOn
@@ -16,4 +15,4 @@ open scoped InnerProductSpace
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_nonzero_k_finite : ∀ (n : ℕ) (ε : Fin n → Bool) (V : Type) [NormedAddCommGroup V] [InnerProductSpace ℂ V] [CompleteSpace V] [Nontrivial V] (π : Matrix (Fin n) (Fin n) ℂ → (V →L[ℂ] V)), IsURepOn (UJset ε) π → ∃ v, IsKFin ε π v ∧ v ≠ 0 := by
-  first | exact @GlobalTheory.KFinExists.exists_kfin | exact GlobalTheory.KFinExists.exists_kfin | (intros; apply GlobalTheory.KFinExists.exists_kfin <;> assumption)
+  exact @GlobalTheory.KFinExists.exists_kfin

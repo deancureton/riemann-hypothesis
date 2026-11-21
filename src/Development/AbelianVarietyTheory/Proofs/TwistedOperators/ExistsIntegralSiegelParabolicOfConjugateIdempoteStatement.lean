@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsIntegralSiegelParabolicOfConjugateIdempote
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_integralSiegelParabolic_of_conjugateIdempot
         diagCols (Fin d) * ((1 - (⅟2 : AF F) • Eid) • (1 : Matrix (Fin d) (Fin d) (AE F E))) ∧
       GlobalTheory.InertDbl.matD s * GlobalTheory.InertDbl.antiCols d =
         GlobalTheory.InertDbl.antiCols d * ((1 + cA σ Eid) • (1 : Matrix (Fin d) (Fin d) (AE F E))) := by
-  first | exact @GlobalTheory.SplitConjPar.exists_par | exact GlobalTheory.SplitConjPar.exists_par | (intros; apply GlobalTheory.SplitConjPar.exists_par <;> assumption)
+  exact @GlobalTheory.SplitConjPar.exists_par

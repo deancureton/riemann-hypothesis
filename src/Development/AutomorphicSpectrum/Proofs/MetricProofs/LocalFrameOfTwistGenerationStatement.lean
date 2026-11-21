@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.LocalFrameOfTwistGeneration
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.DetMemSubring
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FrameCoeffsRegularInChart
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SpecializesOfUnits
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.local_frame_of_twist_generation : ∀ {X : Scheme.
     ∃ (T : Matrix (Fin r) (Fin r) Ω) (C : Matrix (Fin n) (Fin r) Ω) (B : Matrix (Fin r) (Fin n) Ω),
       T.det ≠ 0 ∧ Matrix.of (fun j a => φ j (cc a)) * T = (x c₁ ^ m) • C ∧ B * C = 1 ∧
         (∀ j a, C j a ∈ regAt ξ P) ∧ ∀ a j, B a j ∈ regAt ξ P := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.frames_at_point | exact GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.frames_at_point | (intros; apply GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.frames_at_point <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.PB.FMX.Frm.frames_at_point

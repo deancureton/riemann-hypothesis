@@ -7,4 +7,4 @@ open NumberField Classical Formalism.BasicNotions Formalism.MainNotions Formalis
 open scoped BigOperators
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.classSumDenominatorBound_of_cmThetaHypotheses : (∀ D, Inp D) → IntSt := by
-  first | exact @GlobalTheory.NormSum.DenomBound.intSt_of_forall_inp | exact GlobalTheory.NormSum.DenomBound.intSt_of_forall_inp | (intros; apply GlobalTheory.NormSum.DenomBound.intSt_of_forall_inp <;> assumption)
+  exact @GlobalTheory.NormSum.DenomBound.intSt_of_forall_inp

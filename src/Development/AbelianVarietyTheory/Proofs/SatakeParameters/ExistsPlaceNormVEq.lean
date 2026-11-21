@@ -1,5 +1,4 @@
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsWeight
-import Mathlib
 import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.RealStructures.Imports
 import CompanionTheory.EightfoldTheory.VariationTheory.AutomorphicForms.ImportsBis
 import PositivityTheory.AutomorphicForms.PublishedInputs.RealGaloisRepresentations.IwahoriSphericalTransfer.RamificationIdxEqOneAndInertiaDegEqOne

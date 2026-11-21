@@ -8,4 +8,4 @@ open scoped CategoryTheory.Obj
 open GlobalTheory.Desc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lineBundle_symmetric_of_symmetric_generic_fibre : ∀ (R : Type) [CommRing R] [IsDomain R] [IsNoetherianRing R] [IsIntegrallyClosed R] [IsLocalRing R] (G : Over (Sp R)) [GrpObj G], IsSemiAbelian G → ∀ L : LB G.left, L.IsLB → LBIso ((L.pull (pullback.fst G.hom (jK R))).pull (GrpObj.inv : (Over.pullback (jK R)).obj G ⟶ (Over.pullback (jK R)).obj G).left) (L.pull (pullback.fst G.hom (jK R))) → LBIso (L.pull (GrpObj.inv : G ⟶ G).left) L := by
-  first | exact @GlobalTheory.SymGenericExt.symm_of_generic | exact GlobalTheory.SymGenericExt.symm_of_generic | (intros; apply GlobalTheory.SymGenericExt.symm_of_generic <;> assumption)
+  exact @GlobalTheory.SymGenericExt.symm_of_generic

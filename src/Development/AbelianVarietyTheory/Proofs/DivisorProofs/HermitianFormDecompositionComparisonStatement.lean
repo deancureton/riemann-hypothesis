@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormDecompositionComparison
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TendstoUniformlyOfFamAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TruncatedPotentialLogGrowth
@@ -21,4 +20,4 @@ open GlobalTheory.QCoh (pullbackSections)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hermitian_form_decomposition_comparison : ∀ {g : ℕ} {ι Tau : Type} [Fintype Tau] {d : Tau → ℕ} (v : ι → Fin g → ℂ), Submodule.span ℂ (Set.range v) = ⊤ → ∀ (Gm Gm' : Matrix (Fin g) (Fin g) ℂ), Gm.IsHermitian → Gm'.IsHermitian → ∀ (A A' : ∀ τ, Matrix (Fin (d τ)) (Fin (d τ)) ℂ) (x : ∀ τ, ι → Fin (d τ) → ℂ), (∀ i i', HermFrame.form Gm (v i) (v i') = ∑ τ, HermFrame.form (A τ) (x τ i) (x τ i')) → (∀ i i', HermFrame.form Gm' (v i) (v i') = ∑ τ, HermFrame.form (A' τ) (x τ i) (x τ i')) → ∀ (K : ℝ), (∀ τ, (((K : ℂ) • A' τ) - A τ).PosSemidef) → (((K : ℂ) • Gm') - Gm).PosSemidef := by
-  first | exact @GlobalTheory.SpanCompare.posSemidef_of_span | exact GlobalTheory.SpanCompare.posSemidef_of_span | (intros; apply GlobalTheory.SpanCompare.posSemidef_of_span <;> assumption)
+  exact @GlobalTheory.SpanCompare.posSemidef_of_span

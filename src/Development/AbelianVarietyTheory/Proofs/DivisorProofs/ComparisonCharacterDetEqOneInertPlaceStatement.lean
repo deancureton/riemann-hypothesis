@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComparisonCharacterDetEqOneInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.comparisonCharacter_det_eq_one_inertPlace : ∀ (F
       ∀ z ∈ GlobalTheory.InertSph.latAt G.W v, (t : Matrix (Fin (a + a')) (Fin (a + a')) (AE F E)) *ᵥ z ∈ GlobalTheory.InertSph.latAt G.W v ∧
         ((t⁻¹ : GL (Fin (a + a')) (AE F E)) : Matrix (Fin (a + a')) (Fin (a + a')) (AE F E)) *ᵥ z ∈ GlobalTheory.InertSph.latAt G.W v) →
       X.α (Matrix.GeneralLinearGroup.det t) = 1 := by
-  first | exact @GlobalTheory.InertDetChr.alpha_det_eq_one | exact GlobalTheory.InertDetChr.alpha_det_eq_one | (intros; apply GlobalTheory.InertDetChr.alpha_det_eq_one <;> assumption)
+  exact @GlobalTheory.InertDetChr.alpha_det_eq_one

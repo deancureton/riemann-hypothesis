@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFiniteApproximation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.schwartz_finite_approximation : ∀ (F E : Type) [
     ∃ S : Set (Fn F n d), S.Finite ∧ S ⊆ schA F (Fin n × Fin d) ∧ ∀ w : Fin d → E, (∀ i, ∃ o : 𝓞 E, (N : E) * w i = o) →
       ∃ Φ ∈ S, M.co.rho B.ψ (Matrix.vecMulVec (incV F x) (incV F w)) Ψ =
         M.co.rho B.ψ (realAd F 1 • Matrix.vecMulVec (incV F x) (incV F w)) Φ := by
-  first | exact @GlobalTheory.FinPartHeis.finPart_right | exact GlobalTheory.FinPartHeis.finPart_right | (intros; apply GlobalTheory.FinPartHeis.finPart_right <;> assumption)
+  exact @GlobalTheory.FinPartHeis.finPart_right

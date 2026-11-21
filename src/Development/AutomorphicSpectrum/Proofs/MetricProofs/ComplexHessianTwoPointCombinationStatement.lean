@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ComplexHessianTwoPointCombination
-import Mathlib
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsTwiceDifferentiableAt
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.CompRightEqZero
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.KappaSt
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.complex_hessian_two_point_combination : ∀ (d : �
         t * f (Fin.cons (z 1) (Fin.tail (Fin.tail z))) + v * α (Fin.tail (Fin.tail z)))
       (Fin.cons p₀ (Fin.cons p₁ y)) =
     blk ((s : ℂ) * e₀) (blk ((t : ℂ) * e₁) ((s : ℂ) • B₀ + (t : ℂ) • B₁ + (v : ℂ) • hessC α y)) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.PB.FibN.hessC_row_square | exact GlobalTheory.CompanionTheory.Ar.PB.FibN.hessC_row_square | (intros; apply GlobalTheory.CompanionTheory.Ar.PB.FibN.hessC_row_square <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.PB.FibN.hessC_row_square

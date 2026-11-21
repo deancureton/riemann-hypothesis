@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalFunctionValueCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseAt
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.rational_function_value_compatible : ∀ {k : Type
     (σ : k →+* ℂ) (z : CxPts (πG ≫ qX) σ) (y : CxPts qX σ), y.1 = z.1 ≫ πG → ∀ f : X.functionField,
     (RegAt (under y) f → RegAt (under z) (φ f) ∧ ratVal (φ f) z = ratVal f y) ∧
       (UnitAt (under y) f → UnitAt (under z) (φ f)) := by
-  first | exact @GlobalTheory.RatValPull.regAt_ratVal_pull | exact GlobalTheory.RatValPull.regAt_ratVal_pull | (intros; apply GlobalTheory.RatValPull.regAt_ratVal_pull <;> assumption)
+  exact @GlobalTheory.RatValPull.regAt_ratVal_pull

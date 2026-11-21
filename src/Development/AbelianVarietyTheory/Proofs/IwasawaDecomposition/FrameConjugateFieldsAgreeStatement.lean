@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FrameConjugateFieldsAgree
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdmissibleRepresentationFactorisation
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpMapResMap
 open AlgebraicGeometry CategoryTheory Limits NumberField
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.frame_conjugate_fields_agree : ∀ {E : Type} [Fie
     (∀ τ i, IsCombAtG t (spMap (ι.comp r) ≫ yk) ((u.bc ι) τ) (fun j => uni (s τ) j i) (v τ i)) →
     GlobalTheory.LocM.SameFlag ty t (spMap (ι.comp r) ≫ yk) (u.bc σ) v →
     ∀ τ q, s τ q ∈ Subfield.closure (Set.range ι ∪ Set.range σ) := by
-  first | exact @GlobalTheory.FlagField.mem_closure | exact GlobalTheory.FlagField.mem_closure | (intros; apply GlobalTheory.FlagField.mem_closure <;> assumption)
+  exact @GlobalTheory.FlagField.mem_closure

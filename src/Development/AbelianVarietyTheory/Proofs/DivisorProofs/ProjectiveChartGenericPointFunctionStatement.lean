@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveChartGenericPointFunction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.projective_chart_generic_point_function : ∀ (K �
     y i ≠ 0 → (∀ j, fnOf U hη (GlobalTheory.ProjSpace.pullRatio π U i hU j) = ψ (y j / y i)) →
     ((π (genericPoint X) : ProjectiveSpectrum (MvPolynomial.homogeneousSubmodule (Fin (m + 1)) (𝓞 K))).asHomogeneousIdeal.toIdeal).map
       (MvPolynomial.map (algebraMap (𝓞 K) K)) = GlobalTheory.CompHt.coneIdeal K y := by
-  first | exact @GlobalTheory.CompHt.map_genericPrime_eq_coneIdeal | exact GlobalTheory.CompHt.map_genericPrime_eq_coneIdeal | (intros; apply GlobalTheory.CompHt.map_genericPrime_eq_coneIdeal <;> assumption)
+  exact @GlobalTheory.CompHt.map_genericPrime_eq_coneIdeal

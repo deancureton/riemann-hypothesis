@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBTripleFifthForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_fifth_form : ∀ {F E : Type}
         ι (schr (GlobalTheory.LatVac.psiAt B.ψ B.v₁) (GlobalTheory.LatVac.locCo G.M'.co B.v₁ (shiftB σ H H' l)) φ)
             (GlobalTheory.PlaneBasis.crdP B.τ₁ H * insS Y r c 0 * GlobalTheory.PlaneBasis.crdQ B.τ₁ H') =
           c₀ * GlobalTheory.LatVac.psiAt B.ψ B.v₁ (s * r ⟨a, by omega⟩) * ι φ (GlobalTheory.PlaneBasis.crdP B.τ₁ H * insS Y r c x * GlobalTheory.PlaneBasis.crdQ B.τ₁ H') := by
-  first | exact @GlobalTheory.ShiftAdapted.shift_acts | exact GlobalTheory.ShiftAdapted.shift_acts | (intros; apply GlobalTheory.ShiftAdapted.shift_acts <;> assumption)
+  exact @GlobalTheory.ShiftAdapted.shift_acts

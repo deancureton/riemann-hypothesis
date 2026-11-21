@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryScalingVector
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_unitary_scaling_vector : ∀ (F E : Type) [
       (∀ e : E, σ (σ e) = e) →
       ∀ t : ℕ, t ≠ 0 → ∃ m : UA σ X.J, mat m *ᵥ incV F H.x = (t : AE F E) • incV F H.x ∧
         (t : AE F E) • (mat m *ᵥ incV F H.y) = incV F H.y ∧ ∀ z : Fin n₁ → AE F E, mat m *ᵥ (incM F H.ι *ᵥ z) = incM F H.ι *ᵥ z := by
-  first | exact @GlobalTheory.PlaneLevi.exists_levi_scale | exact GlobalTheory.PlaneLevi.exists_levi_scale | (intros; apply GlobalTheory.PlaneLevi.exists_levi_scale <;> assumption)
+  exact @GlobalTheory.PlaneLevi.exists_levi_scale

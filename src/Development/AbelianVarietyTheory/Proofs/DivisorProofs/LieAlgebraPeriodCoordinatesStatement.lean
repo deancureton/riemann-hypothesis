@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieAlgebraPeriodCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.lie_algebra_period_coordinates : ∀ {E : Type} [F
       (∀ v, ∃ v' : X.Lie, Obj.LieCorr R.subtype p v v' ∧ U.u.IsDiff (cd v) v'.hom) ∧
       (∀ v (v' : X.Lie) W, Obj.LieCorr R.subtype p v v' → U.u.IsDiff W v'.hom → W = cd v) ∧
       ∀ ω : X₀.Lie →ₗ[R] R, ∃ lam : Fin (Module.finrank ℚ (FR E)) → ℂ, ∀ v, ((ω v : R) : ℂ) = ∑ j, lam j * cd v j := by
-  first | exact @GlobalTheory.LieCoord.exists_lieCoord_unif | exact GlobalTheory.LieCoord.exists_lieCoord_unif | (intros; apply GlobalTheory.LieCoord.exists_lieCoord_unif <;> assumption)
+  exact @GlobalTheory.LieCoord.exists_lieCoord_unif

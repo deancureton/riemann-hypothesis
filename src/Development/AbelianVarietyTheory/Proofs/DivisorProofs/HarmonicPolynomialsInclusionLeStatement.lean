@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HarmonicPolynomialsInclusionLe
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -20,4 +19,4 @@ open Formalism.BasicNotions.TH GlobalTheory.RealLift GlobalTheory.FockIncl
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.harmonic_polynomials_inclusion_le : ∀ (P Q R S : ℕ) (r₀ : Fin (R + 1)) (s₀ : Fin (S + 1)) (x : ℚ),
     (harmTy P Q R S x).map (polIncl P Q r₀ s₀).toLinearMap ≤ harmTy P Q (R + 1) (S + 1) x := by
-  first | exact @GlobalTheory.FockInclHarm.harmTy_map_polIncl_le | exact GlobalTheory.FockInclHarm.harmTy_map_polIncl_le | (intros; apply GlobalTheory.FockInclHarm.harmTy_map_polIncl_le <;> assumption)
+  exact @GlobalTheory.FockInclHarm.harmTy_map_polIncl_le

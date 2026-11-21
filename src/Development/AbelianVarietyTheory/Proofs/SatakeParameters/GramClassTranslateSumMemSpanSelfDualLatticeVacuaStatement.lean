@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.GramClassTranslateSumMemSpanSelfDualLatticeVacua
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SelfDualOne
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent
 open Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.gram_class_translate_sum_mem_span_selfDual_lattice
       (∀ y ∈ C, ∀ y' ∈ C, y ≠ y' → y - y' ∉ GlobalTheory.Hk3.HoweDuality.intMat L n' n) ∧
       ∑ y ∈ C, c y • ρ y s ∈ Submodule.span ℂ {w : M | ∃ a : GL (Fin n) L, GlobalTheory.Hk3.HoweG.SelfDual σ JS a ∧
         ∀ u : Matrix (Fin n') (Fin n) L, (∀ i j, u i j ∈ Formalism.UG.intL L) → ρ (u * ((a⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L)) w = w} := by
-  first | exact @GlobalTheory.Hk3.HoweG.gramClass_sum_mem_span_selfDual_vac | exact GlobalTheory.Hk3.HoweG.gramClass_sum_mem_span_selfDual_vac | (intros; apply GlobalTheory.Hk3.HoweG.gramClass_sum_mem_span_selfDual_vac <;> assumption)
+  exact @GlobalTheory.Hk3.HoweG.gramClass_sum_mem_span_selfDual_vac

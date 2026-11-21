@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MumfordIsoPeriodsFactorTensorPolarised
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.OfFactorE
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.mumfordIso_periods_factor_tensor_polarised : ∀ (
         val (Q.tau a b) (𝟙 _) z J' =
           lamVal w' (lift (toUnit (TK R) ≫ Q.c a) (toUnit (TK R) ≫ Q.c b)).left z J J' *
             val (D'.toPre.tau (PowLim.xi xe i₀ a) (TensO.binv (symUnitOf W h) • PowLim.xi xe i₀ b)) (𝟙 _) z J := by
-  first | exact @GlobalTheory.Mum.PolPair.pairing_factor | exact GlobalTheory.Mum.PolPair.pairing_factor | (intros; apply GlobalTheory.Mum.PolPair.pairing_factor <;> assumption)
+  exact @GlobalTheory.Mum.PolPair.pairing_factor

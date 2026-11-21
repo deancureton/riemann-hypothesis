@@ -15,4 +15,4 @@ open GlobalTheory.ThetaDens
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaSobolevSeminorm_sub_tendsto_zero_of_words_unif : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ), IsStdChar D ψ (-1) → ∀ θ : InfFam D, IsInfFam θ → ∀ S T : HSp D, ∀ (μ : Measure (WO S T)) (𝓕 : Set (WO S T)), IsCovolOne (ratL T S) μ 𝓕 → ∀ (u : ℕ → WO S T → ℂ) (f : WO S T → ℂ), IsThetaFunO ψ S T f → (∀ j, IsThetaFunO ψ S T (u j)) → (∀ l : List (D.what₂.Tau × Fin T.rank × Fin S.rank × Bool), TendstoUniformly (fun j => GlobalTheory.Size.wordAct (GlobalTheory.Size.heisDer ψ θ) l (u j)) (GlobalTheory.Size.wordAct (GlobalTheory.Size.heisDer ψ θ) l f) Filter.atTop) → ∀ d, Filter.Tendsto (fun j => sobO ψ θ μ 𝓕 d (u j - f)) Filter.atTop (nhds 0) := by
-  first | exact @GlobalTheory.ThetaDens.sobO_sub_tendsto_zero | exact GlobalTheory.ThetaDens.sobO_sub_tendsto_zero | (intros; apply GlobalTheory.ThetaDens.sobO_sub_tendsto_zero <;> assumption)
+  exact @GlobalTheory.ThetaDens.sobO_sub_tendsto_zero

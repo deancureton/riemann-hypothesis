@@ -30,7 +30,6 @@ abbrev levelZeroHermitianTransport (H : FullTiedNoG D) (hL : ∀ u, H.base.lev0 
 abbrev formsOfRecursion (T : ∀ u : D.what₂.Word, Forms0 D u) : ∀ u : D.what₂.Word, Forms0 (recC D sc Ce Lc I ψ hd) u :=
   fun u => formsOfRecursiveGroup D sc Ce Lc (packC D Lc I ψ) hd (T u)
 
-set_option maxHeartbeats 4000000 in
 
 def secondLayerCompatibilities (H : FullTiedNoG D) (hL : ∀ u, H.base.lev0 u = Lc u) (T : ∀ u : D.what₂.Word, Forms0 D u)
     (B : GL (Fin D.R.k) D.host.E) (hBs : Cmp.StdB D B)

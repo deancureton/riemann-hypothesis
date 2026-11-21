@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeilRepRealPointFockVectorSubstitution
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ValRingLocRing
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TranslateMemCoefLatFn
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.OmPureTensorOOfFinite
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.weilRep_real_point_fockVector_substitution : ∀ (
     ∀ P : MvPolynomial (FVar D W.rank V.rank) ℂ,
       om (a, 1) (stdF ψ θ V W sW BW f P) =
         stdF ψ θ V W sW BW (om (a, 1) f) (GlobalTheory.ExportSeries.fockSubst (fun _ => p) u P) := by
-  first | exact @GlobalTheory.RealFockVac.om_stdF_subst | exact GlobalTheory.RealFockVac.om_stdF_subst | (intros; apply GlobalTheory.RealFockVac.om_stdF_subst <;> assumption)
+  exact @GlobalTheory.RealFockVac.om_stdF_subst

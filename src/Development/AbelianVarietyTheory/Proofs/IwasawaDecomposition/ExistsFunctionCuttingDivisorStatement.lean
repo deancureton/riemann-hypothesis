@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFunctionCuttingDivisor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizationBaseChangeModels
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_function_cutting_divisor : ∀ {S S' : Sche
     ∃ t : Γ(S', V), (∀ (A : S'.affineOpens) (hA : A.1 ≤ V), resG S' hA t ∈ ((Dv.idealSheaf ^ N).comap g).ideal A) ∧
       ∀ (A : S'.affineOpens) (hA : A.1 ≤ V), A.1 ≤ g ⁻¹ᵁ nonzeroLocus σ →
         ((Dv.idealSheaf ^ N).comap g).ideal A = Ideal.span {resG S' hA t} := by
-  first | exact @GlobalTheory.SecIdeal.exists_local_generator_of_sec | exact GlobalTheory.SecIdeal.exists_local_generator_of_sec | (intros; apply GlobalTheory.SecIdeal.exists_local_generator_of_sec <;> assumption)
+  exact @GlobalTheory.SecIdeal.exists_local_generator_of_sec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATwoTriplesIdentityFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_a_two_triples_identity_first : ∀ (F E : T
         GlobalTheory.ArchUniq.omega (GlobalTheory.ArchUniq.trP F (Fin (b + 2) × Fin (b + 2 + a')))
           (GlobalTheory.ArchUniq.Coord.coordI G.M (shiftA H H' p.2.1))
           (GlobalTheory.ArchUniq.Coord.coordI G.M (Matrix.vecMulVec (mat p.1.1 *ᵥ y) (incV F H'.x))) := by
-  first | exact @GlobalTheory.ArchConeCont.continuous_omega_coordI | exact GlobalTheory.ArchConeCont.continuous_omega_coordI | (intros; apply GlobalTheory.ArchConeCont.continuous_omega_coordI <;> assumption)
+  exact @GlobalTheory.ArchConeCont.continuous_omega_coordI

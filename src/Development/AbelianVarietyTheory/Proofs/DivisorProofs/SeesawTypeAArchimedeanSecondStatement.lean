@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeAArchimedeanSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_archimedean_second : ∀ (F E : Type
       ∀ N : ℕ, ∃ C : ℝ, ∀ k ∈ KAt K (evI F), ∀ l ∈ idelesAt E (evI F),
         ‖ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' l))) (locOpInf (om (k, 1)) f)) y‖ ≤
           C / (1 + ∑ w, ‖piInf (B.emb w) (l : AE F E)‖) ^ N := by
-  first | exact @GlobalTheory.ConeArchDecay.decay_unif | exact GlobalTheory.ConeArchDecay.decay_unif | (intros; apply GlobalTheory.ConeArchDecay.decay_unif <;> assumption)
+  exact @GlobalTheory.ConeArchDecay.decay_unif

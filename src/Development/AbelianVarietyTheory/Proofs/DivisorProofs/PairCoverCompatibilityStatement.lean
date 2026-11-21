@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairCoverCompatibility
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.pair_cover_compatibility : ∀ (D : D7) (O : Setup
       (∀ i, GlobalTheory.PairCov.IsFrameSecX (O := O) (c := c) σ hM jB πB t π ρ F j φ jG i (r i)) →
     ∀ i, ∃ r' : ((F'.root i).pull j).ι → Gs.functionFieldˣ,
       GlobalTheory.PairCov.IsFrameSecX (O := O) (c := c) σ hM' jB πB t' π ρ F' j φ jG i r' := by
-  first | exact @GlobalTheory.PairCov.exists_isFrameSecX_of_compat | exact GlobalTheory.PairCov.exists_isFrameSecX_of_compat | (intros; apply GlobalTheory.PairCov.exists_isFrameSecX_of_compat <;> assumption)
+  exact @GlobalTheory.PairCov.exists_isFrameSecX_of_compat

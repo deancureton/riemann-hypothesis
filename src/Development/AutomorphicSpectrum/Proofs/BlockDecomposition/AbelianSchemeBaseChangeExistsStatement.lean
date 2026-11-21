@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.AbelianSchemeBaseChangeExists
-import Mathlib
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsPullForm
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.AbelianSchemeGerms
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.abelian_scheme_base_change_exists : ∀ (R R' : Ty
     IsAbelianScheme A → SmoothOfRelativeDimension g A.hom →
     ∃ (A' : Over (Sp R')) (_ : GrpObj A') (φ : A'.left ⟶ A.left), IsAbelianScheme A' ∧
       SmoothOfRelativeDimension g A'.hom ∧ IsPullback φ A'.hom A.hom (spMap (algebraMap R R')) := by
-  first | exact @GlobalTheory.CompanionTheory.Axis.exists_abelianScheme_baseChange_ringHom | exact GlobalTheory.CompanionTheory.Axis.exists_abelianScheme_baseChange_ringHom | (intros; apply GlobalTheory.CompanionTheory.Axis.exists_abelianScheme_baseChange_ringHom <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Axis.exists_abelianScheme_baseChange_ringHom

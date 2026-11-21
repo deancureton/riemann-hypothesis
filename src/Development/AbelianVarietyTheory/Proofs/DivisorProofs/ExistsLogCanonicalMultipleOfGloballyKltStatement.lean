@@ -14,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_logCanonicalMultiple_of_globally_klt : ∀ (X : Scheme.{0}) [IsIntegral X] [IsLocallyNoetherian X] [GlobalTheory.IsNormalScheme X] (p : X ⟶ Sp ℂ) (n : ℕ), IsProjOver p →
   topologicalKrullDim X = n → ∀ Δ : X → ℚ, IsEffQDiv Δ → (∀ y, KltAt p n Δ y) →
   ∃ (m : ℕ) (G : CartierDiv X), 0 < m ∧ IsLogCanonicalMultiple p n Δ m G := by
-  first | exact @GlobalTheory.Discrepancy.exists_isLogCanonicalMultiple_of_kltAt | exact GlobalTheory.Discrepancy.exists_isLogCanonicalMultiple_of_kltAt | (intros; apply GlobalTheory.Discrepancy.exists_isLogCanonicalMultiple_of_kltAt <;> assumption)
+  exact @GlobalTheory.Discrepancy.exists_isLogCanonicalMultiple_of_kltAt

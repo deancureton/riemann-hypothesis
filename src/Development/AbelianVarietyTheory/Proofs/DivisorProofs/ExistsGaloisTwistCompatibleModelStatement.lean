@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_galois_twist_compatible_model : Hypotheses2
       (∀ a : 𝓞 D.host.E, ((σ a : 𝓞 D.host.E) : D.host.E) = D.host.sigmaOf h (a : D.host.E)) ∧
       σ O.A.H.w0 = O.A.H.w0 ∧ Nonempty (GlobalTheory.ShFam.TwMap σ O.s.T.Z.oF.t O.s.T.Z.oF.t r.hom) ∧
       r.hom ≫ CategoryTheory.Limits.pullback.snd _ _ = CategoryTheory.Limits.pullback.snd _ _ := by
-  first | exact @GlobalTheory.GalTwist.twist_aut | exact GlobalTheory.GalTwist.twist_aut | (intros; apply GlobalTheory.GalTwist.twist_aut <;> assumption)
+  exact @GlobalTheory.GalTwist.twist_aut

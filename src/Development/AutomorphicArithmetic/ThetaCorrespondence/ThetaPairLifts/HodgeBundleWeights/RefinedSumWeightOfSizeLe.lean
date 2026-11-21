@@ -16,5 +16,5 @@ section
 open GlobalTheory.IndefiniteRowSideFullHecke.DifferentConjugateDefects NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.FlatTw GlobalTheory.SlopeRec GlobalTheory.CovTop GlobalTheory.BigTop GlobalTheory.RefSum
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.refinedSum_weight_of_size_le : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → DeepGood → Size → FlatDeg → RefW := by
-  first | exact @_root_.GlobalTheory.RefSum.refinedSum_weight_of_size | exact _root_.GlobalTheory.RefSum.refinedSum_weight_of_size | (intros; apply _root_.GlobalTheory.RefSum.refinedSum_weight_of_size <;> assumption)
+  exact @_root_.GlobalTheory.RefSum.refinedSum_weight_of_size
 end

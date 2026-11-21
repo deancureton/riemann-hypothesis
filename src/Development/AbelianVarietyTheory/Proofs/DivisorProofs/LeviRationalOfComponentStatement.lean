@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviRationalOfComponent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.levi_rational_of_component : ∀ (F E : Type) [Fie
     (W : Spc F E d) (W₁ : Spc F E d₁) (H' : Plane E d d₁),
     (∀ v : Fin d → E, ∃ (a b : E) (u : Fin d₁ → E), v = a • H'.x + H'.ι *ᵥ u + b • H'.y) →
     ∀ (h₁ : UA σ W₁.J) (h : UA σ W.J), IsLevi H' 1 h₁ h → h₁ ∈ ratU σ W₁.J → h ∈ ratU σ W.J := by
-  first | exact @GlobalTheory.MidLineParam.levi_one_mem_ratU | exact GlobalTheory.MidLineParam.levi_one_mem_ratU | (intros; apply GlobalTheory.MidLineParam.levi_one_mem_ratU <;> assumption)
+  exact @GlobalTheory.MidLineParam.levi_one_mem_ratU

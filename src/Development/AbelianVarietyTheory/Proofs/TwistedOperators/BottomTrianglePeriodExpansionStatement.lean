@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_period_expansion : ∀ {D : D7} {T
       (∀ l, ∃ (δ t0 : ℂ) (Q : ℕ) (P : GlobalTheory.NormSum.Pair D ⊤ δ t0 Q) (h' : Formalism.MainNotions.StandardLatticesGL3.GA D P.d) (U : GlobalTheory.NormSum.Tup D P.a P.d P.n),
         z l = P.coord h' U) ∧
       X.I' W.ψ W.θ t (MvPolynomial.monomial k 1) h = Ω * ∑ l, c l * z l := by
-  first | exact @GlobalTheory.BotFormulaI'.exists_period_I'_eq_algebraic_sum | exact GlobalTheory.BotFormulaI'.exists_period_I'_eq_algebraic_sum | (intros; apply GlobalTheory.BotFormulaI'.exists_period_I'_eq_algebraic_sum <;> assumption)
+  exact @GlobalTheory.BotFormulaI'.exists_period_I'_eq_algebraic_sum

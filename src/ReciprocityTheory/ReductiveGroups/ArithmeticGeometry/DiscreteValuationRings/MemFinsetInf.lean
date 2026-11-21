@@ -108,7 +108,6 @@ lemma rs_zero' {Z : Scheme.{0}} {U V : Z.Opens} (h : V ≤ U) : rs h (0 : Γ(Z, 
 
 lemma rs_sub' {Z : Scheme.{0}} {U V : Z.Opens} (h : V ≤ U) (x y : Γ(Z, U)) : rs h (x - y) = rs h x - rs h y := map_sub _ x y
 
-set_option maxHeartbeats 4000000 in
 
 theorem cross_vanish (hL4 : Laws4) {E : Type} [Field E] [NumberField E] [NumberField.IsCMField E]
     {H : Geo.Tor.Host E} {t : Geo.Tor.SAB H (Spec (CommRingCat.of V))}

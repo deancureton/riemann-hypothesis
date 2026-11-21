@@ -17,4 +17,4 @@ set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 800000
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.frameKeepsMatrices_splitPlace_reduction_local : ∀ (D : D7) (V : HSp D) (n : ℕ) (hF : D.host.F = maximalRealSubfield D.host.E) (P : principalLevelFrame.RowPsi V n), IdFrame hF P → ∀ (hn : V.rank = n) (κ : GAf D.host.E n), (κ ∈ ReciprocityTheory.Aut.Umax D.host.E n ↔ Lev.finE V (P.ψ κ) ∈ St (1 : GL (Fin V.rank) (Lev.EAf D))) ∧ ∀ s : ReciprocityTheory.Aut.SplitPlace D.host.E, κ ∈ ReciprocityTheory.Aut.Umax D.host.E n → ∀ a c : Fin V.rank, NX.locM s κ (Fin.cast hn a) (Fin.cast hn c) ∈ s.v.adicCompletionIntegers (maximalRealSubfield D.host.E) ∧ ∀ u : 𝓞 D.host.E, Valued.v (s.i (u : D.host.E) - NX.locM s κ (Fin.cast hn a) (Fin.cast hn c)) < 1 ↔ (redFn (1 : GL (Fin V.rank) (Lev.EAf D)) s.w (Lev.finE V (P.ψ κ))).val a c = Ideal.Quotient.mk s.w.asIdeal u := by
-  first | exact @GlobalTheory.MtRead.Red.red_eq_local | exact GlobalTheory.MtRead.Red.red_eq_local | (intros; apply GlobalTheory.MtRead.Red.red_eq_local <;> assumption)
+  exact @GlobalTheory.MtRead.Red.red_eq_local

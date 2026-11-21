@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.flag_pair_morphism_compatibility : ∀ (O : Type) 
     P.fl.π k ≫ u.hom = m ≫ Q.fl.π i → P.fl'.π k ≫ u'.hom = m' ≫ Q.fl'.π i →
     (P.toFPair p).x k = (Q.toFPair p).x i ∧ (P.toFPair p).x' k = (Q.toFPair p).x' i ∧
       (P.toFPair p).Dv k = (Q.toFPair p).Dv i := by
-  first | exact @GlobalTheory.Vert.Model.FlagPair.GrAgree.toFPair_agree | exact GlobalTheory.Vert.Model.FlagPair.GrAgree.toFPair_agree | (intros; apply GlobalTheory.Vert.Model.FlagPair.GrAgree.toFPair_agree <;> assumption)
+  exact @GlobalTheory.Vert.Model.FlagPair.GrAgree.toFPair_agree

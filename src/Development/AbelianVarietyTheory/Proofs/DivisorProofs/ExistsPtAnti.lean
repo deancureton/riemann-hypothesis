@@ -124,7 +124,6 @@ theorem levi_pair (hT : IsWittBasis D.sp.cm.sig J 1 T) (hκ : IsChartW T κ) {p 
     rw [← StdUnn.LeftInvSect.mat_mul, ← map_mul, inv_mul_cancel, map_one, StdUnn.LeftInvSect.mat_one]
   rw [← Matrix.mul_one (StdUnn.mat (κ p⁻¹)), ← StdUnn.LeftInvSect.levi_mul_inv a, ← h1, ← Matrix.mul_assoc, h2, Matrix.one_mul]
 
-set_option maxHeartbeats 4000000 in
 
 theorem formulas (hθ : IsInfFam θ) (hω : StdUnn.IsWeilSch ψ χ θ V μ ω) (hT : IsWittBasis D.sp.cm.sig J 1 T)
     (hG : T.1ᵀ * J₂ * T.1.map D.sp.cm.sig = StdUnn.Jst D n) (hκ : IsChartW T κ) (hι : IsConjV V ι) (hco : IsCoord V T ε co)

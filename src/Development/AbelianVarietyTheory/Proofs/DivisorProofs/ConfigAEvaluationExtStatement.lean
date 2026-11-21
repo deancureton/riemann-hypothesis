@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEvaluationExt
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.config_A_evaluation_ext : ∀ (F E : Type) [Field 
       ∀ S : Finset (Pl F), S₀ ⊆ S → ∏ v ∈ S, ∫ q : UA σ G.V.J × (AE F E)ˣ,
         ‖coneFinInt B G.M om v (ev v) (shiftA H H') X.ν ((b + 2 - a') / 2) (φ v) q.1 q.2 (fun i => evFin F v (y i))‖
           ∂(((μKv v).map Subtype.val).prod ((μEv v).map Subtype.val)) ≤ C := by
-  first | exact @GlobalTheory.ThK.UnrBound.unr_integrand_bound | exact GlobalTheory.ThK.UnrBound.unr_integrand_bound | (intros; apply GlobalTheory.ThK.UnrBound.unr_integrand_bound <;> assumption)
+  exact @GlobalTheory.ThK.UnrBound.unr_integrand_bound

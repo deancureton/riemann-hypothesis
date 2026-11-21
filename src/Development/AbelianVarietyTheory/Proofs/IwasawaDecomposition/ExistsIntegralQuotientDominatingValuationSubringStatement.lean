@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntegralQuotientDominatingValuationSubring
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_integral_quotient_dominating_valuationSubri
     [IsScalarTower W (FractionRing W) F] (O : ValuationSubring F),
     (∀ w : W, algebraMap W F w ∈ O) → (∀ w ∈ maximalIdeal W, algebraMap W F w ∈ O.nonunits) →
     ∀ x ∈ O, ∃ s t : F, IsIntegral W s ∧ IsIntegral W t ∧ O.valuation s = 1 ∧ s * x = t := by
-  first | exact @GlobalTheory.DomValInt.exists_integral_quotient | exact GlobalTheory.DomValInt.exists_integral_quotient | (intros; apply GlobalTheory.DomValInt.exists_integral_quotient <;> assumption)
+  exact @GlobalTheory.DomValInt.exists_integral_quotient

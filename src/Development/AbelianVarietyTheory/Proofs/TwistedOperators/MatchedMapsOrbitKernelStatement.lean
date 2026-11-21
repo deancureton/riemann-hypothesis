@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsOrbitKernel
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubGAlgDOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.matched_maps_orbit_kernel : ∀ (F E : Type) [Fiel
         (∀ g ∈ GlobalTheory.HoweGlobalPair.opFin om' v, ∀ x ∈ N, g x ∈ N) → N ≠ ⊤ → N ≤ LinearMap.ker (Rf.p' v ∘ₗ (GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype)) ∧
     GlobalTheory.HoweGlobalPair.relFin om' v ≤ LinearMap.ker (Rf.p' v ∘ₗ (GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype) ∧
     ∀ g ∈ GlobalTheory.HoweGlobalPair.opFin om' v, ∀ x ∈ LinearMap.ker (Rf.p' v ∘ₗ (GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype), g x ∈ LinearMap.ker (Rf.p' v ∘ₗ (GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v)).subtype) := by
-  first | exact @GlobalTheory.HoweGlobalPair.fin_place_howe_small | exact GlobalTheory.HoweGlobalPair.fin_place_howe_small | (intros; apply GlobalTheory.HoweGlobalPair.fin_place_howe_small <;> assumption)
+  exact @GlobalTheory.HoweGlobalPair.fin_place_howe_small

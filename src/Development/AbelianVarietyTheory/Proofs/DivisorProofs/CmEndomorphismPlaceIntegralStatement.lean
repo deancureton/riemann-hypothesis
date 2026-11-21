@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmEndomorphismPlaceIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.cm_endomorphism_place_integral : GlobalTheory.Publ
         ∃ (X₀ : Obj F 𝔠 (Sp R)) (pj : XQ.A.left ⟶ X₀.A.left) (g : X₀.A.left ⟶ G₀.left) (cm : OAct O X₀.A),
           XQ.IsPullBy X₀ (spMap j) pj ∧ IsGrpPullback X₀.A G₀ (spMap ic) g ∧ pj ≫ g = gQ ∧
           (∀ a, cm.act (ofO a) = X₀.rm.act a) ∧ ∀ a, (cmQ.act a).left ≫ pj = pj ≫ (cm.act a).left := by
-  first | exact @GlobalTheory.PlaceModel.exists_obj_eventually | exact GlobalTheory.PlaceModel.exists_obj_eventually | (intros; apply GlobalTheory.PlaceModel.exists_obj_eventually <;> assumption)
+  exact @GlobalTheory.PlaceModel.exists_obj_eventually

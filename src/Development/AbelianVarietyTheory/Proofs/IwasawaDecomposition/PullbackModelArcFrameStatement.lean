@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_frame : ∀ (E : Type) [Field E
       χV ≫ pullback.snd Z.s (spMap bV) = spMap f₀ ≫ spMap b' →
       (Z.HasArcData a I f₀ u (χV ≫ pullback.fst Z.s (spMap bV)) ↔
         Y.HasArcData (GlobalTheory.PolArc.moveV bV hbV b' a) I f₀ u (χV ≫ f)) := by
-  first | exact @GlobalTheory.PolArcData.hasArcData_iff_moveV | exact GlobalTheory.PolArcData.hasArcData_iff_moveV | (intros; apply GlobalTheory.PolArcData.hasArcData_iff_moveV <;> assumption)
+  exact @GlobalTheory.PolArcData.hasArcData_iff_moveV

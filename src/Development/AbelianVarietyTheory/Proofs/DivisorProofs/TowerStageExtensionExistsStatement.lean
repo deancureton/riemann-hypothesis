@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TowerStageExtensionExists
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.tower_stage_extension_exists : GlobalTheory.FunPr.
     NumbersIn D.what₂.embLL S μ₀ → ∀ (i j : Fin D.R.m) (p q : ℕ) (A A' WW : HSp D) (X : Tri T A A' WW),
       GlobalTheory.SqTower.IsStageC W i j p (q + 1) X → ∃ (B' WW₁ : HSp D) (Y : Tri T A B' WW₁),
         GlobalTheory.SqTower.IsStageC W i j p q Y ∧ GlobalTheory.SqStepK.IsStepB X Y := by
-  first | exact @GlobalTheory.SqStepK.PiLocalization₂.stage_first | exact GlobalTheory.SqStepK.PiLocalization₂.stage_first | (intros; apply GlobalTheory.SqStepK.PiLocalization₂.stage_first <;> assumption)
+  exact @GlobalTheory.SqStepK.PiLocalization₂.stage_first

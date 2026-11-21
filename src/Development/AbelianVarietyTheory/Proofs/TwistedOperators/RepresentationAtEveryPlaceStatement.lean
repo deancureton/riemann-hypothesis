@@ -10,4 +10,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Ro
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.representation_at_every_place : Big fun ch => ∀ s, RepAt ch s := by
-  first | exact @GlobalTheory.RowRep.rep_at | exact GlobalTheory.RowRep.rep_at | (intros; apply GlobalTheory.RowRep.rep_at <;> assumption)
+  exact @GlobalTheory.RowRep.rep_at

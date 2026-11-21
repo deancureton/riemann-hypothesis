@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLinePolynomialKFixed
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.matched_line_polynomial_k_fixed : GlobalTheory.ThK
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       ∀ γ ∈ Lines σ G.W, ∀ g ∈ G.M.Pol B.ψ B.emb, IsKFix B om g → ∀ f₁ : SInf F (Fin a × Fin (a + a')),
         ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) g f₁ → IsKFix B om f₁ := by
-  first | exact @GlobalTheory.DerivFix.isKFix_of_actsD | exact GlobalTheory.DerivFix.isKFix_of_actsD | (intros; apply GlobalTheory.DerivFix.isKFix_of_actsD <;> assumption)
+  exact @GlobalTheory.DerivFix.isKFix_of_actsD

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellColumnsFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenImmersionCellFl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvMulApplyEqZeroOfMinor
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchubertCellOpenImmersion
@@ -11,4 +10,4 @@ open GlobalTheory.Twist (resM)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cell_columns_frame : ∀ (ι : Type) [Fintype ι] (N : ℕ) (w : ι → Equiv.Perm (Fin N)) (τ : ι), VB.IsFrame (cellCol ι N w τ) := by
-  first | exact @GlobalTheory.FlagZ.Univ.isFrame_cellCol | exact GlobalTheory.FlagZ.Univ.isFrame_cellCol | (intros; apply GlobalTheory.FlagZ.Univ.isFrame_cellCol <;> assumption)
+  exact @GlobalTheory.FlagZ.Univ.isFrame_cellCol

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogMetricRatioDifferentiableChart
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.log_metric_ratio_differentiable_chart : Hypotheses
       ∀ ξ : ReciprocityTheory.L2DbarEstimates.V (O.var c).dim,
         |fderiv ℝ (lnRatio (metsOf x O.Φ c none σ (O.ex ρ)) (refMet x O.Φ c σ (O.ex ρ)) ∘ ch.e.symm) (ch.e y) ξ| ≤
           C * √(P.om c σ ch y ξ.ofLp) := by
-  first | exact @GlobalTheory.HodgeGradInt.grad_le_int | exact GlobalTheory.HodgeGradInt.grad_le_int | (intros; apply GlobalTheory.HodgeGradInt.grad_le_int <;> assumption)
+  exact @GlobalTheory.HodgeGradInt.grad_le_int

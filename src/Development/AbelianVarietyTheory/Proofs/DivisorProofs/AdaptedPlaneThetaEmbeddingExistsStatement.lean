@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneThetaEmbeddingExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_theta_embedding_exists : ∀ (F E : 
         B.ψ ((M.co.e (Matrix.vecMulVec (incV F ξ) (incV F H'.y))).1 ⬝ᵥ (M.co.e (Matrix.vecMulVec (emb t) (incV F H'.x))).2 -
           (M.co.e (Matrix.vecMulVec (emb t) (incV F H'.x))).1 ⬝ᵥ (M.co.e (Matrix.vecMulVec (incV F ξ) (incV F H'.y))).2) =
         Complex.exp (2 * Real.pi * Complex.I * ∑ j, (lam ξ j : ℂ) * (t j : ℂ)) := by
-  first | exact @GlobalTheory.RealFreq.injective_real_frequencies | exact GlobalTheory.RealFreq.injective_real_frequencies | (intros; apply GlobalTheory.RealFreq.injective_real_frequencies <;> assumption)
+  exact @GlobalTheory.RealFreq.injective_real_frequencies

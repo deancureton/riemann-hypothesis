@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemidirectHaarMeasureProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabAtPair
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.semidirect_haar_measure_product : ∀ (Q L A C : T
     (∀ ν : Measure A, ν.IsAddHaarMeasure → ν.map sA = kA • ν) →
     (∀ ν : Measure C, ν.IsAddHaarMeasure → ν.map sC = kC • ν) →
     ∀ μ : Measure Q, μ.IsHaarMeasure → μ.map α = (kA * kC) • μ := by
-  first | exact @GlobalTheory.ModulusCoord.map_haar_eq_smul_of_coords | exact GlobalTheory.ModulusCoord.map_haar_eq_smul_of_coords | (intros; apply GlobalTheory.ModulusCoord.map_haar_eq_smul_of_coords <;> assumption)
+  exact @GlobalTheory.ModulusCoord.map_haar_eq_smul_of_coords

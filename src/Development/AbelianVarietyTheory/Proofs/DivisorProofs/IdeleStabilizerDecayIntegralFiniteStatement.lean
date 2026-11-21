@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleStabilizerDecayIntegralFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DecayNonneg
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.idele_stabilizer_decay_integral_finite : ∀ (F E 
     ∃ N : ℕ, ∀ μ : Measure (AE F E)ˣ, μ.IsHaarMeasure →
       ∫⁻ l in (GlobalTheory.IdeleTate.stab F E : Set (AE F E)ˣ),
         ENNReal.ofReal (((1 + GlobalTheory.IdeleDecay.size F E l.1) ^ N)⁻¹ * (GlobalTheory.IdeleTate.absInf F E l : ℝ) ^ s) ∂μ < ⊤ := by
-  first | exact @GlobalTheory.IdeleArchBound.lintegral_stab_lt_top | exact GlobalTheory.IdeleArchBound.lintegral_stab_lt_top | (intros; apply GlobalTheory.IdeleArchBound.lintegral_stab_lt_top <;> assumption)
+  exact @GlobalTheory.IdeleArchBound.lintegral_stab_lt_top

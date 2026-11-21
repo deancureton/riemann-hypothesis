@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SymmetricDoubleIntegralFiniteCombination
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.CosInj
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum MeasureTheory IsDedekindDomain NumberField Matrix
 open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Unf GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.SeeSaw GlobalTheory.LocMod GlobalTheory.QPl ValuativeRel
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.symmetricDoubleIntegral_finite_combination : ∀ (
       (fl ψ ν μ₁ ρ (om μ₁ a x P₁.1)) (v a x y)) →
     ∃ u : GL (n₁ ⊕ Fin (c + 1)) k → ℂ, (∀ x, IsQuotInt ν m₂ G₂ ρ (fun y => comb e fun a => v a x y) (u x)) ∧
       IsQuotIntFJ ν m₁ G₁ ρ u (comb e z) := by
-  first | exact @GlobalTheory.PosOne.SymComb.symDbl_comb | exact GlobalTheory.PosOne.SymComb.symDbl_comb | (intros; apply GlobalTheory.PosOne.SymComb.symDbl_comb <;> assumption)
+  exact @GlobalTheory.PosOne.SymComb.symDbl_comb

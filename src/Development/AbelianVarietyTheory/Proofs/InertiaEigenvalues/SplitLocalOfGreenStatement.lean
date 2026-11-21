@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_local_of_green : GlobalTheory.NRows.Hypotheses₂ → GlobalTheory.Published.DepthZeroInertia → ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (Γ : GrpSide D), GreenLab Γ → SplitLoc hL D := by
-  first | exact @GlobalTheory.BlockTypeSplit.main | exact GlobalTheory.BlockTypeSplit.main | (intros; apply GlobalTheory.BlockTypeSplit.main <;> assumption)
+  exact @GlobalTheory.BlockTypeSplit.main

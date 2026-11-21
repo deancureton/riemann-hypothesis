@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBTripleFourthForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_fourth_form : ∀ {F E : Type
     ∀ ι ι₁, G.M'.IsLinBar B.ψ B.τ₁ 1 1 ι → G₁.M'.IsLinBar B.ψ B.τ₁ 1 1 ι₁ →
     ∀ (Y : Matrix (Fin b) (Fin (a + b)) (Fv F B.v₁)), ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), ∃ φ' ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), ι₁ (L φ') 0 = ι₁ (L φ) Y ∧
       ∀ Z, ι φ' Z = ι φ (Z + GlobalTheory.PlaneBasis.crdP B.τ₁ H * insS Y 0 0 0 * GlobalTheory.PlaneBasis.crdQ B.τ₁ H') := by
-  first | exact @GlobalTheory.PlaneSmallTransl.small_transl | exact GlobalTheory.PlaneSmallTransl.small_transl | (intros; apply GlobalTheory.PlaneSmallTransl.small_transl <;> assumption)
+  exact @GlobalTheory.PlaneSmallTransl.small_transl

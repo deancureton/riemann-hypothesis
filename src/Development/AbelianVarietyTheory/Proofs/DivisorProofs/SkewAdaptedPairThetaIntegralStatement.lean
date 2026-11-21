@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_theta_integral : GlobalTheory.Fu
         (∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), S (M.co.rho B.ψ u Φ) = S Φ) →
         (∀ l ∈ (adeleClass F).adm (Fin n × Fin d₁), l ∘ₗ S ∈ (adeleClass F).adm (Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), S Φ = c • e Φ := by
-  first | exact @GlobalTheory.EvZeroUniqFun.main | exact GlobalTheory.EvZeroUniqFun.main | (intros; apply GlobalTheory.EvZeroUniqFun.main <;> assumption)
+  exact @GlobalTheory.EvZeroUniqFun.main

@@ -8,4 +8,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestrictio
 open GlobalTheory GlobalTheory.QCoh GlobalTheory.CechPic GlobalTheory.Vert GlobalTheory.ShFam GlobalTheory.ShFam.Pad GlobalTheory.Mean4O GlobalTheory.MixedLocalChains
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.presentation_map_mono : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O] (B : GlobalTheory.Vert.Model O) (P : Pres B), Mono P.ψ := by
-  first | exact @GlobalTheory.MixedLocalChains.Pres.mono_ψ | exact GlobalTheory.MixedLocalChains.Pres.mono_ψ | (intros; apply GlobalTheory.MixedLocalChains.Pres.mono_ψ <;> assumption)
+  exact @GlobalTheory.MixedLocalChains.Pres.mono_ψ

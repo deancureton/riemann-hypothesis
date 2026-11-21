@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBReducedTripleSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_reduced_triple_second : ∀ (F E : Type) 
     ∀ w : UA σ G.W.J, IsSwap H' H₂ w → ∀ nn : AE F E → UA σ G.W.J, IsShear H' H₂ nn →
     ∀ (t : (AE F E)ˣ) (m : UA σ G.W.J), IsLevi (W₁ := G₁.W) H' t 1 m → (∀ h₁, emb h₁ * m = m * emb h₁) ∧
       ∃ m₂ : UA σ G₁.W.J, IsLevi (W₁ := W₂) H₂ t 1 m₂ ∧ ∀ c, w * nn c * m = emb m₂ * w * nn ((t⁻¹ : (AE F E)ˣ).1 * c) := by
-  first | exact @GlobalTheory.ConeSmallMidJB.swap_shear_levi | exact GlobalTheory.ConeSmallMidJB.swap_shear_levi | (intros; apply GlobalTheory.ConeSmallMidJB.swap_shear_levi <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJB.swap_shear_levi

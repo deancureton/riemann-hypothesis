@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaMultiplierIntegralImaginary
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.theta_multiplier_integral_imaginary : ∀ (g : ℕ
     Differentiable ℂ θ → (∀ z, θ z ≠ 0) →
     (∀ l ∈ Λ, ∀ z, θ (z + l) = Complex.exp (Real.pi * (w ⬝ᵥ Hm.mulVec (star l))) * θ z) →
     ∀ l ∈ Λ, ∃ n : ℤ, (w ⬝ᵥ Hm.mulVec (star l)).im = n := by
-  first | exact @GlobalTheory.ThetaLiouville.im_form_mem_int | exact GlobalTheory.ThetaLiouville.im_form_mem_int | (intros; apply GlobalTheory.ThetaLiouville.im_form_mem_int <;> assumption)
+  exact @GlobalTheory.ThetaLiouville.im_form_mem_int

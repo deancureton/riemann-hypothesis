@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneEisensteinConstantTerm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.skew_plane_eisenstein_constant_term : ∀ (F E : T
       (∀ u, form σ W.J (H.ι *ᵥ u) H.x = 0 ∧ form σ W.J (H.ι *ᵥ u) H.y = 0) → H.ιᵀ * W.J * H.ι.map σ = W₁.J →
       ∀ (c₀ : E) (hc₀ : c₀ ≠ 0), IsHermND σ (c₀ • W₁.J.map σ) → IsHermND σ (c₀ • W.J.map σ) →
       ∀ g : UA σ W.J, mat g *ᵥ incV F H.x = incV F H.x → ∃ h₁ : UA σ W₁.J, (∀ z : Fin n₁ → AE F E, ∃ a : AE F E, mat g *ᵥ (incM F H.ι *ᵥ z) = a • incV F H.x + incM F H.ι *ᵥ (mat h₁ *ᵥ z)) := by
-  first | exact @GlobalTheory.ThK.FixIsoAct.exists_unitary_of_fix | exact GlobalTheory.ThK.FixIsoAct.exists_unitary_of_fix | (intros; apply GlobalTheory.ThK.FixIsoAct.exists_unitary_of_fix <;> assumption)
+  exact @GlobalTheory.ThK.FixIsoAct.exists_unitary_of_fix

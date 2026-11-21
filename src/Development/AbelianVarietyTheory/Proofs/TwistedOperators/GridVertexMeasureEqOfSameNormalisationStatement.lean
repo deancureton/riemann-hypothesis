@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.GridVertexMeasureEqOfSameNormalisation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsChainPols
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -13,4 +12,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.Local
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.gridVertexMeasure_eq_of_same_normalisation : ∀ {D : D7} {T : Type} {L : LevCh D T} {sc : Consts} {G : GridData L sc} (M M' : Vol G) (X : Node) (K : Subgroup (GL (Fin (G.V X).rank) (Lev.EAf D))), M.IsAt X K → M'.IsAt X K → M.ν X = M'.ν X := by
-  first | exact @GlobalTheory.HaarNorm.vol_nu_eq_of_isAt | exact GlobalTheory.HaarNorm.vol_nu_eq_of_isAt | (intros; apply GlobalTheory.HaarNorm.vol_nu_eq_of_isAt <;> assumption)
+  exact @GlobalTheory.HaarNorm.vol_nu_eq_of_isAt

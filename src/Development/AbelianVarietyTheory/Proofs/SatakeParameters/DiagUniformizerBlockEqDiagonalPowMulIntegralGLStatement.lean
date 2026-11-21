@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.DiagUniformizerBlockEqDiagonalPowMulIntegralGL
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Formalism.SharpRestriction.LevelLetterCocycles.ExistsInertiaCharpolyFactorOfTameType
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.diagUniformizerBlock_eq_diagonal_pow_mul_integralG
     ∃ T ∈ Formalism.UG.GLint (Fin n) (Formalism.UG.Ov F v), Formalism.UG.diagJ n ϖ k =
       Matrix.diagonal (fun i : Fin n => π ^ ((List.replicate k (1 : ℤ) ++ List.replicate (n - k) 0).getD i.1 0)) *
         (T : Matrix (Fin n) (Fin n) (v.adicCompletion F)) := by
-  first | exact @GlobalTheory.DiagUnifFactor.main | exact GlobalTheory.DiagUnifFactor.main | (intros; apply GlobalTheory.DiagUnifFactor.main <;> assumption)
+  exact @GlobalTheory.DiagUnifFactor.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharacterRestrictionCompatiblePair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.hecke_character_restriction_compatible_pair : Glob
       (∀ l ∈ (adeleClass F).adm (Fin n × Fin d), l ∘ₗ e ∈ (adeleClass F).adm (Fin n × Fin d)) ∧
       ∀ Φ ∈ schA F (Fin n × Fin d), thetaSum F (e Φ) = c₀ * thetaSum F Φ ∧ (∀ x, e (omb x Φ) = om₁ x (e Φ)) ∧
         ∀ u, e (cb.rho B.ψ u Φ) = co.rho B.ψ u (e Φ) := by
-  first | exact @GlobalTheory.TwoModels.exists_two_models | exact GlobalTheory.TwoModels.exists_two_models | (intros; apply GlobalTheory.TwoModels.exists_two_models <;> assumption)
+  exact @GlobalTheory.TwoModels.exists_two_models

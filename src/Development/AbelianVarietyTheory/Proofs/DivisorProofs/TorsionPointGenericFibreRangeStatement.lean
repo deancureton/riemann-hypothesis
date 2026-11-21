@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionPointGenericFibreRange
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_compatible_embedding : ∀ (F E : Ty
     ∀ (Mb : Model σ X₂ W) (χ χ' : Chr F E) (omb : Rep σ X₂ W) (r₂ s₂ : ℕ), IsPair B Mb χ χ' omb r₂ s₂ r₁ s₁ → IsBoxCo M.co Mb.co →
     ∀ φ₁ ∈ schA F (Fin n × Fin d), ∀ φ₂ ∈ schA F (Fin n × Fin d), ∀ (g₁ g₂ : UA σ X.J) (h : UA σ W.J), ∃ a : ℂ,
       omb (i (g₁, g₂), h) (bx φ₁ (cj φ₂)) = a • bx (om (g₁, h) φ₁) (cj (om (g₂, h) φ₂)) := by
-  first | exact @GlobalTheory.DblBoxCoef.weil_bx_prop | exact GlobalTheory.DblBoxCoef.weil_bx_prop | (intros; apply GlobalTheory.DblBoxCoef.weil_bx_prop <;> assumption)
+  exact @GlobalTheory.DblBoxCoef.weil_bx_prop

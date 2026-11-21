@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EllipticCurveAbelianSchemeModel
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.elliptic_curve_abelian_scheme_model : ∀ (R₁ : 
         IsAbelianScheme A' ∧ SmoothOfRelativeDimension 1 A'.hom ∧ IsGrpPullback A' P.A (spMap R₁.subtype) φ' ∧
         (∀ w, w ∈ u.Λ ↔ w 0 ∈ Λ.lattice) ∧ IsTangent v ∧ IsTangent v' ∧
         v'.left ≫ φ' = spMap (Chart.dualMapR R₁.subtype) ≫ v.left ∧ u.IsDiff (fun _ ↦ c) v' := by
-  first | exact @GlobalTheory.LatticeFibre.exists_fibre_holUnif | exact GlobalTheory.LatticeFibre.exists_fibre_holUnif | (intros; apply GlobalTheory.LatticeFibre.exists_fibre_holUnif <;> assumption)
+  exact @GlobalTheory.LatticeFibre.exists_fibre_holUnif

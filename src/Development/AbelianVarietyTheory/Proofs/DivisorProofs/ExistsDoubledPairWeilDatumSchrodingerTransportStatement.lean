@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDoubledPairWeilDatumSchrodingerTransport
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.exists_doubledPairWeilDatum_schrodingerTransport :
               GlobalTheory.WeilM.UG (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.cA D.sp.cm.sig) (incM D.host.F (GlobalTheory.DblSchr.JBd S JB)) →*
               Module.End ℂ ((κ ⊕ κ → AF D.host.F) → ℂ),
             GlobalTheory.WeilSchrodinger.IsTransport ψ (GlobalTheory.DblSchr.ddr co) ωd omd₀ := by
-  first | exact @GlobalTheory.DblSchr.exists_dbl_weilDatum_transport | exact GlobalTheory.DblSchr.exists_dbl_weilDatum_transport | (intros; apply GlobalTheory.DblSchr.exists_dbl_weilDatum_transport <;> assumption)
+  exact @GlobalTheory.DblSchr.exists_dbl_weilDatum_transport

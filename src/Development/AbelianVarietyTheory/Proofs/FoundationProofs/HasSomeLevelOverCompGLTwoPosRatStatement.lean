@@ -10,4 +10,4 @@ open ReciprocityTheory.ChartRestriction.L1 (DD jT IsMF)
 open ModularForm (E₄ E₆)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hasSomeLevelOver_compGLTwoPosRat : ∀ (E : Subring ℂ) (g : GQ) (f : ℍ → ℂ), (∀ x : ℚ, Complex.exp (2 * Real.pi * Complex.I * (x : ℂ)) ∈ E) → InR E f → InR E (GlobalTheory.FN.cmp g f) := by
-  first | exact @GlobalTheory.FN.inR_cmp | exact GlobalTheory.FN.inR_cmp | (intros; apply GlobalTheory.FN.inR_cmp <;> assumption)
+  exact @GlobalTheory.FN.inR_cmp

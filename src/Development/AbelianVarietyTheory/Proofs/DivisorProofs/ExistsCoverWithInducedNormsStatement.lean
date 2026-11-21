@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverWithInducedNorms
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsLgOfLnSymUpdateSubLe
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCoverInducedMetricsArith
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalHeightBoundedByPrimeWeights
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_cover_with_induced_norms : GlobalTheory.Pub
     ∃ (V : Cover Y) (L' : ι → HermLB V.p),
       (∀ i, Norms V (L' i) (fun x => genAt (A i).D x ^ (m : ℕ)) (fun σ y => (m : ℕ) * lnAdl (A i) σ y)
         (fun v e y => (m : ℕ) * (A i).lg v e y)) ∧ IsArFun L' Y.dim ((V.deg : ℝ) • Ψ) := by
-  first | exact @GlobalTheory.VertPassDeg.passDeg | exact GlobalTheory.VertPassDeg.passDeg | (intros; apply GlobalTheory.VertPassDeg.passDeg <;> assumption)
+  exact @GlobalTheory.VertPassDeg.passDeg

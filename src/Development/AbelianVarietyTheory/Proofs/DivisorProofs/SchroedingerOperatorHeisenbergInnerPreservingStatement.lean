@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchroedingerOperatorHeisenbergInnerPreserving
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
 
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.schroedingerOperatorHeisenberg_inner_preserving : 
     ∀ {κ : Type} [Fintype κ] (μ : @Measure (κ → k) (borel _)), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ →
     ∀ (w : (κ → k) × (κ → k)) (φ φ' : (κ → k) → ℂ),
       ∫ y, GlobalTheory.WeilM.schr ψ0 w φ y * (starRingEnd ℂ) (GlobalTheory.WeilM.schr ψ0 w φ' y) ∂μ = ∫ y, φ y * (starRingEnd ℂ) (φ' y) ∂μ := by
-  first | exact @GlobalTheory.schr_unitary | exact GlobalTheory.schr_unitary | (intros; apply GlobalTheory.schr_unitary <;> assumption)
+  exact @GlobalTheory.schr_unitary

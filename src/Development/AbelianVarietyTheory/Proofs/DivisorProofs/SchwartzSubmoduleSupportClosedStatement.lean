@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzSubmoduleSupportClosed
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SchwartzBruhatMatrixTranslationModulationIrreduc
 open ValuativeRel
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.schwartz_submodule_support_closed : ∀ {k : Type}
     (∀ x : Matrix Y Y' k, (∀ r q, (r, q) ∈ I → x r q = 0) → ∀ φ ∈ S, (fun t => φ (t + x)) ∈ S) →
     (∀ z : Matrix Y Y' k, ∀ φ ∈ S, (fun t => ψ0 (∑ r, ∑ q, t r q * z r q) * φ t) ∈ S) →
     ∀ φ₀ ∈ S, ∀ t₀ : Matrix Y Y' k, (∀ r q, (r, q) ∈ I → t₀ r q = 0) → φ₀ t₀ ≠ 0 → S = GlobalTheory.WeilM.SB (Matrix Y Y' k) := by
-  first | exact @GlobalTheory.SBRestrict.eq_SB_of_restrict | exact GlobalTheory.SBRestrict.eq_SB_of_restrict | (intros; apply GlobalTheory.SBRestrict.eq_SB_of_restrict <;> assumption)
+  exact @GlobalTheory.SBRestrict.eq_SB_of_restrict

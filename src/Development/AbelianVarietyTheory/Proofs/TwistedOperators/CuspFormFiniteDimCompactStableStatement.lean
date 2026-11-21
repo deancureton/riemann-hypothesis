@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CuspFormFiniteDimCompactStable
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.cusp_form_finite_dim_compact_stable : GlobalTheory
         b x (rTr V (atTau θ V τ g) y) = b (rTr V (atTau θ V τ g⁻¹) x) y) ∧
       (∀ τ, ∀ X ∈ lieAt V τ, ∀ x ∈ GlobalTheory.CuspGK.gkGen θ M ψ, ∀ y ∈ GlobalTheory.CuspGK.gkGen θ M ψ,
         b x (Rder θ V τ X y) = -b (Rder θ V τ X x) y) := by
-  first | exact @GlobalTheory.CuspGKPet.exists_petersson_gkGen | exact GlobalTheory.CuspGKPet.exists_petersson_gkGen | (intros; apply GlobalTheory.CuspGKPet.exists_petersson_gkGen <;> assumption)
+  exact @GlobalTheory.CuspGKPet.exists_petersson_gkGen

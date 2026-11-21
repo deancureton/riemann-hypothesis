@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmFieldLatticePrimeCondition
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.cm_field_lattice_prime_condition : GlobalTheory.Pu
         Sz l lam (c_vp 𝔣 l + if l = d then 1 / 2 else 0) (a i * b i * (Real.sqrt d : ℝ) / (2 * Real.pi))⁻¹ ∧
         Sz l lam (c_vp 𝔣 l) (b i / (a i * T.A i))) ∧
       Sz l lam (Fintype.card I * c_vp 𝔣 l) (T.C / ∏ i, a i) := by
-  first | exact @GlobalTheory.LatModel.modelInt_of_latModel | exact GlobalTheory.LatModel.modelInt_of_latModel | (intros; apply GlobalTheory.LatModel.modelInt_of_latModel <;> assumption)
+  exact @GlobalTheory.LatModel.modelInt_of_latModel

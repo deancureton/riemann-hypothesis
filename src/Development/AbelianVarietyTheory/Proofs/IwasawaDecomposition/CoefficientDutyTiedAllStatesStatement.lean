@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.coefficient_duty_tied_all_states : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, PrN → GlobalTheory.NRows.HypothesesX → AllSt fun _ _ _ _ _ _ x => ∀ l : LC hL x, GlobalTheory.CoefDuty.EvO l.a.A l.mt.M l.c.ch l.c.tp.tup fun D' => SumRepresentations.hypO D' → Nonempty (GlobalTheory.NRows.Tied hL D') := by
-  first | exact @GlobalTheory.HeightCounting.Up.IntegralCoefficientPinning.tied_third | exact GlobalTheory.HeightCounting.Up.IntegralCoefficientPinning.tied_third | (intros; apply GlobalTheory.HeightCounting.Up.IntegralCoefficientPinning.tied_third <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.IntegralCoefficientPinning.tied_third

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.H1SplitConfigBRealPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.indLineFin_beta_of_isMatched_of_isEmpty_algHom : G
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F a b) (Rf₁ : FinMaps F a b),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ v : Pl F, IsEmpty (E →ₐ[F] Fv F v) → IndLineFin v om om₁ (Rf.p v) (Rf₁.p v) H' X.β ((a : ℝ) / 2) := by
-  first | exact @GlobalTheory.IndLine.indLineFin_beta_inert | exact GlobalTheory.IndLine.indLineFin_beta_inert | (intros; apply GlobalTheory.IndLine.indLineFin_beta_inert <;> assumption)
+  exact @GlobalTheory.IndLine.indLineFin_beta_inert

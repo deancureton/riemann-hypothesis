@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyOfFiniteTypeGenericFibre
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpMapCompSpMap
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.HorComp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.locallyOfFiniteType_generic_fibre : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ), LocallyOfFiniteType (genStr s.T.Z) := by
-  first | exact @GlobalTheory.HorComp.locallyOfFiniteType_generic_fibre_model | exact GlobalTheory.HorComp.locallyOfFiniteType_generic_fibre_model | (intros; apply GlobalTheory.HorComp.locallyOfFiniteType_generic_fibre_model <;> assumption)
+  exact @GlobalTheory.HorComp.locallyOfFiniteType_generic_fibre_model

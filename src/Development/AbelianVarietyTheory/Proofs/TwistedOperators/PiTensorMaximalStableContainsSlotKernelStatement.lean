@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.piTensor_maximalStable_contains_positionKernel : �
         U = N' ∨ U = ⊤) →
       ∀ x ∈ K, ∀ (x₀ : M₀) (y : ∀ j, M j),
         x₀ ⊗ₜ[ℂ] PiTensorProduct.tprod ℂ (Function.update y i x) ∈ N' := by
-  first | exact @GlobalTheory.TensHead.position_mem_of_maximal_stable | exact GlobalTheory.TensHead.position_mem_of_maximal_stable | (intros; apply GlobalTheory.TensHead.position_mem_of_maximal_stable <;> assumption)
+  exact @GlobalTheory.TensHead.position_mem_of_maximal_stable

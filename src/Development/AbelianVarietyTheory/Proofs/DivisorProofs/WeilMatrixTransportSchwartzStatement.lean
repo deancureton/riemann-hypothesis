@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilMatrixTransportSchwartz
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsWeilCharacterDetEqAbsDetPowStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchroedingerOperatorHeisenbergPreservesSchwartzBStatement
 open MeasureTheory Matrix
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.weil_matrix_transport_schwartz : ∀ {k : Type} [F
     ∀ χ : kˣ →* ℂˣ, (∀ g, ∀ φ ∈ GlobalTheory.WeilM.SB _, ι (S g φ) = fun Y => (χ (Matrix.GeneralLinearGroup.det g) : ℂ) * ι φ (Y * g.val)) →
     ∃ ν : kˣ →* ℂˣ, (∀ x, ‖(ν x : ℂ)‖ = 1) ∧ ∀ g : GL (Fin n) k,
       (χ (Matrix.GeneralLinearGroup.det g) : ℂ) = ν (Matrix.GeneralLinearGroup.det g) * GlobalTheory.SplitFlip.apow (Matrix.GeneralLinearGroup.det g) ((d : ℂ) / 2) := by
-  first | exact @GlobalTheory.HeisUnitRight.exists_unitary_factor_right | exact GlobalTheory.HeisUnitRight.exists_unitary_factor_right | (intros; apply GlobalTheory.HeisUnitRight.exists_unitary_factor_right <;> assumption)
+  exact @GlobalTheory.HeisUnitRight.exists_unitary_factor_right

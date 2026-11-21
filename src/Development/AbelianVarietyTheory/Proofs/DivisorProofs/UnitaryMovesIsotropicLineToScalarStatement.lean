@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryMovesIsotropicLineToScalar
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.unitary_moves_isotropic_line_to_scalar : ∀ (F E 
       ∀ x₀ x : Matrix (Fin n) (Fin 1) E, Formalism.UG.cT (σ : E →+* E) x₀ * J * x₀ = 0 →
         Formalism.UG.cT (σ : E →+* E) x * J * x = 0 → Formalism.UG.cT (σ : E →+* E) x₀ * J * x ≠ 0 →
           ∃ γ ∈ Formalism.UG.UJ (σ : E →+* E) J, ∃ c : E, c ≠ 0 ∧ (γ : Matrix (Fin n) (Fin n) E) * x₀ = c • x := by
-  first | exact @GlobalTheory.WittReflect.exists_unitary_map_isotropic | exact GlobalTheory.WittReflect.exists_unitary_map_isotropic | (intros; apply GlobalTheory.WittReflect.exists_unitary_map_isotropic <;> assumption)
+  exact @GlobalTheory.WittReflect.exists_unitary_map_isotropic

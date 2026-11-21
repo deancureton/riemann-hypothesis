@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SharpRefinementOddPrimeLocalization
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.GoodClass
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.sharp_refinement_odd_prime_localization : ∀ (W :
       ∀ q : Sp K ⟶ ((Over.pullback (spMap ev)).obj D.P.A).left,
       q ≫ pullback.fst D.P.A.hom (spMap ev) = y.left → q ≫ pullback.snd D.P.A.hom (spMap ev) = 𝟙 _ →
       ∃ a, q ≫ ψ = (t.lab a).left := by
-  first | exact @GlobalTheory.Poinc.Sep.E8Fibration.eighthPowerFibre_thetaObj | exact GlobalTheory.Poinc.Sep.E8Fibration.eighthPowerFibre_thetaObj | (intros; apply GlobalTheory.Poinc.Sep.E8Fibration.eighthPowerFibre_thetaObj <;> assumption)
+  exact @GlobalTheory.Poinc.Sep.E8Fibration.eighthPowerFibre_thetaObj

@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.line_to_GAd_derivative : ∀ (F E : Type) [Field F
     ∀ γ ∈ Lines σ W, ∃ (r : ℕ) (β : Fin r → ℝ → GAd σ (c • W.J.map σ)), (∀ i, IsRealLine σ (c • W.J.map σ) (β i)) ∧
       ∀ f, IsSm σ (c • W.J.map σ) f → ∀ g,
         HasDerivAt (fun t : ℝ => f (g * toGAd hσ W.J hc (γ (Multiplicative.ofAdd t)))) (∑ i, lineDer (β i) f g) 0 := by
-  first | exact @GlobalTheory.LineDerSum.exists_lines_hasDerivAt | exact GlobalTheory.LineDerSum.exists_lines_hasDerivAt | (intros; apply GlobalTheory.LineDerSum.exists_lines_hasDerivAt <;> assumption)
+  exact @GlobalTheory.LineDerSum.exists_lines_hasDerivAt

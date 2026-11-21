@@ -9,4 +9,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finite_level_and_second : GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.CasselmanWallach → GlobalTheory.Published.HarishChandraModules → PrN → SerN → DatExt → WeightCaseCondition → GlobalTheory.Published.DiscreteSeriesExists → PhtCmp → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, SMt → SRat hL → SCusp hL → ∀ cDep : ℝ, SFinl hL cDep → SFino hL cDep ∧ SecondNo hL cDep := by
-  first | exact @GlobalTheory.HeightCounting.Up.second_pass | exact GlobalTheory.HeightCounting.Up.second_pass | (intros; apply GlobalTheory.HeightCounting.Up.second_pass <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.second_pass

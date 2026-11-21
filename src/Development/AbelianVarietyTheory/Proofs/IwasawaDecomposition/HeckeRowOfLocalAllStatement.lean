@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hecke_row_of_local_all : ∀ {hL : GlobalTheory.Published.LocalLanglandsGL} {K : Ctx} {B : Base} {f : Fr B.toPre} {T : TwDat B} {w : ColW B f T} {P : Pre2 K w} {x : St P} (L : LocAll (lay0 (Dof x))) (l : LC hL x), NExpHeckeRowX (datL x L).R (datL x L).cG _ (ysL L l) (hkHL L l) fun _ => LinearMap.id := by
-  first | exact @GlobalTheory.HeightCounting.Fin3.hkRowL | exact GlobalTheory.HeightCounting.Fin3.hkRowL | (intros; apply GlobalTheory.HeightCounting.Fin3.hkRowL <;> assumption)
+  exact @GlobalTheory.HeightCounting.Fin3.hkRowL

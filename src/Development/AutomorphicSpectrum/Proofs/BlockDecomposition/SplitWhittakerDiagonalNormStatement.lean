@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitWhittakerDiagonalNorm
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitPlaceEmbeddingPropertiesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalComponentRationalIdeleStatement
@@ -18,4 +17,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_whittaker_diagonal_norm : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → L.IsSp → ∀ (g : GL (Fin 2) (Qv v)) (κ : Kˣ),
     L.W (dg2 (nv v κ) 1 * g) = cW L κ * mp (nv v κ) (1 / 2) * locI L g κ := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.SplitW.split_alt | exact GlobalTheory.CompanionTheory.FexTheta.SplitW.split_alt | (intros; apply GlobalTheory.CompanionTheory.FexTheta.SplitW.split_alt <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.SplitW.split_alt

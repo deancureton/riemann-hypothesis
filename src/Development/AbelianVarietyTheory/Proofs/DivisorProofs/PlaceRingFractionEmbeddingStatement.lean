@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaceRingFractionEmbedding
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.place_ring_fraction_embedding : ∀ (E : Type) [Fi
       (l : R) ∈ IsLocalRing.maximalIdeal R ∧ Nat.card (E →+* FractionRing R) = Module.finrank ℚ E ∧
       (∀ σ : E →+* ℂ, ∃ τ : E →+* FractionRing R, j.comp τ = σ) ∧
       ∀ (x : FractionRing R) (r : ℚ), ((-r : ℚ) : WithTop ℚ) ≤ GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l x → Sz l lam (r : ℝ) (j x) := by
-  first | exact @GlobalTheory.PlaceRingFacts.place_ring_facts | exact GlobalTheory.PlaceRingFacts.place_ring_facts | (intros; apply GlobalTheory.PlaceRingFacts.place_ring_facts <;> assumption)
+  exact @GlobalTheory.PlaceRingFacts.place_ring_facts

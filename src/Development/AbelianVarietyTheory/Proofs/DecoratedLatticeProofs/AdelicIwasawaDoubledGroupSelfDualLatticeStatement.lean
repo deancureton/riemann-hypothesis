@@ -12,4 +12,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.adelicIwasawa_doubledGroup_selfDualLattice : ∀ (D : D7) (A : HSp D) (L : Lat A) (a : GL (Fin A.rank) (AE D)), IsSelfDualC A L → IsMaj A a → HasIwasawa D.sp.cm.sig (dblSp A).gram (KAd D.sp.cm.sig (dblSp A).gram L a) := by
-  first | exact @GlobalTheory.Core.Rk.IP.hasIwasawa_KAd_selfDual | exact GlobalTheory.Core.Rk.IP.hasIwasawa_KAd_selfDual | (intros; apply GlobalTheory.Core.Rk.IP.hasIwasawa_KAd_selfDual <;> assumption)
+  exact @GlobalTheory.Core.Rk.IP.hasIwasawa_KAd_selfDual

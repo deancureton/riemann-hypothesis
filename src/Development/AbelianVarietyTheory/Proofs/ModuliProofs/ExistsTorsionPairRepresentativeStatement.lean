@@ -9,4 +9,4 @@ open GlobalTheory.FlatTors GlobalTheory.IndefiniteRowSideFullHecke.FlatIsoUnitGe
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_torsion_pair_representative : AllFlat fun {E} _ _ _ {H} {R} _ _ _ {t} P {W} ψW k => ∀ y : P.D.toPre.X, ∃ (N : Over W.toScheme) (p₀ : QkPtW P.D.toPre W ψW k N), PairRep ψW k y N p₀ := by
-  first | exact @GlobalTheory.PairScheme.pairRep_exists | exact GlobalTheory.PairScheme.pairRep_exists | (intros; apply GlobalTheory.PairScheme.pairRep_exists <;> assumption)
+  exact @GlobalTheory.PairScheme.pairRep_exists

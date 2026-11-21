@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LubinTateTorsionGaloisAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CharZeroAdicCompletion
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DecompositionGroupLocalGaloisIso
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasExponentZeroIff
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.lubin_tate_torsion_galois_action : ∀ (K : Type) 
     ∃ hz : x.val ∈ maximalAbelianExtension K Ω,
       ((localArtinMap K Ω (unitUniformizerPow hπ u k) ⟨x.val, hz⟩ : maximalAbelianExtension K Ω) : Ω) =
         (((u⁻¹ : 𝒪[K]ˣ) : 𝒪[K]) • x).val := by
-  first | exact @GlobalTheory.localArtinMap_unitUniformizerPow_lubinTateTorsion | exact GlobalTheory.localArtinMap_unitUniformizerPow_lubinTateTorsion | (intros; apply GlobalTheory.localArtinMap_unitUniformizerPow_lubinTateTorsion <;> assumption)
+  exact @GlobalTheory.localArtinMap_unitUniformizerPow_lubinTateTorsion

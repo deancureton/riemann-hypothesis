@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartSectionTrivialisation
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiCompactUnitPair
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory MonObj
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.period_chart_section_trivialisation : ∀ (k : Typ
       (Matrix.of fun i a => cot ex W₁ (h a) v i) *ᵥ
           ((c₀.pull w.isVB A.hom).map (GlobalTheory.RelCotAb.relCotIso A)).crd _ σ (dRel A.hom W F) (ex (v, z)) =
         cotAt ex W F (v, z) := by
-  first | exact @GlobalTheory.RelCotAb.cot_mulVec_crd | exact GlobalTheory.RelCotAb.cot_mulVec_crd | (intros; apply GlobalTheory.RelCotAb.cot_mulVec_crd <;> assumption)
+  exact @GlobalTheory.RelCotAb.cot_mulVec_crd

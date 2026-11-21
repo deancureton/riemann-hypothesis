@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarisedIdempotentFactorPullbackRefinement
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.OfFactorE
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
 import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.polarisedIdempotentFactor_pullback_refinement : �
         val (D.tau a b) (𝟙 _) z J' =
           lamVal w (lift (toUnit (TK R') ≫ D.c a) (toUnit (TK R') ≫ D.c b)).left z J J' *
             val (D₁'.tau (xi a) (F.f • xi b)) (𝟙 _) z J := by
-  first | exact @GlobalTheory.FactorPull.pfactor_pull | exact GlobalTheory.FactorPull.pfactor_pull | (intros; apply GlobalTheory.FactorPull.pfactor_pull <;> assumption)
+  exact @GlobalTheory.FactorPull.pfactor_pull

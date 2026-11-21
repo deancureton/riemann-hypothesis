@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PadicPointModelAbelianMap
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BLieLieComb
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.padic_point_model_abelian_map : ∀ (E : Type) [Fi
     ∀ σ : E →+* ℂ, (∀ a : 𝓞 E, (w ≫ Y.m.φ) ≫ (Y.t.act.act a).left =
       spMap (epsMul (algebraMap c.F ℂ_[p] (embK c σ a))) ≫ w ≫ Y.m.φ) →
     IsTanAt y.x (w ≫ ν.φ) ∧ IsEigAt c σ (w ≫ ν.φ) := by
-  first | exact @GlobalTheory.FlatModel.tanEig_of_model | exact GlobalTheory.FlatModel.tanEig_of_model | (intros; apply GlobalTheory.FlatModel.tanEig_of_model <;> assumption)
+  exact @GlobalTheory.FlatModel.tanEig_of_model

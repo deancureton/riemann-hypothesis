@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProjectiveChartSurjectiveFunction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HypothesesX
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.projective_chart_surjective_function : ∀ (K Ω :
     (∀ a : 𝓞 K, ψ (algebraMap K Ω (a : K)) = fnOf ⊤ (TopologicalSpace.Opens.mem_top _) (algX p ⊤ a)) →
     IntermediateField.adjoin K (Set.range z) = ⊤ → (∀ j, fnOf U hη (GlobalTheory.ProjSpace.pullRatio π U i hU j) = ψ (z j)) →
     π.residueDegree (genericPoint X) = 1 := by
-  first | exact @GlobalTheory.ResDegRatio.residueDegree_eq_one_of_ratios | exact GlobalTheory.ResDegRatio.residueDegree_eq_one_of_ratios | (intros; apply GlobalTheory.ResDegRatio.residueDegree_eq_one_of_ratios <;> assumption)
+  exact @GlobalTheory.ResDegRatio.residueDegree_eq_one_of_ratios

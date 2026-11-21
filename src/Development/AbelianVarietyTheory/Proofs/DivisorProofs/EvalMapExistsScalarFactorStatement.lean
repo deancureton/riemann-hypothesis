@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvalMapExistsScalarFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.eval_map_exists_scalar_factor : GlobalTheory.ThK.K
     H'.IsAdapted σ B W W₁ i₀ i₁ → M₁.IsGood B.ψ → ∀ (e₀ : Fn F n d →ₗ[ℂ] Fn F n d₁), IsEv B M M₁ 1 H'.ι (iso0 n H') e₀ → B.IsGood σ → M.IsGood B.ψ → (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W.IsSkew σ B r' s') →
     ∀ Ψ ∈ schA F (Fin n × Fin d), ∃ N : ℕ, 1 ≤ N ∧ ∀ ξ : Fin n → E,
       e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) Ψ) ≠ 0 → ∀ i, ∃ o : 𝓞 E, (N : E) * ξ i = o := by
-  first | exact @GlobalTheory.ExpandDenom.main | exact GlobalTheory.ExpandDenom.main | (intros; apply GlobalTheory.ExpandDenom.main <;> assumption)
+  exact @GlobalTheory.ExpandDenom.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.EigenspaceRankOneSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.HermitianTraceForms.ExistsIsComplEigenSubOfValuationRing
 open scoped TensorProduct NumberField
 open GlobalTheory.EigenSplit
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.eigenspace_rank_one_span : ∀ {O R Λ : Type} [Co
     eigenSub (baseChangeAction R (Module.toModuleEnd ℤ O : O →+* Module.End ℤ O)) χ ≤ Submodule.span R {e} →
     eigenSub (baseChangeAction R (Module.toModuleEnd ℤ Λ : O →+* Module.End ℤ Λ)) χ
       = LinearMap.range (tensorAction (baseChangeAction R (Module.toModuleEnd ℤ Λ : O →+* Module.End ℤ Λ)) e) := by
-  first | exact @GlobalTheory.EigenSplit.eigenSub_eq_range_tensorAction_of_le_span | exact GlobalTheory.EigenSplit.eigenSub_eq_range_tensorAction_of_le_span | (intros; apply GlobalTheory.EigenSplit.eigenSub_eq_range_tensorAction_of_le_span <;> assumption)
+  exact @GlobalTheory.EigenSplit.eigenSub_eq_range_tensorAction_of_le_span

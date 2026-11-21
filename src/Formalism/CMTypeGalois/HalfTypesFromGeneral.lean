@@ -4,7 +4,6 @@ import Formalism.CMTypeGalois.CMTypeFrobenius.MQFrob
 import Formalism.CMTypeGalois.CMTypeFrobenius.KroneckerMeaning
 import Formalism.CMTypeGalois.CMTypeFrobenius.TypesA
 import Formalism.CMTypeGalois.CMTypeFrobenius.TypesB
-import Mathlib
 import Formalism.CMTypeGalois.CMTypeFrobenius.HostFrob
 import Formalism.CMTypeGalois.CMTypeFrobenius.HostConj
 import Formalism.CMTypeGalois.CMTypeFrobenius.HostInertia

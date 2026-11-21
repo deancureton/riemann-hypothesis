@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitProjectionColumnSpanMem
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.split_projection_column_span_mem : ∀ {F E : Type
     {v : HeightOneSpectrum (𝓞 F)} (τ : E →ₐ[F] Fv F v) {n r : ℕ} (X : Matrix (Fin n) (Fin r) E) (I : Set (Fin r))
     (y : Fin n → AF F ⊗[F] E), y ∈ GlobalTheory.StdPar.colSpan F X I →
     (fun k => splitProj τ (compFin F E v (y k))) ∈ Submodule.span (Fv F v) ((fun i k => τ (X k i)) '' I) := by
-  first | exact @GlobalTheory.ColSpanDown.mem_span_comp | exact GlobalTheory.ColSpanDown.mem_span_comp | (intros; apply GlobalTheory.ColSpanDown.mem_span_comp <;> assumption)
+  exact @GlobalTheory.ColSpanDown.mem_span_comp

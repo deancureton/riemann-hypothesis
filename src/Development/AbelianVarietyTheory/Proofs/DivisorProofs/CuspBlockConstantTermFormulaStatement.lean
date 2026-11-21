@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspBlockConstantTermFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.cusp_block_constant_term_formula : ∀ (F E : Type
       ∀ (ψ : GAd σ J → ℂ), GlobalTheory.StdPar.IsCuspOn σ J Xf Yf S K ψ → ∀ g₀ : GAd σ J,
         (∀ k : GlobalTheory.CuspRep.Kinf E d, g₀⁻¹ * ι (GlobalTheory.CuspRep.infGL E d (Unitary.toUnits k)) * g₀ ∈ K) →
         GlobalTheory.CuspRep.IsCuspidal (fun x => ψ (ι x * g₀)) := by
-  first | exact @GlobalTheory.BlockForms.CuspConst.isCuspidal_comp_blockEmb | exact GlobalTheory.BlockForms.CuspConst.isCuspidal_comp_blockEmb | (intros; apply GlobalTheory.BlockForms.CuspConst.isCuspidal_comp_blockEmb <;> assumption)
+  exact @GlobalTheory.BlockForms.CuspConst.isCuspidal_comp_blockEmb

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicFiniteOpenDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.parabolic_finite_open_decomposition : ∀ (k : Typ
     [∀ a, DecidableEq (m a)] [Fintype n] [DecidableEq n] (e : (Σ a, m a) ≃ n)
     (K : Subgroup (GL n k)), IsOpen (K : Set (GL n k)) →
     ∃ Y : Finset (GL n k), ∀ x : GL n k, ∃ p ∈ GlobalTheory.SmGL.parab k e, ∃ y ∈ Y, ∃ κ ∈ K, x = p * y * κ := by
-  first | exact @GlobalTheory.DoubleCosetFinite.exists_finset_parab_mul_mul | exact GlobalTheory.DoubleCosetFinite.exists_finset_parab_mul_mul | (intros; apply GlobalTheory.DoubleCosetFinite.exists_finset_parab_mul_mul <;> assumption)
+  exact @GlobalTheory.DoubleCosetFinite.exists_finset_parab_mul_mul

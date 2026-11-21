@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JetScalarLocalIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitOff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalisedFamilyEqTensorPowerVacuum
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.jet_scalar_local_identity : GlobalTheory.FunPr.Hyp
       ∃ ζ : ℂ, (∃ n : ℕ, 0 < n ∧ ζ ^ n = 1) ∧ ∃ r : ℝ, 0 < r ∧
         GlobalTheory.MovedKappaEx.JetKap ch p (s * x) (s' * y)
           ((r : ℂ) * ζ * ((((ch.G.chrT p x₀)⁻¹ * ch.G.chrS p y₀ : Circle)) : ℂ) * κ) := by
-  first | exact @GlobalTheory.SplitMoveKappa.jetKap_split_move | exact GlobalTheory.SplitMoveKappa.jetKap_split_move | (intros; apply GlobalTheory.SplitMoveKappa.jetKap_split_move <;> assumption)
+  exact @GlobalTheory.SplitMoveKappa.jetKap_split_move

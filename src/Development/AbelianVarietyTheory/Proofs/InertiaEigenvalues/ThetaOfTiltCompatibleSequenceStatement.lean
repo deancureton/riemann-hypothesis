@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ThetaOfTiltCompatibleSequence
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormLtOneOfNotIsUnit
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.theta_of_tilt_compatible_sequence : ∀ (l : ℕ) 
     (∀ n, intToOC K π * v (n + 1) + v (n + 1) ^ l ^ fK K = v n) →
     GlobalTheory.LTTilt.IsTiltOf (fK K) (intToOC K π) (red K (ω 0)) v → (∀ n, frobq K (ω (n + 1)) = ω n) →
     frobq K (ω 0) = inO K π * ω 0 + ω 0 ^ l ^ fK K → ∀ n, thetaK K (ω n) = v n := by
-  first | exact @GlobalTheory.FrobRoots.thetaK_eq | exact GlobalTheory.FrobRoots.thetaK_eq | (intros; apply GlobalTheory.FrobRoots.thetaK_eq <;> assumption)
+  exact @GlobalTheory.FrobRoots.thetaK_eq

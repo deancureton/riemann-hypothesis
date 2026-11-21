@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInversePreservingAdelicLatticeAtPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_inverse_preserving_adelicLatticeAtPlace : �
     (∀ z ∈ GlobalTheory.InertSph.latAt W v, ∃ y ∈ GlobalTheory.InertSph.latAt W v, ∃ y' ∈ GlobalTheory.InertSph.latAt W v, z = M *ᵥ y + p • y') →
     ∃ M' : Matrix (Fin d) (Fin d) (AE F E), M * M' = 1 ∧ M' * M = 1 ∧
       ∀ z ∈ GlobalTheory.InertSph.latAt W v, M' *ᵥ z ∈ GlobalTheory.InertSph.latAt W v := by
-  first | exact @GlobalTheory.InertSph.exists_inv_keeps_latAt | exact GlobalTheory.InertSph.exists_inv_keeps_latAt | (intros; apply GlobalTheory.InertSph.exists_inv_keeps_latAt <;> assumption)
+  exact @GlobalTheory.InertSph.exists_inv_keeps_latAt

@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.metric_pullback_dual_frames : ∀ {k k' : Type} [C
       ∀ (σ : k →+* ℂ) (σ' : k' →+* ℂ), σ' = σ.comp φ.symm.toRingHom → ∀ (z : CxPts q σ) (y : CxPts p' σ'),
         y.1 = z.1 ≫ β ≫ b → ∀ c : VB.Chart F g, y ∈ CxPts.ptsIn p' σ' c.U →
         ((h₀.dual.pull β w).met σ).G ⟨(β ≫ b) ⁻¹ᵁ c.U, ℓ c, hℓ c⟩ z = HermFrame.dualGram ((h.met σ').G c y) := by
-  first | exact @GlobalTheory.LieFilt.exists_dualCharts_pull_dual_pull | exact GlobalTheory.LieFilt.exists_dualCharts_pull_dual_pull | (intros; apply GlobalTheory.LieFilt.exists_dualCharts_pull_dual_pull <;> assumption)
+  exact @GlobalTheory.LieFilt.exists_dualCharts_pull_dual_pull

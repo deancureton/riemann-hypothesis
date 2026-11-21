@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearBarSpanGlIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.linear_bar_span_gl_integral : GlobalTheory.ThK.KP 
         ∫ g, GlobalTheory.SplitFlip.omB (chrW (X.α / X.β) B.τ₁) (chrW X.α B.τ₁) g 1 (ι x) Y ∂μ = 0) →
       x ∈ Submodule.span ℂ {y | ∃ g ∈ UAt σ G.V' (evFin F B.v₁), ∃ ψ ∈ G.M'.SoLoc B.ψ B.τ₁, ∃ ψ' ∈ G.M'.SoLoc B.ψ B.τ₁,
         Acts (evFin F B.v₁) (om' (g, 1)) ψ ψ' ∧ y = ψ' - ψ} := by
-  first | exact @GlobalTheory.TranslationGLHaar.ker_fibre_mem_span | exact GlobalTheory.TranslationGLHaar.ker_fibre_mem_span | (intros; apply GlobalTheory.TranslationGLHaar.ker_fibre_mem_span <;> assumption)
+  exact @GlobalTheory.TranslationGLHaar.ker_fibre_mem_span

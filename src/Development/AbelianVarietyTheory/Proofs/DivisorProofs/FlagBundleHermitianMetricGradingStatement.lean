@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_metric_grading : ∀ (k : Ty
       (VMetric.grLB fl₁ 1 (H₁.pull ρ wρ)).Isometric (VMetric.grLB (fl a) i' ((H a).pull π w)) ∧
       ∀ z : Σ a, Fin (r a), z ≠ ⟨a, i⟩ → z ≠ ⟨a, i'⟩ →
         ((M z).pull ρ wρ).Isometric (VMetric.grLB (fl z.1) z.2 ((H z.1).pull π w)) := by
-  first | exact @GlobalTheory.SwapBundle.swapFl_bundle | exact GlobalTheory.SwapBundle.swapFl_bundle | (intros; apply GlobalTheory.SwapBundle.swapFl_bundle <;> assumption)
+  exact @GlobalTheory.SwapBundle.swapFl_bundle

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicPlaneConstantTermEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.isotropic_plane_constant_term_equivariant : ∀ (F
       ∀ g : UA σ Y₁.J → ℂ, (∀ h₁ m, IsLevi (W₁ := Y₁) P 1 h₁ m → g h₁ = fa (m * h)) →
       ∀ (k : ℕ) (γ : Fin k → ℝ → GAd σ (c • Y₁.J.map σ)), (∀ i, IsRealLine σ (c • Y₁.J.map σ) (γ i)) → ∀ x,
         ContDiff ℝ ∞ fun t : Fin k → ℝ => (fun x => g ((toGAd hσ Y₁.J hc).symm x)) (x * (List.ofFn fun i => γ i (t i)).prod) := by
-  first | exact @GlobalTheory.ThK.DescB.GenSmooth.contDiff_gen | exact GlobalTheory.ThK.DescB.GenSmooth.contDiff_gen | (intros; apply GlobalTheory.ThK.DescB.GenSmooth.contDiff_gen <;> assumption)
+  exact @GlobalTheory.ThK.DescB.GenSmooth.contDiff_gen

@@ -5,4 +5,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.half_at_small_place : InRange fun Fm x _ i p j P _ w => SmallAt p j P w → HalfAt (Fm.D x i) (Formalism.EigenvalueLevelCeiling.plc w) := by
-  first | exact @GlobalTheory.HalfLabels.halfAt_inRange | exact GlobalTheory.HalfLabels.halfAt_inRange | (intros; apply GlobalTheory.HalfLabels.halfAt_inRange <;> assumption)
+  exact @GlobalTheory.HalfLabels.halfAt_inRange

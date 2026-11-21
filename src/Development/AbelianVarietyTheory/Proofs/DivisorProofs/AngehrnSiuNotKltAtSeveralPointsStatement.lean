@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AngehrnSiuNotKltAtSeveralPoints
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.angehrnSiu_not_klt_at_several_points : GlobalTheor
           (Finsupp.mapDomain (fun g : R i => (g : K)) φ) + 1) ≤ t * M) →
     ¬ Klt (algebraMap ℂ K) n (R i) (dForm (algebraMap ℂ K) (fun j => (xi j : K)))
       (Finsupp.mapDomain (fun g : R i => (g : K)) φ + Finsupp.single (s : K) t) := by
-  first | exact @GlobalTheory.LocalHeart.not_klt_at_points | exact GlobalTheory.LocalHeart.not_klt_at_points | (intros; apply GlobalTheory.LocalHeart.not_klt_at_points <;> assumption)
+  exact @GlobalTheory.LocalHeart.not_klt_at_points

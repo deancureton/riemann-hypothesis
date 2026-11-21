@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointCompleteField
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_complete_field : ∀ (E : Type) [Fiel
     (P : PtP E p) (π : P.G.left ⟶ Y.t.G.left) (ψ : P.A.A.left ⟶ Y.oF.t.G.left), PtOn Y yb yy P π ψ →
     ∀ (σ : E →+* ℂ) (x : LieG P.Gt) (u : Sp (DualNumber ℂ_[p]) ⟶ Xo.univ.t.G.left),
       LieTie P (ψ ≫ ν.φ) x u → IsEigAt c σ u → AvDefs.IsEig P.Gt P.oGt (embInt c P.integers σ) x := by
-  first | exact @GlobalTheory.FlatModel.pt_isEig_of_lieTie | exact GlobalTheory.FlatModel.pt_isEig_of_lieTie | (intros; apply GlobalTheory.FlatModel.pt_isEig_of_lieTie <;> assumption)
+  exact @GlobalTheory.FlatModel.pt_isEig_of_lieTie

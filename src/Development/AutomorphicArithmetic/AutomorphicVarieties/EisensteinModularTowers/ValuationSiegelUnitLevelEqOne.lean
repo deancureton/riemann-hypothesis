@@ -6,7 +6,6 @@ import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SlTwoInvariantHo
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.OverAffineJLineComapSlGalStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelUnitInTowerNeZeroStatement
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.SiegelUnitInTowerAnEqSiegelUnitOnComplexStatement
-import Mathlib
 
 open GlobalTheory.KZ GlobalTheory.Glue
 

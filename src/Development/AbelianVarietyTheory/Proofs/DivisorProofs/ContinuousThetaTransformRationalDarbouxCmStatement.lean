@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousThetaTransformRationalDarbouxCm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.continuous_thetaTransform_rationalDarboux_cm : ∀
             co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) →
           ∀ φ ∈ schA F κ,
           Continuous (GlobalTheory.WeilSchrodinger.thetaTr F co B.ψ φ) := by
-  first | exact @GlobalTheory.ThetaTrContCM.continuous_thetaTr_cm | exact GlobalTheory.ThetaTrContCM.continuous_thetaTr_cm | (intros; apply GlobalTheory.ThetaTrContCM.continuous_thetaTr_cm <;> assumption)
+  exact @GlobalTheory.ThetaTrContCM.continuous_thetaTr_cm

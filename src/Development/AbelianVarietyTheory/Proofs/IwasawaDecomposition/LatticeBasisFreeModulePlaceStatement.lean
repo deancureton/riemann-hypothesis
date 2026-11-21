@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.lattice_basis_free_module_place : ∀ (D : D7) (cf
       ∃ s : Multiset (FractionRing (T.O i)),
         (LinearMap.charpoly (hkB D T S In hst i j b k P)).map
           (algebraMap (T.O i) (FractionRing (T.O i))) = (s.map fun a => X - C a).prod := by
-  first | exact @GlobalTheory.HeightCounting.FormsStep.hkB_charpoly_splits | exact GlobalTheory.HeightCounting.FormsStep.hkB_charpoly_splits | (intros; apply GlobalTheory.HeightCounting.FormsStep.hkB_charpoly_splits <;> assumption)
+  exact @GlobalTheory.HeightCounting.FormsStep.hkB_charpoly_splits

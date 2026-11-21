@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_restriction : GlobalTheory.FunP
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ u ∈ unip σ W H', ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, u) Φ) = e Φ := by
-  first | exact @GlobalTheory.UnipEv.unip_evalZero | exact GlobalTheory.UnipEv.unip_evalZero | (intros; apply GlobalTheory.UnipEv.unip_evalZero <;> assumption)
+  exact @GlobalTheory.UnipEv.unip_evalZero

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharactersRestrictionEta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.hecke_characters_restriction_eta : GlobalTheory.Fu
     ∀ χX χW : Chr F E, IsHecke F E χX → IsHecke F E χW →
       ResEtaPow (Units.map (algebraMap F (AF F)).toMonoidHom).range χX n →
       ResEtaPow (Units.map (algebraMap F (AF F)).toMonoidHom).range χW d → ∃ om, M.IsWeil B.ψ χX χW om := by
-  first | exact @GlobalTheory.WeilExGen.exists_isWeil | exact GlobalTheory.WeilExGen.exists_isWeil | (intros; apply GlobalTheory.WeilExGen.exists_isWeil <;> assumption)
+  exact @GlobalTheory.WeilExGen.exists_isWeil

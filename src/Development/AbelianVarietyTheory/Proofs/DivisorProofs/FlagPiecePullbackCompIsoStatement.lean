@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.flag_piece_pullback_comp_iso : ∀ {B T Y₁ Y₂ 
     ∃ e : (Scheme.Modules.pullback (g₁ ≫ g₂)).obj F₂ ≅ F', e.hom ≫ ι' =
       (Scheme.Modules.pullback (g₁ ≫ g₂)).map ι₂ ≫
         (Scheme.Modules.pullbackComp (g₁ ≫ g₂) π₂).hom.app E ≫ (Scheme.Modules.pullbackCongr w).hom.app E := by
-  first | exact @GlobalTheory.FlagLiftComp.liftComp | exact GlobalTheory.FlagLiftComp.liftComp | (intros; apply GlobalTheory.FlagLiftComp.liftComp <;> assumption)
+  exact @GlobalTheory.FlagLiftComp.liftComp

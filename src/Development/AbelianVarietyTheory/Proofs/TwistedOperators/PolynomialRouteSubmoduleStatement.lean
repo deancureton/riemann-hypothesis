@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.polynomial_route_submodule : GlobalTheory.Publishe
   ∀ ρ' : RealMatch W, ρ'.vX = ρ.vX → ρ'.vT = ρ.vT → ρ'.rel i j = r → ∀ t : T, ∃ c : ℂ, ∀ M : Vol G, M.Is t → ∀ Θ Θ',
     IsMatched B t ρ' i j Θ Θ' → ∀ g g₁, ∃ z, zdeg z ≠ 0 ∧ SquareConv W M Θ Θ' z g g₁ ∧
       zdeg z * ∫ u in M.fd _, kerBig W Θ g g₁ u ∂M.ν _ = c * ∫ u in M.fd _, translates z (kerSmall W Θ' g g₁) u ∂M.ν _ := by
-  first | exact @GlobalTheory.SquareIdent.square_ident | exact GlobalTheory.SquareIdent.square_ident | (intros; apply GlobalTheory.SquareIdent.square_ident <;> assumption)
+  exact @GlobalTheory.SquareIdent.square_ident

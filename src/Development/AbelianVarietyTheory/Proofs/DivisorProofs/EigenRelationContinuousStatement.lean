@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenRelationContinuous
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.eigen_relation_continuous : ∀ {F E : Type} [Fiel
       ∀ φ ∈ SB (Fin n × Fin d → Fv F v),
         ev v (schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo M.co v (incM F ι * z * (incM F ι')ᵀ)) φ) =
           schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo M₁.co v z) (ev v φ) := by
-  first | exact @GlobalTheory.ThK.EvLocHeis.ev_schr_heis | exact GlobalTheory.ThK.EvLocHeis.ev_schr_heis | (intros; apply GlobalTheory.ThK.EvLocHeis.ev_schr_heis <;> assumption)
+  exact @GlobalTheory.ThK.EvLocHeis.ev_schr_heis

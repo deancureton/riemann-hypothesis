@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RationalHeckeAtLevels
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LowSetFinite
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.ExistsNormLeHeightPow
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SplitOffDetection
@@ -14,4 +13,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rational_hecke_at_levels : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, GlobalTheory.Published.CuspRapidDecay → GlobalTheory.IndefiniteRowSideFullHecke.SplitOffDetection.HeckeTransform → GlobalTheory.HeckeSupSt.HeckeReadTie → StepW Start fun K B f T w => ∀ (P : Pre2 K w) (x : St P), LA hL x → ∀ i : Fin (Dof x).R.m, GlobalTheory.IndefiniteRowSideFullHecke.RationalHeckeScalars.RationalHecke x.m.z.R.toRealDat i := by
-  first | exact @GlobalTheory.HeckeFamRead.rationalHecke_allSt | exact GlobalTheory.HeckeFamRead.rationalHecke_allSt | (intros; apply GlobalTheory.HeckeFamRead.rationalHecke_allSt <;> assumption)
+  exact @GlobalTheory.HeckeFamRead.rationalHecke_allSt

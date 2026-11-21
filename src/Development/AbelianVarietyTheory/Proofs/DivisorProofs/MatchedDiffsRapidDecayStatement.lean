@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedDiffsRapidDecay
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.matched_diffs_rapid_decay : GlobalTheory.ThK.KP �
         Ψ₁'.1 = GlobalTheory.SplitFlip.omA ν₀ β₀ 1 h Ψ₁.1 → Ψ₂'.1 = GlobalTheory.SplitFlip.omA ν₀ β₀ 1 h Ψ₂.1 → Bf Ψ₁' Ψ₂' = Bf Ψ₁ Ψ₂) ∧
       (∀ (z : Fin (a + a') → Fv F B.v₁) (Ψ₁ Ψ₂ Ψ₂' : GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin (a + a')) (Fv F B.v₁))),
         Ψ₂'.1 = (fun Y => ψv (ℓ ⬝ᵥ (Y *ᵥ z)) * Ψ₂.1 Y) → Bf Ψ₁ Ψ₂' = Bf Ψ₁ Ψ₂) := by
-  first | exact @GlobalTheory.ThK.GlobLoc.exists_local_form | exact GlobalTheory.ThK.GlobLoc.exists_local_form | (intros; apply GlobalTheory.ThK.GlobLoc.exists_local_form <;> assumption)
+  exact @GlobalTheory.ThK.GlobLoc.exists_local_form

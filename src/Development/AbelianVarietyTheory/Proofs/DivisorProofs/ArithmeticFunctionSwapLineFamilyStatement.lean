@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticFunctionSwapLineFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.arithmetic_function_swap_line_family : ArCalc → 
       ∀ (s : Finset (Fin 5 → ℤ)) (c : (Fin 5 → ℤ) → ℝ), F = ∑ n ∈ s, c n • lin (fun i => (n i : ℝ)) ^ (d + 1) →
         Φ ((X 4 - X 0) * F) = -∑ n ∈ s, c n * (comb (fam5 π w H flB fl A) n).archInt
           ((fam5 π w H flB fl A 0).dual.tens (fam5 π w H flB fl A 4)) (d + 1) hr := by
-  first | exact @GlobalTheory.CovTest.SwapLine.mix_dualTaut_tens_quotBase | exact GlobalTheory.CovTest.SwapLine.mix_dualTaut_tens_quotBase | (intros; apply GlobalTheory.CovTest.SwapLine.mix_dualTaut_tens_quotBase <;> assumption)
+  exact @GlobalTheory.CovTest.SwapLine.mix_dualTaut_tens_quotBase

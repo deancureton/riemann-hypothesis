@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorsProductCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjLinApply
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.local_operators_product_compatible : ∀ {F : Type
     Set.SurjOn e (schA F κ : Set ((κ → AF F) → ℂ)) (schA F κ : Set ((κ → AF F) → ℂ)) →
     (∀ v, ev v (stdInd F κ v) ≠ 0) →
     ∀ v, ∀ χ ∈ SB (κ → Fv F v), ∃ ψ ∈ SB (κ → Fv F v), ev v ψ = χ := by
-  first | exact @GlobalTheory.EvOnto.ev_surjOn_SB | exact GlobalTheory.EvOnto.ev_surjOn_SB | (intros; apply GlobalTheory.EvOnto.ev_surjOn_SB <;> assumption)
+  exact @GlobalTheory.EvOnto.ev_surjOn_SB

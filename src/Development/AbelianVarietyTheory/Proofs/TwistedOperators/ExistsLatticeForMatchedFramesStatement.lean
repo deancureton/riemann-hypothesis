@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_lattice_for_matched_frames : GlobalTheory.F
   ∃ (L : GlobalTheory.FinPl.Lat (G.V (.grid i j))) (S : Finset (HeightOneSpectrum (𝓞 D.host.F))),
     L.FG ∧ Submodule.span D.host.E (L : Set (Fin (G.V (.grid i j)).rank → D.host.E)) = ⊤ ∧
     ∀ κ, GlobalTheory.FinPl.InK (G.V (.grid i j)) L (fun v => v ∉ S) κ → ∀ u, kerSmall W Θ' g g₁ (u * κ) = kerSmall W Θ' g g₁ u := by
-  first | exact @GlobalTheory.SmallKerInv.kerSmall_inv | exact GlobalTheory.SmallKerInv.kerSmall_inv | (intros; apply GlobalTheory.SmallKerInv.kerSmall_inv <;> assumption)
+  exact @GlobalTheory.SmallKerInv.kerSmall_inv

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinConstantTermFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.eisenstein_constant_term_formula : ∀ (F E : Type
     ∀ s : ℂ, ((n : ℝ) - 1) / 2 < s.re → ∀ g : GAd σ J,
     IntegrableOn (fun u : unipRad σ J (col0 X) => GlobalTheory.EisCT.bigSum σ J (col0 X) T h s (u.1 * g)) 𝓕 μ ∧
     ∫ u in 𝓕, GlobalTheory.EisCT.bigSum σ J (col0 X) T h s (u.1 * g) ∂μ = c s * (h g : ℂ) ^ (-s + (((n : ℂ) - 1) / 2)) := by
-  first | exact @GlobalTheory.EisBig.bigCell_constTerm | exact GlobalTheory.EisBig.bigCell_constTerm | (intros; apply GlobalTheory.EisBig.bigCell_constTerm <;> assumption)
+  exact @GlobalTheory.EisBig.bigCell_constTerm

@@ -19,4 +19,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.VolumeFlatSection (Blocks parahoric
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.chain_first_stage_L_values_positive : GlobalTheory.Published.CuspRapidDecay → ∀ D : D7, LPos D := by
-  first | exact @GlobalTheory.ChainTw.lPos_of_rapidDecay | exact GlobalTheory.ChainTw.lPos_of_rapidDecay | (intros; apply GlobalTheory.ChainTw.lPos_of_rapidDecay <;> assumption)
+  exact @GlobalTheory.ChainTw.lPos_of_rapidDecay

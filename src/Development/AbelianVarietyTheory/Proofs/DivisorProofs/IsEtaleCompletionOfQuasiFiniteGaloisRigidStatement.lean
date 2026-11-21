@@ -11,4 +11,4 @@ open scoped CategoryTheory.Obj
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isEtaleCompletion_of_quasiFinite_galoisRigid : ∀ (O R : Type) [CommRing O] [IsDomain O] [IsLocalRing O] [IsIntegrallyClosed O] [CharZero O] [Algebra.EssFiniteType ℤ O] [CommRing R] [IsDomain R] [IsLocalRing R] [IsNoetherianRing R] (f : O →+* R) [IsLocalHom f], IsAdicComplete (maximalIdeal R) R → (∀ p : Ideal R, p.IsPrime → (maximalIdeal O).map f ≤ p → p = maximalIdeal R) → ((residue R).comp f).Finite → ringKrullDim O ≤ ringKrullDim R → GalRigid f → IsEtaleCompletion f ∧ ((residue R).comp f).FormallyUnramified := by
-  first | exact @GlobalTheory.QFEtale.isEtaleCompletion_of_galRigid | exact GlobalTheory.QFEtale.isEtaleCompletion_of_galRigid | (intros; apply GlobalTheory.QFEtale.isEtaleCompletion_of_galRigid <;> assumption)
+  exact @GlobalTheory.QFEtale.isEtaleCompletion_of_galRigid

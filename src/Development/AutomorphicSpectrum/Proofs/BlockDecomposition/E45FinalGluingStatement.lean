@@ -5,4 +5,4 @@ open scoped Classical
 namespace PositivityTheory.Rg.BcB.SpectralAccumulation
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.e45_final_gluing : PositivityTheory.Rg.BcB.SpectralAccumulation.InfinitesimalCharacterGlue := by
-  first | exact @GlobalTheory.CompanionTheory.EGlue.eFinalGlue | exact GlobalTheory.CompanionTheory.EGlue.eFinalGlue | (intros; apply GlobalTheory.CompanionTheory.EGlue.eFinalGlue <;> assumption)
+  exact @GlobalTheory.CompanionTheory.EGlue.eFinalGlue

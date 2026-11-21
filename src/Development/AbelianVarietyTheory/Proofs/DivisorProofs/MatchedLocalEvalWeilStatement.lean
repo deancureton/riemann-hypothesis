@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLocalEvalWeil
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.matched_local_eval_weil : GlobalTheory.ThK.KP → 
     ∀ Φ ∈ (GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁), ∃ s : Finset (GlobalTheory.ThK.Fn F a' (a + a')), (↑s ⊆ ((GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁) : Set (GlobalTheory.ThK.Fn F a' (a + a')))) ∧
       ∀ Ψ ∈ Submodule.span ℂ (Set.range fun g : GlobalTheory.ThK.UAtSub σ G.W (GlobalTheory.AdelicU.evFin F v) => om' (1, g.1) Φ),
         (∀ k ∈ K, om' (1, k) Ψ = Ψ) → ∃ Ψ₀ ∈ Submodule.span ℂ (s : Set (GlobalTheory.ThK.Fn F a' (a + a'))), G.M'.I om' (Ψ - Ψ₀) = 0 := by
-  first | exact @GlobalTheory.ThKAdmPrime.admissible_mod_ker | exact GlobalTheory.ThKAdmPrime.admissible_mod_ker | (intros; apply GlobalTheory.ThKAdmPrime.admissible_mod_ker <;> assumption)
+  exact @GlobalTheory.ThKAdmPrime.admissible_mod_ker

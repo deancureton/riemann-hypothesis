@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsOpenCompactLevelThetaKernelBottomTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.exists_openCompactLevel_thetaKernel_bottomTriple :
     ∃ K : Subgroup (GL (Fin A'.rank) (Lev.EAf D)), GlobalTheory.IndefiniteRowSideFullHecke.ClassFunctionSumIntegral.IsOpenCompactLevel A' K ∧
       ∀ (P : PolF D WW.rank A'.rank) (h : GA D WW), ∀ k ∈ Lev.levA A' K, ∀ g,
         X.ker' W.ψ W.θ t P h (g * k) = X.ker' W.ψ W.θ t P h g := by
-  first | exact @GlobalTheory.BotKerLevel.exists_level | exact GlobalTheory.BotKerLevel.exists_level | (intros; apply GlobalTheory.BotKerLevel.exists_level <;> assumption)
+  exact @GlobalTheory.BotKerLevel.exists_level

@@ -7,4 +7,4 @@ open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions.G
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kernelSite_frameValues_all_steps_lt_m : AllSites (fun {D L hT Gi Gl Kc Dx cX ex u μ w hg Lv I H X} [Fact (D.what₂.places.resChar w).Prime] {std t J} S => J.Dict std → S.Pair → S.Pos → S.Law → ∀ j < D.R.m, S.Del j) := by
-  first | exact @GlobalTheory.TwV.DelA.tieDel_all_steps | exact GlobalTheory.TwV.DelA.tieDel_all_steps | (intros; apply GlobalTheory.TwV.DelA.tieDel_all_steps <;> assumption)
+  exact @GlobalTheory.TwV.DelA.tieDel_all_steps

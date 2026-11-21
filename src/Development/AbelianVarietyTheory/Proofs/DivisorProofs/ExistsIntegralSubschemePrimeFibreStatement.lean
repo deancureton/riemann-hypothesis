@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Semi 
 open GlobalTheory.Cartier
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_integral_subscheme_prime_fibre : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] [IsLocallyNoetherian X] (p : X ⟶ Sp k) (D : ℕ), IsArithVar p D → ∀ (l : ℕ) [Fact l.Prime] (z : X), 0 < Scheme.ord ((l : X.functionField)) z → ∃ (Z : Scheme.{0}) (i : Z ⟶ X) (_ : IsClosedImmersion i) (_ : IsIntegral Z) (_ : Algebra (ZMod l) Γ(Z, ⊤)), i (genericPoint Z) = z ∧ topologicalKrullDim Z = D := by
-  first | exact @GlobalTheory.VertDivisor.exists_vertical_prime_divisor | exact GlobalTheory.VertDivisor.exists_vertical_prime_divisor | (intros; apply GlobalTheory.VertDivisor.exists_vertical_prime_divisor <;> assumption)
+  exact @GlobalTheory.VertDivisor.exists_vertical_prime_divisor

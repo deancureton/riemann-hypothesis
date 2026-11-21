@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.smooth_module_finite_rank : ∀ (F E : Type) [Fiel
       (∀ i β, IsRealLine σ J β → ∀ ψ ∈ N i, lineDer β ψ ∈ N i) → (∀ i, ∀ k ∈ K, ∀ ψ ∈ N i, (fun x => ψ (x * k)) ∈ N i) →
       m ≤ L) →
     ∀ ψ₀ ∈ A, FiniteDimensional ℂ (Submodule.span ℂ {f | ∃ z, IsCentral σ J z ∧ f = dop z ψ₀}) := by
-  first | exact @GlobalTheory.ZFinAssembly.finiteDimensional_span_dop | exact GlobalTheory.ZFinAssembly.finiteDimensional_span_dop | (intros; apply GlobalTheory.ZFinAssembly.finiteDimensional_span_dop <;> assumption)
+  exact @GlobalTheory.ZFinAssembly.finiteDimensional_span_dop

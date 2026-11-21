@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPolDataImaginary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.matched_pol_data_imaginary : GlobalTheory.ThK.KP �
       ∀ Φ, ∀ Φ' ∈ G.M'.So B.ψ B.τ₁, PolMatch B G X R Rf Φ Φ' →
       ∀ K : Subgroup (GAd σ (c • G.W.J.map σ)), (∀ x ∈ K, (toGAd hσ G.W.J hc).symm x ∈ KInf σ G.W B.emb) →
         IsAut σ (c • G.W.J.map σ) K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThKAutKInf.isAut_thetaIntegral_of_le_kInf | exact GlobalTheory.ThKAutKInf.isAut_thetaIntegral_of_le_kInf | (intros; apply GlobalTheory.ThKAutKInf.isAut_thetaIntegral_of_le_kInf <;> assumption)
+  exact @GlobalTheory.ThKAutKInf.isAut_thetaIntegral_of_le_kInf

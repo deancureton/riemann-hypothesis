@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PolynomialRepresentationTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.polynomial_representation_triple : GlobalTheory.Pu
             ∀ P, p (fockF ψ θ true A B f P) = φ (q P)) ∧
           ∀ f, IsFinF ψ θ false A₁ B f → ∃ φ : Pr →ₗ[ℂ] Pi, (∀ τ, ∀ Y ∈ lieAt X τ, φ ∘ₗ ρ τ Y = rl τ Y ∘ₗ φ) ∧
             ∀ P, p' (fockF ψ θ false A₁ B f P) = φ (q' P) := by
-  first | exact @GlobalTheory.RealQuot.realQuot | exact GlobalTheory.RealQuot.realQuot | (intros; apply GlobalTheory.RealQuot.realQuot <;> assumption)
+  exact @GlobalTheory.RealQuot.realQuot

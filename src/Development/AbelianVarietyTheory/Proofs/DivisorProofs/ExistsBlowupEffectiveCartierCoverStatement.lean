@@ -7,4 +7,4 @@ open scoped Classical
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_blowup_effective_cartier_cover : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (V : Cover Y) (p : ℕ), p ≠ 0 → ∀ J : V.X.IdealSheafData, (∀ x ∈ J.support, x ∉ V.X.basicOpen (p : Γ(V.X, ⊤))) → ∃ (V' : Cover Y) (Z : Scheme.{0}) (b : Z ⟶ V.X) (ν : V'.X ⟶ Z), ReciprocityTheory.AnForm.R.FinalTheorems.EffCartier (J.comap b) ∧ (ν ≫ b) ≫ V.p = V'.p ∧ Lies V' V (ν ≫ b) := by
-  first | exact @GlobalTheory.LatChain.BlowDom.exists_cover_over_blowup | exact GlobalTheory.LatChain.BlowDom.exists_cover_over_blowup | (intros; apply GlobalTheory.LatChain.BlowDom.exists_cover_over_blowup <;> assumption)
+  exact @GlobalTheory.LatChain.BlowDom.exists_cover_over_blowup

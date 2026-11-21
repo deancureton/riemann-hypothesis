@@ -4,7 +4,6 @@ import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChainAnalyticVariantOfTop
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.DiscriminantSettingSatisfied
 import Formalism.SizeWindowBrackets.FixedEpsilonConcreteGrowthBound
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ErrorExponentBelowOnesFalse
-import Mathlib
 import Formalism.GL3MeanSquares.GenusMeanAsymptotics.JacobiCharacterSums.PNTBridge
 
 noncomputable section

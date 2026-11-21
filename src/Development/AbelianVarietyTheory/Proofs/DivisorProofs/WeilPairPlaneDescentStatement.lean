@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairPlaneDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weil_pair_plane_descent : GlobalTheory.FunPr.Hypot
     (M₁ : Model σ X₁ W₁), H.IsAdapted σ B X X₁ j₀ j₁ → H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B Mb χX χW omb r₁ s₁ r' s' → M₁.IsGood B.ψ →
     ∀ e₁ e₂, IsEv B M Mb H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e₁ → IsEv B Mb M₁ 1 H'.ι (iso0 n₁ H') e₂ →
     ∃ Φ ∈ schA F (Fin n × Fin d), e₂ (e₁ Φ) ≠ 0 := by
-  first | exact @GlobalTheory.ThK.EvTwoNeB.comp_ne_zero | exact GlobalTheory.ThK.EvTwoNeB.comp_ne_zero | (intros; apply GlobalTheory.ThK.EvTwoNeB.comp_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.EvTwoNeB.comp_ne_zero

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LocallyConstantSupportInvarianceOfDenseRational
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
 import Formalism.LocalToGlobal.Columns.ChainTw
 open NumberField IsDedekindDomain MeasureTheory ValuativeRel Matrix Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Col GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.TwBridge GlobalTheory.SymBridge
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.locallyConstant_support_invariance_of_dense_ration
   ∀ (c : kˣ), (∀ (x : Matrix A B E) (y : A → E), f (x.map ι) (fun a => ι (y a)) ≠ 0 → (fun a => ι (y a)) ∈ box A c⁻¹) →
     (∀ (x : Matrix A B E) (y z : A → E), (fun a => ι (z a)) ∈ box A c → f (x.map ι) (fun a => ι (y a + z a)) = f (x.map ι) (fun a => ι (y a))) →
     ∀ x y, (f x y ≠ 0 → y ∈ box A c⁻¹) ∧ ∀ z ∈ box A c, f x (y + z) = f x y := by
-  first | exact @GlobalTheory.DenseBox.support_invariance_of_dense | exact GlobalTheory.DenseBox.support_invariance_of_dense | (intros; apply GlobalTheory.DenseBox.support_invariance_of_dense <;> assumption)
+  exact @GlobalTheory.DenseBox.support_invariance_of_dense

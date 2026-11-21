@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneDarbouxCoordinatesCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_vacuum_family_eventually_indicator_ev_eq : 
       (∀ v, (Model.mk co vac 0 ∅ : Model σ X W).IsVac B.ψ v (vac v)) ∧
       (∀ᶠ v in cofinite, vac v = Set.indicator {x | ∀ i, x i ∈ v.adicCompletionIntegers F} 1) ∧
       ∀ v, ev hd v (vac v) = M₁.vac v := by
-  first | exact @GlobalTheory.ThK.PlaneVac.exists_vacua | exact GlobalTheory.ThK.PlaneVac.exists_vacua | (intros; apply GlobalTheory.ThK.PlaneVac.exists_vacua <;> assumption)
+  exact @GlobalTheory.ThK.PlaneVac.exists_vacua

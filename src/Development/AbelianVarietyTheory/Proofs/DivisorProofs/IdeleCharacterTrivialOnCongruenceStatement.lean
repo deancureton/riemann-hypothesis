@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleCharacterTrivialOnCongruence
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictsToQuadraticSignPowOfRestrictsToQuadrati
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemNormGroupIffEverywhereNorm
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.idele_character_trivial_on_congruence : ∀ (F : T
       (∃ t ∈ HeckeCharacterZeroLocus.ThmBIn.intAf F, (b : AdeleRing (𝓞 F) F).2 = 1 + (n : FiniteAdeleRing (𝓞 F) F) * t) →
       (∃ t ∈ HeckeCharacterZeroLocus.ThmBIn.intAf F, ((b⁻¹ : (AdeleRing (𝓞 F) F)ˣ) : AdeleRing (𝓞 F) F).2 = 1 + (n : FiniteAdeleRing (𝓞 F) F) * t) →
       φ b = 1 := by
-  first | exact @GlobalTheory.HeckeSignLevel.sign_char_trivial_on_congruence | exact GlobalTheory.HeckeSignLevel.sign_char_trivial_on_congruence | (intros; apply GlobalTheory.HeckeSignLevel.sign_char_trivial_on_congruence <;> assumption)
+  exact @GlobalTheory.HeckeSignLevel.sign_char_trivial_on_congruence

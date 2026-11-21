@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.roots_weights_pairwise_independent : ∀ {k : ℕ}
   (∀ v ∈ S, ∀ v' ∈ S, v ≠ v' → ∀ r : ℝ, rt S v' ≠ r • rt S v) ∧
   (∀ v ∈ Q \ S, ∀ v' ∈ Q \ S, v ≠ v' → ∀ r : ℝ, wt S v' ≠ r • wt S v) ∧
   (∀ v ∈ Q \ S, ∀ v' ∈ S, ∀ r : ℝ, rt S v' ≠ r • wt S v ∧ wt S v ≠ r • rt S v') := by
-  first | exact @GlobalTheory.Chamber.NonProp.nonprop | exact GlobalTheory.Chamber.NonProp.nonprop | (intros; apply GlobalTheory.Chamber.NonProp.nonprop <;> assumption)
+  exact @GlobalTheory.Chamber.NonProp.nonprop

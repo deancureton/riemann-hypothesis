@@ -11,4 +11,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.MBLow.Cl Matrix
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaChar_blockPeriodMatrix_fourierJacobiExpansion : AllCD fun {N} {g'} {r} {g} {bX} d σ => ∀ S : Matrix (Fin r) (Fin r) ℂ, S.IsSymm → ((d.full σ S).map Complex.im).PosDef → ∀ Z, (Summable fun χ => ‖d.fj σ S χ Z‖) ∧ ∑' χ, d.fj σ S χ Z = thetaChar (d.full σ S) (d.aF σ) (d.bF σ) Z := by
-  first | exact @GlobalTheory.MBLow.Cl.fj_expansion | exact GlobalTheory.MBLow.Cl.fj_expansion | (intros; apply GlobalTheory.MBLow.Cl.fj_expansion <;> assumption)
+  exact @GlobalTheory.MBLow.Cl.fj_expansion

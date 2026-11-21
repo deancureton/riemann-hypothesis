@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEigenThetaTriples
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_eigen_theta_triples : GlobalTheory.ThK.KP
     ∀ 𝓓 : Set (UA σ G.V.J), IsFundamentalDomain ↥(ratU σ G.V.J ⊓ Subgroup.closure {g : UA σ G.V.J | mat g *ᵥ incV F H.x = incV F H.x}) 𝓓 G.M.μ →
     ∀ Φ ∈ PolData B G.M, ∀ h,
       ∫ g in G.M.dom, ∑' x, thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (γ x * g, h) Φ))) ∂G.M.μ = ∫ g in 𝓓, thetaSum F (e (G.M.co.rho B.ψ (shiftA H H' 1) (om (g, h) Φ))) ∂G.M.μ := by
-  first | exact @GlobalTheory.ThK.Unfold.integral_tsum_isotropic_eq | exact GlobalTheory.ThK.Unfold.integral_tsum_isotropic_eq | (intros; apply GlobalTheory.ThK.Unfold.integral_tsum_isotropic_eq <;> assumption)
+  exact @GlobalTheory.ThK.Unfold.integral_tsum_isotropic_eq

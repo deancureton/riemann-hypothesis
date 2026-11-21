@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsFiniteIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.matched_maps_finite_identity : GlobalTheory.FunPr.
     ∃ N : Submodule ℂ ((Fin a' × Fin (a + a') → AF F) → ℂ),
       (∀ Φ, Φ ∈ N ↔ Φ ∈ algD Γ.M' Bs.ψ Bs.emb ∧ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs Γ Xc R Rf 0 Φ) ∧
       IsThetaSubG Γ.M' Bs.ψ Bs.emb om' N ∧ N ≠ algD Γ.M' Bs.ψ Bs.emb := by
-  first | exact @GlobalTheory.KerDSub.kerD_isThetaSubG | exact GlobalTheory.KerDSub.kerD_isThetaSubG | (intros; apply GlobalTheory.KerDSub.kerD_isThetaSubG <;> assumption)
+  exact @GlobalTheory.KerDSub.kerD_isThetaSubG

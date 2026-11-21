@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.weil_representation_preserves_schwartz : ∀ {F E 
     (ψ : AddChar (AF F) ℂ), GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsStd ψ →
     ∀ (γ : Matrix (Fin n) (Fin d) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.AE F E)), ∀ Φ ∈ GlobalTheory.WeilM.schA F (Fin n × Fin d),
       M.co.rho ψ γ Φ ∈ GlobalTheory.WeilM.schA F (Fin n × Fin d) := by
-  first | exact @GlobalTheory.HeisSchA.rho_mem_schA | exact GlobalTheory.HeisSchA.rho_mem_schA | (intros; apply GlobalTheory.HeisSchA.rho_mem_schA <;> assumption)
+  exact @GlobalTheory.HeisSchA.rho_mem_schA

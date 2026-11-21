@@ -13,4 +13,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.boundary_setting_restrict_subvariety : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (σ : κ.c.F →+* ℂ) [CompactSpace (CxPts (genStr s.T.Z) σ)] (m : ℕ) (α : LocPot (CxPts (genStr s.T.Z) σ)) (Λ : Fin m → LocPot (CxPts (genStr s.T.Z) σ)) (sg : Fin m → CxPts (genStr s.T.Z) σ → CxPts (genStr s.T.Z) σ → ℂ) (t : ℝ), IsBoundarySetting (manifold s.T.Z σ).finAtlas α Λ sg t → ∀ (Y : Scheme.{0}) (q : Y ⟶ Sp _) (jm : Y ⟶ s.T.Z.X) (hq : jm ≫ s.T.Z.s = q) (n : ℕ), IsMDens (D := n) (potDens (poincarePot α Λ sg t) (boundary sg)ᶜ (up jm hq σ)) := by
-  first | exact @GlobalTheory.ArchLim.isMDens_potDens_poincarePot | exact GlobalTheory.ArchLim.isMDens_potDens_poincarePot | (intros; apply GlobalTheory.ArchLim.isMDens_potDens_poincarePot <;> assumption)
+  exact @GlobalTheory.ArchLim.isMDens_potDens_poincarePot

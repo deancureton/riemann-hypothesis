@@ -1,7 +1,6 @@
 import Formalism.MeanHeightDescent.AverageDegreeBounds.Assembly
 import Formalism.MeanHeightDescent.AverageDegreeBounds.DescentCut
 import Formalism.MeanHeightDescent.AverageDegreeBounds.DescentSlope
-import Mathlib
 import Formalism.MeanHeightDescent.StatementJ
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.TheoremDivIneq
 import Formalism.MeanHeightDescent.AverageDegreeBounds.CovolumeFullAssemblyHolds

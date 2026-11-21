@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmGaloisRepresentationCrystalline
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasString
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsTemperedGLOfIsUnitaryLSeg
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.ClozelCohomologicalModel
@@ -41,4 +40,4 @@ theorem _root_.GlobalTheory.T.cm_galois_representation_crystalline : GlobalTheor
             IsFrob (F := E) B (normV w) g →
             (r (g ^ (-1 : ℤ))).val.charpoly = (S.map fun z : ℂˣ =>
               Polynomial.X - Polynomial.C (ι.symm ((z : ℂ) * ((Ideal.absNorm w.asIdeal : ℕ) : ℂ) ^ f))).prod := by
-  first | exact @GlobalTheory.CsdTwistGal.exists_galRep_csd_twist | exact GlobalTheory.CsdTwistGal.exists_galRep_csd_twist | (intros; apply GlobalTheory.CsdTwistGal.exists_galRep_csd_twist <;> assumption)
+  exact @GlobalTheory.CsdTwistGal.exists_galRep_csd_twist

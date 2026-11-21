@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNoetherianFunctionFieldModelArithBase
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotSymEOfNe
 import Development.AbelianVarietyTheory.Definitions.Divisors.UnifAlong
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SemiAbelianDirectFactorOfIdempotentStatement
@@ -14,4 +13,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isNoetherian_functionFieldModel_arithBase : ∀ {o Ω : Type} [CommRing o] [Field Ω] [Algebra o Ω] [ArithBase o Ω] (M : RatModel o Ω), AlgebraicGeometry.IsNoetherian M.Z := by
-  first | exact @GlobalTheory.ratModel_isNoetherian_of_arithBase | exact GlobalTheory.ratModel_isNoetherian_of_arithBase | (intros; apply GlobalTheory.ratModel_isNoetherian_of_arithBase <;> assumption)
+  exact @GlobalTheory.ratModel_isNoetherian_of_arithBase

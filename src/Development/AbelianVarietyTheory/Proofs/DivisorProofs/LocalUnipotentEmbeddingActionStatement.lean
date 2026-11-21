@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnipotentEmbeddingAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.local_unipotent_embedding_action : ∀ {F E : Type
     (J : Matrix (Fin n) (Fin n) E) (v : HeightOneSpectrum (𝓞 F)) (x : GLoc σ J v) (y : Fin n → AF F ⊗[F] E),
     (matHom (AF F) σ J (emb σ J v x)).1 *ᵥ y =
       y + fun k => GlobalTheory.UnipEmb.locInc F E v ((((matHom (Fv F v) σ J x).1 - 1) *ᵥ fun i => compFin F E v (y i)) k) := by
-  first | exact @GlobalTheory.UnipEmbAct.emb_mulVec | exact GlobalTheory.UnipEmbAct.emb_mulVec | (intros; apply GlobalTheory.UnipEmbAct.emb_mulVec <;> assumption)
+  exact @GlobalTheory.UnipEmbAct.emb_mulVec

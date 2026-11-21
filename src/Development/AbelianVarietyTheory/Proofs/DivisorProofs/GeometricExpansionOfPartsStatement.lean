@@ -10,4 +10,4 @@ open GlobalTheory.TrMult
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.geometric_expansion_of_parts : EllTrace → EllipticPart → RealStable → GeomExpansion := by
-  first | exact @GlobalTheory.TrMult.geomExpansion_of_parts | exact GlobalTheory.TrMult.geomExpansion_of_parts | (intros; apply GlobalTheory.TrMult.geomExpansion_of_parts <;> assumption)
+  exact @GlobalTheory.TrMult.geomExpansion_of_parts

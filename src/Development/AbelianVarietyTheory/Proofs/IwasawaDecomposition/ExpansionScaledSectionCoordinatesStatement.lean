@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExpansionScaledSectionCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SvalUpSec
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsDivOfExpandsAt
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.CstDvdOfCstMulEqZero
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.expansion_scaled_section_coordinates : ∀ (R : Ty
     (∀ α, SecIsMul D.toPre.P.A.hom r (f' α) (f α)) → (∀ e, U.ExpandsAt e k σ f') →
     ∀ (j : Fin 1 → U.LG.L.ι) (x : G.left), x ∈ (LB.LinComb U.LG.L (K := Fin 1) (fun _ => 𝟙 G.left) (fun _ => (k : ℤ))).U j →
     G.hom x = closedPoint R → cst G.hom x r ∣ gs (𝟙 G.left) x _ (σ.f j) := by
-  first | exact @GlobalTheory.ClosedDvd.main | exact GlobalTheory.ClosedDvd.main | (intros; apply GlobalTheory.ClosedDvd.main <;> assumption)
+  exact @GlobalTheory.ClosedDvd.main

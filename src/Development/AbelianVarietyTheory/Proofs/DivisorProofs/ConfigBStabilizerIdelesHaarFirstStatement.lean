@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIdelesHaarFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_ideles_haar_first : GlobalTheo
         Gf (emb m' * (emb m * g)) - (X.α t' : ℂ) * ((absE F E t' : ℝ) : ℂ) ^ (((b : ℕ) : ℂ) / 2) * Gf (emb m * g) -
         (X.β t : ℂ) * ((absE F E t : ℝ) : ℂ) ^ (((a : ℕ) : ℂ) / 2) * Gf (emb m' * g) +
         (X.β t : ℂ) * ((absE F E t : ℝ) : ℂ) ^ (((a : ℕ) : ℂ) / 2) * ((X.α t' : ℂ) * ((absE F E t' : ℝ) : ℂ) ^ (((b : ℕ) : ℂ) / 2)) * Gf g = 0) := by
-  first | exact @GlobalTheory.ConeSmallMidJBInner.jb_inner | exact GlobalTheory.ConeSmallMidJBInner.jb_inner | (intros; apply GlobalTheory.ConeSmallMidJBInner.jb_inner <;> assumption)
+  exact @GlobalTheory.ConeSmallMidJBInner.jb_inner

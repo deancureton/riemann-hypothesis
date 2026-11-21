@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEvaluationThetaEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 set_option maxHeartbeats 1000000 in
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.config_b_evaluation_theta_equivariant : ∀ {F E :
           coneFinInt B G.M' om' B.v₁ (ev B.v₁) (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ k.1 l.1 y) μ₁) ∧
         Integrable (fun k : KAt K (evFin F B.v₁) => ∫ l : idelesAt E (evFin F B.v₁),
           coneFinInt B G.M' om' B.v₁ (ev B.v₁) (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ k.1 l.1 y ∂μ₁) μK₁ := by
-  first | exact @GlobalTheory.ConeSoB.integrands_findim | exact GlobalTheory.ConeSoB.integrands_findim | (intros; apply GlobalTheory.ConeSoB.integrands_findim <;> assumption)
+  exact @GlobalTheory.ConeSoB.integrands_findim

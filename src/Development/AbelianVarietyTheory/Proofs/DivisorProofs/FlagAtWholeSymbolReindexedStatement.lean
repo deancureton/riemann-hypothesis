@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagAtWholeSymbolReindexed
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AmpleOnAbelianBase
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.flag_at_whole_symbol_reindexed : Hypotheses2 → H
     ∃ e : Fin (2 * (D.R.f * O.N)) ≃ Fin (D.R.f * O.N) ⊕ Fin (D.R.f * O.N),
       FlagAt (fun i => adlOf (O.Φ.C c) (O.met.hm c)
         (wholeSym (Function.update (ArIn.ind Sx) p true) (some R) (e i))) p := by
-  first | exact @GlobalTheory.TrivFlag.flagAt_wholeSym | exact GlobalTheory.TrivFlag.flagAt_wholeSym | (intros; apply GlobalTheory.TrivFlag.flagAt_wholeSym <;> assumption)
+  exact @GlobalTheory.TrivFlag.flagAt_wholeSym

@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_height_of_hh : Hypotheses2 → ∀ (ι : Type) [Fintype ι] (N : ℕ), GlobalTheory.FlagZ.HasHh ι N ∧ ∀ hh, GlobalTheory.FlagZ.IsHh ι N hh → FlagHt ι N hh := by
-  first | exact @GlobalTheory.FlagHtObj.flagHt_obj | exact GlobalTheory.FlagHtObj.flagHt_obj | (intros; apply GlobalTheory.FlagHtObj.flagHt_obj <;> assumption)
+  exact @GlobalTheory.FlagHtObj.flagHt_obj

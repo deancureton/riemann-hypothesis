@@ -8,4 +8,4 @@ open CategoryTheory.Limits
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_parahoric_relative_criterion : ∀ {ι : Type} {m k : ι → ℕ} {K : Type} [Field K] (O : Subring K) (A B A' : GlobalTheory.FlagBundle.Mat m K), GlobalTheory.FlagBundle.Par 0 O A → GlobalTheory.FlagBundle.Par k ⊤ (A * B⁻¹) → (GlobalTheory.FlagBundle.Par 0 O A' ∧ GlobalTheory.FlagBundle.Par k ⊤ (A' * B⁻¹) ↔ GlobalTheory.FlagBundle.Par k O (A' * A⁻¹)) := by
-  first | exact @GlobalTheory.FlagBundle.FrameChange.par_iff | exact GlobalTheory.FlagBundle.FrameChange.par_iff | (intros; apply GlobalTheory.FlagBundle.FrameChange.par_iff <;> assumption)
+  exact @GlobalTheory.FlagBundle.FrameChange.par_iff

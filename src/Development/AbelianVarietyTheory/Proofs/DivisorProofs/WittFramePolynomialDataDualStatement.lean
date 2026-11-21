@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.witt_frame_polynomial_data_dual : ∀ (F E : Type)
           IsAut σ (c • G.W.J.map σ) K (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) →
           ∀ S s, GlobalTheory.StdPar.IsCuspExp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) s →
             ∀ k ∈ S, ∑ i with i ≤ k, (s i).re < 0 := by
-  first | exact @GlobalTheory.ThK.ExpSmall.cuspExp_neg | exact GlobalTheory.ThK.ExpSmall.cuspExp_neg | (intros; apply GlobalTheory.ThK.ExpSmall.cuspExp_neg <;> assumption)
+  exact @GlobalTheory.ThK.ExpSmall.cuspExp_neg

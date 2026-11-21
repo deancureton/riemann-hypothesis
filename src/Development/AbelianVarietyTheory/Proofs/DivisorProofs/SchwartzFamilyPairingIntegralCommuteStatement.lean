@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFamilyPairingIntegralCommute
-import Mathlib
 open MeasureTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.schwartz_family_pairing_integral_commute : ∀ {V : Type} [NormedAddCommGroup V] [NormedSpace ℝ V] [FiniteDimensional ℝ V]
@@ -10,4 +9,4 @@ theorem _root_.GlobalTheory.T.schwartz_family_pairing_integral_commute : ∀ {V 
     ∀ φ : W → ℂ, AEStronglyMeasurable φ μ → (∀ n : ℕ, Integrable (fun w => (1 + ‖w‖) ^ n * ‖φ w‖) μ) →
     ∀ h : SchwartzMap V ℂ, (∀ (n : ℕ) (x : V), iteratedFDeriv ℝ n h x = ∫ w, φ w • iteratedFDeriv ℝ n (Φ w) x ∂μ) →
     T h = ∫ w, φ w * T (Φ w) ∂μ := by
-  first | exact @GlobalTheory.clm_integral_exchange | exact GlobalTheory.clm_integral_exchange | (intros; apply GlobalTheory.clm_integral_exchange <;> assumption)
+  exact @GlobalTheory.clm_integral_exchange

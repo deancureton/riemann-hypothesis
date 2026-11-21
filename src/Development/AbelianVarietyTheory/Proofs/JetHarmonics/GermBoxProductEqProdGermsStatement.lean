@@ -12,4 +12,4 @@ open Formalism.MainNotions.ModuliIntegralCharts.H1.BoxTuple Formalism.MainNotion
 open ReciprocityTheory.ChartRestriction.G.TB (colM dAct)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.germ_boxProduct_eq_prod_germs : Laws → Laws2 → Laws4 → TwistBaseChangeStatement → BoxGermSt := by
-  first | exact @GlobalTheory.PowGerm.boxGermSt_holds | exact GlobalTheory.PowGerm.boxGermSt_holds | (intros; apply GlobalTheory.PowGerm.boxGermSt_holds <;> assumption)
+  exact @GlobalTheory.PowGerm.boxGermSt_holds

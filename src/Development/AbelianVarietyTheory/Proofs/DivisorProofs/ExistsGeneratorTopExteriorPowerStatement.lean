@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGeneratorTopExteriorPower
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.exists_generator_top_exterior_power : ∀ (R : Typ
       Matrix.detRowAlternating.compLinearMap (LinearMap.pi e) = u₀ • δ₀ ∧
       GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l (algebraMap R (FractionRing R) u₀) ≤
         n • GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l (algebraMap R (FractionRing R) D) := by
-  first | exact @GlobalTheory.DetSpan.wedge_eq_smul_gen_val_le | exact GlobalTheory.DetSpan.wedge_eq_smul_gen_val_le | (intros; apply GlobalTheory.DetSpan.wedge_eq_smul_gen_val_le <;> assumption)
+  exact @GlobalTheory.DetSpan.wedge_eq_smul_gen_val_le

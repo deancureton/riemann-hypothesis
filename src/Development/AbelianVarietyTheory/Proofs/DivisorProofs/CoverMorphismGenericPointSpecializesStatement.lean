@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverMorphismGenericPointSpecializes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
@@ -12,4 +11,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj GlobalTheory G
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cover_morphism_generic_point_specializes : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (V V' : Cover Y) (π : V'.X ⟶ V.X), Lies V' V π → π (genericPoint V'.X) ⤳ genericPoint V.X := by
-  first | exact @GlobalTheory.CoverGenPt.lies_genericPoint_specializes | exact GlobalTheory.CoverGenPt.lies_genericPoint_specializes | (intros; apply GlobalTheory.CoverGenPt.lies_genericPoint_specializes <;> assumption)
+  exact @GlobalTheory.CoverGenPt.lies_genericPoint_specializes

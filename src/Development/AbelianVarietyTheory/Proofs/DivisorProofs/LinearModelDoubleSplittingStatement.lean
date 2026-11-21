@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearModelDoubleSplitting
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExistsStatement
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.linear_model_double_splitting : GlobalTheory.FunPr
       ∀ φ₁ ∈ SB (Fin n × Fin d → Fv F v), ∀ φ₂ ∈ SB (Fin n × Fin d → Fv F v),
         ιd (boxFun φ₁ φ₂) = fun Y => ι φ₁ (Y.submatrix id Sum.inl) *
           starRingEnd ℂ (ι (fun x => starRingEnd ℂ (φ₂ x)) (Y.submatrix id Sum.inr)) := by
-  first | exact @GlobalTheory.DblLin.dblLin | exact GlobalTheory.DblLin.dblLin | (intros; apply GlobalTheory.DblLin.dblLin <;> assumption)
+  exact @GlobalTheory.DblLin.dblLin

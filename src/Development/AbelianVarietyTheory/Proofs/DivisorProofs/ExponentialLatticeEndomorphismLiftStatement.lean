@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExponentialLatticeEndomorphismLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MapSmulOfIsHausdorff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TateLatticeSpans
 open scoped TensorProduct NumberField
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exponential_lattice_endomorphism_lift : ∀ (E : T
     Module.finrank ℤ_[ℓ] (GlobalTheory.HTLat.Tate ℓ M) = Fintype.card κ * Module.finrank ℚ E →
     ∃ f : (κ → ℤ_[ℓ] ⊗[ℤ] 𝓞 E) ≃ₗ[ℤ_[ℓ]] GlobalTheory.HTLat.Tate ℓ M,
       ∀ (a : 𝓞 E) (r : κ → ℤ_[ℓ] ⊗[ℤ] 𝓞 E), f (((1 : ℤ_[ℓ]) ⊗ₜ[ℤ] a) • r) = α a (f r) := by
-  first | exact @GlobalTheory.TorusTateFree.tate_free_of_lattice | exact GlobalTheory.TorusTateFree.tate_free_of_lattice | (intros; apply GlobalTheory.TorusTateFree.tate_free_of_lattice <;> assumption)
+  exact @GlobalTheory.TorusTateFree.tate_free_of_lattice

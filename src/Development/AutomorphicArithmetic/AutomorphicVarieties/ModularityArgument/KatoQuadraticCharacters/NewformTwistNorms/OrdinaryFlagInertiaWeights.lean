@@ -84,6 +84,6 @@ theorem _root_.GlobalTheory.T.satake_roots_local_correspondence : ∀ (E Ω : Ty
     ∀ (n : ℕ) (σ : SmIrr (GL (Fin n) (w.adicCompletion E))) (B : Multiset ℂˣ), GlobalTheory.LFun.HasSatGL w σ.ρ B →
     ∀ φ : ↥(Weil h), deg φ = 1 → ∀ z : ℂ, (WD.charPol (rc (algNorm σ)) φ).IsRoot z →
       ∃ b ∈ algSat n (normV w) B, z * b = 1 := by
-  first | exact @GlobalTheory.recFrob_root_inv_algSat | exact GlobalTheory.recFrob_root_inv_algSat | (intros; apply GlobalTheory.recFrob_root_inv_algSat <;> assumption)
+  exact @GlobalTheory.recFrob_root_inv_algSat
 
 end

@@ -10,4 +10,4 @@ open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.satake_frobenius_compatibility : GlobalTheory.Mem.LiteralAutomorphy.LitN → SatFrob := by
-  first | exact @GlobalTheory.RealGal.satFrob_of_litN | exact GlobalTheory.RealGal.satFrob_of_litN | (intros; apply GlobalTheory.RealGal.satFrob_of_litN <;> assumption)
+  exact @GlobalTheory.RealGal.satFrob_of_litN

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizationFormOverDvrPrimeToL
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.polarization_form_over_dvr_prime_to_l : GlobalTheo
     (∀ n : ℕ, n.Coprime l → IsUnit (n : R)) → ∀ (X : Obj F 𝔠 (Sp R)) (c₀ : 𝔠.elt), (c₀ : F) ≠ 0 →
     (∀ c : 𝔠.elt, ∃ (n : ℕ) (t : 𝓞 F), n.Coprime l ∧ n • c = t • c₀) →
     ∀ ψ : LinearMap.BilinForm R (HdR X.A), GlobalTheory.AbDual.IsCorrForm (dp0 R) (𝟙 _) X.A X.A (X.P c₀) ψ → Function.Bijective ψ := by
-  first | exact @GlobalTheory.PolPrimeTo.perfect_of_primeTo | exact GlobalTheory.PolPrimeTo.perfect_of_primeTo | (intros; apply GlobalTheory.PolPrimeTo.perfect_of_primeTo <;> assumption)
+  exact @GlobalTheory.PolPrimeTo.perfect_of_primeTo

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardEvaluationGoodModel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.standard_evaluation_good_model : ∀ (F E : Type) 
       (∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = M.vac v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v)) →
     ∀ u : Matrix (Fin n) (Fin d) (AE F E), (∀ t : ℝ, realAd F t • u ∈ I) →
       ∀ f, ei (dOp (coordI M u).1 (coordI M u).2 f) = 0 := by
-  first | exact @GlobalTheory.ThK.EvPolKill.ei_dOp_coordI_eq_zero | exact GlobalTheory.ThK.EvPolKill.ei_dOp_coordI_eq_zero | (intros; apply GlobalTheory.ThK.EvPolKill.ei_dOp_coordI_eq_zero <;> assumption)
+  exact @GlobalTheory.ThK.EvPolKill.ei_dOp_coordI_eq_zero

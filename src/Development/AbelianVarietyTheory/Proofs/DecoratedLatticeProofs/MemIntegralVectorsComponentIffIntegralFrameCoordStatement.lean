@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MemIntegralVectorsComponentIffIntegralFrameCoord
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TwTransAlt
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SplitPointsLieOverDistinctPlacesStatement
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.mem_integralVectors_component_iff_integral_frame_c
     (p : SplitPt D k) (S : HSp D) (n : Type) [Fintype n] [DecidableEq n] (β : Frame p S n) (L : Lat S),
     (∀ z, z ∈ L ↔ z ∈ intVec D S.rank) → ∀ Λ : Submodule 𝒪[k] (n → k), β.IsLat L Λ →
     ∀ x : n → k, x ∈ Λ ↔ ∀ r, (β.b *ᵥ x) r ∈ 𝒪[k] := by
-  first | exact @GlobalTheory.FinPl.Frame.isLat_intVec_iff | exact GlobalTheory.FinPl.Frame.isLat_intVec_iff | (intros; apply GlobalTheory.FinPl.Frame.isLat_intVec_iff <;> assumption)
+  exact @GlobalTheory.FinPl.Frame.isLat_intVec_iff

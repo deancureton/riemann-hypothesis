@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.regular_integral_boundary_potential : GlobalTheory.Published.AnalyticLogResolution → GlobalTheory.Published.AnalyticSetDimension → ∀ (d : ℕ) (X : Type) [TopologicalSpace X] [CompactSpace X] [T2Space X] (A : FinHolAtlas d X), IsProjective A → ∀ (m : ℕ) (α : LocPot X) (Λ : Fin m → LocPot X) (sg : Fin m → X → X → ℂ) (t : ℝ), IsBoundarySetting A α Λ sg t → ∀ (Z : Set X) (n : ℕ), IsIrreducibleAnalytic A Z → (regularLocus A Z n).Nonempty → ¬ Z ⊆ boundary sg → regIntegral A Z n (poincarePot α Λ sg t) (regularLocus A Z n \ boundary sg) (fun y => ENNReal.ofReal (1 + ∑ i, Real.log (rFun (Λ i) (sg i) y))) < ⊤ := by
-  first | exact @GlobalTheory.LogRInt.logR_integrable | exact GlobalTheory.LogRInt.logR_integrable | (intros; apply GlobalTheory.LogRInt.logR_integrable <;> assumption)
+  exact @GlobalTheory.LogRInt.logR_integrable

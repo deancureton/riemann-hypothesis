@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingEverywhereOfRegularAlteration
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleSectionLiftsMetric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicLineBundleInducedArith
@@ -11,4 +10,4 @@ open Formalism.BasicNotions Formalism.DegreeFormula GlobalTheory GlobalTheory.Ar
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.vanishing_everywhere_of_regular_alteration : GlobalTheory.CovTop.Hypotheses2 → GlobalTheory.Published.RegularAlteration → VanishOn RegFlagged → VanishOn fun _ _ _ _ _ _ => True := by
-  first | exact @GlobalTheory.TwoLat.Gen.vanishOn_of_regFlagged | exact GlobalTheory.TwoLat.Gen.vanishOn_of_regFlagged | (intros; apply GlobalTheory.TwoLat.Gen.vanishOn_of_regFlagged <;> assumption)
+  exact @GlobalTheory.TwoLat.Gen.vanishOn_of_regFlagged

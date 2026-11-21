@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeStabilizerReductionEqLocalReduction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCO
 import Development.AbelianVarietyTheory.Definitions.Divisors.BplusOfEquivariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemGLintOfEntries
@@ -18,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.Local
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.latticeStabilizer_reduction_eq_local_reduction : ∀ {D : D7} {n : ℕ} (β x : GL (Fin n) (Lev.EAf D)) (PP : Pl D.host.E), x ∈ St β → ∀ (i j : Fin n) (a : 𝓞 D.host.E), ((redFn β PP x : GL (Fin n) (kP PP)) : Matrix (Fin n) (Fin n) (kP PP)) i j = Ideal.Quotient.mk PP.asIdeal a ↔ valuation (Kw PP) ((inBasis rfl β PP x).1 i j - algebraMap D.host.E (Kw PP) (a : D.host.E)) < 1 := by
-  first | exact @GlobalTheory.Adopt.latticeStabilizer_reduction_eq_local_reduction | exact GlobalTheory.Adopt.latticeStabilizer_reduction_eq_local_reduction | (intros; apply GlobalTheory.Adopt.latticeStabilizer_reduction_eq_local_reduction <;> assumption)
+  exact @GlobalTheory.Adopt.latticeStabilizer_reduction_eq_local_reduction

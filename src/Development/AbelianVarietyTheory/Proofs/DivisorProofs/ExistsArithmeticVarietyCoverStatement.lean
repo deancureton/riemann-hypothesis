@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsArithmeticVarietyCover
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsCompModel
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_arithmetic_variety_cover : Hypotheses2 → 
       gdeg H e = (Module.finrank ℤ (𝓞 F) : ℝ) * d * (n : ℝ) ^ e * A'.deg ∧
       (A'.SemiPos ↔ H.SemiPos e) ∧ (A'.NefFib ↔ NefFib H) ∧
       ∀ (y : Y.X) (x : X'), IsAlgPt x → π x = M.j y → IsPtHt H x (n * A'.ht y) := by
-  first | exact @GlobalTheory.ReadModel.readModel | exact GlobalTheory.ReadModel.readModel | (intros; apply GlobalTheory.ReadModel.readModel <;> assumption)
+  exact @GlobalTheory.ReadModel.readModel

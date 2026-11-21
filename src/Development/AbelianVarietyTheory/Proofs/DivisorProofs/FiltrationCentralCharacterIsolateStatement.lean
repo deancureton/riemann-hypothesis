@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FiltrationCentralCharacterIsolate
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsSubquotientDetRepParInd
 open GlobalTheory.PRep GlobalTheory.SmGL
 set_option maxHeartbeats 1000000 in
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.filtration_central_character_isolate : ∀ {G V X 
       ∀ w ∈ (S t.succ).toSubmodule, Polynomial.aeval (ρ z) q w ∈ (S t.castSucc).toSubmodule) →
     ∃ p : ρ.IntertwiningMap σ, (∀ y, ∃ v, ρ z v = a • v ∧ p v = y) ∧
       ∀ v, ρ z v = a • v → p v = 0 → v = 0 := by
-  first | exact @GlobalTheory.exists_intertwining_bijOn_eigen_of_central_step | exact GlobalTheory.exists_intertwining_bijOn_eigen_of_central_step | (intros; apply GlobalTheory.exists_intertwining_bijOn_eigen_of_central_step <;> assumption)
+  exact @GlobalTheory.exists_intertwining_bijOn_eigen_of_central_step

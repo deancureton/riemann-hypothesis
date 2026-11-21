@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitMinorApproximation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_minor_norm_det_bounds_and_det_sub_le : ∀ 
     ∃ K : Fin m → Fin g, ‖d‖ ^ m ≤ ‖(Matrix.of fun k j => A (K k) j).det‖ ∧
       ‖(Matrix.of fun k j => A (K k) j).det‖ ≤ 1 ∧
       ‖(Matrix.of fun k j => Cc (K k) j).det - (Matrix.of fun k j => A (K k) j).det‖ ≤ (p : ℝ)⁻¹ ^ n := by
-  first | exact @GlobalTheory.MinorBound.exists_minor_ge | exact GlobalTheory.MinorBound.exists_minor_ge | (intros; apply GlobalTheory.MinorBound.exists_minor_ge <;> assumption)
+  exact @GlobalTheory.MinorBound.exists_minor_ge

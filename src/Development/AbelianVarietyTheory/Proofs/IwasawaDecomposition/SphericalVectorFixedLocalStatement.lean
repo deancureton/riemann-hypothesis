@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SphericalVectorFixedLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InfOfNodupAlg
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SplitPlaceLocalComponentExistsUniqueClassStatement
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formalism.ConjugateSelfDual ReciprocityTheory.Gal ReciprocityTheory.Aut Formalism.AUTREP Formalism.L2 Formalism.L2.Host Formalism.L2.NT Formalism.IndefR.NX GlobalTheory.HeightCounting NumberField IsDedekindDomain Polynomial
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.spherical_vector_fixed_local : ∀ (hL : GlobalThe
         Polynomial.C ((-1 : ℂ) ^ k * ((normV w : ℕ) : ℂ) ^ (k * (k - 1) / 2) * c k) * X ^ (D.R.nV - k) =
       (Multiset.map (fun α => X - Polynomial.C α)
         ((GlobalTheory.CuspRep.ParLaws.locRec hL (D.nd.plOm.2 w) x).lpTw ((1 - (D.R.nV : ℝ)) / 2)).frobEig).prod := by
-  first | exact @GlobalTheory.HeckeFrob.locPol_eq | exact GlobalTheory.HeckeFrob.locPol_eq | (intros; apply GlobalTheory.HeckeFrob.locPol_eq <;> assumption)
+  exact @GlobalTheory.HeckeFrob.locPol_eq

@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.homomorphism_descends_to_algebraic : ∀ (A₀ B�
     IsAbelianScheme B₀ → SmoothOfRelativeDimension g' B₀.hom →
     IsGrpPullback A A₀ (spMap (algebraMap Qb ℂ)) p → IsGrpPullback B B₀ (spMap (algebraMap Qb ℂ)) q →
     ∀ α : A ⟶ B, IsMonHom α → ∃ α₀ : A₀ ⟶ B₀, IsMonHom α₀ ∧ α.left ≫ q = p ≫ α₀.left := by
-  first | exact @GlobalTheory.HomDescentQb.hom_descends | exact GlobalTheory.HomDescentQb.hom_descends | (intros; apply GlobalTheory.HomDescentQb.hom_descends <;> assumption)
+  exact @GlobalTheory.HomDescentQb.hom_descends

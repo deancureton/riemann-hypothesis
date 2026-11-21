@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticBundleFrameAssignment
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingHomOfGeneric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
@@ -35,4 +34,4 @@ theorem _root_.GlobalTheory.T.arithmetic_bundle_frame_assignment : ∀ (P2 : Hyp
           ∃ r : (((fl₀ a).root i).pull (GlobalTheory.FlagGenFib.jf q π₀)).ι → (GlobalTheory.FlagGenFib.Gf q π₀).functionFieldˣ,
             GlobalTheory.FlagCov.IsFrameSec (fun a => (h a).isVB) jB πB u π₀ fl₀ (GlobalTheory.FlagGenFib.jf q π₀) φ₀
               (GlobalTheory.FlagGenFib.jGf q π₀ jB _ hL.1) a i hr r := by
-  first | exact @GlobalTheory.FlagGenPt.exists_fieldMap | exact GlobalTheory.FlagGenPt.exists_fieldMap | (intros; apply GlobalTheory.FlagGenPt.exists_fieldMap <;> assumption)
+  exact @GlobalTheory.FlagGenPt.exists_fieldMap

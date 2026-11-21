@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPullbackGenericFibre
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.flag_pullback_generic_fibre : ∀ (F : Type) [Fiel
     ∃ (X : Scheme.{0}) (_ : IsIntegral X) (ρ : X ⟶ Y) (fl' : ∀ a, Vert.Flag ((Scheme.Modules.pullback ρ).obj (N' a)) (n a)) (j : Gs ⟶ X),
       j ≫ ρ = jY ∧ IsPullback j s (ρ ≫ p) (spMap (algebraMap (𝓞 F) F)) ∧ FlagChain.IsCov p d ρ ∧
       ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme X ∧ ∀ a, Compat ((Scheme.Modules.pullback ρ).map (u a)) ((fl a).pull ρ) (fl' a) := by
-  first | exact @GlobalTheory.FlagExtend.main | exact GlobalTheory.FlagExtend.main | (intros; apply GlobalTheory.FlagExtend.main <;> assumption)
+  exact @GlobalTheory.FlagExtend.main

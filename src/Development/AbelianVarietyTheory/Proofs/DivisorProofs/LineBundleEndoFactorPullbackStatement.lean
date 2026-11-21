@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleEndoFactorPullback
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.line_bundle_endo_factor_pullback : ∀ (g : ℕ) (
     M'.IsLB → u'.IsAH Hm' χ' → IsMonHom α → LBIso (abelian₂ A M') ((abelian₂ A M).pull (lift (fst A A) (snd A A ≫ α)).left) →
     (∀ w, (∀ l ∈ u.Λ, ∃ n : ℤ, (w ⬝ᵥ Hm.mulVec (star l)).im = n) → u.ex w ≫ f = 1) →
     ∀ (T : Over (Sp ℂ)) (x : T ⟶ A), HasGen ((abelian₂ A M).pull (lift (fst A T) (snd A T ≫ x)).left) → x ≫ f = 1 := by
-  first | exact @GlobalTheory.TorusRM.comp_eq_one_of_lam_triv_of_pull_pos | exact GlobalTheory.TorusRM.comp_eq_one_of_lam_triv_of_pull_pos | (intros; apply GlobalTheory.TorusRM.comp_eq_one_of_lam_triv_of_pull_pos <;> assumption)
+  exact @GlobalTheory.TorusRM.comp_eq_one_of_lam_triv_of_pull_pos

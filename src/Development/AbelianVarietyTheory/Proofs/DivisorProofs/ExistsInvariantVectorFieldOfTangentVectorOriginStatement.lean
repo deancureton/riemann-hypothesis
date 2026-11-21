@@ -14,4 +14,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.LogKSChart GlobalTheo
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_invariantVectorField_of_tangentVector_origin : ∀ (R : Type) [CommRing R] (G : Over (Sp R)) [GrpObj G] [IsCommMonObj G] (v : TanM (𝟙 (Sp R)) G), ∃ dd : Fld G.left, IsInv G v dd := by
-  first | exact @GlobalTheory.InvFieldBase.exists_isInv | exact GlobalTheory.InvFieldBase.exists_isInv | (intros; apply GlobalTheory.InvFieldBase.exists_isInv <;> assumption)
+  exact @GlobalTheory.InvFieldBase.exists_isInv

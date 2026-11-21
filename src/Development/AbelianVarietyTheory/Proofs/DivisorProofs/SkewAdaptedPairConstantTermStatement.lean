@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_constant_term : GlobalTheory.Fun
         (∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), T (M.co.rho B.ψ u Φ) = T Φ) →
         (∀ y, (LinearMap.proj y : Fn F n d₁ →ₗ[ℂ] ℂ).comp T ∈ (adeleClass F).adm (Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), T Φ = c • e Φ := by
-  first | exact @GlobalTheory.UnipUniq.main | exact GlobalTheory.UnipUniq.main | (intros; apply GlobalTheory.UnipUniq.main <;> assumption)
+  exact @GlobalTheory.UnipUniq.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviLinesSmoothFunctionSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.levi_lines_smooth_function_span : ∀ (F E : Type)
     ∀ (ι : Type) [Fintype ι] (Y : ι → Matrix (Fin n) (Fin n) ℂ) (δ : ι → ℝ → GAd σ J) (c : ι → ℝ) (γ : ℝ → GAd σ J),
       (∀ j, GlobalTheory.LeviHC.IsLineOf σ J τ (Y j) (δ j)) → GlobalTheory.LeviHC.IsLineOf σ J τ (∑ j, c j • Y j) γ →
       GlobalTheory.SiegelSet.lineDer γ f = ∑ j, (c j : ℂ) • GlobalTheory.SiegelSet.lineDer (δ j) f := by
-  first | exact @GlobalTheory.LeviHC.LineLie.lineDer_sum_smul | exact GlobalTheory.LeviHC.LineLie.lineDer_sum_smul | (intros; apply GlobalTheory.LeviHC.LineLie.lineDer_sum_smul <;> assumption)
+  exact @GlobalTheory.LeviHC.LineLie.lineDer_sum_smul

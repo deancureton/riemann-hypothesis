@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.coefficient_duty_in_place : ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c => GlobalTheory.CoefDuty.OPin c.a := by
-  first | exact @GlobalTheory.HeightCounting.Up.opin_atMem | exact GlobalTheory.HeightCounting.Up.opin_atMem | (intros; apply GlobalTheory.HeightCounting.Up.opin_atMem <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.opin_atMem

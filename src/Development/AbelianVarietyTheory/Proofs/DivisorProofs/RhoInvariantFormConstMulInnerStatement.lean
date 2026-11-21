@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RhoInvariantFormConstMulInner
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingTrRep
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.rho_invariant_form_const_mul_inner : (∀ (n : ℕ
         @Measure.IsAddHaarMeasure _ _ _ (borel _) μ → ∀ f f' : SInf F κ,
           @integral _ ℂ _ _ (borel _) μ (fun x => T f x * starRingEnd ℂ (T f' x)) =
             (c : ℂ) * @integral _ ℂ _ _ (borel _) μ (fun x => f x * starRingEnd ℂ (f' x)) := by
-  first | exact @GlobalTheory.ArchUniq.FormTransport.const_of_euclidean | exact GlobalTheory.ArchUniq.FormTransport.const_of_euclidean | (intros; apply GlobalTheory.ArchUniq.FormTransport.const_of_euclidean <;> assumption)
+  exact @GlobalTheory.ArchUniq.FormTransport.const_of_euclidean

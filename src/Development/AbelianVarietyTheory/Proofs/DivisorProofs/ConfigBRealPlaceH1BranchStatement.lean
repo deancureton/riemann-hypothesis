@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBRealPlaceH1Branch
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_real_place_h1_branch : GlobalTheory.ThK.K
         ∀ φ : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.β ((a : ℝ) / 2) φ →
           ∃ T : R₁.Pi →ₗ[ℂ] R₁.Pi, KEqOn B G₁.M om₁ R₁.p (lowPartInf B G₁.M R₁.p) T ∧
             ∀ x ∈ lowPartInf B G.M R.p, φ x = T (π x) := by
-  first | exact @GlobalTheory.IndLine.config_b_real_place_branch | exact GlobalTheory.IndLine.config_b_real_place_branch | (intros; apply GlobalTheory.IndLine.config_b_real_place_branch <;> assumption)
+  exact @GlobalTheory.IndLine.config_b_real_place_branch

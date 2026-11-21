@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TrueGeometryFamilyFinal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ColNone
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FamilyRowsColumnsValidStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.RankOneGramRelationStatement
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.true_geometry_family_final : GlobalTheory.Publishe
     (∀ j α, ∃ n : ℕ, 0 < n ∧ s j α ^ n = 1) → F.Pins w₀ →
     (∀ p, p ∈ w₀.Q ↔ ∃ PP ∈ (pk W).Q t, p = PP.under (𝓞 (I.rec7 l Z).host.F)) →
     QLaw a.v (GlobalTheory.QTw.resc w₀ s) ∧ QLast a.v (GlobalTheory.QTw.resc w₀ s) ∧ QFin a.v (GlobalTheory.QTw.resc w₀ s) := by
-  first | exact @GlobalTheory.QColLaws.laws_resc | exact GlobalTheory.QColLaws.laws_resc | (intros; apply GlobalTheory.QColLaws.laws_resc <;> assumption)
+  exact @GlobalTheory.QColLaws.laws_resc

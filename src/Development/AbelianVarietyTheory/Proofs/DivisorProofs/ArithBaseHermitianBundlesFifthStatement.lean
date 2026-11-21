@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithBaseHermitianBundlesFifth
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseAt
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.arith_base_hermitian_bundles_fifth : Hypotheses2 �
       (Real.exp (-(2 * ((adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).n : ℕ) * (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).ci (InfinitePlace.mk σ))) *
           (cxSt D.what₂.LL).pn (O.var c) σ (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).D ((adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).m σ) ((cxSt D.what₂.LL).cx (O.var c) σ (genAt (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).D (under y))) y) ^ 1 =
         ‖ratVal (φ (genAt (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind P) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).D (under y)) ^ 1 * (r a i ch : G.functionField)) z‖ ^ 2 * Real.exp (-((VMetric.grLB (fl₀ a) i ((H a).pull π₀ rfl)).φ _).φ (ch PUnit.unit) y') := by
-  first | exact @GlobalTheory.BcReadCx.frameSec_norm_cx | exact GlobalTheory.BcReadCx.frameSec_norm_cx | (intros; apply GlobalTheory.BcReadCx.frameSec_norm_cx <;> assumption)
+  exact @GlobalTheory.BcReadCx.frameSec_norm_cx

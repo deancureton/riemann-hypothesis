@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationHaarIntegralUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.doubling_configuration_haar_integral_unfolding : �
       (∀ n ∈ unip σ G.V H, ∀ g, f (n * g) = f g) →
       ∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ‖f (m l g₀ * k.1)‖ₑ * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK < ⊤ →
       ∫ g in 𝓓, f g ∂G.M.μ = C * ∫ k, ∫ l, ∫ g₀ in G₁.M.dom, f (m l g₀ * k.1) * (((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ)) : ℝ) : ℂ) ∂G₁.M.μ ∂μ ∂μK := by
-  first | exact @GlobalTheory.IwasawaUnfold.iwasawa_unfold | exact GlobalTheory.IwasawaUnfold.iwasawa_unfold | (intros; apply GlobalTheory.IwasawaUnfold.iwasawa_unfold <;> assumption)
+  exact @GlobalTheory.IwasawaUnfold.iwasawa_unfold

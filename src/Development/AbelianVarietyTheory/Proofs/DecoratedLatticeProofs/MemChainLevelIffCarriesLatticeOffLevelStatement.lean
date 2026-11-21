@@ -10,4 +10,4 @@ open ValuativeRel
 open GlobalTheory.Core.Mi.LatMatch
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mem_chainLevel_iff_carriesLattice_offLevel : ∀ (D : D7) (c : GlobalTheory.ChainOnto.Com D) (j : ℕ) (s : GlobalTheory.ChainOnto.PiLocalization₂ D), s.Is c j → ∀ v : GlobalTheory.FinPl.Pl D, v ∉ c.S → ∀ κ ∈ grpAt s.V (· = v), κ ∈ levS s.V s.β s.L ↔ Moves s.V κ s.Λ s.Λ (· = v) := by
-  first | exact @GlobalTheory.Core.Mi.LevChain.mem_levS_iff_moves | exact GlobalTheory.Core.Mi.LevChain.mem_levS_iff_moves | (intros; apply GlobalTheory.Core.Mi.LevChain.mem_levS_iff_moves <;> assumption)
+  exact @GlobalTheory.Core.Mi.LevChain.mem_levS_iff_moves

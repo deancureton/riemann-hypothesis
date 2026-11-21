@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SectionValueEqAtFirstOrderOfTangents
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.TanRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPolAVSectionInverseImage
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.AbsoluteSiegel
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.section_value_eq_at_first_order_of_tangents : ∀ 
       valR yw ((LPow P.A P.L (k : ℤ) (Over.mk (spMap (algebraMap K C)))).U fun _ => i₀) (t.f fun _ => i₀) =
         TrivSqZeroExt.inl (valR (spMap (algebraMap K C)) ((P.L.pull (eSec P.A)).U fun _ => i₀) (ρ.s fun _ => i₀).val ^ k) *
           (TrivSqZeroExt.inl a' + TrivSqZeroExt.inr b') → a = a' := by
-  first | exact @GlobalTheory.TangentFirstOrder.fst_eq_of_tangent | exact GlobalTheory.TangentFirstOrder.fst_eq_of_tangent | (intros; apply GlobalTheory.TangentFirstOrder.fst_eq_of_tangent <;> assumption)
+  exact @GlobalTheory.TangentFirstOrder.fst_eq_of_tangent

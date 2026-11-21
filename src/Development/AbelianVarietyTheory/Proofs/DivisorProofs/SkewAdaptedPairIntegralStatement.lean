@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_integral : ∀ (F E : Type) [Fie
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∃ Φ ∈ schA F (Fin n × Fin d), e Φ ≠ 0 := by
-  first | exact @GlobalTheory.UnipEv.exists_mem_schA_evZero_ne_zero | exact GlobalTheory.UnipEv.exists_mem_schA_evZero_ne_zero | (intros; apply GlobalTheory.UnipEv.exists_mem_schA_evZero_ne_zero <;> assumption)
+  exact @GlobalTheory.UnipEv.exists_mem_schA_evZero_ne_zero

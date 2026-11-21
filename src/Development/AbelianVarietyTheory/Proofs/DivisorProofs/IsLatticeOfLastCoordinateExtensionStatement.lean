@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLatticeOfLastCoordinateExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BrPairFApply
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.InfClassAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueIsFunForm
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.isLattice_of_lastCoordinate_extension : ∀ {E : T
     (M : Submodule (𝓞 E) (Fin n → E)) (L : Submodule (𝓞 E) (Fin N → E)), Submodule.IsLattice E M →
     (∀ v, v ∈ L ↔ (fun k => v (Formalism.L2.Col.Br.iC hN k)) ∈ M ∧ ∃ c : 𝓞 E, (c : E) = v (Formalism.L2.Col.Br.iL hN)) →
     Submodule.IsLattice E L := by
-  first | exact @GlobalTheory.latLast_isLattice | exact GlobalTheory.latLast_isLattice | (intros; apply GlobalTheory.latLast_isLattice <;> assumption)
+  exact @GlobalTheory.latLast_isLattice

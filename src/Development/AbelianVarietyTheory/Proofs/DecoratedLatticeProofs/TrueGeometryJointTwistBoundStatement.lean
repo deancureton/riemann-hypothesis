@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TrueGeometryJointTwistBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ColNone
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.TrueGeometryRowColumnEntryStatement
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.BottomSphericalCardWeightIndexStatement
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.true_geometry_joint_twist_bound : ∀ {B : GlobalT
     (kom : ∀ (_ : W.P.T) j, Om ((I.rec7 l Z).sp.X j) ((I.rec7 l Z).sp.X (j + 1))) (dd : ∀ t j, (J t).Ch j → (J t).Ch (j + 1) → WO ((I.rec7 l Z).sp.X j) ((I.rec7 l Z).sp.X (j + 1)) →₀ ℂ) (S : ∀ t j, GlobalTheory.AdForm.ColT I l u (W.P.I.tup t) j → GlobalTheory.AdForm.ColT I l u (W.P.I.tup t) j) (s : ∀ t j, (J t).Ch j → ℂ) (cV cK : W.P.T → ℕ → ℂ) (cP : W.P.T → ℂ), (∀ t α, s t 0 α = 1) →
     (∀ t, ∃ w, PinChL (pk W) a.g (colOf a J kom dd S s cV cK cP t) a.c₀ (J t).A (J t).ι w) →
     GlobalTheory.MiTop.ChartZero (a.fam row (colOf a J kom dd S s cV cK cP)) := by
-  first | exact @GlobalTheory.Fam.chartZero_colOf | exact GlobalTheory.Fam.chartZero_colOf | (intros; apply GlobalTheory.Fam.chartZero_colOf <;> assumption)
+  exact @GlobalTheory.Fam.chartZero_colOf

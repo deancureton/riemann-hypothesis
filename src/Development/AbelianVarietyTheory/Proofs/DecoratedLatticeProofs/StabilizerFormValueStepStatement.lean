@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.stabilizer_form_value_step : ∀ {B : Base} {X : P
       (f : Fr B.fields.emb B.embLL (B.R.N i) → ℂ),
       f ∈ Formalism.L2.Forms.ValC (Gr B.fields.emb B.embLL (B.R.N i)) (lamT (B.hcW u) i) →
       (I.stp u I.mu0 (i + 1)).tr B.fields.emb B.embLL c'.1 g.1 ((I.chain l u I.mu0).Kmap i c c' f) = (I.chain l u I.mu0).Kmap i c c' f := by
-  first | exact @GlobalTheory.KerStab.Kmap_stab | exact GlobalTheory.KerStab.Kmap_stab | (intros; apply GlobalTheory.KerStab.Kmap_stab <;> assumption)
+  exact @GlobalTheory.KerStab.Kmap_stab

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairAnisotropicThetaReal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.matched_pair_anisotropic_theta_real : GlobalTheory
     ∀ c₀ : E, c₀ ≠ 0 → ∀ φ' : GAd σ (c₀ • G.W.J.map σ) → ℂ,
       (∀ (g : UA σ G.W.J) (g' : GAd σ (c₀ • G.W.J.map σ)), g.1 = g'.1 → φ' g' = G.M.I om Φ g - c * G.M'.I om' Φ' g) →
       ∃ U : Subgroup (GAd σ (c₀ • G.W.J.map σ)), IsOpen (U : Set (GAd σ (c₀ • G.W.J.map σ))) ∧ ∀ k ∈ U, k ∈ finPts σ (c₀ • G.W.J.map σ) → ∀ g, φ' (g * k) = φ' g := by
-  first | exact @GlobalTheory.ThK.DiffLevel.level | exact GlobalTheory.ThK.DiffLevel.level | (intros; apply GlobalTheory.ThK.DiffLevel.level <;> assumption)
+  exact @GlobalTheory.ThK.DiffLevel.level

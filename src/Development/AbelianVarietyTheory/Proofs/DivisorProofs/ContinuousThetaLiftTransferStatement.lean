@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.continuous_theta_lift_transfer : ∀ (F E : Type) 
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M,
       Continuous (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThK.SquareIntegrability.continuous_I_toGAd | exact GlobalTheory.ThK.SquareIntegrability.continuous_I_toGAd | (intros; apply GlobalTheory.ThK.SquareIntegrability.continuous_I_toGAd <;> assumption)
+  exact @GlobalTheory.ThK.SquareIntegrability.continuous_I_toGAd

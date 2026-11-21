@@ -62,5 +62,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.log_degree_bound_hilbertSamuel : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → FlatDeg → Covers fun Fm x _ ι p i Y PP _ => ∀ Z, Real.log (Y.dg (⟨uW p i, cZero (Fm.D x ι) ((i : ℕ) + 1), (Fm.D x ι).R.k - 2, lenT p i PP⟩ : WtPar (dat p i)).u₁ Z) ≤ PP := by
-  first | exact @_root_.GlobalTheory.CovTop.DgLog.log_degree_le_of_covering_range | exact _root_.GlobalTheory.CovTop.DgLog.log_degree_le_of_covering_range | (intros; apply _root_.GlobalTheory.CovTop.DgLog.log_degree_le_of_covering_range <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DgLog.log_degree_le_of_covering_range
 end

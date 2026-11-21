@@ -10,4 +10,4 @@ open GlobalTheory.TwoLat GlobalTheory.OrthFilt GlobalTheory.VdmRec GlobalTheory.
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.det_dual_metric_isometric : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (E : X.Modules) (r : ℕ) (h : VMetric p E r) (H : h.IsCInf), (VMetric.det H.dual).Isometric (VMetric.det H).dual := by
-  first | exact @GlobalTheory.VMetric.isometric_det_dual | exact GlobalTheory.VMetric.isometric_det_dual | (intros; apply GlobalTheory.VMetric.isometric_det_dual <;> assumption)
+  exact @GlobalTheory.VMetric.isometric_det_dual

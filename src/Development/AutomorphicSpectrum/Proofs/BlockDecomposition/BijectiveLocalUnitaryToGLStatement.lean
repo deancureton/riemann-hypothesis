@@ -12,4 +12,4 @@ open GlobalTheory.CompanionTheory.Jp
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bijective_local_unitary_to_GL : ∀ (D : D7) (n : ℕ) (v : Pl D) (τ : D.host.E →ₐ[D.host.F] Fv D.host.F v), Function.Bijective (thU D n v τ) := by
-  first | exact @GlobalTheory.CompanionTheory.Jp.thU_bijective | exact GlobalTheory.CompanionTheory.Jp.thU_bijective | (intros; apply GlobalTheory.CompanionTheory.Jp.thU_bijective <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Jp.thU_bijective

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OpenSigmaStableUnitNeighborhood
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictsToQuadraticSignPowOfRestrictsToQuadrati
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MemNormGroupIffEverywhereNorm
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.open_sigma_stable_unit_neighborhood : ∀ (F E : T
       (∀ x ∈ U, Units.map (Algebra.TensorProduct.map (AlgHom.id (AdeleRing (𝓞 F) F) (AdeleRing (𝓞 F) F)) σ).toRingHom.toMonoidHom x ∈ U) ∧
       ∀ x ∈ U, ∃ s ∈ HeckeCharacterZeroLocus.ThmBIn.intAE F E,
         HeckeCharacterZeroLocus.ThmBIn.finPart F E (x : AdeleRing (𝓞 F) F ⊗[F] E) = 1 + (m : FiniteAdeleRing (𝓞 F) F ⊗[F] E) * s := by
-  first | exact @GlobalTheory.IdeleCongr.exists_open_congruence_subgroup | exact GlobalTheory.IdeleCongr.exists_open_congruence_subgroup | (intros; apply GlobalTheory.IdeleCongr.exists_open_congruence_subgroup <;> assumption)
+  exact @GlobalTheory.IdeleCongr.exists_open_congruence_subgroup

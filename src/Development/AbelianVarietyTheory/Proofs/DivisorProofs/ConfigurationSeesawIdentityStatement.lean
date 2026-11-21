@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationSeesawIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.configuration_seesaw_identity : GlobalTheory.ThK.K
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ φ : R.Pi →ₗ[ℂ] R₁.Pi, IsFrobInf B G.M G₁.M om om₁ R.p R₁.p H' X.α ((a' : ℝ) / 2) φ →
         ∀ x ∈ twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p), φ x ∈ lowPartInf B G₁.M R₁.p := by
-  first | exact @GlobalTheory.IndLine.frobInf_twPart_le_lowPartInf | exact GlobalTheory.IndLine.frobInf_twPart_le_lowPartInf | (intros; apply GlobalTheory.IndLine.frobInf_twPart_le_lowPartInf <;> assumption)
+  exact @GlobalTheory.IndLine.frobInf_twPart_le_lowPartInf

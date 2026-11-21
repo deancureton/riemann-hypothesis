@@ -13,4 +13,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.siegelWeil_anisotropic_global_form_of_doubling : GlobalTheory.Published.WeilRepresentationUnitaryPair → GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.DoublingMethod → ∀ D : D7, GlobalTheory.BottomRallis.SiegelWeilFockAniso D → GlobalTheory.BottomRallis.GlobalFormAniso D := by
-  first | exact @GlobalTheory.BottomRallis.globalFormAniso_of_siegelWeilFockAniso | exact GlobalTheory.BottomRallis.globalFormAniso_of_siegelWeilFockAniso | (intros; apply GlobalTheory.BottomRallis.globalFormAniso_of_siegelWeilFockAniso <;> assumption)
+  exact @GlobalTheory.BottomRallis.globalFormAniso_of_siegelWeilFockAniso

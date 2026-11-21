@@ -9,4 +9,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.swap_flag_degree_identity : Hypotheses2 → GlobalTheory.Published.ArDegree → ∀ G, Homog G → SwapFl G → ∀ (D : D7) (Y : DV.ShimX D.what₂.Tau) (hh : Fn Y), GlobalTheory.FlagZ.IsHh D.what₂.Tau Y.N hh → SwapEq Y G hh (degFl D.what₂.Tau Y.N) := by
-  first | exact @GlobalTheory.CovTest.SwapZ.swapEq_flagZ | exact GlobalTheory.CovTest.SwapZ.swapEq_flagZ | (intros; apply GlobalTheory.CovTest.SwapZ.swapEq_flagZ <;> assumption)
+  exact @GlobalTheory.CovTest.SwapZ.swapEq_flagZ

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerHaarTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_haar_triple : GlobalTheory.Fun
       ∀ g ∈ UAt σ G.V (evFin F v),
         ∫ k, ∫ t, f ((m t.1)⁻¹ * k.1 * g) * ((absE F E t.1 : ℝ) : ℂ) ^ (b + 1) ∂μ ∂μK =
           ∫ k, ∫ t, f ((m t.1)⁻¹ * k.1) * ((absE F E t.1 : ℝ) : ℂ) ^ (b + 1) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.quotInv | exact GlobalTheory.ThK.LemF.QuotInv.quotInv | (intros; apply GlobalTheory.ThK.LemF.QuotInv.quotInv <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.quotInv

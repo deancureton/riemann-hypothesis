@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalDarbouxTransfersHaarFundamentalDomain
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemRatPairIff
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.rationalDarboux_transfers_haar_fundamentalDomain :
             @IsAddFundamentalDomain (GlobalTheory.WeilUnitaryTransport.ratPair D.host.F κ) _ _ _ (borel _) 𝓕' ν' ∧
             ∀ f : (κ → AF D.host.F) × (κ → AF D.host.F) → ℂ,
               ∫⁻ w in 𝓕, ‖f (co.e w)‖ₑ ^ 2 ∂ν = ∫⁻ w in 𝓕', ‖f w‖ₑ ^ 2 ∂ν' := by
-  first | exact @GlobalTheory.RatDarbouxTransfer.haar_fundDomain_transfer | exact GlobalTheory.RatDarbouxTransfer.haar_fundDomain_transfer | (intros; apply GlobalTheory.RatDarbouxTransfer.haar_fundDomain_transfer <;> assumption)
+  exact @GlobalTheory.RatDarbouxTransfer.haar_fundDomain_transfer

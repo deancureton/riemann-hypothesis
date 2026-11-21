@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsModelPairOfTriples
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_model_pair_of_triples : GlobalTheory.ThK.KP
     (om' : Rep σ G.V' G.W) (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W), IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∃ (M₂ : Model σ G.V G₁.W) (om₂ : Rep σ G.V G₁.W),
       IsPair B M₂ X.β (X.β / X.α) om₂ (b + 2 - G.p) G.p (b + a' - (G₁.p + G₁.q)) (G₁.p + G₁.q) := by
-  first | exact @GlobalTheory.ThK.MidPair.exists_midPair | exact GlobalTheory.ThK.MidPair.exists_midPair | (intros; apply GlobalTheory.ThK.MidPair.exists_midPair <;> assumption)
+  exact @GlobalTheory.ThK.MidPair.exists_midPair

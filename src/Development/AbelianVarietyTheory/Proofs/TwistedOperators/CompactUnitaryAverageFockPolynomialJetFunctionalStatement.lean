@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompactUnitaryAverageFockPolynomialJetFunctional
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EvalAtOneExtremalMul
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TotalDegreeSubstFLe
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.MvZOneEqMapUnivSubst
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.compactUnitaryAverage_fockPolynomial_jetFunctional
             (fun τ => (((r k τ)⁻¹ : GL (Fin a) ℂ) : Matrix (Fin a) (Fin a) ℂ)ᵀ) Q) *
           Λ (rhoK lam (invTrK (r k⁻¹)) v) ∂ν =
         Λ' (rhoK lam' (invTrK h⁻¹) (Formalism.L2.Ker.jetOp lam lam' (fun m => ℓ (MvPolynomial.monomial m 1)) nn v)) := by
-  first | exact @GlobalTheory.AvgJet.avg_jet | exact GlobalTheory.AvgJet.avg_jet | (intros; apply GlobalTheory.AvgJet.avg_jet <;> assumption)
+  exact @GlobalTheory.AvgJet.avg_jet

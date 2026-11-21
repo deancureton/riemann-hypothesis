@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.gram_lattice_span_eq_top : ∀ {D : D7} {L : SizeD
     {Y0 : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Y0 cX} {Csz : ℝ} (p : PtAt ex Csz) (i : Fin D.R.m),
     RowsT p → GramAt p i →
     Submodule.span D.what₂.LL ((p.R.toRealDat.FW i).MK : Set (Fin (p.R.nW i) → D.what₂.LL)) = ⊤ := by
-  first | exact @GlobalTheory.CovTop.SpanMK.span_MK_eq_top | exact GlobalTheory.CovTop.SpanMK.span_MK_eq_top | (intros; apply GlobalTheory.CovTop.SpanMK.span_MK_eq_top <;> assumption)
+  exact @GlobalTheory.CovTop.SpanMK.span_MK_eq_top

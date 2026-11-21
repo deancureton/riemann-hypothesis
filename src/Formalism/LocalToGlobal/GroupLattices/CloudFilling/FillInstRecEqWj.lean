@@ -105,7 +105,6 @@ def latInstG (Lv : ∀ u w h, Levels (fillsG D sc Ce Lc X hd L P u w h)) (Ch : �
   Ch := Ch
   Vram := Vram
 
-set_option maxHeartbeats 4000000 in
 
 theorem latTiedG (hsc : L.sc = sc) (K : Consts) (Lv : ∀ u w h, Levels (fillsG D sc Ce Lc X hd L P u w h))
     (Ch : ∀ u w h, Chain (Lv u w h))

@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.smooth_function_green_bound_second : GlobalTheory.
     ∀ (Z : Scheme.{0}) (i : Z ⟶ (h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).V.X) [IsClosedImmersion i] [IsIntegral Z] (κ : Type) [Field κ] [Finite κ]
       [Algebra κ Γ(Z, ⊤)], topologicalKrullDim Z = 1 → topSelfIntersection κ ((comb (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (fnB ((T.M c).pull ε π ((2 : ℝ) • (g - (fun _ _ => O.Y.htDetT B c τ : (T.M c).Fun)))) hu hc)
       ((h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).gens (GlobalTheory.FlagAr.setB O.Y B))) (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (1 : ℤ) fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℤ) else 0)).B.pull i) 1 = 0 := by
-  first | exact @GlobalTheory.FlatVertDeg.topSelf_comb_eq_zero | exact GlobalTheory.FlatVertDeg.topSelf_comb_eq_zero | (intros; apply GlobalTheory.FlatVertDeg.topSelf_comb_eq_zero <;> assumption)
+  exact @GlobalTheory.FlatVertDeg.topSelf_comb_eq_zero

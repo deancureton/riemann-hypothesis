@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieFiltrationSpannedCorrespondence
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lie_filtration_spanned_correspondence : GlobalTheo
     Submodule.span R' {x' | ∃ x, m.Corr x x'} = ⊤ ∧
       Fil X'.A ≤ Submodule.span R' {x' | ∃ x ∈ Fil X.A, m.Corr x x'} ∧
       ∀ x x', x ∈ Fil X.A → m.Corr x x' → x' ∈ Fil X'.A := by
-  first | exact @GlobalTheory.DeRham.span_corr_baseChange | exact GlobalTheory.DeRham.span_corr_baseChange | (intros; apply GlobalTheory.DeRham.span_corr_baseChange <;> assumption)
+  exact @GlobalTheory.DeRham.span_corr_baseChange

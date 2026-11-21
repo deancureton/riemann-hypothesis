@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleHermitianLineLimit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_hermitian_line_limit : ∀ (k : Type) 
     ∀ v : CxPts p σ → ℝ, GlobalTheory.CurveDens.IsCosSq ((h.pull π w).met σ) (fl.ι 1) ((Scheme.Modules.pullback π).map (flB.ι 1)) v →
     ∀ K : MvPolynomial (Fin 5) ℝ, Filter.Tendsto (fun t : ℝ => (hY.atlas σ).integral ((hY.atlas σ).fn (fun y => t / (1 - v y + t) ^ 2) *
       ((hY.atlas σ).ddc ((hY.atlas σ).fn (fun y => 1 - v y)) + ((hY.atlas σ).fn (fun y => 1 - v y)) * evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) (X 4 - X 0)) * (evalF (hY.atlas σ) (fun i => c1F hY σ (fam5 π w H flB fl A i)) (K) * (fld (hY.atlas σ) (omF hY σ (h.pull π w) fl) - pullF hB hY σ π w (fld (hB.atlas σ) (omF hB σ h flB)))))) (nhdsWithin 0 (Set.Ioi 0)) (nhds 0) := by
-  first | exact @GlobalTheory.LineMeet.tendsto_integral_conc | exact GlobalTheory.LineMeet.tendsto_integral_conc | (intros; apply GlobalTheory.LineMeet.tendsto_integral_conc <;> assumption)
+  exact @GlobalTheory.LineMeet.tendsto_integral_conc

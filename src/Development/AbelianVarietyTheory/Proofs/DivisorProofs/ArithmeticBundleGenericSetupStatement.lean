@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticBundleGenericSetup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -40,4 +39,4 @@ theorem _root_.GlobalTheory.T.arithmetic_bundle_generic_setup : ∀ (D : D7) (O 
           lam t = ((r a i ch)⁻¹ : G.functionFieldˣ)) ∧
         (∀ t : Γ((fl₀ a).F i.succ, W), ((fl₀ a).π i).app W t = Twist.resM _ (hW.trans inf_le_right) ((ch' PUnit.unit).e 0) →
           lam t = ((r a i ch')⁻¹ : G.functionFieldˣ)) := by
-  first | exact @GlobalTheory.FlagCov.exists_coordFunctional | exact GlobalTheory.FlagCov.exists_coordFunctional | (intros; apply GlobalTheory.FlagCov.exists_coordFunctional <;> assumption)
+  exact @GlobalTheory.FlagCov.exists_coordFunctional

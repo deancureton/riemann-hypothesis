@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HCoContinuousAddEquiv
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsUnitHermOfDet
 import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.CoordForm
@@ -12,4 +11,4 @@ open NumberField IsDedekindDomain MeasureTheory Formalism.MainNotions.GlobalTheo
 open scoped TensorProduct ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_homeomorph_hermR_coordinates : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E), IsCMExt F E σ → ∀ (R : Type) [CommRing R] [Algebra F R] [TopologicalSpace R] [IsTopologicalRing R] [LocallyCompactSpace R] [SecondCountableTopology R] [T2Space R] (d : ℕ) (b : Module.Basis (Fin d) F E) (n : ℕ), ∃ e : HermR R σ n ≃ₜ+ (Idx n d → R), ∀ S, e S = hCo R σ b S := by
-  first | exact @GlobalTheory.CompanionTheory.SiegelND.Coef.TestN.hCo_continuousAddEquiv | exact GlobalTheory.CompanionTheory.SiegelND.Coef.TestN.hCo_continuousAddEquiv | (intros; apply GlobalTheory.CompanionTheory.SiegelND.Coef.TestN.hCo_continuousAddEquiv <;> assumption)
+  exact @GlobalTheory.CompanionTheory.SiegelND.Coef.TestN.hCo_continuousAddEquiv

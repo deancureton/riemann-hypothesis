@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawUnfoldingCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_compatible : GlobalTheory.FunPr.H
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsTriple Bs Γ Xc om om' →
     ∀ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
     ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf D.sp.cm.sig Γ.V Bs.emb, ∀ ΦD ∈ algD Γ.M Bs.ψ Bs.emb, om (k, 1) ΦD ∈ algD Γ.M Bs.ψ Bs.emb := by
-  first | exact @GlobalTheory.SquareAgree.CompactStableD.kInf_stable_algD | exact GlobalTheory.SquareAgree.CompactStableD.kInf_stable_algD | (intros; apply GlobalTheory.SquareAgree.CompactStableD.kInf_stable_algD <;> assumption)
+  exact @GlobalTheory.SquareAgree.CompactStableD.kInf_stable_algD

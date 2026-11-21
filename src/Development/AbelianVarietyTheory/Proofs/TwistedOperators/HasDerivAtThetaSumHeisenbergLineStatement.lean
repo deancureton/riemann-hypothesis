@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasDerivAtThetaSumHeisenbergLine
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.hasDerivAt_thetaSum_heisenbergLine : ∀ {F : Type
       (∀ x, HasDerivAt (fun t : ℝ => d.rho ψ (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.realAd F t • u) Φ x) (Φ' x) 0) →
       ∀ u' : W, HasDerivAt (fun t : ℝ => GlobalTheory.WeilM.thetaSum F (d.rho ψ u' (d.rho ψ (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.realAd F t • u) Φ)))
         (GlobalTheory.WeilM.thetaSum F (d.rho ψ u' Φ')) 0 := by
-  first | exact @GlobalTheory.HeisLineTheta.hasDerivAt_thetaSum_line | exact GlobalTheory.HeisLineTheta.hasDerivAt_thetaSum_line | (intros; apply GlobalTheory.HeisLineTheta.hasDerivAt_thetaSum_line <;> assumption)
+  exact @GlobalTheory.HeisLineTheta.hasDerivAt_thetaSum_line

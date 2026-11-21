@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviNormalizesUnipotentRadical
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.levi_normalizes_unipotent_radical : ∀ (F E : Typ
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ (l : (AE F E)ˣ) (g₀ : UA σ G₁.V.J) (h : UA σ G.V.J), IsLevi H l g₀ h →
     ∀ n ∈ unip σ G.V H, h * n * h⁻¹ ∈ unip σ G.V H ∧ h⁻¹ * n * h ∈ unip σ G.V H := by
-  first | exact @GlobalTheory.LeviNormUnip.levi_conj_mem_unip | exact GlobalTheory.LeviNormUnip.levi_conj_mem_unip | (intros; apply GlobalTheory.LeviNormUnip.levi_conj_mem_unip <;> assumption)
+  exact @GlobalTheory.LeviNormUnip.levi_conj_mem_unip

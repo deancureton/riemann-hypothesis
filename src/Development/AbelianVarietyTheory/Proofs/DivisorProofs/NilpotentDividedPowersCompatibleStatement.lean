@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NilpotentDividedPowersCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.nilpotent_divided_powers_compatible : GlobalTheory
     ∀ {q : Z'.A.left ⟶ Z.A.left}, Z'.IsPullBy Z (spMap τ) q → ∀ {p : X₁.A.left ⟶ X₀.A.left}, i' ≫ q = p ≫ i →
     ∀ (M : GrpMor κ (spMap π) X₀.A κ' (spMap π') X₁.A τ (spMap σ) p) (d : Crys κ (spMap π) X₀.A),
     ∃ d', M.Corr d d' := by
-  first | exact @GlobalTheory.LatJet.crys_exists_corr | exact GlobalTheory.LatJet.crys_exists_corr | (intros; apply GlobalTheory.LatJet.crys_exists_corr <;> assumption)
+  exact @GlobalTheory.LatJet.crys_exists_corr

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LatticeStabilizersFixVacuaFixesPureTensorLeft
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DarbouxModelAlgebraicVectorsLeAdelicSchwartzStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.latticeStabilizers_fix_vacua_fixes_pureTensor_left
     ∀ (f : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf F (Fin n × Fin d)) (φ : ∀ w : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F, (Fin n × Fin d → Fv F w) → ℂ),
       (∀ w, φ w ∈ GlobalTheory.WeilM.SB (Fin n × Fin d → Fv F w)) → (∀ w ∉ S, φ w = M.vac w) →
       om (k, 1) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) = GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ := by
-  first | exact @GlobalTheory.SphGlobX.fixes_pure_left | exact GlobalTheory.SphGlobX.fixes_pure_left | (intros; apply GlobalTheory.SphGlobX.fixes_pure_left <;> assumption)
+  exact @GlobalTheory.SphGlobX.fixes_pure_left

@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_restriction_eigen : GlobalTheory
         l (M.co.rho B.ψ (incM F (1 : Matrix (Fin n) (Fin n) E) * z * (incM F H'.ι)ᵀ) Φ) = l Φ ∧
         l' (M.co.rho B.ψ (incM F (1 : Matrix (Fin n) (Fin n) E) * z * (incM F H'.ι)ᵀ) Φ) = l' Φ) →
       (∃ Φ ∈ schA F (Fin n × Fin d), l' Φ ≠ 0) → ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), l Φ = c * l' Φ := by
-  first | exact @GlobalTheory.LagrUniqW.main | exact GlobalTheory.LagrUniqW.main | (intros; apply GlobalTheory.LagrUniqW.main <;> assumption)
+  exact @GlobalTheory.LagrUniqW.main

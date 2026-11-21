@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.WeaklyAdmissibl
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.sen_admissible_representation_finite_inertia : SenFinite := by
-  first | exact @GlobalTheory.PMon.senFinite | exact GlobalTheory.PMon.senFinite | (intros; apply GlobalTheory.PMon.senFinite <;> assumption)
+  exact @GlobalTheory.PMon.senFinite

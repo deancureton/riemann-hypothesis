@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneFourierExpansion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.skew_plane_fourier_expansion : ∀ (F E : Type) [F
       (∀ k, X' k 0 = H.x k) → (∀ k, Y' k 0 = c₀⁻¹ * H.y k) →
       (∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i) → ∀ S' : Finset (Fin r),
       ∀ (g : UA σ W.J) (h₁ : UA σ W₁.J), mat g *ᵥ incV F H.x = incV F H.x → (∀ z : Fin n₁ → AE F E, ∃ a : AE F E, mat g *ᵥ (incM F H.ι *ᵥ z) = a • incV F H.x + incM F H.ι *ᵥ (mat h₁ *ᵥ z)) → GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀ h₁ ∈ GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S' → GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ g ∈ GlobalTheory.StdPar.unip σ (c₀ • W.J.map σ) X' (insert 0 (S'.map (Fin.succEmb r))) := by
-  first | exact @GlobalTheory.ThK.GLTwo.LiftUnip.mem_unip_of_lift | exact GlobalTheory.ThK.GLTwo.LiftUnip.mem_unip_of_lift | (intros; apply GlobalTheory.ThK.GLTwo.LiftUnip.mem_unip_of_lift <;> assumption)
+  exact @GlobalTheory.ThK.GLTwo.LiftUnip.mem_unip_of_lift

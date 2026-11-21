@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularBaseRankTwoMetricFamily
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.regular_base_rank_two_metric_family : ArCalc → �
       IsArFun (fam5 π w H flB fl A) (d + 1) Φ →
       IsGeoFun ![VMetric.grLB fl 0 (H.pull π w), VMetric.grLB fl 1 (H.pull π w), A.pull π w] (d + 1) Ψ →
       ∀ a b : ℤ, Φ (onLine d a b - onBase d a b) = Ψ (G (d + 1) a b) := by
-  first | exact @GlobalTheory.CovTest.SwapLine.core_exists | exact GlobalTheory.CovTest.SwapLine.core_exists | (intros; apply GlobalTheory.CovTest.SwapLine.core_exists <;> assumption)
+  exact @GlobalTheory.CovTest.SwapLine.core_exists

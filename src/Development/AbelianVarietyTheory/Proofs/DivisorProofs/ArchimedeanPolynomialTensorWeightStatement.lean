@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPolynomialTensorWeight
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.archimedean_polynomial_tensor_weight : GlobalTheor
       (∀ k ∈ KInf σ W B.emb, ∀ T ∈ N, ∀ f₁ : SInf F (Fin n × Fin d), Acts (evI F) (om (1, k)) (Φ T) f₁ → f₁ ∈ N.map Φ) →
       ∀ w (Z : Formalism.BasicNotions.TH.Mat R S), Formalism.BasicNotions.TH.IsKC Z → ∀ T ∈ N,
         GlobalTheory.RealLift.atPl (V := fun _ : InfinitePlace F => Formalism.BasicNotions.TH.Pol P Q R S) w (Formalism.BasicNotions.TH.fockAct2 P Q R S Z) T ∈ N := by
-  first | exact @GlobalTheory.FockKStab.kstab | exact GlobalTheory.FockKStab.kstab | (intros; apply GlobalTheory.FockKStab.kstab <;> assumption)
+  exact @GlobalTheory.FockKStab.kstab

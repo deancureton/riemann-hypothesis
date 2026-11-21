@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPairLocalIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_local_integral : ∀ (F E : Type) [F
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE M.co u) Ψ) = co.rho B.ψ u (e Ψ)) →
     ∀ h' : UA σ W.J, ∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d),
       om₂ (1, i (1, h')) (e (boxC Φ₁ Φ₂)) = ((χX (Matrix.GeneralLinearGroup.det h'.1) : Circle) : ℂ) • e (boxC Φ₁ (om (1, h') Φ₂)) := by
-  first | exact @GlobalTheory.DblWeilSecond.om₂_right_boxC | exact GlobalTheory.DblWeilSecond.om₂_right_boxC | (intros; apply GlobalTheory.DblWeilSecond.om₂_right_boxC <;> assumption)
+  exact @GlobalTheory.DblWeilSecond.om₂_right_boxC

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawDoublingHermitianForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.seesaw_doubling_hermitian_form : GlobalTheory.FunP
       (∀ i, Ψ i ∈ algD Γ.M Bs.ψ Bs.emb ∧
         ∀ x, HasDerivAt (fun t : ℝ => om (1, kapX X e hJ (oneP θ X (l.get i).1 (l.get i).2 t)) ΦD x) (Ψ i x) 0) ∧
       Φ₁D = ∑ i, Ψ i := by
-  first | exact @GlobalTheory.LineSum.derSum | exact GlobalTheory.LineSum.derSum | (intros; apply GlobalTheory.LineSum.derSum <;> assumption)
+  exact @GlobalTheory.LineSum.derSum

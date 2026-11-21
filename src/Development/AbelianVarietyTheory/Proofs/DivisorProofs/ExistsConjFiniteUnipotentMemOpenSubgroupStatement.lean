@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConjFiniteUnipotentMemOpenSubgroup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemBand
 import GroundTheory.AutomorphicForms.CuspidalDiscreteness.ExistsNormRconvLeSiegel
 import GroundTheory.AutomorphicForms.ReductionSiegel
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_conj_finiteUnipotent_mem_openSubgroup : ∀
       (∀ p, ∃ c ∈ GroundTheory.Global.integralFiniteAdeles (𝓞 E) E, (z p).2 = (M : Af E) * c) →
       ∃ l ∈ L, (b * GroundTheory.Automorphic.Reduction.diagUnits a (fun i => GroundTheory.Automorphic.Reduction.posIdele (K := E) (ρ i) (hρ i)) * k)⁻¹ * unip z *
         (b * GroundTheory.Automorphic.Reduction.diagUnits a (fun i => GroundTheory.Automorphic.Reduction.posIdele (K := E) (ρ i) (hρ i)) * k) = finGL E a l := by
-  first | exact @GlobalTheory.FinConj.exists_conj_unip_mem | exact GlobalTheory.FinConj.exists_conj_unip_mem | (intros; apply GlobalTheory.FinConj.exists_conj_unip_mem <;> assumption)
+  exact @GlobalTheory.FinConj.exists_conj_unip_mem

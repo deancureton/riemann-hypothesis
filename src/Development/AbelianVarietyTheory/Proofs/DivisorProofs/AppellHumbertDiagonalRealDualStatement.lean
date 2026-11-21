@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AppellHumbertDiagonalRealDual
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.RealMult GlobalTheory.CMVal GlobalTheory.LatVal GlobalTheory.LatJet
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.appell_humbert_diagonal_real_dual : ∀ (F : Type)
     ∀ x : Fin (Module.finrank ℚ F) → ℂ, (∀ l : u.Λ, ∃ n : ℤ,
       (∑ j, (h j : ℂ) * (x j * starRingEnd ℂ ((l : Fin (Module.finrank ℚ F) → ℂ) j))).im = 2 * n) →
     ∀ a : 𝓞 F, (∀ d : 𝔠.elt, ∃ b : 𝓞 F, a • d = b • c) → (fun j ↦ (e j (a : F) : ℂ) * x j) ∈ u.Λ := by
-  first | exact @GlobalTheory.RiemFormKer.smul_mem_lattice | exact GlobalTheory.RiemFormKer.smul_mem_lattice | (intros; apply GlobalTheory.RiemFormKer.smul_mem_lattice <;> assumption)
+  exact @GlobalTheory.RiemFormKer.smul_mem_lattice

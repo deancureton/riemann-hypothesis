@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BoundaryIdealPowerMaps
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.boundary_ideal_power_maps : ∀ (E : Type) [Field 
     Y.jQ ≫ ρ = X.jQ → GlobalTheory.IsAmpleLB (polOf Y k BY) → (∀ x ∈ BY.idealSheaf.support, x ∉ abLocus Y.t.G) →
     ∃ n : ℕ, 0 < n ∧ (((BY.idealSheaf ^ n).comap (genι Y)).map (ρ ≫ genι X)).comap (ρ ≫ genι X) =
       (BY.idealSheaf ^ n).comap (genι Y) := by
-  first | exact @GlobalTheory.TorRef.relGen_multiple | exact GlobalTheory.TorRef.relGen_multiple | (intros; apply GlobalTheory.TorRef.relGen_multiple <;> assumption)
+  exact @GlobalTheory.TorRef.relGen_multiple

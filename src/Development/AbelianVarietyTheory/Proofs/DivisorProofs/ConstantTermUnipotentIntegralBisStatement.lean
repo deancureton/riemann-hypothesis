@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegralBis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.constant_term_unipotent_integral_bis : ∀ {F E : 
     (∃ (μ : Measure (unip σ Y H)) (𝓕 : Set (unip σ Y H)), μ.IsHaarMeasure ∧
       IsFundamentalDomain ((ratU σ Y.J).subgroupOf (unip σ Y H)) 𝓕 μ ∧ μ 𝓕 = 1) →
     ∀ (h₁ : UA σ Y₁.J) (r : UA σ Y.J), IsLevi (W₁ := Y₁) H 1 h₁ r → r ∈ ratU σ Y.J → ∀ x, c (r * x) = c x := by
-  first | exact @GlobalTheory.CTLevi.ct_levi | exact GlobalTheory.CTLevi.ct_levi | (intros; apply GlobalTheory.CTLevi.ct_levi <;> assumption)
+  exact @GlobalTheory.CTLevi.ct_levi

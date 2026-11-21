@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NoetherianSpaceGenericComplexFibre
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpMapCompSpMap
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory Matrix NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -15,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.HorComp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.noetherianSpace_generic_complex_fibre : ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A) (s : FinalTheorems S κ) (σ : κ.c.F →+* ℂ), NoetherianSpace (genCx s.T.Z σ) := by
-  first | exact @GlobalTheory.HorComp.noetherianSpace_genCx | exact GlobalTheory.HorComp.noetherianSpace_genCx | (intros; apply GlobalTheory.HorComp.noetherianSpace_genCx <;> assumption)
+  exact @GlobalTheory.HorComp.noetherianSpace_genCx

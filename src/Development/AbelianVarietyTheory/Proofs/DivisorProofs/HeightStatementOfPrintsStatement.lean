@@ -27,4 +27,4 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.height_theorem_of_hypotheses : GlobalTheory.CovTop.HypothesesX → Hypotheses2 → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → FlatDeg → Deg → Share → HS := by
-  first | exact @GlobalTheory.CovTop.ShortRoad.hs_of_grothendieckDeformation_siegelToroidal_semiAbelian | exact GlobalTheory.CovTop.ShortRoad.hs_of_grothendieckDeformation_siegelToroidal_semiAbelian | (intros; apply GlobalTheory.CovTop.ShortRoad.hs_of_grothendieckDeformation_siegelToroidal_semiAbelian <;> assumption)
+  exact @GlobalTheory.CovTop.ShortRoad.hs_of_grothendieckDeformation_siegelToroidal_semiAbelian

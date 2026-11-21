@@ -6,4 +6,4 @@ open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc Formalism.Weakl
 open scoped Formalism.Per NNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_prism_cover_receiving_breuilKisin : ∀ (l : ℕ) [Fact l.Prime] (K : FinExt l) (bk : BK K) (B : Obj l ↥(OL K)), ∃ (C : Obj l ↥(OL K)) (h : Hom B C), Nonempty (Hom bk.prism C) ∧ Cover h := by
-  first | exact @GlobalTheory.BSP.exists_cover_receiving_bk | exact GlobalTheory.BSP.exists_cover_receiving_bk | (intros; apply GlobalTheory.BSP.exists_cover_receiving_bk <;> assumption)
+  exact @GlobalTheory.BSP.exists_cover_receiving_bk

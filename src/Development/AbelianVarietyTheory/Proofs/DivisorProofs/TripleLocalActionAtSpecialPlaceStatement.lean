@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalActionAtSpecialPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.triple_local_action_at_special_place : GlobalTheor
     (om : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Rep σ G.V G.W) (om' : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Rep σ G.V' G.W), IsTriple B G X om om' →
     ∀ h ∈ UAt σ G.W (evFin F B.v₁), ∀ φ ∈ G.M'.SoLoc B.ψ B.τ₁, ∀ φ₁ ∈ SB (Fin a' × Fin (a + a') → Fv F B.v₁),
       Acts (evFin F B.v₁) (om' (1, h)) φ φ₁ → φ₁ ∈ G.M'.SoLoc B.ψ B.τ₁ := by
-  first | exact @GlobalTheory.SoLocW.soLoc_stable | exact GlobalTheory.SoLocW.soLoc_stable | (intros; apply GlobalTheory.SoLocW.soLoc_stable <;> assumption)
+  exact @GlobalTheory.SoLocW.soLoc_stable

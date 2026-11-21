@@ -11,4 +11,4 @@ open GlobalTheory GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.DeRham Glob
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.crystallineCocycleOnTrivialThickenings_pullback : ∀ (R : Type) [CommRing R] (X Y : Over (Sp R)) (q : Y ⟶ X) (m : IsMor (dp0 R) (X.hom ≫ 𝟙 _) (dp0 R) (Y.hom ≫ 𝟙 _) (RingHom.id R) q.left) (f : Z1 (O (dp0 R) (X.hom ≫ 𝟙 _))), fv (m.coef.pullbackOneCocycle f) = (fv f).pull q := by
-  first | exact @GlobalTheory.PtExt.fv_pullbackOneCocycle_eq_pull | exact GlobalTheory.PtExt.fv_pullbackOneCocycle_eq_pull | (intros; apply GlobalTheory.PtExt.fv_pullbackOneCocycle_eq_pull <;> assumption)
+  exact @GlobalTheory.PtExt.fv_pullbackOneCocycle_eq_pull

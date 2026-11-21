@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjugateCompletionIso
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsTypeGroupBlockLift
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.GoodIdempotentFixesOfOnlySeriesOfLabelActs
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.DepthZeroInertia
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.conjugate_completion_iso : GlobalTheory.NRows.Hypo
       GlobalTheory.WeilDeligne.WD.mk b' = GlobalTheory.CuspRep.ParLaws.locRec hL (D.nd.plOm.2 w') (GlobalTheory.LocLanglands.cls σ') ∧
       b.N = b'.N ∧ ∀ (τ : GlobalTheory.WeilDeligne.Weil (D.nd.plOm.2 w)) (τ' : GlobalTheory.WeilDeligne.Weil (D.nd.plOm.2 w')),
         (∀ z, c ((τ : GE D.nd) z) = (τ' : GE D.nd) (c z)) → b.ρ τ = b'.ρ τ' := by
-  first | exact @GlobalTheory.ConjDualParam.main | exact GlobalTheory.ConjDualParam.main | (intros; apply GlobalTheory.ConjDualParam.main <;> assumption)
+  exact @GlobalTheory.ConjDualParam.main

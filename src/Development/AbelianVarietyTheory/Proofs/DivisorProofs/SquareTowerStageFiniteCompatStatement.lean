@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.square_tower_stage_finite_compat : GlobalTheory.Fu
       (∀ f, GlobalTheory.SquareComm.IsFinF W.ψ W.θ true FA FW f → ∀ P, p (GlobalTheory.SquareComm.fockF W.ψ W.θ true FA FW f P) = e (q P ⊗ₜ r f)) →
       (∀ f, GlobalTheory.SquareComm.IsFinF W.ψ W.θ false FA' FW f → ∀ P, p' (GlobalTheory.SquareComm.fockF W.ψ W.θ false FA' FW f P) = e (q' P ⊗ₜ r' f)) →
       r' (X.f' t) ≠ 0 := by
-  first | exact @GlobalTheory.StageFinNonzero.finNonzero | exact GlobalTheory.StageFinNonzero.finNonzero | (intros; apply GlobalTheory.StageFinNonzero.finNonzero <;> assumption)
+  exact @GlobalTheory.StageFinNonzero.finNonzero

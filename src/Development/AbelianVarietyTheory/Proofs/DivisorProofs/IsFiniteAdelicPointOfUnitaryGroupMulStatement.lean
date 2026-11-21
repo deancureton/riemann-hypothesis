@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFiniteAdelicPointOfUnitaryGroupMul
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormPeriodSq
 
 open NumberField MeasureTheory
@@ -18,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isFiniteAdelicPointOfUnitaryGroup_mul : ∀ {D : D7} (V : HSp D) {n : ℕ} (g g' : GA D V) (x x' : Formalism.MainNotions.StandardLatticesGL3.GA D n),
   IsFinPt V g x → IsFinPt V g' x' → IsFinPt V (g * g') (x * x') := by
-  first | exact @GlobalTheory.FinPtMul.isFinPt_mul | exact GlobalTheory.FinPtMul.isFinPt_mul | (intros; apply GlobalTheory.FinPtMul.isFinPt_mul <;> assumption)
+  exact @GlobalTheory.FinPtMul.isFinPt_mul

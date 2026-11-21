@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonsplitUnipotentFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.nonsplit_unipotent_factor : ∀ (F E : Type) [Fiel
       ∃ u ∈ unip σ W H', u ∈ UAt σ W (evFin F v) ∧ ∃ (t : (AE F E)ˣ) (h₁ : UA σ W₁.J) (m : UA σ W.J),
         IsLevi H' t h₁ m ∧ m ∈ UAt σ W (evFin F v) ∧ h₁ ∈ UAt σ W₁ (evFin F v) ∧
         ∃ k ∈ KAt σ W v, g = u * m * k := by
-  first | exact @GlobalTheory.IwasawaLineInert.iwasawa_line_inert | exact GlobalTheory.IwasawaLineInert.iwasawa_line_inert | (intros; apply GlobalTheory.IwasawaLineInert.iwasawa_line_inert <;> assumption)
+  exact @GlobalTheory.IwasawaLineInert.iwasawa_line_inert

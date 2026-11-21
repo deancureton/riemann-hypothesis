@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepSliceFiniteOp
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvFinMkPt
 
 open scoped TensorProduct
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.weil_rep_slice_finite_op : ∀ {F E : Type} [Field
     (w : Matrix (Fin n) (Fin d) (AE F E)), At (evFin F v) w →
     ∀ (Φ : (Fin n × Fin d → AF F) → ℂ) (x : Fin n × Fin d → mixedEmbedding.mixedSpace F),
       slice (M.co.rho ψ w Φ) x = finOp ψ v (locPt v (M.co.e w)) (slice Φ x) := by
-  first | exact @GlobalTheory.VacLine.RhoSlice.rho_slice | exact GlobalTheory.VacLine.RhoSlice.rho_slice | (intros; apply GlobalTheory.VacLine.RhoSlice.rho_slice <;> assumption)
+  exact @GlobalTheory.VacLine.RhoSlice.rho_slice

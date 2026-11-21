@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralTraceDualRational
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenScaledInt
@@ -19,4 +18,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_trace_dual_rational : ∀ (F : Type) [Field F] [NumberField F] (κ : Type) [Fintype κ] (a : F), a ≠ 0 →
     ∀ μ : κ → mixedEmbedding.mixedSpace F, (∀ l ∈ boxLat F κ a, ∃ k : ℤ, GlobalTheory.VacLn.trPair F κ l μ = k) →
       ∃ z : κ → F, μ = ratInf F κ z := by
-  first | exact @GlobalTheory.BoxLattice.dual_rat | exact GlobalTheory.BoxLattice.dual_rat | (intros; apply GlobalTheory.BoxLattice.dual_rat <;> assumption)
+  exact @GlobalTheory.BoxLattice.dual_rat

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingMulOfAdaptedPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_mul_of_adapted_plane : ∀ (F E : T
     B.IsGood σ → W.IsSkew σ B r s → W₁.IsSkew σ B r₁ s₁ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     ∀ (t t' : (AE F E)ˣ) (k k' : UA σ W.J), IsLevi H' t (1 : UA σ W₁.J) k → IsLevi H' t' (1 : UA σ W₁.J) k' →
       k * k' = k' * k := by
-  first | exact @GlobalTheory.LeviCommute.levi_commute | exact GlobalTheory.LeviCommute.levi_commute | (intros; apply GlobalTheory.LeviCommute.levi_commute <;> assumption)
+  exact @GlobalTheory.LeviCommute.levi_commute

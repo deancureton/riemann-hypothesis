@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.divisor_generator_root_exp : Hypotheses2 → Hypot
     ∀ w, GlobalTheory.Mean4O.leviAt ((T.M c).A a) ((T.F c).th u a + ReciprocityTheory.AnForm.M.LocPot.ofFun ((T.F c).ph u a)) j y w =
       ReciprocityTheory.AnForm.levi (fun v => ∑ x : DV.Rt D.what₂.Tau O.N, u x.1 x.2 *
         GlobalTheory.Mean4O.lnN (O.met.hm c none ((h.man c).ε a) (O.ex x)) (f x) ((h.man c).pt a ((((T.M c).A a).chart j).symm v))) y w := by
-  first | exact @GlobalTheory.LeviRed.levi_th_add_ph | exact GlobalTheory.LeviRed.levi_th_add_ph | (intros; apply GlobalTheory.LeviRed.levi_th_add_ph <;> assumption)
+  exact @GlobalTheory.LeviRed.levi_th_add_ph

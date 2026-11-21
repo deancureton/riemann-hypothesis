@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentCornerIsUnitInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_unipotent_corner_isUnit_inertPlace : ∀ (F
       ∀ z ∈ GlobalTheory.InertSph.latAt X v,
         ((GlobalTheory.DblVac.antiCols (F := F) (E := E) n)ᵀ * GlobalTheory.DblVac.matD (g * u) * GlobalTheory.DblVac.antiCols n)⁻¹ *ᵥ z ∈
           GlobalTheory.InertSph.latAt X v := by
-  first | exact @GlobalTheory.InertTransv.exists_unip_corner_isUnit | exact GlobalTheory.InertTransv.exists_unip_corner_isUnit | (intros; apply GlobalTheory.InertTransv.exists_unip_corner_isUnit <;> assumption)
+  exact @GlobalTheory.InertTransv.exists_unip_corner_isUnit

@@ -23,4 +23,4 @@ theorem _root_.GlobalTheory.T.flag_concatenation_extension : ∀ (X : Scheme.{0}
     (∀ (k : Fin (r₁ + r₃)) (j : Fin r₃), (k : ℕ) = r₁ + j →
       ∃ (m : fl₂.F k.succ ⟶ fl₃.F j.succ) (u : fl₂.gr k ≅ fl₃.gr j),
         m ≫ fl₃.ι j.succ = fl₂.ι k.succ ≫ b ∧ fl₂.π k ≫ u.hom = m ≫ fl₃.π j) := by
-  first | exact @GlobalTheory.Vert.Flag.concat_spec | exact GlobalTheory.Vert.Flag.concat_spec | (intros; apply GlobalTheory.Vert.Flag.concat_spec <;> assumption)
+  exact @GlobalTheory.Vert.Flag.concat_spec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairPlaneDescentSeventh
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_plane_descent_seventh : GlobalTheory.T
     ∀ Φ ∈ schA F (Fin n × Fin d), ∀ g : UA σ X.J,
       ∃ (C : ℝ) (k : ℕ), ∀ h : UA σ W.J, Summable (fun w : Fin d → E => ‖∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) (om (g, h) Φ)))) ∂μ‖) ∧
         ∑' w : Fin d → E, ‖∫ u in 𝓕, thetaSum F (e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u.1, 1) (om (g, h) Φ)))) ∂μ‖ ≤ C * (qht h : ℝ) ^ k := by
-  first | exact @GlobalTheory.ThKBoundW.bound | exact GlobalTheory.ThKBoundW.bound | (intros; apply GlobalTheory.ThKBoundW.bound <;> assumption)
+  exact @GlobalTheory.ThKBoundW.bound

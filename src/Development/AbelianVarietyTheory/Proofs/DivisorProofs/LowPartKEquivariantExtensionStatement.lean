@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartKEquivariantExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.low_part_K_equivariant_extension : GlobalTheory.Th
           Submodule.span ℂ {x : R.Pi | ∃ γ ∈ Lines σ G.W, ∃ f ∈ fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j),
             ∃ f₁ : SInf F (Fin a × Fin (a + a')), ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) f f₁ ∧ x = R.p f₁}) →
         ∀ x ∈ lowPartInf B G.M R.p, S x ∈ (fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j)).map R.p := by
-  first | exact @GlobalTheory.DegKeep.map_mem_fockDeg_of_lie | exact GlobalTheory.DegKeep.map_mem_fockDeg_of_lie | (intros; apply GlobalTheory.DegKeep.map_mem_fockDeg_of_lie <;> assumption)
+  exact @GlobalTheory.DegKeep.map_mem_fockDeg_of_lie

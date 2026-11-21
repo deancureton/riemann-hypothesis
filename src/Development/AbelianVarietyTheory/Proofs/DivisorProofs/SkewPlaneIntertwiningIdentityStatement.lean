@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneIntertwiningIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.skew_plane_intertwining_identity : ∀ (F E : Type
         ContDiff ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) fun t : Fin e → ℝ => a i (k * (List.ofFn fun j => γ j (t j)).prod)) → (∃ (e : ℕ) (b : Fin e → GAd σ (c₀ • W.J.map σ) → ℂ), (∀ j, ContinuousOn (b j) Kc) ∧ (∀ i, ∃ c : Fin e → ℂ, ∀ k ∈ Kc, a i k = ∑ j, c j * b j k) ∧
         ∀ j, ∀ k' ∈ K', ∃ c : Fin e → ℂ, ∀ k ∈ Kc, b j (k * k') = ∑ l, c l * b l k) → ∃ N : ℕ, ∀ l : List (ℝ → GAd σ (c₀ • W.J.map σ)), (∀ γ ∈ l, GlobalTheory.SiegelSet.IsRealLine σ (c₀ • W.J.map σ) γ) →
       ∃ C : ℝ, ∀ g, ‖l.foldr GlobalTheory.SiegelSet.lineDer Ψ g‖ ≤ C * (height σ (c₀ • W.J.map σ) g : ℝ) ^ N := by
-  first | exact @GlobalTheory.ThK.CuspTransfer.Growth.growth_of_ind | exact GlobalTheory.ThK.CuspTransfer.Growth.growth_of_ind | (intros; apply GlobalTheory.ThK.CuspTransfer.Growth.growth_of_ind <;> assumption)
+  exact @GlobalTheory.ThK.CuspTransfer.Growth.growth_of_ind

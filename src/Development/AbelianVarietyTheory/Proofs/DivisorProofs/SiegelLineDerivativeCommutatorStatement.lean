@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelLineDerivativeCommutator
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.siegel_line_derivative_commutator : ∀ (F E : Typ
       ∃ ε : ℝ → GAd σ J, GlobalTheory.SiegelSet.IsRealLine σ J ε ∧ ∀ f, GlobalTheory.UAut.IsSm σ J f →
         GlobalTheory.SiegelSet.lineDer γ (GlobalTheory.SiegelSet.lineDer δ f) =
           GlobalTheory.SiegelSet.lineDer δ (GlobalTheory.SiegelSet.lineDer γ f) + GlobalTheory.SiegelSet.lineDer ε f := by
-  first | exact @GlobalTheory.LeviHC.LineBracket.exists_line_bracket | exact GlobalTheory.LeviHC.LineBracket.exists_line_bracket | (intros; apply GlobalTheory.LeviHC.LineBracket.exists_line_bracket <;> assumption)
+  exact @GlobalTheory.LeviHC.LineBracket.exists_line_bracket

@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rowPoint_of_conditions : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (D : D7) (P : Pin hL D), Formalism.MainNotions.SumRepresentations.Conclusion42 D → Formalism.MainNotions.SumRepresentations.Conclusion41 D → RowPoint D.nd D.naut := by
-  first | exact @GlobalTheory.RowPointLoc.main | exact GlobalTheory.RowPointLoc.main | (intros; apply GlobalTheory.RowPointLoc.main <;> assumption)
+  exact @GlobalTheory.RowPointLoc.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalConjugateUnipotentRadical
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.rational_conjugate_unipotent_radical : ∀ (F E : 
     (n r : ℕ) (J : Matrix (Fin n) (Fin n) E) (γ : GRat σ J) (C₀ C : Matrix (Fin n) (Fin r) E)
     (D D' : Matrix (Fin r) (Fin r) E), D * D' = 1 → D' * D = 1 → (γ.1 : Matrix (Fin n) (Fin n) E) * C₀ = C * D →
       ∀ g ∈ unipRad σ J C₀, ratEmb σ J γ * g * (ratEmb σ J γ)⁻¹ ∈ unipRad σ J C := by
-  first | exact @GlobalTheory.CuspConjRad.conj_mem_unipRad | exact GlobalTheory.CuspConjRad.conj_mem_unipRad | (intros; apply GlobalTheory.CuspConjRad.conj_mem_unipRad <;> assumption)
+  exact @GlobalTheory.CuspConjRad.conj_mem_unipRad

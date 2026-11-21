@@ -36,4 +36,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_restriction_compat_alt : GlobalTheory
       ∀ μ : @Measure (Fin n → AE F E) (borel _), GlobalTheory.SiegelAvg.IsHaarB μ →
         ∀ (z : Matrix (Fin d) (Fin n) (AE F E)), ∀ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)),
           GlobalTheory.SiegelAvg.avgForm μ (l₁ ∘ₗ ed) (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y)) (dd.rho B.ψ (z * (diagCols (Fin n))ᵀ) Φ) = GlobalTheory.SiegelAvg.avgForm μ (l₁ ∘ₗ ed) (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y)) Φ := by
-  first | exact @GlobalTheory.SiegelAvgInv.avgForm_rho_diag_eq | exact GlobalTheory.SiegelAvgInv.avgForm_rho_diag_eq | (intros; apply GlobalTheory.SiegelAvgInv.avgForm_rho_diag_eq <;> assumption)
+  exact @GlobalTheory.SiegelAvgInv.avgForm_rho_diag_eq

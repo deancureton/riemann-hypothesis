@@ -11,4 +11,4 @@ open GlobalTheory.OmegaHT
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.OmegaLink : GlobalTheory.OmegaHT.LinkSt := by
-  first | exact @GlobalTheory.OmegaHT.Link.linkSt | exact GlobalTheory.OmegaHT.Link.linkSt | (intros; apply GlobalTheory.OmegaHT.Link.linkSt <;> assumption)
+  exact @GlobalTheory.OmegaHT.Link.linkSt

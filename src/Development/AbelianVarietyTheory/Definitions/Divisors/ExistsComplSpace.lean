@@ -88,7 +88,6 @@ theorem exists_compl_space (D : D7) (V : HSp D) (t : ℕ) :
   change (-Matrix.fromBlocks V.gram 0 0 (-blk (0 : Matrix (Fin t) (Fin t) D.host.E) 1 1 0)).submatrix _ _ = _
   rw [Matrix.fromBlocks_neg, neg_zero, neg_zero, neg_neg, blkMat]
 
-set_option maxHeartbeats 4000000 in
 
 theorem complMet_of (D : D7) (V : HSp D) (han : IsAniso V) (t : ℕ) : ComplMet D.sp.cm.sig V.rank t False := by
   let n := V.rank + t

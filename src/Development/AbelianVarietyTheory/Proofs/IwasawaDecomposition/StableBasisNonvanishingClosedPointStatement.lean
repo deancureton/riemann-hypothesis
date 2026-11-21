@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.stable_basis_nonvanishing_closed_point : ∀ (R : 
     (b : Fin m → SecAb D k α), GlobalTheory.IntFam.StableBasis D k α b → ∀ c : Fin m → R, (∃ i, c i ∉ maximalIdeal R) →
       ∃ (j : Fin 4 → D.P.L.ι) (y : D.P.A.left), D.P.A.hom y = closedPoint R ∧
         y ∈ D.P.A.left.basicOpen ((∑ i, c i • b i).f j) := by
-  first | exact @GlobalTheory.IntFam.exists_closed_mem_basicOpen_of_stableBasis | exact GlobalTheory.IntFam.exists_closed_mem_basicOpen_of_stableBasis | (intros; apply GlobalTheory.IntFam.exists_closed_mem_basicOpen_of_stableBasis <;> assumption)
+  exact @GlobalTheory.IntFam.exists_closed_mem_basicOpen_of_stableBasis

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalDoublingIntegralUnramified
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.local_doubling_integral_unramified : ∀ (F E : Ty
     ∀ (t : E →ₐ[F] Fv F v) (b : GL (Fin n) (Fv F v)) (c : GL (Fin d) (Fv F v)) ι, M.IsLinW B.ψ t b c ι →
     ∀ φ₁ ∈ SB (Fin n × Fin d → Fv F v), ∀ φ₂ ∈ SB (Fin n × Fin d → Fv F v), (∀ Y, ι φ₁ Y * ι φ₂ Y = 0) →
       ∫ x, tens (evFin F v) φ₁ ρ x * starRingEnd ℂ (tens (evFin F v) φ₂ ρ x) ∂m = 0 := by
-  first | exact @GlobalTheory.DisjOrth.disj_orth | exact GlobalTheory.DisjOrth.disj_orth | (intros; apply GlobalTheory.DisjOrth.disj_orth <;> assumption)
+  exact @GlobalTheory.DisjOrth.disj_orth

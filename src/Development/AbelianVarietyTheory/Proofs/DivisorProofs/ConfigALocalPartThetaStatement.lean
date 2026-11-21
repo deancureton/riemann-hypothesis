@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_theta : GlobalTheory.FunPr.Hyp
     IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ u ∈ unip σ G.V H, u ∈ UAt σ G.V (evI F) → ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')),
       ei (locOpInf (om (u, 1)) f) = ei f := by
-  first | exact @GlobalTheory.ThK.InfUnipA.infUnipA | exact GlobalTheory.ThK.InfUnipA.infUnipA | (intros; apply GlobalTheory.ThK.InfUnipA.infUnipA <;> assumption)
+  exact @GlobalTheory.ThK.InfUnipA.infUnipA

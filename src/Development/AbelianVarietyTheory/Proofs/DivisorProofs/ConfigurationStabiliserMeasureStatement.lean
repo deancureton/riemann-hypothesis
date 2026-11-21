@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationStabiliserMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.configuration_stabiliser_measure : GlobalTheory.Th
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')),
       cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ ∈ schA F (Fin b × Fin (b + a')) := by
-  first | exact @GlobalTheory.ConeSchwartz.cone_mem_schA | exact GlobalTheory.ConeSchwartz.cone_mem_schA | (intros; apply GlobalTheory.ConeSchwartz.cone_mem_schA <;> assumption)
+  exact @GlobalTheory.ConeSchwartz.cone_mem_schA

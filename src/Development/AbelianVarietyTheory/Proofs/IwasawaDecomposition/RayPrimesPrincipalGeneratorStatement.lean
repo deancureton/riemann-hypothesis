@@ -8,4 +8,4 @@ open Finset ArithmeticFunction NumberField IsDedekindDomain Filter Topology Glob
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.ray_primes_principal_generator : ∀ (K : Type) [Field K] [NumberField K] (𝔮 : Ideal (𝓞 K)), 𝔮 ≠ ⊥ → ∀ (X : ℝ), ∀ v ∈ rayPrimes 𝔮 X, ∃ π : 𝓞 K, v.asIdeal = Ideal.span {π} ∧ π - 1 ∈ 𝔮 := by
-  first | exact @GlobalTheory.Mem.An.exists_generator_of_mem_rayPrimes | exact GlobalTheory.Mem.An.exists_generator_of_mem_rayPrimes | (intros; apply GlobalTheory.Mem.An.exists_generator_of_mem_rayPrimes <;> assumption)
+  exact @GlobalTheory.Mem.An.exists_generator_of_mem_rayPrimes

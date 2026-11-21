@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEvaluationLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.config_A_evaluation_local : ∀ (F E : Type) [Fiel
       ∫ q : UA σ G.V.J × (AE F E)ˣ, coneFinInt B G.M om v (ev v) (shiftA H H') X.ν ((b + 2 - a') / 2) φ q.1 q.2 y
         ∂(((μKv v).map Subtype.val).prod ((μEv v).map Subtype.val)) =
         coneFin B G.M om v (ev v) K (μKv v) (μEv v) (shiftA H H') X.ν ((b + 2 - a') / 2) φ y := by
-  first | exact @GlobalTheory.ThK.ConeLocInt.coneFinInt_integrable | exact GlobalTheory.ThK.ConeLocInt.coneFinInt_integrable | (intros; apply GlobalTheory.ThK.ConeLocInt.coneFinInt_integrable <;> assumption)
+  exact @GlobalTheory.ThK.ConeLocInt.coneFinInt_integrable

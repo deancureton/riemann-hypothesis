@@ -14,4 +14,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.LogKSChart GlobalTheo
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isAffineOpen_preimage_projection_abelianPart : ∀ (R : Type) [CommRing R] [IsDomain R] (Q : DegPre R) (O : Type) [CommRing O] [StarRing O] [Module O Q.X] (oa : Q.OAct O) (Y : Ray oa) (V : Q.P.A.left.affineOpens), IsAffineOpen (Y.q.left ⁻¹ᵁ V.1) := by
-  first | exact @GlobalTheory.RayEv.Ray.isAffineOpen_preimage_q | exact GlobalTheory.RayEv.Ray.isAffineOpen_preimage_q | (intros; apply GlobalTheory.RayEv.Ray.isAffineOpen_preimage_q <;> assumption)
+  exact @GlobalTheory.RayEv.Ray.isAffineOpen_preimage_q

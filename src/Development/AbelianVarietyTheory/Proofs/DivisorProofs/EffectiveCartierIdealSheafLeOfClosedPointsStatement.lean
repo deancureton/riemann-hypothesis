@@ -6,4 +6,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.SiegelTor
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.effectiveCartier_idealSheaf_le_of_closedPoints : ∀ (X : Scheme.{0}) [CompactSpace X] (D : EffCartierData X) (K : X.IdealSheafData), (∀ x : X, IsClosed ({x} : Set X) → ∃ (W : X.affineOpens) (i : D.ι) (h : W.1 ≤ D.U i), x ∈ W.1 ∧ resG X h (D.f i) ∈ K.ideal W) → D.idealSheaf ≤ K := by
-  first | exact @GlobalTheory.EffCartierData.idealSheaf_le_of_closedPoints | exact GlobalTheory.EffCartierData.idealSheaf_le_of_closedPoints | (intros; apply GlobalTheory.EffCartierData.idealSheaf_le_of_closedPoints <;> assumption)
+  exact @GlobalTheory.EffCartierData.idealSheaf_le_of_closedPoints

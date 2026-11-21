@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.cech_short_exact_pull_compat : ∀ {X Y : TopCat.{
     (h₂₃ : ∀ W x, φ₃.app W (g₂.app W x) = g₂'.app _ (φ₂.app W x)) (n : ℕ) (σ : cocycles Q V n),
     cechPullH f φ₁ V U τ hτ (n + 1) (hC.delta n σ) =
       hC'.delta n ⟨pullCoch f φ₃ V U τ hτ n σ.1, pullCoch_mem_cocycles f φ₃ V U τ hτ σ.2⟩ := by
-  first | exact @GlobalTheory.CompanionTheory.OmCechDelta.cechPullH_delta | exact GlobalTheory.CompanionTheory.OmCechDelta.cechPullH_delta | (intros; apply GlobalTheory.CompanionTheory.OmCechDelta.cechPullH_delta <;> assumption)
+  exact @GlobalTheory.CompanionTheory.OmCechDelta.cechPullH_delta

@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.volume_equality_slope_mean : ∀ r Cf : ℝ, ∃ C : ℝ, 0 ≤ C ∧ ∀ (D : D7) (Y : DV.ShimX D.what₂.Tau), 2 < D.R.f * (Y.N - 1) → DeRhamMinusHodgeTateGoodPrimesAt Y → DeRhamHodgeTateDifferenceKilledAt Y → Propor Y → FewBad Y → ∀ (A : SlopeTestRemainingChoices Y) (Φ : ℝ → Fn Y) (hh : Fn Y), Inputs A Φ hh r Cf → GlobalTheory.IndefiniteRowSideFullHecke.ComponentMean.VolEq Y ∧ GlobalTheory.IndefiniteRowSideFullHecke.ComponentMean.SlopeMean Y C := by
-  first | exact @GlobalTheory.MeanOne.slopeMean_at | exact GlobalTheory.MeanOne.slopeMean_at | (intros; apply GlobalTheory.MeanOne.slopeMean_at <;> assumption)
+  exact @GlobalTheory.MeanOne.slopeMean_at

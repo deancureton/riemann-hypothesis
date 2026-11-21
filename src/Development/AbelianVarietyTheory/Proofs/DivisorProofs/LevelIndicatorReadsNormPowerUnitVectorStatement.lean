@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelIndicatorReadsNormPowerUnitVector
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodIdemEmpty
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardLatticeDoubleCosetClassesStabilisers
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsThetaFunctionStandardPairSecond
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.level_indicator_reads_norm_power_unit_vector : ∀
       ((κ * ζ) • ((Real.sqrt ((Ideal.absNorm (D.host.conj • modul P c) : ℝ) ^ (a * d)) : ℂ))⁻¹ •
         Iop D (tor0 D ⊤ δ) (La0 D (tor0 D ⊤ δ) a d) (La D (tor0 D ⊤ δ) (stdL D a) (skewLat D (D.host.conj • modul P c) d)) e0)
       (Tm (cosetFn (cA D e) (D.host.conj • modul P c) 0)) := by
-  first | exact @GlobalTheory.SkewLevel.reads_level | exact GlobalTheory.SkewLevel.reads_level | (intros; apply GlobalTheory.SkewLevel.reads_level <;> assumption)
+  exact @GlobalTheory.SkewLevel.reads_level

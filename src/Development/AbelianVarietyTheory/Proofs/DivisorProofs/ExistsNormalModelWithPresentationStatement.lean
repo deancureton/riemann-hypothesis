@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_normal_model_with_presentation : GlobalTheo
       GlobalTheory.IsNormalScheme B₁.X ∧ f₁.relDim = 0 ∧ ∃ (oo : EPres B₁ (𝓞 D.host.E)) (π : Γ(B₁.X, ⊤)) (u : oo.E ⟶ oo.E'),
         IsRootOfP p π (p - 1) ∧ u ≫ oo.ψ = smulA _ π ∧
           IsEqLatPres z.Z (f₁.f ≫ (nmodel z.Z).compι c) (fun k => xAll O.S k.rev) true oo := by
-  first | exact @GlobalTheory.OmegaHT.omega_half | exact GlobalTheory.OmegaHT.omega_half | (intros; apply GlobalTheory.OmegaHT.omega_half <;> assumption)
+  exact @GlobalTheory.OmegaHT.omega_half

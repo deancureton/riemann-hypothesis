@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralSquaredThetaTermsTorusCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SepAtBIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDominantToUnitLeft
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueScalar
@@ -45,4 +44,4 @@ theorem _root_.GlobalTheory.T.integral_squaredThetaTerms_torusCoordinates : ∀ 
           sval (θ : LB.Sec (LB.LinComb D.P.L (D.famφB 0) (DegPre.famε 1))) (r ≫ (b c * D.c (e mu)).left) z J ^ 2 *
             (val (t c) r z J ^ 2 * val (χt mu c) r z J ^ 2 * val D.sym (r ≫ (D.c (e mu)).left) z J *
               (val (τ₀ (e mu) (-e mu)) r z J)⁻¹ * (rigV D r z J ^ 2)⁻¹).val := by
-  first | exact @GlobalTheory.Poinc.Sep.CoefInt.integral_sq_terms | exact GlobalTheory.Poinc.Sep.CoefInt.integral_sq_terms | (intros; apply GlobalTheory.Poinc.Sep.CoefInt.integral_sq_terms <;> assumption)
+  exact @GlobalTheory.Poinc.Sep.CoefInt.integral_sq_terms

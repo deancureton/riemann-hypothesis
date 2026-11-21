@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermAdaptedEvaluationReduction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SetIntegralEqZeroOfMulRight
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.herm_adapted_evaluation_reduction : ∀ (F E : Typ
       thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) z) φ))) =
         B.ψ (-Algebra.trace (AF F) (AE F E) (GlobalTheory.UnipMass.hA σ W₁.J (incV F w) z)) *
           thetaSum F (e' (M₁.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) φ)) := by
-  first | exact @GlobalTheory.ThK.IsoPhaseComm.thetaSum_ev_phase | exact GlobalTheory.ThK.IsoPhaseComm.thetaSum_ev_phase | (intros; apply GlobalTheory.ThK.IsoPhaseComm.thetaSum_ev_phase <;> assumption)
+  exact @GlobalTheory.ThK.IsoPhaseComm.thetaSum_ev_phase

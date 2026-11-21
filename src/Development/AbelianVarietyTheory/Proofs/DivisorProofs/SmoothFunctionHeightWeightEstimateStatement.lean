@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.smooth_function_height_weight_estimate : Hypothese
     ∃ x : (h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).V.X, ArInt.IsAlgPt x ∧ ∀ hh : (h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).V.X → ℝ,
       (comb (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (fnB ((T.M c).pull ε π ((2 : ℝ) • (g - (fun _ _ => O.Y.htDetT B c τ : (T.M c).Fun)))) hu hc)
       ((h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).gens (GlobalTheory.FlagAr.setB O.Y B))) (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (1 : ℤ) fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℤ) else 0)).IsArithHeight hh → hh x = 0 := by
-  first | exact @GlobalTheory.FlatPoint.exists_algPt_height_zero | exact GlobalTheory.FlatPoint.exists_algPt_height_zero | (intros; apply GlobalTheory.FlatPoint.exists_algPt_height_zero <;> assumption)
+  exact @GlobalTheory.FlatPoint.exists_algPt_height_zero

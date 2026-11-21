@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawUnfoldingLocalIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.p_eq_zero_of_kInf_right_translate : GlobalTheory.F
     ∀ Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
     ∀ k ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.KInf D.sp.cm.sig Γ.W Bs.emb, ∀ ΦD ∈ algD Γ.M Bs.ψ Bs.emb, ∀ Φ Φ₁,
     IsDatum Γ.M ψ cA ΦD Φ → IsDatum Γ.M ψ cA (om (1, k) ΦD) Φ₁ → p Φ = 0 → p Φ₁ = 0 := by
-  first | exact @GlobalTheory.SquareAgree.KerCptW.kernel_maximalCompact_stable | exact GlobalTheory.SquareAgree.KerCptW.kernel_maximalCompact_stable | (intros; apply GlobalTheory.SquareAgree.KerCptW.kernel_maximalCompact_stable <;> assumption)
+  exact @GlobalTheory.SquareAgree.KerCptW.kernel_maximalCompact_stable

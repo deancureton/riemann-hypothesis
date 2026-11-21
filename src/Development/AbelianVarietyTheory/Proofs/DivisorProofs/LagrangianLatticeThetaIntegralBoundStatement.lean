@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianLatticeThetaIntegralBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.lagrangian_lattice_theta_integral_bound : ∀ (F :
     (∀ c : ι → F, (∀ v ∈ Λ, (∑ i, c i • w i).1 ⬝ᵥ v.2 = v.1 ⬝ᵥ (∑ i, c i • w i).2) → c = 0) →
     ∀ ν : @Measure (ι → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) ν → ∀ g ∈ SB (κ → FiniteAdeleRing (𝓞 F) F), ∃ T : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ →L[ℂ] ℂ, ∀ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ,
       ∫ t, ∫ x, schr ψ (∑ j, x j • ((fun k => algebraMap F (AF F) ((u j).1 k)), (fun k => algebraMap F (AF F) ((u j).2 k)))) (schr ψ (∑ i, t i • ((fun k => algebraMap F (AF F) ((w i).1 k)), (fun k => algebraMap F (AF F) ((w i).2 k)))) (pureA F (⇑f) g)) 0 ∂μ ∂ν = T f := by
-  first | exact @GlobalTheory.LagrAvgAdm.avg_exists_clm | exact GlobalTheory.LagrAvgAdm.avg_exists_clm | (intros; apply GlobalTheory.LagrAvgAdm.avg_exists_clm <;> assumption)
+  exact @GlobalTheory.LagrAvgAdm.avg_exists_clm

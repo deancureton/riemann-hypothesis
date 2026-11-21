@@ -14,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.IrrAn
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.locally_closed_analytic_nonempty : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) [LocallyOfFiniteType p] (σ : k →+* ℂ) (T : Set (Limits.pullback p (spMap σ) : Scheme.{0})), IsLocallyClosed T → T.Nonempty → (GlobalTheory.IrrAn.ptsOf p σ T).Nonempty := by
-  first | exact @GlobalTheory.IrrAn.ptsOf_nonempty | exact GlobalTheory.IrrAn.ptsOf_nonempty | (intros; apply GlobalTheory.IrrAn.ptsOf_nonempty <;> assumption)
+  exact @GlobalTheory.IrrAn.ptsOf_nonempty

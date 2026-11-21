@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedRealLineThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.adapted_real_line_third : ∀ (F E : Type) [Field 
         (∀ i, ((mat k).map (piInf (B.emb w)) * C w) i (.inr s₀) = u w * C w i (.inr s₀)) ∧
         ∀ c, c ≠ .inl r₀ → c ≠ .inr s₀ → ∀ i, ((mat k).map (piInf (B.emb w)) * C w) i c = C w i c) →
       ∃ t : (AE F E)ˣ, IsLevi H' t (1 : UA σ W₁.J) k ∧ ∀ w, piInf (B.emb w) (t : AE F E) = u w := by
-  first | exact @GlobalTheory.AdaptedFrameLevi.exists_isLevi_of_adaptedFrame | exact GlobalTheory.AdaptedFrameLevi.exists_isLevi_of_adaptedFrame | (intros; apply GlobalTheory.AdaptedFrameLevi.exists_isLevi_of_adaptedFrame <;> assumption)
+  exact @GlobalTheory.AdaptedFrameLevi.exists_isLevi_of_adaptedFrame

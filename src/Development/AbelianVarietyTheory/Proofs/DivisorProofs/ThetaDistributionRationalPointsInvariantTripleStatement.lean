@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaDistributionRationalPointsInvariantTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsINeZeroKind
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.theta_distribution_rational_points_invariant_tripl
     (om : Rep D.sp.cm.sig Γ.V Γ.W) (om' : Rep D.sp.cm.sig Γ.V' Γ.W), IsTriple Bs Γ X om om' →
     ∀ γ ∈ ratU D.sp.cm.sig Γ.V.J, ∀ γ' ∈ ratU D.sp.cm.sig Γ.W.J, ∀ Φ ∈ GlobalTheory.WeilM.schA D.host.F (Fin a × Fin (a + a')),
       GlobalTheory.WeilM.thetaSum D.host.F (om (γ, γ') Φ) = GlobalTheory.WeilM.thetaSum D.host.F Φ := by
-  first | exact @GlobalTheory.RatInvTheta.thetaSum_rat_inv | exact GlobalTheory.RatInvTheta.thetaSum_rat_inv | (intros; apply GlobalTheory.RatInvTheta.thetaSum_rat_inv <;> assumption)
+  exact @GlobalTheory.RatInvTheta.thetaSum_rat_inv

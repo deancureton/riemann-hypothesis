@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetInducedCharFiltration
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.jacquet_induced_char_filtration : GlobalTheory.Pub
       ∃ (V' : Type) (_ : AddCommGroup V') (_ : Module ℂ V') (Q' : Representation ℂ (GL (Fin (x + x')) k) V'),
         IsSubquotient Q' (prod₂ (detRep (Fin x) (χ 0 * absPow k (s₁ : ℂ))) (detRep (Fin x') (χ 1 * absPow k (s₂ : ℂ)))) ∧
         ∃ f' : Q'.IntertwiningMap (Y.comp (glCast h)), f' ≠ 0 := by
-  first | exact @GlobalTheory.MidBlockCell.exists_map_of_midBlock | exact GlobalTheory.MidBlockCell.exists_map_of_midBlock | (intros; apply GlobalTheory.MidBlockCell.exists_map_of_midBlock <;> assumption)
+  exact @GlobalTheory.MidBlockCell.exists_map_of_midBlock

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartTrdegValuationBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.AdmissibleRepresentationFactorisation
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SpMapResMap
 open AlgebraicGeometry CategoryTheory Limits NumberField
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.chart_trdeg_valuation_bound : ∀ {E : Type} [Fiel
       σ.comp ((resMap x).comp (Z.alg a)) = (R.subtype.comp ι).comp ((resMap x).comp (Z.alg a)) ∧
       GlobalTheory.LocM.SameFlag Z.ty (Y Z.i).t (spMap ((R.subtype.comp ι).comp (resMap x)) ≫ Z.chart a ≫ Z.π)
         ((Z.fr a).bc (σ.comp (resMap x))) (v.bc R.subtype) := by
-  first | exact @GlobalTheory.FlagGen.exists_embedding_of_specialisation | exact GlobalTheory.FlagGen.exists_embedding_of_specialisation | (intros; apply GlobalTheory.FlagGen.exists_embedding_of_specialisation <;> assumption)
+  exact @GlobalTheory.FlagGen.exists_embedding_of_specialisation

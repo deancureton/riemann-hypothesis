@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianRealLiftExpansion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.gaussian_real_lift_expansion : ∀ (F E : Type) [F
     ∀ f₀ : SInf F (Fin n × Fin d), f₀ ≠ 0 → M.IsGauss B.ψ B.emb f₀ →
     ∃ (Q : (Fin n × Fin d → mixedEmbedding.mixedSpace F) →ₗ[ℝ] (Fin n × Fin d → mixedEmbedding.mixedSpace F) →ₗ[ℝ] ℂ)
       (z : ℂ), (∀ x, x ≠ 0 → 0 < (Q x x).re) ∧ ∀ x, f₀ x = z * Complex.exp (-(Q x x)) := by
-  first | exact @GlobalTheory.VacGauss.fock_vacuum_gaussian | exact GlobalTheory.VacGauss.fock_vacuum_gaussian | (intros; apply GlobalTheory.VacGauss.fock_vacuum_gaussian <;> assumption)
+  exact @GlobalTheory.VacGauss.fock_vacuum_gaussian

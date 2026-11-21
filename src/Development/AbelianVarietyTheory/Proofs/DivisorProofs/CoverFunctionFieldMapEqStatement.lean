@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverFunctionFieldMapEq
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualRef
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.JGenSpecializes
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FromModelNeg
@@ -11,4 +10,4 @@ open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjV
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cover_function_field_map_eq : ∀ {F : Type} [Field F] [NumberField F] {Y : Var F} (V : Cover Y), ∃ hη : V.π (genericPoint V.G) ⤳ genericPoint Y.X, V.φ = GlobalTheory.TrueGeo.SmallSec.fnMap V.π hη := by
-  first | exact @GlobalTheory.Mean4O.Cover.φ_eq_fnMap | exact GlobalTheory.Mean4O.Cover.φ_eq_fnMap | (intros; apply GlobalTheory.Mean4O.Cover.φ_eq_fnMap <;> assumption)
+  exact @GlobalTheory.Mean4O.Cover.φ_eq_fnMap

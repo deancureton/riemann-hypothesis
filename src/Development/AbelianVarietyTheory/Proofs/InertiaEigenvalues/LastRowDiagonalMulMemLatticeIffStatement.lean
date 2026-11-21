@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LastRowDiagonalMulMemLatticeIff
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocFacOfNeg
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemMspan
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.lastRow_diagonal_mul_mem_lattice_iff : ∀ (E : Ty
       ((fun i => pFin E ((GlobalTheory.CellDec.tl (m + 1) ϖ l.1 * g).val (Fin.last m) i)) - Pi.single (Fin.last m) 1 ∈
         GlobalTheory.ThetaPoisson.latt (m + 1) J ↔
       (fun i => pFin E (g.val (Fin.last m) i)) - Pi.single (Fin.last m) 1 ∈ GlobalTheory.ThetaPoisson.latt (m + 1) J) := by
-  first | exact @GlobalTheory.CellDec.lastRow_tl_mul_mem_latt_iff | exact GlobalTheory.CellDec.lastRow_tl_mul_mem_latt_iff | (intros; apply GlobalTheory.CellDec.lastRow_tl_mul_mem_latt_iff <;> assumption)
+  exact @GlobalTheory.CellDec.lastRow_tl_mul_mem_latt_iff

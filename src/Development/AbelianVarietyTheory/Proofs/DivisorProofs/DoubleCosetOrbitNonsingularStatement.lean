@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleCosetOrbitNonsingular
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.double_coset_orbit_nonsingular : ∀ (F E : Type) 
       (∀ k l, form σ W.J (fun a => Y a k) (fun a => Y a l) = 0) ∧
       ∀ y : Fin d → E, (mat γ *ᵥ pairVec finSumFinEquiv 0 (incV F y) ∈ diagSub (AE F E) finSumFinEquiv ↔
         ∃ a : Fin j → E, y = Y *ᵥ a) := by
-  first | exact @GlobalTheory.OrbitIsoBasis.exists_isotropic_basis | exact GlobalTheory.OrbitIsoBasis.exists_isotropic_basis | (intros; apply GlobalTheory.OrbitIsoBasis.exists_isotropic_basis <;> assumption)
+  exact @GlobalTheory.OrbitIsoBasis.exists_isotropic_basis

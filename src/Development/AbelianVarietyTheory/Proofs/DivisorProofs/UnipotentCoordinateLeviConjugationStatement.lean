@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentCoordinateLeviConjugation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemImLine
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.unipotent_coordinate_levi_conjugation : ∀ (F E :
     ∀ (l : (AE F E)ˣ) (g₀ : UA σ G₁.V.J) (h : UA σ G.V.J), IsLevi H l g₀ h → ∀ n : UA σ G.V.J,
     GlobalTheory.ThK.UnipDom.coA σ G.V.J H (h * n * h⁻¹) = l.1 • ((mat g₀⁻¹)ᵀ *ᵥ GlobalTheory.ThK.UnipDom.coA σ G.V.J H n) ∧
     GlobalTheory.ThK.UnipDom.coC σ G.V.J H (h * n * h⁻¹) = l.1 * cA σ l.1 * GlobalTheory.ThK.UnipDom.coC σ G.V.J H n := by
-  first | exact @GlobalTheory.ThK.UnipDom.LeviCoord.coA_coC_levi_conj | exact GlobalTheory.ThK.UnipDom.LeviCoord.coA_coC_levi_conj | (intros; apply GlobalTheory.ThK.UnipDom.LeviCoord.coA_coC_levi_conj <;> assumption)
+  exact @GlobalTheory.ThK.UnipDom.LeviCoord.coA_coC_levi_conj

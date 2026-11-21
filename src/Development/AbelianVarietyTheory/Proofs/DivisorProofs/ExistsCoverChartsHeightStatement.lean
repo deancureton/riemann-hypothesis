@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.exists_cover_charts_height : Hypotheses2 → Hypot
       (∀ a, ChartReg V (U a) (H a) T') ∧
       AtTest V W p fun v e y z yt => ∀ hp : (resP v).Prime,
         PtData O c b n hp e y (fun a => ⊤ ≤ yt ⁻¹ᵁ U a) (fun a => GlobalTheory.WholeFlag.valMat V (H a) (T' (below y.1)) z) := by
-  first | exact @GlobalTheory.EqHalf.Frame.exists_frame | exact GlobalTheory.EqHalf.Frame.exists_frame | (intros; apply GlobalTheory.EqHalf.Frame.exists_frame <;> assumption)
+  exact @GlobalTheory.EqHalf.Frame.exists_frame

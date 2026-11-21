@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.basis_generic_extends_sections : ∀ (E : Type) [F
     BasisAlong t.G t.PP.L N (toBase (algebraMap R (FractionRing R))) b →
     ∀ (F : Type) [Field F] (ψ : R →+* F), Function.Injective ψ →
     ∀ s : LB.Sec (LPow t.G t.PP.L (N : ℤ) (Over.mk (spMap ψ))), ∃ c, Lin t.G t.PP.L N (toBase ψ) b c s := by
-  first | exact @GlobalTheory.TorRef.SpanPos.exists_lin_of_injective | exact GlobalTheory.TorRef.SpanPos.exists_lin_of_injective | (intros; apply GlobalTheory.TorRef.SpanPos.exists_lin_of_injective <;> assumption)
+  exact @GlobalTheory.TorRef.SpanPos.exists_lin_of_injective

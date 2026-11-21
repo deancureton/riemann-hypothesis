@@ -16,4 +16,4 @@ open GlobalTheory.CompanionTheory.UnfoldingAlt
 open scoped NumberField.AdeleRing ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.whittaker_space_transpose_inverse : ∀ V : Submodule ℂ (G3 → ℂ), WhA V → WhA (tV V) := by
-  first | exact @GlobalTheory.CompanionTheory.UnfoldingAlt.WhatV.whA_tV | exact GlobalTheory.CompanionTheory.UnfoldingAlt.WhatV.whA_tV | (intros; apply GlobalTheory.CompanionTheory.UnfoldingAlt.WhatV.whA_tV <;> assumption)
+  exact @GlobalTheory.CompanionTheory.UnfoldingAlt.WhatV.whA_tV

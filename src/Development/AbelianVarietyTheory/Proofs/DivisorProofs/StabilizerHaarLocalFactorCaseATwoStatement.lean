@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerHaarLocalFactorCaseATwo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdelicSchwartzSpaceOfLevelCompactSchwartz
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.stabilizer_haar_local_factor_case_a_two : GlobalTh
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ x : Fin b × Fin (b + a') → AF F,
       (∀ (m : ℕ) (t : Fin b × Fin (b + a') → mixedEmbedding.mixedSpace F) (k : K), AEStronglyMeasurable (fun l : (AE F E)ˣ => iteratedFDeriv ℝ m (fun s => (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)) (x + GlobalTheory.ThetaTransform.embR s) * (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2))) t) μ) ∧
       ∀ (m : ℕ) (t : Fin b × Fin (b + a') → mixedEmbedding.mixedSpace F), AEStronglyMeasurable (fun k : K => ∫ l, iteratedFDeriv ℝ m (fun s => (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)) (x + GlobalTheory.ThetaTransform.embR s) * (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2))) t ∂μ) μK := by
-  first | exact @GlobalTheory.ConeSliceMeas.slice_deriv_aestronglyMeasurable | exact GlobalTheory.ConeSliceMeas.slice_deriv_aestronglyMeasurable | (intros; apply GlobalTheory.ConeSliceMeas.slice_deriv_aestronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeSliceMeas.slice_deriv_aestronglyMeasurable

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedRealFrameExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_real_frame_exists : ∀ (F E : Type) [Fiel
     ∃ (r₀ : Fin r) (s₀ : Fin s) (C : InfinitePlace F → Matrix (Fin d) (Formalism.BasicNotions.TH.Ix r s) ℂ),
       (∀ w, GlobalTheory.RealLift.IsFrame (Complex.I • (incM F W.J).map (piInf (B.emb w))) (C w)) ∧
       (∀ w, W.θ w * C w = C w * Formalism.BasicNotions.TH.Jm r s) ∧ GlobalTheory.FockBridge.IsAdaptedFrame B H' C r₀ s₀ := by
-  first | exact @GlobalTheory.AdaptedFrameW.exists_adaptedFrame | exact GlobalTheory.AdaptedFrameW.exists_adaptedFrame | (intros; apply GlobalTheory.AdaptedFrameW.exists_adaptedFrame <;> assumption)
+  exact @GlobalTheory.AdaptedFrameW.exists_adaptedFrame

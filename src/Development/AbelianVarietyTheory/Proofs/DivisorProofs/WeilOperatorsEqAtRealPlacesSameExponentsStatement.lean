@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilOperatorsEqAtRealPlacesSameExponents
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.weilOperators_eq_at_realPlaces_same_exponents : �
       ∀ Φ ∈ GlobalTheory.WeilM.schA F (Fin a × Fin (a + a')), oa (g, h) Φ = ob (g, h) Φ) ∧
     (∀ g h, g ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UAt σ Γ.V' (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) → h ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UAt σ Γ.W (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI F) →
       ∀ Φ ∈ GlobalTheory.WeilM.schA F (Fin a' × Fin (a + a')), oa' (g, h) Φ = ob' (g, h) Φ) := by
-  first | exact @GlobalTheory.ArchWeil.weil_eq_at_real_places | exact GlobalTheory.ArchWeil.weil_eq_at_real_places | (intros; apply GlobalTheory.ArchWeil.weil_eq_at_real_places <;> assumption)
+  exact @GlobalTheory.ArchWeil.weil_eq_at_real_places

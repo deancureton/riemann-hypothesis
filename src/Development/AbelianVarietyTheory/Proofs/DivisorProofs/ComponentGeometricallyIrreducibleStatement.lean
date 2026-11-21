@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComponentGeometricallyIrreducible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.component_geometrically_irreducible : ∀ (E : Typ
     (Xo : Moduli Dw l) (c : Coeff l), FnAlgClosed Xo c → ∀ Z : Comp Xo c,
     ∃ U : (Xo.XF c).Opens, (U : Set (Xo.XF c)) = Z ∧ ∀ (k : Type) [Field k] (f : c.F →+* k),
       IrreducibleSpace ↑(pullback (U.ι ≫ pullback.snd Xo.s (spMap (IntermediateField.inclusion c.le).toRingHom)) (spMap f)) := by
-  first | exact @GlobalTheory.GeomIrrComp.exists_open_irreducibleSpace_baseChange | exact GlobalTheory.GeomIrrComp.exists_open_irreducibleSpace_baseChange | (intros; apply GlobalTheory.GeomIrrComp.exists_open_irreducibleSpace_baseChange <;> assumption)
+  exact @GlobalTheory.GeomIrrComp.exists_open_irreducibleSpace_baseChange

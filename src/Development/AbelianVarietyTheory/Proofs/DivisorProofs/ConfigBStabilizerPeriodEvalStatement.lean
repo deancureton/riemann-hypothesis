@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerPeriodEval
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.config_B_stabilizer_period_eval : GlobalTheory.Fun
         c * (coneInfFun B G.M' om' ei K μKi μi (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f (fun i => evI F (y i)) *
           ∏ᶠ v, (if v ∈ S then coneFin B G.M' om' v (ev v) K (μKv v) (μv v) (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (φ v)
             else G₁.M'.vac v) (fun i => evFin F v (y i))) := by
-  first | exact @GlobalTheory.ConeEulerGen.cone_pure_factor | exact GlobalTheory.ConeEulerGen.cone_pure_factor | (intros; apply GlobalTheory.ConeEulerGen.cone_pure_factor <;> assumption)
+  exact @GlobalTheory.ConeEulerGen.cone_pure_factor

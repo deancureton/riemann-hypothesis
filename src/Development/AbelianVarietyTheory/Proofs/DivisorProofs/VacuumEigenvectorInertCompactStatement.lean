@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacuumEigenvectorInertCompact
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.vacuum_eigenvector_inert_compact : GlobalTheory.Th
     (σ : E →ₐ[F] E) (B : Base F E) (n d : ℕ) (X : Spc F E n) (W : Spc F E d) (M : Model σ X W) (χX χW : Chr F E)
     (om : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Rep σ X W) (r s r' s' : ℕ), IsPair B M χX χW om r s r' s' → ∀ v, GlobalTheory.PairVac.GoodPlace B M χX v →
       ∀ g ∈ GlobalTheory.InertSph.KAt σ W v, ∃ c : ℂ, Acts (evFin F v) (om (1, g)) (M.vac v) (c • M.vac v) := by
-  first | exact @GlobalTheory.PairVacLine.stab_vac_line | exact GlobalTheory.PairVacLine.stab_vac_line | (intros; apply GlobalTheory.PairVacLine.stab_vac_line <;> assumption)
+  exact @GlobalTheory.PairVacLine.stab_vac_line

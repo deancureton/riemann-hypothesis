@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HomotopyProjectorComplexBounded
-import Mathlib
 import Development.WeilBound.CoreStatements.TemperedRepresentationTheory.HodgeWedgeFields.H1CommutesBaseChange
 open CategoryTheory AlgebraicGeometry TensorProduct Opposite MonoidalCategory CartesianMonoidalCategory MonObj ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.CatCoh GlobalTheory.Cris GlobalTheory.CechDR MainStatements.Hodge
 set_option maxHeartbeats 1000000 in
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.homotopy_projector_complex_bounded : ∀ {R : Type
           ((d 0).lTensor M) ((ψ 0).lTensor M) ∧
         ∀ n, QIsoAt ((Q.d n (n + 1)).hom.lTensor M) ((Q.d (n + 1) (n + 2)).hom.lTensor M)
           ((d n).lTensor M) ((d (n + 1)).lTensor M) ((ψ (n + 1)).lTensor M) := by
-  first | exact @GlobalTheory.CompanionTheory.PerfRetract.exists_finite_projective_model | exact GlobalTheory.CompanionTheory.PerfRetract.exists_finite_projective_model | (intros; apply GlobalTheory.CompanionTheory.PerfRetract.exists_finite_projective_model <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PerfRetract.exists_finite_projective_model

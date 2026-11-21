@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateFiltrationDeRhamSecond
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.conjugate_filtration_de_rham_second : ∀ (p : ℕ
       GlobalTheory.ConjSeq.frobDR p Γ(T, V) (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V)
         (onAff A hV) (e V hV s)) →
     Epi Ψ := by
-  first | exact @GlobalTheory.ConjIso.epi_frobPull_conj | exact GlobalTheory.ConjIso.epi_frobPull_conj | (intros; apply GlobalTheory.ConjIso.epi_frobPull_conj <;> assumption)
+  exact @GlobalTheory.ConjIso.epi_frobPull_conj

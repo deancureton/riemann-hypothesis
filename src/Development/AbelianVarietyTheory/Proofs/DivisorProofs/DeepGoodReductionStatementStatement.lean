@@ -27,4 +27,4 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.deep_good_reduction_statement : GlobalTheory.Published.ScholzeWeinsteinB → Hypotheses2 → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood := by
-  first | exact @GlobalTheory.CovTop.DeepGoodAll.deepGood | exact GlobalTheory.CovTop.DeepGoodAll.deepGood | (intros; apply GlobalTheory.CovTop.DeepGoodAll.deepGood <;> assumption)
+  exact @GlobalTheory.CovTop.DeepGoodAll.deepGood

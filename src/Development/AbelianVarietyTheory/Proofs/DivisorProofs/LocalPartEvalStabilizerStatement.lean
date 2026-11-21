@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPartEvalStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.local_part_eval_stabilizer : GlobalTheory.FunPr.Hy
         ∀ (L : ((Fin b × Fin (b + a') → Fv F v) → ℂ) →ₗ[ℂ] ((Fin b × Fin (b + a') → Fv F v) → ℂ)) (y : Fin b × Fin (b + a') → Fv F v),
           ∫ k, ∫ l, L (ev v (locOp v (G.M.co.rho B.ψ (partFin v (shiftA H H' l.1))) (locOp v (om (k.1, 1)) φ))) y *
             (X.ν l.1 : ℂ) * ((absE F E l.1 : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK = ∑ i, c i * L (g i) y := by
-  first | exact @GlobalTheory.ThK.LemF.coneFin_finite_comb | exact GlobalTheory.ThK.LemF.coneFin_finite_comb | (intros; apply GlobalTheory.ThK.LemF.coneFin_finite_comb <;> assumption)
+  exact @GlobalTheory.ThK.LemF.coneFin_finite_comb

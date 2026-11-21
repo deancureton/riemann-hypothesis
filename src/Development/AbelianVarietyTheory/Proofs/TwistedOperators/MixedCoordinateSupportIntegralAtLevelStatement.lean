@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MixedCoordinateSupportIntegralAtLevel
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.mixedCoordinate_support_integral_at_level : ∀ {D
       ∀ (ξ : Matrix (Fin X.rank) (Fin r) D.host.E) (x : Mx D X.rank r),
         x.map (finPart D) = (ξ.map (incA D) : Mx D X.rank r).map (finPart D) → d.mixS X ψ μ' 𝓕' Ψ x 0 ≠ 0 →
         ∀ i j, IsIntegral ℤ (((M * n : ℕ) : D.host.E) * ξ i j) := by
-  first | exact @GlobalTheory.MixSupport.mixS_support_integral | exact GlobalTheory.MixSupport.mixS_support_integral | (intros; apply GlobalTheory.MixSupport.mixS_support_integral <;> assumption)
+  exact @GlobalTheory.MixSupport.mixS_support_integral

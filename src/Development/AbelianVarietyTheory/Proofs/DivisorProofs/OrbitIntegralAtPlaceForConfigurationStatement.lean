@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OrbitIntegralAtPlaceForConfiguration
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MemConfTOfDetNeZero
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.orbit_integral_at_place_for_configuration : ∀ {F
           (schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M.co v u) (G.M.vac v)) =
         GlobalTheory.LatVac.psiAt B.ψ v (evFin F v (symp (cA σ) (-1) (incM F G.V.J) (incM F G.W.J) γ u)) •
           schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M.co v u) (G.M.vac v) := by
-  first | exact @GlobalTheory.CommVac.commVac | exact GlobalTheory.CommVac.commVac | (intros; apply GlobalTheory.CommVac.commVac <;> assumption)
+  exact @GlobalTheory.CommVac.commVac

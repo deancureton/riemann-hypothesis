@@ -10,4 +10,4 @@ open scoped nonZeroDivisors ContDiff
 open GlobalTheory.AscFin
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.latticeStabilizerAtPlace_mem_depthCongruence_gridNode : All fun {D} _ _ _ {G} _ _ => ∀ i, i ≤ D.R.m → ∀ v, v ∉ G.pl.S0 → ∀ κ, InK (G.V (.grid i 0)) (G.Λ (.grid i 0)) (· = v) κ → κ ∈ lev G (.grid i 0) := by
-  first | exact @GlobalTheory.LevelOffS.inK_mem_lev | exact GlobalTheory.LevelOffS.inK_mem_lev | (intros; apply GlobalTheory.LevelOffS.inK_mem_lev <;> assumption)
+  exact @GlobalTheory.LevelOffS.inK_mem_lev

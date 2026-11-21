@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.harishChandra_formalDegree_compactDual_large_gaps 
       ∀ (H : Type) [NormedAddCommGroup H] [InnerProductSpace ℂ H]
         (σ : Matrix (Fin N) (Fin N) ℂ → (H →L[ℂ] H)), IsDS ε lam σ →
         IsFdeg ((sc N ε : ENNReal) • Formalism.REAL.muG ε) σ (Formalism.QuantumDeterminants.fdegHC lam) := by
-  first | exact @GlobalTheory.FdegGap.fdeg_gap | exact GlobalTheory.FdegGap.fdeg_gap | (intros; apply GlobalTheory.FdegGap.fdeg_gap <;> assumption)
+  exact @GlobalTheory.FdegGap.fdeg_gap

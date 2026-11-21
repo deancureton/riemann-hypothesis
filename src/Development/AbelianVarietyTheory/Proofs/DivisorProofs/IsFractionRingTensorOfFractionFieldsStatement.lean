@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFractionRingTensorOfFractionFields
-import Mathlib
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isFractionRing_tensor_of_fraction_fields : ∀ {k R B K κ L : Type} [Field k] [CommRing R] [CommRing B] [Field K] [Field κ]
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.isFractionRing_tensor_of_fraction_fields : ∀ {k 
         (IsScalarTower.toAlgHom k R K) (IsScalarTower.toAlgHom k B κ)).toRingHom y =
       (algebraMap (K ⊗[k] κ) L).comp (Algebra.TensorProduct.map
         (IsScalarTower.toAlgHom k R K) (IsScalarTower.toAlgHom k B κ)).toRingHom x := by
-  first | exact @GlobalTheory.tensor_fractionRing_of_tensor | exact GlobalTheory.tensor_fractionRing_of_tensor | (intros; apply GlobalTheory.tensor_fractionRing_of_tensor <;> assumption)
+  exact @GlobalTheory.tensor_fractionRing_of_tensor

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BruhatCellRationalDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.bruhat_cell_rational_decomposition : ∀ (F E : Ty
     ∀ w ∈ ratPts σ J, (matHom _ σ J w).1 * adMat F (col0 Y) = adMat F (col0 X) →
     ∀ γ ∈ ratPts σ J, ¬ GlobalTheory.EisCT.OrthL σ J (col0 X) γ →
     ∃ ν : (ratPts σ J).subgroupOf (unipRad σ J (col0 X)), GlobalTheory.EisCT.StabL σ J (col0 X) (w * ν.1.1 * γ⁻¹) := by
-  first | exact @GlobalTheory.EisCT.exists_unipRad_stabL_big | exact GlobalTheory.EisCT.exists_unipRad_stabL_big | (intros; apply GlobalTheory.EisCT.exists_unipRad_stabL_big <;> assumption)
+  exact @GlobalTheory.EisCT.exists_unipRad_stabL_big

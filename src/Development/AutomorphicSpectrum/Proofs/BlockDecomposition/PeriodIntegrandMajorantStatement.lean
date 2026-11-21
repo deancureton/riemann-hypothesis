@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.PeriodIntegrandMajorant
-import Mathlib
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.RealGammaLimits.UnipotentTateFunctionalEquation
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.RealLocalIntegrals.RealGammaLimits.FunctionalEquationGL2GL1Complex
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValMeasurableEmbedding
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.period_integrand_majorant : ∀ (k : ℕ), 3 ≤ k
     ‖Ad3.LR.Wm k (Matrix.of h)⁻¹‖ * |(Matrix.of h).det| ^ (-(3 : ℝ) / 2) * ‖Ad3.LR.B.eta h‖ ^ (σ - 1) / (1 + ‖h‖) ^ N ≤
       C * (GlobalTheory.CompanionTheory.PerUInt.gk k σ ((Matrix.of h).det / (h 0 0 ^ 2 + h 1 0 ^ 2)) * (h 0 0 ^ 2 + h 1 0 ^ 2) ^ (-1 - σ / 2) *
         (GlobalTheory.CompanionTheory.PerUInt.phi (h 0 0) * GlobalTheory.CompanionTheory.PerUInt.phi (h 1 0) * (GlobalTheory.CompanionTheory.PerUInt.phi (h 0 1) * GlobalTheory.CompanionTheory.PerUInt.phi (h 1 1)))) := by
-  first | exact @GlobalTheory.CompanionTheory.PerUInt.pointwise_gamma_bound | exact GlobalTheory.CompanionTheory.PerUInt.pointwise_gamma_bound | (intros; apply GlobalTheory.CompanionTheory.PerUInt.pointwise_gamma_bound <;> assumption)
+  exact @GlobalTheory.CompanionTheory.PerUInt.pointwise_gamma_bound

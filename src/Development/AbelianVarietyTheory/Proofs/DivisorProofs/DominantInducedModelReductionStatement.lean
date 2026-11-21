@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.dominant_induced_model_reduction : Hypotheses2 →
         a * (topSelfIntersection (ZMod q) (((h.mdl (FlagAr.setB O.Y B) c).amp.pull ρ hρ).B.pull i) 1 : ℝ) +
         ∑ x, -(A.sh u s x.1 x.2) *
           (topSelfIntersection (ZMod q) ((((h.mdl (FlagAr.setB O.Y B) c).root (FlagAr.setB O.Y B) x).pull ρ hρ).B.pull i) 1 : ℝ) := by
-  first | exact @GlobalTheory.NefDeRhamCover.exists_cover_degree_eq | exact GlobalTheory.NefDeRhamCover.exists_cover_degree_eq | (intros; apply GlobalTheory.NefDeRhamCover.exists_cover_degree_eq <;> assumption)
+  exact @GlobalTheory.NefDeRhamCover.exists_cover_degree_eq

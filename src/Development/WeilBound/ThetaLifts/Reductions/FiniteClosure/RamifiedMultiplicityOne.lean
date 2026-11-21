@@ -9,7 +9,6 @@ import Development.WeilBound.ThetaLifts.LeviDeterminants.MixedModels.MixXClosed
 import Development.WeilBound.ThetaLifts.WeilDomination.DomWeilOf
 import Development.WeilBound.ThetaLifts.SmallCones.ThetaExp
 import Development.WeilBound.ThetaLifts.CartanFactorisation.InjPure
-import Mathlib
 import Development.WeilBound.ThetaLifts.CartanFactorisation.PolCountFinal
 import Development.WeilBound.ThetaLifts.LatticeBasics.HgtInt
 import Development.WeilBound.ThetaLifts.WeilDomination.SwAnisoXOf

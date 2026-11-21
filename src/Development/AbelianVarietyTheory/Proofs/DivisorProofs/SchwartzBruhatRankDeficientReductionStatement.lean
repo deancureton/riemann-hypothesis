@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzBruhatRankDeficientReduction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.schwartzBruhat_rank_deficient_reduction : ∀ (k :
       (∀ Y : Matrix (Fin a) (Fin d) k, Y.rank ≠ a → Φ₀ Y = 0) ∧
       Φ - Φ₀ ∈ Submodule.span ℂ {z | ∃ (g : GL (Fin a) k) (Ψ : Matrix (Fin a) (Fin d) k → ℂ),
         Ψ ∈ GlobalTheory.WeilM.SB (Matrix (Fin a) (Fin d) k) ∧ z = GlobalTheory.SplitFlip.omA ν β g 1 Ψ - Ψ} := by
-  first | exact @GlobalTheory.RankCoinv.exists_fullRank_sub_mem_twistSpan | exact GlobalTheory.RankCoinv.exists_fullRank_sub_mem_twistSpan | (intros; apply GlobalTheory.RankCoinv.exists_fullRank_sub_mem_twistSpan <;> assumption)
+  exact @GlobalTheory.RankCoinv.exists_fullRank_sub_mem_twistSpan

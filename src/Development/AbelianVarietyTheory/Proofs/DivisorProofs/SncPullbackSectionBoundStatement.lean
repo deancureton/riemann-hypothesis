@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SncPullbackSectionBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.snc_pullback_section_bound : ∀ (d : ℕ) (X : Ty
     (∀ i, IsPsh B (Φ i)) →
     ∫⁻ y, absLogNorm L s (μ y) ∂maMeasure B Φ ≤
       ENNReal.ofReal (mInt B Φ (fun y => -logNormSec L s (μ y))) := by
-  first | exact @GlobalTheory.LogNormPullbackBound.lintegral_absLogNorm_le | exact GlobalTheory.LogNormPullbackBound.lintegral_absLogNorm_le | (intros; apply GlobalTheory.LogNormPullbackBound.lintegral_absLogNorm_le <;> assumption)
+  exact @GlobalTheory.LogNormPullbackBound.lintegral_absLogNorm_le

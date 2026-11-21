@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NonzeroDualThetaRelevantSo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.nonzero_dual_theta_relevant_so : GlobalTheory.ThK.
     (W : Spc F E (a + a')), IsTriple B G X om om' → IsTriple B (reG G V V' W) X om om' →
     (∃ Φ' ∈ PolData B (reG G V V' W).M' ⊓ (reG G V V' W).M'.So B.ψ B.τ₁, (reG G V V' W).M'.I om' Φ' ≠ 0) →
     ∃ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, G.M'.I om' Φ' ≠ 0 := by
-  first | exact @GlobalTheory.RelevantSpaceNonzero.nonZero_reG | exact GlobalTheory.RelevantSpaceNonzero.nonZero_reG | (intros; apply GlobalTheory.RelevantSpaceNonzero.nonZero_reG <;> assumption)
+  exact @GlobalTheory.RelevantSpaceNonzero.nonZero_reG

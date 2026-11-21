@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousLeftInvariantTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.continuous_left_invariant_theta : GlobalTheory.ThK
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     IsTriple B G X om om' → ∀ Φ ∈ PolData B G.M,
       Continuous (G.M.I om Φ) ∧ ∀ γ ∈ ratU σ G.W.J, ∀ h, G.M.I om Φ (γ * h) = G.M.I om Φ h := by
-  first | exact @GlobalTheory.ThetaIntCont.continuous_and_invariant | exact GlobalTheory.ThetaIntCont.continuous_and_invariant | (intros; apply GlobalTheory.ThetaIntCont.continuous_and_invariant <;> assumption)
+  exact @GlobalTheory.ThetaIntCont.continuous_and_invariant

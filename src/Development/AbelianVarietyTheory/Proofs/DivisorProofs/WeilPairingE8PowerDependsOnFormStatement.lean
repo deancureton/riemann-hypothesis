@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingE8PowerDependsOnForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsE8WeightedBundle
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
 import ReciprocityTheory.AnalyticForms.RegularLocalRings.FinalTheorems
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.weilPairing_e8Power_depends_on_form : ∀ (W : Mat
   ∀ (x y x' y' : Out.baseOver (Sp K) ⟶ P'.A), (∀ u, x ≫ pr u = p ^ s u) → (∀ u, y ≫ pr u = q ^ t u) →
     (∀ u, x' ≫ pr u = p ^ s' u) → (∀ u, y' ≫ pr u = q ^ t' u) →
     ∀ c, Out.WeilIs P'.A P'.L N x y c → Out.WeilIs P'.A P'.L N x' y' c := by
-  first | exact @GlobalTheory.Poinc.Sep.E8Fibration.PairVal.weilIs_of_form_eq | exact GlobalTheory.Poinc.Sep.E8Fibration.PairVal.weilIs_of_form_eq | (intros; apply GlobalTheory.Poinc.Sep.E8Fibration.PairVal.weilIs_of_form_eq <;> assumption)
+  exact @GlobalTheory.Poinc.Sep.E8Fibration.PairVal.weilIs_of_form_eq

@@ -67,5 +67,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_degree_multiplicative : GlobalTheory.CovTop.HypothesesX → _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SemiAbelianLieSeminegative → DeepGood → Size → FlatDeg → Deg := by
-  first | exact @_root_.GlobalTheory.CovTop.DegProof.covering_degree_eq | exact _root_.GlobalTheory.CovTop.DegProof.covering_degree_eq | (intros; apply _root_.GlobalTheory.CovTop.DegProof.covering_degree_eq <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DegProof.covering_degree_eq
 end

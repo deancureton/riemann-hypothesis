@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinearIndependentImagesOfRankOneLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.Dets
 open NumberField
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.linearIndependent_images_of_iSupIndep_rankOne : �
     iSupIndep (fun a => Submodule.span K
       ((ell.map ((M a).restrictScalars (𝓞 K)) : Submodule (𝓞 K) (Fin n → K)) : Set (Fin n → K))) →
     LinearIndependent K (fun a => M a v) := by
-  first | exact @GlobalTheory.linearIndependent_images_of_rankOne_lattice | exact GlobalTheory.linearIndependent_images_of_rankOne_lattice | (intros; apply GlobalTheory.linearIndependent_images_of_rankOne_lattice <;> assumption)
+  exact @GlobalTheory.linearIndependent_images_of_rankOne_lattice

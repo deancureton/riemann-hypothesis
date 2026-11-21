@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarLevelMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.seesaw_evaluation_haar_level_measure : GlobalTheor
             (fun i => (((InfiniteAdeleRing.ringEquiv_mixedSpace F).symm (s i), c i) : AdeleRing (𝓞 F) F)) * (X.ν l : ℂ) * ((absE F E l : ℝ) : ℂ) ^ ((a - (b + 2)) / 2 + 1)) ∧
         ∀ (T : SchwartzMap (Fin b × Fin (a + b) → mixedEmbedding.mixedSpace F) ℂ →L[ℂ] ℂ),
           Continuous (fun p : K × (AE F E)ˣ => T (S p.1 p.2)) := by
-  first | exact @GlobalTheory.ConeSliceWeak.slice_weakly_continuous | exact GlobalTheory.ConeSliceWeak.slice_weakly_continuous | (intros; apply GlobalTheory.ConeSliceWeak.slice_weakly_continuous <;> assumption)
+  exact @GlobalTheory.ConeSliceWeak.slice_weakly_continuous

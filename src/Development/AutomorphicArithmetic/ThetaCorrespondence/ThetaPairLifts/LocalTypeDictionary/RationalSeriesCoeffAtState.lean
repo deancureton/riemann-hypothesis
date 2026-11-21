@@ -70,5 +70,5 @@ set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 1600000
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_series_rational_at_state : _root_.GlobalTheory.HeightCounting.Up.PublishedInputsThirdLayer → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AllSt fun _ _ _ _ _ _ x => ∀ (l : StrictHenselianAcyclic hL x) (i : (Dof x).ntw.Tw), (Dof x).ntw.NonzeroIndexPlace i → ∀ j b, GlobalTheory.SeriesTie.RatRow l.b.YS x.m.z.geo.v₀ l.b.ser.ex.good i j b := by
-  first | exact @_root_.GlobalTheory.PlaceRead.SeriesAtState.rational_series_coeff_at_state | exact _root_.GlobalTheory.PlaceRead.SeriesAtState.rational_series_coeff_at_state | (intros; apply _root_.GlobalTheory.PlaceRead.SeriesAtState.rational_series_coeff_at_state <;> assumption)
+  exact @_root_.GlobalTheory.PlaceRead.SeriesAtState.rational_series_coeff_at_state
 end

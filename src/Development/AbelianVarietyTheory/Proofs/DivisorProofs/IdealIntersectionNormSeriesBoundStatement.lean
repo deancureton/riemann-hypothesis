@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealIntersectionNormSeriesBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.ideal_intersection_norm_series_bound : ∀ (K : Ty
       ∑' J : {J : FractionalIdeal (nonZeroDivisors (𝓞 K)) K // J ≠ 0 ∧ J ≤ I},
         ENNReal.ofReal ((FractionalIdeal.absNorm (J : FractionalIdeal (nonZeroDivisors (𝓞 K)) K) : ℝ) ^ (-t)) *
           ∑' c : {c : K // c ∈ I₀ / (J : FractionalIdeal (nonZeroDivisors (𝓞 K)) K)}, g c := by
-  first | exact @GlobalTheory.RegroupDenom.tsum_regroup_by_denominator_le | exact GlobalTheory.RegroupDenom.tsum_regroup_by_denominator_le | (intros; apply GlobalTheory.RegroupDenom.tsum_regroup_by_denominator_le <;> assumption)
+  exact @GlobalTheory.RegroupDenom.tsum_regroup_by_denominator_le

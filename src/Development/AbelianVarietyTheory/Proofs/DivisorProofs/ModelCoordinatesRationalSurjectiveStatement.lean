@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.model_coordinates_rational_surjective : ∀ (F E :
     (n d : ℕ) (X : Spc F E n) (W : Spc F E d) (M : Model σ X W), B.IsGood σ → M.IsGood B.ψ →
     ∀ y z : Fin n × Fin d → F, ∃ x : Matrix (Fin n) (Fin d) E,
       M.co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i)) := by
-  first | exact @GlobalTheory.RatDarbSurj.rat_surj | exact GlobalTheory.RatDarbSurj.rat_surj | (intros; apply GlobalTheory.RatDarbSurj.rat_surj <;> assumption)
+  exact @GlobalTheory.RatDarbSurj.rat_surj

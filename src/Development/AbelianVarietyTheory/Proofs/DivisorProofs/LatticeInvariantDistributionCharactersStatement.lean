@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.lattice_invariant_distribution_characters : ∀ (V
       (∀ x, f' x = Complex.exp (2 * Real.pi * Complex.I * (P x μ : ℂ)) * f x) →
       T f' = Complex.exp (2 * Real.pi * Complex.I * (P a μ : ℂ)) * T f) →
     ∃ c : ℂ, ∀ f : SchwartzMap V ℂ, T f = c * ∑' l : Λ, f (a + l) := by
-  first | exact @GlobalTheory.LatticeComb.comb_unique | exact GlobalTheory.LatticeComb.comb_unique | (intros; apply GlobalTheory.LatticeComb.comb_unique <;> assumption)
+  exact @GlobalTheory.LatticeComb.comb_unique

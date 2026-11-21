@@ -6,4 +6,4 @@ open IsDedekindDomain NumberField Matrix GlobalTheory.ChiGrid GlobalTheory.FunOb
 open Formalism.MainNotions.TaylorLogMetric Formalism.MainNotions.StandardLatticesGL3 GlobalTheory.SumSize GlobalTheory.KerConjMean
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conjugate_row_bound_of_dictionary : GlobalTheory.FunPr.Hypotheses₂ → (∀ D, GlobalTheory.NormSum.Inp D) → DictK → DepthK → ∀ C1 : ℝ, 0 < C1 → BigC fun _ ch C b => ConjRowAt ch C b C1 := by
-  first | exact @GlobalTheory.KerConjRow.conjRowK | exact GlobalTheory.KerConjRow.conjRowK | (intros; apply GlobalTheory.KerConjRow.conjRowK <;> assumption)
+  exact @GlobalTheory.KerConjRow.conjRowK

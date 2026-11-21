@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactSupportPartialFourierIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.WeilM GlobalTheory.AdelicU Filter Topology
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.compact_support_partial_fourier_integral : ∀ {F 
       ∀ w : (κ → AF F) × (κ → AF F),
         @MeasureTheory.integral _ ℂ _ _ (borel _) μ (fun x => Φ x * starRingEnd ℂ (GlobalTheory.WeilM.schr ψ w Φ x)) ≠ 0 →
         (fun i => (w.1 i).2) ∈ K ∧ (fun i => (w.2 i).2) ∈ K := by
-  first | exact @GlobalTheory.CoefSupp.coef_supp | exact GlobalTheory.CoefSupp.coef_supp | (intros; apply GlobalTheory.CoefSupp.coef_supp <;> assumption)
+  exact @GlobalTheory.CoefSupp.coef_supp

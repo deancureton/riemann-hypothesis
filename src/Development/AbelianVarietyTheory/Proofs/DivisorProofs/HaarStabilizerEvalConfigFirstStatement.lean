@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarStabilizerEvalConfigFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.haar_stabilizer_eval_config_first : GlobalTheory.T
       ∫ y, cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ y * starRingEnd ℂ (φ y) ∂μY =
         ∫ k, ∫ l, (∫ y, e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ)) y * starRingEnd ℂ (φ y) ∂μY) * (X.ν l : ℂ) *
           ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK := by
-  first | exact @GlobalTheory.ConeFubini.coneFub | exact GlobalTheory.ConeFubini.coneFub | (intros; apply GlobalTheory.ConeFubini.coneFub <;> assumption)
+  exact @GlobalTheory.ConeFubini.coneFub

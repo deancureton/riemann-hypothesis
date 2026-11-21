@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.schwartz_functional_archimedean_factor_alt : ∀ (
         ∀ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ,
           L (pureA F f (Set.indicator {y | y - r ∈ GlobalTheory.EvAdm.scaledInt F κ a} fun _ => (1 : ℂ))) =
             c * thetaSum F (pureA F f (Set.indicator {y | y - r ∈ GlobalTheory.EvAdm.scaledInt F κ a} fun _ => (1 : ℂ))) := by
-  first | exact @GlobalTheory.CosetTheta.eq_mul_thetaSum_coset | exact GlobalTheory.CosetTheta.eq_mul_thetaSum_coset | (intros; apply GlobalTheory.CosetTheta.eq_mul_thetaSum_coset <;> assumption)
+  exact @GlobalTheory.CosetTheta.eq_mul_thetaSum_coset

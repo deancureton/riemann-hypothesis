@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PullbackModelArcComparison
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIntOfIsIntegral
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pullback_model_arc_comparison : ∀ (E : Type) [Fi
       g ≫ m₁.φ = g₁ ≫ Z.m.φ → g₁ ≫ Z.m0.toSABMap.φ = g₂ ≫ Y.m0.toSABMap.φ → g₁ ≫ Z.oF.t.G.hom = g₂ ≫ Y.oF.t.G.hom →
       g ≫ m₂.φ = g₂ ≫ Y.m.φ) →
     ∀ q : (pullback Z.s (spMap bV) : Scheme.{0}), pullback.fst Z.s (spMap bV) q ∈ Set.range Z.j ↔ f q ∈ Set.range Y.j := by
-  first | exact @GlobalTheory.GlobalLocalRange.fst_mem_range_j_iff | exact GlobalTheory.GlobalLocalRange.fst_mem_range_j_iff | (intros; apply GlobalTheory.GlobalLocalRange.fst_mem_range_j_iff <;> assumption)
+  exact @GlobalTheory.GlobalLocalRange.fst_mem_range_j_iff

@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.chern_integral_log_unit_vanishes : GlobalTheory.Pu
     IsArithVar p D → ∀ (a : Γ(X, ⊤)ˣ) (ι : Type) [Fintype ι] (L : ι → HermLB p) (n : ι → ℤ),
       (∀ σ, ((comb L n).φ σ).ChernIntegrableOn D Set.univ (fun y => CxPts.logSq y ⊤ a)) ∧
         chInt (comb L n) D (fun σ y => CxPts.logSq y ⊤ a) = 0 := by
-  first | exact @GlobalTheory.ArInt.chInt_logSq_unit_eq_zero | exact GlobalTheory.ArInt.chInt_logSq_unit_eq_zero | (intros; apply GlobalTheory.ArInt.chInt_logSq_unit_eq_zero <;> assumption)
+  exact @GlobalTheory.ArInt.chInt_logSq_unit_eq_zero

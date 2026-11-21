@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicSubScalarMul
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.automorphic_sub_scalar_mul : ∀ (F E : Type) [Fie
     (J : Matrix (Fin n) (Fin n) E) (r : ℕ) (X Y : Matrix (Fin n) (Fin r) E) (S : Finset (Fin r)) (K : Subgroup (GAd σ J))
     (φ₁ φ₂ : GAd σ J → ℂ) (z : ℂ), GlobalTheory.StdPar.IsAutOn σ J X Y S K φ₁ → GlobalTheory.StdPar.IsAutOn σ J X Y S K φ₂ →
       GlobalTheory.StdPar.IsAutOn σ J X Y S K (fun g => φ₁ g - z * φ₂ g) := by
-  first | exact @GlobalTheory.StdPar.AutLin.isAutOn_sub_smul | exact GlobalTheory.StdPar.AutLin.isAutOn_sub_smul | (intros; apply GlobalTheory.StdPar.AutLin.isAutOn_sub_smul <;> assumption)
+  exact @GlobalTheory.StdPar.AutLin.isAutOn_sub_smul

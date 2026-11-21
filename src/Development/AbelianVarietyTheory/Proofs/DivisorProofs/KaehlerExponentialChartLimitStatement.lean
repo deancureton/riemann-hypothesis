@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.kaehler_exponential_chart_limit : GlobalTheory.Hei
     [SmoothOfRelativeDimension d p] (a : ChartForm p σ d) (E : ChartMap p σ d), IsKaehlerForm (GlobalTheory.AnRead.all p σ d) a →
     IsExph a E → ∀ (f : GlobalTheory.CxPts p σ → ℝ) (c : GlobalTheory.AlgChart p σ d) (y : GlobalTheory.CxPts p σ), y ∈ c.e.source →
     (∃ U ∈ 𝓝 (c.e y), ContinuousOn (f ∘ c.e.symm) U) → Tendsto (fun t => rho a E f y t) (𝓝[>] 0) (𝓝 (f y)) := by
-  first | exact @GlobalTheory.RegLim.rho_tendsto | exact GlobalTheory.RegLim.rho_tendsto | (intros; apply GlobalTheory.RegLim.rho_tendsto <;> assumption)
+  exact @GlobalTheory.RegLim.rho_tendsto

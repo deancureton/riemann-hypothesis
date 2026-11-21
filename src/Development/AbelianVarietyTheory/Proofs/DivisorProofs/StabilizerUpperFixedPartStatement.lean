@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerUpperFixedPart
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -17,4 +16,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.stabilizer_upper_fixed_part : GlobalTheory.ThK.KP → ∀ (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Algebra F E] (σ : E →ₐ[F] E)
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     IsTriple B G X om om' → ∀ m : ℕ, KStabUp B om (fixPart B G.M om m) := by
-  first | exact @GlobalTheory.IndLine.fixPart_kStabUp | exact GlobalTheory.IndLine.fixPart_kStabUp | (intros; apply GlobalTheory.IndLine.fixPart_kStabUp <;> assumption)
+  exact @GlobalTheory.IndLine.fixPart_kStabUp

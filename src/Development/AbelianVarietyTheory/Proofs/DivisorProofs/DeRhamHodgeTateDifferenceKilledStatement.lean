@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.de_rham_hodge_tate_difference_killed : Hypotheses2 → HypothesesH → OnObj fun _ O _ _ _ _ => DeRhamHodgeTateDifferenceKilledAt O.Y := by
-  first | exact @GlobalTheory.HTVert.onObj_aux1tAt_of_knownResults | exact GlobalTheory.HTVert.onObj_aux1tAt_of_knownResults | (intros; apply GlobalTheory.HTVert.onObj_aux1tAt_of_knownResults <;> assumption)
+  exact @GlobalTheory.HTVert.onObj_aux1tAt_of_knownResults

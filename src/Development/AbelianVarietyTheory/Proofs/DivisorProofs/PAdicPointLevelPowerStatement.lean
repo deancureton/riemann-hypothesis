@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointLevelPower
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_level_power : ∀ (E : Type) [Field E
       (∀ k m, 0 < k → 0 < m → ∀ a, ev (k * m) a ^ m = ev k a) ∧
       (∀ k, 0 < k → ∀ a b, weil P.A k (ev k a) (ev k b) = ζ k ^ Dw.EF a b) ∧
       ∀ a, (ev (p ^ n) a).left ≫ ψ = yy ≫ (Y.oF.etaA a).left := by
-  first | exact @GlobalTheory.FlatModel.tateIso_transport_ptOn | exact GlobalTheory.FlatModel.tateIso_transport_ptOn | (intros; apply GlobalTheory.FlatModel.tateIso_transport_ptOn <;> assumption)
+  exact @GlobalTheory.FlatModel.tateIso_transport_ptOn

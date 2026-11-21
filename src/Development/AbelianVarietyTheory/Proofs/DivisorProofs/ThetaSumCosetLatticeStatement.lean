@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSumCosetLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenScaledInt
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.theta_sum_coset_lattice : ∀ (F : Type) [Field F]
     ∀ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ,
       thetaSum F (pureA F f (Set.indicator {y | y - r ∈ scaledInt F κ a} fun _ => (1 : ℂ))) =
         ∑' l : boxLat F κ a, f (ratInf F κ ρ + l) := by
-  first | exact @GlobalTheory.ThetaCoset.thetaSum_coset | exact GlobalTheory.ThetaCoset.thetaSum_coset | (intros; apply GlobalTheory.ThetaCoset.thetaSum_coset <;> assumption)
+  exact @GlobalTheory.ThetaCoset.thetaSum_coset

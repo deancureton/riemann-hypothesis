@@ -26,4 +26,4 @@ theorem _root_.GlobalTheory.T.arithmetic_self_intersection_twist_pow : GlobalThe
       IsArFun (fun o : Option ι => o.elim (M.pull ρ hρ) L) D Φ → ∀ n : ι → ℤ,
         (e : ℝ) * Φ (MvPolynomial.X none * rename some (lin fun i => (n i : ℝ)) ^ D) =
           1 / 2 * chInt (comb L n) D (fun σ y => c σ (PtsOver.map ρ hρ _ y)) := by
-  first | exact @GlobalTheory.MixPull.mix_pull_eq | exact GlobalTheory.MixPull.mix_pull_eq | (intros; apply GlobalTheory.MixPull.mix_pull_eq <;> assumption)
+  exact @GlobalTheory.MixPull.mix_pull_eq

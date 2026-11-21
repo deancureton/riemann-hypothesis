@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceNondegenerateCoordinateChange
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.trace_nondegenerate_coordinate_change : ∀ (F E :
       (∀ z, D *ᵥ z = 0 → z = 0) ∧ ∀ (y : Fin n → AE F E) (u : κb → AF F),
         GlobalTheory.ThK.Adapt.glue ε (fun k => ∑ j, Algebra.trace (AF F) (AE F E) (inclR (F := F) (AF F) (C k j) * y j)) (Sum.elim u u) =
           D.map (algebraMap F (AF F)) *ᵥ Sum.elim (h y) u := by
-  first | exact @GlobalTheory.SubintCoords.coords | exact GlobalTheory.SubintCoords.coords | (intros; apply GlobalTheory.SubintCoords.coords <;> assumption)
+  exact @GlobalTheory.SubintCoords.coords

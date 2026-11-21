@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalIdeleComponentsAtPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFirstApply
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.local_idele_components_at_place : ∀ (F E : Type)
     (∀ x, At (evFin F v) (((locIdele F w x : (AF F ⊗[F] E)ˣ) : AF F ⊗[F] E) - 1)) ∧
     (∀ (χ : Chr F E) x, ((chrW χ t (e x) : ℂˣ) : ℂ) = (χ (locIdele F w x) : ℂ)) ∧
     ∀ x (z : ℂ), GlobalTheory.SplitFlip.apow (e x) z = (((absE F E (locIdele F w x) : ℝ≥0) : ℝ) : ℂ) ^ z := by
-  first | exact @GlobalTheory.SplitCoord.local_coords | exact GlobalTheory.SplitCoord.local_coords | (intros; apply GlobalTheory.SplitCoord.local_coords <;> assumption)
+  exact @GlobalTheory.SplitCoord.local_coords

@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.parameter_statement_all : PrN → SMt → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, ParSt hL := by
-  first | exact @GlobalTheory.HeightCounting.Up.parSt_of_prN_sMt | exact GlobalTheory.HeightCounting.Up.parSt_of_prN_sMt | (intros; apply GlobalTheory.HeightCounting.Up.parSt_of_prN_sMt <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.parSt_of_prN_sMt

@@ -8,4 +8,4 @@ open CategoryTheory.Limits
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_hom_keeps_radical : ∀ (Y : GlobalTheory.ProjVar.Var ℚ) (φ : (GlobalTheory.ProjVar.proj ℚ 0).Fn →ₐ[ℚ] Y.Fn), (GlobalTheory.FlagBundle.ratOf (GlobalTheory.ProjVar.proj ℚ 0)).IsHom (GlobalTheory.FlagBundle.ratOf Y) φ (GlobalTheory.FlagQ.toPt Y) → GlobalTheory.FlagBundle.KeepsRad (GlobalTheory.FlagBundle.ratOf (GlobalTheory.ProjVar.proj ℚ 0)) (GlobalTheory.FlagBundle.ratOf Y) φ (GlobalTheory.FlagQ.toPt Y) := by
-  first | exact @GlobalTheory.FlagQ.keepsRad_toPt | exact GlobalTheory.FlagQ.keepsRad_toPt | (intros; apply GlobalTheory.FlagQ.keepsRad_toPt <;> assumption)
+  exact @GlobalTheory.FlagQ.keepsRad_toPt

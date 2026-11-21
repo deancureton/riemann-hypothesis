@@ -60,6 +60,6 @@ end TwistAwayFromPlace
 section
 open GlobalTheory.SumSize GlobalTheory.RowClaim
 theorem _root_.GlobalTheory.Adopt.away_from_places_bound : GlobalTheory.FunPr.Hypotheses₂ → AwayK := by
-  first | exact @TwistAwayFromPlace.GlobalTheory.CompanionTheory.Twist.away_k | exact TwistAwayFromPlace.GlobalTheory.CompanionTheory.Twist.away_k | (intros; apply TwistAwayFromPlace.GlobalTheory.CompanionTheory.Twist.away_k <;> assumption)
+  exact @TwistAwayFromPlace.GlobalTheory.CompanionTheory.Twist.away_k
 
 end

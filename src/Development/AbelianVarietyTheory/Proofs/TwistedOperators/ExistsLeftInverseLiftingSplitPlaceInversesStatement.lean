@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsLeftInverseLiftingSplitPlaceInverses
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_leftInverse_lifting_splitPlaceInverses : �
   ∀ K : Matrix (Fin d) (Fin d) (AE F E), At (evFin F v) (K - 1) →
   ∀ N₁ N₂ : Matrix (Fin d) (Fin d) (Fv F v), N₁ * K.map π₁ = 1 → N₂ * K.map π₂ = 1 →
   ∃ M : Matrix (Fin d) (Fin d) (AE F E), M * K = 1 ∧ M.map π₁ = N₁ ∧ M.map π₂ = N₂ := by
-  first | exact @GlobalTheory.MatrixLeftInverseLift.matrix_left_inverse_lift | exact GlobalTheory.MatrixLeftInverseLift.matrix_left_inverse_lift | (intros; apply GlobalTheory.MatrixLeftInverseLift.matrix_left_inverse_lift <;> assumption)
+  exact @GlobalTheory.MatrixLeftInverseLift.matrix_left_inverse_lift

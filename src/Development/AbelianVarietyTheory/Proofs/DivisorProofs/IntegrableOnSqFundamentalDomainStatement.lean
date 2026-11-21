@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.integrableOn_sq_fundamental_domain : ∀ (F E : Ty
     (φ : GAd σ (c • J.map σ) → ℂ), IsSqInt σ (c • J.map σ) φ →
     ∀ (μ : Measure (UA σ J)) (𝓕 : Set (UA σ J)), μ.IsHaarMeasure → IsFundamentalDomain (ratU σ J) 𝓕 μ →
       IntegrableOn (fun h => ‖φ (toGAd hσ J hc h)‖ ^ 2) 𝓕 μ := by
-  first | exact @GlobalTheory.ThK.SquareIntegrability.isSqInt_transport | exact GlobalTheory.ThK.SquareIntegrability.isSqInt_transport | (intros; apply GlobalTheory.ThK.SquareIntegrability.isSqInt_transport <;> assumption)
+  exact @GlobalTheory.ThK.SquareIntegrability.isSqInt_transport

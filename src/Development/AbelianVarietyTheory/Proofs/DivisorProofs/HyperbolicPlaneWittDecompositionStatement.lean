@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneWittDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.isParDec_mul_and_inv : ∀ (F E : Type) [Field F] 
       (∀ k, X' k 0 = H.x k) → (∀ k, Y' k 0 = c₀⁻¹ * H.y k) →
       (∀ (k : Fin n) (i : Fin r), X' k i.succ = (H.ι * Xf) k i ∧ Y' k i.succ = (H.ι * Yf) k i) → (∀ (t t' : (AE F E)ˣ) (y y' : GAd σ (c₀ • W₁.J.map σ)) (g g' : GAd σ (c₀ • W.J.map σ)), GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g → GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t' y' g' → GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M (t * t') (y * y') (g * g')) ∧
       (∀ (t : (AE F E)ˣ) (y : GAd σ (c₀ • W₁.J.map σ)) (g : GAd σ (c₀ • W.J.map σ)), GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t y g → GlobalTheory.ThK.InducedCons.IsParDec hσ W W₁ H hc₀ X' M t⁻¹ y⁻¹ g⁻¹) := by
-  first | exact @GlobalTheory.ThK.InducedCons.ParGrp.isParDec_mul_inv | exact GlobalTheory.ThK.InducedCons.ParGrp.isParDec_mul_inv | (intros; apply GlobalTheory.ThK.InducedCons.ParGrp.isParDec_mul_inv <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.ParGrp.isParDec_mul_inv

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateUniformizationDifferentialZero
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.conjugate_uniformization_differential_zero : ∀ (
     IsGrpPullback A' A (spMap (g : ℂ →+* ℂ)) p → ∀ (L : LB A.left) (L' : LB A'.left) (n n' : ℕ) (u : HolUnif A L n)
     (u' : HolUnif A' L' n') (v : epsR ℂ ⟶ A) (v' : epsR ℂ ⟶ A'),
     v'.left ≫ p = spMap (Chart.dualMapR (g : ℂ →+* ℂ)) ≫ v.left → u.IsDiff 0 v → u'.IsDiff 0 v' := by
-  first | exact @GlobalTheory.ConjTangent.isDiff_zero_of_isGrpPullback | exact GlobalTheory.ConjTangent.isDiff_zero_of_isGrpPullback | (intros; apply GlobalTheory.ConjTangent.isDiff_zero_of_isGrpPullback <;> assumption)
+  exact @GlobalTheory.ConjTangent.isDiff_zero_of_isGrpPullback

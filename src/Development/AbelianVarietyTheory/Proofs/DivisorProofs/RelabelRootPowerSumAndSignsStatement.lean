@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.relabel_root_power_sum_and_signs : ∀ (ι : Type)
     rename (rootIdx ι N j) (lamA ι N j) = linE (rkB ι N j) lamSign ∧
     ∀ al be : ℝ, rename (rootIdx ι N j) (invForm j (fun _ : ι => al) (fun _ => be) : Pol ι N) =
       ∑ a, C (cond a.2 al be) * eSum (rkB ι N j) a := by
-  first | exact @GlobalTheory.BcEigen.relabel_sums | exact GlobalTheory.BcEigen.relabel_sums | (intros; apply GlobalTheory.BcEigen.relabel_sums <;> assumption)
+  exact @GlobalTheory.BcEigen.relabel_sums

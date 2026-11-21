@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LastRowSubSingleNotMemLatticeOfNegExponent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocFacOfNeg
 import Development.AbelianVarietyTheory.Definitions.Divisors.MemMspan
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.lastRow_sub_single_not_mem_lattice_of_neg_exponent
       l.1 w (Fin.last m) < 0 →
       (fun i => pFin E ((GlobalTheory.CellDec.tl (m + 1) ϖ l.1 * g).val (Fin.last m) i)) - Pi.single (Fin.last m) 1 ∉
         GlobalTheory.ThetaPoisson.latt (m + 1) J := by
-  first | exact @GlobalTheory.CellDec.lastRow_sub_notMem_latt | exact GlobalTheory.CellDec.lastRow_sub_notMem_latt | (intros; apply GlobalTheory.CellDec.lastRow_sub_notMem_latt <;> assumption)
+  exact @GlobalTheory.CellDec.lastRow_sub_notMem_latt

@@ -24,7 +24,6 @@ theorem totient_dvd_card_units_quot (E : Type) [Field E] [NumberField E] (N : �
     (f := (ZMod.castHom (dvd_refl N) (𝓞 E ⧸ Ideal.span {(N : 𝓞 E)})).toMonoidHom) hi)
   rwa [Nat.card_eq_fintype_card, ZMod.card_units_eq_totient] at this
 
-set_option maxHeartbeats 4000000 in
 
 theorem fieldOK0_and_zeta_mem : ∀ (X : Stages) (F : IntermediateField ℚ ℂ), Rich X.B.toPre F → (∀ z, z ∈ F ↔ ∃ x ∈ X.B.Ks, X.B.embLL x = z) → ∀ p : ℕ, (p = X.toD7.host.pde ∨ p = X.toD7.host.pde') → FieldOK0 X.toD7 p ∧ ReciprocityTheory.ChartRestriction.G.Geo.Tor.zeta (15 * classNumber X.toD7.host.E) ∈ FO X.toD7 := by
   intro X F hR hF p hp'

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeInvariantPlaneTransform
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lattice_invariant_plane_transform : ∀ {F E : Typ
     (∃ a ∈ latAtV X W v, planeT σ X W H H' a = ((0, (planeT σ X W H H' γ).1.2), 0)) ∧
     (∃ b ∈ latAtV X W v, planeT σ X W H H' b = (((planeT σ X W H H' γ).1.1, 0), 0)) ∧
     (planeT σ X W H H' γ).2 ∈ latAtV X₁ W₁ v := by
-  first | exact @GlobalTheory.ThK.PlaneCo.LatDec.latAtV_dec | exact GlobalTheory.ThK.PlaneCo.LatDec.latAtV_dec | (intros; apply GlobalTheory.ThK.PlaneCo.LatDec.latAtV_dec <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.LatDec.latAtV_dec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHeightLowerBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.eisenstein_height_lower_bound : ∀ (F E : Type) [
         hE σ J (GlobalTheory.EisMidHt.firstColumn Y) y = 0 →
         ∑' c : E, ENNReal.ofReal (GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F (y + c • GlobalTheory.EisMidHt.firstColumn X)) ^ (-s)) ≤
           ENNReal.ofReal C * ENNReal.ofReal (GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F y) ^ (1 - s)) := by
-  first | exact @GlobalTheory.EisMidHt.tsum_ht_add_smul_le | exact GlobalTheory.EisMidHt.tsum_ht_add_smul_le | (intros; apply GlobalTheory.EisMidHt.tsum_ht_add_smul_le <;> assumption)
+  exact @GlobalTheory.EisMidHt.tsum_ht_add_smul_le

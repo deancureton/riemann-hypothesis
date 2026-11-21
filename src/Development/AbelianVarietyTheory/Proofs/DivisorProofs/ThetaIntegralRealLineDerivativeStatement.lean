@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_integral_real_line_derivative : ∀ (F E : T
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M,
     ∀ γ : ℝ → GAd σ (c • G.W.J.map σ), IsRealLine σ (c • G.W.J.map σ) γ →
       derR om (back hσ G.W.J hc γ) Φ ∈ GlobalTheory.ThK.PolData B G.M := by
-  first | exact @GlobalTheory.ThK.ZFinDerPol.derR_mem_polData | exact GlobalTheory.ThK.ZFinDerPol.derR_mem_polData | (intros; apply GlobalTheory.ThK.ZFinDerPol.derR_mem_polData <;> assumption)
+  exact @GlobalTheory.ThK.ZFinDerPol.derR_mem_polData

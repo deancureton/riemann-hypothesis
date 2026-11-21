@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.goodIdempotent_coeffs_correspond_fieldEmbedding : 
         ∀ (j : Fin (w.st Z).toD7.R.m) (j' : Fin (w'.st Z').toD7.R.m), (j : ℕ) = j' →
         ∀ φ : (w.st Z).toD7.what₂.LL →+* (w'.st Z').toD7.what₂.LL, (∀ x, (w'.st Z').toD7.what₂.embLL (φ x) = (w.st Z).toD7.what₂.embLL x) →
         ∀ (g : Gc (w.st Z).B w.px) (g' : Gc (w'.st Z').B w'.px), HEq g' g → (idemOf z'.Xg).coeff g' = φ ((idemOf z.Xg).coeff g)) := by
-  first | exact @GlobalTheory.Mem.R3.GoodIdemBC.idemOf_coeff_ext | exact GlobalTheory.Mem.R3.GoodIdemBC.idemOf_coeff_ext | (intros; apply GlobalTheory.Mem.R3.GoodIdemBC.idemOf_coeff_ext <;> assumption)
+  exact @GlobalTheory.Mem.R3.GoodIdemBC.idemOf_coeff_ext

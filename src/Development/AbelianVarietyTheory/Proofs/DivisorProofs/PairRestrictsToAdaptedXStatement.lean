@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairRestrictsToAdaptedX
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.pair_restricts_to_adapted_x : GlobalTheory.FunPr.H
         (∀ z : Fin d ⊕ Fin d → AE F E, ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), T (dd.rho B.ψ (Matrix.vecMulVec (incV F H.x) z) Φ) = T Φ) →
         (∀ l ∈ (adeleClass F).adm (Fin n₁ × Fin d ⊕ Fin n₁ × Fin d), l ∘ₗ T ∈ (adeleClass F).adm (Fin n × Fin d ⊕ Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), T Φ = c • ed Φ := by
-  first | exact @GlobalTheory.MixXDblUniq.main | exact GlobalTheory.MixXDblUniq.main | (intros; apply GlobalTheory.MixXDblUniq.main <;> assumption)
+  exact @GlobalTheory.MixXDblUniq.main

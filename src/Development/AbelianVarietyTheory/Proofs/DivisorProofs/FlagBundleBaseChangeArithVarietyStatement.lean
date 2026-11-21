@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleBaseChangeArithVariety
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BcFlag
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_base_change_arith_variety : ∀ (k : T
     ∃ (_ : IsIntegral (pullback π g : Scheme.{0})), IsArithVar (pullback.fst π g ≫ p) (d + 1) ∧
       pullback.fst π g (genericPoint (pullback π g : Scheme.{0})) = genericPoint Y ∧
       (pullback.fst π g).residueDegree (genericPoint (pullback π g : Scheme.{0})) ≠ 0 := by
-  first | exact @GlobalTheory.LineBundleBaseChange.main | exact GlobalTheory.LineBundleBaseChange.main | (intros; apply GlobalTheory.LineBundleBaseChange.main <;> assumption)
+  exact @GlobalTheory.LineBundleBaseChange.main

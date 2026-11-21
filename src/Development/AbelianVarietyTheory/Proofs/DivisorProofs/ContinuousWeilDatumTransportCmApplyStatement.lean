@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousWeilDatumTransportCmApply
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsContOnOfLocal
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedWeilDatumCMPreservesSchwartzHeisenberStatement
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.continuous_weilDatum_transport_cm_apply : ∀ (F E
               co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) →
             ∀ om : UG (cA σ) (incM F JA) × UG (cA σ) (incM F JB) →* Module.End ℂ ((κ → AF F) → ℂ),
               GlobalTheory.WeilSchrodinger.IsTransportF σ B.ψ co ω om → ∀ Φ ∈ schA F κ, ∀ z : κ → AF F, Continuous fun p => om p Φ z := by
-  first | exact @GlobalTheory.WeilContF.continuous_transportF_apply | exact GlobalTheory.WeilContF.continuous_transportF_apply | (intros; apply GlobalTheory.WeilContF.continuous_transportF_apply <;> assumption)
+  exact @GlobalTheory.WeilContF.continuous_transportF_apply

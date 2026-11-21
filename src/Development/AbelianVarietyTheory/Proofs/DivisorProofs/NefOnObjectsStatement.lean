@@ -7,4 +7,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.nef_on_objects : GlobalTheory.CovTop.HypothesesXH → Hypotheses2 → HypothesesH → OnObj fun _ _ A _ _ _ => NefAt A := by
-  first | exact @GlobalTheory.NefAtObj.nefAt_onObj | exact GlobalTheory.NefAtObj.nefAt_onObj | (intros; apply GlobalTheory.NefAtObj.nefAt_onObj <;> assumption)
+  exact @GlobalTheory.NefAtObj.nefAt_onObj

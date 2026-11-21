@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitFrameOddLatticeRight
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.IsAuxiliaryVectorWittDec
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SplitPlaceHermitianFrameProperties
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links MeasureTheory IsDedekindDomain NumberField Matrix
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.split_frame_odd_lattice_right : OnStd fun {D} _ _ 
   ∀ a ∈ (pcBF W F (σ + 1) h).A₁, ∀ q i, ∃ z ∈ IsLocalRing.maximalIdeal 𝒪[k] ^ G.pl.depth sc v,
     (z : k) = t q * ((fun j => p.pr (cA D (a j q))) ᵥ*
       ((G.V (.grid (2 * (σ + 1) + 1) 0)).gram.map (fun c => p.pr (incA D c)) * β.b)) i := by
-  first | exact @GlobalTheory.AscFin.FrameBarBF.bessel_step_conj_place_column_functional_bound | exact GlobalTheory.AscFin.FrameBarBF.bessel_step_conj_place_column_functional_bound | (intros; apply GlobalTheory.AscFin.FrameBarBF.bessel_step_conj_place_column_functional_bound <;> assumption)
+  exact @GlobalTheory.AscFin.FrameBarBF.bessel_step_conj_place_column_functional_bound

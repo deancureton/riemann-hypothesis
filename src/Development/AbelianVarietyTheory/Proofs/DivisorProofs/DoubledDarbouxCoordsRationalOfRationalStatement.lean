@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledDarbouxCoordsRationalOfRational
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.doubledDarbouxCoords_rational_of_rational : ∀ (D
     ∀ x : Matrix (Fin T.rank) (Fin (GlobalTheory.Doubling.dblSp S).rank) D.host.E, ∃ y z : κ ⊕ κ → D.host.F,
       (GlobalTheory.DblSchr.ddr co).e (incM D.host.F x) =
         (fun i => algebraMap D.host.F (AF D.host.F) (y i), fun i => algebraMap D.host.F (AF D.host.F) (z i)) := by
-  first | exact @GlobalTheory.DblSchr.ddr_rat | exact GlobalTheory.DblSchr.ddr_rat | (intros; apply GlobalTheory.DblSchr.ddr_rat <;> assumption)
+  exact @GlobalTheory.DblSchr.ddr_rat

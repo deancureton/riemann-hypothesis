@@ -6,4 +6,4 @@ open NumberField Classical Formalism.BasicNotions Formalism.MainNotions Formalis
 open scoped BigOperators
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.intertwinerUnitary_all : ∀ D : D7, IntertwinerUnitary D := by
-  first | exact @GlobalTheory.theta_translation_intertwiner_unitary | exact GlobalTheory.theta_translation_intertwiner_unitary | (intros; apply GlobalTheory.theta_translation_intertwiner_unitary <;> assumption)
+  exact @GlobalTheory.theta_translation_intertwiner_unitary

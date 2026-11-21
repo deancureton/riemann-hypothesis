@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.rational_levi_closure_mem : ∀ (F E : Type) [Fiel
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ m : (AE F E)ˣ → UA σ G₁.V.J → UA σ G.V.J, (∀ l g₀, IsLevi H l g₀ (m l g₀)) →
     ∀ q ∈ (ratU σ G.V.J ⊓ Subgroup.closure {g : UA σ G.V.J | mat g *ᵥ incV F H.x = incV F H.x}), ∃! γ : ratU σ G₁.V.J, (m 1 γ)⁻¹ * q ∈ unip σ G.V H := by
-  first | exact @GlobalTheory.LeviDecomp.decomp | exact GlobalTheory.LeviDecomp.decomp | (intros; apply GlobalTheory.LeviDecomp.decomp <;> assumption)
+  exact @GlobalTheory.LeviDecomp.decomp

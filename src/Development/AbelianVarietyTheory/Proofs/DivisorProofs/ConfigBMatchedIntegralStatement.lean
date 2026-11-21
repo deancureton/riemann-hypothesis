@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBMatchedIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_B_matched_integral : GlobalTheory.ThK.KP �
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F a b) (Rf₁ : FinMaps F a b),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       KStabL B G.M om R.p G₁.W H' (twPart B G.M om R.p G₁.W H' X.β ((a : ℝ) / 2) (lowPartInf B G.M R.p)) := by
-  first | exact @GlobalTheory.TwPartStabBeta.kStabL_twPart_beta | exact GlobalTheory.TwPartStabBeta.kStabL_twPart_beta | (intros; apply GlobalTheory.TwPartStabBeta.kStabL_twPart_beta <;> assumption)
+  exact @GlobalTheory.TwPartStabBeta.kStabL_twPart_beta

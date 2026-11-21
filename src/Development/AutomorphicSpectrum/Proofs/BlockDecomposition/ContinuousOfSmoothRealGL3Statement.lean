@@ -16,4 +16,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 open GlobalTheory.CompanionTheory.GL2Factorization
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.continuous_of_smooth_real_GL3 : ∀ W : GL (Fin 3) ℝ → ℂ, SmoothR W → Continuous W := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Factorization.smoothR_continuous | exact GlobalTheory.CompanionTheory.GL2Factorization.smoothR_continuous | (intros; apply GlobalTheory.CompanionTheory.GL2Factorization.smoothR_continuous <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Factorization.smoothR_continuous

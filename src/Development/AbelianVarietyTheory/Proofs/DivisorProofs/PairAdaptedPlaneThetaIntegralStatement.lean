@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedPlaneThetaIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_theta_integral : GlobalTheory.T
       IsEv B M₁ M₂ 1 H'.ι (iso0 d₂ H') e₂ ∧
       ∀ φ ∈ schA F (Fin d₂ × Fin d),
         ∫ u in 𝓕, thetaSum F (M₁.co.rho B.ψ (Matrix.vecMulVec (vf u) (incV F H'.x)) φ) ∂μ = C * thetaSum F (e₂ φ) := by
-  first | exact @GlobalTheory.UnipThetaMean.mean_theta_eq | exact GlobalTheory.UnipThetaMean.mean_theta_eq | (intros; apply GlobalTheory.UnipThetaMean.mean_theta_eq <;> assumption)
+  exact @GlobalTheory.UnipThetaMean.mean_theta_eq

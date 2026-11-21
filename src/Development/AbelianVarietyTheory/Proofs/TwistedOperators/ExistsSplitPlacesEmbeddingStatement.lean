@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsSplitPlacesEmbedding
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DarbouxModelAlgebraicVectorsLeAdelicSchwartzStatement
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_split_places_embedding : GlobalTheory.FunPr
     ∃ S : Finset (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Pl F), ∀ v ∉ S, Nonempty (E →ₐ[F] Fv F v) →
       ∀ k ∈ GlobalTheory.InertSph.KAt σ G.V v,
         GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Acts (GlobalTheory.AdelicU.evFin F v) (om (k, 1)) (G.M.vac v) (G.M.vac v) := by
-  first | exact @GlobalTheory.SplitSphLeft.vac_fixed_split_left | exact GlobalTheory.SplitSphLeft.vac_fixed_split_left | (intros; apply GlobalTheory.SplitSphLeft.vac_fixed_split_left <;> assumption)
+  exact @GlobalTheory.SplitSphLeft.vac_fixed_split_left

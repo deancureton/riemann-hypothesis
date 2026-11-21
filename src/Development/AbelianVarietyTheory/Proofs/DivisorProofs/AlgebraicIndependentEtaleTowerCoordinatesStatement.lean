@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicIndependentEtaleTowerCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.algebraicIndependent_etaleTower_coordinates : ∀ 
   IsEtTower cK R cL T ι ψ τ → TrBasis cK (fun i => (x i : K)) →
   Function.Injective (MvPolynomial.eval₂Hom ι τ) →
   (letI := cL.toAlgebra; AlgebraicIndependent ℂ (Fin.append (fun i => (τ i : L)) (fun i => (ι (x i) : L)))) := by
-  first | exact @GlobalTheory.FieldPair.etTower_coords_algebraicIndependent | exact GlobalTheory.FieldPair.etTower_coords_algebraicIndependent | (intros; apply GlobalTheory.FieldPair.etTower_coords_algebraicIndependent <;> assumption)
+  exact @GlobalTheory.FieldPair.etTower_coords_algebraicIndependent

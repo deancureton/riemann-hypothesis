@@ -15,4 +15,4 @@ open scoped TensorProduct Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rows_mem_base_chain_stage_zero : ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), PkHyp W → ∀ T ∈ ThetaLiftSpaceZero W, T ∈ (GlobalTheory.BaseChain.stageY W 0).CC (GlobalTheory.BaseChain.com W) := by
-  first | exact @GlobalTheory.BaseChain.rows_mem_CC | exact GlobalTheory.BaseChain.rows_mem_CC | (intros; apply GlobalTheory.BaseChain.rows_mem_CC <;> assumption)
+  exact @GlobalTheory.BaseChain.rows_mem_CC

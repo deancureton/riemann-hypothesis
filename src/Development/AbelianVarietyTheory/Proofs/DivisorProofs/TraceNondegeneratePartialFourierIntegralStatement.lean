@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceNondegeneratePartialFourierIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.trace_nondegenerate_partial_fourier_integral : ∀
       ∃ Λ ∈ (adeleClass F).adm κ, ∀ Ψ ∈ schA F κ, Λ Ψ = (letI : MeasurableSpace (Fin n → AE F E) := borel _;
         ∫ y, GlobalTheory.DiagSiegel.diagInt μ₁ (fun v => Ψ (GlobalTheory.ThK.Adapt.glue ε
           (fun k => ∑ j, Algebra.trace (AF F) (AE F E) (inclR (F := F) (AF F) (C k j) * y j)) v)) ∂μ) := by
-  first | exact @GlobalTheory.SubspaceInt.integrable_and_adm | exact GlobalTheory.SubspaceInt.integrable_and_adm | (intros; apply GlobalTheory.SubspaceInt.integrable_and_adm <;> assumption)
+  exact @GlobalTheory.SubspaceInt.integrable_and_adm

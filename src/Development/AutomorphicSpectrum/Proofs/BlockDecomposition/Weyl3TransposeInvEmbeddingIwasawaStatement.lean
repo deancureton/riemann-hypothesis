@@ -16,4 +16,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 open GlobalTheory.CompanionTheory.GL2Factorization
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weyl3_transposeInv_embedding_iwasawa : ∀ (a b : ℝˣ) (k : GL (Fin 2) ℝ), k.val * k.valᵀ = 1 → ∃ o ∈ O3, GL2LocalData.w3R * GL2LocalData.tinvR (GL2LocalData.emR (dg2 (a * b) b * k)) = dg (a * b)⁻¹ (a * b)⁻¹ (a * b)⁻¹ * (dg (b * a) a 1 * o) := by
-  first | exact @GlobalTheory.CompanionTheory.GL2Factorization.DualIw.dual_coords | exact GlobalTheory.CompanionTheory.GL2Factorization.DualIw.dual_coords | (intros; apply GlobalTheory.CompanionTheory.GL2Factorization.DualIw.dual_coords <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GL2Factorization.DualIw.dual_coords

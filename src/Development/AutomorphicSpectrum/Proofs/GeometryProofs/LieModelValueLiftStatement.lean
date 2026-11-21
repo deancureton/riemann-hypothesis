@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieModelValueLift
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LocRatio
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GrGenOfIsFlagVBOn
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField TensorProduct Filter Topology Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lie_model_value_lift : ∀ (X : Scheme.{0}) (Ω : 
     M.ValAt _ e v → MB.Lifts (algebraMap (𝓞 L) L) (𝟙 G.left) x v →
     ∃ v' : epsAt (spMap (σ.comp (algebraMap (𝓞 L) L)) ≫ z) ⟶ G, M.ValAt _ e v' ∧
       MB.Lifts (σ.comp (algebraMap (𝓞 L) L)) (𝟙 G.left) x v' := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.RootHt.pull_lie_value | exact GlobalTheory.CompanionTheory.Ar.RootHt.pull_lie_value | (intros; apply GlobalTheory.CompanionTheory.Ar.RootHt.pull_lie_value <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.RootHt.pull_lie_value

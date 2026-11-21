@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergCreationOperatorsCommuteOfCcr
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEval
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.heisenberg_creation_operators_commute_of_ccr : ∀
     (∀ c c', H c * H c' - H c' * H c =
       ((4 * Real.pi : ℂ) * Complex.I * ((∑ w, ∑ a, ∑ b, lineSign a b * c w a b * star (c' w a b)).im : ℂ)) • 1) →
     ∀ j k : W × (Ix P Q × Ix R S), GlobalTheory.CCRFock.fockM H j * GlobalTheory.CCRFock.fockM H k = GlobalTheory.CCRFock.fockM H k * GlobalTheory.CCRFock.fockM H j := by
-  first | exact @GlobalTheory.CCRFock.fockM_comm | exact GlobalTheory.CCRFock.fockM_comm | (intros; apply GlobalTheory.CCRFock.fockM_comm <;> assumption)
+  exact @GlobalTheory.CCRFock.fockM_comm

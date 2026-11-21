@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.LocalisedBaseFramesLeadingMinorEq
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.AtBase
 import Formalism.LocalToGlobal.SiegelLatticeTheory.CokernelGLCounts.NGData
 import Formalism.LocalToGlobal.SiegelLatticeTheory.ClosedLocalOrbits.GaugeLatticeShifts.LocFacts
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.localised_base_frames_leading_minor_eq : ∀ (D : 
     AtBase Z p F F' Tn T'n P → ∀ l : ℕ, P.Dm l =
       (∏ a : Fin (D.R.rS + 1), if a.val < l then (Z.M p).L.cj (frFac Z.δ p a) * frFac Z.δ p a else 1) *
         (D.s.atP p).ιE (Formalism.MainNotions.S.Dl F.fl F'.fl l) := by
-  first | exact @GlobalTheory.LocMinor.leadMinor_atBase | exact GlobalTheory.LocMinor.leadMinor_atBase | (intros; apply GlobalTheory.LocMinor.leadMinor_atBase <;> assumption)
+  exact @GlobalTheory.LocMinor.leadMinor_atBase

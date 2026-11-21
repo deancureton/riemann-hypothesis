@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingStabilizerCompact
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.doubling_stabilizer_compact : GlobalTheory.ThK.KP 
     ∀ W₂ : Spc F E (n + n), W₂.J = dblGram finSumFinEquiv W.J → W₂.L = sumLat finSumFinEquiv W.L W.L →
     (∀ w, W₂.θ w = blkMat finSumFinEquiv (W.θ w) (-W.θ w)) →
     ∀ K : Subgroup (UA σ W₂.J), IsStab B K → IsCompact (K : Set (UA σ W₂.J)) := by
-  first | exact @GlobalTheory.DblStabSkew.isCompact_of_isStab_dbl | exact GlobalTheory.DblStabSkew.isCompact_of_isStab_dbl | (intros; apply GlobalTheory.DblStabSkew.isCompact_of_isStab_dbl <;> assumption)
+  exact @GlobalTheory.DblStabSkew.isCompact_of_isStab_dbl

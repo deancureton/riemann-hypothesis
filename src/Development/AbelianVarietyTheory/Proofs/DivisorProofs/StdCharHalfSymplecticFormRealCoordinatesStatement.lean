@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StdCharHalfSymplecticFormRealCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTopologicalRingAE
 open scoped TensorProduct Matrix BoundedContinuousFunction ContDiff
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.IndefR.DatumF MeasureTheory Matrix GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.stdChar_half_symplecticForm_real_coordinates : ∀
       IsInfFamF (fun w : InfinitePlace F => (B.emb w).1) θ → ∀ ι : (InfinitePlace F → ℂ) →+ AEF F E, IsChartF θ ι →
       ∀ u v : IxF F nS nT → ℂ, B.ψ (symplOHF σ JS JT ξ₀ (iotaVF ι u) (iotaVF ι v)) =
         Complex.exp (Real.pi * Complex.I * ((star v ⬝ᵥ HMF JS JT ξ₀ (fun w : InfinitePlace F => (B.emb w).1) *ᵥ u).im : ℂ)) := by
-  first | exact @GlobalTheory.RealCharF.psi_symplOHF_iotaVF | exact GlobalTheory.RealCharF.psi_symplOHF_iotaVF | (intros; apply GlobalTheory.RealCharF.psi_symplOHF_iotaVF <;> assumption)
+  exact @GlobalTheory.RealCharF.psi_symplOHF_iotaVF

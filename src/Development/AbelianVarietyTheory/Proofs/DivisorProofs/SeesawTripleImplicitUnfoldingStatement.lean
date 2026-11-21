@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTripleImplicitUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -42,4 +41,4 @@ theorem _root_.GlobalTheory.T.seesaw_triple_implicit_unfolding : ∀ {F E : Type
       coneFinInt B G.M' om' v (ev' v) (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) (G.M'.vac v) 1 l.1 (fun i => evFin F v (y i)) ∂(μv v) =
       unrFac X.ν (H.𝔟⁻¹ * conjI σ H'.𝔟) ((((a - (b + 2)) / 2 + 1 : ℕ) : ℂ)) v * G₁.M'.vac v (fun i => evFin F v (y i))) ∧
     Summable (fun v : {v : Pl F // v ∉ T} => ‖unrFac X.ν (H.𝔟⁻¹ * conjI σ H'.𝔟) ((((a - (b + 2)) / 2 + 1 : ℕ) : ℂ)) v.1 - 1‖) := by
-  first | exact @GlobalTheory.ThK.UnrVacB.unr_vac_integrands | exact GlobalTheory.ThK.UnrVacB.unr_vac_integrands | (intros; apply GlobalTheory.ThK.UnrVacB.unr_vac_integrands <;> assumption)
+  exact @GlobalTheory.ThK.UnrVacB.unr_vac_integrands

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDifferentialOperatorInfinitePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
 open scoped ContDiff
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_differential_operator_infinite_place : ∀ 
           (∀ t, GlobalTheory.Orb.archMat σ (c • G.W.J.map σ) τ (projArch σ (c • G.W.J.map σ) w (γ t)) = NormedSpace.exp (t • Z)) →
           ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ x, HasDerivAt (fun s : ℝ => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm (x * γ s)))
             (G.M'.I om' (D Z Φ) ((toGAd hσ G.W.J hc).symm x)) 0 := by
-  first | exact @GlobalTheory.ThKSmoothDerSmall.hasDerivAt_thetaIntegral_small | exact GlobalTheory.ThKSmoothDerSmall.hasDerivAt_thetaIntegral_small | (intros; apply GlobalTheory.ThKSmoothDerSmall.hasDerivAt_thetaIntegral_small <;> assumption)
+  exact @GlobalTheory.ThKSmoothDerSmall.hasDerivAt_thetaIntegral_small

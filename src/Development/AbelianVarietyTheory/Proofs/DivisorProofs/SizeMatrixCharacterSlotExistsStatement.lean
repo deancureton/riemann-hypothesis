@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_size_matrix_character : ∀ (k : Type) [Fie
     ∃ (r : Fin 2) (l : ℕ), l ≤ i ∧
       ‖((cellScalar f g (pairChar k b χ) ⟨blockScalar₂ k N i ϖ, blockScalar_mem_relParab N i ϖ g⟩ : ℂˣ) : ℂ)‖ =
         nabs k ϖ ^ ((1 - (b r : ℝ)) / 2 + l) := by
-  first | exact @GlobalTheory.LeviBlockExponentLocal.norm_cellScalar_positionElt | exact GlobalTheory.LeviBlockExponentLocal.norm_cellScalar_positionElt | (intros; apply GlobalTheory.LeviBlockExponentLocal.norm_cellScalar_positionElt <;> assumption)
+  exact @GlobalTheory.LeviBlockExponentLocal.norm_cellScalar_positionElt

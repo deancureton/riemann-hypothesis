@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_product : GlobalTheory.FunPr.H
     ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')),
       ContinuousOn (fun x : UA σ G.V.J => ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' 1))) (locOpInf (om (x, 1)) f)))
         (UAt σ G.V (evI F)) := by
-  first | exact @GlobalTheory.ArchWeilCont.continuousOn_eval_shift | exact GlobalTheory.ArchWeilCont.continuousOn_eval_shift | (intros; apply GlobalTheory.ArchWeilCont.continuousOn_eval_shift <;> assumption)
+  exact @GlobalTheory.ArchWeilCont.continuousOn_eval_shift

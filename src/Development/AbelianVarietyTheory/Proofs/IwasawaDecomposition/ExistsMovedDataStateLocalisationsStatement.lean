@@ -5,4 +5,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_movedData_state_localisations : ∀ {K : Ctx} {B : Base} {f : Fr B.toPre} {T : TwDat B} {w : ColW B f T} {P : Pre2 K w} (x : St P) (L : LocAll (lay0 (Dof x))), ∃ m : Moved (oL x L), m.z = datL x L ∧ m.Copy ∧ m.Coh := by
-  first | exact @GlobalTheory.HeightCounting.Fin3.MvLoc.exists_moved_loc | exact GlobalTheory.HeightCounting.Fin3.MvLoc.exists_moved_loc | (intros; apply GlobalTheory.HeightCounting.Fin3.MvLoc.exists_moved_loc <;> assumption)
+  exact @GlobalTheory.HeightCounting.Fin3.MvLoc.exists_moved_loc

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularSectionExtendsOverFibre
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.SpecialFibreUnits
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsEqnIffGeneratesAtInv
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.regular_section_extends_over_fibre : ∀ (O : Type
   ∃ gen : (lbPow D M).Gen, gen.IsGen ∧
     ∀ (i : D.ι) (h : genericPoint Z ∈ D.U i),
       fnOf ((lbPow D M).U i) h (gen.s i).1 * fnOf ⊤ trivial (f.appTop.hom ((Scheme.ΓSpecIso (.of O)).inv.hom ϖ)) ^ n = (τ i : Z.functionField) ^ M := by
-  first | exact @GlobalTheory.PropZCore.gen_of_exponent | exact GlobalTheory.PropZCore.gen_of_exponent | (intros; apply GlobalTheory.PropZCore.gen_of_exponent <;> assumption)
+  exact @GlobalTheory.PropZCore.gen_of_exponent

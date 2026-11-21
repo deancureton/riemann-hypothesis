@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermSkewAdaptedLocalModelTwo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.herm_skew_adapted_local_model_two : ∀ (F E : Typ
         w = GlobalTheory.LatVac.locCo M.co v (Matrix.vecMulVec z₀ (incV F H'.x)) +
           GlobalTheory.LatVac.locCo M.co v (Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ y₀)) +
           GlobalTheory.LatVac.locCo M.co v (incM F H.ι * z * (incM F H'.ι)ᵀ) := by
-  first | exact @GlobalTheory.IsoAOrthLoc.isoA_orth_at | exact GlobalTheory.IsoAOrthLoc.isoA_orth_at | (intros; apply GlobalTheory.IsoAOrthLoc.isoA_orth_at <;> assumption)
+  exact @GlobalTheory.IsoAOrthLoc.isoA_orth_at

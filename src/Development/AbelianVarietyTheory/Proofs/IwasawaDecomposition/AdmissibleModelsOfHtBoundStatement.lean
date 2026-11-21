@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestrictio
 open Formalism.MainNotions.DIV.Cons (intO)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.admissible_models_of_ht_bound : HTBoundSt → ∀ (D : D7) (A : Amb D) (N j : ℕ) (S : Sig A N j) (κ : Lv A), AdmEx S κ := by
-  first | exact @GlobalTheory.ShFam.Pad.admEx_of_htBound | exact GlobalTheory.ShFam.Pad.admEx_of_htBound | (intros; apply GlobalTheory.ShFam.Pad.admEx_of_htBound <;> assumption)
+  exact @GlobalTheory.ShFam.Pad.admEx_of_htBound

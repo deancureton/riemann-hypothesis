@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ConjugateBlockUpperOfEigenfunctionUnipotentType
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.conjugate_blockUpper_of_eigenfunction_unipotentTyp
         ∃ c : ℂ, ∀ g, f (g * κ) = c * f g) ∧
       (Matrix.GeneralLinearGroup.map φ y = 1 → ∀ g, f (g * κ) = f g)) →
     b ∈ Formalism.L2.DIV.blockTri (Formalism.L2.DIV.blk2 r) := by
-  first | exact @GlobalTheory.CenFrameGen.block_upper_of_eigen | exact GlobalTheory.CenFrameGen.block_upper_of_eigen | (intros; apply GlobalTheory.CenFrameGen.block_upper_of_eigen <;> assumption)
+  exact @GlobalTheory.CenFrameGen.block_upper_of_eigen

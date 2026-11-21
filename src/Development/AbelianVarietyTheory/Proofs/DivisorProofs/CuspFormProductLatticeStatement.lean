@@ -17,4 +17,4 @@ open GlobalTheory.FlagTan (dimFlag)
 open GlobalTheory.HSApp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cusp_form_product_lattice : ∀ (D : D7) (T : Core D) (j : ℕ) (Y : Deep T j) (e : ℕ) (o : ℝ), Y.Good e o → 2 < Module.finrank ℚ D.host.E / 2 → ∀ (Z : Comp Y.d.Xo₂ Y.d.c₂) (a b : AllWt.Weight (T.Q.Dw j)) (w : Cusp Z Y.U a) (f : Cusp Z Y.U b), GlobalTheory.CovTop.Hypotheses₂ → ∃ g : Cusp Z Y.U (a + b), g.1 = w.1 * f.1 ∧ (w ∈ latOn Y.U Z _ → f ∈ latOn Y.U Z _ → g ∈ latOn Y.U Z _) := by
-  first | exact @GlobalTheory.HSApp.cusp_mul | exact GlobalTheory.HSApp.cusp_mul | (intros; apply GlobalTheory.HSApp.cusp_mul <;> assumption)
+  exact @GlobalTheory.HSApp.cusp_mul

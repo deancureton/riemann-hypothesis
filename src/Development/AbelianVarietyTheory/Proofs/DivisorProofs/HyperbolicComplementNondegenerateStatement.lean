@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementNondegenerate
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_complement_nondegenerate : ∀ (F E : T
     (∀ z : Fin n → AE F E, ∃ (a b : AE F E) (w : Fin n₁ → AE F E), z = a • incV F x + incM F ι *ᵥ w + b • incV F y) →
     ∀ (q : UA σ J) (a : (AE F E)ˣ), mat q *ᵥ incV F x = (a : AE F E) • incV F x →
       ∃ g₀ : UA σ J₁, ∀ w : Fin n₁ → AE F E, ∃ c : AE F E, mat q *ᵥ (incM F ι *ᵥ w) = incM F ι *ᵥ (mat g₀ *ᵥ w) + c • incV F x := by
-  first | exact @GlobalTheory.LeviCols.levi_cols | exact GlobalTheory.LeviCols.levi_cols | (intros; apply GlobalTheory.LeviCols.levi_cols <;> assumption)
+  exact @GlobalTheory.LeviCols.levi_cols

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackSquareActionSectionsGenerated
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingActionOfIsGrpPullback
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.pullback_square_action_sections_generated : ∀ {F
     ∀ (c : 𝔠.elt) (T : Over S') (x : T ⟶ A'),
       HasGen (((X.P c).pull φ₂).pull (lift (fst A' T) (snd A' T ≫ x)).left) →
       ∀ a : 𝓞 F, (∀ d : 𝔠.elt, ∃ b : 𝓞 F, a • d = b • c) → x ≫ rm'.act a = 1 := by
-  first | exact @GlobalTheory.PolKerPull.ker_pull | exact GlobalTheory.PolKerPull.ker_pull | (intros; apply GlobalTheory.PolKerPull.ker_pull <;> assumption)
+  exact @GlobalTheory.PolKerPull.ker_pull

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictionPreservesAdelicSchwartz
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
@@ -10,4 +9,4 @@ open GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun GlobalTheory.Inde
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.restriction_preserves_adelic_schwartz : ∀ (F : Type) [Field F] [NumberField F] {κ ι κ₁ : Type} [Fintype κ] [Fintype ι] [Fintype κ₁] (eq : κ ≃ ι ⊕ κ₁),
     ∀ Φ ∈ schA F κ, restrL eq Φ ∈ schA F κ₁ := by
-  first | exact @GlobalTheory.ThK.AdaptEv.restrL_mem_schA | exact GlobalTheory.ThK.AdaptEv.restrL_mem_schA | (intros; apply GlobalTheory.ThK.AdaptEv.restrL_mem_schA <;> assumption)
+  exact @GlobalTheory.ThK.AdaptEv.restrL_mem_schA

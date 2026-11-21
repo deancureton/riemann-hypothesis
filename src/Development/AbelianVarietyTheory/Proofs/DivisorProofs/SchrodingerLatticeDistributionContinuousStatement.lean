@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerLatticeDistributionContinuous
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.schrodinger_lattice_distribution_continuous : ∀ 
     ∀ μ : @Measure (Fin r → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μ →
     ∀ g ∈ SB (κ → FiniteAdeleRing (𝓞 F) F), ∃ T : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ →L[ℂ] ℂ, ∀ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ,
       ∫ x, schr ψ (∑ j, x j • ((fun k => algebraMap F (AF F) ((u j).1 k)), (fun k => algebraMap F (AF F) ((u j).2 k)))) (pureA F (⇑f) g) 0 ∂μ = T f := by
-  first | exact @GlobalTheory.LagrForm.lagr_form_admitted | exact GlobalTheory.LagrForm.lagr_form_admitted | (intros; apply GlobalTheory.LagrForm.lagr_form_admitted <;> assumption)
+  exact @GlobalTheory.LagrForm.lagr_form_admitted

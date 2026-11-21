@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeALocalPartStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_local_part_stabilizer : GlobalTheory
         Integrable (fun p : KAt K (evFin F v) × idelesAt E (evFin F v) =>
           l (ev v (locOp v (G.M.co.rho B.ψ (partFin v (shiftA H H' p.2.1))) (locOp v (om (p.1.1, 1)) φ))) *
             (X.ν p.2.1 : ℂ) * ((absE F E p.2.1 : ℝ) : ℂ) ^ ((b + 2 - a') / 2)) (μK.prod μ) := by
-  first | exact @GlobalTheory.ConeInteg.integrable_cone_integrand | exact GlobalTheory.ConeInteg.integrable_cone_integrand | (intros; apply GlobalTheory.ConeInteg.integrable_cone_integrand <;> assumption)
+  exact @GlobalTheory.ConeInteg.integrable_cone_integrand

@@ -15,4 +15,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.boundary_section_diagonal_interior_empty : ∀ (e : ℕ) (X : Type) [TopologicalSpace X] (At : FinHolAtlas e X) (m : ℕ) (L : Fin m → LocPot X) (sg : Fin m → X → X → ℂ) (Dd : Fin m → Set X), GlobalTheory.IndefiniteRowSideFullHecke.ModelDdcForms.IsBoundary At L sg Dd → ∀ i, interior {y | sg i y y = 0} = ∅ := by
-  first | exact @GlobalTheory.SncZero.interior_zero_boundary | exact GlobalTheory.SncZero.interior_zero_boundary | (intros; apply GlobalTheory.SncZero.interior_zero_boundary <;> assumption)
+  exact @GlobalTheory.SncZero.interior_zero_boundary

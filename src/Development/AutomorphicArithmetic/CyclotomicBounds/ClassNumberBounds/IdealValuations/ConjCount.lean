@@ -1,5 +1,4 @@
 import Development.AutomorphicArithmetic.CyclotomicBounds.ClassNumberBounds.IdealValuations.ResidueUnit
-import Mathlib
 
 open NumberField NumberField.IsCMField NumberField.Units IsDedekindDomain
 open scoped nonZeroDivisors

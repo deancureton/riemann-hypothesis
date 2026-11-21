@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualLatticeLocalisedByDifferent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.dual_lattice_localised_by_different : ∀ (F E : T
     (∀ t : E, (∀ o : 𝓞 E, IsIntegral ℤ (Algebra.trace ℚ E (o * t))) → IsIntegral ℤ (δ * t)) →
     (∀ t : E, IsIntegral ℤ (δ * t) → ∀ o : 𝓞 E, IsIntegral ℤ (Algebra.trace ℚ E (o * (algebraMap F E (s : F) * t)))) →
     IsSelfDualAt σ (δ • Jᵀ) L v := by
-  first | exact @GlobalTheory.TraceSelfDualAt.isSelfDualAt_smul_transpose | exact GlobalTheory.TraceSelfDualAt.isSelfDualAt_smul_transpose | (intros; apply GlobalTheory.TraceSelfDualAt.isSelfDualAt_smul_transpose <;> assumption)
+  exact @GlobalTheory.TraceSelfDualAt.isSelfDualAt_smul_transpose

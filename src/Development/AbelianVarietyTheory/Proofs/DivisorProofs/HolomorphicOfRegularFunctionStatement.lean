@@ -14,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.IrrAn
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.holomorphic_of_regular_function : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) (σ : k →+* ℂ) (d : ℕ) (R : AnRead p σ d) (W : (Limits.pullback p (spMap σ) : Scheme.{0}).Opens) (h : Γ(Limits.pullback p (spMap σ), W)), R.HoloOn (GlobalTheory.IrrAn.ptsOf p σ (W : Set (Limits.pullback p (spMap σ) : Scheme.{0}))) (fun y => valR (GlobalTheory.IrrAn.pt p σ y) W h) := by
-  first | exact @GlobalTheory.IrrAn.holoOn_valR_pt | exact GlobalTheory.IrrAn.holoOn_valR_pt | (intros; apply GlobalTheory.IrrAn.holoOn_valR_pt <;> assumption)
+  exact @GlobalTheory.IrrAn.holoOn_valR_pt

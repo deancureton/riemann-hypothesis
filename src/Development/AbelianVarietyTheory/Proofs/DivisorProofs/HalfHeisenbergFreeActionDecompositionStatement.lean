@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.half_heisenberg_free_action_decomposition : Hypoth
       (∀ (h : GlobalTheory.BadCount.Inh.halfH (Fm.D x ι) k) (y : X), h • y = y → h = 1) ∧ DirectSum.IsInternal A ∧
       ∀ (h : GlobalTheory.BadCount.Inh.halfH (Fm.D x ι) k) (y : X), ∀ v ∈ A y,
         GlobalTheory.DefRead.repAt p i (h : G0g (Fm.D x ι).nd) v ∈ A (h • y) := by
-  first | exact @GlobalTheory.DefHalf.free_half | exact GlobalTheory.DefHalf.free_half | (intros; apply GlobalTheory.DefHalf.free_half <;> assumption)
+  exact @GlobalTheory.DefHalf.free_half

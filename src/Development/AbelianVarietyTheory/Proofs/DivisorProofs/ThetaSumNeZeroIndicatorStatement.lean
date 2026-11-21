@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSumNeZeroIndicator
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsOpenScaledInt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.theta_sum_ne_zero_indicator : ∀ (F : Type) [Fiel
     Set.indicator {y | y - 0 ∈ GlobalTheory.EvAdm.scaledInt F κ a} (fun _ => (1 : ℂ)) ∈ SB (κ → FiniteAdeleRing (𝓞 F) F) →
     ∃ f : SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ,
       thetaSum F (pureA F f (Set.indicator {y | y - 0 ∈ GlobalTheory.EvAdm.scaledInt F κ a} fun _ => (1 : ℂ))) ≠ 0 := by
-  first | exact @GlobalTheory.ThetaSumNeScaled.exists_thetaSum_pureA_scaledInt_ne_zero | exact GlobalTheory.ThetaSumNeScaled.exists_thetaSum_pureA_scaledInt_ne_zero | (intros; apply GlobalTheory.ThetaSumNeScaled.exists_thetaSum_pureA_scaledInt_ne_zero <;> assumption)
+  exact @GlobalTheory.ThetaSumNeScaled.exists_thetaSum_pureA_scaledInt_ne_zero

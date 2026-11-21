@@ -1,5 +1,4 @@
 import Formalism.LogVandermondeBounds.MultinomialPowerBound
-import Mathlib
 
 namespace Formalism.LogVandermondeBounds.flipTwoThree
 

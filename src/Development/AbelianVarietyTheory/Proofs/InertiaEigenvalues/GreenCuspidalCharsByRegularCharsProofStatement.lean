@@ -6,4 +6,4 @@ open GlobalTheory.GLq GlobalTheory.Published Formalism.MainNotions.ArithmeticCyl
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.greenCuspidalCharsByRegularChars_proof : GlobalTheory.Published.GreenRegularCharacters := by
-  first | exact @GlobalTheory.greenRegularCharacters_holds | exact GlobalTheory.greenRegularCharacters_holds | (intros; apply GlobalTheory.greenRegularCharacters_holds <;> assumption)
+  exact @GlobalTheory.greenRegularCharacters_holds

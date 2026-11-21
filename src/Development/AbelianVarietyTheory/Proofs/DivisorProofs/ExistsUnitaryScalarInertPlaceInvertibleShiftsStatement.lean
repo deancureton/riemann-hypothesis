@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnitaryScalarInertPlaceInvertibleShifts
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagWZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFieldCompletionTensorOfIsInertAt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_unitaryScalar_inertPlace_invertible_shifts 
       (1 - mat k) * a = liftV v (1 : Fv F v) • (1 : Matrix (Fin n) (Fin n) (AE F E)) ∧
       b * (1 - mat (g⁻¹ * k)) = liftV v (1 : Fv F v) • (1 : Matrix (Fin n) (Fin n) (AE F E)) ∧
       (1 - mat (g⁻¹ * k)) * b = liftV v (1 : Fv F v) • (1 : Matrix (Fin n) (Fin n) (AE F E)) := by
-  first | exact @GlobalTheory.InertScalarUnit.exists_scalar_inv_at | exact GlobalTheory.InertScalarUnit.exists_scalar_inv_at | (intros; apply GlobalTheory.InertScalarUnit.exists_scalar_inv_at <;> assumption)
+  exact @GlobalTheory.InertScalarUnit.exists_scalar_inv_at

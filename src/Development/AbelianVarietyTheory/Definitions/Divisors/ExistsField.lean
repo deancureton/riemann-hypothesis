@@ -38,7 +38,6 @@ def HypsMet (F E : Type) [Field F] [NumberField F] [Field E] [NumberField E] [Al
   ∃ (ν : Measure (UA σ JV)) (𝓕 : Set (UA σ JV)), ν.IsHaarMeasure ∧ IsFundamentalDomain (ratU σ JV) 𝓕 ν
 end
 
-set_option maxHeartbeats 4000000 in
 theorem hypsMet_of (D : D7) (A V : HSp D) (han : IsAniso V) :
     HypsMet D.host.F D.host.E D.sp.cm.sig A.rank V.rank := by
   obtain ⟨ψ, χ, θ, μ, 𝓕, ω, H, ν, Φ, hψ, hχ, hres, hθ, hμ, hω, hH, hν, hΦ, hΦ0, -⟩ := GlobalTheory.AnisoStdModel.data D A V

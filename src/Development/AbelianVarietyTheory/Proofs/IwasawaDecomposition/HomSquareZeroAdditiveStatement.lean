@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.HomSquareZeroAdditive
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MulCoeEqZero
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.FormallyUnramifiedOfTangentMapInjective
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.hom_square_zero_additive : ∀ {X : Scheme.{0}} {G
     (y : overAt x0 (TrivSqZeroExt S W) ⟶ G), Formalism.L2.Pj.homAt x0 (TrivSqZeroExt.fstHom S S W) ≫ y = 1 →
     ∀ f g : W →ₗ[S] V, Formalism.L2.Pj.homAt x0 (TrivSqZeroExt.map (f + g)) ≫ y =
       (Formalism.L2.Pj.homAt x0 (TrivSqZeroExt.map f) ≫ y) * (Formalism.L2.Pj.homAt x0 (TrivSqZeroExt.map g) ≫ y) := by
-  first | exact @GlobalTheory.SqZeroAdd.map_add_comp | exact GlobalTheory.SqZeroAdd.map_add_comp | (intros; apply GlobalTheory.SqZeroAdd.map_add_comp <;> assumption)
+  exact @GlobalTheory.SqZeroAdd.map_add_comp

@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.cell_functor_scalar_action : ∀ {k : Type} [Field
           (leviTwo k (Fin (u + 1)) (Fin v)).symm.toMonoidHom)
         (leviTwo k (Fin (u + v)) (Fin 1) (1, GeneralLinearGroup.scalar (Fin 1) ϖ)) w =
         (((χ₂ * absPow k (((v : ℂ) - 1) / 2)) ϖ : ℂˣ) : ℂ) • w := by
-  first | exact @GlobalTheory.cellFunctor_detTensor_scalar_lower | exact GlobalTheory.cellFunctor_detTensor_scalar_lower | (intros; apply GlobalTheory.cellFunctor_detTensor_scalar_lower <;> assumption)
+  exact @GlobalTheory.cellFunctor_detTensor_scalar_lower

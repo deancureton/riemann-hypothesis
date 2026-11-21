@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilCompactLineAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.weil_compact_line_action : GlobalTheory.FunPr.Hypo
       ∀ f₁ f₂ f₃ : SInf F (Fin n × Fin d), Acts (evI F) (om (1, k)) f f₁ →
         ActsD (evI F) (fun t => om (1, δ (Multiplicative.ofAdd t))) f f₂ →
         Acts (evI F) (om (1, k)) f₂ f₃ → ActsD (evI F) (fun t => om (1, ε (Multiplicative.ofAdd t))) f₁ f₃ := by
-  first | exact @GlobalTheory.AdCompactLine.actsD_conj | exact GlobalTheory.AdCompactLine.actsD_conj | (intros; apply GlobalTheory.AdCompactLine.actsD_conj <;> assumption)
+  exact @GlobalTheory.AdCompactLine.actsD_conj

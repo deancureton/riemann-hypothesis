@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarMeasureIwasawaQuotient
-import Mathlib
 
 open MeasureTheory Topology
 open scoped NNReal ENNReal
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.haar_measure_iwasawa_quotient : ∀ (G Λ : Type) 
     (∀ g, ∃ n ∈ N, ∃ x, ∃ k ∈ K, g = n * j x * k) →
     ∃ c : ℝ≥0∞, c ≠ 0 ∧ c ≠ ⊤ ∧ ∀ φ : G → ℝ≥0∞, Measurable φ →
       ∫⁻ g, φ g ∂μG = c * ∫⁻ k, ∫⁻ x, ∫⁻ n, φ (n.1 * j x * k.1) * ((δ x : ℝ≥0) : ℝ≥0∞)⁻¹ ∂μN ∂μΛ ∂μK := by
-  first | exact @GlobalTheory.NAK.lintegral_eq_nak | exact GlobalTheory.NAK.lintegral_eq_nak | (intros; apply GlobalTheory.NAK.lintegral_eq_nak <;> assumption)
+  exact @GlobalTheory.NAK.lintegral_eq_nak

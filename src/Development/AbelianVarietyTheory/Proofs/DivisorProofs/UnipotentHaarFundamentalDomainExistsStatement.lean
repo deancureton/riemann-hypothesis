@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentHaarFundamentalDomainExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.unipotent_haar_fundamental_domain_exists : ∀ (F 
       IsFundamentalDomain ((ratU σ G.W.J).subgroupOf (unip σ G.W H')) 𝓕 μ ∧ μ 𝓕 = 1 ∧
       (∀ Φ ∈ PolData B G.M, ∀ h, IntegrableOn (fun u : unip σ G.W H' => G.M.I om Φ (u.1 * h)) 𝓕 μ) ∧
       ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h, IntegrableOn (fun u : unip σ G.W H' => G.M'.I om' Φ' (u.1 * h)) 𝓕 μ := by
-  first | exact @GlobalTheory.ThK.CtInt.exists_domain_integrableOn | exact GlobalTheory.ThK.CtInt.exists_domain_integrableOn | (intros; apply GlobalTheory.ThK.CtInt.exists_domain_integrableOn <;> assumption)
+  exact @GlobalTheory.ThK.CtInt.exists_domain_integrableOn

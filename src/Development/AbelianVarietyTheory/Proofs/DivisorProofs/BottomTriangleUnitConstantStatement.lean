@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTriangleUnitConstant
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_unit_constant : GlobalTheory.FunPr
         ∃ u : ℂ, u ≠ 0 ∧ u ∈ Qbar ∧ (∀ (p : ℕ) [Fact p.Prime], ¬ p ∣ GlobalTheory.SqTop.Qn G s → ∀ lam : Qbar →+* ℂ_[p], ‖lamC lam u‖ = 1) ∧
           ∀ (ea : P.a = A.rank) (ed : P.d = WW.rank),
             GlobalTheory.AdForm.xiN W.θ A WW ea.symm ed.symm r rc (fun w => starRingEnd ℂ (X.f s w)) = (κ * starRingEnd ℂ u) • P.F := by
-  first | exact @GlobalTheory.StdRead.bottom_datum | exact GlobalTheory.StdRead.bottom_datum | (intros; apply GlobalTheory.StdRead.bottom_datum <;> assumption)
+  exact @GlobalTheory.StdRead.bottom_datum

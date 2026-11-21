@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormOrthogonalDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeSocleOverOfSimple
 open scoped Topology
 set_option maxHeartbeats 1000000 in
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.hermitian_form_orthogonal_decomposition : ∀ {V :
     ∀ (W : Submodule ℂ V), W ≤ D → ∀ (s : Finset V), (↑s ⊆ (D : Set V)) →
     (∀ w ∈ W, ∃ z ∈ Submodule.span ℂ (s : Set V), B (w - z) (w - z) = 0) →
     ∀ u ∈ D, ∃ a ∈ W, ∀ w ∈ W, B w (u - a) = 0 := by
-  first | exact @GlobalTheory.exists_orthogonal_proj_of_finite_mod_radical | exact GlobalTheory.exists_orthogonal_proj_of_finite_mod_radical | (intros; apply GlobalTheory.exists_orthogonal_proj_of_finite_mod_radical <;> assumption)
+  exact @GlobalTheory.exists_orthogonal_proj_of_finite_mod_radical

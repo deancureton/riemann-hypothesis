@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TorusCharacterRestrictionCommutesRingAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.NonemptyTorusExtensionOfIsAlgClosed
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.AllTorsMap
 import Development.AbelianVarietyTheory.Definitions.Uniformization.TXFrame
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.torusCharacterRestriction_commutes_ringAction : �
     m₀'.φ = m₀.φ ≫ mV.φ →
     GlobalTheory.TorusPart.pullTorus m₀.cart j = GlobalTheory.SplitTorus.torusMap _ ρ ≫ GlobalTheory.TorusPart.PELUnif.torus P h₀ m₀' →
     ∀ (a : 𝓞 E) (x : P.D.toPre.X), ρ (a • x) = a • ρ x := by
-  first | exact @GlobalTheory.restrict_torus_smul_comm | exact GlobalTheory.restrict_torus_smul_comm | (intros; apply GlobalTheory.restrict_torus_smul_comm <;> assumption)
+  exact @GlobalTheory.restrict_torus_smul_comm

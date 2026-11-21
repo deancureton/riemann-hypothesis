@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalTensorVanishingLocal
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.Semi GlobalTheory.RealMult
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.rational_tensor_vanishing_local : ∀ (M : Scheme.
     (∀ (W' : M.Opens), IsAffineOpen W' → ∀ hW' : W' ≤ W ⊓ V,
       LinearMap.rTensor K (M.presheaf.map (homOfLE (hW'.trans inf_le_left)).op).hom.toAddMonoidHom.toIntLinearMap h = 0) →
     h = 0 := by
-  first | exact @GlobalTheory.affine_restrictions_zero_of_minimalPrimes_over | exact GlobalTheory.affine_restrictions_zero_of_minimalPrimes_over | (intros; apply GlobalTheory.affine_restrictions_zero_of_minimalPrimes_over <;> assumption)
+  exact @GlobalTheory.affine_restrictions_zero_of_minimalPrimes_over

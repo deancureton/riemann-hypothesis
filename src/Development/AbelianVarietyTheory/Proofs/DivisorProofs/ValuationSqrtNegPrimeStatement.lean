@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuationSqrtNegPrime
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.valuation_sqrt_neg_prime : ∀ (E : Type) [Field E
     (l : R) ∈ IsLocalRing.maximalIdeal R → (∀ p : ℕ, p.Prime → p ≠ l → IsUnit (p : R)) →
     ∀ (d : ℕ), d.Prime → ∀ (δ : E), δ ^ 2 = -(d : E) → ∀ σ : E →+* FractionRing R,
       GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.val_vp R l (σ δ) = (((if l = d then 1 / 2 else 0 : ℚ)) : WithTop ℚ) := by
-  first | exact @GlobalTheory.val_vp_sqrt_neg_prime | exact GlobalTheory.val_vp_sqrt_neg_prime | (intros; apply GlobalTheory.val_vp_sqrt_neg_prime <;> assumption)
+  exact @GlobalTheory.val_vp_sqrt_neg_prime

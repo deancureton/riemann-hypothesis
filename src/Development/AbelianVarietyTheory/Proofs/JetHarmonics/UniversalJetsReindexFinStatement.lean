@@ -12,4 +12,4 @@ open Formalism.MainNotions.ModuliIntegralCharts.H1.BoxTuple Formalism.MainNotion
 open ReciprocityTheory.ChartRestriction.G.TB (colM dAct)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.universalJets_reindex_fin : UnivConvSt := by
-  first | exact @GlobalTheory.PowGerm.univConv | exact GlobalTheory.PowGerm.univConv | (intros; apply GlobalTheory.PowGerm.univConv <;> assumption)
+  exact @GlobalTheory.PowGerm.univConv

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeAArchimedeanEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_a_archimedean_evaluation : ∀ (F E : 
     ∀ (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (y : Fin b × Fin (b + a') → mixedEmbedding.mixedSpace F),
       Measurable (fun p : KAt K (evI F) × idelesAt E (evI F) =>
         coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f p.1.1 p.2.1 y) := by
-  first | exact @GlobalTheory.ThK.ConeInfMeas.measurable_coneInfInt | exact GlobalTheory.ThK.ConeInfMeas.measurable_coneInfInt | (intros; apply GlobalTheory.ThK.ConeInfMeas.measurable_coneInfInt <;> assumption)
+  exact @GlobalTheory.ThK.ConeInfMeas.measurable_coneInfInt

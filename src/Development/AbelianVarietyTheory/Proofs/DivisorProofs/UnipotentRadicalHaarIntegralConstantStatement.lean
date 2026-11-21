@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalHaarIntegralConstant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_haar_integral_constant : GlobalT
       IsFundamentalDomain ((ratPts σ J).subgroupOf (unipRad σ J (col0 X))) 𝓕 μ → μ 𝓕 = 1 →
     ∀ s : ℝ, (n : ℝ) - 2 < s → ∀ g : GAd σ J,
     ∫⁻ u in 𝓕, ∑' t : GlobalTheory.EisCT.midSet σ J (col0 X) T, ENNReal.ofReal (h (t.1.1 * (u.1 * g)) ^ s) ∂μ < ⊤ := by
-  first | exact @GlobalTheory.EisMidConv.lintegral_midSet_lt_top | exact GlobalTheory.EisMidConv.lintegral_midSet_lt_top | (intros; apply GlobalTheory.EisMidConv.lintegral_midSet_lt_top <;> assumption)
+  exact @GlobalTheory.EisMidConv.lintegral_midSet_lt_top

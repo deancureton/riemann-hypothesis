@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StandardParabolicColumnStable
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.standard_parabolic_column_stable : ∀ (F E : Type
       (∀ j : Fin r, (matHom _ σ J h').1 *ᵥ (adMat F X)ᵀ j - (adMat F X)ᵀ j ∈ GlobalTheory.StdPar.colSpan F X {l | l < j ∧ l ≤ i}) ∧
       ∀ y ∈ GlobalTheory.StdPar.colPerp σ J X {l | l ≤ i}, (matHom _ σ J h').1 *ᵥ y - y ∈ GlobalTheory.StdPar.colSpan F X {l | l ≤ i}) →
     h ∈ GlobalTheory.StdPar.unip σ J X S := by
-  first | exact @GlobalTheory.StdPar.UnipCrit.mem_unip | exact GlobalTheory.StdPar.UnipCrit.mem_unip | (intros; apply GlobalTheory.StdPar.UnipCrit.mem_unip <;> assumption)
+  exact @GlobalTheory.StdPar.UnipCrit.mem_unip

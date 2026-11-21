@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilOrthogonalFiniteCover
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNsmulFix
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_finset_pairing_trivial_imp_mem_open_subgrou
         ∃ G : Finset (WOF F E nS nT), (∀ g ∈ G, ∀ i j, e * g i j = g i j) ∧
           ∀ y : WOF F E nS nT, (∀ i j, cAF σ e * y i j = y i j) →
             (∀ g ∈ G, B.ψ (symplOHF σ JS JT ξ₀ g y - symplOHF σ JS JT ξ₀ y g) = 1) → y ∈ U := by
-  first | exact @GlobalTheory.SplitAnnF.exists_finset_ann_le | exact GlobalTheory.SplitAnnF.exists_finset_ann_le | (intros; apply GlobalTheory.SplitAnnF.exists_finset_ann_le <;> assumption)
+  exact @GlobalTheory.SplitAnnF.exists_finset_ann_le

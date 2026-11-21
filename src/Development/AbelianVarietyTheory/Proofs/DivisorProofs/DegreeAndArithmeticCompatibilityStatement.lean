@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.degree_and_arithmetic_compatibility : Hypotheses2 → HypothesesH → OnObj fun _ _ A T _ _ => TieDeg T ∧ TieM T A ∧ TieAr A := by
-  first | exact @GlobalTheory.TiesOnObj.ties_onObj | exact GlobalTheory.TiesOnObj.ties_onObj | (intros; apply GlobalTheory.TiesOnObj.ties_onObj <;> assumption)
+  exact @GlobalTheory.TiesOnObj.ties_onObj

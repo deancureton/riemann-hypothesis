@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairAdaptedPlanes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_adapted_planes : ∀ (F E : Type) [Fie
             M.co.rho B.ψ (Matrix.vecMulVec y (incV F H'.x))
               (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ z₂))
                 (M.co.rho B.ψ (incM F H.ι * z * (incM F H'.ι)ᵀ) φ)) := by
-  first | exact @GlobalTheory.MixedLagrXW.exists_ratLagr | exact GlobalTheory.MixedLagrXW.exists_ratLagr | (intros; apply GlobalTheory.MixedLagrXW.exists_ratLagr <;> assumption)
+  exact @GlobalTheory.MixedLagrXW.exists_ratLagr

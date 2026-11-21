@@ -10,4 +10,4 @@ open scoped nonZeroDivisors ContDiff
 open GlobalTheory.AscFin
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.besselStep_lineComponent_eq_kappa_lattice_point : OnStd fun {D} _ _ {sc} {G} W F => ∀ ρ (h : 2 * ρ + 2 ≤ D.R.m), ∀ u ∈ (pcBF W F ρ h).Γ₀, ∃ w ∈ lineLat F ρ, ((F.oB ρ h).resS (G.V (.core (2 * ρ + 1))) u).2 = (F.lnk ρ).κ _ w := by
-  first | exact @GlobalTheory.LineComp.main | exact GlobalTheory.LineComp.main | (intros; apply GlobalTheory.LineComp.main <;> assumption)
+  exact @GlobalTheory.LineComp.main

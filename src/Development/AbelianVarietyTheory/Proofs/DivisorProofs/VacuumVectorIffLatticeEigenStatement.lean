@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.vacuum_vector_iff_lattice_eigen : ∀ {F E : Type}
     M.IsVac ψ v φ ↔ φ ∈ SB _ ∧ φ ≠ 0 ∧ ∃ θ : 𝓞 E, (θ : E) + σ θ = 1 ∧ ∀ γ ∈ latAtV X W v,
       schr (GlobalTheory.LatVac.psiAt ψ v) (GlobalTheory.LatVac.locCo M.co v γ) φ =
         ψ (⅟(2 : AF F) * symp (R := AF F) (cA σ) (inclR (F := F) (AF F) (θ : E)) (incM F X.J) (incM F W.J) γ γ) • φ := by
-  first | exact @GlobalTheory.VacLocEig.isVac_iff_loc | exact GlobalTheory.VacLocEig.isVac_iff_loc | (intros; apply GlobalTheory.VacLocEig.isVac_iff_loc <;> assumption)
+  exact @GlobalTheory.VacLocEig.isVac_iff_loc

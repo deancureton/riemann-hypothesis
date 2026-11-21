@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.unitary_admissible_matrix_coefficient : ∀ (k : T
     (∀ v, v ≠ 0 → 0 < (Bf v v).re) → (∀ g v w, Bf (σ g v) (σ g w) = Bf v w) →
     ∀ (L : V →ₗ⋆[ℂ] ℂ) (S : Subgroup (GL (Fin r) k)), IsOpen (S : Set (GL (Fin r) k)) →
       (∀ s ∈ S, ∀ w, L (σ s w) = L w) → ∃ u : V, ∀ w, L w = Bf u w := by
-  first | exact @GlobalTheory.exists_vector_of_smooth_antilinear | exact GlobalTheory.exists_vector_of_smooth_antilinear | (intros; apply GlobalTheory.exists_vector_of_smooth_antilinear <;> assumption)
+  exact @GlobalTheory.exists_vector_of_smooth_antilinear

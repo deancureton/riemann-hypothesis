@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.curve_top_self_intersection_vanish : ∀ (k : Type
     ∃ (m : ℕ) (Z' : Scheme.{0}) (i' : Z' ⟶ X) (_ : IsClosedImmersion i') (_ : IsIntegral Z')
       (_ : Algebra (ZMod r) Γ(Z', ⊤)), topologicalKrullDim Z' = 1 ∧
       ∀ L : LB X, L.IsLB → topSelfIntersection (ZMod r) ((L.pull ρ).pull i) 1 = (m : ℤ) * topSelfIntersection (ZMod r) (L.pull i') 1 := by
-  first | exact @GlobalTheory.CurveReduce.contracted_or_multiple | exact GlobalTheory.CurveReduce.contracted_or_multiple | (intros; apply GlobalTheory.CurveReduce.contracted_or_multiple <;> assumption)
+  exact @GlobalTheory.CurveReduce.contracted_or_multiple

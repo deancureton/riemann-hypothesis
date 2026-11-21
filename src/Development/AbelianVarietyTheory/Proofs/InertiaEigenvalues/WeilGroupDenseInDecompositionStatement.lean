@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.WeilGroupDenseInDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CharZeroAdicCompletion
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DecompositionGroupLocalGaloisIso
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasExponentZeroIff
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weil_group_dense_in_decomposition : ∀ (E Ω : Ty
     ∀ (U : Subgroup (GalLoc w)), IsOpen (U : Set (GalLoc w)) → ∀ (V : Set (Dec (F := E) A)), IsOpen V → g ∈ V →
     ∃ (σ : Weil h) (τ' : GalLoc w), Lifts ι τ' (σ : G E Ω) ∧ τ⁻¹ * τ' ∈ U ∧
       (⟨σ, Weil_le_Dec h σ.2⟩ : Dec (F := E) A) ∈ V := by
-  first | exact @GlobalTheory.WeilDense.weil_dense | exact GlobalTheory.WeilDense.weil_dense | (intros; apply GlobalTheory.WeilDense.weil_dense <;> assumption)
+  exact @GlobalTheory.WeilDense.weil_dense

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorFixesIntegralIndicator
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.local_operator_fixes_integral_indicator : ∀ {F E
     ∀ u : Matrix (Fin n) (Fin d) (AE F E), ∀ᶠ v in cofinite,
       locOp v (M.co.rho ψ (partFin v u)) (Set.indicator {x : Fin n × Fin d → Fv F v | ∀ i, x i ∈ v.adicCompletionIntegers F} 1) =
         Set.indicator {x : Fin n × Fin d → Fv F v | ∀ i, x i ∈ v.adicCompletionIntegers F} 1 := by
-  first | exact @GlobalTheory.VacFix.eventually_locOp_rho_indicator | exact GlobalTheory.VacFix.eventually_locOp_rho_indicator | (intros; apply GlobalTheory.VacFix.eventually_locOp_rho_indicator <;> assumption)
+  exact @GlobalTheory.VacFix.eventually_locOp_rho_indicator

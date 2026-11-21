@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ConjugateUnitaryAdelicIsoMapHaarFundamentalDomai
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.conjugateUnitaryAdelicIso_map_haar_fundamentalDoma
       (ν.map (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU S c hJ)).IsHaarMeasure ∧
       IsFundamentalDomain (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ratU D.sp.cm.sig J) (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU S c hJ '' 𝓕)
         (ν.map (GlobalTheory.IndefiniteRowSideFullHecke.UnitaryConjugation.conjU S c hJ)) := by
-  first | exact @GlobalTheory.HaarConjImage.map_isHaarFD | exact GlobalTheory.HaarConjImage.map_isHaarFD | (intros; apply GlobalTheory.HaarConjImage.map_isHaarFD <;> assumption)
+  exact @GlobalTheory.HaarConjImage.map_isHaarFD

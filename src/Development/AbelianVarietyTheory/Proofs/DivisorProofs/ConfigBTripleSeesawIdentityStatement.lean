@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBTripleSeesawIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_triple_seesaw_identity : GlobalTheory.ThK
     (∀ u ∈ isoA (F := F) H₀ H', ∀ Φ ∈ schA F (Fin a × Fin (a + (b + 2))), e' (G.M.co.rho B.ψ u Φ) = e' Φ) →
     (∀ y : Fin n₁ × Fin (a + b) → AF F, (LinearMap.proj y : Fn F n₁ (a + b) →ₗ[ℂ] ℂ) ∘ₗ e' ∈ (adeleClass F).adm (Fin a × Fin (a + (b + 2)))) →
     ∃ c : ℂ, ∀ Φ ∈ schA F (Fin a × Fin (a + (b + 2))), e' Φ = c • e₂ Φ := by
-  first | exact @GlobalTheory.TwoPlaneUniq.main | exact GlobalTheory.TwoPlaneUniq.main | (intros; apply GlobalTheory.TwoPlaneUniq.main <;> assumption)
+  exact @GlobalTheory.TwoPlaneUniq.main

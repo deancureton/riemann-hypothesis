@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsRationalFormUnramifiedRestrictionScalars
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.exists_rational_form_unramified_restrictionScalars
         ∃ c₀ : ↥(GK K) → n × Fin r → ℚ_[l], Continuous c₀ ∧ ∀ g,
           (p : Matrix (n × Fin r) (n × Fin r) ↥(MaximalUnramifiedExtension l)).mulVec (fun x => algebraMap ℚ_[l] ↥(MaximalUnramifiedExtension l) (c₀ g x)) =
             fun x => fr l x.2 (c g x.1) := by
-  first | exact @GlobalTheory.PMon.exists_ratForm | exact GlobalTheory.PMon.exists_ratForm | (intros; apply GlobalTheory.PMon.exists_ratForm <;> assumption)
+  exact @GlobalTheory.PMon.exists_ratForm

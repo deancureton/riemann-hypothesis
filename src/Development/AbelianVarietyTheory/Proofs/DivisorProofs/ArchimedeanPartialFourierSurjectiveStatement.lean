@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanPartialFourierSurjective
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.archimedean_partial_fourier_surjective : ∀ (F : 
               ((Algebra.trace ℝ (mixedEmbedding.mixedSpace F) (u ⬝ᵥ Sum.elim y (-y)) : ℝ) : ℂ)) * A f (u + Sum.elim x x)) ∧
       ∃ C : ℂ, C ≠ 0 ∧ ∀ f : SchwartzMap (κ ⊕ κ → mixedEmbedding.mixedSpace F) ℂ,
         SchwartzMap.integralCLM ℂ (MeasureTheory.volume : Measure (GlobalTheory.DiagForm.Vi F κ)) (GlobalTheory.DiagForm.compD F κ (A f)) = C * f 0 := by
-  first | exact @GlobalTheory.diagHeis_archFourier | exact GlobalTheory.diagHeis_archFourier | (intros; apply GlobalTheory.diagHeis_archFourier <;> assumption)
+  exact @GlobalTheory.diagHeis_archFourier

@@ -1,6 +1,5 @@
 import Formalism.LocalToGlobal.GlobalTheory.GL6.BwAValIntegralNonneg
 import Formalism.GL3MeanSquares.PrimeOrderRamificationResults
-import Mathlib
 import Formalism.GL3MeanSquares.HookFormulaTorsion.DoubleCosetDecompositionAll
 import Formalism.GL3MeanSquares.HookFormulaTorsion.InvariantKernelTraceVanishes
 import Formalism.LocalToGlobal.HermitianForms.IsLocBasis

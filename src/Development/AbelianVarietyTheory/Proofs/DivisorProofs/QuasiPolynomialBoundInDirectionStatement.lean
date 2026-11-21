@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.quasi_polynomial_bound_in_direction : Hypotheses2 → HypothesesH → OnObj fun _ _ A T _ _ => ∀ c, (T.F c).QPolBd A.dir := by
-  first | exact @GlobalTheory.CovHt.qPolBd_onObj | exact GlobalTheory.CovHt.qPolBd_onObj | (intros; apply GlobalTheory.CovHt.qPolBd_onObj <;> assumption)
+  exact @GlobalTheory.CovHt.qPolBd_onObj

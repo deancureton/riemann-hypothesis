@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.expansion_independent_sections : ∀ (R : Type) [C
         (D.toPre.famφB α) (DegPre.famε N) (f i α) (DegPre.prB D.toPre (FractionRing R)).left 1) →
       LinearIndependent (FractionRing R) Φ → Submodule.span (FractionRing R) (Set.range Φ) = ⊤ →
       BasisAlong G U.LG.L N (toBase (algebraMap R (FractionRing R))) (fun i => upSec G (σ i)) := by
-  first | exact @GlobalTheory.GenBasis.main | exact GlobalTheory.GenBasis.main | (intros; apply GlobalTheory.GenBasis.main <;> assumption)
+  exact @GlobalTheory.GenBasis.main

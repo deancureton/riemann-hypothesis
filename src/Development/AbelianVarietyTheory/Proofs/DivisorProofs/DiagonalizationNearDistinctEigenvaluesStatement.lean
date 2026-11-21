@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagonalizationNearDistinctEigenvalues
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsNonarchimedeanW
 open CategoryTheory AlgebraicGeometry NumberField IsDedekindDomain ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open Formalism.BasicNotions GlobalTheory GlobalTheory.Cartier GlobalTheory.CechPic GlobalTheory.ProjVar GlobalTheory.TrueGeo GlobalTheory.Mean4O GlobalTheory.CoverNorm GlobalTheory.ShFam.Pad GlobalTheory.TrivFlag GlobalTheory.WholeFlag GlobalTheory.ConstLat
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.log_colMinor_mul_Iic_sub_Iio_eq_block_add_log : �
     0 < colMinor w (P * H) Finset.univ ∧ ∀ i : Fin g, 0 < lam (β i) ∧
       Real.log (colMinor w (P * H) (Finset.Iic i)) - Real.log (colMinor w (P * H) (Finset.Iio i)) =
         Real.log (colMinor w H (blkLe β i)) - Real.log (colMinor w H (blkLt β i)) + Real.log (lam (β i)) := by
-  first | exact @GlobalTheory.ConstLat.EigenMinor.graded_minor_log_eigen | exact GlobalTheory.ConstLat.EigenMinor.graded_minor_log_eigen | (intros; apply GlobalTheory.ConstLat.EigenMinor.graded_minor_log_eigen <;> assumption)
+  exact @GlobalTheory.ConstLat.EigenMinor.graded_minor_log_eigen

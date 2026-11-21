@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.casimir_section_sum_identity : ∀ (R S k : ℕ) (
         (formT 1 B (section1 Ψ i g) (fun h => GlobalTheory.BlockReps.casK actW (section1 Ψ i g h))).re) ≤
       (Fintype.card (NC R S) : ℝ) * ((formT k B Ψ (GlobalTheory.BlockReps.casK (tAct k actW) Ψ)).re -
         (formT k B Ψ (fun g => GlobalTheory.BlockReps.casK actW (Ψ g))).re) := by
-  first | exact @GlobalTheory.SteepMult.CasDom.casDom | exact GlobalTheory.SteepMult.CasDom.casDom | (intros; apply GlobalTheory.SteepMult.CasDom.casDom <;> assumption)
+  exact @GlobalTheory.SteepMult.CasDom.casDom

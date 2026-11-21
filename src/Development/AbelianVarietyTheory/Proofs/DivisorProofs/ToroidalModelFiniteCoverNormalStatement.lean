@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalModelFiniteCoverNormal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrBasis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_finite_cover_normal : ∀ {E : Type
     ∀ (U : X.Opens) (hU : IsAffineOpen U) (τ : E →+* ℂ) (r : ℕ),
     GlobalTheory.TwoLat.GrBasis Z (R := Γ(X, U)) (hU.fromSpec ≫ ρ) τ r →
     ∃ u : LocAssign Z r jB U, IsLocFrame Z e jB πB r τ U u ∧ GlobalTheory.TwoLat.IsLocGrLat Z e jB πB r τ U u := by
-  first | exact @GlobalTheory.TwoLat.exists_locFrame_of_grBasis | exact GlobalTheory.TwoLat.exists_locFrame_of_grBasis | (intros; apply GlobalTheory.TwoLat.exists_locFrame_of_grBasis <;> assumption)
+  exact @GlobalTheory.TwoLat.exists_locFrame_of_grBasis

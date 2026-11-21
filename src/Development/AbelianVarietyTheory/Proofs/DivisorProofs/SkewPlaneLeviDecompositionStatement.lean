@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewPlaneLeviDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.skew_plane_levi_decomposition : ∀ (F E : Type) [
         (∀ (x : GlobalTheory.StdPar.unip σ (c₀ • W.J.map σ) X' (insert 0 (S'.map (Fin.succEmb r)))) (v : UA σ W.J), v ∈ unip σ W H → ∀ u ∈ GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S',
           (x : GAd σ (c₀ • W.J.map σ)) = GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ v * GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ (M ((GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀).symm u)) → ((p x : GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S') : GAd σ (c₀ • W₁.J.map σ)) = u) ∧
         ∀ x : GlobalTheory.StdPar.unip σ (c₀ • W.J.map σ) X' (insert 0 (S'.map (Fin.succEmb r))), (x : GAd σ (c₀ • W.J.map σ)) ∈ ratPts σ (c₀ • W.J.map σ) → ((p x : GlobalTheory.StdPar.unip σ (c₀ • W₁.J.map σ) Xf S') : GAd σ (c₀ • W₁.J.map σ)) ∈ ratPts σ (c₀ • W₁.J.map σ) := by
-  first | exact @GlobalTheory.FlagLeviProj.levi_proj | exact GlobalTheory.FlagLeviProj.levi_proj | (intros; apply GlobalTheory.FlagLeviProj.levi_proj <;> assumption)
+  exact @GlobalTheory.FlagLeviProj.levi_proj

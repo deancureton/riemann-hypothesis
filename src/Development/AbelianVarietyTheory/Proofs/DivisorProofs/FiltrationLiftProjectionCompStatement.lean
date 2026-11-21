@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.filtration_lift_projection_comp : ∀ {X : Scheme.
     (o : ι → ℕ), Function.Injective o → ∀ (T : ∀ a, E a ⟶ L) (u : ∀ a, E a ⟶ E' a),
     (∀ x : X, ∃ V : X.Opens, x ∈ V ∧ LocAdapted r o T u V) → FrameMem r o T u →
     ∀ (b : ι) (κ : (filtSub o T (o b + 1)).toMod ⟶ E' b), IsProj r o T u b κ → liftT o T b ≫ κ = u b := by
-  first | exact @GlobalTheory.GrFilt.liftT_comp_proj | exact GlobalTheory.GrFilt.liftT_comp_proj | (intros; apply GlobalTheory.GrFilt.liftT_comp_proj <;> assumption)
+  exact @GlobalTheory.GrFilt.liftT_comp_proj

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalPartIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_A_local_part_integral : GlobalTheory.FunPr.
     IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ (g₀ : UA σ G₁.V.J) (g : UA σ G.V.J), IsLevi H 1 g₀ g → g ∈ UAt σ G.V (evI F) → g₀ ∈ UAt σ G₁.V (evI F) →
       ∀ f : SInf F (Fin (b + 2) × Fin (b + 2 + a')), ei (locOpInf (om (g, 1)) f) = locOpInf (om₁ (g₀, 1)) (ei f) := by
-  first | exact @GlobalTheory.ThK.LemF.InfLevi.ei_levi | exact GlobalTheory.ThK.LemF.InfLevi.ei_levi | (intros; apply GlobalTheory.ThK.LemF.InfLevi.ei_levi <;> assumption)
+  exact @GlobalTheory.ThK.LemF.InfLevi.ei_levi

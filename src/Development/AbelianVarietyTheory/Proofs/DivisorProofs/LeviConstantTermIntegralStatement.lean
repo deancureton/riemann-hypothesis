@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviConstantTermIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.levi_constant_term_integral : ∀ (F E : Type) [Fi
     ∀ (μ : Measure (unip σ W H)) (𝓕 : Set (unip σ W H)), μ.IsHaarMeasure →
       IsFundamentalDomain ((ratU σ W.J).subgroupOf (unip σ W H)) 𝓕 μ → μ 𝓕 = 1 →
       ∫ u in 𝓕, Φ (m * u.1 * m⁻¹) ∂μ = ∫ u in 𝓕, Φ u.1 ∂μ := by
-  first | exact @GlobalTheory.UnipCT.setIntegral_conj_levi_of_unip_invariant | exact GlobalTheory.UnipCT.setIntegral_conj_levi_of_unip_invariant | (intros; apply GlobalTheory.UnipCT.setIntegral_conj_levi_of_unip_invariant <;> assumption)
+  exact @GlobalTheory.UnipCT.setIntegral_conj_levi_of_unip_invariant

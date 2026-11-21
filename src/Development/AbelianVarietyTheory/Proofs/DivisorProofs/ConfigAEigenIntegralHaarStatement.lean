@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAEigenIntegralHaar
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_eigen_integral_haar : GlobalTheory.ThK.KP
         G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, m * h) Φ)) 1 =
           (X.α t : ℂ) * (((absE F E t : ℝ) ^ ((a' : ℝ) / 2) : ℝ) : ℂ) *
             G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, h) Φ)) h₁ := by
-  first | exact @GlobalTheory.ThK.cone_levi_law | exact GlobalTheory.ThK.cone_levi_law | (intros; apply GlobalTheory.ThK.cone_levi_law <;> assumption)
+  exact @GlobalTheory.ThK.cone_levi_law

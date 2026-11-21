@@ -6,4 +6,4 @@ open Formalism Formalism.BasicNotions Formalism.BasicNotions.Loc GlobalTheory.Me
 open scoped Formalism.Per
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_stage_nonempty : Nonempty GlobalTheory.Mem.LocStage := by
-  first | exact @GlobalTheory.Mem.nonempty_locStage | exact GlobalTheory.Mem.nonempty_locStage | (intros; apply GlobalTheory.Mem.nonempty_locStage <;> assumption)
+  exact @GlobalTheory.Mem.nonempty_locStage

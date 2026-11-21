@@ -17,4 +17,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Chamber GlobalTheory.TruncKer GlobalTheory.Cusp
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.truncation_family_unipotent_invariant : ∀ (D : D7) (V : HSp D) (Φ : WittFrame V) (L : _) (a : _), Φ.IsGood D.sp.cm L a → ∀ Q, IsPar Q → ∀ u ∈ Q, ∀ hW : GlobalTheory.IndefiniteRowSideFullHecke.AdelicUnitaryGroups.IsIsotropic V (Φ.sub u), ∀ n ∈ NA (IsoFlag.single hW), ∀ x Tr, Yfam Φ (levelAll D.sp.cm.sig V.gram L a) (n * x) Tr Q = Yfam Φ (levelAll D.sp.cm.sig V.gram L a) x Tr Q := by
-  first | exact @GlobalTheory.TruncKer.yfam_unipRad_mul | exact GlobalTheory.TruncKer.yfam_unipRad_mul | (intros; apply GlobalTheory.TruncKer.yfam_unipRad_mul <;> assumption)
+  exact @GlobalTheory.TruncKer.yfam_unipRad_mul

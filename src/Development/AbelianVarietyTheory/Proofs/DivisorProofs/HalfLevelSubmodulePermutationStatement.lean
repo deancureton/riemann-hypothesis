@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.half_level_submodule_permutation : Hypotheses2 →
     ∃ (X : Type) (_ : Fintype X) (_ : DecidableEq X) (_ : MulAction Hg X) (A : X → Submodule ℂ (GlobalTheory.DefRead.VC (GlobalTheory.DefHalf.sigC p) (GlobalTheory.DefHalf.CF p i))),
       (∀ (h : Hg) (y : X), h • y = y → h = 1) ∧ DirectSum.IsInternal A ∧
       ∀ (h : Hg) (y : X), ∀ v ∈ A y, GlobalTheory.DefRead.bcLin (GlobalTheory.DefHalf.sigC p) (GlobalTheory.DefHalf.actC p i hp.1 (φ h)) v ∈ A (h • y) := by
-  first | exact @GlobalTheory.DefSplit.split_lift | exact GlobalTheory.DefSplit.split_lift | (intros; apply GlobalTheory.DefSplit.split_lift <;> assumption)
+  exact @GlobalTheory.DefSplit.split_lift

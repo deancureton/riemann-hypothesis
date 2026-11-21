@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairIntegralCompactInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.pair_integral_compact_invariant : ∀ (F E : Type)
       Acts (evFin F v) (om (1, g)) (M.vac v) (M.vac v)) →
     ∀ (f : SInf F (Fin n × Fin d)) (φ : ∀ v : Pl F, (Fin n × Fin d → Fv F v) → ℂ), (∀ v, φ v ∈ SB _) →
       (∀ v ∉ T, φ v = M.vac v) → om (1, k) (pure f φ) = pure f φ := by
-  first | exact @GlobalTheory.TailFix.fix_pure | exact GlobalTheory.TailFix.fix_pure | (intros; apply GlobalTheory.TailFix.fix_pure <;> assumption)
+  exact @GlobalTheory.TailFix.fix_pure

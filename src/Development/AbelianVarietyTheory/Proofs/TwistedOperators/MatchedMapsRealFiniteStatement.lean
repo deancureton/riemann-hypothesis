@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsRealFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.matched_maps_real_finite : GlobalTheory.Published.
     (Rf : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.FinMaps F a a'), GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.IsMatched Bs Γ Xc om om' R Rf →
     ∀ N : Submodule ℂ ((Fin a' × Fin (a + a') → AF F) → ℂ), IsThetaSubG Γ.M' Bs.ψ Bs.emb om' N →
       N ≠ algD Γ.M' Bs.ψ Bs.emb → ∀ Φ ∈ N, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs Γ Xc R Rf 0 Φ := by
-  first | exact @GlobalTheory.SquareAgree.polMatch_zero_of_thetaSubG | exact GlobalTheory.SquareAgree.polMatch_zero_of_thetaSubG | (intros; apply GlobalTheory.SquareAgree.polMatch_zero_of_thetaSubG <;> assumption)
+  exact @GlobalTheory.SquareAgree.polMatch_zero_of_thetaSubG

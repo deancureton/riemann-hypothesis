@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.torus_element_archimedean_matrix_form : ∀ (F E :
                    (Yf).map τ.1 * Matrix.diagonal (fun i => ((t i : ℝ) : ℂ)⁻¹ - 1) * (Formalism.UG.cT (σ : E →+* E) Xf * J).map τ.1) ∧
       GlobalTheory.Orb.archMat σ J τ (projArch σ J w a⁻¹) = (1 + (Xf).map τ.1 * Matrix.diagonal (fun i => (((fun i => (t i)⁻¹) i : ℝ) : ℂ) - 1) * (Formalism.UG.cT (σ : E →+* E) Yf * J).map τ.1 +
                    (Yf).map τ.1 * Matrix.diagonal (fun i => (((fun i => (t i)⁻¹) i : ℝ) : ℂ)⁻¹ - 1) * (Formalism.UG.cT (σ : E →+* E) Xf * J).map τ.1) := by
-  first | exact @GlobalTheory.SiegelTorusMat.archMat_torus | exact GlobalTheory.SiegelTorusMat.archMat_torus | (intros; apply GlobalTheory.SiegelTorusMat.archMat_torus <;> assumption)
+  exact @GlobalTheory.SiegelTorusMat.archMat_torus

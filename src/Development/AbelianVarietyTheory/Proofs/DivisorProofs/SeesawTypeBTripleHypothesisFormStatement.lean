@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBTripleHypothesisForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_hypothesis_form : ∀ {F E : 
     ∀ (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W) (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W),
     IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     IsUnit (GlobalTheory.PlaneBasis.basV B.τ₁ H).det ∧ IsUnit (GlobalTheory.PlaneBasis.basW B.τ₁ H').det := by
-  first | exact @GlobalTheory.PlaneBasisInv.basis_isUnit_det | exact GlobalTheory.PlaneBasisInv.basis_isUnit_det | (intros; apply GlobalTheory.PlaneBasisInv.basis_isUnit_det <;> assumption)
+  exact @GlobalTheory.PlaneBasisInv.basis_isUnit_det

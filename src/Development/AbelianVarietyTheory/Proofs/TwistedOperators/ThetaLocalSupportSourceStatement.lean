@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.theta_local_support_source : ∀ {D : D7} {T : Typ
     IsBottomTri W i j X → ∀ (t : T) (N : ℕ) (e : AE D) (P : Pl D.host.E), Formalism.L2.NTheta.IsIdemAt e P → ((N : ℕ) : 𝓞 D.host.E) ∉ P.asIdeal →
     ∀ g ∈ GfC A, Formalism.L2.Theta.SuppAt e A g →
       GlobalTheory.MovedAlg.IsAlgComb W.ψ (GlobalTheory.Grid.neg A) WW X.vac (X.ω t (g, 1) X.vac) := by
-  first | exact @GlobalTheory.SplitSourceAlg.src_split_algComb | exact GlobalTheory.SplitSourceAlg.src_split_algComb | (intros; apply GlobalTheory.SplitSourceAlg.src_split_algComb <;> assumption)
+  exact @GlobalTheory.SplitSourceAlg.src_split_algComb

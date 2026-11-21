@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.weil_representation_cm_extension : GlobalTheory.Fu
       ResEtaPow (Units.map (algebraMap F (AF F)).toMonoidHom).range χW d → IsHecke F E χX → IsHecke F E χW →
       M.IsWeil ψ χX χW om →
       ∀ v : Pl F, ∀ N N', Maximal (fun P => ThetaSub om v P ∧ P ≠ SB _) N → Maximal (fun P => ThetaSub om v P ∧ P ≠ SB _) N' → N = N' := by
-  first | exact @GlobalTheory.HoweAllPlaces.main | exact GlobalTheory.HoweAllPlaces.main | (intros; apply GlobalTheory.HoweAllPlaces.main <;> assumption)
+  exact @GlobalTheory.HoweAllPlaces.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodChartTranslationLift
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiCompactUnitPair
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory MonObj
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.period_chart_translation_lift : ∀ (k : Type) [Co
       ev _ σ (GlobalTheory.RelCotAb.divMap A ⁻¹ᵁ W₁) ((GlobalTheory.RelCotAb.divMap A).app W₁ h)
           (GlobalTheory.RelCotAb.pairPt A (ex (v, z)) (ex (v, z + u)) hz) =
         ev (A.hom ≫ p) σ W₁ h (ex (v, u)) := by
-  first | exact @GlobalTheory.RelCotAb.ev_divMap_pairPt_periodChart | exact GlobalTheory.RelCotAb.ev_divMap_pairPt_periodChart | (intros; apply GlobalTheory.RelCotAb.ev_divMap_pairPt_periodChart <;> assumption)
+  exact @GlobalTheory.RelCotAb.ev_divMap_pairPt_periodChart

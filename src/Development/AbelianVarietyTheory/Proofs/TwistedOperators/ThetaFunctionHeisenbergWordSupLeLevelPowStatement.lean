@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaFunctionHeisenbergWordSupLeLevelPow
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.thetaFunction_heisenbergWord_sup_le_level_pow : �
       ∀ l : List (D.what₂.Tau × Fin X.rank × Fin V.rank × Bool),
         GlobalTheory.HeisTaylor.supN (GlobalTheory.Size.wordAct (GlobalTheory.Size.heisDer ψ θ) l f) ≤
           ENNReal.ofReal (C * (n : ℝ) ^ B) * GlobalTheory.Size.sobO (V := V) (W := X) ψ θ μ 𝓕 (k + l.length) f := by
-  first | exact @GlobalTheory.LevelSupBound.supN_word_le | exact GlobalTheory.LevelSupBound.supN_word_le | (intros; apply GlobalTheory.LevelSupBound.supN_word_le <;> assumption)
+  exact @GlobalTheory.LevelSupBound.supN_word_le

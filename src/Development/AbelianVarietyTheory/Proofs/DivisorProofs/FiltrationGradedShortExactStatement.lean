@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.filtration_graded_short_exact : ∀ {X : Scheme.{0
     (∀ x : X, ∃ V : X.Opens, x ∈ V ∧ LocAdapted r o T u V) → FrameMem r o T u →
     ∀ (b : ι) (κ : (filtSub o T (o b + 1)).toMod ⟶ E' b), IsProj r o T u b κ →
     ∃ w : stepMap o T (o b) ≫ κ = 0, (ShortComplex.mk _ _ w).ShortExact := by
-  first | exact @GlobalTheory.GrFilt.shortExact_stepMap | exact GlobalTheory.GrFilt.shortExact_stepMap | (intros; apply GlobalTheory.GrFilt.shortExact_stepMap <;> assumption)
+  exact @GlobalTheory.GrFilt.shortExact_stepMap

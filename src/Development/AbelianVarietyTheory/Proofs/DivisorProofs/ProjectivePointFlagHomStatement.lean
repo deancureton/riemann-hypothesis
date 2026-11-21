@@ -8,4 +8,4 @@ open CategoryTheory.Limits
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.projective_point_flag_hom : ∀ (Y : GlobalTheory.ProjVar.Var ℚ), ∃ φ : (GlobalTheory.ProjVar.proj ℚ 0).Fn →ₐ[ℚ] Y.Fn, (GlobalTheory.FlagBundle.ratOf (GlobalTheory.ProjVar.proj ℚ 0)).IsHom (GlobalTheory.FlagBundle.ratOf Y) φ (GlobalTheory.FlagQ.toPt Y) := by
-  first | exact @GlobalTheory.FlagQ.exists_isHom_toPt | exact GlobalTheory.FlagQ.exists_isHom_toPt | (intros; apply GlobalTheory.FlagQ.exists_isHom_toPt <;> assumption)
+  exact @GlobalTheory.FlagQ.exists_isHom_toPt

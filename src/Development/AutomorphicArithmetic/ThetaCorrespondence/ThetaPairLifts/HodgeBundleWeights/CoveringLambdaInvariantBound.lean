@@ -39,5 +39,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_lambda_invariant_bound : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Gram → Meas → abelian₂ := by
-  first | exact @_root_.GlobalTheory.CovTop.LamAll.covering_lambda_all_places | exact _root_.GlobalTheory.CovTop.LamAll.covering_lambda_all_places | (intros; apply _root_.GlobalTheory.CovTop.LamAll.covering_lambda_all_places <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.LamAll.covering_lambda_all_places
 end

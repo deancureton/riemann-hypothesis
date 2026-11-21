@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelFrameCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.weil_model_frame_compat : GlobalTheory.FunPr.Hypot
       ∀ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Lines D.sp.cm.sig Xs, ∀ f ∈ Mo.Pol ψ' τ, ∀ f₁ : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf D.host.F (Fin M.rank × Fin X.rank),
           GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ActsD (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI D.host.F) (fun t => om (γ (Multiplicative.ofAdd t), 1)) f f₁ →
           f₁ ∈ (GlobalTheory.RealQuot.coinv ε A B eT).map Φ := by
-  first | exact @GlobalTheory.RealDict.lieDer_mem_coinv | exact GlobalTheory.RealDict.lieDer_mem_coinv | (intros; apply GlobalTheory.RealDict.lieDer_mem_coinv <;> assumption)
+  exact @GlobalTheory.RealDict.lieDer_mem_coinv

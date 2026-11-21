@@ -13,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.MiTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.joint_star_product_nonvanishing : GlobalTheory.Published.DiscreteSeriesClassification → GlobalTheory.Published.CuspRapidDecay → ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), BotHyp W → (∀ t F, (cxW W).Θ t ((cxW W).jR t (W.Q.F.eV (cxW W).zs t F)) ∈ (cxW W).EEl true) → Joint W → PuNZ D → (cxW W).MIstar2 (W.Q.F.eV (cxW W).zs) W.Q.sEE := by
-  first | exact @GlobalTheory.MiTop.miStar2_at_realisation | exact GlobalTheory.MiTop.miStar2_at_realisation | (intros; apply GlobalTheory.MiTop.miStar2_at_realisation <;> assumption)
+  exact @GlobalTheory.MiTop.miStar2_at_realisation

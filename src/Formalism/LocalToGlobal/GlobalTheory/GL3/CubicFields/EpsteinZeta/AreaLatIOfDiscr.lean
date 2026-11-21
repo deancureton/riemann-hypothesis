@@ -1,6 +1,5 @@
 import ReciprocityTheory.Chebotarev.EulerSum
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.UnitsEqOneOrNegOne
-import Mathlib
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.LatITopBasis
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.IdealBasis
 import Formalism.LocalToGlobal.GlobalTheory.GL3.CubicFields.EpsteinZeta.NormArea

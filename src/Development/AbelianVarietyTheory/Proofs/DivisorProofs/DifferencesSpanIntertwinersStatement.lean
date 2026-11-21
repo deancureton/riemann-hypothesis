@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DifferencesSpanIntertwiners
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.differences_span_intertwiners : GlobalTheory.ThK.K
       (∀ ξ, T ξ ∈ Diffs B G X om om' R Rf c) ∧
       (∀ y ∈ UAt σ G.W (evFin F B.v₁), ∀ φ ∈ SB (Fin a' × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ SB (Fin a' × Fin (a + a') → Fv F B.v₁),
         Acts (evFin F B.v₁) (om' (1, y)) φ φ₁ → ∀ h, T (Rf.p' B.v₁ φ₁) h = T (Rf.p' B.v₁ φ) (h * y)) ∧ ∃ ξ, f = T ξ} := by
-  first | exact @GlobalTheory.ThK.DiffsMaps.diffs_le_span_maps | exact GlobalTheory.ThK.DiffsMaps.diffs_le_span_maps | (intros; apply GlobalTheory.ThK.DiffsMaps.diffs_le_span_maps <;> assumption)
+  exact @GlobalTheory.ThK.DiffsMaps.diffs_le_span_maps

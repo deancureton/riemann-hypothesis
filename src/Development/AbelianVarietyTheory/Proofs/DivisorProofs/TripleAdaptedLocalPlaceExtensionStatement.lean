@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleAdaptedLocalPlaceExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LinePlace
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipAugLeJacKer
 
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.triple_adapted_local_place_extension : ∀ (F E : 
         ∀ m : UA σ G.W.J, IsLevi (W₁ := W₁) H' (locIdele F w x) 1 m → m ∈ UAt σ G.W (evFin F v) →
           (mat m).map (piW t) = ((c' * leviEmb (Fv F v) (linePlace h) (firstBlockScalar (Fv F v) (a + a') y) * c'⁻¹ :
             GL (Fin (a + a')) (Fv F v)) : Matrix (Fin (a + a')) (Fin (a + a')) (Fv F v)) := by
-  first | exact @GlobalTheory.LineFrame.geom_split | exact GlobalTheory.LineFrame.geom_split | (intros; apply GlobalTheory.LineFrame.geom_split <;> assumption)
+  exact @GlobalTheory.LineFrame.geom_split

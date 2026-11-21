@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationAGaussianIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.configuration_a_gaussian_integral : ∀ (F E : Typ
           (coordI G.M (Matrix.vecMulVec y (incV F H'.y) + Matrix.vecMulVec (incV F H.y) (incM F H'.ι *ᵥ z))).2 g =
         (-Complex.I) • dOp (coordI G.M (Matrix.vecMulVec y₁ (incV F H'.x) + Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ z₁))).1
           (coordI G.M (Matrix.vecMulVec y₁ (incV F H'.x) + Matrix.vecMulVec (incV F H.x) (incM F H'.ι *ᵥ z₁))).2 g := by
-  first | exact @GlobalTheory.ThK.VacDualPart.dOp_dual_vac | exact GlobalTheory.ThK.VacDualPart.dOp_dual_vac | (intros; apply GlobalTheory.ThK.VacDualPart.dOp_dual_vac <;> assumption)
+  exact @GlobalTheory.ThK.VacDualPart.dOp_dual_vac

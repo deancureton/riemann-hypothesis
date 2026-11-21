@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianEvaluationNonarchimedean
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.integral_lattice_l_adic_congruence : GlobalTheory.
         ∀ i : I, ∃ (v₀ : epsR R₀ ⟶ G₀) (v' : X.Lie) (W : Fin (Module.finrank ℚ (FR E)) → ℂ),
           IsTangent v₀ ∧ v'.hom.left ≫ p₀ = spMap (Chart.dualMapR R₀.subtype) ≫ v₀.left ∧ U.u.IsDiff W v'.hom ∧
           W (U.e.symm i) ≠ 0 ∧ Sz l lam (a0 𝔣 l) ((W (U.e.symm i) * Ω)⁻¹) := by
-  first | exact @GlobalTheory.LatModel.exists_isogModel | exact GlobalTheory.LatModel.exists_isogModel | (intros; apply GlobalTheory.LatModel.exists_isogModel <;> assumption)
+  exact @GlobalTheory.LatModel.exists_isogModel

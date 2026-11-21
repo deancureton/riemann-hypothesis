@@ -12,4 +12,4 @@ open Classical
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_padicTrait_lift_finite_through_point : ∀ (X Z : Scheme.{0}) (f : X ⟶ Z), IsFinite f → ∀ (p : ℕ) [Fact p.Prime] (Y : Sp (OO p) ⟶ Z) (w : X), f w = (gPt p ≫ Y) (IsLocalRing.closedPoint (PadicAlgCl p)) → ∃ y : Sp (OO p) ⟶ X, y ≫ f = Y ∧ (gPt p ≫ y) (IsLocalRing.closedPoint (PadicAlgCl p)) = w := by
-  first | exact @GlobalTheory.UPoinc.exists_lift_finite_through_point | exact GlobalTheory.UPoinc.exists_lift_finite_through_point | (intros; apply GlobalTheory.UPoinc.exists_lift_finite_through_point <;> assumption)
+  exact @GlobalTheory.UPoinc.exists_lift_finite_through_point

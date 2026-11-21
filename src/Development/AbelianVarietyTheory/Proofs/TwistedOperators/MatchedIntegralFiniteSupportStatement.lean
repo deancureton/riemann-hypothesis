@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.matched_integral_finite_support : GlobalTheory.Fun
   ∃ (z' : GA D (G.V (.grid i j)) →₀ ℂ) (P : Finset (HeightOneSpectrum (𝓞 D.host.F))),
     translates z' (kerSmall W Θ' g g₁) = translates z (kerSmall W Θ' g g₁) ∧ zdeg z' = zdeg z ∧
     ∀ b ∈ z'.support, ∀ v ∉ P, GlobalTheory.AdelicU.proj D.sp.cm.sig (G.V (.grid i j)).gram v b = 1 := by
-  first | exact @GlobalTheory.StripPlaces.exists_comb_trivial_off | exact GlobalTheory.StripPlaces.exists_comb_trivial_off | (intros; apply GlobalTheory.StripPlaces.exists_comb_trivial_off <;> assumption)
+  exact @GlobalTheory.StripPlaces.exists_comb_trivial_off

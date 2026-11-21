@@ -12,4 +12,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.real_weil_action_central_character : ∀ (n : ℤ) (t : ℝ) (a : ℝˣ) (g : GL (Fin 2) ℝ) (x : ℂ), piRc (chC n (Complex.I * t)) (dg2 a a * g) (PhiInf n) x = omR n t a * piRc (chC n (Complex.I * t)) g (PhiInf n) x := by
-  first | exact @GlobalTheory.CompanionTheory.CenTheta.RealCentral.piRc_central | exact GlobalTheory.CompanionTheory.CenTheta.RealCentral.piRc_central | (intros; apply GlobalTheory.CompanionTheory.CenTheta.RealCentral.piRc_central <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenTheta.RealCentral.piRc_central

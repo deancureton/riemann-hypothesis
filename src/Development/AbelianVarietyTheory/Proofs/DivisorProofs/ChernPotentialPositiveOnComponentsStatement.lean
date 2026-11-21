@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.chern_potential_positive_on_components : Hypotheses2 → HypothesesH → ∀ (D : D7) (O : Setup D), O.Core → ∀ (A : SlopeTestRemainingChoices O.Y) (T : Real0 O.Y) (H : Ht O.Y), O.Reads A T H → ∀ (c : O.s.Comp) (σ : Fin ((T.M c).n + 1)), ReciprocityTheory.AnForm.M.IsPosPot ((T.M c).A σ) ((T.F c).a σ) := by
-  first | exact @GlobalTheory.AmplePos.ample_isPosPot | exact GlobalTheory.AmplePos.ample_isPosPot | (intros; apply GlobalTheory.AmplePos.ample_isPosPot <;> assumption)
+  exact @GlobalTheory.AmplePos.ample_isPosPot

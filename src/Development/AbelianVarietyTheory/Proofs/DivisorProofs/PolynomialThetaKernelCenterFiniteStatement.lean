@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.polynomial_theta_kernel_center_finite : ∀ (F E :
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁,
       FiniteDimensional ℂ (Submodule.span ℂ {f | ∃ z, IsCentral σ (c • G.W.J.map σ) z ∧ f = dop z (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x))}) := by
-  first | exact @GlobalTheory.ThKZFinSmall.zfin | exact GlobalTheory.ThKZFinSmall.zfin | (intros; apply GlobalTheory.ThKZFinSmall.zfin <;> assumption)
+  exact @GlobalTheory.ThKZFinSmall.zfin

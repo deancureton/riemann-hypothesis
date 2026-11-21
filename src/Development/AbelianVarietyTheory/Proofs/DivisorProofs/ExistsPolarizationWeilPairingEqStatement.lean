@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsPolarizationWeilPairingEq
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZetaSuccPow
 
 set_option autoImplicit false
@@ -18,4 +17,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_polarization_weil_pairing_eq : ∀ {E : Type} [Field E] [NumberField E] [IsCMField E] {H : Host E} {Dw : Datum H} {k : Type} [Field k] [IsAlgClosed k] [CharZero k] {t : SAB H (Sp k)} {p : ℕ} [Fact p.Prime] {GG : PDivGroup p k} (tw : GG.TorsionTower t.G) (I : GeomTate Dw t), ∃ pol : GG ≅ GG.dual, (∀ (x y : Dw.La) (n : ℕ), muRoot (pairing GG k (tau tw I x) (tateMap GG GG.dual k pol.hom (tau tw I y))) n = ((I.ζ (p ^ n) ^ Dw.EF x y : kˣ) : k)) := by
-  first | exact @GlobalTheory.GroupBplus.Closed.exists_pol_pairing | exact GlobalTheory.GroupBplus.Closed.exists_pol_pairing | (intros; apply GlobalTheory.GroupBplus.Closed.exists_pol_pairing <;> assumption)
+  exact @GlobalTheory.GroupBplus.Closed.exists_pol_pairing

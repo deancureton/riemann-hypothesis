@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductFormulaRationalFunction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.product_formula_rational_function : ∀ (F : Type)
     (∑ σ : F →+* ℂ, ∑ᶠ (z : Pts Y σ) (_ : under z = x), Real.log ‖ratVal g z‖) +
       ∑ᶠ v : HeightOneSpectrum (𝓞 F), (if h : Nonempty (Ext v) then
         ∑ᶠ (y : AlgPt Y) (_ : below y.1 = x), Real.log (h.some.w (valAt y.1 g)) else 0) = 0 := by
-  first | exact @GlobalTheory.HtAdd.ProdFormulaPts.main | exact GlobalTheory.HtAdd.ProdFormulaPts.main | (intros; apply GlobalTheory.HtAdd.ProdFormulaPts.main <;> assumption)
+  exact @GlobalTheory.HtAdd.ProdFormulaPts.main

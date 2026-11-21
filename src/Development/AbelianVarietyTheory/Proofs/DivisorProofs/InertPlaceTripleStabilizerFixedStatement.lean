@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceTripleStabilizerFixed
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.inert_place_triple_stabilizer_fixed : GlobalTheory
     ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∃ U : Subgroup (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UA σ G.W.J), IsOpen (U : Set (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UA σ G.W.J)) ∧
       ∀ Ψ ∈ Submodule.span ℂ (Set.range fun g : GlobalTheory.ThK.UAtSub σ G.W (GlobalTheory.AdelicU.evFin F v) => om (1, g.1) Φ),
         (∀ k ∈ K, om (1, k) Ψ = Ψ) → ∀ k ∈ U, k ∈ GlobalTheory.ThetaCplV.finU σ G.W.J → om (1, k) Ψ = Ψ := by
-  first | exact @GlobalTheory.ThK.UnifLevel.level_of_span_at | exact GlobalTheory.ThK.UnifLevel.level_of_span_at | (intros; apply GlobalTheory.ThK.UnifLevel.level_of_span_at <;> assumption)
+  exact @GlobalTheory.ThK.UnifLevel.level_of_span_at

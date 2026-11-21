@@ -5,4 +5,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.side_weight_rays_of_ray_rec : ∀ (hL : GlobalTheory.Published.LocalLanglandsGL) (𝒮 : Slots) (ν : NRead hL 𝒮) (K : Ctx) (p : WPt 𝒮 K), RayRec (p.w.D p.Z) p.O.ex.nch → (sideW ν p).Rays := by
-  first | exact @GlobalTheory.Plug.RaysW.rays_of_rayRec | exact GlobalTheory.Plug.RaysW.rays_of_rayRec | (intros; apply GlobalTheory.Plug.RaysW.rays_of_rayRec <;> assumption)
+  exact @GlobalTheory.Plug.RaysW.rays_of_rayRec

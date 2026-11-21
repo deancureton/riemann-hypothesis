@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.appell_humbert_real_multiplication : ∀ (F : Type
     (∀ (a : 𝓞 F) w, u.ex (fun j ↦ e j (a : F) * w j) = u.ex w ≫ X.rm.act a) →
     ∀ (Hm : Matrix (Fin (Module.finrank ℚ F)) (Fin (Module.finrank ℚ F)) ℂ) (χ : u.Λ → ℂ), u.IsAH Hm χ →
     ∀ (a : 𝓞 F) i j, e i (a : F) * Hm i j = Hm i j * starRingEnd ℂ (e j (a : F)) := by
-  first | exact @GlobalTheory.RosatiAH.rosati_diag | exact GlobalTheory.RosatiAH.rosati_diag | (intros; apply GlobalTheory.RosatiAH.rosati_diag <;> assumption)
+  exact @GlobalTheory.RosatiAH.rosati_diag

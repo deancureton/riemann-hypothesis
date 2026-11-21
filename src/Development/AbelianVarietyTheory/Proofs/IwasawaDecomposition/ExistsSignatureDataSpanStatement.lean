@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_sigData_hecke_eigenvalue_formula : ∀ (D :
           algebraMap (T.O i) (FractionRing (T.O i)) (cHkT D T i (sd.side i s) P : T.O i) ^ k *
             readT D T i (sd.side i s) (In.eig (sd.jS i s) (sd.rowS i s) k P)) ∧
       ∀ i s P, sd.hEig i s 0 P = 1 := by
-  first | exact @GlobalTheory.HeightCounting.FormsStep.sigData_exists | exact GlobalTheory.HeightCounting.FormsStep.sigData_exists | (intros; apply GlobalTheory.HeightCounting.FormsStep.sigData_exists <;> assumption)
+  exact @GlobalTheory.HeightCounting.FormsStep.sigData_exists

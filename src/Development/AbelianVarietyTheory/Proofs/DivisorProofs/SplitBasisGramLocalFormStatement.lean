@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitBasisGramLocalForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.split_basis_gram_local_form : ∀ (F E : Type) [Fi
     (∀ i j, σ (W.J j i) = -W.J i j) → ∀ (v : Pl F) (t : E →ₐ[F] Fv F v) (e : GlobalTheory.SplitCoord.Ix m ≃ Fin n),
     ((GlobalTheory.SplitCoord.basMat H e).map t)ᵀ * W.J.map t * (GlobalTheory.SplitCoord.basMat H e).map (t.comp σ) =
       GlobalTheory.SplitCoord.gam e (W₁.J.map t) := by
-  first | exact @GlobalTheory.SplitCoord.basMat_gram | exact GlobalTheory.SplitCoord.basMat_gram | (intros; apply GlobalTheory.SplitCoord.basMat_gram <;> assumption)
+  exact @GlobalTheory.SplitCoord.basMat_gram

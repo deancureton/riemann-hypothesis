@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedAdaptedPlaneScalarRelation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.matched_adapted_plane_scalar_relation : GlobalTheo
         ∀ (V₁ : Spc F E d₂) (M₁ : Model σ V₁ G.W) (e : Fn F a (a + a') →ₗ[ℂ] Fn F d₂ (a + a')),
           V₁.J = H.ιᵀ * G.V.J * H.ι.map σ → M₁.IsGood B.ψ →
           IsEv B G.M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e → ∀ g : UA σ G.V.J, ∫ h in 𝓕, (G.M.I om Φ h - c * G.M'.I om' Φ' h) * (starRingEnd ℂ) (thetaSum F (e (om (g, h) Φ₁))) ∂μ = 0 := by
-  first | exact @GlobalTheory.ThKLiftVLowerGen.lower | exact GlobalTheory.ThKLiftVLowerGen.lower | (intros; apply GlobalTheory.ThKLiftVLowerGen.lower <;> assumption)
+  exact @GlobalTheory.ThKLiftVLowerGen.lower

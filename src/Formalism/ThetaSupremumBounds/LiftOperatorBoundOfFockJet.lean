@@ -2,7 +2,6 @@ import Formalism.ThetaSupremumBounds.GaussianShiftBounds.Assembly
 import Formalism.ThetaSupremumBounds.GaussianShiftBounds.HeightsoundOf
 import Formalism.ThetaSupremumBounds.GaussianShiftBounds.BlockIntegralOf
 import Formalism.ThetaSupremumBounds.GaussianShiftBounds.ClassSchur
-import Mathlib
 import Formalism.QuotientMetricDivisors.HermitianTwistDivisors.TheoremDivIneq
 import Formalism.ThetaSupremumBounds.StatementD
 import Formalism.ThetaSupremumBounds.GaussianShiftBounds.DominanceMono

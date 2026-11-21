@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawEvaluationHaarNormalized
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.seesaw_evaluation_haar_normalized : GlobalTheory.T
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' → ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁,
     ∀ hf : UA σ G.V'.J → ℝ, GlobalTheory.ConeSmall.IsIwaHt K H.x hf → (∀ g, ∃ (p k : UA σ G.V'.J) (l : (AE F E)ˣ), k ∈ K ∧ mat p *ᵥ incV F H.x = l.1 • incV F H.x ∧ g = p * k) →
     ∀ (w : IsoV σ G.W.J) (h : UA σ G.W.J) (r : ℝ), AEStronglyMeasurable (fun g => ‖termW B G.M' H H' e' om' Φ' γ w g h‖ * hf g ^ r) G.M'.μ := by
-  first | exact @GlobalTheory.ConeSmallTermMeas.termW_mul_ht_aestronglyMeasurable | exact GlobalTheory.ConeSmallTermMeas.termW_mul_ht_aestronglyMeasurable | (intros; apply GlobalTheory.ConeSmallTermMeas.termW_mul_ht_aestronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeSmallTermMeas.termW_mul_ht_aestronglyMeasurable

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalLeviDecompositionExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.local_levi_decomposition_exists : ∀ (F E : Type)
     W.IsSkew σ B r s → W₁.IsSkew σ B r₁ s₁ → H'.IsAdapted σ B W W₁ i₀ i₁ → ∀ v : Pl F,
     ∀ (t : (AE F E)ˣ) (h₁ : UA σ W₁.J), At (evFin F v) ((t : AE F E) - 1) → h₁ ∈ UAt σ W₁ (evFin F v) →
     ∃ m : UA σ W.J, IsLevi H' t h₁ m ∧ m ∈ UAt σ W (evFin F v) := by
-  first | exact @GlobalTheory.PlaneLeviUnit.levi_unit_at | exact GlobalTheory.PlaneLeviUnit.levi_unit_at | (intros; apply GlobalTheory.PlaneLeviUnit.levi_unit_at <;> assumption)
+  exact @GlobalTheory.PlaneLeviUnit.levi_unit_at

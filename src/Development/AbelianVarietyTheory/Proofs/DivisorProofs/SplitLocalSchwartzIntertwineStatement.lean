@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitLocalSchwartzIntertwine
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocPart
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InsP
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.split_local_schwartz_intertwine : ∀ (k : Type) [
     S (Set.indicator {Z | ∀ i j, Z i j ∈ 𝒪[k]} 1) = Set.indicator {Z | ∀ i j, Z i j ∈ 𝒪[k]} 1 →
     stdB ν ϖ c (b + 2) a' ∈ SB (Matrix (Fin a') (Fin (b + 2 + a')) k) →
     S (stdB ν ϖ c (b + 2) a') = ((Nat.card 𝓀[k] : ℂ) ^ (-((c * a' : ℕ) : ℤ))) • stdB ν ϖ c b a' := by
-  first | exact @GlobalTheory.EvZeroStd.map_stdB | exact GlobalTheory.EvZeroStd.map_stdB | (intros; apply GlobalTheory.EvZeroStd.map_stdB <;> assumption)
+  exact @GlobalTheory.EvZeroStd.map_stdB

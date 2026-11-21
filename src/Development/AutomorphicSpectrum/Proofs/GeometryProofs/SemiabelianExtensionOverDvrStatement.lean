@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.SemiabelianExtensionOverDvr
-import Mathlib
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GermSys
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsFlatAnIffIsConstMul
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.UniformisationConclusion
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.semiabelian_extension_over_dvr : ∀ (V K : Type) 
     IsGrpPullback GK Gx (spMap (algebraMap V K) ≫ z) φ₁ → ∀ u : epsAt (𝟙 (Sp K)) ⟶ GK, IsTanAt GK (𝟙 _) u →
     ((∃ a : epsAt (𝟙 (Sp V)) ⟶ T, IsTanAt T (𝟙 _) a ∧ u.left ≫ φ₀ = spMap (dualMap (algebraMap V K)) ≫ a.left) ↔
       ∃ a : epsAt z ⟶ Gx, IsTanAt Gx z a ∧ u.left ≫ φ₁ = spMap (dualMap (algebraMap V K)) ≫ a.left) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.Flat.CPoint.tan_iff_of_generic | exact GlobalTheory.CompanionTheory.Ar.Flat.CPoint.tan_iff_of_generic | (intros; apply GlobalTheory.CompanionTheory.Ar.Flat.CPoint.tan_iff_of_generic <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.Flat.CPoint.tan_iff_of_generic

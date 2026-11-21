@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmOrderUniformizationEndomorphisms
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.cm_order_uniformization_endomorphisms : GlobalTheo
       (∀ (a : orderC c) w, U.u.ex (fun j ↦ φ (U.e j) (a : E) * w j) = U.u.ex w ≫ α a) →
       Fil X.A = ⨆ i, ⨅ a : orderC c,
         Module.End.eigenspace (push (dp0 ℂ) (𝟙 _) (α a)) (GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.bar (φ i) a) := by
-  first | exact @GlobalTheory.FilCx.fil_eq_iSup_eigenspace_bar | exact GlobalTheory.FilCx.fil_eq_iSup_eigenspace_bar | (intros; apply GlobalTheory.FilCx.fil_eq_iSup_eigenspace_bar <;> assumption)
+  exact @GlobalTheory.FilCx.fil_eq_iSup_eigenspace_bar

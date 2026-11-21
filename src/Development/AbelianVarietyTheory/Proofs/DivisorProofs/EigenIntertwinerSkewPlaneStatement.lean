@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.finRel_local_factor_of_map_pure_eq_pure : ∀ (F E
       (ev : ∀ v : Pl F, ((Fin n × Fin d → Fv F v) → ℂ) →ₗ[ℂ] (Fin n × Fin d₁ → Fv F v) → ℂ), ei ≠ 0 →
       (∀ v, ev v (M.vac v) = M₁.vac v ∧ (SB _).map (ev v) = SB _) →
       (∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = M.vac v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v)) → ∀ v, GlobalTheory.ThK.EvUniq.FinRel B M M₁ H' v (ev v) := by
-  first | exact @GlobalTheory.ThK.EvUniq.finRel_of_ev | exact GlobalTheory.ThK.EvUniq.finRel_of_ev | (intros; apply GlobalTheory.ThK.EvUniq.finRel_of_ev <;> assumption)
+  exact @GlobalTheory.ThK.EvUniq.finRel_of_ev

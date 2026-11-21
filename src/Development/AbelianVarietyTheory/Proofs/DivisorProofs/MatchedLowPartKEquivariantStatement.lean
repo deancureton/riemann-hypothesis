@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedLowPartKEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_low_part_K_equivariant : GlobalTheory.ThK.
         (∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + a')),
           Acts (evI F) (om (1, k)) f f₁ → R.p f ∈ N → R.p f₁ ∈ N) →
         lowPartInf B G.M R.p ⊓ N = ⊥ → (∀ x ∈ lowPartInf B G.M R.p, S x ∈ N) → ∀ x ∈ lowPartInf B G.M R.p, S x = 0 := by
-  first | exact @GlobalTheory.LowKMultOne.map_eq_zero_of_disjoint | exact GlobalTheory.LowKMultOne.map_eq_zero_of_disjoint | (intros; apply GlobalTheory.LowKMultOne.map_eq_zero_of_disjoint <;> assumption)
+  exact @GlobalTheory.LowKMultOne.map_eq_zero_of_disjoint

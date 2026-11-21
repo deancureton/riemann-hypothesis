@@ -1,5 +1,4 @@
 import Formalism.HermitianCurvature.Statement
-import Mathlib
 
 namespace Formalism.FourierDecayAlt.P.Rec
 

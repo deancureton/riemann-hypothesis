@@ -10,4 +10,4 @@ open GlobalTheory.LieSmooth
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.product_formula_extension_embeddings : ∀ {F : Type} [Field F] [NumberField F] {K : Type} [Field K] [NumberField K] (φ : F →+* K) (a : K), a ≠ 0 → (Function.support fun v : HeightOneSpectrum (𝓞 F) => ∑ θ : EmbOver φ, Real.log ((extOf v).w (θ.1 a))).Finite ∧ ∑ᶠ v : HeightOneSpectrum (𝓞 F), ∑ θ : EmbOver φ, Real.log ((extOf v).w (θ.1 a)) = -∑ σ : K →+* ℂ, Real.log ‖σ a‖ := by
-  first | exact @GlobalTheory.LieSmooth.finsum_sum_log_embOver_eq | exact GlobalTheory.LieSmooth.finsum_sum_log_embOver_eq | (intros; apply GlobalTheory.LieSmooth.finsum_sum_log_embOver_eq <;> assumption)
+  exact @GlobalTheory.LieSmooth.finsum_sum_log_embOver_eq

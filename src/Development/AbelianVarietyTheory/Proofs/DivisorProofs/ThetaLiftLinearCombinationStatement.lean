@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLiftLinearCombination
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.theta_lift_linear_combination : GlobalTheory.ThK.K
     (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' →
     ∀ Φ ∈ G.M'.So B.ψ B.τ₁, ∀ Ψ ∈ G.M'.So B.ψ B.τ₁, ∀ (c : ℂ) (h : UA σ G.W.J),
       G.M'.I om' (Φ + c • Ψ) h = G.M'.I om' Φ h + c * G.M'.I om' Ψ h := by
-  first | exact @GlobalTheory.ThKSmallLin.smallI_add_smul | exact GlobalTheory.ThKSmallLin.smallI_add_smul | (intros; apply GlobalTheory.ThKSmallLin.smallI_add_smul <;> assumption)
+  exact @GlobalTheory.ThKSmallLin.smallI_add_smul

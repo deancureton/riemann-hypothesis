@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EllipticSectionFromUniformization
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -16,4 +15,4 @@ open GlobalTheory.CMTorsion
 open GlobalTheory.WeierstrassCurve (scheme toSpec mapHom)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.elliptic_section_from_uniformization : ∀ (Λ : PeriodPair) (Ω : ℂ), Ω ≠ 0 → ∀ x : Sp ℂ ⟶ scheme (curve Λ Ω), x ≫ toSpec (curve Λ Ω) = 𝟙 _ → ∃ z : ℂ, pt Λ Ω z = x := by
-  first | exact @GlobalTheory.CMTorsion.exists_pt_eq | exact GlobalTheory.CMTorsion.exists_pt_eq | (intros; apply GlobalTheory.CMTorsion.exists_pt_eq <;> assumption)
+  exact @GlobalTheory.CMTorsion.exists_pt_eq

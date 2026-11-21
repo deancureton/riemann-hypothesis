@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AuxiliarySetFieldDataCongruence
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -52,4 +51,4 @@ theorem _root_.GlobalTheory.T.auxiliary_set_field_data_congruence : GlobalTheory
       (∀ i, ((e i (hL.toLie X₀.rm (eH.symm (f' i))) : R) : ℂ) = a i * w i) →
     ∃ ξ : E, GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.GenAt l (GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.polMod (GlobalTheory.IndefiniteRowSideFullHecke.PolarisationModuleIndex.latMod (condQ 𝔣 Q) y)) ξ ∧
       ∀ i, U.h i ≠ 0 ∧ ψ (ev i) (yv i) * (2 * Complex.I * φ i ξ) = (U.h i : ℂ) * ((ψ₀ (eH.symm (e' i)) (eH.symm (f' i)) : R) : ℂ) := by
-  first | exact @GlobalTheory.RatioForm.form_ratio | exact GlobalTheory.RatioForm.form_ratio | (intros; apply GlobalTheory.RatioForm.form_ratio <;> assumption)
+  exact @GlobalTheory.RatioForm.form_ratio

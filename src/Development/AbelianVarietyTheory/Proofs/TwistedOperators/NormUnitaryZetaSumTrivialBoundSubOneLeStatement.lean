@@ -14,4 +14,4 @@ open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_unitaryZetaSum_trivialBound_sub_one_le : ∀ (q r t : ℕ), 2 ≤ q → r + 5 ≤ t → ∀ α : Fin (r / 2) → ℂˣ, GlobalTheory.IndefiniteRowSideFullHecke.TrivialParameterBound.TrivialBound q r α → ‖eulerFac (bcParam r α) (((q : ℂ) ^ (t + 1))⁻¹) * ∏ j ∈ Finset.range r, (1 - (-(q : ℂ)) ^ j * ((q : ℂ) ^ (r + t))⁻¹) - 1‖ ≤ 27 ^ r * ((q : ℝ) ^ 2)⁻¹ := by
-  first | exact @GlobalTheory.FinZeta.UnitaryBound.norm_zetaSum_sub_one_le | exact GlobalTheory.FinZeta.UnitaryBound.norm_zetaSum_sub_one_le | (intros; apply GlobalTheory.FinZeta.UnitaryBound.norm_zetaSum_sub_one_le <;> assumption)
+  exact @GlobalTheory.FinZeta.UnitaryBound.norm_zetaSum_sub_one_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrameAssignmentMorphism
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.frame_assignment_morphism : ∀ (D : D7) (O : Setu
     ∀ (Y Gs : Scheme.{0}) (π : Y ⟶ B) (jY : Gs ⟶ Y) (s : Gs ⟶ Sp D.what₂.LL),
       jY ≫ π ≫ q = s ≫ spMap (algebraMap (𝓞 D.what₂.LL) D.what₂.LL) →
       IsIso ((Scheme.Modules.pullback jY).map ((Scheme.Modules.pullback π).map u)) := by
-  first | exact @GlobalTheory.PairCov.isIso_pullback_of_matches | exact GlobalTheory.PairCov.isIso_pullback_of_matches | (intros; apply GlobalTheory.PairCov.isIso_pullback_of_matches <;> assumption)
+  exact @GlobalTheory.PairCov.isIso_pullback_of_matches

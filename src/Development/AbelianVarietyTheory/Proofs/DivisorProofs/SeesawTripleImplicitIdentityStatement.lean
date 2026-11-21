@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTripleImplicitIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -40,4 +39,4 @@ theorem _root_.GlobalTheory.T.seesaw_triple_implicit_identity : ∀ {F E : Type}
         coneInfInt B G.M' om' ei' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f p.1.1 p.2.1 y) (μKI.prod μI) ∧
       ∀ k ∈ KAt K (evI F), Integrable (fun l : idelesAt E (evI F) =>
         coneInfInt B G.M' om' ei' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f k l.1 y) μI := by
-  first | exact @GlobalTheory.ThK.LocConvB.locConv | exact GlobalTheory.ThK.LocConvB.locConv | (intros; apply GlobalTheory.ThK.LocConvB.locConv <;> assumption)
+  exact @GlobalTheory.ThK.LocConvB.locConv

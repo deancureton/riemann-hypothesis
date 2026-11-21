@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeCharacterUnramifiedExponent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.hecke_character_unramified_exponent : GlobalTheory
     ∀ (k : InfinitePlace F → ℤ) (d : ℕ), HasExp B.emb χ k → (∀ w, (d : ℤ) < |k w|) → ∀ T : Finset (Pl F), UnrOff χ (T : Set (Pl F)) →
     (∀ w : HeightOneSpectrum (𝓞 E), w.under (𝓞 F) ∈ T → ¬ UnrAt χ w) → ∀ z : ℤ, -(d : ℤ) ≤ 2 * z →
       ∃ c : ℂ, c ≠ 0 ∧ GlobalTheory.Cont.HolValueAt (charL χ (T : Set (Pl F))) (z : ℂ) c := by
-  first | exact @GlobalTheory.BotLValue.charL_holValueAt_ne_zero | exact GlobalTheory.BotLValue.charL_holValueAt_ne_zero | (intros; apply GlobalTheory.BotLValue.charL_holValueAt_ne_zero <;> assumption)
+  exact @GlobalTheory.BotLValue.charL_holValueAt_ne_zero

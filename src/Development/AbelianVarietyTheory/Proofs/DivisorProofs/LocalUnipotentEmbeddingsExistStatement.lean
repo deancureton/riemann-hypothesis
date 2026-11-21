@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnipotentEmbeddingsExist
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.local_unipotent_embeddings_exist : ∀ (F E : Type
         evFin F v (symp (cA σ) (-1) (incM F G.V.J) (incM F G.W.J) x u) =
           ∑ i, ∑ j, (x.map (piW t)) i j * GlobalTheory.LinWAt.coW G t u i j -
             ∑ i, ∑ j, GlobalTheory.LinWAt.coW G t x i j * (u.map (piW t)) i j) := by
-  first | exact @GlobalTheory.LinWCoords.exists_split_coords | exact GlobalTheory.LinWCoords.exists_split_coords | (intros; apply GlobalTheory.LinWCoords.exists_split_coords <;> assumption)
+  exact @GlobalTheory.LinWCoords.exists_split_coords

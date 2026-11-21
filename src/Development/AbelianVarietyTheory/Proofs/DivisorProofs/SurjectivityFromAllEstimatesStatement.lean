@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.D
 open GlobalTheory.BigTop GlobalTheory.BigOn
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.surjectivity_from_all_estimates : RunsSt → RatSt → GeoSt → (AtRec fun _ _ _ _ _ _ O => GlobalTheory.TraceClassRank.RankAtPlaces O) → TwistSt → ShareSt → BadSt → ExpSt → PageSt → OntoX := by
-  first | exact @GlobalTheory.BigOn.OntoPath.onto_path | exact GlobalTheory.BigOn.OntoPath.onto_path | (intros; apply GlobalTheory.BigOn.OntoPath.onto_path <;> assumption)
+  exact @GlobalTheory.BigOn.OntoPath.onto_path

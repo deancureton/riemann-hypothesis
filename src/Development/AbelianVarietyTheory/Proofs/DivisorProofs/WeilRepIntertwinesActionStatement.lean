@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.weil_rep_intertwines_action : ∀ (F E : Type) [Fi
     (∀ f : SInf F (Fin n × Fin d), Acts (evI F) (om x) ⇑f ⇑(A f)) →
     ∀ (f : SInf F (Fin n × Fin d)) (φ : ∀ v : Pl F, (Fin n × Fin d → Fv F v) → ℂ), (∀ v, φ v ∈ GlobalTheory.WeilM.SB _) →
       (∀ᶠ v in Filter.cofinite, φ v = M.vac v) → om x (pure f φ) = pure (A f) φ := by
-  first | exact @GlobalTheory.ArchPureAct.acts_pure | exact GlobalTheory.ArchPureAct.acts_pure | (intros; apply GlobalTheory.ArchPureAct.acts_pure <;> assumption)
+  exact @GlobalTheory.ArchPureAct.acts_pure

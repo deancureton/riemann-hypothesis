@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigASchwartzEvalCompare
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_A_schwartz_eval_compare : ∀ (F E : Type) 
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ (l : (AE F E)ˣ) (y : Fin b × Fin (b + a') → AF F),
       Continuous fun g : UA σ G.V.J => e (G.M.co.rho B.ψ (shiftA H H' l) (om (g, 1) Ψ)) y := by
-  first | exact @GlobalTheory.ThK.ConeIntCont.continuous_coneIntegrand | exact GlobalTheory.ThK.ConeIntCont.continuous_coneIntegrand | (intros; apply GlobalTheory.ThK.ConeIntCont.continuous_coneIntegrand <;> assumption)
+  exact @GlobalTheory.ThK.ConeIntCont.continuous_coneIntegrand

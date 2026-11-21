@@ -4,4 +4,4 @@ import Development.WeilBound.CoreStatements.FiniteTypeHarishChandra.SupportExist
 open ReciprocityTheory.Ty.Fin
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.harish_chandra_character : ReciprocityTheory.Ty.Fin.St.HCChar := by
-  first | exact @GlobalTheory.CompanionTheory.FinGLChar.hcChar | exact GlobalTheory.CompanionTheory.FinGLChar.hcChar | (intros; apply GlobalTheory.CompanionTheory.FinGLChar.hcChar <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FinGLChar.hcChar

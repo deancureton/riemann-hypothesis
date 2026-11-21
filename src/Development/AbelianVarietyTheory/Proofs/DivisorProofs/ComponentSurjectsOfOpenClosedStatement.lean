@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ComponentSurjectsOfOpenClosed
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.component_surjects_of_open_closed : (∀ {A B : Ty
         x ≫ pullback.snd _ _ = spMap (fK.comp (IntermediateField.inclusion hle).toRingHom) →
         Set.range x ⊆ (Z : Set (Xo.XF c)) →
         ∃ yy : Sp k ⟶ Xo'.XF c', yy ≫ pullback.snd _ _ = spMap fK ∧ yy ≫ r = x ∧ Set.range yy ⊆ (U : Set (Xo'.XF c')) := by
-  first | exact @GlobalTheory.FlatModel.exists_comp_cover_lift | exact GlobalTheory.FlatModel.exists_comp_cover_lift | (intros; apply GlobalTheory.FlatModel.exists_comp_cover_lift <;> assumption)
+  exact @GlobalTheory.FlatModel.exists_comp_cover_lift

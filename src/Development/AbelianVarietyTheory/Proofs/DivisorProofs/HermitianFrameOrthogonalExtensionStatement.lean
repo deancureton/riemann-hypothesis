@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFrameOrthogonalExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 open scoped Matrix
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.RealLift Formalism.BasicNotions.TH Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.hermitian_frame_orthogonal_extension : ∀ {n n₁
     ∃ C : Matrix (Fin n) (Ix (r₁ + 1) (s₁ + 1)) ℂ, IsFrame M C ∧ θ * C = C * Jm (r₁ + 1) (s₁ + 1) ∧
       (∀ i, C i (.inl 0) = e i) ∧ (∀ i, C i (.inr 0) = f i) ∧
       ∀ a, a ≠ .inl 0 → a ≠ .inr 0 → ∃ z : Fin n₁ → ℂ, ∀ i, C i a = (ι *ᵥ z) i := by
-  first | exact @GlobalTheory.FrameAssemble.assemble | exact GlobalTheory.FrameAssemble.assemble | (intros; apply GlobalTheory.FrameAssemble.assemble <;> assumption)
+  exact @GlobalTheory.FrameAssemble.assemble

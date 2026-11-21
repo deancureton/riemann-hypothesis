@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxModelCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.darboux_model_coordinates : ∀ (F E : Type) [Fiel
     ∃ D : Matrix (Fin d) (Fin n ⊕ Fin n) E →ₗ[F]
         ((Fin n × Fin d) ⊕ (Fin n × Fin d) → F) × ((Fin n × Fin d) ⊕ (Fin n × Fin d) → F),
       Function.Injective D ∧ ∀ u, dd.e (incM F u) = GlobalTheory.SiegelConv.ratP (D u) := by
-  first | exact @GlobalTheory.SiegelConvRat.ratCoord | exact GlobalTheory.SiegelConvRat.ratCoord | (intros; apply GlobalTheory.SiegelConvRat.ratCoord <;> assumption)
+  exact @GlobalTheory.SiegelConvRat.ratCoord

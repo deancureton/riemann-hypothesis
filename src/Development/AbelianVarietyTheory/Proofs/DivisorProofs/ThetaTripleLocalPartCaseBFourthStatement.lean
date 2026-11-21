@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTripleLocalPartCaseBFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeLin
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.theta_triple_local_part_case_b_fourth : GlobalTheo
       ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v), ∀ t g₀ m, IsLevi H t g₀ m → m ∈ UAt σ G.V' (evFin F v) →
         g₀ ∈ UAt σ G₁.V' (evFin F v) → ∀ g ∈ UAt σ G.V' (evFin F v),
           coneLin B G.M' om' v (ev' v) μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l φ (m * g) = ((absE F E t : ℝ) : ℂ) ^ (b + 1) * coneLin B G.M' om' v (ev' v) μ (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) l φ g := by
-  first | exact @GlobalTheory.ThK.ConeLinLevi.coneLin_levi | exact GlobalTheory.ThK.ConeLinLevi.coneLin_levi | (intros; apply GlobalTheory.ThK.ConeLinLevi.coneLin_levi <;> assumption)
+  exact @GlobalTheory.ThK.ConeLinLevi.coneLin_levi

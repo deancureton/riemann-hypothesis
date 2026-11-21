@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockGramMatrixOrthogonalSum
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.block_gram_matrix_orthogonal_sum : ∀ {R S : Type
     symp c ξ JA G Y Y' = symp c ξ JA J₁ (Matrix.of fun i a => Y i (Fin.castAdd 2 a)) (Matrix.of fun i a => Y' i (Fin.castAdd 2 a)) +
       Algebra.trace R S (ξ * ∑ i, ∑ k, Y i (Fin.natAdd d₁ 0) * JA i k * c (Y' k (Fin.natAdd d₁ 1))) -
       Algebra.trace R S (ξ * ∑ i, ∑ k, Y i (Fin.natAdd d₁ 1) * JA i k * c (Y' k (Fin.natAdd d₁ 0))) := by
-  first | exact @GlobalTheory.symp_plane_block | exact GlobalTheory.symp_plane_block | (intros; apply GlobalTheory.symp_plane_block <;> assumption)
+  exact @GlobalTheory.symp_plane_block

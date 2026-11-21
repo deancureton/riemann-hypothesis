@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TriplePolynomialLocalFunctionals
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.triple_polynomial_local_functionals : ∀ (F E : T
         Acts (evFin F B.v₁) (om' (1, (toGAd hσ G.W.J hc).symm (GlobalTheory.AdelicU.emb σ (c • G.W.J.map σ) B.v₁ x))) φ₀ φ₁ →
           L i φ₁ = fun y => L i φ₀ (y * GlobalTheory.AdelicU.emb σ (c • G.W.J.map σ) B.v₁ x)) ∧
       (fun y => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm y)) = ∑ i, L i (φ i) := by
-  first | exact @GlobalTheory.ThetaGlobalHalf.thetaIntegral_eq_sum_local | exact GlobalTheory.ThetaGlobalHalf.thetaIntegral_eq_sum_local | (intros; apply GlobalTheory.ThetaGlobalHalf.thetaIntegral_eq_sum_local <;> assumption)
+  exact @GlobalTheory.ThetaGlobalHalf.thetaIntegral_eq_sum_local

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleCosetOrbitIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.double_coset_orbit_integral : ∀ (F E : Type) [Fi
         ∃ a : Fin j → E, y = Y *ᵥ a)) →
     ∀ n ∈ GlobalTheory.ThKLiftCusp.unipSp σ W Y, ∃ hp : γ * i (1, n) * γ⁻¹ ∈ siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype,
       aOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype ⟨_, hp⟩ = 1 := by
-  first | exact @GlobalTheory.UnipConjSiegel.conj_mem_siegel | exact GlobalTheory.UnipConjSiegel.conj_mem_siegel | (intros; apply GlobalTheory.UnipConjSiegel.conj_mem_siegel <;> assumption)
+  exact @GlobalTheory.UnipConjSiegel.conj_mem_siegel

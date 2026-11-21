@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FlippedTensorEigenvalueLaws
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.first_vertex_weil_scalar : GlobalTheory.FunPr.Hypo
         (((levEnv D.sp.X' R.βX (R.datXt t)).χ ⟨toXf k, hk⟩ : ℂˣ) : ℂ) * c * ∏ w, lam w =
           ∏ w : locPl ch.G t, (locGrid ch.G t w).edgeFactor .one
             (Pi.mulSingle (0, D.R.m) (GlobalTheory.FirstRowTermLaw.kapAt ch.S.toGridChoice t w k)) (.ex 0 D.R.m) := by
-  first | exact @GlobalTheory.FirstRowEndLaw.core | exact GlobalTheory.FirstRowEndLaw.core | (intros; apply GlobalTheory.FirstRowEndLaw.core <;> assumption)
+  exact @GlobalTheory.FirstRowEndLaw.core

@@ -22,4 +22,4 @@ open scoped LaurentSeries
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mem_toroidalComponentClosure_of_specializes : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host E) (Dw : Datum H) (l : Level H) (Xo : Moduli Dw l) (c : Coeff l) (Y : Model Xo c (RingHom.id c.F)) (Z : Comp Xo c) (x : Xo.XF c), x ∈ (Z : Set (Xo.XF c)) → ∀ b : Y.X, Y.j x ⤳ b → b ∈ barComp Y Z := by
-  first | exact @GlobalTheory.CompHS.mem_barComp_of_specializes | exact GlobalTheory.CompHS.mem_barComp_of_specializes | (intros; apply GlobalTheory.CompHS.mem_barComp_of_specializes <;> assumption)
+  exact @GlobalTheory.CompHS.mem_barComp_of_specializes

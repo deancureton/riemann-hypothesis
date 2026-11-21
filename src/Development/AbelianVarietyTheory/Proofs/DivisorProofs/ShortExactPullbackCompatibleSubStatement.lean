@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShortExactPullbackCompatibleSub
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.GlobalHeightBoundIffAtGoodPrimes
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PullbackPreservesLineBundleFlag
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.shortExact_pullback_compatible_sub : ∀ (X : Sche
     ∀ (t : A ⟶ pullback b ι') (τ : A ⟶ F), t ≫ pullback.fst b ι' = f →
     t ≫ pullback.snd b ι' = τ ≫ s → ∃ hz' : t ≫ pullback.snd b ι' ≫ cokernel.π s = 0,
       (ShortComplex.mk t (pullback.snd b ι' ≫ cokernel.π s) hz').ShortExact := by
-  first | exact @GlobalTheory.shortExact_pullback_cokernel_modules | exact GlobalTheory.shortExact_pullback_cokernel_modules | (intros; apply GlobalTheory.shortExact_pullback_cokernel_modules <;> assumption)
+  exact @GlobalTheory.shortExact_pullback_cokernel_modules

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealLineIsLineOfPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockMatrixMulVecBasis
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.real_line_is_line_of_place : ∀ (F E : Type) [Fie
     ∀ (n : ℕ) (J : Matrix (Fin n) (Fin n) E), IsHermND σ J →
     ∀ (τ : ∀ w : InfinitePlace F, EmbOver E w) (γ : ℝ → GAd σ J), IsRealLine σ J γ →
       ∃ (w : InfinitePlace F) (Z : Matrix (Fin n) (Fin n) ℂ), IsLineOf σ J (τ w) Z γ := by
-  first | exact @GlobalTheory.LeviHC.isLineOf_of_isRealLine | exact GlobalTheory.LeviHC.isLineOf_of_isRealLine | (intros; apply GlobalTheory.LeviHC.isLineOf_of_isRealLine <;> assumption)
+  exact @GlobalTheory.LeviHC.isLineOf_of_isRealLine

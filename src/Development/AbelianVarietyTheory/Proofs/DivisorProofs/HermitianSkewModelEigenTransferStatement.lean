@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewModelEigenTransfer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.hermitian_skew_model_eigen_transfer : GlobalTheory
     ∀ g ∈ SB (Fin n × Fin d → FiniteAdeleRing (𝓞 F) F), ∀ N K : ℕ, 1 ≤ N → ∃ (s : Finset (ℕ × ℕ)) (C : ℝ), 0 ≤ C ∧ ∀ (f : SInf F (Fin n × Fin d)) (ξ : Fin n → E), (∀ i, ∃ o : 𝓞 E, (N : E) * ξ i = o) →
       ‖thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (pureA F f g)))‖ * (1 + ∑ i, ∑ w : InfinitePlace E, w (ξ i)) ^ K ≤
         C * (s.sup (schwartzSeminormFamily ℂ (Fin n × Fin d → mixedEmbedding.mixedSpace F) ℂ)) f := by
-  first | exact @GlobalTheory.XiTermDecayUnif.main | exact GlobalTheory.XiTermDecayUnif.main | (intros; apply GlobalTheory.XiTermDecayUnif.main <;> assumption)
+  exact @GlobalTheory.XiTermDecayUnif.main

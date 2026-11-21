@@ -9,4 +9,4 @@ open GlobalTheory.ZM GlobalTheory.SiegLev GlobalTheory.SiegelTor
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_inclusion_cyclotomicAwayRing_finite_etale : ∀ n N : ℕ, N ≠ 0 → n ∣ N → ∃ j : cycAway n →+* cycAway N, Function.Injective j ∧ j (zetaAway n) = zetaAway N ^ (N / n) ∧ ((∃ a, N ∣ n ^ a) → IsFinite (spMap j) ∧ Etale (spMap j) ∧ Surjective (spMap j)) := by
-  first | exact @GlobalTheory.SiegelTor.exists_inclusion_cycAway | exact GlobalTheory.SiegelTor.exists_inclusion_cycAway | (intros; apply GlobalTheory.SiegelTor.exists_inclusion_cycAway <;> assumption)
+  exact @GlobalTheory.SiegelTor.exists_inclusion_cycAway

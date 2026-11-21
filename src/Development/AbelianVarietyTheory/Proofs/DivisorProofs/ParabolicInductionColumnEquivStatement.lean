@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicInductionColumnEquiv
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
 open GlobalTheory.SmGL GlobalTheory.PRep GlobalTheory.IndLineGL
 open scoped TensorProduct
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.parabolic_induction_column_equiv : ∀ (k : Type) 
     (hm : b.1 false 1 + b.1 true 1 = m),
     Nonempty (Representation.Equiv ((parInd (g 1) (colRep f (detPair k a a' α₀ β₀) 1)).comp (glCast k hm))
       (cellMid k α₀ β₀ b.1)) := by
-  first | exact @GlobalTheory.IndLineGL.MidColumn.parInd_colRep_equiv_cellMid | exact GlobalTheory.IndLineGL.MidColumn.parInd_colRep_equiv_cellMid | (intros; apply GlobalTheory.IndLineGL.MidColumn.parInd_colRep_equiv_cellMid <;> assumption)
+  exact @GlobalTheory.IndLineGL.MidColumn.parInd_colRep_equiv_cellMid

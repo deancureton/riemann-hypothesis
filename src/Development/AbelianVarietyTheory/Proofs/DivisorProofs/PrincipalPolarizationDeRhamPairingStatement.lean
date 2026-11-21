@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PrincipalPolarizationDeRhamPairing
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.principal_polarization_de_rham_pairing : GlobalThe
           GlobalTheory.AbDual.IsCorrForm (GlobalTheory.Cris.dp0 Γ(T, V)) (𝟙 _) (onAff A hV) (onAff A hV) P φ ∧
           ∀ (x y : HdR (onAff A hV)) (u v : Γ(H, V)), (∀ w, x (e V hV w) = b V hV w u) →
             (∀ w, y (e V hV w) = b V hV w v) → φ x y = b V hV u v := by
-  first | exact @GlobalTheory.PrincipalPolPairing.exists_affine_pairings | exact GlobalTheory.PrincipalPolPairing.exists_affine_pairings | (intros; apply GlobalTheory.PrincipalPolPairing.exists_affine_pairings <;> assumption)
+  exact @GlobalTheory.PrincipalPolPairing.exists_affine_pairings

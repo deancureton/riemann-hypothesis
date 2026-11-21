@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgebraicChartAffineNeighbourhood
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.algebraic_chart_affine_neighbourhood : ∀ (E : Ty
       ∀ᶠ v in 𝓝 (c'.finChart p0), (∀ τ a b, AnalyticAt ℂ (fun w => Am τ w a b) v) ∧
         ∃ (hv : Y.down (c'.finChart.symm v) ∈ ptsIn (genStr Z) (embOf e σ) V.1) (g f : Y.FrameAt (c'.finChart.symm v)),
           Y.Adapted _ t g 1 ∧ Fr.IsMap (evHom hv) f ∧ ∀ τ, f.co g τ = Am τ v := by
-  first | exact @GlobalTheory.HodgeLocGeo.exists_frames_analytic_chart | exact GlobalTheory.HodgeLocGeo.exists_frames_analytic_chart | (intros; apply GlobalTheory.HodgeLocGeo.exists_frames_analytic_chart <;> assumption)
+  exact @GlobalTheory.HodgeLocGeo.exists_frames_analytic_chart

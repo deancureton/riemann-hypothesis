@@ -5,4 +5,4 @@ open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions.G
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_adelic_latticeTuple_decomposition : AllSites (fun {D L hT Gi Gl Kc Dx cX ex u μ w hg Lv I H X} [Fact (D.what₂.places.resChar w).Prime] {std t J} S => J.Dict std → Nonempty (Dec J std)) := by
-  first | exact @GlobalTheory.TwV.DelB.dec_exists | exact GlobalTheory.TwV.DelB.dec_exists | (intros; apply GlobalTheory.TwV.DelB.dec_exists <;> assumption)
+  exact @GlobalTheory.TwV.DelB.dec_exists

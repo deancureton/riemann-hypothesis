@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanParabolicFixedDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.archimedean_parabolic_fixed_decomposition : ∀ (F
     ∀ p ∈ UAt σ X (evI F), mat p *ᵥ incV F H.x = incV F H.x →
     ∃ n ∈ unip σ X H, n ∈ UAt σ X (evI F) ∧ ∃ g₀ : UA σ X₁.J, g₀ ∈ UAt σ X₁ (evI F) ∧
       ∃ g' : UA σ X.J, IsLevi H 1 g₀ g' ∧ g' ∈ UAt σ X (evI F) ∧ p = n * g' := by
-  first | exact @GlobalTheory.ThK.LemF.stab_eq_unip_mul_levi_inf | exact GlobalTheory.ThK.LemF.stab_eq_unip_mul_levi_inf | (intros; apply GlobalTheory.ThK.LemF.stab_eq_unip_mul_levi_inf <;> assumption)
+  exact @GlobalTheory.ThK.LemF.stab_eq_unip_mul_levi_inf

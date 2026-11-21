@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRationalSpecialUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarProd
 open Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Filter Topology
 open scoped TensorProduct ENNReal
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_rational_special_unitary : ∀ (E : Type) [
         γ ∈ (SURat (IsCMField.complexConj E).toAlgHom Gᵀ).subgroupOf (SUAdelic (IsCMField.complexConj E).toAlgHom Gᵀ) ∧
         (∀ ρ : Ψ, infMat (IsCMField.complexConj E).toAlgHom Gᵀ (θ ρ) γ.1 = δ.map ρ.1) ∧
         finMat (IsCMField.complexConj E).toAlgHom Gᵀ γ.1 = GlobalTheory.UCls.ratM (maximalRealSubfield E) δ := by
-  first | exact @GlobalTheory.TamUnf.RatEx.exists_SURat_of_isSA | exact GlobalTheory.TamUnf.RatEx.exists_SURat_of_isSA | (intros; apply GlobalTheory.TamUnf.RatEx.exists_SURat_of_isSA <;> assumption)
+  exact @GlobalTheory.TamUnf.RatEx.exists_SURat_of_isSA

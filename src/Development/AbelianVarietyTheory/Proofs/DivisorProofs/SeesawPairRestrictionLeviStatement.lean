@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairRestrictionLevi
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipMat
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_levi : GlobalTheory.FunPr.
           (∀ φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)),
             Λ (omd p φ) = (k * (((absE F E t : ℝ) ^ (-(n : ℝ)) : ℝ) : ℂ)) * Λ φ) ∧
           ∃ φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), Λ φ ≠ 0 := by
-  first | exact @GlobalTheory.TorusLamP.exists_lam | exact GlobalTheory.TorusLamP.exists_lam | (intros; apply GlobalTheory.TorusLamP.exists_lam <;> assumption)
+  exact @GlobalTheory.TorusLamP.exists_lam

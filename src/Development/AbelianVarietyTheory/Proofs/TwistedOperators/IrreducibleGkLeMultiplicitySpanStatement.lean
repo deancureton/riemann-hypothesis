@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IrreducibleGkLeMultiplicitySpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.irreducible_gk_le_multiplicity_span : GlobalTheory
     (S : D.what₂.Tau → SPar) (M : Formalism.IndefR.Mult.DSModel V S), IsInfFam (D := D) θ →
     ∀ A : Submodule ℂ (GA D V → ℂ), GlobalTheory.CuspGK.IsIrrGKSub θ M A → (∀ f ∈ A, GlobalTheory.CuspGK.IsKFinCuspOfType θ M f) →
     A ≤ GlobalTheory.CuspGK.multSpan θ M := by
-  first | exact @GlobalTheory.CuspGKId.le_multSpan | exact GlobalTheory.CuspGKId.le_multSpan | (intros; apply GlobalTheory.CuspGKId.le_multSpan <;> assumption)
+  exact @GlobalTheory.CuspGKId.le_multSpan

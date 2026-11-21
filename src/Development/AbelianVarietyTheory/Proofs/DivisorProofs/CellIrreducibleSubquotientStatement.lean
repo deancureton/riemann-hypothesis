@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellIrreducibleSubquotient
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSmoothDetPair
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.ExistsCellOfIsSubquotient
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.cell_functor_hom_le_one_of_irreducible : ∀ (k : 
       (cellMid k α₀ β₀ b.1).IsIrreducible →
       HomLeOne (cellFunctor f g (detPair k a a' α₀ β₀))
         (twist (leviTgt σ₁ ξ₁ ξ₂) (deltaHalf k fun i : Fin 3 => Fin (blk3 m i))⁻¹) := by
-  first | exact @GlobalTheory.IndLineGL.homLeOne_cellFunctor_leviTgt | exact GlobalTheory.IndLineGL.homLeOne_cellFunctor_leviTgt | (intros; apply GlobalTheory.IndLineGL.homLeOne_cellFunctor_leviTgt <;> assumption)
+  exact @GlobalTheory.IndLineGL.homLeOne_cellFunctor_leviTgt

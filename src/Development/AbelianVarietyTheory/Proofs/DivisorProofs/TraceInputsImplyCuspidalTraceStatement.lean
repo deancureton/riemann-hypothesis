@@ -11,4 +11,4 @@ open GlobalTheory.TrMult
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.trace_inputs_imply_cuspidal_trace : GlobalTheory.Published.PseudoCoefficientUpq → SpecFin → SpecTrace → Separation → TraceEq → TRCusp := by
-  first | exact @GlobalTheory.TrMultEnd.trCusp_of_steps | exact GlobalTheory.TrMultEnd.trCusp_of_steps | (intros; apply GlobalTheory.TrMultEnd.trCusp_of_steps <;> assumption)
+  exact @GlobalTheory.TrMultEnd.trCusp_of_steps

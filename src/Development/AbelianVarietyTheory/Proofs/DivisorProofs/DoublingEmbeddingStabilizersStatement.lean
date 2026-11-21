@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingEmbeddingStabilizers
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_integrable_hgtOf_rpow_doubling_embedding : 
     ∀ μ : Measure (UA σ W.J), μ.IsHaarMeasure →
     ∃ R : ℝ, ∀ t : ℝ, R < t →
       Integrable (fun g => ((hgtOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K (i (1, g)) : ℝ≥0) : ℝ) ^ t) μ := by
-  first | exact @GlobalTheory.DblHeightInt.integrable_hgt_rpow | exact GlobalTheory.DblHeightInt.integrable_hgt_rpow | (intros; apply GlobalTheory.DblHeightInt.integrable_hgt_rpow <;> assumption)
+  exact @GlobalTheory.DblHeightInt.integrable_hgt_rpow

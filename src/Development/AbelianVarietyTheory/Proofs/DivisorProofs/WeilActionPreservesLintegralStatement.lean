@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilActionPreservesLintegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.weil_action_preserves_lintegral : ∀ (F E : Type)
     ∀ (x : UA σ X.J × UA σ W.J) (f f₁ : SInf F (Fin n × Fin d)), Acts (evI F) (om x) (⇑f) (⇑f₁) →
       ∀ μ : Measure (Fin n × Fin d → mixedEmbedding.mixedSpace F), μ.IsAddHaarMeasure →
         ∫⁻ y, ‖f₁ y‖ₑ ^ 2 ∂μ = ∫⁻ y, ‖f y‖ₑ ^ 2 ∂μ := by
-  first | exact @GlobalTheory.ArchimedeanActsL2.acts_lintegral_eq | exact GlobalTheory.ArchimedeanActsL2.acts_lintegral_eq | (intros; apply GlobalTheory.ArchimedeanActsL2.acts_lintegral_eq <;> assumption)
+  exact @GlobalTheory.ArchimedeanActsL2.acts_lintegral_eq

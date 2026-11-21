@@ -78,6 +78,6 @@ theorem _root_.GlobalTheory.T.ordinary_flag_inertia_weights : ∀ (l : ℕ) [Fac
     (∀ s : ↥(Dec (F := ℚ) A), (s : G ℚ Ω) ∈ Ine (F := ℚ) A →
       κ 0 s = cycBar ℚ Ω l s ^ (e : ℤ) ∧ κ 1 s = cycBar ℚ Ω l s ^ (-(e : ℤ))) →
     Level l M ![(e : ℤ), -(e : ℤ)] V := by
-  first | exact @GlobalTheory.Ord2.LevelOfOrd.main | exact GlobalTheory.Ord2.LevelOfOrd.main | (intros; apply GlobalTheory.Ord2.LevelOfOrd.main <;> assumption)
+  exact @GlobalTheory.Ord2.LevelOfOrd.main
 
 end

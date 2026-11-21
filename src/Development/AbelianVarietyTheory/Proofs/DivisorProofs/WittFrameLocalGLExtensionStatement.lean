@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameLocalGLExtension
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.wittFrame_local_GL_extension : ∀ (F E : Type) [F
       ∀ z : Fin n → E, (Formalism.UG.cT (σ : E →+* E) X * J) *ᵥ z = 0 → (Formalism.UG.cT (σ : E →+* E) Y * J) *ᵥ z = 0 →
         (matHom _ σ J ((splitEquiv hcm hJ t).symm (B * D * B⁻¹))).1 *ᵥ (fun a => inclR (F := F) (Fv F v) (z a)) =
           fun a => inclR (F := F) (Fv F v) (z a) := by
-  first | exact @GlobalTheory.SplitFrameAction.frame_action_split | exact GlobalTheory.SplitFrameAction.frame_action_split | (intros; apply GlobalTheory.SplitFrameAction.frame_action_split <;> assumption)
+  exact @GlobalTheory.SplitFrameAction.frame_action_split

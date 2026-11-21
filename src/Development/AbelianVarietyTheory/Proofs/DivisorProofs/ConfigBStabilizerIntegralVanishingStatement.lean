@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIntegralVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_constant_term_four_summands_hasLawC : Glo
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.β (-s + ((a + b + 1 : ℕ) : ℂ) / 2) T₂ ∧
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.α (((b + 2 : ℕ) : ℂ) / 2) T₃ ∧
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.β (((a + 2 : ℕ) : ℂ) / 2) T₄ := by
-  first | exact @GlobalTheory.ConeSmallSer.ctSeries | exact GlobalTheory.ConeSmallSer.ctSeries | (intros; apply GlobalTheory.ConeSmallSer.ctSeries <;> assumption)
+  exact @GlobalTheory.ConeSmallSer.ctSeries

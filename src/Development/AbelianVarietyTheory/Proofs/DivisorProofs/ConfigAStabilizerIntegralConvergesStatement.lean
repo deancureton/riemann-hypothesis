@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerIntegralConverges
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_integral_converges : GlobalThe
       ∀ μY : @Measure (Fin b × Fin (b + a') → AF F) (borel _), @Measure.IsAddHaarMeasure _ _ _ (borel _) μY →
       om₁ x (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) Ψ) =ᵐ[μY] (fun y => ∫ k, ∫ l, om₁ x (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k.1, 1) Ψ))) y * (X.ν l : ℂ) *
           ((absE F E l : ℝ) : ℂ) ^ ((b + 2 - a') / 2) ∂μ ∂μK) := by
-  first | exact @GlobalTheory.ConeExch.weilOp_cone_ae | exact GlobalTheory.ConeExch.weilOp_cone_ae | (intros; apply GlobalTheory.ConeExch.weilOp_cone_ae <;> assumption)
+  exact @GlobalTheory.ConeExch.weilOp_cone_ae

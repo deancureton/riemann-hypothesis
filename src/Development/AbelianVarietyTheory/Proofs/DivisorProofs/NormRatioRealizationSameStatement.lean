@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.norm_ratio_realization_same : GlobalTheory.Publish
     ∀ f f', rdAt p w j hρ ν f = ρ.theta ((Fm.ex x hx i).nch.twI w) j ((Fm.ex x hx i).nch.sd w) h P →
       rdAt p w j hρ' ν' f' = ρ.theta ((Fm.ex x hx i).nch.twI w) j ((Fm.ex x hx i).nch.sd w) h P →
       ∃ u : FractionRing ((Fm.D x i).ntw.O ((Fm.ex x hx i).nch.twI w)), (∃ n : ℕ, n ≠ 0 ∧ u ^ n = 1) ∧ f' = u • f := by
-  first | exact @GlobalTheory.BigOn.Exp.seriesUnit | exact GlobalTheory.BigOn.Exp.seriesUnit | (intros; apply GlobalTheory.BigOn.Exp.seriesUnit <;> assumption)
+  exact @GlobalTheory.BigOn.Exp.seriesUnit

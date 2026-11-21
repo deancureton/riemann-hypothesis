@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlanesDarbouxReordering
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.adapted_planes_darboux_reordering : ∀ (F E : Typ
       (∀ v, A v ∈ SB _ ∧ A v 0 = 1 ∧
         Model.IsVac (Model.mk (σ := σ) (X := X) (W := W) co (fun _ => 0) 0 ∅) B.ψ v (prodVac eq (A v) (M₁.vac v))) ∧
       ∀ᶠ v in cofinite, A v = Set.indicator {x | ∀ i, x i ∈ v.adicCompletionIntegers F} 1 := by
-  first | exact @GlobalTheory.ThK.AdaptEv.exists_vac_adapted_isoA | exact GlobalTheory.ThK.AdaptEv.exists_vac_adapted_isoA | (intros; apply GlobalTheory.ThK.AdaptEv.exists_vac_adapted_isoA <;> assumption)
+  exact @GlobalTheory.ThK.AdaptEv.exists_vac_adapted_isoA

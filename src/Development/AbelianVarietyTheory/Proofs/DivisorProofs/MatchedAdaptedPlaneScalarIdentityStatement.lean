@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedAdaptedPlaneScalarIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.matched_adapted_plane_scalar_identity : GlobalTheo
           IsEv B G.M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e → ∃ C₀ : ℂ,
           IsCT (W := G.V) H (fun g : UA σ G.V.J => ∫ h in 𝓕, (G.M.I om Φ h - c * G.M'.I om' Φ' h) * (starRingEnd ℂ) (theta om Φ₁ g h) ∂μ)
             (fun g => C₀ * ∫ h in 𝓕, (G.M.I om Φ h - c * G.M'.I om' Φ' h) * (starRingEnd ℂ) (thetaSum F (e (om (g, h) Φ₁))) ∂μ) := by
-  first | exact @GlobalTheory.ThKTowerCT.constTerm_lift | exact GlobalTheory.ThKTowerCT.constTerm_lift | (intros; apply GlobalTheory.ThKTowerCT.constTerm_lift <;> assumption)
+  exact @GlobalTheory.ThKTowerCT.constTerm_lift

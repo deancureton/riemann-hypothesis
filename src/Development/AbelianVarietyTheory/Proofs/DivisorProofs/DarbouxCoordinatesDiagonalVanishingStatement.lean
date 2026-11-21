@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxCoordinatesDiagonalVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.darboux_coordinates_diagonal_vanishing : ∀ (F E 
     ∀ K : Subgroup (UA σ X₂.J), ∀ Φ ∈ schA F (Fin (n + n) × Fin d),
       FiniteDimensional ℂ (Submodule.span ℂ {Ψ | ∃ k ∈ K, Ψ = om₂ (k, 1) Φ}) →
       (fun g => om₂ (g, 1) Φ 0) ∈ degPSOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K χ (((d : ℂ) - (n : ℂ)) / 2) := by
-  first | exact @GlobalTheory.DblEvalLeft.siegel_law_and_mem_degPSOf | exact GlobalTheory.DblEvalLeft.siegel_law_and_mem_degPSOf | (intros; apply GlobalTheory.DblEvalLeft.siegel_law_and_mem_degPSOf <;> assumption)
+  exact @GlobalTheory.DblEvalLeft.siegel_law_and_mem_degPSOf

@@ -10,4 +10,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Ro
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flat_dictionary_base_vacua_large_depth : Big fun ch => ∃ s, LocAt ch s := by
-  first | exact @GlobalTheory.RowVal.exists_locAt_big | exact GlobalTheory.RowVal.exists_locAt_big | (intros; apply GlobalTheory.RowVal.exists_locAt_big <;> assumption)
+  exact @GlobalTheory.RowVal.exists_locAt_big

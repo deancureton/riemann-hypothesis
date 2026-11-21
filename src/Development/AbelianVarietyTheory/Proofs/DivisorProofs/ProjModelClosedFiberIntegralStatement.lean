@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.proj_model_closed_fiber_integral : Hypotheses2 →
   ∀ (ρ : X' ⟶ (h.mdl P c).V.X) (hρ : ρ ≫ (h.mdl P c).V.p = p') (r : ℕ) [Fact r.Prime]
     (Z : Scheme.{0}) (i : Z ⟶ X') [IsClosedImmersion i] [IsIntegral Z] [Algebra (ZMod r) Γ(Z, ⊤)],
     topologicalKrullDim Z = 1 → 0 ≤ topSelfIntersection (ZMod r) (((h.mdl P c).amp.pull ρ hρ).B.pull i) 1 := by
-  first | exact @GlobalTheory.AmpNefFib.main | exact GlobalTheory.AmpNefFib.main | (intros; apply GlobalTheory.AmpNefFib.main <;> assumption)
+  exact @GlobalTheory.AmpNefFib.main

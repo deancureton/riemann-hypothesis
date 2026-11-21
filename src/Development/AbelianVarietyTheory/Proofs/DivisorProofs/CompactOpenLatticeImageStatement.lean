@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.compact_open_lattice_image : ∀ {F : Type} [Field
       (∀ w : (κ → Fv F v) × (κ → Fv F v), (∀ γ ∈ Γ, ψ₀ ((ℓ γ).1 ⬝ᵥ w.2 - w.1 ⬝ᵥ (ℓ γ).2) = 1) → w ∈ Γ.map ℓ) →
       ∀ (χ : G → ℂ) (φ φ' : (κ → Fv F v) → ℂ), φ ≠ 0 →
         (∀ γ ∈ Γ, schr ψ₀ (ℓ γ) φ = χ γ • φ) → (∀ γ ∈ Γ, schr ψ₀ (ℓ γ) φ' = χ γ • φ') → ∃ c : ℂ, φ' = c • φ := by
-  first | exact @GlobalTheory.HeisUniqLoc.eigen_unique | exact GlobalTheory.HeisUniqLoc.eigen_unique | (intros; apply GlobalTheory.HeisUniqLoc.eigen_unique <;> assumption)
+  exact @GlobalTheory.HeisUniqLoc.eigen_unique

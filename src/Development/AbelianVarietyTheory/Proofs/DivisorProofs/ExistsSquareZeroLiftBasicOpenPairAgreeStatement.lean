@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSquareZeroLiftBasicOpenPairAgree
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCombIn
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Geo.Tor
 set_option maxHeartbeats 1000000 in
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.exists_squareZeroLift_basicOpen_pair_agree : ∀ (
         (spMap (IsLocalization.Away.awayToAwayRight (P := Localization.Away (a * b)) a b) ≫ t)
         ![spMap (IsLocalization.Away.awayToAwayLeft (P := Localization.Away (a * b)) b a) ≫ eb]
         ![algebraMap R (Localization.Away (a * b)) b ^ N] := by
-  first | exact @GlobalTheory.SecGlue.exists_pair_lift_comb | exact GlobalTheory.SecGlue.exists_pair_lift_comb | (intros; apply GlobalTheory.SecGlue.exists_pair_lift_comb <;> assumption)
+  exact @GlobalTheory.SecGlue.exists_pair_lift_comb

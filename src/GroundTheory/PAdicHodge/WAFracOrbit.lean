@@ -429,7 +429,6 @@ theorem ξExt_extFrobSymm (Q : (𝓣).Pt) (τ : Set.Ioo (0 : ℝ) 1) :
 variable {ε : PreTilt (normInteger ℂ_[p]) p} (hε : PreTilt.untilt ε = 1)
   (hζ : PreTilt.untilt ((_root_.frobeniusEquiv (PreTilt (normInteger ℂ_[p]) p) p).symm ε) ≠ 1)
 
-set_option maxHeartbeats 4000000 in
 include hε hζ in
 
 theorem exists_eigen_vanishing {K : IntermediateField ℚ_[p] (PadicAlgCl p)}

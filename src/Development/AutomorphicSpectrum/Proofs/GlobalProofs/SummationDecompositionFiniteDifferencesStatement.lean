@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.SummationDecompositionFiniteDifferences
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelKlingenDeligneRibet
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.AbelContinuation
 import Development.AutomorphicSpectrum.Proofs.GlobalProofs.PartialSum
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.shintani_values_negative_integers_rational : ∀ (
   (∀ i, cs.count i = N ∨ ∀ m, m i ≠ 0 → u m = 0) →
   (∀ m : Fin r → ℕ, ∃ q : ℚ, ∏ j, (b j + ∑ i, a j i * (m i : ℝ)) ^ p = (q : ℝ)) →
   ∃ q : ℚ, ∑' m, (u m : ℂ) * DL cs (coneTerm a b (-(p : ℂ))) m = (q : ℂ) := by
-  first | exact @GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel.series_value_rational | exact GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel.series_value_rational | (intros; apply GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel.series_value_rational <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Hypotheses₂.Shintani.Abel.series_value_rational

@@ -13,4 +13,4 @@ open AlgebraicGeometry CategoryTheory MeasureTheory Set GlobalTheory.ShFam Globa
 open ReciprocityTheory.AnForm.M
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.quasi_psh_form_psh : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (e : ℕ) (M : Man e) (I : ManIs M Y), Y.dim = e → ∀ (a : Fin (M.n + 1)) (Θ : LocPot (M.X a)) (θ : ChartForm Y.str (I.ε a) Y.dim) (v : M.X a → EReal), IsPotential (M.A a) Θ → (∀ x, GlobalTheory.ShFam.IsPotential (AnRead.all Y.str (I.ε a) Y.dim) θ (I.pt a '' Θ.U x) (fun y => 2 * Θ.φ x ((I.pt a).symm y))) → GlobalTheory.IndefiniteRowSideFullHecke.QuasiPlurisubharmonic.IsQuasiPsh (M.A a) Θ v → GlobalTheory.Published.IsFormPsh (AnRead.all Y.str (I.ε a) Y.dim) θ (v ∘ (I.pt a).symm) := by
-  first | exact @GlobalTheory.QuasiPshTransfer.isFormPsh_of_isQuasiPsh | exact GlobalTheory.QuasiPshTransfer.isFormPsh_of_isQuasiPsh | (intros; apply GlobalTheory.QuasiPshTransfer.isFormPsh_of_isQuasiPsh <;> assumption)
+  exact @GlobalTheory.QuasiPshTransfer.isFormPsh_of_isQuasiPsh

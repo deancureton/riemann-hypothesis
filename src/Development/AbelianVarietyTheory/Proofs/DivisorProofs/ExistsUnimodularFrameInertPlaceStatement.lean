@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnimodularFrameInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_unimodular_frame_inertPlace : ∀ {F E : Ty
       (b : Matrix (Fin d) (Fin d) (w.adicCompletion E)).map (GlobalTheory.InertBigCell.conjW σ hw))).det ≠ 0 ∧
     (δ • ((b : Matrix (Fin d) (Fin d) (w.adicCompletion E))ᵀ * W.J.map (algebraMap E (w.adicCompletion E)) *
       (b : Matrix (Fin d) (Fin d) (w.adicCompletion E)).map (GlobalTheory.InertBigCell.conjW σ hw))).det⁻¹ ∈ w.adicCompletionIntegers E := by
-  first | exact @GlobalTheory.InertFrameUnimod.exists_frame_unimod | exact GlobalTheory.InertFrameUnimod.exists_frame_unimod | (intros; apply GlobalTheory.InertFrameUnimod.exists_frame_unimod <;> assumption)
+  exact @GlobalTheory.InertFrameUnimod.exists_frame_unimod

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamSubbundleAffineSectionCriterion
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.de_rham_subbundle_affine_section_criterion : Globa
       s ∈ C.sec V ↔ e V hV s ∈ GlobalTheory.ConjSeq.conjDR p Γ(T, V)
         (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V) (onAff A hV)) →
     Nonempty (C.toMod ≅ (GlobalTheory.VB.frobPull p (GlobalTheory.VB.natCast_eq_zero T p (ZMod p))).obj (cokernel F.incl)) := by
-  first | exact @GlobalTheory.ConjSeq.conj_iso_frobPull_quot | exact GlobalTheory.ConjSeq.conj_iso_frobPull_quot | (intros; apply GlobalTheory.ConjSeq.conj_iso_frobPull_quot <;> assumption)
+  exact @GlobalTheory.ConjSeq.conj_iso_frobPull_quot

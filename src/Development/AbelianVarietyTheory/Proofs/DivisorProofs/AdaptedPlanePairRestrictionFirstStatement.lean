@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlanePairRestrictionFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_restriction_first : GlobalTheor
         (∀ φ₁ ∈ schA F (Fin n × Fin d), ∀ φ₂ ∈ schA F (Fin n × Fin d), ed (boxFun φ₁ φ₂) = boxFun (e φ₁) (e₂ φ₂)) ∧
         (∀ φ ∈ schA F (Fin n × Fin d), e₂ φ ∈ schA F (Fin n₁ × Fin d)) ∧
         ∃ φ ∈ schA F (Fin n × Fin d), e₂ φ ≠ 0 := by
-  first | exact @GlobalTheory.DblEval.exists_dblEv | exact GlobalTheory.DblEval.exists_dblEv | (intros; apply GlobalTheory.DblEval.exists_dblEv <;> assumption)
+  exact @GlobalTheory.DblEval.exists_dblEv

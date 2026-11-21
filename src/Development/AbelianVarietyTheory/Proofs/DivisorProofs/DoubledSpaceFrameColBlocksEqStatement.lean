@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledSpaceFrameColBlocksEq
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DblCol
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.doubledSpaceFrame_colBlocks_eq : ∀ (α β : Type
         (Sum.elim (fun r => Sum.inr (Fin.natAdd S r)) (fun s => Sum.inl (Fin.natAdd R s))) =
       -(Jm P Q * c.submatrix id (Sum.elim (fun r => Sum.inr (Fin.natAdd S r)) (fun s => Sum.inl (Fin.natAdd R s))) *
         Jm R S) := by
-  first | exact @GlobalTheory.RealLift.Dbl.dblM_colBlocks | exact GlobalTheory.RealLift.Dbl.dblM_colBlocks | (intros; apply GlobalTheory.RealLift.Dbl.dblM_colBlocks <;> assumption)
+  exact @GlobalTheory.RealLift.Dbl.dblM_colBlocks

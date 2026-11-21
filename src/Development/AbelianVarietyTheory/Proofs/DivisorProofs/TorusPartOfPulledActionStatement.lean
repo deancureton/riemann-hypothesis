@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorusPartOfPulledAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsKerTorusExtension
 open CategoryTheory AlgebraicGeometry Limits MonoidalCategory CartesianMonoidalCategory MonObj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.torus_part_of_pulled_action : ∀ (O : Type) [Comm
         (B : Over (Sp F)) (_ : GrpObj B) (q₀ : G₀ ⟶ B) (j₀ : OAct O B) (ψ : A.left ⟶ B.left),
         IsActPull i₀ i (spMap (algebraMap K F)) φ₀ ∧ IsAbelianScheme B ∧ IsMonHom u₀ ∧ IsKer u₀ q₀ ∧
         (∀ a, i₀.act a ≫ q₀ = q₀ ≫ j₀.act a) ∧ IsActPull j j₀ (spMap (algebraMap F Ω)) ψ := by
-  first | exact @GlobalTheory.TorusPart.exists_finite_torusExtension_act | exact GlobalTheory.TorusPart.exists_finite_torusExtension_act | (intros; apply GlobalTheory.TorusPart.exists_finite_torusExtension_act <;> assumption)
+  exact @GlobalTheory.TorusPart.exists_finite_torusExtension_act

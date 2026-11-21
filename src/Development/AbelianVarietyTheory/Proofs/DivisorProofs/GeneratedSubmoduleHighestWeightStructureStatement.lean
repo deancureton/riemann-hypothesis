@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.generated_submodule_highest_weight_structure : ∀
     (∀ w, w ∈ ⨆ μ : Ix R S → ℚ, wtSub (restrAct M.act _ (GlobalTheory.BlockReps.stable_gen (act := M.act) v)) μ) ∧
     IsHW (restrAct M.act _ (GlobalTheory.BlockReps.stable_gen (act := M.act) v)) Λ ⟨v, GlobalTheory.BlockReps.mem_gen v⟩ ∧
     GlobalTheory.BlockReps.gen (restrAct M.act _ (GlobalTheory.BlockReps.stable_gen (act := M.act) v)) ⟨v, GlobalTheory.BlockReps.mem_gen v⟩ = ⊤ := by
-  first | exact @GlobalTheory.GenHW.block_span_hw | exact GlobalTheory.GenHW.block_span_hw | (intros; apply GlobalTheory.GenHW.block_span_hw <;> assumption)
+  exact @GlobalTheory.GenHW.block_span_hw

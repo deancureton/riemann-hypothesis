@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolDataThetaLinear
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.pol_data_theta_linear : ∀ (F E : Type) [Field F]
     GlobalTheory.ThK.KP → IsTriple B G X om om' →
       ∃ L : ↥(GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁) →ₗ[ℂ] (UA σ G.W.J → ℂ),
         ∀ Φ : ↥(GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁), L Φ = G.M'.I om' Φ := by
-  first | exact @GlobalTheory.ThKLinT.thetaIntegral_linear_of_triple | exact GlobalTheory.ThKLinT.thetaIntegral_linear_of_triple | (intros; apply GlobalTheory.ThKLinT.thetaIntegral_linear_of_triple <;> assumption)
+  exact @GlobalTheory.ThKLinT.thetaIntegral_linear_of_triple

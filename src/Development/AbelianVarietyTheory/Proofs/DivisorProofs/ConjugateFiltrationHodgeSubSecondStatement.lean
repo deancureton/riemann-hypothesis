@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateFiltrationHodgeSubSecond
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.conjugate_filtration_hodge_sub_second : GlobalTheo
       s ∈ C.sec V ↔ e V hV s ∈ GlobalTheory.ConjSeq.conjDR p Γ(T, V)
         (GlobalTheory.SS.FrobField.cast_zero (GlobalTheory.VB.natCast_eq_zero T p (ZMod p)) V) (onAff A hV)) →
     GlobalTheory.VB.IsVB C.toMod g := by
-  first | exact @GlobalTheory.ConjSeq.isVB_conj | exact GlobalTheory.ConjSeq.isVB_conj | (intros; apply GlobalTheory.ConjSeq.isVB_conj <;> assumption)
+  exact @GlobalTheory.ConjSeq.isVB_conj

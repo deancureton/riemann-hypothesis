@@ -6,4 +6,4 @@ open NumberField MeasureTheory Formalism.BasicNotions Formalism.MainNotions.Stan
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hermitianSpaceOppositeForm_signatureCondition : ∀ (E : Type) [Field E] [NumberField E] [StarRing E] (W : HSpace E), W.SigOK → (GlobalTheory.NegSpace.neg W).SigOK := by
-  first | exact @GlobalTheory.NegSpace.sigOK_neg | exact GlobalTheory.NegSpace.sigOK_neg | (intros; apply GlobalTheory.NegSpace.sigOK_neg <;> assumption)
+  exact @GlobalTheory.NegSpace.sigOK_neg

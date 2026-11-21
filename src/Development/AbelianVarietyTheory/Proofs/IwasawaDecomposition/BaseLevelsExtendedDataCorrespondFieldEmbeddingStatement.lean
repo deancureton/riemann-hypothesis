@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.baseLevels_extendedData_correspond_fieldEmbedding 
         ∀ (j : Fin (w.st Z).toD7.R.m) (j' : Fin (w'.st Z').toD7.R.m), (j : ℕ) = j' →
         ∀ φ : (w.st Z).toD7.what₂.LL →+* (w'.st Z').toD7.what₂.LL, (∀ x, (w'.st Z').toD7.what₂.embLL (φ x) = (w.st Z).toD7.what₂.embLL x) →
         ∀ (g : Gc (w.st Z).B w.px) (g' : Gc (w'.st Z').B w'.px), HEq g' g → (g' ∈ (z'.F.lv2.lvl false).P ↔ g ∈ (z.F.lv2.lvl false).P) ∧ ∀ (hg : g ∈ (z.F.lv2.lvl false).P) (hg' : g' ∈ (z'.F.lv2.lvl false).P), (((z'.F.lv2.lvl false).ψ ⟨g', hg'⟩ : (w'.st Z').toD7.what₂.LLˣ) : (w'.st Z').toD7.what₂.LL) = φ (((z.F.lv2.lvl false).ψ ⟨g, hg⟩ : (w.st Z).toD7.what₂.LLˣ) : (w.st Z).toD7.what₂.LL)) := by
-  first | exact @GlobalTheory.Mem.R3.Rw.extN_baseLevel_bc | exact GlobalTheory.Mem.R3.Rw.extN_baseLevel_bc | (intros; apply GlobalTheory.Mem.R3.Rw.extN_baseLevel_bc <;> assumption)
+  exact @GlobalTheory.Mem.R3.Rw.extN_baseLevel_bc

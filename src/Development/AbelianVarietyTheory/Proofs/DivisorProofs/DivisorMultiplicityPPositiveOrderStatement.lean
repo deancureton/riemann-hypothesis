@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DivisorMultiplicityPPositiveOrder
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.divisor_multiplicity_p_positive_order : ∀ (k : T
     ∀ z, (M.div hr).mult z ≠ 0 → 0 < Scheme.ord ((p : X.functionField)) z ∧
       ∀ (Z : Scheme.{0}) [IsIntegral Z] (i : Z ⟶ X), i (genericPoint Z) = z →
         ∀ (z' : Z) j, i z' ∈ M.B.U j → ¬ UnitAt (i z') (r j : X.functionField) := by
-  first | exact @GlobalTheory.SuppP.suppP | exact GlobalTheory.SuppP.suppP | (intros; apply GlobalTheory.SuppP.suppP <;> assumption)
+  exact @GlobalTheory.SuppP.suppP

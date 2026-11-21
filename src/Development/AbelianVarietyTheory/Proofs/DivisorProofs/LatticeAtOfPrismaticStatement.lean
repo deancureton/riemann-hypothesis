@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lattice_at_of_prismatic : Hypotheses2 → HypothesesH → RegularAlteration → ScholzeWeinsteinB → PrismaticDieudonnePerfd → OnObj fun _ O _ _ _ _ => LatAt O.Y := by
-  first | exact @GlobalTheory.EigWhole.latAt_onObj | exact GlobalTheory.EigWhole.latAt_onObj | (intros; apply GlobalTheory.EigWhole.latAt_onObj <;> assumption)
+  exact @GlobalTheory.EigWhole.latAt_onObj

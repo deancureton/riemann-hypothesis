@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CardDivisionPointsModHalfLatticeFinsetSum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsFlipDet
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.FlipIdxNeZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IdemSumMulOfSubset
@@ -25,4 +24,4 @@ open GlobalTheory.LevelSeries
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.card_divisionPointsModHalfLattice_finset_sum : ∀ {D : D7} {S T : HSp D} (Λ : AddSubgroup (WO S T)), (∀ c : AE D, c * c = c → ∀ u ∈ Λ, c • u ∈ Λ) → ∀ {ι : Type} (s : Finset ι) (cs : ι → AE D), (∀ i ∈ s, cs i * cs i = cs i) → (∀ i ∈ s, ∀ j ∈ s, i ≠ j → cs i * cs j = 0) → ∀ N : ℕ, Nat.card (GlobalTheory.DivPtFourier.DQ Λ (∑ i ∈ s, cs i) N) = ∏ i ∈ s, Nat.card (GlobalTheory.DivPtFourier.DQ Λ (cs i) N) := by
-  first | exact @GlobalTheory.DivPtFourier.card_DQ_sum | exact GlobalTheory.DivPtFourier.card_DQ_sum | (intros; apply GlobalTheory.DivPtFourier.card_DQ_sum <;> assumption)
+  exact @GlobalTheory.DivPtFourier.card_DQ_sum

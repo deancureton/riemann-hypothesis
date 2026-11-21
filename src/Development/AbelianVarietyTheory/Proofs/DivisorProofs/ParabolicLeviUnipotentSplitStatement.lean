@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicLeviUnipotentSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.parabolic_levi_unipotent_split : ∀ (F E : Type) 
     W.IsSkew σ B r s → H'.IsAdapted σ B W W₁ i₀ i₁ → ∀ (p : UA σ W.J) (t : (AE F E)ˣ), mat p *ᵥ incV F H'.x = t.1 • incV F H'.x →
     ∃ n ∈ unip σ W H', ∃ m₁ : UA σ W.J, IsLevi (W₁ := W₁) H' t 1 m₁ ∧ ∃ (h₁ : UA σ W₁.J) (m₂ : UA σ W.J),
       IsLevi (W₁ := W₁) H' 1 h₁ m₂ ∧ p = n * m₁ * m₂ := by
-  first | exact @GlobalTheory.StabLineLevi.stab_line_eq_unip_mul_levi | exact GlobalTheory.StabLineLevi.stab_line_eq_unip_mul_levi | (intros; apply GlobalTheory.StabLineLevi.stab_line_eq_unip_mul_levi <;> assumption)
+  exact @GlobalTheory.StabLineLevi.stab_line_eq_unip_mul_levi

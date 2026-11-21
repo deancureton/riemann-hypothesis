@@ -8,4 +8,4 @@ open ReciprocityTheory.PGsh.L2 ReciprocityTheory.PGsh.Up GlobalTheory.CompanionT
 open scoped Matrix
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flag_comparison_theorem : GlobalTheory.CompanionTheory.Ar.GR.FlagStatement := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.GR.flagStatement_holds | exact GlobalTheory.CompanionTheory.Ar.GR.flagStatement_holds | (intros; apply GlobalTheory.CompanionTheory.Ar.GR.flagStatement_holds <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.GR.flagStatement_holds

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GradedSectionLiftsLocally
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -17,4 +16,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.graded_section_lifts_locally : ∀ {X : Scheme.{0}} {M : X.Modules} {N : ℕ} (fl : Vert.Flag M N) (i : Fin N) (U : X.Opens)
     (e : Γ(fl.gr i, U)) (y : X), y ∈ U →
     ∃ (W : X.Opens) (hW : W ≤ U) (t : Γ(fl.F i.succ, W)), y ∈ W ∧ (fl.π i).app W t = Twist.resM _ hW e := by
-  first | exact @GlobalTheory.Vert.Flag.exists_local_lift_gr | exact GlobalTheory.Vert.Flag.exists_local_lift_gr | (intros; apply GlobalTheory.Vert.Flag.exists_local_lift_gr <;> assumption)
+  exact @GlobalTheory.Vert.Flag.exists_local_lift_gr

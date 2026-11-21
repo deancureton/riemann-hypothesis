@@ -11,4 +11,4 @@ open Finset ArithmeticFunction NumberField IsDedekindDomain Filter Topology Glob
 open scoped nonZeroDivisors
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_psi0_add_zsum_le_of_isPrimitive : GlobalTheory.Mem.An.ExplZeta → GlobalTheory.Mem.An.ExplChi → GlobalTheory.Mem.An.LogDerOne → ∃ C : ℝ, ∀ (q : ℕ) [NeZero q] (χ : DirichletCharacter ℂ q), χ.IsPrimitive → ∀ u T : ℝ, 2 ≤ T → T ≤ u → ‖GlobalTheoryTheory.psi0 χ u + zsum χ 0 T (fun ρ => (u : ℂ) ^ ρ / ρ)‖ ≤ C * (u * Real.log (q * u * T) ^ 2 / T + Real.log (q * u) + zsumR χ 0 1 (fun ρ => 1 / ‖ρ‖)) := by
-  first | exact @GlobalTheory.Mem.An.ExplUsed.explicit_formula_used | exact GlobalTheory.Mem.An.ExplUsed.explicit_formula_used | (intros; apply GlobalTheory.Mem.An.ExplUsed.explicit_formula_used <;> assumption)
+  exact @GlobalTheory.Mem.An.ExplUsed.explicit_formula_used

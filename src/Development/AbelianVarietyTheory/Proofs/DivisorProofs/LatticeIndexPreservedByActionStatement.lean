@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeIndexPreservedByAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsTateZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTorsionFormCongrOfEventuallyEqStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelActionPreservesFlatForm
@@ -23,4 +22,4 @@ open GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.lattice_index_preserved_by_action : ∀ (g : ℕ) (γ : GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe.Sp g), (∀ i l, ∃ r : ℚ, γ.mat i l = r) → ∃ M : Submodule ℤ (Fl g), IsLat M ∧ M ≤ stdLat g ∧ IsLat (latAct M γ) ∧ latAct M γ ≤ stdLat g ∧ 0 < Nat.card (stdLat g ⧸ M.submoduleOf (stdLat g)) ∧ Nat.card (stdLat g ⧸ M.submoduleOf (stdLat g)) = Nat.card (stdLat g ⧸ (latAct M γ).submoduleOf (stdLat g)) := by
-  first | exact @GlobalTheory.ratSp_exists_sublat_same_index | exact GlobalTheory.ratSp_exists_sublat_same_index | (intros; apply GlobalTheory.ratSp_exists_sublat_same_index <;> assumption)
+  exact @GlobalTheory.ratSp_exists_sublat_same_index

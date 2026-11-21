@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchIntersectionCombinationLogNorm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 open CategoryTheory AlgebraicGeometry MvPolynomial MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.arch_intersection_combination_log_norm : ∀ (k : 
     ∀ (s : Finset (ι → ℤ)) (c : (ι → ℤ) → ℝ),
       ∑ n ∈ s, c n * (comb L n).archInt N D hr =
         ∑ᶠ σ : k →+* ℂ, wInt (hX.atlas σ) (g σ) (evalF (hX.atlas σ) (fun i => c1F hX σ (L i)) (∑ n ∈ s, c n • lin (fun i => (n i : ℝ)) ^ D)) := by
-  first | exact @GlobalTheory.ChernPoly.archInt_sum_eq_wInt | exact GlobalTheory.ChernPoly.archInt_sum_eq_wInt | (intros; apply GlobalTheory.ChernPoly.archInt_sum_eq_wInt <;> assumption)
+  exact @GlobalTheory.ChernPoly.archInt_sum_eq_wInt

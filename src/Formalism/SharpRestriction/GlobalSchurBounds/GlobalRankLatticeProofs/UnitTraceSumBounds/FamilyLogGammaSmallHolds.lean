@@ -6,7 +6,6 @@ import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.Kern
 import Formalism.SharpRestriction.GlobalSchurBounds.FirstClaimLemmaTwoFourOfLemmaTwoThree
 import Formalism.SharpRestriction.DesignExistsOfChoices
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormOnePowerPrincipal.PowPrincipal
-import Mathlib
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SemilocalBasis.IsPID
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalBasisAtPrime.Imports
 

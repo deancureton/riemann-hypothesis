@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EvaluationPowerSeriesShift
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.NormLtOneOfNotIsUnit
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.evaluation_power_series_shift : ∀ (l : ℕ) [Fac
     ∃ (L' : PowerSeries ↥K.1) (u : GlobalTheory.AcrisK.BK K), OnDisc l (oK K) L' ∧
       (∀ k, PowerSeries.coeff k L' = PowerSeries.coeff (k + 1) L) ∧ Ev L' x u ∧
       y = inK K (PowerSeries.coeff 0 L) + toB K (ofA K x) * u := by
-  first | exact @GlobalTheory.AcrisK.ev_shift | exact GlobalTheory.AcrisK.ev_shift | (intros; apply GlobalTheory.AcrisK.ev_shift <;> assumption)
+  exact @GlobalTheory.AcrisK.ev_shift

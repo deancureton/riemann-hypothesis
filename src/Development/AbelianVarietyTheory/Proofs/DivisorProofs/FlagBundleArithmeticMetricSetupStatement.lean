@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleArithmeticMetricSetup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingHomOfGeneric
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
@@ -37,4 +36,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_arithmetic_metric_setup : ∀ (P2 : Hy
           ∃ r : (((fl₀ a).root i).pull (GlobalTheory.FlagGenFib.jf q π₀)).ι → (GlobalTheory.FlagGenFib.Gf q π₀).functionFieldˣ,
             GlobalTheory.FlagCov.IsFrameSec (fun a => (h a).isVB) jB πB u π₀ fl₀ (GlobalTheory.FlagGenFib.jf q π₀) φ
               (GlobalTheory.FlagGenFib.jGf q π₀ jB _ hL.1) a i hr r := by
-  first | exact @GlobalTheory.FlagCovCore.exists_finite_map | exact GlobalTheory.FlagCovCore.exists_finite_map | (intros; apply GlobalTheory.FlagCovCore.exists_finite_map <;> assumption)
+  exact @GlobalTheory.FlagCovCore.exists_finite_map

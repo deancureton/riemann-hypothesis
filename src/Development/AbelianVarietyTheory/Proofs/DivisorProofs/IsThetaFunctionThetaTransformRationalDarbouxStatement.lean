@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaFunctionThetaTransformRationalDarboux
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.isThetaFunction_thetaTransform_rationalDarboux : �
           co.e (incM D.host.F x) = (fun i => algebraMap D.host.F (AF D.host.F) (y i), fun i => algebraMap D.host.F (AF D.host.F) (z i))) →
         ∀ φ ∈ GlobalTheory.WeilM.schA D.host.F κ,
           Formalism.IndefR.Datum.IsThetaFunO ψ S T (GlobalTheory.WeilSchrodinger.thetaTr D.host.F co ψ φ) := by
-  first | exact @GlobalTheory.ThetaTransformTheta.isThetaFunO_thetaTr | exact GlobalTheory.ThetaTransformTheta.isThetaFunO_thetaTr | (intros; apply GlobalTheory.ThetaTransformTheta.isThetaFunO_thetaTr <;> assumption)
+  exact @GlobalTheory.ThetaTransformTheta.isThetaFunO_thetaTr

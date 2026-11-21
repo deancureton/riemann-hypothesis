@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerSkewPlaneUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_skew_plane_unique : GlobalTheory
     (M₁ : Model σ X W₁), B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' → M.IsGood B.ψ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     M₁.IsGood B.ψ → ∀ e e' : Fn F n d →ₗ[ℂ] Fn F n d₁, IsEv B M M₁ 1 H'.ι (iso0 n H') e → IsEv B M M₁ 1 H'.ι (iso0 n H') e' →
       ∃ c : ℂ, c ≠ 0 ∧ ∀ Φ ∈ PolData B M, e' Φ = c • e Φ := by
-  first | exact @GlobalTheory.ThK.EvUniq.evZero_unique | exact GlobalTheory.ThK.EvUniq.evZero_unique | (intros; apply GlobalTheory.ThK.EvUniq.evZero_unique <;> assumption)
+  exact @GlobalTheory.ThK.EvUniq.evZero_unique

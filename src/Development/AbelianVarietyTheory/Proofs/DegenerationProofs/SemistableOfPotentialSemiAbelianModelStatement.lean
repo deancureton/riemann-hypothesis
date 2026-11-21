@@ -12,4 +12,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open GlobalTheory.SS
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.semistable_of_potential_semiAbelian_model : (∀ (V : Type) [CommRing V] [IsDomain V] [IsDiscreteValuationRing V] [IsAdicComplete (IsLocalRing.maximalIdeal V) V] (K : Type) [Field K] [CharZero K] [Algebra V K] [IsFractionRing V K] (A : Over (Spec (CommRingCat.of K))) [GrpObj A], IsAbelianScheme A → PotModel V K A (fun _ _ _ G _ => IsSemiAbelian G)) → SemistableReductionZero ∧ SemistableCompleteSplit := by
-  first | exact @GlobalTheory.SS.semistable_of_potModel_semiAbelian | exact GlobalTheory.SS.semistable_of_potModel_semiAbelian | (intros; apply GlobalTheory.SS.semistable_of_potModel_semiAbelian <;> assumption)
+  exact @GlobalTheory.SS.semistable_of_potModel_semiAbelian

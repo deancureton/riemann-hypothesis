@@ -1,5 +1,4 @@
 import Formalism.PadicSubsetSums.CentralIdempotents.CentralIdempotentIntegral
-import Mathlib
 import Formalism.ResultantValuation.ResultantAdjugateProofs.Adjugate
 import Formalism.ResultantValuation.ResultantAdjugateProofs.Mobius
 import Formalism.ResultantValuation.ResultantAdjugateProofs.Window

@@ -27,7 +27,6 @@ import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.We
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PairForm
 import Formalism.LocalToGlobal.SiegelLatticeTheory.FlagStabilizerTensors.LinkSPos
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.TruePack
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.MiPinnedWithFinIff
 open Formalism.BasicNotions Formalism.MainNotions GlobalTheory.MiS GlobalTheory.Fam GlobalTheory.MiTop
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open scoped InnerProductSpace TensorProduct
@@ -38,4 +37,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Unf GlobalTheory.MiS
 open GlobalTheory.MiTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.main_theorem_from_published_results_alt : GlobalTheory.Published.HarishChandraFinite → GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.HarishChandraModules → GlobalTheory.Published.CasselmanWallach → GlobalTheory.Hk3.HoweUnram → GlobalTheory.Published.WeilRepresentationUnitaryPair → GlobalTheory.Published.WeilSiegelFormulaUnitary → GlobalTheory.Published.SiegelWeilUnitaryConvergent → GlobalTheory.Published.DoublingMethod → GlobalTheory.Published.UnramifiedDoublingGL → GlobalTheory.Published.DiscreteSeriesClassification → GlobalTheory.Published.StrongApproxSU → ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), TruePack W → 1 ≤ D.R.rS → PuNZ D → MiAt W := by
-  first | exact @GlobalTheory.Fam.miAt_of_truePack | exact GlobalTheory.Fam.miAt_of_truePack | (intros; apply GlobalTheory.Fam.miAt_of_truePack <;> assumption)
+  exact @GlobalTheory.Fam.miAt_of_truePack

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPolTransferRingMaps
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.isPol_transfer_ring_maps : PolMapSt → ∀ {E : T
     (m : ℕ) (b : O →+* O') (b' : O' →+* O), Models.IsDedFrac β → Models.IsDedFrac β' → Algebra.FiniteType ℤ O →
     Algebra.FiniteType ℤ O' → IsTwInv H φ → β'.comp b = β → β.comp b' = β' → IsPol φ m Z BD → IsPol φ m Z' BD' →
     ∃ θ : Z'.X ≅ Z.X, θ.hom ≫ Z.s = Z'.s ≫ spMap b ∧ Z'.j ≫ θ.hom = Z.j ∧ BD'.idealSheaf = BD.idealSheaf.comap θ.hom := by
-  first | exact @GlobalTheory.PolModelIso.exists_iso_of_isPol | exact GlobalTheory.PolModelIso.exists_iso_of_isPol | (intros; apply GlobalTheory.PolModelIso.exists_iso_of_isPol <;> assumption)
+  exact @GlobalTheory.PolModelIso.exists_iso_of_isPol

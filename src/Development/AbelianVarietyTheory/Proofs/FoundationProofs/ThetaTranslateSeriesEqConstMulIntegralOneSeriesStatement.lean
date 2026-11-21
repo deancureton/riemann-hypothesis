@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ThetaTranslateSeriesEqConstMulIntegralOneSeries
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZeroOfCurveCoordNorm
 import Formalism.PairingDivisors.StatementH
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DifferentiableSqTh
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.thetaTranslateSeries_eq_const_mul_integral_one_ser
     GL3Theta.At D cc δ g → (∀ s : ℂ, GL3Theta.Tors1 p g.abelian₂ s → ‖GlobalTheory.EvenTheta.xAt g s‖ ≤ 1) →
     ∀ t : ℂ, GL3Theta.Tors1 p g.abelian₂ t → ∃ w : PowerSeries ℂ_[p], GlobalTheory.EvenTheta.IntSer w ∧
       PowerSeries.constantCoeff w = 1 ∧ GlobalTheory.ThetaTransl.tau g t = PowerSeries.C (GlobalTheory.ThetaTransl.cval g t) * w := by
-  first | exact @GlobalTheory.ThetaUnit.tau_eq_C_mul | exact GlobalTheory.ThetaUnit.tau_eq_C_mul | (intros; apply GlobalTheory.ThetaUnit.tau_eq_C_mul <;> assumption)
+  exact @GlobalTheory.ThetaUnit.tau_eq_C_mul

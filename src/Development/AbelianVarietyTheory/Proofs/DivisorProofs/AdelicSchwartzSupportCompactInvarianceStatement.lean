@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicSchwartzSupportCompactInvariance
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqOfComponentTensorAdelicFunctionEq
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.adelic_schwartz_support_compact_invariance : ∀ {
     ∃ (C K : Set (κ → Af F)), IsCompact C ∧ IsOpen K ∧ (0 : κ → Af F) ∈ K ∧
       (∀ x : κ → AF F, Φ x ≠ 0 → (fun i => (x i).2) ∈ C) ∧
       ∀ x x' : κ → AF F, (∀ i, (x i).1 = (x' i).1) → (fun i => (x' i).2 - (x i).2) ∈ K → Φ x' = Φ x := by
-  first | exact @GlobalTheory.FinLocSchA.compact_support_locally_constant_fin | exact GlobalTheory.FinLocSchA.compact_support_locally_constant_fin | (intros; apply GlobalTheory.FinLocSchA.compact_support_locally_constant_fin <;> assumption)
+  exact @GlobalTheory.FinLocSchA.compact_support_locally_constant_fin

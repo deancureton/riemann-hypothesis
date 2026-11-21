@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedThetaDescentRegular
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMaxThOne
@@ -55,4 +54,4 @@ theorem _root_.GlobalTheory.T.matched_theta_descent_regular : GlobalTheory.ThK.K
     G.M' ⊓ G.M'.So B.ψ B.τ₁)) : GlobalTheory.ThK.Fn F a' (a + a')) = om' (1, k) ((T Ψ
     : ↥(GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁)) : GlobalTheory.ThK.Fn F a' (a +
     a'))) → ∀ Ψ, P (T Ψ) = T (P Ψ)) := by
-  first | exact @GlobalTheory.ThKTypes.exists_typeProj | exact GlobalTheory.ThKTypes.exists_typeProj | (intros; apply GlobalTheory.ThKTypes.exists_typeProj <;> assumption)
+  exact @GlobalTheory.ThKTypes.exists_typeProj

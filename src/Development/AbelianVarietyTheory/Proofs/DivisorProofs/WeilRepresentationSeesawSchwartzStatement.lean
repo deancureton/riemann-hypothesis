@@ -14,4 +14,4 @@ open GlobalTheory.SWLink
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weil_representation_seesaw_schwartz : ∀ (D : D7) (n : ℕ) (V : HSp D) (ψ : AddChar (AF D.host.F) ℂ) (χ : (AE D)ˣ →* Circle) (θ : InfFam D), IsInfFam θ → ∀ (μ : Measure (Mx D V.rank n)) (𝓕 : Set (Mx D V.rank n)), IsCovolOne (ratMx D V.rank n) μ 𝓕 → ∀ ω : GlobalTheory.StdUnn.G D n →* Module.End ℂ (schwartzA θ V.rank n), GlobalTheory.StdUnn.IsWeilSch ψ χ θ V μ ω → ∀ (J₂ : Matrix (Fin (n + n)) (Fin (n + n)) D.host.E) (d : ℕ) (ε : Module.Basis (Fin d) D.host.F D.host.E) (ι : UD D (-V.gram) ≃ₜ* GA D V) (κ : UD D J₂ ≃* GlobalTheory.StdUnn.G D n), ∃ om, IsTrans ε ι κ ω om := by
-  first | exact @GlobalTheory.SWTrans.exists_isTrans | exact GlobalTheory.SWTrans.exists_isTrans | (intros; apply GlobalTheory.SWTrans.exists_isTrans <;> assumption)
+  exact @GlobalTheory.SWTrans.exists_isTrans

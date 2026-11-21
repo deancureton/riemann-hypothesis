@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsThetaFunctionThetaTransformRationalCoordsCM
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TwoMulInvOf
 open scoped TensorProduct Matrix
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.isThetaFunction_thetaTransform_rational_coords_CM 
           e (Formalism.IndefR.DatumF.ratWF x) = (GlobalTheory.SWQ.rat y, GlobalTheory.SWQ.rat z)) →
         ∀ Φ ∈ GlobalTheory.WeilM.schA F (Fin N),
           Formalism.IndefR.DatumF.IsThetaFunOF σ JS JT ξ₀ B.ψ (GlobalTheory.ThetaTransform.thV B.ψ Φ ∘ e) := by
-  first | exact @GlobalTheory.ThetaTransformF.isThetaFunOF_thV | exact GlobalTheory.ThetaTransformF.isThetaFunOF_thV | (intros; apply GlobalTheory.ThetaTransformF.isThetaFunOF_thV <;> assumption)
+  exact @GlobalTheory.ThetaTransformF.isThetaFunOF_thV

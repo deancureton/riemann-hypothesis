@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.generator_correspondence_pullback : ∀ (R : Type)
             (val u₀ (r ≫ (toUnit (TF (R := R) (FractionRing R)) ▷ D.P.A).left) z J).val) →
     ∀ (σ : SecAb D k α) (Φ : Fam D (FractionRing R) k), Φ.s α = pullAb D (FractionRing R) k α σ →
       ∃ f : SecAb D k (α + k • mu), pullAb D (FractionRing R) k (α + k • mu) f = Φ.s (α + k • mu) := by
-  first | exact @GlobalTheory.IntFam.TermLift.main | exact GlobalTheory.IntFam.TermLift.main | (intros; apply GlobalTheory.IntFam.TermLift.main <;> assumption)
+  exact @GlobalTheory.IntFam.TermLift.main

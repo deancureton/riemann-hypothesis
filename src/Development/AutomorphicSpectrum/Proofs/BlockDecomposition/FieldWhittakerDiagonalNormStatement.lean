@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldWhittakerDiagonalNorm
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalComponentRationalIdeleStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldWeilActionDiagonalStatement
@@ -18,4 +17,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.field_whittaker_diagonal_norm : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → ¬ L.IsSp → ∀ (g : GL (Fin 2) (Qv v)) (κ : Kˣ),
     L.W (dg2 (nv v κ) 1 * g) = cW L κ * mp (nv v κ) (1 / 2) * locI L g κ := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.whittaker_diagonal_norm_field | exact GlobalTheory.CompanionTheory.FexTheta.whittaker_diagonal_norm_field | (intros; apply GlobalTheory.CompanionTheory.FexTheta.whittaker_diagonal_norm_field <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.whittaker_diagonal_norm_field

@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.standardAddChar_archimedean_exp_realLinear : ∀ (
         Complex.exp (2 * Real.pi * Complex.I * β a)) ∧
       ∀ a, β a = -(∑ ρ, θ ρ (((InfiniteAdeleRing.ringEquiv_mixedSpace D.host.F).symm a) ⊗ₜ[D.host.F]
         (1 : D.host.E))).re := by
-  first | exact @GlobalTheory.StdCharLin.stdChar_mixed_linear | exact GlobalTheory.StdCharLin.stdChar_mixed_linear | (intros; apply GlobalTheory.StdCharLin.stdChar_mixed_linear <;> assumption)
+  exact @GlobalTheory.StdCharLin.stdChar_mixed_linear

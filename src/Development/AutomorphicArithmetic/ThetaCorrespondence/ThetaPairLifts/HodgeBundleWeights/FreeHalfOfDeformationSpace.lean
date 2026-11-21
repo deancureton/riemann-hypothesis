@@ -71,5 +71,5 @@ theorem _root_.GlobalTheory.T.free_half_of_deformation_space : _root_.GlobalTheo
       (∀ (h : GlobalTheory.BadCount.Inh.halfH (Fm.D x ι) k) (y : X), h • y = y → h = 1) ∧ DirectSum.IsInternal A ∧
       ∀ (h : GlobalTheory.BadCount.Inh.halfH (Fm.D x ι) k) (y : X), ∀ v ∈ A y,
         GlobalTheory.DefRead.repAt p i (h : G0g (Fm.D x ι).nd) v ∈ A (h • y) := by
-  first | exact @_root_.GlobalTheory.DefHalf.deformation_space_half_free | exact _root_.GlobalTheory.DefHalf.deformation_space_half_free | (intros; apply _root_.GlobalTheory.DefHalf.deformation_space_half_free <;> assumption)
+  exact @_root_.GlobalTheory.DefHalf.deformation_space_half_free
 end

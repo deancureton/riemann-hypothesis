@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeFiltrationSubDeRham
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PoincareDeRhamDuality
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ZeroSectionBase
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.hodge_filtration_sub_de_rham : GlobalTheory.CovTop
     ∀ F : GlobalTheory.VB.Sub H, (∀ (V : T.Opens) (hV : IsAffineOpen V) (s : Γ(H, V)),
       s ∈ F.sec V ↔ e V hV s ∈ PrimitiveSubmodule (onAff A hV)) →
     GlobalTheory.VB.IsVB (cokernel F.incl) g := by
-  first | exact @GlobalTheory.HodgeQuotRank.isVB_cokernel_hodgeSub | exact GlobalTheory.HodgeQuotRank.isVB_cokernel_hodgeSub | (intros; apply GlobalTheory.HodgeQuotRank.isVB_cokernel_hodgeSub <;> assumption)
+  exact @GlobalTheory.HodgeQuotRank.isVB_cokernel_hodgeSub

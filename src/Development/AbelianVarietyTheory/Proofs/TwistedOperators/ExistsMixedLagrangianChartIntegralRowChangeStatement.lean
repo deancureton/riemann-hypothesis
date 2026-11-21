@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsMixedLagrangianChartIntegralRowChange
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_mixedLagrangian_chart_integral_rowChange : 
         (fun u => (xiAt w)⁻¹ • chart jj (finCongr (rankW G t i j w)) (colsEq t e w) (invT g) cc
           (coY D.sp.cm.sig Γ.V Γ.W (Bs.τ v) (Γ.V.bas v) (Γ.W.bas v) u))
         (Assignment.one.block _ _)ᶜ := by
-  first | exact @GlobalTheory.FlipMatch.RowChart.exists_mixChart | exact GlobalTheory.FlipMatch.RowChart.exists_mixChart | (intros; apply GlobalTheory.FlipMatch.RowChart.exists_mixChart <;> assumption)
+  exact @GlobalTheory.FlipMatch.RowChart.exists_mixChart

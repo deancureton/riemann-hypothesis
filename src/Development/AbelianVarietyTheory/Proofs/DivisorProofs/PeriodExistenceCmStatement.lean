@@ -5,4 +5,4 @@ import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsEqOf
 open NumberField IsDedekindDomain GlobalTheory.CMVal GlobalTheory.LatVal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.period_existence_cm : GlobalTheory.Published.EllipticMainTheoremCM → PeriodEx := by
-  first | exact @GlobalTheory.LatVal.periodEx_of_mainTheorem | exact GlobalTheory.LatVal.periodEx_of_mainTheorem | (intros; apply GlobalTheory.LatVal.periodEx_of_mainTheorem <;> assumption)
+  exact @GlobalTheory.LatVal.periodEx_of_mainTheorem

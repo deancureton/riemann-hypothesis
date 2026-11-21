@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DeRhamBasisBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.de_rham_basis_base_change : GlobalTheory.Published
     ∃ B : Module.Basis (Fin n) ℂ (HdR X.A), ∀ (a : orderC c) (α : X.A ⟶ X.A) [IsMonHom α],
       α.left ≫ p = p ≫ (cm.act a).left → ∀ i, push (dp0 ℂ) (𝟙 _) α (B i) =
         ∑ k, (((eH.conjRingEquiv.toRingHom.comp (act (dp0 R) (𝟙 _) cm)) a (Pi.single i 1) k : R) : ℂ) • B k := by
-  first | exact @GlobalTheory.DRLine.exists_basis_push_eq_sum | exact GlobalTheory.DRLine.exists_basis_push_eq_sum | (intros; apply GlobalTheory.DRLine.exists_basis_push_eq_sum <;> assumption)
+  exact @GlobalTheory.DRLine.exists_basis_push_eq_sum

@@ -53,5 +53,5 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_free_half_lift_of_neat : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Gram → Lifts fun Fm x _ ι p i _ _ => (i : ℕ) + 1 = (Fm.D x ι).R.m → ∀ k : Fin 2,
     GlobalTheory.DefPt.FreePt (p.T.Q.Xo ((i : ℕ) + 1)) p.T.Q.c
       (fun h : GlobalTheory.BadCount.Inh.halfH (Fm.D x ι) k => (p.O i).lev2 ((p.R.eG.trans p.cG).symm (h : G0g (Fm.D x ι).nd))) := by
-  first | exact @_root_.GlobalTheory.NeatOne.neat_divisor_free_half_lifts | exact _root_.GlobalTheory.NeatOne.neat_divisor_free_half_lifts | (intros; apply _root_.GlobalTheory.NeatOne.neat_divisor_free_half_lifts <;> assumption)
+  exact @_root_.GlobalTheory.NeatOne.neat_divisor_free_half_lifts
 end

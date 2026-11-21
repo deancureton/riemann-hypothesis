@@ -6,4 +6,4 @@ open BranchingSupport GlobalTheory.CellAmp Formalism.BasicNotions Formalism.Main
 open scoped InnerProductSpace ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.amplifier_of_hypotheses : BranchingSupport.Hyps → GlobalTheory.CellAmp.AmpKF := by
-  first | exact @GlobalTheory.AmpOrb.ampKF | exact GlobalTheory.AmpOrb.ampKF | (intros; apply GlobalTheory.AmpOrb.ampKF <;> assumption)
+  exact @GlobalTheory.AmpOrb.ampKF

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilPairingRiemannForm
-import Mathlib
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.IsLieBasis
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.TwoWeightEqOneAddRoot
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.ConstGen
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.weil_pairing_torsion_points : ∀ (A : Over (Sp �
       ∀ (k : ℕ) (a b : Fin n → ℂ) (c : ℂˣ), 0 < k → a ∈ u.Λ → b ∈ u.Λ →
         (c : ℂ) = Complex.exp (-(2 * Real.pi * Complex.I) * (((a ⬝ᵥ Hm.mulVec (star b)).im : ℝ) : ℂ) / k) →
         Out.WeilIs A L k (u.ex ((k : ℂ)⁻¹ • a)) (u.ex ((k : ℂ)⁻¹ • b)) (unitOn c) := by
-  first | exact @GlobalTheory.AHWeilAny.weilIs_exp_riemannForm | exact GlobalTheory.AHWeilAny.weilIs_exp_riemannForm | (intros; apply GlobalTheory.AHWeilAny.weilIs_exp_riemannForm <;> assumption)
+  exact @GlobalTheory.AHWeilAny.weilIs_exp_riemannForm

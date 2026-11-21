@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.theta_lift_along_real_line_bound : ∀ (F E : Type
     ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ γ : ℝ → GAd σ (c • G.W.J.map σ), IsRealLine σ (c • G.W.J.map σ) γ →
       ∃ Φ₁ ∈ GlobalTheory.ThK.PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, lineDer γ (fun x => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm x)) =
         fun x => G.M'.I om' Φ₁ ((toGAd hσ G.W.J hc).symm x) := by
-  first | exact @GlobalTheory.ThKDerSmall.lineDer_thetaIntegral_small | exact GlobalTheory.ThKDerSmall.lineDer_thetaIntegral_small | (intros; apply GlobalTheory.ThKDerSmall.lineDer_thetaIntegral_small <;> assumption)
+  exact @GlobalTheory.ThKDerSmall.lineDer_thetaIntegral_small

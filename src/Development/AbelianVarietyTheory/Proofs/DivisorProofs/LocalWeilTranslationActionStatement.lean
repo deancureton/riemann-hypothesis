@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalWeilTranslationAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_weil_translation_action : GlobalTheory.FunPr
     (om : Rep σ X W) (r s r' s' : ℕ), IsPair B M χX χW om r s r' s' → ∀ (v : Pl F) (h : UA σ W.J),
     h ∈ UAt σ W (evFin F v) → ∀ z : Matrix (Fin n) (Fin d) (AE F E), At (evFin F v) z → ∀ φ ∈ SB (Fin n × Fin d → Fv F v),
       locOp v (M.co.rho B.ψ z) (locOp v (om (1, h)) φ) = locOp v (om (1, h)) (locOp v (M.co.rho B.ψ (z * (mat h⁻¹)ᵀ)) φ) := by
-  first | exact @GlobalTheory.ThK.LemF.RhoConj.rho_om_comm | exact GlobalTheory.ThK.LemF.RhoConj.rho_om_comm | (intros; apply GlobalTheory.ThK.LemF.RhoConj.rho_om_comm <;> assumption)
+  exact @GlobalTheory.ThK.LemF.RhoConj.rho_om_comm

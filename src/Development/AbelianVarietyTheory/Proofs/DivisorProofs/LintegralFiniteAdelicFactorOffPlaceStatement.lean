@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LintegralFiniteAdelicFactorOffPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ActFromBlocks
 import Development.AbelianVarietyTheory.Definitions.Foundations.OfInfProjInfMulOfFinProjFin
 import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.LcscAdelicUnitaryGroup
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.lintegral_finiteAdelic_factor_offPlace : ∀ (F : 
     ∀ (g : (κ → Fv F w) → ℝ≥0∞), Measurable g →
       ∫⁻ y, g (fun i => evalV F w (y i)) * K y ∂μf =
         (∫⁻ t, g t ∂μw) * ∫⁻ y, {t : κ → Fv F w | ∀ i, t i ∈ w.adicCompletionIntegers F}.indicator 1 (fun i => evalV F w (y i)) * K y ∂μf := by
-  first | exact @GlobalTheory.HaarFactorOffPlace.lintegral_evalV_mul_shiftInvariant | exact GlobalTheory.HaarFactorOffPlace.lintegral_evalV_mul_shiftInvariant | (intros; apply GlobalTheory.HaarFactorOffPlace.lintegral_evalV_mul_shiftInvariant <;> assumption)
+  exact @GlobalTheory.HaarFactorOffPlace.lintegral_evalV_mul_shiftInvariant

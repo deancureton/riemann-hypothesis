@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRestrictedTensorRepresentative
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.exists_restricted_tensor_representative : GlobalTh
       (∀ w, φ w ∈ SB _) → (∀ᶠ w in cofinite, φ w = G.M.vac w) →
       ∃ l : SInf F (Fin a × Fin (a + a')) →L[ℂ] ℂ, (∀ f, l f = G.M.I om (pure f φ) h) ∧
         ∀ g ∈ UAt σ G.V (evI F), ∀ f f₁ : SInf F (Fin a × Fin (a + a')), Acts (evI F) (om (g, 1)) f f₁ → l f₁ = l f := by
-  first | exact @GlobalTheory.ThKFunInf.funInf | exact GlobalTheory.ThKFunInf.funInf | (intros; apply GlobalTheory.ThKFunInf.funInf <;> assumption)
+  exact @GlobalTheory.ThKFunInf.funInf

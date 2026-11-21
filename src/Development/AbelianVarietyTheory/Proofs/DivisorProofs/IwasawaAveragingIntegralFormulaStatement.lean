@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaAveragingIntegralFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarMeasureIwasawaQuotient
 open MeasureTheory
 open scoped NNReal ENNReal
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.iwasawa_averaging_integral_formula : ∀ (G : Type
     (∀ g : G, (∫⁻ q : P, b ((q : G) * g) ∂μP) ≠ 0 ∧ (∫⁻ q : P, b ((q : G) * g) ∂μP) ≠ ∞) →
     ∀ Φ : G → ℝ≥0∞, AEMeasurable Φ μG → (∀ (p : P) (g : G), Φ ((p : G) * g) = (δ p : ℝ≥0∞) * Φ g) →
     ∀ g : G, ∫⁻ k : K, Φ ((k : G) * g) ∂μK = ∫⁻ k : K, Φ (k : G) ∂μK := by
-  first | exact @GlobalTheory.IwasawaAE.lintegral_mul_right_eq_of_equivariant | exact GlobalTheory.IwasawaAE.lintegral_mul_right_eq_of_equivariant | (intros; apply GlobalTheory.IwasawaAE.lintegral_mul_right_eq_of_equivariant <;> assumption)
+  exact @GlobalTheory.IwasawaAE.lintegral_mul_right_eq_of_equivariant

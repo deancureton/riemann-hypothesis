@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CohomologicalLocalComponentExponents
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HasString
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.IsTemperedGLOfIsUnitaryLSeg
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.ClozelCohomologicalModel
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.cohomological_local_component_exponents : GlobalTh
   ∀ f : ℂ, (∀ τ, ∀ z ∈ m τ, ∃ k : ℤ, z = f + k) →
   ∀ (w : HeightOneSpectrum (𝓞 E)) (σ : SmIrr (GL (Fin a) (w.adicCompletion E))), P.IsLocComp w σ →
     ∀ S : Multiset ℂˣ, GlobalTheory.LFun.HasSatGL w σ.ρ S → ∀ s ∈ S, ‖(s : ℂ)‖ = 1 := by
-  first | exact @GlobalTheory.TempSat.norm_satake_eq_one | exact GlobalTheory.TempSat.norm_satake_eq_one | (intros; apply GlobalTheory.TempSat.norm_satake_eq_one <;> assumption)
+  exact @GlobalTheory.TempSat.norm_satake_eq_one

@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_factor : GlobalTheory.FunP
           S (M.co.rho B.ψ u Φ) = S Φ) →
         (∀ l ∈ (adeleClass F).adm (Fin n₁ × Fin d), l ∘ₗ S ∈ (adeleClass F).adm (Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), S Φ = c • e Φ := by
-  first | exact @GlobalTheory.LagrUniq.eq_smul_evalZero | exact GlobalTheory.LagrUniq.eq_smul_evalZero | (intros; apply GlobalTheory.LagrUniq.eq_smul_evalZero <;> assumption)
+  exact @GlobalTheory.LagrUniq.eq_smul_evalZero

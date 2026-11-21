@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.config_a_theta_unfolding : GlobalTheory.ThK.KP →
         ∀ A : Rf.Pi v →ₗ[ℂ] (UA σ G.W.J → Rf₁.Pi v),
           IsIndMap v om om₁ (Rf.p v) (Rf₁.p v) H' X.α ((a' : ℝ) / 2) A →
           IsGLIndMap e π σ₁ ξ₁ ξ₂ ((LinearMap.funLeft ℂ (Rf₁.Pi v) Θ).comp A) := by
-  first | exact @GlobalTheory.IndLineGLBridge.isGLIndMap_of_isIndMap | exact GlobalTheory.IndLineGLBridge.isGLIndMap_of_isIndMap | (intros; apply GlobalTheory.IndLineGLBridge.isGLIndMap_of_isIndMap <;> assumption)
+  exact @GlobalTheory.IndLineGLBridge.isGLIndMap_of_isIndMap

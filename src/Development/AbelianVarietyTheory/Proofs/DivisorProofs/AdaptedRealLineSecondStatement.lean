@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedRealLineSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAdaptedFrame
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.adapted_real_line_second : ∀ (F E : Type) [Field
         (∀ i, ((mat k).map (piInf (B.emb w)) * C w) i (.inl r₀) = piInf (B.emb w) (t : AE F E) * C w i (.inl r₀)) ∧
         (∀ i, ((mat k).map (piInf (B.emb w)) * C w) i (.inr s₀) = piInf (B.emb w) (t : AE F E) * C w i (.inr s₀)) ∧
         ∀ c, c ≠ .inl r₀ → c ≠ .inr s₀ → ∀ i, ((mat k).map (piInf (B.emb w)) * C w) i c = C w i c := by
-  first | exact @GlobalTheory.LeviKCentre.levi_one_kInf | exact GlobalTheory.LeviKCentre.levi_one_kInf | (intros; apply GlobalTheory.LeviKCentre.levi_one_kInf <;> assumption)
+  exact @GlobalTheory.LeviKCentre.levi_one_kInf

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConductorOrderFiniteIntegers
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -26,4 +25,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conductor_order_finite_integers : ∀ (E : Type) [Field E] [NumberField E] (c : Ideal (OF E)), Module.Finite ℤ (orderC c) := by
-  first | exact @GlobalTheory.LatModel.finite_int_orderC | exact GlobalTheory.LatModel.finite_int_orderC | (intros; apply GlobalTheory.LatModel.finite_int_orderC <;> assumption)
+  exact @GlobalTheory.LatModel.finite_int_orderC

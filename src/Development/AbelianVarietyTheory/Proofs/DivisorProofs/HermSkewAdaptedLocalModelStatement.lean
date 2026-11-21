@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermSkewAdaptedLocalModel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.herm_skew_adapted_local_model : ∀ (F E : Type) [
     ∀ v : Pl F, ∀ u ∈ isoA (F := F) H H', At (evFin F v) u → ∀ u' ∈ isoA (F := F) H H', At (evFin F v) u' →
       (GlobalTheory.LatVac.locCo M.co v u).1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u').2 -
         (GlobalTheory.LatVac.locCo M.co v u').1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u).2 = 0 := by
-  first | exact @GlobalTheory.IsoALoc.isoA_locCo_iso | exact GlobalTheory.IsoALoc.isoA_locCo_iso | (intros; apply GlobalTheory.IsoALoc.isoA_locCo_iso <;> assumption)
+  exact @GlobalTheory.IsoALoc.isoA_locCo_iso

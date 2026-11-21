@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzFamilyFiniteDimSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationPreservesSchwartz
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.schwartz_family_finite_dim_span : ∀ (F : Type) [
     (∀ l ∈ (adeleClass F).adm κ, ∃ C : ℝ, ∀ t, ‖l (Ψ t)‖ ≤ C) →
     ∃ W : Submodule ℂ ((κ → Af F) → ℂ), FiniteDimensional ℂ W ∧
       ∀ t (y : κ → Ainf F), (fun z : κ → Af F => Ψ t (fun i => GlobalTheory.HeisSchA.mk (y i) (z i))) ∈ W := by
-  first | exact @GlobalTheory.SliceFinDim.slices_of_bounded | exact GlobalTheory.SliceFinDim.slices_of_bounded | (intros; apply GlobalTheory.SliceFinDim.slices_of_bounded <;> assumption)
+  exact @GlobalTheory.SliceFinDim.slices_of_bounded

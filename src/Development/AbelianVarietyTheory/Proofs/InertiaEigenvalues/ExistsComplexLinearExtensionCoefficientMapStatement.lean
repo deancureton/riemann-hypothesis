@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsComplexLinearExtensionCoefficientMap
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.IsRatScalarMulIff
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsIsScaleOfChar
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjFunBaseRoot
@@ -19,4 +18,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_complexLinear_extension_coefficientMap : ∀ (D : D7) (G : Type) [Group G] [Fintype G] (Pl0 T1 : Type) (A : FamIn D.what₂.LL G Pl0 T1 D.R.m) (T : CoreJ D) [Algebra T.Q.c.F D.what₂.LL] (R : RealDat D A T.Q.c.F) (j : Fin D.R.m) (Tp : Type) (tup : Tp → T1) (O : OMDat T.toCore R j Tp tup), ∃ c : VsV D j ℂ →ₗ[ℂ] (R.cV j).W, ExtC R j (inC O.c') O.c0' c := by
-  first | exact @GlobalTheory.ExtCoeff.exists_extC | exact GlobalTheory.ExtCoeff.exists_extC | (intros; apply GlobalTheory.ExtCoeff.exists_extC <;> assumption)
+  exact @GlobalTheory.ExtCoeff.exists_extC

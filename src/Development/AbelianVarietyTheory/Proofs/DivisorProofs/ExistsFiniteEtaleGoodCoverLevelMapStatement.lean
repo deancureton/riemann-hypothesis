@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFiniteEtaleGoodCoverLevelMap
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CongModRefl
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArakelovVolumes.UpperBounds.WeightFunctionOnFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SectionPullbackExistsUnique
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_finiteEtale_goodCover_levelMap : ∀ (E : T
       z₂ ≫ d.r = π ≫ pullback.fst _ _ ∧
       z₂ ≫ d.Xo₂.s = π ≫ pullback.snd _ _ ≫
         spMap ((d.eF.symm : d.c₂.F →+* c.F).comp (IntermediateField.inclusion d.c₂.le).toRingHom) := by
-  first | exact @GlobalTheory.CoverGood.exists_good_cover | exact GlobalTheory.CoverGood.exists_good_cover | (intros; apply GlobalTheory.CoverGood.exists_good_cover <;> assumption)
+  exact @GlobalTheory.CoverGood.exists_good_cover

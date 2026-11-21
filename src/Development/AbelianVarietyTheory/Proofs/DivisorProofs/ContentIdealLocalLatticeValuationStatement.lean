@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContentIdealLocalLatticeValuation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHeightSmulInvariant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsEvEqProdNormZpow
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.AdelicCharacterFrequenciesAndConductorProduct
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.content_ideal_local_lattice_valuation : ∀ (F E :
       (c • fun i => (1 : Fv F v) ⊗ₜ[F] u i) ∈ latLoc F L v →
       ∀ w : HeightOneSpectrum (𝓞 E), w.under (𝓞 F) = v →
           GlobalTheory.UnrTate.valAt v w c ≤ WithZero.exp (-FractionalIdeal.count E w I) := by
-  first | exact @GlobalTheory.LineLocVal.valAt_le_of_smul_mem_latLoc | exact GlobalTheory.LineLocVal.valAt_le_of_smul_mem_latLoc | (intros; apply GlobalTheory.LineLocVal.valAt_le_of_smul_mem_latLoc <;> assumption)
+  exact @GlobalTheory.LineLocVal.valAt_le_of_smul_mem_latLoc

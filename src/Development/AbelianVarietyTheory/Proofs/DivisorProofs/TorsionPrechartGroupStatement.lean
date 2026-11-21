@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionPrechartGroup
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -14,4 +13,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.torsion_prechart_group : ∀ (R K : Type) [CommRing R] [IsDomain R] [IsIntegrallyClosed R] [Field K] [IsAlgClosed K] [CharZero K] [Algebra R K] [IsFractionRing R K] (G : Over (Sp R)) [GrpObj G] [IsCommMonObj G], IsSemiAbelian G → ∀ (N : ℕ), N ≠ 0 → ∀ (q : PrimeSpectrum R) (c : PreChart G N q), c.IsGrp := by
-  first | exact @GlobalTheory.GroupBplus.Aff.chart_isGrp | exact GlobalTheory.GroupBplus.Aff.chart_isGrp | (intros; apply GlobalTheory.GroupBplus.Aff.chart_isGrp <;> assumption)
+  exact @GlobalTheory.GroupBplus.Aff.chart_isGrp

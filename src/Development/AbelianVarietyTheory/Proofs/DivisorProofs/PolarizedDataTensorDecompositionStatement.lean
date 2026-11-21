@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.polarized_data_tensor_decomposition : ∀ (F E : T
       (φ : Fin m → ∀ v : Pl F, (Fin a' × Fin (a + a') → Fv F v) → ℂ),
       (∀ i, f i ∈ G.M'.Pol B.ψ B.emb ∧ (∀ v, φ i v ∈ GlobalTheory.WeilM.SB _) ∧ (∀ᶠ v in Filter.cofinite, φ i v = G.M'.vac v) ∧
         φ i B.v₁ ∈ G.M'.SoLoc B.ψ B.τ₁) ∧ Φ = ∑ i, pure (f i) (φ i) := by
-  first | exact @GlobalTheory.ThK.SoPolSplit.exists_sum_pure_pol_so | exact GlobalTheory.ThK.SoPolSplit.exists_sum_pure_pol_so | (intros; apply GlobalTheory.ThK.SoPolSplit.exists_sum_pure_pol_so <;> assumption)
+  exact @GlobalTheory.ThK.SoPolSplit.exists_sum_pure_pol_so

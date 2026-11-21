@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_third : GlobalTheory.T
         ∃ Ψ : GAd σ (c₀ • W.J.map σ) → ℂ, GlobalTheory.StdPar.IsCuspOn σ (c₀ • W.J.map σ) X' Y' (insert 0 (S'.map (Fin.succEmb r))) K' Ψ ∧
           ∀ (t : (AE F E)ˣ) (m : UA σ W.J) (y : GAd σ (c₀ • W₁.J.map σ)), IsLevi (W₁ := W₁) H t 1 m →
             Ψ (GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ (m * M ((GlobalTheory.ThK.SquareIntegrability.toGAd hσ W₁.J hc₀).symm y))) = (χ t : ℂ) * ψ y := by
-  first | exact @GlobalTheory.ThK.CuspTransfer.exists_cuspOn_transfer | exact GlobalTheory.ThK.CuspTransfer.exists_cuspOn_transfer | (intros; apply GlobalTheory.ThK.CuspTransfer.exists_cuspOn_transfer <;> assumption)
+  exact @GlobalTheory.ThK.CuspTransfer.exists_cuspOn_transfer

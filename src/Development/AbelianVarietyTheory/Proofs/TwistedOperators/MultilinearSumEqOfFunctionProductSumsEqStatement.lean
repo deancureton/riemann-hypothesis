@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MultilinearSumEqOfFunctionProductSumsEq
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowShiftTheta
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
 open IsDedekindDomain NumberField MeasureTheory GlobalTheory.ChiGrid GlobalTheory.FunObj GlobalTheory.LastVertexInv
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.multilinear_sum_eq_of_function_product_sums_eq : �
       (τ.sum fun d a => a * (∏ i, (f d i : X i → ℂ) (x i)) * ∏ j, (g d j : Y j → ℂ) (y j)) =
         τ.sum fun d a => a * (∏ i, (f' d i : X i → ℂ) (x i)) * ∏ j, (g' d j : Y j → ℂ) (y j)) →
     (τ.sum fun d a => a * M (f d) (g d)) = τ.sum fun d a => a * M (f' d) (g' d) := by
-  first | exact @GlobalTheory.funProd_multilinear_sum_eq | exact GlobalTheory.funProd_multilinear_sum_eq | (intros; apply GlobalTheory.funProd_multilinear_sum_eq <;> assumption)
+  exact @GlobalTheory.funProd_multilinear_sum_eq

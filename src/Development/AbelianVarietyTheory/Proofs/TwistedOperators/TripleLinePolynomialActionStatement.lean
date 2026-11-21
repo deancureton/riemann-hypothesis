@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleLinePolynomialAction
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.triple_line_polynomial_action : GlobalTheory.FunPr
     (∀ᶠ v in Filter.cofinite, φ v = G.M.vac v) → ∀ u : Matrix (Fin a) (Fin (a + a')) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.AE F E),
     HasDerivAt (fun t : ℝ => GlobalTheory.WeilM.thetaSum F (G.M.co.rho B.ψ u (om (1, γ (Multiplicative.ofAdd t)) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ))))
       (GlobalTheory.WeilM.thetaSum F (G.M.co.rho B.ψ u (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f₁ φ))) 0 := by
-  first | exact @GlobalTheory.ThetaLinePureW.hasDerivAt_thetaSum_pure | exact GlobalTheory.ThetaLinePureW.hasDerivAt_thetaSum_pure | (intros; apply GlobalTheory.ThetaLinePureW.hasDerivAt_thetaSum_pure <;> assumption)
+  exact @GlobalTheory.ThetaLinePureW.hasDerivAt_thetaSum_pure

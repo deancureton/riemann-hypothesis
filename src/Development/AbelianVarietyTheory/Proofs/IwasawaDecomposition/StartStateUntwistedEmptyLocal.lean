@@ -18,7 +18,6 @@ attribute [local instance] Formalism.IndefR.principalLevelFrame.instCMHostI
 
 namespace GlobalTheory.Mem.R3.Rw.Bare
 
-set_option maxHeartbeats 4000000 in
 
 theorem hasBare_sat : HypA → HypH → DatExt0 → StepW Start fun K B f T w => ∃ (P : Pre2 K w) (x : St P), (T = TwDat.untw B T.pl → ∀ v v', GlobalTheory.TwistChoice.OverOne (w.D P.Z₀) v v' → v ∈ P.Wt → v' ∈ P.Wt) ∧ IsEmpty x.o.N.nd.Loc ∧ ∀ j v, x.o.η j v = 0 := by
   intro hA hH hE

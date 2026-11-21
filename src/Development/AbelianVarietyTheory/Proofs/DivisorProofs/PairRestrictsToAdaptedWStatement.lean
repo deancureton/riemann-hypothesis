@@ -27,4 +27,4 @@ theorem _root_.GlobalTheory.T.pair_restricts_to_adapted_w : ∀ (F E : Type) [Fi
         ∀ (t : AF F), ∀ w ∈ L, ∃ y : Fin n ⊕ Fin n → AE F E, ∃ z : Matrix (Fin d₁) (Fin n ⊕ Fin n) (AE F E),
           (dd₁.e z).1 = 0 ∧ dd.e (Matrix.vecMulVec (incV F H'.x) y + incM F H'.ι * z) =
             t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i))) := by
-  first | exact @GlobalTheory.DblLagr.exists_ratLagr | exact GlobalTheory.DblLagr.exists_ratLagr | (intros; apply GlobalTheory.DblLagr.exists_ratLagr <;> assumption)
+  exact @GlobalTheory.DblLagr.exists_ratLagr

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPeriodMapExists
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsL2OnDiagonalOfIsL2Metric
 
 open CategoryTheory AlgebraicGeometry Set Matrix MeasureTheory MonObj
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.local_period_map_exists : ∀ (S : Scheme.{0}) (P 
         ∀ d : P.RiemannData (y v), ∃ F : (Fin P.g → ℂ) →ₗ[ℂ] (Fin P.g → ℂ),
           (∀ z, (d.u.ex (F z)).left ≫ d.φ = ex (v, z)) ∧
           ∀ z w, HermFrame.form d.H (F z) (F w) = GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe.herm (τ v) z w := by
-  first | exact @GlobalTheory.NormPeriods.exists_normalised_periods | exact GlobalTheory.NormPeriods.exists_normalised_periods | (intros; apply GlobalTheory.NormPeriods.exists_normalised_periods <;> assumption)
+  exact @GlobalTheory.NormPeriods.exists_normalised_periods

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PdivPointValuationProperty
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.PlaceShiftSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.PointShiftSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.HtValOnSubset
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.pdiv_point_valuation_property : GlobalTheory.CovTo
       (ψ : P.A.A.left ⟶ Xo.univ.t.G.left) (z : FrPt Xo c C),
       (letI := io.toAlgebra; PointOver P y₀.1.x k.toRingHom kO ψ) → (letI := io.toAlgebra; FrMap k y₀.1 z) →
       ∀ σ : E →+* ℂ, Module.finrank C (P.eigW (embInt c P.integers σ)) = Dw.mult σ := by
-  first | exact @GlobalTheory.CompHt.finrank_eigW_embInt_eq_mult | exact GlobalTheory.CompHt.finrank_eigW_embInt_eq_mult | (intros; apply GlobalTheory.CompHt.finrank_eigW_embInt_eq_mult <;> assumption)
+  exact @GlobalTheory.CompHt.finrank_eigW_embInt_eq_mult

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorsProductExtend
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjLinApply
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.bijective_infinite_part_of_restricted_product : �
       (∀ᶠ v in cofinite, φ v = stdInd F κ v) → e (pure f φ) = pure (ei f) fun v => ev v (φ v)) →
     Set.BijOn e (schA F κ : Set ((κ → AF F) → ℂ)) (schA F κ : Set ((κ → AF F) → ℂ)) →
     (∀ v, ev v (stdInd F κ v) ≠ 0) → Function.Bijective ei := by
-  first | exact @GlobalTheory.ArchBij.bijective_arch | exact GlobalTheory.ArchBij.bijective_arch | (intros; apply GlobalTheory.ArchBij.bijective_arch <;> assumption)
+  exact @GlobalTheory.ArchBij.bijective_arch

@@ -5,4 +5,4 @@ open MeasureTheory Matrix Finset Formalism.MainNotions.S Formalism.REAL Formalis
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.classification_of_special_unitary : ∀ (n : ℕ), 1 ≤ n → ∀ ε : Fin n → Bool, ClassS ε → ClassF ε := by
-  first | exact @GlobalTheory.SUtoU.classF_of_classS | exact GlobalTheory.SUtoU.classF_of_classS | (intros; apply GlobalTheory.SUtoU.classF_of_classS <;> assumption)
+  exact @GlobalTheory.SUtoU.classF_of_classS

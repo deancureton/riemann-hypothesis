@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.WeilPairingTransportRelation
-import Mathlib
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.GlobalSectionsRankAlgClosed
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GenWeil
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.GlueApplyOfNotInFibre
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.weil_pairing_transport_relation : ∀ (Ω Ω' : Ty
   (∀ χ : A → Ω'ˣ, (∀ g g', g ^ n = 1 → g' ^ n = 1 → χ (g * g') = χ g * χ g') → ∃ x, x ^ n = 1 ∧ ∀ g, g ^ n = 1 → χ g = e' x g) →
   (∀ y' : A, y' ^ n = 1 → ∃ y : C, y ^ n = 1 ∧ ∀ g g', g ^ n = 1 → g' ^ n = 1 → rel g' g → (e' y' g' : Ω') = i (e y g)) ∧
   (∀ y : C, y ^ n = 1 → ∃ y' : A, y' ^ n = 1 ∧ ∀ g g', g ^ n = 1 → g' ^ n = 1 → rel g' g → (e' y' g' : Ω') = i (e y g)) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.TorsionChars.chars_descend | exact GlobalTheory.CompanionTheory.Ar.TorsionChars.chars_descend | (intros; apply GlobalTheory.CompanionTheory.Ar.TorsionChars.chars_descend <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.TorsionChars.chars_descend

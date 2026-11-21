@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartLeFixedPartImage
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.low_part_le_fixed_part_image : GlobalTheory.ThK.KP
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W)
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       lowPartInf B G.M R.p ≤ (fixPart B G.M om (lowDegInf B G.M R.p)).map R.p := by
-  first | exact @GlobalTheory.LowFixCover.lowPartInf_le_fixPart | exact GlobalTheory.LowFixCover.lowPartInf_le_fixPart | (intros; apply GlobalTheory.LowFixCover.lowPartInf_le_fixPart <;> assumption)
+  exact @GlobalTheory.LowFixCover.lowPartInf_le_fixPart

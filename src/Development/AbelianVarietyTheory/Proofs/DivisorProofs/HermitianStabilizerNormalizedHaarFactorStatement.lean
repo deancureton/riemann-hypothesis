@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianStabilizerNormalizedHaarFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -38,4 +37,4 @@ theorem _root_.GlobalTheory.T.hermitian_stabilizer_normalized_haar_factor : ∀ 
         κ * (∫ k : KAt K (evI F), ∫ l : idelesAt E (evI F), H k.1 l.1 ∂μI ∂μKI) *
           (∏ v ∈ T, ∫ k : KAt K (evFin F v), ∫ l : idelesAt E (evFin F v), Q v k.1 l.1 ∂(μv v) ∂(μKv v)) *
           ∏' v : {v : Pl F // v ∉ T}, ∫ l : idelesAt E (evFin F v.1), g v.1 l.1 ∂(μv v.1) := by
-  first | exact @GlobalTheory.ConeMeas.integral_comp_euler | exact GlobalTheory.ConeMeas.integral_comp_euler | (intros; apply GlobalTheory.ConeMeas.integral_comp_euler <;> assumption)
+  exact @GlobalTheory.ConeMeas.integral_comp_euler

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmPeriodTranscendenceRelation
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.cm_period_transcendence_relation : GlobalTheory.Pu
     ∃ (y₀ : I → HdR X₀.A) (yv : I → HdR X.A) (w : I → ℂ), ∀ i,
       y₀ i ≠ 0 ∧ (GlobalTheory.Published.AbelianDeRham.bcMor hp.grp).Corr (y₀ i) (yv i) ∧ U.IsCMVec i (yv i) (w i) ∧ w i ≠ 0 ∧
         IsAlgebraic ℚ (w i / a i) := by
-  first | exact @GlobalTheory.CMEigen.exists_algebraic_eigenvectors | exact GlobalTheory.CMEigen.exists_algebraic_eigenvectors | (intros; apply GlobalTheory.CMEigen.exists_algebraic_eigenvectors <;> assumption)
+  exact @GlobalTheory.CMEigen.exists_algebraic_eigenvectors

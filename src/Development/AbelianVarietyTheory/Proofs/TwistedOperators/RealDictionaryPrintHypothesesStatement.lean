@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RealDictionaryHypotheses
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LieActionFockOperatorsScalarsTrace
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.real_dictionary_hypotheses : GlobalTheory.FunPr.Hy
         HasDerivAt (fun t : ℝ => GlobalTheory.TripleRead.thO Mo ψ' G e
             (om (1, γ (Multiplicative.ofAdd t)) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.tens (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI D.host.F) f r)) x)
           (GlobalTheory.TripleRead.thO Mo ψ' G e (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.tens (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI D.host.F) f₁ r) x) 0 := by
-  first | exact @GlobalTheory.ThetaInterchange.hasDerivAt_thO | exact GlobalTheory.ThetaInterchange.hasDerivAt_thO | (intros; apply GlobalTheory.ThetaInterchange.hasDerivAt_thO <;> assumption)
+  exact @GlobalTheory.ThetaInterchange.hasDerivAt_thO

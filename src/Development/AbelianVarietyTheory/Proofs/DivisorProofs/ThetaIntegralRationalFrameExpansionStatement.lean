@@ -28,4 +28,4 @@ theorem _root_.GlobalTheory.T.theta_integral_rational_frame_expansion : ∀ (F E
                     (GlobalTheory.SmGL.detRep (Fin x) (χ₁ * GlobalTheory.SmGL.absPow (w.adicCompletion E) (s₁ : ℂ)))
                     (GlobalTheory.SmGL.detRep (Fin x') (χ₂ * GlobalTheory.SmGL.absPow (w.adicCompletion E) (s₂ : ℂ)))) ∧
                   ∃ f : Q.IntertwiningMap (τ.locRep w), f ≠ 0 := by
-  first | exact @GlobalTheory.CuspBlock.block_bridge | exact GlobalTheory.CuspBlock.block_bridge | (intros; apply GlobalTheory.CuspBlock.block_bridge <;> assumption)
+  exact @GlobalTheory.CuspBlock.block_bridge

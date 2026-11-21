@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubleAdaptedLagrangianDim
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelG
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.double_adapted_lagrangian_dim : GlobalTheory.FunPr
     ∀ T T' : SInf F (Fin n × Fin d) →L[ℂ] SInf F (Fin n₁ × Fin d₁), T ≠ 0 →
     GlobalTheory.ThK.EvFactor.InfRelG B M M₁ H.ι H'.ι (isoA H H') T → GlobalTheory.ThK.EvFactor.InfRelG B M M₁ H.ι H'.ι (isoA H H') T' →
     ∃ c : ℂ, T' = c • T := by
-  first | exact @GlobalTheory.ArchSchA.infRelA_proportional | exact GlobalTheory.ArchSchA.infRelA_proportional | (intros; apply GlobalTheory.ArchSchA.infRelA_proportional <;> assumption)
+  exact @GlobalTheory.ArchSchA.infRelA_proportional

@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.unipotent_fundamental_domain_exists : ∀ (F E : T
     (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' → B.IsGood σ → G.IsGood B → G₁.IsGood B →
     ∀ μN : Measure (unip σ G.V H), μN.IsHaarMeasure →
     ∃ 𝓕 : Set (unip σ G.V H), IsFundamentalDomain ((ratU σ G.V.J).subgroupOf (unip σ G.V H)) 𝓕 μN ∧ μN 𝓕 ≠ 0 ∧ μN 𝓕 ≠ ⊤ := by
-  first | exact @GlobalTheory.UnipMassHerm.exists_fundDom_unip_herm | exact GlobalTheory.UnipMassHerm.exists_fundDom_unip_herm | (intros; apply GlobalTheory.UnipMassHerm.exists_fundDom_unip_herm <;> assumption)
+  exact @GlobalTheory.UnipMassHerm.exists_fundDom_unip_herm

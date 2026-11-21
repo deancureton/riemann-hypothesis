@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmFieldLatticeIntegrality
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.cm_field_lattice_integrality : GlobalTheory.Publis
       (∀ a : orderC (condQ 𝔣 Q), ∃ (α : X.A ⟶ X.A) (_ : IsMonHom α), α.left ≫ p = p ≫ (cm.act a).left ∧
         ∀ w, U.u.ex (fun j ↦ φ (U.e j) (a : E) * w j) = U.u.ex w ≫ α) ∧
       ∀ (i : I) (e : X₀.Lie →ₗ[R] R) (a : ℂ), IsPeriodGen X₀ U p i e a → a ≠ 0 → Sz l lam (a0 𝔣 l) (a / Ω) := by
-  first | exact @GlobalTheory.LatModel.exists_model_periods | exact GlobalTheory.LatModel.exists_model_periods | (intros; apply GlobalTheory.LatModel.exists_model_periods <;> assumption)
+  exact @GlobalTheory.LatModel.exists_model_periods

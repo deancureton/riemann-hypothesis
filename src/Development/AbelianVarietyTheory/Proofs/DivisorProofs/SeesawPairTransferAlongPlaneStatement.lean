@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairTransferAlongPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_transfer_along_plane : ∀ (F E : Type
         ∀ (t : AF F), ∀ w ∈ L, ∃ y : Fin d ⊕ Fin d → AE F E, ∃ z : Matrix (Fin n₁) (Fin d ⊕ Fin d) (AE F E),
           (dd₁.e z).1 = 0 ∧ dd.e (Matrix.vecMulVec (incV F H.x) y + incM F H.ι * z) =
             t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i))) := by
-  first | exact @GlobalTheory.MixedLagrXDbl.exists_ratLagr | exact GlobalTheory.MixedLagrXDbl.exists_ratLagr | (intros; apply GlobalTheory.MixedLagrXDbl.exists_ratLagr <;> assumption)
+  exact @GlobalTheory.MixedLagrXDbl.exists_ratLagr

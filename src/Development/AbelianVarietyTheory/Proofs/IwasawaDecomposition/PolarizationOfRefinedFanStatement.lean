@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.PolarizationOfRefinedFan
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPolSt
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing TopologicalSpace
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.AnForm.R Formalism.L2.Pj
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.polarization_of_refined_fan : ∀ (E : Type) [Fiel
       ((residue R).comp (Scheme.stalkClosedPointTo ξ).hom).FormallyUnramified → P.TorsionIso →
       ConeO H φ P.D.toPre.X m γ → InCone P.D.toPre γ →
       ∀ y : Sp (FractionRing R) ⟶ Xo.XF c, y ≫ Y.j = jK R ≫ ξ → ∃ χ : Sp R ⟶ X.X, jK R ≫ χ = y ≫ X.j := by
-  first | exact @GlobalTheory.ChartExtend.extend | exact GlobalTheory.ChartExtend.extend | (intros; apply GlobalTheory.ChartExtend.extend <;> assumption)
+  exact @GlobalTheory.ChartExtend.extend

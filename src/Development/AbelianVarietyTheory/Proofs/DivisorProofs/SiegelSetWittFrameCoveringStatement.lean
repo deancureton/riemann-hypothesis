@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelSetWittFrameCovering
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.siegel_set_witt_frame_covering : GlobalTheory.ThK.
         ∀ p ∈ Ω, ∀ t ∈ GlobalTheory.SiegelSet.cone r₀ c, ∀ a, GlobalTheory.SiegelSet.IsTorusElt σ ((1 : E) • X.J.map σ) Xf Yf t a →
         ∀ k ∈ K, g.1 = HA.mat (AF F) σ ((1 : E) • X.J.map σ) (p * a * k) →
           ‖theta om Φ g h‖ * (1 + ∏ i, t i) ^ L ≤ C * (ht h : ℝ) ^ N := by
-  first | exact @GlobalTheory.ThetaSoSiegel.theta_decay_height_pow | exact GlobalTheory.ThetaSoSiegel.theta_decay_height_pow | (intros; apply GlobalTheory.ThetaSoSiegel.theta_decay_height_pow <;> assumption)
+  exact @GlobalTheory.ThetaSoSiegel.theta_decay_height_pow

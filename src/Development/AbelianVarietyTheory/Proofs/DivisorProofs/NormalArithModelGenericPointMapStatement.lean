@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.normal_arith_model_generic_point_map : ∀ {F : Ty
     (A : TrueGeo.Adl C Yv) (L : HermLB p) (k : ℕ),
     (@Cover.mk _ _ Yv X _ p ar nX G _ j πG pb _ _ φ φs).Induces A L k →
       (@Cover.mk _ _ Yv X' _ p' ar' nX' G _ j' πG pb' _ _ φ φs).Induces A (L.pull f hf) k := by
-  first | exact @GlobalTheory.Mean4O.Cover.induces_pull_of_comp | exact GlobalTheory.Mean4O.Cover.induces_pull_of_comp | (intros; apply GlobalTheory.Mean4O.Cover.induces_pull_of_comp <;> assumption)
+  exact @GlobalTheory.Mean4O.Cover.induces_pull_of_comp

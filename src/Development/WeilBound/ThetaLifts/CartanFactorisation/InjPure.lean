@@ -8,7 +8,6 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HasFiniteLength
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.Inertof
 import Development.WeilBound.CoreStatements.LocalThetaKernels.IwasMain
 import Development.WeilBound.CoreStatements.LocalThetaKernels.EvlMain
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EventuallyCompSideMulEq
 import Development.WeilBound.CoreStatements.CompactAveragingSplitting.EigenvectorLifting.HypothesesAtTriple
 import Development.WeilBound.ThetaLifts.CartanFactorisation.Cartan

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EvenRankSelfDualUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitOff
 import Formalism.LocalToGlobal.InertKernelTheory.DefsInt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JetKapIff
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.even_rank_self_dual_unitary : GlobalTheory.FunPr.H
           (Formalism.L2.KerInert.tPull D (tor0 D D.host.ccK δ) U.1 U'.1 z) =
         ε * Iop D (tor0 D D.host.ccK δ) (La0 D (tor0 D D.host.ccK δ) N N')
           (Formalism.MainNotions.TaylorLogMetric.La D (tor0 D D.host.ccK δ) (SDLat.smulLat U.1 M) (SDLat.smulLat U'.1 M')) e0 z := by
-  first | exact @GlobalTheory.RatMoveIop.iop_pull_rat | exact GlobalTheory.RatMoveIop.iop_pull_rat | (intros; apply GlobalTheory.RatMoveIop.iop_pull_rat <;> assumption)
+  exact @GlobalTheory.RatMoveIop.iop_pull_rat

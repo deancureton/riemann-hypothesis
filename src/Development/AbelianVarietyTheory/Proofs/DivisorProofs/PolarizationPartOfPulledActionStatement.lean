@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.polarization_part_of_pulled_action : GlobalTheory.
   ∀ (Ω : Type) [Field Ω] [IsAlgClosed Ω] [CharP Ω q] (x : Sp Ω ⟶ O.s.T.Z.X) (G : Over (Sp Ω)) [GrpObj G]
     (i : OAct (𝓞 D.host.E) G) (φ : G.left ⟶ O.s.T.Z.t.G.left), IsActPull i O.s.T.Z.t.act x φ →
     PolPart (O.A.H.bar : 𝓞 D.host.E →+* 𝓞 D.host.E) i := by
-  first | exact @GlobalTheory.PolPoint.polPart_at_point | exact GlobalTheory.PolPoint.polPart_at_point | (intros; apply GlobalTheory.PolPoint.polPart_at_point <;> assumption)
+  exact @GlobalTheory.PolPoint.polPart_at_point

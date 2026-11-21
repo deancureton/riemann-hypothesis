@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdempotentProjectionFunctorLinearExact
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsBaseEqChain
 import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.idempotent_projection_functor_linear_exact : ∀ {
     (∀ {M N : AM B Λ} (f : M ⟶ N), IsAdd M → IsAdd N →
       Nonempty ((partF c a).obj (cokernel f) ≅ cokernel ((partF c a).map f))) ∧
     (∀ M : AM B Λ, IsAdd M → ∃ (i : (partF c a).obj M ⟶ M.V) (q : M.V ⟶ (partF c a).obj M), i ≫ q = 𝟙 _) := by
-  first | exact @GlobalTheory.ChainParts.partF_exact | exact GlobalTheory.ChainParts.partF_exact | (intros; apply GlobalTheory.ChainParts.partF_exact <;> assumption)
+  exact @GlobalTheory.ChainParts.partF_exact

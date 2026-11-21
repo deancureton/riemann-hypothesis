@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.plurisubharmonic_off_boundary : Hypotheses2 → HypothesesH → OnObj fun _ O _ T _ _ => ∀ c u, GlobalTheory.FlagPoly.Dom u → ∀ σ, PshOff ((T.M c).A σ) ((T.M c).Z σ) ((T.F c).th u σ + ReciprocityTheory.AnForm.M.LocPot.ofFun ((T.F c).ph u σ)) := by
-  first | exact @GlobalTheory.HodgeWeightPos.pshOff_th_ph | exact GlobalTheory.HodgeWeightPos.pshOff_th_ph | (intros; apply GlobalTheory.HodgeWeightPos.pshOff_th_ph <;> assumption)
+  exact @GlobalTheory.HodgeWeightPos.pshOff_th_ph

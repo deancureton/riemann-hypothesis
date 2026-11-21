@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsOrbitIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.matched_maps_orbit_identity : GlobalTheory.FunPr.H
     (∀ x, HasDerivAt (fun t : ℝ => om (1, γ (Multiplicative.ofAdd t)) Φ x) (Φ₁ x) 0) →
     (∀ x, HasDerivAt (fun t : ℝ => om' (1, γ (Multiplicative.ofAdd t)) Φ' x) (Φ₁' x) 0) →
     GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch B G X R Rf Φ₁ Φ₁' := by
-  first | exact @GlobalTheory.LineMatch.polMatch_deriv | exact GlobalTheory.LineMatch.polMatch_deriv | (intros; apply GlobalTheory.LineMatch.polMatch_deriv <;> assumption)
+  exact @GlobalTheory.LineMatch.polMatch_deriv

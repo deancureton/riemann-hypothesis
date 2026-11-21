@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerModelComplexConjugateNegForm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsApprox
 
 open NumberField IsDedekindDomain
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.schrodingerModel_complexConjugate_negForm : ∀ {D
   ∃ Tm : (WO A WW → ℂ) →ₗ[ℂ] (WO A WW → ℂ),
     IsPlaceModel ψ (symplO A WW) (heisO ψ A WW) e (latO A WW ΛA ΛW fun _ => True) 1 (fun w => starRingEnd ℂ (vac w)) Tm ∧
       (fun w => starRingEnd ℂ (f w)) = Tm (fun w => starRingEnd ℂ (Φ w)) := by
-  first | exact @GlobalTheory.ConjSchr.conj_schroedinger_neg | exact GlobalTheory.ConjSchr.conj_schroedinger_neg | (intros; apply GlobalTheory.ConjSchr.conj_schroedinger_neg <;> assumption)
+  exact @GlobalTheory.ConjSchr.conj_schroedinger_neg

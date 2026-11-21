@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarStabilizerNormalizedLocalProduct
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.haar_stabilizer_normalized_local_product : ∀ (F 
       (fun _ => (μKi.map Subtype.val).prod (μEi.map Subtype.val))
       (fun v => ((μKv v).map Subtype.val).prod ((μEv v).map Subtype.val))
       (κ • μK.prod μ) := by
-  first | exact @GlobalTheory.ThK.EulerMeas.haar_isCylProd | exact GlobalTheory.ThK.EulerMeas.haar_isCylProd | (intros; apply GlobalTheory.ThK.EulerMeas.haar_isCylProd <;> assumption)
+  exact @GlobalTheory.ThK.EulerMeas.haar_isCylProd

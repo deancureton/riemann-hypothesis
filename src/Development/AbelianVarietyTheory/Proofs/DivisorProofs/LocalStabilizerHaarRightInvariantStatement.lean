@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalStabilizerHaarRightInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_stabilizer_haar_right_invariant : ∀ (F E :
     (G : Geo σ (b + 2) a') (G₁ : Geo σ b a') (H : Plane E (b + 2) b) (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' →
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' → ∀ (v : Pl F),
     ∀ μ : Measure (stabAt σ G.V (evFin F v) H.x), μ.IsHaarMeasure → μ.IsMulRightInvariant := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.QUnimod.stabAt_isMulRightInvariant | exact GlobalTheory.ThK.LemF.QuotInv.QUnimod.stabAt_isMulRightInvariant | (intros; apply GlobalTheory.ThK.LemF.QuotInv.QUnimod.stabAt_isMulRightInvariant <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.QUnimod.stabAt_isMulRightInvariant

@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.twistedPlace_innerProduct_classSum_rows : OverRows fun _ _ _ _ w Z _ _ z _ Y => ∀ (M : MtFam (w.st Z).toD7) tup Q, MtAd Y M → MtInput (w.st Z).toD7 M tup Q → SumTw (w.st Z).toD7 M := by
-  first | exact @GlobalTheory.FormInner.sumTw_rows | exact GlobalTheory.FormInner.sumTw_rows | (intros; apply GlobalTheory.FormInner.sumTw_rows <;> assumption)
+  exact @GlobalTheory.FormInner.sumTw_rows

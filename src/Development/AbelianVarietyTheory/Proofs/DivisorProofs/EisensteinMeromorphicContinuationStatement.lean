@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinMeromorphicContinuation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.eisenstein_meromorphic_continuation : ∀ {F E : T
     ∃ (r C : ℝ) (N : ℕ), 0 < r ∧ (∀ g, DifferentiableOn ℂ (Eis · g) (Metric.ball (-((((b + 2 : ℕ) : ℂ) - 1) / 2)) r)) ∧
       (∀ s ∈ Metric.ball (-((((b + 2 : ℕ) : ℂ) - 1) / 2)) r, ∀ g, ‖Eis s g‖ ≤ C * (qht g : ℝ) ^ N) ∧
       ∀ s ∈ Metric.ball (-((((b + 2 : ℕ) : ℂ) - 1) / 2)) r, Measurable (Eis s) := by
-  first | exact @GlobalTheory.ConeSmallCT.eisGood_qht_measurable | exact GlobalTheory.ConeSmallCT.eisGood_qht_measurable | (intros; apply GlobalTheory.ConeSmallCT.eisGood_qht_measurable <;> assumption)
+  exact @GlobalTheory.ConeSmallCT.eisGood_qht_measurable

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SizeMatrixRelativeModulus
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.size_matrix_relative_modulus : ∀ (k : Type) [Fie
         (GlobalTheory.SmGL.swapBlocks k (fun i j => Fin (M.1 i j)) (Pi.mulSingle (1 : Fin 3) z)) : ℂˣ) =
       GlobalTheory.LeviBlockExponent.pairChar k (fun i => M.1 i 1)
         (fun i => χ i * GlobalTheory.SmGL.absPow k ((M.1 i 0 : ℂ) + ((M.1 i 1 : ℂ) - b i) / 2)) z := by
-  first | exact @GlobalTheory.CellExp.jacquetChar_middleColumn | exact GlobalTheory.CellExp.jacquetChar_middleColumn | (intros; apply GlobalTheory.CellExp.jacquetChar_middleColumn <;> assumption)
+  exact @GlobalTheory.CellExp.jacquetChar_middleColumn

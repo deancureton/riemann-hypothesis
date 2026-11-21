@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CombMemIff
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IncreasingRowChoicePerColumn
 open MvPolynomial
 set_option maxHeartbeats 1000000 in
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.comb_mem_iff_alt : ∀ (p : ℕ) [Fact p.Prime] (L
           ∏ s, MvPolynomial.eval (fun k : Fin N × Fin N => y (e s) k.1 k.2)
             (MvPolynomial.map (algebraMap ℚ ℂ_[p]) (g s (κ s)))) ∈ WeylLatticeDuality.DelW p T N ν ↔
         ∀ κ, ‖a κ‖ ≤ 1) := by
-  first | exact @GlobalTheory.WeylCombInt.comb_mem_iff | exact GlobalTheory.WeylCombInt.comb_mem_iff | (intros; apply GlobalTheory.WeylCombInt.comb_mem_iff <;> assumption)
+  exact @GlobalTheory.WeylCombInt.comb_mem_iff

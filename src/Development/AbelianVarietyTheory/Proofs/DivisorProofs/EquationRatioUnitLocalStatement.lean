@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EquationRatioUnitLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.equation_ratio_unit_local : ∀ {E : Type} [Field 
       lgOf Y (∑ i ∈ s, Finsupp.single (a i) (n i)) v ε y =
         ∑ i ∈ s, (n i : ℝ) * lgOf Y (Finsupp.single (a i) 1) v ε y +
           Real.log (ε.w (valAt y.1 (eqnRatio Y s a n x : Y.Y.Fn))) := by
-  first | exact @GlobalTheory.HtAdd.SumLines.lgOf_sum_single | exact GlobalTheory.HtAdd.SumLines.lgOf_sum_single | (intros; apply GlobalTheory.HtAdd.SumLines.lgOf_sum_single <;> assumption)
+  exact @GlobalTheory.HtAdd.SumLines.lgOf_sum_single

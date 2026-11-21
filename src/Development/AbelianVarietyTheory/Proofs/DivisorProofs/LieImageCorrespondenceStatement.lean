@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieImageCorrespondence
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.lie_image_correspondence : GlobalTheory.Published.
     ∀ (m : GrpMor (dp0 R) (𝟙 _) X.A (dp0 R') (𝟙 _) X'.A σ (spMap σ) φ) {x : HdR X.A} {x' : HdR X'.A},
     m.Corr x x' → ∀ {v : X.Lie} {v' : X'.Lie}, IsLieImage x v.hom → IsLieImage x' v'.hom →
     Obj.LieCorr σ φ v v' := by
-  first | exact @GlobalTheory.RealMult.Obj.lieCorr_of_isLieImage | exact GlobalTheory.RealMult.Obj.lieCorr_of_isLieImage | (intros; apply GlobalTheory.RealMult.Obj.lieCorr_of_isLieImage <;> assumption)
+  exact @GlobalTheory.RealMult.Obj.lieCorr_of_isLieImage

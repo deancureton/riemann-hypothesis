@@ -24,7 +24,6 @@ variable {D : D7} {Tw : TwForms D} {inQ : D.what₂.Tup → HeightOneSpectrum (�
   {T : Formalism.L2.Herm.TwChTied D inQ} {H : Formalism.L2.Herm.HermColsCh D} {J : Formalism.L2.Herm.TwChJointS T H}
   {F : ∀ u, FormsTiedSym D u (H.Ch u) (H.chOf u)}
 
-set_option maxHeartbeats 4000000 in
 
 def stepInTw (W : TwFormsTiedS D Tw T J F) (u : D.what₂.Word) (μ : D.what₂.Tup) (hμ : μ ≠ D.what₂.mu0) (i : ℕ) (h1 : 1 ≤ i)
     (hm : i ≤ D.R.m) {p : ℕ} (G : GAtP p) (dt : ∀ β, DetTie (W.ch u μ hμ i h1 hm β).lev)

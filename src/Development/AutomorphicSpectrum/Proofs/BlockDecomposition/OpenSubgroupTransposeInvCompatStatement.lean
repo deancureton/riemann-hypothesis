@@ -11,4 +11,4 @@ open scoped NumberField.AdeleRing ENNReal
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.open_subgroup_transposeInv_compat : ∀ U₀ : OpenSubgroup (AdelicGLn.FiniteAdelicGL ℚ 3), ∃ U₁ : OpenSubgroup (AdelicGLn.FiniteAdelicGL ℚ 3),
   ∀ u ∈ U₁, ∃ u' ∈ U₀, ∀ g : G3, ti (g * finEmb ℚ 3 u) = ti g * finEmb ℚ 3 u' := by
-  first | exact @GlobalTheory.CompanionTheory.UnfoldingAlt.TrLevel.ti_level | exact GlobalTheory.CompanionTheory.UnfoldingAlt.TrLevel.ti_level | (intros; apply GlobalTheory.CompanionTheory.UnfoldingAlt.TrLevel.ti_level <;> assumption)
+  exact @GlobalTheory.CompanionTheory.UnfoldingAlt.TrLevel.ti_level

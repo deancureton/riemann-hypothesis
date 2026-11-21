@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.local_height_prime_integrality : Hypotheses2 → H
     (inC : Ch → Prop) (M : Ch → Matrix (Fin (D.R.f * O.N + D.R.f * O.N)) (Fin (D.R.f * O.N)) (AlgebraicClosure D.what₂.LL)),
     resP v = p → PtData O c b n hp e y inC M → ∀ k : ℕ, k + 3 ≤ n → ∀ a a', inC a → inC a' → ∀ u : Fin (D.R.f * O.N) → AlgebraicClosure D.what₂.LL,
       supN e.w ((M a).mulVec u) ≤ 1 → supN e.w ((M a').mulVec u - (M a).mulVec u) ≤ e.w (p : AlgebraicClosure D.what₂.LL) ^ k := by
-  first | exact @GlobalTheory.EqHalf.ChartAgree.charts_agree | exact GlobalTheory.EqHalf.ChartAgree.charts_agree | (intros; apply GlobalTheory.EqHalf.ChartAgree.charts_agree <;> assumption)
+  exact @GlobalTheory.EqHalf.ChartAgree.charts_agree

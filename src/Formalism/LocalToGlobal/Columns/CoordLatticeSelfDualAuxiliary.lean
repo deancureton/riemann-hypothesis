@@ -59,7 +59,6 @@ def hCrdP (u : d.what₂.Word) : HCrdP d.X (d.R.N d.R.m - 1) fun c : PCl d => (d
 def hermPackP (u : d.what₂.Word) :=
   levPackP d.sp.cm d.hPr d.σ₀ d.levP.inv d.reprP hP (fun c => (ptGSD (Pr := d.Pr) d.W d.levP).outSec.spec c) (hCrdP a hS hH hP u)
 
-set_option maxHeartbeats 4000000 in
 
 def levelExponentAtT (u : d.what₂.Word) : AtTXp (atTTied a hH u) (fun i hi => levelAgreement a hS hH u i hi) :=
   xpOf (tildeLatticeAgreement a hS hH hP u)

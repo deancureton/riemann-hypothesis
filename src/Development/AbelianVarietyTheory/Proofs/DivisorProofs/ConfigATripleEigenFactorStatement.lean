@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleEigenFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_a_triple_eigen_factor : GlobalTheory.ThK.KP
     IsStab B K → μK.IsHaarMeasure → μ.IsHaarMeasure → (∃ Φ₁ ∈ PolData B G₁.M, G₁.M.I om₁ Φ₁ ≠ 0) →
     ∃ Φ ∈ PolData B G.M, ∃ (h : UA σ G.W.J) (h₁ : UA σ G₁.W.J) (m : UA σ G.W.J), IsLevi (W₁ := G₁.W) H' 1 h₁ m ∧
       G₁.M.I om₁ (cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (om (1, h) Φ)) h₁ ≠ 0 := by
-  first | exact @GlobalTheory.ConeA.coneA_nonZero | exact GlobalTheory.ConeA.coneA_nonZero | (intros; apply GlobalTheory.ConeA.coneA_nonZero <;> assumption)
+  exact @GlobalTheory.ConeA.coneA_nonZero

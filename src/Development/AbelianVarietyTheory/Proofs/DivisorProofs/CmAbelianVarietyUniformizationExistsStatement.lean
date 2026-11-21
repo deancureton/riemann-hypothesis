@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.cm_abelian_variety_uniformization_exists : ∀ (K 
       IsCMType φ → (∀ i, (φ i).comp (algebraMap K E) = io) → ∀ (c : Ideal (OF E)) (y : (Af E)ˣ), c ≠ ⊥ →
       ∃ (𝔠 : FracId (FR E)) (X : Obj (FR E) 𝔠 (Sp ℂ)) (U : Unif φ (lattice c y) 0 X),
         ∀ i, U.h i ≠ 0 ∧ IsAlgebraic ℚ ((U.h i : ℂ) * (Real.sqrt d : ℝ)) := by
-  first | exact @GlobalTheory.LatTorus.exists_unif_of_lattice | exact GlobalTheory.LatTorus.exists_unif_of_lattice | (intros; apply GlobalTheory.LatTorus.exists_unif_of_lattice <;> assumption)
+  exact @GlobalTheory.LatTorus.exists_unif_of_lattice

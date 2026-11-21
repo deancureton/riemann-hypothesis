@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EqZeroOfRestrictionsVanish
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CuspIso
 import Development.AbelianVarietyTheory.Definitions.Divisors.WellChosen
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
@@ -28,4 +27,4 @@ open scoped Topology TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eq_zero_of_restrictions_vanish : ∀ (D : D7) (T : Core D) (j : ℕ) (Y : Deep T j) (e : ℕ) (o : ℝ), Y.Good e o → ∀ σ : Y.d.c₂.F →+* ℂ, GoodEmb Y.d.c₂ σ → ∀ (G : WTZ D.host.E) (x : Y.V G), (∀ k, ∀ z ∈ ((Y.U σ).X k).dom, rdU (Y.U σ) (x : Rul Y.d.Xo₂ Y.d.c₂) k z = 0) → x = 0 := by
-  first | exact @GlobalTheory.IntWtRead.cuspW_eq_zero_of_reading | exact GlobalTheory.IntWtRead.cuspW_eq_zero_of_reading | (intros; apply GlobalTheory.IntWtRead.cuspW_eq_zero_of_reading <;> assumption)
+  exact @GlobalTheory.IntWtRead.cuspW_eq_zero_of_reading

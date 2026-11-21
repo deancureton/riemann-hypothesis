@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.fibre_size_and_range_bound : Hypotheses2 → HypothesesH → OnObj fun _ O _ T _ _ => ∀ c, (T.F c).Size ∧ (T.F c).InR O.Y.j := by
-  first | exact @GlobalTheory.InterpMetricObj.size_inR | exact GlobalTheory.InterpMetricObj.size_inR | (intros; apply GlobalTheory.InterpMetricObj.size_inR <;> assumption)
+  exact @GlobalTheory.InterpMetricObj.size_inR

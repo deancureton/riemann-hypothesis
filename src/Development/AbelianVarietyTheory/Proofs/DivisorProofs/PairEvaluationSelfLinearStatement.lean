@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairEvaluationSelfLinear
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.pair_evaluation_self_linear : GlobalTheory.ThK.KP 
     M₁.IsGood B.ψ → IsEv B M M₁ 1 1 ∅ e → ∀ f : Fn F n d →ₗ[ℂ] Fn F n d,
     (∀ (z : Matrix (Fin n) (Fin d) (AE F E)), ∀ Φ ∈ schA F (Fin n × Fin d), f (M.co.rho B.ψ z Φ) = M₁.co.rho B.ψ z (f Φ)) →
     ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), f Φ = c • e Φ := by
-  first | exact @GlobalTheory.ThK.EvChangeUniq.eq_smul_isEv | exact GlobalTheory.ThK.EvChangeUniq.eq_smul_isEv | (intros; apply GlobalTheory.ThK.EvChangeUniq.eq_smul_isEv <;> assumption)
+  exact @GlobalTheory.ThK.EvChangeUniq.eq_smul_isEv

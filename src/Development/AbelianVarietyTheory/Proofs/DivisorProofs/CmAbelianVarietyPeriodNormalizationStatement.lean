@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.cm_abelian_variety_period_normalization : GlobalTh
       IsCMType φ → (∀ i, (φ i).comp (algebraMap K E) = io) → ∀ (c : Ideal (OF E)) (y : (Af E)ˣ), c ≠ ⊥ →
       ∀ (𝔠 : FracId (FR E)) (X : Obj (FR E) 𝔠 (Sp ℂ)) (U : Unif φ (lattice c y) 0 X),
       ∃ (X₀ : Obj (FR E) 𝔠 (Sp Qb)) (p : X.A.left ⟶ X₀.A.left), X.IsPullBy X₀ (spMap (algebraMap Qb ℂ)) p := by
-  first | exact @GlobalTheory.CMModel.exists_model | exact GlobalTheory.CMModel.exists_model | (intros; apply GlobalTheory.CMModel.exists_model <;> assumption)
+  exact @GlobalTheory.CMModel.exists_model

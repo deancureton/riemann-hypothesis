@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PoleResOfPrint
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EisensteinResidueLine
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.eisenstein_constant_term_setting_alt : GlobalTheor
         (U₀ ∈ 𝓝 (((n : ℂ) - 1) / 2) ∧ DifferentiableOn ℂ u U₀ ∧ u (((n : ℂ) - 1) / 2) ≠ 0 ∧ ∀ s ∈ U₀, s ≠ (((n : ℂ) - 1) / 2) → c s = u s / (s - (((n : ℂ) - 1) / 2))) ∧ U ∈ 𝓝 (((n : ℂ) - 1) / 2) ∧
         (∀ s ∈ U, s ≠ (((n : ℂ) - 1) / 2) → ∀ g, Hol s g = (s - (((n : ℂ) - 1) / 2)) * Eis s g) ∧ (∀ g, DifferentiableOn ℂ (Hol · g) U) ∧
         (∀ s ∈ U, ∀ g, ‖Hol s g‖ ≤ C * (height σ J g : ℝ) ^ N) ∧ ∀ g, Hol (((n : ℂ) - 1) / 2) g = u (((n : ℂ) - 1) / 2) := by
-  first | exact @GlobalTheory.EisRes.PoleRes.poleRes_of_eisensteinResidue | exact GlobalTheory.EisRes.PoleRes.poleRes_of_eisensteinResidue | (intros; apply GlobalTheory.EisRes.PoleRes.poleRes_of_eisensteinResidue <;> assumption)
+  exact @GlobalTheory.EisRes.PoleRes.poleRes_of_eisensteinResidue

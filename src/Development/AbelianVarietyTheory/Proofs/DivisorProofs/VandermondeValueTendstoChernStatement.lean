@@ -12,4 +12,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 open GlobalTheory.CovTestDR
 theorem _root_.GlobalTheory.T.vandermonde_value_tendsto_chern : GlobalTheory.Published.ScholzeWeinsteinB → GlobalTheory.CovTop.HypothesesXH → Hypotheses2 → HypothesesH → RegularAlteration → GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.Ch2HodgeVanishes → ∀ r : ℝ, Ch2Const r → OnObj fun D O _ _ _ _ => Tendsto (vdmVal O.Y) atTop (𝓝 (r * O.Y.chern (lamA D.what₂.Tau O.Y.N O.Y.j ^ dimGr D.what₂.Tau O.Y.N O.Y.j * vdmCl D.what₂.Tau O.Y.N O.Y.j))) := by
-  first | exact @GlobalTheory.VdmCore.tendsto_vdmVal | exact GlobalTheory.VdmCore.tendsto_vdmVal | (intros; apply GlobalTheory.VdmCore.tendsto_vdmVal <;> assumption)
+  exact @GlobalTheory.VdmCore.tendsto_vdmVal

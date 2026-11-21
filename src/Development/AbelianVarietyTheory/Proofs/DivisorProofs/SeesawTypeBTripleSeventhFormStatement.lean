@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawTypeBTripleSeventhForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.seesaw_type_b_triple_seventh_form : GlobalTheory.T
     ∀ (μKv : Measure (KAt K (evFin F B.v₁))) (μv : Measure (idelesAt E (evFin F B.v₁))),
     IsNormK K (evFin F B.v₁) μKv → IsNormE E B.v₁ μv →
     ∃ φ ∈ G.M'.SoLoc B.ψ B.τ₁, coneFin B G.M' om' B.v₁ (ev B.v₁) K μKv μv (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) φ ∉ augAt om₁' B.v₁ := by
-  first | exact @GlobalTheory.ConeNonAug.exists_soLoc_coneFin_not_mem_augAt | exact GlobalTheory.ConeNonAug.exists_soLoc_coneFin_not_mem_augAt | (intros; apply GlobalTheory.ConeNonAug.exists_soLoc_coneFin_not_mem_augAt <;> assumption)
+  exact @GlobalTheory.ConeNonAug.exists_soLoc_coneFin_not_mem_augAt

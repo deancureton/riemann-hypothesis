@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ParabolicUnfoldingRationalLevi
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConstantTermUnipotentIntegral
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.parabolic_unfolding_rational_levi : ∀ (F E : Typ
     IsLevi (W₁ := Y₁) H 1 γ m₀ → ∀ (μ : Measure (unip σ Y H)) (𝓕 : Set (unip σ Y H)), μ.IsHaarMeasure →
     IsFundamentalDomain ((ratU σ Y.J).subgroupOf (unip σ Y H)) 𝓕 μ → μ 𝓕 = 1 →
     ∀ x, ∫ u in 𝓕, f (u.1 * (m₀ * x)) ∂μ = ∫ u in 𝓕, f (u.1 * x) ∂μ := by
-  first | exact @GlobalTheory.UnipCTLevi.constantTerm_levi | exact GlobalTheory.UnipCTLevi.constantTerm_levi | (intros; apply GlobalTheory.UnipCTLevi.constantTerm_levi <;> assumption)
+  exact @GlobalTheory.UnipCTLevi.constantTerm_levi

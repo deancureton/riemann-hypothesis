@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanEigenvectorIdeleMem
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.archimedean_eigenvector_idele_mem : ∀ (F E : Typ
     (n₁ : ℕ) (X : Spc F E (n₁ + 2)) (X₁ : Spc F E n₁) (H : Plane E (n₁ + 2) n₁) (i₀ i₁ : ℕ),
     H.IsAdapted σ B X X₁ i₀ i₁ → ∀ p ∈ UAt σ X (evI F), ∀ t : (AE F E)ˣ,
     mat p *ᵥ incV F H.x = t.1 • incV F H.x → t ∈ idelesAt E (evI F) := by
-  first | exact @GlobalTheory.ThK.LemF.IwasawaScal.idele_mem_idelesAt_inf | exact GlobalTheory.ThK.LemF.IwasawaScal.idele_mem_idelesAt_inf | (intros; apply GlobalTheory.ThK.LemF.IwasawaScal.idele_mem_idelesAt_inf <;> assumption)
+  exact @GlobalTheory.ThK.LemF.IwasawaScal.idele_mem_idelesAt_inf

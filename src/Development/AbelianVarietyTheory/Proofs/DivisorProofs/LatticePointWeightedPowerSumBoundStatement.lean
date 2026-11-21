@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticePointWeightedPowerSumBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.lattice_point_weighted_power_sum_bound : ∀ (ι :
       ({c | ∀ w, f c w ≤ T w}.ncard : ℝ) ≤ 1 + K * ∏ w, T w) →
     ∑' c : S, ENNReal.ofReal ((∏ w, (A w + f c w)) ^ (-s)) ≤
       ENNReal.ofReal (C * (1 + K * ∏ w, A w) * (∏ w, A w) ^ (-s)) := by
-  first | exact @GlobalTheory.tsum_rpow_prod_add_le_of_box_count | exact GlobalTheory.tsum_rpow_prod_add_le_of_box_count | (intros; apply GlobalTheory.tsum_rpow_prod_add_le_of_box_count <;> assumption)
+  exact @GlobalTheory.tsum_rpow_prod_add_le_of_box_count

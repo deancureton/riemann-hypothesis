@@ -10,4 +10,4 @@ open GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.Pst GlobalTheory
 attribute [local instance] GlobalTheory.LocalData.complRel GlobalTheory.LocalData.isLocalField
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_global_compatibility_complex : GlobalTheory.Mem.LiteralAutomorphy.LitN → LocCompC := by
-  first | exact @GlobalTheory.LocCompCLit.main | exact GlobalTheory.LocCompCLit.main | (intros; apply GlobalTheory.LocCompCLit.main <;> assumption)
+  exact @GlobalTheory.LocCompCLit.main

@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_induction : GlobalTheory.FunPr.
           l₁ (dd₁.rho B.ψ (z * (diagCols (Fin n))ᵀ) φ) = l₁ φ) →
       ∀ μ : @Measure (Fin n → AE F E) (borel _), GlobalTheory.SiegelAvg.IsHaarB μ →
         GlobalTheory.SiegelAvg.avgForm μ (l₁ ∘ₗ ed) (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y)) ∈ (adeleClass F).adm ((Fin n × Fin d) ⊕ (Fin n × Fin d)) := by
-  first | exact @GlobalTheory.SiegelAvgAdm.avgForm_mem_adm | exact GlobalTheory.SiegelAvgAdm.avgForm_mem_adm | (intros; apply GlobalTheory.SiegelAvgAdm.avgForm_mem_adm <;> assumption)
+  exact @GlobalTheory.SiegelAvgAdm.avgForm_mem_adm

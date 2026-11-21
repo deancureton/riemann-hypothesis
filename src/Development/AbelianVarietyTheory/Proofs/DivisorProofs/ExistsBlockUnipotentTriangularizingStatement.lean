@@ -14,4 +14,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_block_unipotent_triangularizing : ∀ {R : Type} [CommRing R] {κ : Type} [Fintype κ] (bl : κ → ℕ) {g : ℕ} (P : Matrix (Fin g) κ R) (w : κ ≃ Fin g),
     (∀ k : ℕ, IsUnit (minor bl w k P)) →
     ∃ Q : Matrix κ κ R, BlockUni bl Q ∧ Q.det = 1 ∧ ∀ z z', bl z < bl z' → (P * Q) (w z) z' = 0 := by
-  first | exact @GlobalTheory.LieFilt.exists_blockUni_mul_eq_zero | exact GlobalTheory.LieFilt.exists_blockUni_mul_eq_zero | (intros; apply GlobalTheory.LieFilt.exists_blockUni_mul_eq_zero <;> assumption)
+  exact @GlobalTheory.LieFilt.exists_blockUni_mul_eq_zero

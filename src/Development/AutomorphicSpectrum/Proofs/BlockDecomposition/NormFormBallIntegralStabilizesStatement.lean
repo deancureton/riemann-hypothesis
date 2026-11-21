@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormFormBallIntegralStabilizes
-import Mathlib
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WSteps
 import GroundTheory.LocalFields.QuadraticAbelian.WeilRepQuadratic
 
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.norm_form_ball_integral_stabilizes : (ForEF fun F 
     (∫ u in (valBall E n : Set E), (χ ((a : F) * Algebra.norm F u) : ℂ) ∂muE E χ) *
       ∫ z, (χ (-(Algebra.norm F z) / a) : ℂ) * Φ z ∂muE E χ) → ForEF fun F _ _ _ _ _ _ _ E _ _ _ _ _ _ _ χ σ η => ∀ (a : Fˣ), ∃ (c : ℂ) (n₀ : ℤ), ∀ n ≤ n₀,
   ∫ u in (valBall E n : Set E), (χ ((a : F) * Algebra.norm F u) : ℂ) ∂muE E χ = c := by
-  first | exact @GlobalTheory.CompanionTheory.WeilSB.ballIntegral_stable | exact GlobalTheory.CompanionTheory.WeilSB.ballIntegral_stable | (intros; apply GlobalTheory.CompanionTheory.WeilSB.ballIntegral_stable <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WeilSB.ballIntegral_stable

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StageSmallNonzeroBase
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.stage_small_nonzero_base : GlobalTheory.FunPr.Hypo
     NumbersIn D.what₂.embLL S μ₀ → ∀ (i j : Fin D.R.m) (p : ℕ) (A A' WW : HSp D) (X : Tri T A A' WW), GlobalTheory.SqTower.IsStageC W i j p 0 X →
       (∀ t P' h, MeasureTheory.IntegrableOn (X.ker' W.ψ W.θ t P' h) X.fd' X.m') →
       ∃ P' : PolF D WW.rank A'.rank, ∀ t, X.I' W.ψ W.θ t P' ≠ 0 := by
-  first | exact @GlobalTheory.StageSmallNz.stage_small_nonzero_zero | exact GlobalTheory.StageSmallNz.stage_small_nonzero_zero | (intros; apply GlobalTheory.StageSmallNz.stage_small_nonzero_zero <;> assumption)
+  exact @GlobalTheory.StageSmallNz.stage_small_nonzero_zero

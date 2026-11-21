@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_theta_integral : GlobalTheory.F
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ g, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) Φ) = om₁ (g, 1) (e Φ) := by
-  first | exact @GlobalTheory.MixWLeft.evalZero_unitary_left | exact GlobalTheory.MixWLeft.evalZero_unitary_left | (intros; apply GlobalTheory.MixWLeft.evalZero_unitary_left <;> assumption)
+  exact @GlobalTheory.MixWLeft.evalZero_unitary_left

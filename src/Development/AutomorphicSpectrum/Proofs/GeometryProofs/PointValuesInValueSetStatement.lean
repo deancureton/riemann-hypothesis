@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.PointValuesInValueSet
-import Mathlib
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.CInfGood
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BcMapBcVec
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.FlatChernWeightEqOfIndependence
@@ -28,4 +27,4 @@ open scoped Matrix
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.point_values_in_value_set : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host E) (Dw : Datum H) (l : Level H) (Xo : Moduli Dw l) (c : Coeff l) (la : HeightOneSpectrum (𝓞 c.F)) (y : (Ref.pjSys Xo c).Pt la), (fun f => (Ref.pjSys Xo c).val y f) ∈ valSet Xo c (algCls Xo c) la := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.Rec.val_mem_valSet_of_uniformised | exact GlobalTheory.CompanionTheory.Ar.Rec.val_mem_valSet_of_uniformised | (intros; apply GlobalTheory.CompanionTheory.Ar.Rec.val_mem_valSet_of_uniformised <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.Rec.val_mem_valSet_of_uniformised

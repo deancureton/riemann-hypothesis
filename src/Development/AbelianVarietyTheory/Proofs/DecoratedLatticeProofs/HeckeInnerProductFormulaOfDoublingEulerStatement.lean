@@ -12,4 +12,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.heckeInnerProductFormula_of_doublingEuler : ∀ D : D7, GlobalForm D → EulerRight D → HeckeForm D := by
-  first | exact @GlobalTheory.Core.Rk.IP.heckeForm_of_global_euler | exact GlobalTheory.Core.Rk.IP.heckeForm_of_global_euler | (intros; apply GlobalTheory.Core.Rk.IP.heckeForm_of_global_euler <;> assumption)
+  exact @GlobalTheory.Core.Rk.IP.heckeForm_of_global_euler

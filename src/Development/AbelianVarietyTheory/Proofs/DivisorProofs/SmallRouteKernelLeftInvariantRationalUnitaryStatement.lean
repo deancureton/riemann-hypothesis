@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmallRouteKernelLeftInvariantRationalUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.smallRouteKernel_left_invariant_rationalUnitary : 
     (ρ : RealMatch W) (t : T) (i j : Fin D.R.m) (Θ : TotT G (routeBig t i j)) (Θ' : TotT G (routeSmall t i j))
     (hΘ : IsMatched B t ρ i j Θ Θ') (g₁ : GA D (G.V (.grid (i + 1) j))),
     ∀ γ ∈ GQ (G.V (.grid i (j + 1))), ∀ g u, kerSmall W Θ' (γ * g) g₁ u = kerSmall W Θ' g g₁ u := by
-  first | exact @GlobalTheory.ZConvLeft.kerSmall_rat_left | exact GlobalTheory.ZConvLeft.kerSmall_rat_left | (intros; apply GlobalTheory.ZConvLeft.kerSmall_rat_left <;> assumption)
+  exact @GlobalTheory.ZConvLeft.kerSmall_rat_left

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolDataSoExistsBlockSplitting
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.pol_data_so_exists_block_splitting : ∀ (F E : Ty
         (x : Fin m → IndSp (pairPlace b hb) (ofChar (pairChar (Fv F B.v₁) b χ))),
         (∀ j, IsIntertw σ (c • G.W.J.map σ) B.τ₁ B₀ (pairInd (Fv F B.v₁) b hb χ) (T j)) ∧
         (fun y => G.M'.I om' Φ ((toGAd hσ G.W.J hc).symm y)) = ∑ j, T j (x j) := by
-  first | exact @GlobalTheory.ThetaAtGood.thetaIntegral_eq_sum_intertw | exact GlobalTheory.ThetaAtGood.thetaIntegral_eq_sum_intertw | (intros; apply GlobalTheory.ThetaAtGood.thetaIntegral_eq_sum_intertw <;> assumption)
+  exact @GlobalTheory.ThetaAtGood.thetaIntegral_eq_sum_intertw

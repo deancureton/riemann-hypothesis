@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SelfDualLatticeCartanInvolution
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.self_dual_lattice_cartan_involution : ∀ (F E : T
     ∀ W₂ : Spc F E (n + n), W₂.J = dblGram finSumFinEquiv W.J → W₂.L = sumLat finSumFinEquiv W.L W.L →
     (∀ w, W₂.θ w = blkMat finSumFinEquiv (W.θ w) (-W.θ w)) →
     ∃ K₂ : Subgroup (UA σ W₂.J), IsStab B K₂ ∧ IwasawaOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K₂ := by
-  first | exact @GlobalTheory.SkewDblIwasawa.exists_isStab_iwasawaOf | exact GlobalTheory.SkewDblIwasawa.exists_isStab_iwasawaOf | (intros; apply GlobalTheory.SkewDblIwasawa.exists_isStab_iwasawaOf <;> assumption)
+  exact @GlobalTheory.SkewDblIwasawa.exists_isStab_iwasawaOf

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalSpacesBorelPolish
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabAtPair
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_spaces_borel_polish : ∀ (F E : Type) [Fiel
       T2Space (vecAt F E m (evFin F v)) ∧ BorelSpace (vecAt F E m (evFin F v))) ∧
     (LocallyCompactSpace (skewAt σ (evFin F v)) ∧ SecondCountableTopology (skewAt σ (evFin F v)) ∧
       T2Space (skewAt σ (evFin F v)) ∧ BorelSpace (skewAt σ (evFin F v))) := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.Facts.vecAt_skewAt_facts | exact GlobalTheory.ThK.LemF.QuotInv.Facts.vecAt_skewAt_facts | (intros; apply GlobalTheory.ThK.LemF.QuotInv.Facts.vecAt_skewAt_facts <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.Facts.vecAt_skewAt_facts

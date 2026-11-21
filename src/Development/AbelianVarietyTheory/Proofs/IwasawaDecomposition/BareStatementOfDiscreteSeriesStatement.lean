@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bare_statement_of_discrete_series : PrN → GlobalTheory.Published.DiscreteSeriesExists → BareK := by
-  first | exact @GlobalTheory.HeightCounting.Up.bareStatement_of_known_theorems | exact GlobalTheory.HeightCounting.Up.bareStatement_of_known_theorems | (intros; apply GlobalTheory.HeightCounting.Up.bareStatement_of_known_theorems <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.bareStatement_of_known_theorems

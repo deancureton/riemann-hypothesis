@@ -9,4 +9,4 @@ open GlobalTheory.SepRows
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.pair_existence_of_functoriality : GlobalTheory.FunPr.Hypotheses₂ → PairEx := by
-  first | exact @GlobalTheory.PairIt.pairEx | exact GlobalTheory.PairIt.pairEx | (intros; apply GlobalTheory.PairIt.pairEx <;> assumption)
+  exact @GlobalTheory.PairIt.pairEx

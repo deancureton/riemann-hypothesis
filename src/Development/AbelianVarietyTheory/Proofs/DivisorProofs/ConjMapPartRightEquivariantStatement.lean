@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjMapPartRightEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagonalLagrangianInvariantForm
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.conj_map_part_right_equivariant : ∀ (F : Type) [
       (∀ φ ∈ schA F (κ ⊕ κ), partR (conjMap T) φ ∈ schA F (κ ⊕ κ₁)) →
       ∀ φ ∈ schA F (κ ⊕ κ), evDbl T (schr ψ (Sum.elim A₁ A₂, Sum.elim B₁ (-B₂)) φ) =
         schr ψ (Sum.elim a a, Sum.elim b (-b)) (evDbl T φ) := by
-  first | exact @GlobalTheory.DoublingEvLaw.main | exact GlobalTheory.DoublingEvLaw.main | (intros; apply GlobalTheory.DoublingEvLaw.main <;> assumption)
+  exact @GlobalTheory.DoublingEvLaw.main

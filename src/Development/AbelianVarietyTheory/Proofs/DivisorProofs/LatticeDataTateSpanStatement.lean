@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeDataTateSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.WeilIsGrpPullbackOfCommute
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsPushEquiv
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.lattice_data_tate_span : ∀ (E : Type) [Field E] 
     (T S : J → Fin N → V) (tι : Dw.La →+ P.T), LatData Dw σ a T S → (∀ (o : 𝓞 E) b, tι (o • b) = P.actT o (tι b)) →
     Submodule.span ℤ_[p] (Set.range tι) = ⊤ →
     P.eigV (β.comp σ) ≤ Submodule.span ℂ_[p] (Set.range fun i => ∑ m, (β (T i m) : ℂ_[p]) ⊗ₜ[ℤ_[p]] tι (a m)) := by
-  first | exact @GlobalTheory.FlatModel.EigSpan.eigV_le_span | exact GlobalTheory.FlatModel.EigSpan.eigV_le_span | (intros; apply GlobalTheory.FlatModel.EigSpan.eigV_le_span <;> assumption)
+  exact @GlobalTheory.FlatModel.EigSpan.eigV_le_span

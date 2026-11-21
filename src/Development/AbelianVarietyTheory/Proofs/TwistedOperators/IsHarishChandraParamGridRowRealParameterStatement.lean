@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsHarishChandraParamGridRowRealParameter
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.NodeAgree
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NormalFam
 import Formalism.LocalToGlobal.IndefiniteReal.LinksLemmas
@@ -16,4 +15,4 @@ open scoped Pointwise TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.isHarishChandraParam_gridRowRealParameter : ∀ (D : D7), HostHyp D → ∀ (j : ℕ), 1 ≤ j → j ≤ D.R.m → ∀ (τ : D.what₂.Tau) (n : ℕ) (lam : Fin n → ℝ) (ε : Fin n → Bool), n = GlobalTheory.Grid.rkX D j → IsEnum (GlobalTheory.Grid.parXp D j τ) lam ε → Formalism.QuantumDeterminants.IsHCParam lam := by
-  first | exact @GlobalTheory.GridHC.isHCParam_parXp | exact GlobalTheory.GridHC.isHCParam_parXp | (intros; apply GlobalTheory.GridHC.isHCParam_parXp <;> assumption)
+  exact @GlobalTheory.GridHC.isHCParam_parXp

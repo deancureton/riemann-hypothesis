@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraceOneLatticePlaneTransform
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacGlueIndicator
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.trace_one_lattice_plane_transform : ∀ {F E : Typ
       (planeT σ X W H H' γ).1.1 ⬝ᵥ (planeT σ X W H H' γ).1.2 +
         2 * symp (cA σ) (inclR (F := F) (AF F) θ) (incM F X.J) (incM F W.J) b a +
         symp (cA σ) (inclR (F := F) (AF F) θ) (incM F X₁.J) (incM F W₁.J) (planeT σ X W H H' γ).2 (planeT σ X W H H' γ).2 := by
-  first | exact @GlobalTheory.ThK.PlaneCo.symp_self_planeT | exact GlobalTheory.ThK.PlaneCo.symp_self_planeT | (intros; apply GlobalTheory.ThK.PlaneCo.symp_self_planeT <;> assumption)
+  exact @GlobalTheory.ThK.PlaneCo.symp_self_planeT

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledWeilDatumFirstFactorOnDoublingTensor
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Definitions.Foundations.T2SpaceAdeleRing
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.SphericalZero
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.doubledWeilDatum_firstFactor_on_doublingTensor : �
       Formalism.IndefR.Datum.IsThetaFunO ψ S T f₁ → Formalism.IndefR.Datum.IsThetaFunO ψ S T f₂ →
       ωd (GlobalTheory.Doubling.io S (g, 1), 1) (GlobalTheory.IndefiniteRowSideFullHecke.SphericalZero.delta S T f₁ f₂) =
         GlobalTheory.IndefiniteRowSideFullHecke.SphericalZero.delta S T (ω (g, 1) f₁) f₂ := by
-  first | exact @GlobalTheory.Adopt.doubledWeilDatum_firstFactor_on_doublingTensor | exact GlobalTheory.Adopt.doubledWeilDatum_firstFactor_on_doublingTensor | (intros; apply GlobalTheory.Adopt.doubledWeilDatum_firstFactor_on_doublingTensor <;> assumption)
+  exact @GlobalTheory.Adopt.doubledWeilDatum_firstFactor_on_doublingTensor

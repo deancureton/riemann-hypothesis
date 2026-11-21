@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.KTypeClassTranslate
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DecompAtZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ open scoped InnerProductSpace
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.K_type_class_translate : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → GlobalTheory.FunPr.Hypotheses₂ → ∀ (N : GlobalTheory.Grid.Node D) (U : Subgroup (GA D N.V)) (W : D.what₂.Tau → Type) [∀ τ, AddCommGroup (W τ)] [∀ τ, Module ℂ (W τ)] (ρ : ∀ τ, Representation ℂ (Formalism.REAL.KG (N.M.ε τ)) (W τ)) (τ : D.what₂.Tau), ∀ g ∈ UJset (N.M.ε τ), HasCtp θ N U (TyOf θ N ρ) τ (N.M.σ τ g) := by
-  first | exact @GlobalTheory.PlaceDecomp.hasCtp_translate | exact GlobalTheory.PlaceDecomp.hasCtp_translate | (intros; apply GlobalTheory.PlaceDecomp.hasCtp_translate <;> assumption)
+  exact @GlobalTheory.PlaceDecomp.hasCtp_translate

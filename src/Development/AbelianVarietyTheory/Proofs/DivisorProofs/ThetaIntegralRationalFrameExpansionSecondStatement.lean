@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.theta_integral_rational_frame_expansion_second : �
               (ρ : GlobalTheory.CuspRep.SmIrr (GL (Fin n) (w.adicCompletion E))) (x x' : ℕ) (χ₁ χ₂ : (w.adicCompletion E)ˣ →* ℂˣ),
               x + x' = n ∧ (GlobalTheory.CuspRep.CG.mk τ).IsUnitary ∧ τ.IsLocComp w ρ ∧ IsUnramAt w χ₁ ∧ IsUnramAt w χ₂ ∧
                 IsDetProdConstAt w x x' χ₁ χ₂ ρ.ρ ∧ (x = 1 → x' = 1 → RatioGapAt w χ₁ χ₂) := by
-  first | exact @GlobalTheory.ThK.Heightsridge.bridge | exact GlobalTheory.ThK.Heightsridge.bridge | (intros; apply GlobalTheory.ThK.Heightsridge.bridge <;> assumption)
+  exact @GlobalTheory.ThK.Heightsridge.bridge

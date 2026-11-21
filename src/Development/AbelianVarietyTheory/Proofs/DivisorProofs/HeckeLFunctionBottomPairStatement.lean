@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.hecke_l_function_bottom_pair : GlobalTheory.FunPr.
     GlobalTheory.CMVal.IsHeckeL (GlobalTheory.FunObj.SqNum.nuH G t i j) Λ → GlobalTheory.CMVal.IsHeckeL (GlobalTheory.FunObj.SqNum.nuH G t' i j) Λ' →
     (P.norm : ℂ) * ∏ s ∈ Finset.Icc (1 - (GlobalTheory.SqTop.e0 D i j : ℤ)) (GlobalTheory.SqTop.h0 D i j : ℤ), Λ' s =
       (P₁.norm : ℂ) * ∏ s ∈ Finset.Icc (1 - (GlobalTheory.SqTop.e0 D i j : ℤ)) (GlobalTheory.SqTop.h0 D i j : ℤ), Λ s := by
-  first | exact @GlobalTheory.NormRatio.normBig_ratio | exact GlobalTheory.NormRatio.normBig_ratio | (intros; apply GlobalTheory.NormRatio.normBig_ratio <;> assumption)
+  exact @GlobalTheory.NormRatio.normBig_ratio

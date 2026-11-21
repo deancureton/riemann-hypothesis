@@ -15,4 +15,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.tempered_K_finite_coefficients : GlobalTheory.Published.IrreducibleUnitaryAdmissible → ∀ (n : ℕ) (ε : Fin n → Bool) (μ : Measure (UJ ε)) [μ.IsHaarMeasure] (U : Type) [NormedAddCommGroup U] [InnerProductSpace ℂ U] [CompleteSpace U] (π : UJ ε →* (U →L[ℂ] U)), IsUnitaryRep π → IsTopIrreducible π → GlobalTheory.Orb.IsTempered μ π → IsTemperedKFin ε μ π := by
-  first | exact @GlobalTheory.TempKFin.isTemperedKFin_of_isTempered | exact GlobalTheory.TempKFin.isTemperedKFin_of_isTempered | (intros; apply GlobalTheory.TempKFin.isTemperedKFin_of_isTempered <;> assumption)
+  exact @GlobalTheory.TempKFin.isTemperedKFin_of_isTempered

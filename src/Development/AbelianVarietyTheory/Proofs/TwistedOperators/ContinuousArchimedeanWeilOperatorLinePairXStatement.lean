@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ContinuousArchimedeanWeilOperatorLinePairX
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.continuous_archimedeanWeilOperator_line_pairX : �
       ∀ γ ∈ Lines σ X, ∀ T : ℝ → SInf F (Fin n × Fin d) →ₗ[ℂ] SInf F (Fin n × Fin d),
         (∀ (t : ℝ) (f : SInf F (Fin n × Fin d)), Acts (evI F) (om (γ (Multiplicative.ofAdd t), 1)) f (T t f)) →
         ∀ (f : SInf F (Fin n × Fin d)) (x : (Fin n × Fin d → mixedEmbedding.mixedSpace F)), Continuous fun t => T t f x := by
-  first | exact @GlobalTheory.ArchLineContPairLeft.continuous_apply | exact GlobalTheory.ArchLineContPairLeft.continuous_apply | (intros; apply GlobalTheory.ArchLineContPairLeft.continuous_apply <;> assumption)
+  exact @GlobalTheory.ArchLineContPairLeft.continuous_apply

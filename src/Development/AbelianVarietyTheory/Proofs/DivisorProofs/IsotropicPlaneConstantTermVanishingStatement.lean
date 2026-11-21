@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicPlaneConstantTermVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsLeSup
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.isotropic_plane_constant_term_vanishing : ∀ (F E
       ∀ h ∈ finK σ Y B.emb, (∀ h₁ : UA σ Y₁.J, ∃ m : UA σ Y.J, IsLevi (W₁ := Y₁) P 1 h₁ m) →
       ∀ g : UA σ Y₁.J → ℂ, (∀ h₁ m, IsLevi (W₁ := Y₁) P 1 h₁ m → g h₁ = fa (m * h)) →
       Continuous (fun x => g ((toGAd hσ Y₁.J hc).symm x)) := by
-  first | exact @GlobalTheory.ThK.DescB.GenCont.main | exact GlobalTheory.ThK.DescB.GenCont.main | (intros; apply GlobalTheory.ThK.DescB.GenCont.main <;> assumption)
+  exact @GlobalTheory.ThK.DescB.GenCont.main

@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.true_geometry_final_bound : ∀ {B : GlobalTheory.
         Ideal.Quotient.mk (a.pl i).1.asIdeal z = (GlobalTheory.FamTraceChi.reductionYZero W ((show GA (I.rec7 l Z) ((I.rec7 l Z).sp.Y 0) from a.g.b 0)⁻¹ * embA a.d.B.d a.d.B.o κ * (show GA (I.rec7 l Z) ((I.rec7 l Z).sp.Y 0) from a.g.b 0)) (a.pl i)).val p' q' →
         valuation (a.G i).k (((x i : GL (Fin (I.rec7 l Z).R.k ⊕ Fin ((a.G i).s + 1)) (a.G i).k)).val p q - (ofSplit (a.G i).q).pr (z : (I.rec7 l Z).host.E)) < 1) ∧
       (((F0 W u).cls0.lev.chi ⟨_, hy⟩ : ℂˣ) : ℂ) * ∏ i, (((a.G i).S.P.lam (x i) : ℂˣ) : ℂ) = 1 := by
-  first | exact @GlobalTheory.FamTraceChiCol.colChi_mul_prod_lam | exact GlobalTheory.FamTraceChiCol.colChi_mul_prod_lam | (intros; apply GlobalTheory.FamTraceChiCol.colChi_mul_prod_lam <;> assumption)
+  exact @GlobalTheory.FamTraceChiCol.colChi_mul_prod_lam

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.cm_period_matrix_exists : ∀ (K : Type) [Field K]
       ∀ e : Fin (Module.finrank ℚ (FR E)) ≃ I,
       ∃ M : (Fin (Module.finrank ℚ (FR E)) → ℂ) →ₗ[ℂ] (Fin (Module.finrank ℚ (FR E)) → ℂ), Function.Surjective M ∧
         ∀ z, (∀ j, ∃ a b : ℤ, z j = a + b * io δ) → ∃ x ∈ lattice c y, M z = fun j ↦ φ (e j) x := by
-  first | exact @GlobalTheory.LatModel.surj_lattice | exact GlobalTheory.LatModel.surj_lattice | (intros; apply GlobalTheory.LatModel.surj_lattice <;> assumption)
+  exact @GlobalTheory.LatModel.surj_lattice

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationTripleUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.eval_comp_om_rho_equivariant_isoA_invariant : ∀ 
     (∀ z, ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')),
       e (om (k, 1) (G.M.co.rho B.ψ (incM F H.ι * z * (incM F H'.ι)ᵀ) Φ)) = G₁.M.co.rho B.ψ z (e (om (k, 1) Φ))) ∧
     ∀ u ∈ isoA (F := F) H H', ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e (om (k, 1) (G.M.co.rho B.ψ u Φ)) = e (om (k, 1) Φ) := by
-  first | exact @GlobalTheory.MixVUnipPlane.twist_heis_inv | exact GlobalTheory.MixVUnipPlane.twist_heis_inv | (intros; apply GlobalTheory.MixVUnipPlane.twist_heis_inv <;> assumption)
+  exact @GlobalTheory.MixVUnipPlane.twist_heis_inv

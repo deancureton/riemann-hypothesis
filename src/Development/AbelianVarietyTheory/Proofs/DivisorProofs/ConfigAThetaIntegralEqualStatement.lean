@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaIntegralEqual
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_A_theta_integral_equal : ∀ (hKP : GlobalT
       (C : Set (KAt K (evI F) × idelesAt E (evI F))), Continuous Ψ ∧ (∀ p, 0 ≤ Ψ p) ∧ 0 < Ψ (1, 1) ∧ IsCompact C ∧
       C ⊆ O ∧ (∀ p ∉ C, Ψ p = 0) ∧
       ∀ p : KAt K (evI F) × idelesAt E (evI F), coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f p.1.1 p.2.1 = (Ψ p : ℂ) • coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f₀ p.1.1 p.2.1 := by
-  first | exact @GlobalTheory.BumpMult.exists_multiplier | exact GlobalTheory.BumpMult.exists_multiplier | (intros; apply GlobalTheory.BumpMult.exists_multiplier <;> assumption)
+  exact @GlobalTheory.BumpMult.exists_multiplier

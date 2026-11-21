@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_unfolding : ∀ (F E : Type) [Field 
       (∀ q ∈ ratU σ G.V.J ⊓ Subgroup.closure {g : UA σ G.V.J | mat g *ᵥ incV F H.x = incV F H.x}, ∀ g, φ (q * g) = φ g) →
       (∀ n ∈ unip σ G.V H, ∀ g, φ (n * g) = φ g) →
       ∫⁻ g in 𝓓, φ g ∂G.M.μ = C * ∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, φ (m l g₀ * k.1) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK := by
-  first | exact @GlobalTheory.UnfoldQ.unfold_stab | exact GlobalTheory.UnfoldQ.unfold_stab | (intros; apply GlobalTheory.UnfoldQ.unfold_stab <;> assumption)
+  exact @GlobalTheory.UnfoldQ.unfold_stab

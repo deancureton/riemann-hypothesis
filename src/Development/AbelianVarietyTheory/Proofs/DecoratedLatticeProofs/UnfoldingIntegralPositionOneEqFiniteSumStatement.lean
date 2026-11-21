@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnfoldingIntegralPositionOneEqFiniteSum
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.PhiTopAgree
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ResiduesOfCompletionAtPrimeWithUniformizer
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.UnfoldingIntegralEqFiniteSumOverNumberField
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.unfoldingIntegral_positionOne_eq_finite_sum : ∀ 
       (∀ x y, (∀ r s, valuation k (y r s) ≤ valuation k ((ϖ : k) ^ N)) → Φ (x + y) = Φ x) →
       ∀ x₀, opE ψ ν 1 Φ (GlobalTheory.SymBridge.toLoc ι d d' x₀) =
         C * σ₀ (Loc.E1 (n' := n') (c' := c') (n := n) (c := c₂) psi (LocE.valsQ E q A B) (((q : K) ^ B)⁻¹) ΦE x₀) := by
-  first | exact @GlobalTheory.UnfoldSumBd.sumAgreeBd | exact GlobalTheory.UnfoldSumBd.sumAgreeBd | (intros; apply GlobalTheory.UnfoldSumBd.sumAgreeBd <;> assumption)
+  exact @GlobalTheory.UnfoldSumBd.sumAgreeBd

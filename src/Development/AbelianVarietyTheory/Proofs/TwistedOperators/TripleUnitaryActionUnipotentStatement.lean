@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleUnitaryActionUnipotent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DarbouxModelAlgebraicVectorsLeAdelicSchwartzStatement
 
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.triple_unitary_action_unipotent : GlobalTheory.Fun
           (∀ v, φ' v ∈ GlobalTheory.WeilM.SB (Fin a' × Fin (a + a') → Fv F v)) ∧ (∀ᶠ v in Filter.cofinite, φ' v = G.M'.vac v) ∧
           (∀ v, φ' v - φ v ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.augAt om' v) ∧
           om' (g, 1) (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ) = GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.pure f φ' := by
-  first | exact @GlobalTheory.LocActV.finite_point_acts_placewise | exact GlobalTheory.LocActV.finite_point_acts_placewise | (intros; apply GlobalTheory.LocActV.finite_point_acts_placewise <;> assumption)
+  exact @GlobalTheory.LocActV.finite_point_acts_placewise

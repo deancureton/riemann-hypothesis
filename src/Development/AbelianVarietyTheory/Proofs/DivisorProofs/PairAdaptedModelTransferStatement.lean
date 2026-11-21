@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedModelTransfer
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_model_transfer : ∀ (F E : Type) [Fi
           ∀ u : Fin d → AE F E, dd.e (GlobalTheory.DblSiegelX.zs H u) =
             ∑ p, (Algebra.TensorProduct.basis (AF F) b).repr (u p.1) p.2 •
               ((fun i => algebraMap F (AF F) ((w p).1 i)), (fun i => algebraMap F (AF F) ((w p).2 i))) := by
-  first | exact @GlobalTheory.DblSiegelLagr.exists_lagr | exact GlobalTheory.DblSiegelLagr.exists_lagr | (intros; apply GlobalTheory.DblSiegelLagr.exists_lagr <;> assumption)
+  exact @GlobalTheory.DblSiegelLagr.exists_lagr

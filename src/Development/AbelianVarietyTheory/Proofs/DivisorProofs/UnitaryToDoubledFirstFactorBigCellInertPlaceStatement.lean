@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryToDoubledFirstFactorBigCellInertPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.unitaryToDoubledFirstFactor_bigCell_inertPlace : �
     (∃ M : Matrix (Fin (a + a')) (Fin (a + a')) (AE F E), (1 + mat k) * M = 1 ∧ M * (1 + mat k) = 1 ∧
       ∀ z ∈ GlobalTheory.InertSph.latAt G.W v, M *ᵥ z ∈ GlobalTheory.InertSph.latAt G.W v) →
     ∃ n ∈ GlobalTheory.InertDbl.NabD σ G.W v, ∃ p ∈ GlobalTheory.InertDbl.ParD σ G.W v, GlobalTheory.InertDbl.inlD σ G.W k = n * p := by
-  first | exact @GlobalTheory.InertBigCell.inlD_bigCell | exact GlobalTheory.InertBigCell.inlD_bigCell | (intros; apply GlobalTheory.InertBigCell.inlD_bigCell <;> assumption)
+  exact @GlobalTheory.InertBigCell.inlD_bigCell

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingLocalContinuous
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbsPowApply
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_local_continuous : ∀ (F E : Type)
     ∀ hn : (∀ t, ∀ q ∈ stabAt σ G.V (evFin F v) H.x, (m₀ t)⁻¹ * q * m₀ t ∈ stabAt σ G.V (evFin F v) H.x),
     ∀ μ : Measure (stabAt σ G.V (evFin F v) H.x), μ.IsHaarMeasure → ∀ t,
       μ.map (fun q : stabAt σ G.V (evFin F v) H.x => (⟨(m₀ t)⁻¹ * q * m₀ t, hn t q q.2⟩ : stabAt σ G.V (evFin F v) H.x)) = absPow E (evFin F v) (b + 1) t • μ := by
-  first | exact @GlobalTheory.ThK.LemF.QuotInv.modulus_levi | exact GlobalTheory.ThK.LemF.QuotInv.modulus_levi | (intros; apply GlobalTheory.ThK.LemF.QuotInv.modulus_levi <;> assumption)
+  exact @GlobalTheory.ThK.LemF.QuotInv.modulus_levi

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedModelLocalPlaceDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelG
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.adapted_model_local_place_descent : ∀ (F E : Typ
     ∀ u ∈ isoA (F := F) H H', At (evFin F v) u → ∀ u' ∈ isoA (F := F) H H', At (evFin F v) u' →
       (GlobalTheory.LatVac.locCo M.co v u).1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u').2 -
         (GlobalTheory.LatVac.locCo M.co v u').1 ⬝ᵥ (GlobalTheory.LatVac.locCo M.co v u).2 = 0 := by
-  first | exact @GlobalTheory.IsoOrthLocA.isoA_iso_at | exact GlobalTheory.IsoOrthLocA.isoA_iso_at | (intros; apply GlobalTheory.IsoOrthLocA.isoA_iso_at <;> assumption)
+  exact @GlobalTheory.IsoOrthLocA.isoA_iso_at

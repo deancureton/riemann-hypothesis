@@ -13,4 +13,4 @@ open GlobalTheory.AutomorphicL2Unitary GlobalTheory.AdelicU GlobalTheory.Doublin
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.matching_monomial : PositivityTheory.PfSWUS.MatchMono := by
-  first | exact @GlobalTheory.CompanionTheory.MM.matchMono | exact GlobalTheory.CompanionTheory.MM.matchMono | (intros; apply GlobalTheory.CompanionTheory.MM.matchMono <;> assumption)
+  exact @GlobalTheory.CompanionTheory.MM.matchMono

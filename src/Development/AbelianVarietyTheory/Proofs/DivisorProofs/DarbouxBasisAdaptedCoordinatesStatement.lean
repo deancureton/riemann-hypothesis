@@ -14,4 +14,4 @@ open GlobalTheory.SWLink
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.darboux_basis_adapted_coordinates : ∀ (D : D7) (n : ℕ) (V : HSp D) (J : Matrix (Fin n) (Fin n) D.host.E) (J₂ : Matrix (Fin (n + n)) (Fin (n + n)) D.host.E) (T : GL (Fin (n + n)) D.host.E), IsWittBasis D.sp.cm.sig J 1 T → T.1ᵀ * J₂ * T.1.map D.sp.cm.sig = GlobalTheory.StdUnn.Jst D n → ∀ (d : ℕ) (ε : Module.Basis (Fin d) D.host.F D.host.E), ∃ co : Dbx V J₂ d, IsAdapted D.sp.cm.sig co ∧ IsCoord V T ε co := by
-  first | exact @GlobalTheory.SWLink.Darb.exists_adapted | exact GlobalTheory.SWLink.Darb.exists_adapted | (intros; apply GlobalTheory.SWLink.Darb.exists_adapted <;> assumption)
+  exact @GlobalTheory.SWLink.Darb.exists_adapted

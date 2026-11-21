@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerEvaluationTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegralImports
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_evaluation_theta : GlobalTheor
       ∀ k ∈ K, ∀ l : (AE F E)ˣ,
         ∫⁻ g₀ in G₁.M.dom, ‖thetaSum F (om₁ (g₀, 1) (e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, h) Φ))))‖ₑ ∂G₁.M.μ ≤
           C * GlobalTheory.XTermMaj.maj F E N U (l : AE F E) := by
-  first | exact @GlobalTheory.XTermBound.bound | exact GlobalTheory.XTermBound.bound | (intros; apply GlobalTheory.XTermBound.bound <;> assumption)
+  exact @GlobalTheory.XTermBound.bound

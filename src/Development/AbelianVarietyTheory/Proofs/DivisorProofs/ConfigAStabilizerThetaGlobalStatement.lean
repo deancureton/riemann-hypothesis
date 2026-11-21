@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaGlobal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegralImports
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_theta_global : GlobalTheory.Th
       ∃ C : ℝ, ∀ k ∈ K, ∀ l : (AE F E)ˣ, (fun i => (GlobalTheory.XTermMaj.crd F E (l : AE F E) i).2) ∈ U →
         ∃ f : SInf F (Fin b × Fin (b + a')), (∀ y, f y = e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, h) Φ)) (fun q => ((InfiniteAdeleRing.ringEquiv_mixedSpace F).symm (y q), c q))) ∧
           (s.sup (schwartzSeminormFamily ℂ _ ℂ)) f ≤ C * (1 + ∑ i, ∑ v : InfinitePlace F, ‖(GlobalTheory.XTermMaj.crd F E (l : AE F E) i).1 v‖) ^ (-(N : ℝ)) := by
-  first | exact @GlobalTheory.XTermDecay.arch_decay | exact GlobalTheory.XTermDecay.arch_decay | (intros; apply GlobalTheory.XTermDecay.arch_decay <;> assumption)
+  exact @GlobalTheory.XTermDecay.arch_decay

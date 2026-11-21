@@ -7,4 +7,4 @@ open MvPolynomial ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.Cha
 open ReciprocityTheory.ChartRestriction.G.AI.I1 (IsBlockMap pullDeg)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.comparison_of_inputs_avoidance : Inputs → AvoidStatement → ReciprocityTheory.ChartRestriction.G.Geo.ResK.ResKStatement → CmpSt := by
-  first | exact @GlobalTheory.CompanionTheory.Relay.comparison_of_inputs_avoidance | exact GlobalTheory.CompanionTheory.Relay.comparison_of_inputs_avoidance | (intros; apply GlobalTheory.CompanionTheory.Relay.comparison_of_inputs_avoidance <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Relay.comparison_of_inputs_avoidance

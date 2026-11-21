@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairLinearBarVector
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.pair_linear_bar_vector : ∀ (F E : Type) [Field F
         Acts (evFin F B.v₁) (M.co.rho B.ψ (Matrix.vecMulVec c z)) φ φ₁ →
         ∀ Y : Matrix (Fin n) (Fin d) (Fv F B.v₁),
           ι φ₁ Y = psiLoc B.ψ B.v₁ (∑ k, ∑ l, Y k l * piW B.τ₁ (c k) * w l) * ι φ Y := by
-  first | exact @GlobalTheory.HeisMultLin.heis_mult_lin | exact GlobalTheory.HeisMultLin.heis_mult_lin | (intros; apply GlobalTheory.HeisMultLin.heis_mult_lin <;> assumption)
+  exact @GlobalTheory.HeisMultLin.heis_mult_lin

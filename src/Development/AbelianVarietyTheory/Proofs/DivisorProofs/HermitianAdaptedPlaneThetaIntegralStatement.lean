@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_theta_integral : GlobalThe
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ (t : (AE F E)ˣ) (m : UA σ X.J), IsLevi (W₁ := X₁) H t 1 m → ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (m, 1) Φ) = ((χW t : ℂ) * (((absE F E t : ℝ) ^ ((d : ℝ) / 2) : ℝ) : ℂ)) • e Φ := by
-  first | exact @GlobalTheory.MixXTorus.evalZero_torus | exact GlobalTheory.MixXTorus.evalZero_torus | (intros; apply GlobalTheory.MixXTorus.evalZero_torus <;> assumption)
+  exact @GlobalTheory.MixXTorus.evalZero_torus

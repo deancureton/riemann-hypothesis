@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.exists_schwartz_bump_near_identity : ∀ (k : Type
     ∃ Φ : Matrix (Fin (r + t)) (Fin r) k → ℂ, Φ ∈ SB (Matrix (Fin (r + t)) (Fin r) k) ∧
       Φ (eMat k r t) = 1 ∧ (∀ x, Φ x = 0 ∨ Φ x = 1) ∧
       ∀ g : GL (Fin r) k, Φ (eMat k r t * g.val) ≠ 0 → g ∈ S := by
-  first | exact @GlobalTheory.GodementJacquet.TestNearE.exists_test | exact GlobalTheory.GodementJacquet.TestNearE.exists_test | (intros; apply GlobalTheory.GodementJacquet.TestNearE.exists_test <;> assumption)
+  exact @GlobalTheory.GodementJacquet.TestNearE.exists_test

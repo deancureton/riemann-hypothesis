@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetFamilyPullbackSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.jet_family_pullback_second : GlobalTheory.Publishe
       (∀ j, IsJetElt J' X₁ N₁ mor' (x j) (d j) ∧ IsLieImage (x j) (v j).hom ∧
         IsLieImage (crysToDR J'.κ hi'.grp (d j)) (v' j).hom) →
       δ'.1 v' = algebraMap R' J'.B (δ₁.1 v) := by
-  first | exact @GlobalTheory.JetBCGen.detGen_baseChange | exact GlobalTheory.JetBCGen.detGen_baseChange | (intros; apply GlobalTheory.JetBCGen.detGen_baseChange <;> assumption)
+  exact @GlobalTheory.JetBCGen.detGen_baseChange

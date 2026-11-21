@@ -10,7 +10,6 @@ import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PChartEnergyDiagonal
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PSectionQuotLocal
 import GroundTheory.HeightsAndTheta.Heights.HeightKernels.PVertPointLength
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PProjRankDropDens
-import Mathlib
 set_option maxSynthPendingDepth 1
 
 theorem GroundTheory.Heights₂.Heights.AutoClose.MahlerSectionOfConst : GroundTheory.Heights₂.Heights.MahlerSectionOfConst.Statement :=

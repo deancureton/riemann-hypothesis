@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmallPlaceBlockBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSystemOf
 open NumberField IsDedekindDomain TensorProduct
 open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.L2.Pj GlobalTheory.BigTop GlobalTheory.BigOn
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.small_place_block_bound : ∀ {D : D7} {L : SizeDa
     ∀ (j : Fin D.R.m) (P : Par) (W : Wts D.what₂.Tau), Dict L j P W → NumOk P W →
     ∀ w ∈ p.R.twPl, W.WRange P (Formalism.EigenvalueLevelCeiling.plc w) → SmallAt p j P w →
     ∀ ν ∈ (blk p j (p.R.mu w)).bl, ∀ Q, ‖D.what₂.embLL (ν Q)‖ ^ 2 = ((blk p j (p.R.mu w)).q Q : ℝ) ^ ((blk p j (p.R.mu w)).n - (blk p j (p.R.mu w)).t) := by
-  first | exact @GlobalTheory.FrameAut.norm_sq_blockValue | exact GlobalTheory.FrameAut.norm_sq_blockValue | (intros; apply GlobalTheory.FrameAut.norm_sq_blockValue <;> assumption)
+  exact @GlobalTheory.FrameAut.norm_sq_blockValue

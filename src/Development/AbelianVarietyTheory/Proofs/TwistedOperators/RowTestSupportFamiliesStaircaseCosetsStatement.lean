@@ -10,4 +10,4 @@ open GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.Grow GlobalTheory.Ro
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rowTest_support_families_staircase_cosets : Big fun ch => OneAt ch := by
-  first | exact @GlobalTheory.RowVal.oneAt | exact GlobalTheory.RowVal.oneAt | (intros; apply GlobalTheory.RowVal.oneAt <;> assumption)
+  exact @GlobalTheory.RowVal.oneAt

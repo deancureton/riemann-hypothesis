@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RealMultLiftDividedPowers
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
 open scoped ContDiff
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.polynomial_theta_archimedean_lie_action : ∀ (F E
           (∀ t, GlobalTheory.Orb.archMat σ (c • G.W.J.map σ) τ (projArch σ (c • G.W.J.map σ) w (γ t)) = NormedSpace.exp (t • Z)) →
           ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∀ x, HasDerivAt (fun s : ℝ => G.M.I om Φ ((toGAd hσ G.W.J hc).symm (x * γ s)))
             (G.M.I om (D Z Φ) ((toGAd hσ G.W.J hc).symm x)) 0 := by
-  first | exact @GlobalTheory.ThKSmoothDer.hasDerivAt_thetaIntegral | exact GlobalTheory.ThKSmoothDer.hasDerivAt_thetaIntegral | (intros; apply GlobalTheory.ThKSmoothDer.hasDerivAt_thetaIntegral <;> assumption)
+  exact @GlobalTheory.ThKSmoothDer.hasDerivAt_thetaIntegral

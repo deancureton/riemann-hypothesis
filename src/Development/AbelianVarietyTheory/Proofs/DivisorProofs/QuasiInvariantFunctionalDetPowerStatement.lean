@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuasiInvariantFunctionalDetPower
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.quasi_invariant_functional_det_power : ∀ (k : Ty
         (m : ℂ) * Λ (fun Y => φ (Y * h.1)) = Λ φ) →
       ∀ (g : GL (Fin n) k), ∀ φ ∈ GlobalTheory.FullRankCoinv.fullRk k n d,
         GlobalTheory.SplitFlip.apow (GlobalTheory.SplitFlip.gdet g) (d : ℂ) * Λ (fun Y => φ ((g.1)ᵀ * Y)) = Λ φ := by
-  first | exact @GlobalTheory.FullRankCoinv.LeftScale.left_scale | exact GlobalTheory.FullRankCoinv.LeftScale.left_scale | (intros; apply GlobalTheory.FullRankCoinv.LeftScale.left_scale <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.LeftScale.left_scale

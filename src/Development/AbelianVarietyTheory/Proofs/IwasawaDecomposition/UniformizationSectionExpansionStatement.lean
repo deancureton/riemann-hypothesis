@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.uniformization_section_expansion : ∀ (R : Type) 
       (∀ α, GeneratorPullback.SecScal D.toPre.P.L (DegPre.famφ D.toPre (FractionRing R) α) (DegPre.famε q) (Φ.s α)
         (D.toPre.famφB α) (DegPre.famε q) (f α) (DegPre.prB D.toPre (FractionRing R)).left 1) →
       ∃ σ : H0 U.LG.L q, ∀ e : ℕ, U.ExpandsAt e q σ f := by
-  first | exact @GlobalTheory.IntegralLift.main | exact GlobalTheory.IntegralLift.main | (intros; apply GlobalTheory.IntegralLift.main <;> assumption)
+  exact @GlobalTheory.IntegralLift.main

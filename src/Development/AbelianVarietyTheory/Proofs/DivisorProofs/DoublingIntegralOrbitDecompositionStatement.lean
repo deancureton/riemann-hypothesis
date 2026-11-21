@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingIntegralOrbitDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.doubling_integral_orbit_decomposition : GlobalTheo
     ∀ v : Pl F, (∃ w, Formalism.UG.IsInertAt F E v w) → (∀ w ∈ aboveF (L := E) F v, UnrAt χW w) → φ v = M.vac v →
     ∀ μ : Measure (UAtSub σ X (evFin F v)), μ.IsHaarMeasure → μ {g | g.1 ∈ K} = 1 → ∀ s : ℂ, (n : ℝ) / 2 < s.re →
       zetaOn m om (pure f φ) i K₂ _ μ s = (∏ j ∈ Finset.range n, Lv (charFam χW) v (s + (n : ℂ) / 2 - (j : ℂ))) * denInv E n v s := by
-  first | exact @GlobalTheory.BotInert.zetaOn_inert | exact GlobalTheory.BotInert.zetaOn_inert | (intros; apply GlobalTheory.BotInert.zetaOn_inert <;> assumption)
+  exact @GlobalTheory.BotInert.zetaOn_inert

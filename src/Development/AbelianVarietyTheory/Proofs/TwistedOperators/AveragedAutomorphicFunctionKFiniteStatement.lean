@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AveragedAutomorphicFunctionKFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -30,4 +29,4 @@ open GlobalTheory.Grow GlobalTheory.Size
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.averaged_automorphic_function_K_finite : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → ∀ (N : GlobalTheory.Grid.Node D) (ψ : GA D N.V → ℂ), IsAutFunSm θ N.V ψ → ∀ (τ : D.what₂.Tau) (e : Formalism.REAL.KG (N.M.ε τ) → ℂ), GlobalTheory.TypeSum.KFinFun (N.M.ε τ) e → GlobalTheory.CuspKFin.KFinAt θ N τ (GlobalTheory.SeriesToClosure.avg θ N.V τ (N.M.ε τ) (N.M.fr τ) e ψ) := by
-  first | exact @GlobalTheory.CuspKFin.kFinAt_avg | exact GlobalTheory.CuspKFin.kFinAt_avg | (intros; apply GlobalTheory.CuspKFin.kFinAt_avg <;> assumption)
+  exact @GlobalTheory.CuspKFin.kFinAt_avg

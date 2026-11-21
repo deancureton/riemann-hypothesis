@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingHeightFunctionInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.LintegralFintypeProdEqProd
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.doubling_height_function_invariant : ∀ (F E : Ty
         hgtOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ (i (g, 1)) =
           hgtOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ (i (compArch σ X.J g, 1)) *
             ∏ v ∈ T, hgtOf finSumFinEquiv (UG (cA σ) (incM F X₂.J)).subtype (absE F E) K₂ (i (compAt σ X.J v g, 1)) := by
-  first | exact @GlobalTheory.ThK.Bot.HgtMul.hgt_one_and_mul | exact GlobalTheory.ThK.Bot.HgtMul.hgt_one_and_mul | (intros; apply GlobalTheory.ThK.Bot.HgtMul.hgt_one_and_mul <;> assumption)
+  exact @GlobalTheory.ThK.Bot.HgtMul.hgt_one_and_mul

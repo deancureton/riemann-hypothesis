@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeriesAveragePreservesType
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -30,4 +29,4 @@ open GlobalTheory.Grow GlobalTheory.Size
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.series_average_preserves_type : ∀ (D : D7) (θ : InfFam D), IsInfFam θ → GlobalTheory.FunPr.Hypotheses₂ → ∀ (N : GlobalTheory.Grid.Node D) (τ : D.what₂.Tau) (ψ : GA D N.V → ℂ), IsAutFunSm θ N.V ψ → IsTypeAt θ N.V τ (N.S τ) ψ → ∀ (e : Formalism.REAL.KG (N.M.ε τ) → ℂ), GlobalTheory.TypeSum.KFinFun (N.M.ε τ) e → IsTypeAt θ N.V τ (N.S τ) (GlobalTheory.SeriesToClosure.avg θ N.V τ (N.M.ε τ) (N.M.fr τ) e ψ) := by
-  first | exact @GlobalTheory.AvgSamePlace.isTypeAt_avg | exact GlobalTheory.AvgSamePlace.isTypeAt_avg | (intros; apply GlobalTheory.AvgSamePlace.isTypeAt_avg <;> assumption)
+  exact @GlobalTheory.AvgSamePlace.isTypeAt_avg

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedFramePartitionFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseAt
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.adapted_frame_partition_formula : ∀ (D : D7) (O 
       ‖ratVal (genAt (adlOf (O.Φ.C c) (O.met.hm c) w).D (under y) *
           ((prodPow t (GlobalTheory.ShFam.Pad.expo O.S.Dw w) : (O.var c).Fnˣ) : (O.var c).Fn)) y‖ ^ 2 *
         (O.Φ.C c).genSq (Gm (embOf O.κ.e σ)) (GlobalTheory.ShFam.Pad.expo O.S.Dw w) g := by
-  first | exact @GlobalTheory.CovTop.pn_adlOf_genAt_of_adapted | exact GlobalTheory.CovTop.pn_adlOf_genAt_of_adapted | (intros; apply GlobalTheory.CovTop.pn_adlOf_genAt_of_adapted <;> assumption)
+  exact @GlobalTheory.CovTop.pn_adlOf_genAt_of_adapted

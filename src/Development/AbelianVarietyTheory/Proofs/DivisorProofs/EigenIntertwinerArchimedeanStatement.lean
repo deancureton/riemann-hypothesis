@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerArchimedean
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_archimedean : GlobalTheory.FunPr
     (M₁ : Model σ X W₁), B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' → M.IsGood B.ψ → H'.IsAdapted σ B W W₁ i₀ i₁ →
     M₁.IsGood B.ψ → ∀ T T' : SInf F (Fin n × Fin d) →L[ℂ] SInf F (Fin n × Fin d₁), T ≠ 0 →
     GlobalTheory.ThK.EvUniq.InfRel B M M₁ H' T → GlobalTheory.ThK.EvUniq.InfRel B M M₁ H' T' → ∃ c : ℂ, T' = c • T := by
-  first | exact @GlobalTheory.ArchSch.infRel_proportional | exact GlobalTheory.ArchSch.infRel_proportional | (intros; apply GlobalTheory.ArchSch.infRel_proportional <;> assumption)
+  exact @GlobalTheory.ArchSch.infRel_proportional

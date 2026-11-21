@@ -12,4 +12,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_local_langlands_place_datum : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c => ∃ P : GlobalTheory.NPin.Pin hL (w.D Z), PinAt c.a P := by
-  first | exact @GlobalTheory.PinLayer.pin_atMem | exact GlobalTheory.PinLayer.pin_atMem | (intros; apply GlobalTheory.PinLayer.pin_atMem <;> assumption)
+  exact @GlobalTheory.PinLayer.pin_atMem

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetFieldIsoTransport
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankSB
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.jacquet_field_iso_transport : ∀ (k k' : Type) [F
       IsSubquotient Q ((jacU (tripPlace h) (detInd a a' α₀ β₀)).comp (midHom k l n (a + a'))) →
       IsSubquotient (Q.comp (GlobalTheory.LFun.SplitTie.glEquiv n e).symm.toMonoidHom)
         ((jacU (tripPlace h) (detInd a a' α β)).comp (midHom k' l n (a + a'))) := by
-  first | exact @GlobalTheory.MidJacTransport.isSubquotient_midJacU_transport | exact GlobalTheory.MidJacTransport.isSubquotient_midJacU_transport | (intros; apply GlobalTheory.MidJacTransport.isSubquotient_midJacU_transport <;> assumption)
+  exact @GlobalTheory.MidJacTransport.isSubquotient_midJacU_transport

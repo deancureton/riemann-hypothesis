@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.valuation_places_over_p_pinned : GlobalTheory.Publ
       O.Y.arMix Sx R p (dRt D.what₂.Tau O.Y.N (τ0, i') * toR G) = Real.log p * (letI := Formalism.L2.Geo.finPl D p;
         ∑ la, Formalism.L2.Geo.wtL D p la * ((((mdlOf (z la) (jc la)).Z.capDeg (((mdlOf (z la) (jc la)).lie (τ' la)).Dv (i la))
           (evC (mdlOf (z la) (jc la)) (rootOf (z la) (jc la)) G) : ℚ) : ℝ) / ((mdlOf (z la) (jc la)).cov : ℝ))) := by
-  first | exact @GlobalTheory.VertTerm.arMix_dRt_lie_of_pair | exact GlobalTheory.VertTerm.arMix_dRt_lie_of_pair | (intros; apply GlobalTheory.VertTerm.arMix_dRt_lie_of_pair <;> assumption)
+  exact @GlobalTheory.VertTerm.arMix_dRt_lie_of_pair

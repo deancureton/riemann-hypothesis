@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KernelConditionIffE8BundleKGroupTrivial
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SRelOneOneIff
 import Development.AbelianVarietyTheory.Definitions.ModuliSpaces.IsGaloisCover
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.SiegelToroidalIntegral
@@ -21,4 +20,4 @@ open GlobalTheory.PrincSubring
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kernel_condition_iff_e8Bundle_kGroup_trivial : ∀ {S : Scheme.{0}} (h : ℕ) (A : Over S) [GrpObj A] [IsCommMonObj A] (P : LB (A ⊗ A).left), IsSymmetricPair h A P → Out.RelAmple A (diagPull A P) → ∀ {S' : Scheme.{0}} (g : S' ⟶ S), KerAlong A P g ↔ GlobalTheory.KTrivSpread.TrivAlong (Out.powObj A 8) (powLB A P) g := by
-  first | exact @GlobalTheory.PrincSubring.kerAlong_iff_trivAlong | exact GlobalTheory.PrincSubring.kerAlong_iff_trivAlong | (intros; apply GlobalTheory.PrincSubring.kerAlong_iff_trivAlong <;> assumption)
+  exact @GlobalTheory.PrincSubring.kerAlong_iff_trivAlong

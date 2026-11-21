@@ -149,7 +149,6 @@ theorem le_five {x a b c d e : ℝ} (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c)
     (h : x ≤ a ∨ x ≤ b ∨ x ≤ c ∨ x ≤ d ∨ x ≤ e) : x ≤ a + b + c + d + e := by
   rcases h with h | h | h | h | h <;> linarith
 
-set_option maxHeartbeats 4000000 in
 
 theorem propW_of_counts (hC : Counts D) : PropW D := by
   classical

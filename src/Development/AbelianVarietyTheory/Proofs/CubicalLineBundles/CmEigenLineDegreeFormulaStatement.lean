@@ -8,4 +8,4 @@ open GlobalTheory GlobalTheory.CM
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cmEigenLine_degreeFormula : CMCurve → ThetaUnifAV → Out.Laws → HomExtDvr → DegSt := by
-  first | exact @GlobalTheory.CM.PureDeg.degSt | exact GlobalTheory.CM.PureDeg.degSt | (intros; apply GlobalTheory.CM.PureDeg.degSt <;> assumption)
+  exact @GlobalTheory.CM.PureDeg.degSt

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericRootTransitionFactors
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.generic_root_transition_factors : ∀ {X Y₀ : Sc
         (∀ t : Γ(fl.F i.succ, W), (fl.π i).app W t = Twist.resM _ (hW.trans inf_le_right) ((ch' PUnit.unit).e 0) →
           lam t = ((r ch')⁻¹ : X.functionFieldˣ))) →
     IsRatSec ((fl.root i).pull j) r := by
-  first | exact @GlobalTheory.FlagCov.isRatSec_pull_root_of_scaling | exact GlobalTheory.FlagCov.isRatSec_pull_root_of_scaling | (intros; apply GlobalTheory.FlagCov.isRatSec_pull_root_of_scaling <;> assumption)
+  exact @GlobalTheory.FlagCov.isRatSec_pull_root_of_scaling

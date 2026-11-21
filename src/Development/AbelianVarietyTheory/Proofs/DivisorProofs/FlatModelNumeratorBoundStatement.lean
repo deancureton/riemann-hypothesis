@@ -29,4 +29,4 @@ theorem _root_.GlobalTheory.T.flat_model_numerator_bound : GlobalTheory.CovTop.H
     ∀ n : Option (D.what₂.Tau × Fin O.N) → ℤ,
       Φ (lin (fun o => o.elim 1 fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℝ) else 0) *
         rename some (lin fun i => (n i : ℝ)) ^ Formalism.MainNotions.WeightThresholdDefs.dimY O.Y) = 0 := by
-  first | exact @GlobalTheory.FlatDetModelNum.flat_model_numerator | exact GlobalTheory.FlatDetModelNum.flat_model_numerator | (intros; apply GlobalTheory.FlatDetModelNum.flat_model_numerator <;> assumption)
+  exact @GlobalTheory.FlatDetModelNum.flat_model_numerator

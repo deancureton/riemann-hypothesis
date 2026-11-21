@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodsOfGoodReductionModel
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.periods_of_good_reduction_model : GlobalTheory.Pub
     ∀ (δ₀ : X₀.DetGen) (u₀ : R), u₀ ≠ 0 →
       (Matrix.detRowAlternating.compLinearMap (LinearMap.pi fun k ↦ e (U.e k)) : X₀.DetOmega) = u₀ • δ₀.1 →
     ∃ δ : X.DetGen, Obj.DetCorr R.subtype p δ₀.1 δ.1 ∧ U.IsDet δ.1 ((∏ i, a i) / (u₀ : ℂ)) := by
-  first | exact @GlobalTheory.PeriodDet.exists_detGen_isDet | exact GlobalTheory.PeriodDet.exists_detGen_isDet | (intros; apply GlobalTheory.PeriodDet.exists_detGen_isDet <;> assumption)
+  exact @GlobalTheory.PeriodDet.exists_detGen_isDet

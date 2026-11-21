@@ -6,4 +6,4 @@ open NumberField Matrix GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTh
 open scoped ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.padic_integral_iff_denominator : ∀ (E : Type) [Field E] [NumberField E] (p : Nat.Primes) (x : E), ((∀ j : E →+* ℂ_[p], ‖j x‖ ≤ 1) ↔ ∃ (n : ℕ) (a : 𝓞 E), ¬ (p : ℕ) ∣ n ∧ (n : E) * x = a) := by
-  first | exact @GlobalTheory.CompanionTheory.Relay.padic_integral_iff_denominator | exact GlobalTheory.CompanionTheory.Relay.padic_integral_iff_denominator | (intros; apply GlobalTheory.CompanionTheory.Relay.padic_integral_iff_denominator <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Relay.padic_integral_iff_denominator

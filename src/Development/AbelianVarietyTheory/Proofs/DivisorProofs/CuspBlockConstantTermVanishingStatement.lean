@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CuspBlockConstantTermVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.cusp_block_constant_term_vanishing : ∀ (F E : Ty
       ∀ (ψ : GAd σ J → ℂ), GlobalTheory.StdPar.IsCuspOn σ J Xf Yf S K ψ → ∀ g₀ : GAd σ J,
         (∀ k : GlobalTheory.CuspRep.Kinf E d, g₀⁻¹ * ι (GlobalTheory.CuspRep.infGL E d (Unitary.toUnits k)) * g₀ ∈ K) →
         ∀ g : GlobalTheory.CuspRep.GA E d, ∃ (C : ℝ) (N : ℕ), ∀ y, ‖ψ (ι (g * GlobalTheory.CuspRep.infGL E d y) * g₀)‖ ≤ C * GlobalTheory.CuspRep.height y ^ N := by
-  first | exact @GlobalTheory.BlockForms.growth_comp_blockEmb | exact GlobalTheory.BlockForms.growth_comp_blockEmb | (intros; apply GlobalTheory.BlockForms.growth_comp_blockEmb <;> assumption)
+  exact @GlobalTheory.BlockForms.growth_comp_blockEmb

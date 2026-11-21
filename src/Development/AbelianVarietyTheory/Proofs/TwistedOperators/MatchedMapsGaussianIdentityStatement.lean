@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsGaussianIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubGAlgDOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_maps_gaussian_identity : GlobalTheory.Publ
         StrictMono N → (∀ i, GlobalTheory.Published.ThetaSub om' v (N i)) → m ≤ L) ∧
       ∀ N : Submodule ℂ ((Fin a' × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F v) → ℂ), GlobalTheory.Published.ThetaSub om' v N →
         N ≠ GlobalTheory.WeilM.SB _ → ∀ φ ∈ N, Rf.p' v φ = 0 := by
-  first | exact @GlobalTheory.HoweNonsplitKerSmall.howe_nonsplit_ker_small | exact GlobalTheory.HoweNonsplitKerSmall.howe_nonsplit_ker_small | (intros; apply GlobalTheory.HoweNonsplitKerSmall.howe_nonsplit_ker_small <;> assumption)
+  exact @GlobalTheory.HoweNonsplitKerSmall.howe_nonsplit_ker_small

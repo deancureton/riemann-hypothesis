@@ -7,4 +7,4 @@ open GlobalTheory GlobalTheory.BdDim GlobalTheory.SiegelTor GlobalTheory.ZM Glob
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.transcendence_bound_specializes : ∀ (X : Scheme.{0}) (x y : X) (n : ℕ), x ⤳ y → TrLe (X.residueField x) n → TrLe (X.residueField y) n := by
-  first | exact @GlobalTheory.BdDim.trLe_residueField_of_specializes | exact GlobalTheory.BdDim.trLe_residueField_of_specializes | (intros; apply GlobalTheory.BdDim.trLe_residueField_of_specializes <;> assumption)
+  exact @GlobalTheory.BdDim.trLe_residueField_of_specializes

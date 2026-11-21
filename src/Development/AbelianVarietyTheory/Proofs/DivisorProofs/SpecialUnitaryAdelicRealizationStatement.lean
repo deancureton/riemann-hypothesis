@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryAdelicRealization
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarProd
 open Formalism.BasicNotions Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Filter Topology
 open scoped TensorProduct ENNReal
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.special_unitary_adelic_realization : ∀ (E : Type
           GL (Fin r) (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Af (maximalRealSubfield E) ⊗[maximalRealSubfield E] E)) :
           Matrix (Fin r) (Fin r) (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Af (maximalRealSubfield E) ⊗[maximalRealSubfield E] E)) =
           finMat (IsCMField.complexConj E).toAlgHom Gᵀ h.1 := by
-  first | exact @GlobalTheory.TamUnf.exists_SUAdelic_split | exact GlobalTheory.TamUnf.exists_SUAdelic_split | (intros; apply GlobalTheory.TamUnf.exists_SUAdelic_split <;> assumption)
+  exact @GlobalTheory.TamUnf.exists_SUAdelic_split

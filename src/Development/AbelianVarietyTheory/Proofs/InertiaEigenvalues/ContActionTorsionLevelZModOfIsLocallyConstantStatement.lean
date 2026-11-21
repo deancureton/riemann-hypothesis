@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ContActionTorsionLevelZModOfIsLocallyConstant
-import Mathlib
 import Formalism.CharacterColumnKernels.StatementRho
 import Formalism.GaloisCohomology.LocalTateDualityK
 import ReciprocityTheory.Hypotheses.GalCohDefs
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.contAction_torsionLevelZMod_of_isLocallyConstant :
     (∀ m : M, c • m = 0 → IsLocallyConstant (fun g => ρ g m)) →
     letI := GlobalTheory.ShapeNeg.levZ (M := M) p r h
     ReciprocityTheory.Gal.ContAction (GlobalTheory.ShapeNeg.levRepZ p r h ρ) := by
-  first | exact @GlobalTheory.ShapeNeg.contAction_levRepZ_of_isLocallyConstant | exact GlobalTheory.ShapeNeg.contAction_levRepZ_of_isLocallyConstant | (intros; apply GlobalTheory.ShapeNeg.contAction_levRepZ_of_isLocallyConstant <;> assumption)
+  exact @GlobalTheory.ShapeNeg.contAction_levRepZ_of_isLocallyConstant

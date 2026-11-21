@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlockDatumBaseChangeDefiniteLatticeCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.BlockBaseChangeAt
 open NumberField
 open scoped Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.blockDatum_baseChange_definiteLattice_compatible :
     ∃ Gm : Matrix (Fin (B'.dZ ℓ' Z')) (Fin (B.dZ ℓ Z)) K', Function.Bijective Gm.mulVec ∧
       B'.Tl ℓ' Z' = Submodule.span (𝓞 K') ((fun x : Fin (B.dZ ℓ Z) → K => Matrix.mulVec Gm (fun k => φ (x k))) '' (B.Tl ℓ Z : Set (Fin (B.dZ ℓ Z) → K))) ∧
       ∀ x : Fin (B.dZ ℓ Z) → K, B'.toF ℓ' Z' (Matrix.mulVec Gm fun k => φ (x k)) = GlobalTheory.Mem.R3.LiftLatBC.bcF φ B B' C (B.toF ℓ Z x) := by
-  first | exact @GlobalTheory.Mem.R3.LiftLatBC.tl_bcF_of_blockBCAt | exact GlobalTheory.Mem.R3.LiftLatBC.tl_bcF_of_blockBCAt | (intros; apply GlobalTheory.Mem.R3.LiftLatBC.tl_bcF_of_blockBCAt <;> assumption)
+  exact @GlobalTheory.Mem.R3.LiftLatBC.tl_bcF_of_blockBCAt

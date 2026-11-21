@@ -1,5 +1,4 @@
 import Formalism.BehrendSets.StatementE
-import Mathlib
 import Formalism.BehrendSets.BehrendVariance.MulAbsSubLt
 
 open Finset Real

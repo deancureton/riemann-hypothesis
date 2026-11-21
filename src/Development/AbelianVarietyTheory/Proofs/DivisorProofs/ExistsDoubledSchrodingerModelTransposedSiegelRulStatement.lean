@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDoubledSchrodingerModelTransposedSiegelRul
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 
@@ -40,4 +39,4 @@ theorem _root_.GlobalTheory.T.exists_doubled_schrodingerModel_transposed_siegelR
                            gd.1.1 = Matrix.fromBlocks g.1.1 0 0 1 →
                            ∀ φ₁ ∈ GlobalTheory.WeilM.schA D.host.F κ, ∀ φ₂ ∈ GlobalTheory.WeilM.schA D.host.F κ,
                              omd gd (GlobalTheory.WeilM.boxFun φ₁ φ₂) = GlobalTheory.WeilM.boxFun (om (g, 1) φ₁) φ₂ := by
-  first | exact @GlobalTheory.WeilSchrodinger.DblTarget.exists_dbl_target | exact GlobalTheory.WeilSchrodinger.DblTarget.exists_dbl_target | (intros; apply GlobalTheory.WeilSchrodinger.DblTarget.exists_dbl_target <;> assumption)
+  exact @GlobalTheory.WeilSchrodinger.DblTarget.exists_dbl_target

@@ -6,4 +6,4 @@ open scoped Classical
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.corank_one_scalar_pair_symmetric : ∀ (D : D7) (X : HidaSetting D) (Y : Full X) (u u' : D.what₂.Word), ∀ t t' : TauC Y u u', t.G ≠ 0 → t'.G ≠ 0 → (Y.tO u u').s0 t t' = 1 → (Y.tO u u').scal t t' → (Y.tO u u').s0 t' t = 1 ∧ (Y.tO u u').scal t' t := by
-  first | exact @GlobalTheory.ScalSymm.scal_symm | exact GlobalTheory.ScalSymm.scal_symm | (intros; apply GlobalTheory.ScalSymm.scal_symm <;> assumption)
+  exact @GlobalTheory.ScalSymm.scal_symm

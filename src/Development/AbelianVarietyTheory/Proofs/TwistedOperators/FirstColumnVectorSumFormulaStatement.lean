@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FirstColumnVectorSumFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.StepUnfold
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.PairPtsClasses
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.first_column_vector_sum_formula : GlobalTheory.Fun
           ∏ i, Function.update (fun i => ch.S.Z.vec (d.2 i)) (GlobalTheory.FirstRowVertex.firstIx D)
             (GlobalTheory.FirstRowVertex.rowShift0 ch.S.toGridChoice k (ch.S.Z.vec (d.2 (GlobalTheory.FirstRowVertex.firstIx D)))) i (ys i)) =
       τ.sum fun d c => c * (∏ j, ch.S.Z.vec (d.1 j) (xs j)) * ∏ i, ch.S.Z.vec (d.2 i) (ys i) := by
-  first | exact @GlobalTheory.FirstRowDatum.main_law | exact GlobalTheory.FirstRowDatum.main_law | (intros; apply GlobalTheory.FirstRowDatum.main_law <;> assumption)
+  exact @GlobalTheory.FirstRowDatum.main_law

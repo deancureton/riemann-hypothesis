@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerHaarUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_haar_unfolding : GlobalTheory.
       GlobalTheory.ThK.CTAdd.CTInt H' (GlobalTheory.ConeSmallSer.partSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) (GlobalTheory.ConeSmallSer.midSet H'.x T)) ∧ ∃ T₃ T₄ : UA σ G.W.J → ℂ, IsCT H' (GlobalTheory.ConeSmallSer.partSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) (GlobalTheory.ConeSmallSer.midSet H'.x T)) (T₃ + T₄) ∧
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.α (((b + 2 : ℕ) : ℂ) / 2) T₃ ∧
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.β (((a + 2 : ℕ) : ℂ) / 2) T₄ := by
-  first | exact @GlobalTheory.ConeSmallMid.midCT | exact GlobalTheory.ConeSmallMid.midCT | (intros; apply GlobalTheory.ConeSmallMid.midCT <;> assumption)
+  exact @GlobalTheory.ConeSmallMid.midCT

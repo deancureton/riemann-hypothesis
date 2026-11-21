@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.theta_integral_linear_in_polynomial : ∀ (F E : T
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     GlobalTheory.ThK.KP → IsTriple B G X om om' →
       ∃ L : GlobalTheory.ThK.PolData B G.M →ₗ[ℂ] (UA σ G.W.J → ℂ), ∀ Φ : GlobalTheory.ThK.PolData B G.M, L Φ = G.M.I om Φ := by
-  first | exact @GlobalTheory.ThK.LinMapV.exists_linearMap | exact GlobalTheory.ThK.LinMapV.exists_linearMap | (intros; apply GlobalTheory.ThK.LinMapV.exists_linearMap <;> assumption)
+  exact @GlobalTheory.ThK.LinMapV.exists_linearMap

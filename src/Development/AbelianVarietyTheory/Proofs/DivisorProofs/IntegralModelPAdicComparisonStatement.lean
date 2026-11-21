@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparison
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.integral_model_p_adic_comparison : ∀ (E : Type) 
       (P : PtP E p) (π : P.G.left ⟶ Y.t.G.left) (ψ : P.A.A.left ⟶ Y.oF.t.G.left) (y : FrPt Xo c ℂ_[p]),
       HTAt Y r ν yb yy P π ψ y → ∀ β : c'.V W →+* 𝓞_ℂ_[p], yb ≫ Y.s = spMap β →
       ∀ σ : E →+* ℂ, β.comp (embV c' W σ) = embInt c P.integers σ := by
-  first | exact @GlobalTheory.FlatModel.htAt_embV_eq | exact GlobalTheory.FlatModel.htAt_embV_eq | (intros; apply GlobalTheory.FlatModel.htAt_embV_eq <;> assumption)
+  exact @GlobalTheory.FlatModel.htAt_embV_eq

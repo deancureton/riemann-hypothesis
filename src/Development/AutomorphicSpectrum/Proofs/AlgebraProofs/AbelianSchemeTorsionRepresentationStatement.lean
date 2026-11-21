@@ -21,4 +21,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.CompanionTheory.Ar.GR
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.abelian_scheme_torsion_representation : ∀ (R : Type) [CommRing R] [IsLocalRing R] (p : ℕ), 1 ≤ p → ∀ (A : Over (Spec (CommRingCat.of R))) [GrpObj A] (L : LB A.left), IsAbelianScheme A → L.IsLB → Out.RelAmple A L → Nonempty (TorsRep A p) := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.GR.torsRep_nonempty_of_relAmple | exact GlobalTheory.CompanionTheory.Ar.GR.torsRep_nonempty_of_relAmple | (intros; apply GlobalTheory.CompanionTheory.Ar.GR.torsRep_nonempty_of_relAmple <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.GR.torsRep_nonempty_of_relAmple

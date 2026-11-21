@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsCommonLocalizationModel
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_common_localization_model : ∀ {O F R R₂
       IsPullback (spMap (algebraMap R (Localization.Away (b r₂)))) (spMap h) (spMap b) (spMap b₂) ∧
       ∀ ω₂' : Localization.Away (b₂ r) →+* F, ω₂'.comp (algebraMap R₂ (Localization.Away (b₂ r))) = ω₂ →
         ∃ s : Localization.Away (b₂ r) →+* Localization.Away (b r₂), ω'.comp s = ω₂' := by
-  first | exact @GlobalTheory.Member.overlap_rings | exact GlobalTheory.Member.overlap_rings | (intros; apply GlobalTheory.Member.overlap_rings <;> assumption)
+  exact @GlobalTheory.Member.overlap_rings

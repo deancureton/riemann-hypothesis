@@ -16,4 +16,4 @@ open GlobalTheory.ChainPts
 open GlobalTheory.ChainDesc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_point_factors_affine_cover : ∀ (O : Type) [CommRing O] [IsDomain O] [IsDiscreteValuationRing O] (B B' : GlobalTheory.Vert.Model O) (f : GlobalTheory.Vert.Model.Hom B' B) (g : ∀ U : AffOp B.X, Γ(B'.X, f.f ⁻¹ᵁ U.1) →+* U.Bp) (k : IsCov f g) (K : Type) [Field K] [IsAlgClosed K] (R : Subring K), (∀ x : K, IsIntegral R x → x ∈ R) → ∀ (w : Sp R ⟶ B'.X) (U : AffOp B.X), ⊤ ≤ w ⁻¹ᵁ f.f ⁻¹ᵁ U.1 → ∃ φ : U.Bp →+* R, spMap φ ≫ U.toX = w ≫ f.f ∧ w = spMap (φ.comp (g U)) ≫ (k.isAffineOpen U).fromSpec := by
-  first | exact @GlobalTheory.ChainDesc.IsCov.exists_extend | exact GlobalTheory.ChainDesc.IsCov.exists_extend | (intros; apply GlobalTheory.ChainDesc.IsCov.exists_extend <;> assumption)
+  exact @GlobalTheory.ChainDesc.IsCov.exists_extend

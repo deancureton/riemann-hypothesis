@@ -53,5 +53,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.type_lattice_deep_level_eq : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Gram → DeepGood → Covers fun Fm x _ ι p i Y _ _ => ∃ (fr : TypeFrame (dat p i) Y.d.l₂) (ψ : ∀ v : GlobalTheory.IndefiniteRowSideFullHecke.LevelCuspCharacters.Sq (Fm.D x ι).host, AddChar (ZMod ((Fm.D x ι).host.g v.1)) Y.d.c₂.F), (∀ v, ψ v ≠ 1) ∧ GlobalTheory.LevDesc.IsTypeLevel Y.d.l₂ ∧ latDeep p i Y = latN fr Y.U (Gk p i) ψ ∧ Real.log (Nat.card (grpHR fr)) ≤ 45 * zBase (Fm.L x ι) ^ 2 := by
-  first | exact @_root_.GlobalTheory.CovTop.TypeLattice.deep_lattice_eq_level_lattice_of_covers | exact _root_.GlobalTheory.CovTop.TypeLattice.deep_lattice_eq_level_lattice_of_covers | (intros; apply _root_.GlobalTheory.CovTop.TypeLattice.deep_lattice_eq_level_lattice_of_covers <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.TypeLattice.deep_lattice_eq_level_lattice_of_covers
 end

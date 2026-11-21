@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.weil_theta_imaginary_scalar : ∀ (F E : Type) [Fi
         ψ = fun x => G.M'.I om' (pure f φ) ((toGAd hσ G.W.J hc).symm x)})) ∧
       Module.rank ℂ (Submodule.span ℂ {ψ : GAd σ (c • G.W.J.map σ) → ℂ | ∃ f ∈ G.M'.Pol B.ψ B.emb,
         ψ = fun x => G.M'.I om' (pure f φ) ((toGAd hσ G.W.J hc).symm x)}) ≤ Cardinal.aleph0 := by
-  first | exact @GlobalTheory.ThK.ZFinSmallStab.span_theta_stable | exact GlobalTheory.ThK.ZFinSmallStab.span_theta_stable | (intros; apply GlobalTheory.ThK.ZFinSmallStab.span_theta_stable <;> assumption)
+  exact @GlobalTheory.ThK.ZFinSmallStab.span_theta_stable

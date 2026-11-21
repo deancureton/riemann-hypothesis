@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizationFormsCommensurable
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.polarization_forms_commensurable : GlobalTheory.Pu
     (X : Obj F 𝔠 (Sp R)) (c c₀ : 𝔠.elt), (c₀ : F) ≠ 0 → ∀ ψ ψ₀ : LinearMap.BilinForm R (HdR X.A),
     IsPolForm (dp0 R) (𝟙 _) X.A (X.diag c) ψ → IsPolForm (dp0 R) (𝟙 _) X.A (X.diag c₀) ψ₀ →
     ∃ (n : ℕ) (t : 𝓞 F), n ≠ 0 ∧ ∀ x y, (n : R) * ψ x y = ψ₀ x (act (dp0 R) (𝟙 _) X.rm t y) := by
-  first | exact @GlobalTheory.RealMult.PolScale.exists_nat_mul_polForm_eq | exact GlobalTheory.RealMult.PolScale.exists_nat_mul_polForm_eq | (intros; apply GlobalTheory.RealMult.PolScale.exists_nat_mul_polForm_eq <;> assumption)
+  exact @GlobalTheory.RealMult.PolScale.exists_nat_mul_polForm_eq

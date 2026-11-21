@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedArchHeisenbergDirectionsContinuous
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryPartnerDiagStatement
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.transported_archHeisenbergDirections_continuous : 
         om p (GlobalTheory.WeilM.schr ψ (GlobalTheory.WeilL2Words.archPair D.host.F (M p h)) φ) =
           GlobalTheory.WeilM.schr ψ (GlobalTheory.WeilL2Words.archPair D.host.F h) (om p φ)) ∧
       ∀ h, Continuous fun p => M p h := by
-  first | exact @GlobalTheory.ArchTransportHost.archDir_transport_host | exact GlobalTheory.ArchTransportHost.archDir_transport_host | (intros; apply GlobalTheory.ArchTransportHost.archDir_transport_host <;> assumption)
+  exact @GlobalTheory.ArchTransportHost.archDir_transport_host

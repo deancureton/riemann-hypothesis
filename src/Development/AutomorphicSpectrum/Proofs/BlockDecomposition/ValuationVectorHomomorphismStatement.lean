@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ValuationVectorHomomorphism
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitPlaceEmbeddingPropertiesStatement
 open NumberField IsDedekindDomain MeasureTheory GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.valuation_vector_homomorphism : ∀ (K : Type) [Fi
   ∀ (c : HeckeCharacter K) (M : ∀ v : Pl, LM c v), AdmM M →
     (∀ (κ : Kˣ) (v : Pl), vK M κ v = ord ((k1 (M v) κ : (Qv v)ˣ) : Qv v)) ∧ (∀ κ : Kˣ, vK M κ ∈ Tm M) ∧
       ∀ a b : Kˣ, vK M (a * b) = vK M a + vK M b := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.VKMap.vK_valuation_map | exact GlobalTheory.CompanionTheory.FexTheta.VKMap.vK_valuation_map | (intros; apply GlobalTheory.CompanionTheory.FexTheta.VKMap.vK_valuation_map <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.VKMap.vK_valuation_map

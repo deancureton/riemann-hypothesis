@@ -10,4 +10,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.S
 open scoped CategoryTheory.Obj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_moduli_scheme_polarized_abelian_level : N1ab := by
-  first | exact @GlobalTheory.Moduli.moduli_scheme_exists | exact GlobalTheory.Moduli.moduli_scheme_exists | (intros; apply GlobalTheory.Moduli.moduli_scheme_exists <;> assumption)
+  exact @GlobalTheory.Moduli.moduli_scheme_exists

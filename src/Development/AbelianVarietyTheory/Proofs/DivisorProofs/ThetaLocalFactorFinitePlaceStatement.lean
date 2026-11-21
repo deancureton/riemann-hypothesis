@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaLocalFactorFinitePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.theta_local_factor_finite_place : ∀ (F E : Type)
       (∀ w, (w = v ∨ w ∈ S) → ∀ u : AF F, At (evFin F w) u → u • (mat h₃ - 1) = 0) ∧
       (∀ w, w ≠ v → w ∉ S → ∀ γ, (mat g₃ * γ * Matrix.transpose (mat h₃) ∈ latAtV G.V' G.W w ↔ γ ∈ latAtV G.V' G.W w)) ∧
       (∀ w, w ≠ v → w ∉ S → φ w = G.M'.vac w) := by
-  first | exact @GlobalTheory.UnitaryTriSplit.factor_away | exact GlobalTheory.UnitaryTriSplit.factor_away | (intros; apply GlobalTheory.UnitaryTriSplit.factor_away <;> assumption)
+  exact @GlobalTheory.UnitaryTriSplit.factor_away

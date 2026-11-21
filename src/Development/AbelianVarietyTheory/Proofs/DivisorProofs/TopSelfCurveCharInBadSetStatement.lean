@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.top_self_curve_char_in_bad_set : Hypotheses2 → H
     ∀ (B : ℝ), 2 ≤ B → ∀ (c : O.s.Comp) (W : O.LatModel (GlobalTheory.FlagAr.setB O.Y B) c) (τ : D.what₂.Tau)
     (Z : Scheme.{0}) (i : Z ⟶ W.V.X) [IsClosedImmersion i] [IsIntegral Z] (κ : Type) [Field κ] [Finite κ]
     [Algebra κ Γ(Z, ⊤)], topologicalKrullDim Z = 1 → ringChar κ ∈ GlobalTheory.FlagAr.setB O.Y B → topSelfIntersection κ ((comb (W.gens (GlobalTheory.FlagAr.setB O.Y B)) (fun o : Option (D.what₂.Tau × Fin O.N) => o.elim (0 : ℤ) fun x => if x.1 = τ then (-1 : ℤ) else 0)).B.pull i) 1 = 0 := by
-  first | exact @GlobalTheory.VertDegHT.topSelf_comb_root_eq_zero | exact GlobalTheory.VertDegHT.topSelf_comb_root_eq_zero | (intros; apply GlobalTheory.VertDegHT.topSelf_comb_root_eq_zero <;> assumption)
+  exact @GlobalTheory.VertDegHT.topSelf_comb_root_eq_zero

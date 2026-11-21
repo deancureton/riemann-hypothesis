@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIntegralIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_integral_identity : GlobalTheo
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ h, ∃ g : (AE F E)ˣ → ℝ, (∀ s : ℝ, 1 < s → Integrable (fun l => g l * (absE F E l : ℝ) ^ s) μ) ∧
       ∀ (k : K) (l : (AE F E)ˣ), ‖G₁.M'.I om₁' (e' (G.M'.co.rho B.ψ (shiftB σ H H' l) (om' (k.1, h) Φ'))) 1‖ ≤ g l := by
-  first | exact @GlobalTheory.ConeMaj.cone_integrand_majorant | exact GlobalTheory.ConeMaj.cone_integrand_majorant | (intros; apply GlobalTheory.ConeMaj.cone_integrand_majorant <;> assumption)
+  exact @GlobalTheory.ConeMaj.cone_integrand_majorant

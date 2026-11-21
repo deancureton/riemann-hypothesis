@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.contour_shift_parametrised_integral : ∀ (ι : Ty
         ∫ t : ι → ℝ, ψ q.2 t * Complex.exp (2 * (Real.pi : ℂ) * ∑ i, q.1 i * t i)) ∧
     (∀ K : Set (ι → ℂ), IsCompact K → ∃ C : ℝ, ∀ z ∈ K, ∀ p,
         ‖∫ t : ι → ℝ, ψ p t * Complex.exp (2 * (Real.pi : ℂ) * ∑ i, z i * t i)‖ ≤ C * h p) := by
-  first | exact @GlobalTheory.CompanionTheory.EisTube.laplaceEntire_firstCountable | exact GlobalTheory.CompanionTheory.EisTube.laplaceEntire_firstCountable | (intros; apply GlobalTheory.CompanionTheory.EisTube.laplaceEntire_firstCountable <;> assumption)
+  exact @GlobalTheory.CompanionTheory.EisTube.laplaceEntire_firstCountable

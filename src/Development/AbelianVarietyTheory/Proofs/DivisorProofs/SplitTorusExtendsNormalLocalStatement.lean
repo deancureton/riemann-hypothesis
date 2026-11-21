@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitTorusExtendsNormalLocal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatMatTransposeMulGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthLetters
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.split_torus_extends_normal_local : ∀ (E : Type) 
     ∀ (N : ℕ) (χ : Fin N → (TorsK t ξ q →* Kˣ)) (ch : Fin N → TorsChar t z q) (ρ : 𝓞 E →+* Matrix (Fin N) (Fin N) ℤ),
     (∀ (α : 𝓞 E) (k k' : TorsK t ξ q), k'.1 = k.1 ≫ t.act.act α → ∀ m, χ m k' = ∏ m', χ m' k ^ ρ α m m') →
     (∀ m, InducedBy (χ m) x (algebraMap R K) ψ (ch m)) → GlobalTheory.EqHalf.Equivar t ch ρ := by
-  first | exact @GlobalTheory.EqHalf.InducedProof.equivar_induced | exact GlobalTheory.EqHalf.InducedProof.equivar_induced | (intros; apply GlobalTheory.EqHalf.InducedProof.equivar_induced <;> assumption)
+  exact @GlobalTheory.EqHalf.InducedProof.equivar_induced

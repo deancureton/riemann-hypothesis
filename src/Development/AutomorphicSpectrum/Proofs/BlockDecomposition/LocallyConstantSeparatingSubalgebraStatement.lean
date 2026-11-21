@@ -13,4 +13,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.locally_constant_separating_subalgebra : ∀ (B : Type) [TopologicalSpace B] [CompactSpace B] (V : Submodule ℂ (B → ℂ)), (1 : B → ℂ) ∈ V → (∀ f ∈ V, ∀ g ∈ V, f * g ∈ V) → (∀ f ∈ V, IsLocallyConstant f) → ∀ Φ : B → ℂ, IsLocallyConstant Φ → (∀ p q, Φ p ≠ Φ q → ∃ f ∈ V, f p ≠ f q) → Φ ∈ V := by
-  first | exact @GlobalTheory.CompanionTheory.LocConstSW.mem_of_separates | exact GlobalTheory.CompanionTheory.LocConstSW.mem_of_separates | (intros; apply GlobalTheory.CompanionTheory.LocConstSW.mem_of_separates <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocConstSW.mem_of_separates

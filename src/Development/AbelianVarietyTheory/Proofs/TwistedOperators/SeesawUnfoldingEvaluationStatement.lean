@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SeesawUnfoldingEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HoweDualityUnitary
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.seesaw_unfolding_evaluation : GlobalTheory.FunPr.H
     ∀ N' : Submodule ℂ ((Fin W₁.rank × Fin (W.rank + W₁.rank) → AF D.host.F) → ℂ), IsThetaSubG Γ.M' Bs.ψ Bs.emb om' N' →
     ∀ τ, ∀ Y ∈ lieAt X τ, ∀ ΦD ∈ N', ∀ Φ₀, IsDatum Γ.M' ψ cB ΦD Φ₀ →
     ∃ ΨD ∈ N', ∃ Φ₁ ∈ algF ψ θ false A₁ B, IsDatum Γ.M' ψ cB ΨD Φ₁ ∧ IsDer θ X (fun h => ωB (1, h)) τ Y Φ₀ Φ₁ := by
-  first | exact @GlobalTheory.SquareAgree.StabLieAdelic.stabLie_adelic | exact GlobalTheory.SquareAgree.StabLieAdelic.stabLie_adelic | (intros; apply GlobalTheory.SquareAgree.StabLieAdelic.stabLie_adelic <;> assumption)
+  exact @GlobalTheory.SquareAgree.StabLieAdelic.stabLie_adelic

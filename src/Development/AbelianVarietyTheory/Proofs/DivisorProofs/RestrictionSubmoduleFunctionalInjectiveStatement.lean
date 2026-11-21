@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictionSubmoduleFunctionalInjective
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlCastRfl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSubquotientJacUIntertwining
 open scoped TensorProduct
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.restriction_submodule_functional_injective : ∀ (
       (∀ φ ∈ M, ∀ h, Λ (π (leviEmb k e (midIncl k m h)) φ) = rightReg ℂ G₁ ℂ (ι h) (Λ φ)) →
       ∃ Λ' : X →ₗ[ℂ] (G₁ → ℂ), (∀ φ ∈ M, Λ' φ = Λ φ) ∧ (∀ φ ∈ U, ∀ u ∈ unipRad k e, Λ' (π u φ) = Λ' φ) ∧
         ∀ φ ∈ U, ∀ h, Λ' (π (leviEmb k e (midIncl k m h)) φ) = rightReg ℂ G₁ ℂ (ι h) (Λ' φ) := by
-  first | exact @GlobalTheory.ext_sub_smooth | exact GlobalTheory.ext_sub_smooth | (intros; apply GlobalTheory.ext_sub_smooth <;> assumption)
+  exact @GlobalTheory.ext_sub_smooth

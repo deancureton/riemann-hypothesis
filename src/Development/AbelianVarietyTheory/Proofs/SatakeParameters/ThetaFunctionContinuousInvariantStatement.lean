@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ThetaFunctionContinuousInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CharacteristicFunctionIntegralApply
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.theta_function_continuous_invariant : ∀ (hL : Gl
     (hμ : Formalism.IndefR.RecTie.Used0 D (D.nd.mu i)) (F : ↥(NG.AFall D.host.E D.R.nV (P.M.loc i).wt.ρ)),
     Continuous (GlobalTheory.ThetaTri.fV A i j hj hμ F) ∧
       ∀ γ ∈ GQ (Vc D j), ∀ h, GlobalTheory.ThetaTri.fV A i j hj hμ F (γ * h) = GlobalTheory.ThetaTri.fV A i j hj hμ F h := by
-  first | exact @GlobalTheory.ThetaFormV.fV_continuous_invariant | exact GlobalTheory.ThetaFormV.fV_continuous_invariant | (intros; apply GlobalTheory.ThetaFormV.fV_continuous_invariant <;> assumption)
+  exact @GlobalTheory.ThetaFormV.fV_continuous_invariant

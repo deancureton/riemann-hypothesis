@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.graded_mix_curvature_limit : ∀ {n m : ℕ} (H₀
         (𝓝 (curv H u ξ η)) ∧
       Tendsto (fun c : ℝ => curv (fun v => GlobalTheory.HermFrame.dualGram (GlobalTheory.GradedNorm.mix (1 / (1 + c * ρ v))
         (GlobalTheory.HermFrame.dualGram (H₀ v)) (GlobalTheory.HermFrame.dualGram (H v)))) u ξ η) (𝓝 0) (𝓝 (curv H u ξ η)) := by
-  first | exact @GlobalTheory.CurvJet.tendsto_curv_mix | exact GlobalTheory.CurvJet.tendsto_curv_mix | (intros; apply GlobalTheory.CurvJet.tendsto_curv_mix <;> assumption)
+  exact @GlobalTheory.CurvJet.tendsto_curv_mix

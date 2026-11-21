@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentBasisFrameMap
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.tangent_basis_frame_map : ∀ (E : Type) [Field E]
         (β b).snd = Ideal.Quotient.mk (Ideal.span {(p : 𝓞_ℂ_[p]) ^ n}) (hvec k)) →
     ∀ (k : Fin g) (x : LieG P.Gt), ITie P π x (spMap (dualMap x0) ≫ e k) →
       hvec k + (P.al₀ tt).1 x ∈ Ideal.span {(p : 𝓞_ℂ_[p]) ^ n} := by
-  first | exact @GlobalTheory.FinPartAt.levelHT_at_point | exact GlobalTheory.FinPartAt.levelHT_at_point | (intros; apply GlobalTheory.FinPartAt.levelHT_at_point <;> assumption)
+  exact @GlobalTheory.FinPartAt.levelHT_at_point

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUnipotentFundamentalDomain
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.exists_unipotent_fundamental_domain : ∀ (F E : T
     ∀ X om om', IsTriple B G X om om' →
       ∃ (μ : Measure (unip σ G.W H')) (𝓕 : Set (unip σ G.W H')), μ.IsHaarMeasure ∧
         IsFundamentalDomain ((ratU σ G.W.J).subgroupOf (unip σ G.W H')) 𝓕 μ ∧ μ 𝓕 = 1 := by
-  first | exact @GlobalTheory.UnipMass.exists_haar_unip_mass_one | exact GlobalTheory.UnipMass.exists_haar_unip_mass_one | (intros; apply GlobalTheory.UnipMass.exists_haar_unip_mass_one <;> assumption)
+  exact @GlobalTheory.UnipMass.exists_haar_unip_mass_one

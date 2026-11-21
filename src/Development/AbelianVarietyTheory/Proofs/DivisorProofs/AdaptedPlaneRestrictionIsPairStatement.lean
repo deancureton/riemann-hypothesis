@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneRestrictionIsPair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_restriction_is_pair : ∀ (F E : Typ
           ∃ z : Matrix (Fin n₁) (Fin d) (AE F E), (M₁.co.e z).1 = 0 ∧ ∀ φ : Fn F n d,
             schr B.ψ (t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i)))) φ =
               M.co.rho B.ψ u (M.co.rho B.ψ (incM F H.ι * z * (incM F (1 : Matrix (Fin d) (Fin d) E))ᵀ) φ) := by
-  first | exact @GlobalTheory.MixedLagrX.mixed_lagrangian_plane_X | exact GlobalTheory.MixedLagrX.mixed_lagrangian_plane_X | (intros; apply GlobalTheory.MixedLagrX.mixed_lagrangian_plane_X <;> assumption)
+  exact @GlobalTheory.MixedLagrX.mixed_lagrangian_plane_X

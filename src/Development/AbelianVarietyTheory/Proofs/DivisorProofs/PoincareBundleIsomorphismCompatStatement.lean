@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PoincareBundleIsomorphismCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.poincare_bundle_isomorphism_compat : ∀ (F : Type
     ∀ (c d : 𝔠.elt) (a b : 𝓞 F), a • d = b • c → ∀ (T : Over S) (y : T ⟶ A),
       HasGen ((P c).pull (lift (fst A T) (snd A T ≫ y)).left) →
       HasGen ((P d).pull (lift (fst A T) (snd A T ≫ (y ≫ rm.act a))).left) := by
-  first | exact @GlobalTheory.KerShift.ker_shift | exact GlobalTheory.KerShift.ker_shift | (intros; apply GlobalTheory.KerShift.ker_shift <;> assumption)
+  exact @GlobalTheory.KerShift.ker_shift

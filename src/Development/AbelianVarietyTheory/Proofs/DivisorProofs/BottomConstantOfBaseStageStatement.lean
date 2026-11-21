@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomConstantOfBaseStage
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RatInOfUnit
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.bottom_constant_of_base_stage : GlobalTheory.FunPr
       IsBottomTri W i j X → GlobalTheory.SqTower.IsStageC W i j 0 0 Y → Y.IsConst W.ψ W.θ c → ∃ v : T → ℂ,
         X.IsConst W.ψ W.θ (fun t => v t * c t) ∧
         ∀ t, v t ≠ 0 ∧ ∃ ζ : D.what₂.LL, GlobalTheory.Square.IsAwayUnit (Qn G t) ζ ∧ v t = D.what₂.embLL ζ * v μ₀ := by
-  first | exact @GlobalTheory.SqTower.bottom_const_ratio | exact GlobalTheory.SqTower.bottom_const_ratio | (intros; apply GlobalTheory.SqTower.bottom_const_ratio <;> assumption)
+  exact @GlobalTheory.SqTower.bottom_const_ratio

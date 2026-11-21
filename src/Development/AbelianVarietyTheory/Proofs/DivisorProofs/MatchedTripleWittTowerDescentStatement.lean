@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedTripleWittTowerDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_triple_witt_tower_descent : GlobalTheory.T
       ∀ c₀ : E, c₀ ≠ 0 → IsHermND σ (c₀ • (sp i).J.map σ) → ∀ φ' : GAd σ (c₀ • (sp i).J.map σ) → ℂ,
         (∀ (g : UA σ (sp i).J) (g' : GAd σ (c₀ • (sp i).J.map σ)), g.1 = g'.1 → φ' g' = f g) →
         ∃ K : Subgroup (GAd σ (c₀ • (sp i).J.map σ)), GlobalTheory.UAut.IsMaxCpt σ (c₀ • (sp i).J.map σ) K ∧ GlobalTheory.UAut.IsAut σ (c₀ • (sp i).J.map σ) K φ' := by
-  first | exact @GlobalTheory.ThK.DescB.CuspAut.isAut_lev | exact GlobalTheory.ThK.DescB.CuspAut.isAut_lev | (intros; apply GlobalTheory.ThK.DescB.CuspAut.isAut_lev <;> assumption)
+  exact @GlobalTheory.ThK.DescB.CuspAut.isAut_lev

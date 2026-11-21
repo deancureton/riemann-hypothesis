@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelHaarIntegrableBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.siegel_haar_integrable_basis : ∀ (F E : Type) [F
     (∀ ν : @Measure (Fin n × Fin (Module.finrank F E) → AF F) (borel _), GlobalTheory.SiegelAvg.IsHaarB ν →
       (letI : MeasurableSpace (Fin n × Fin (Module.finrank F E) → AF F) := borel _; Integrable (fun t => f (GlobalTheory.SiegelConv.basisMap F E n t)) ν)) →
     (letI : MeasurableSpace (Fin n → AE F E) := borel _; Integrable f μ) := by
-  first | exact @GlobalTheory.SiegelConv.integrable_basisMap_main | exact GlobalTheory.SiegelConv.integrable_basisMap_main | (intros; apply GlobalTheory.SiegelConv.integrable_basisMap_main <;> assumption)
+  exact @GlobalTheory.SiegelConv.integrable_basisMap_main

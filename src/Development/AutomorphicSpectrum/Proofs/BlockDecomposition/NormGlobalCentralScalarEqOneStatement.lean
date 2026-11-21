@@ -18,4 +18,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.norm_global_central_scalar_eq_one : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (n : ℤ) (t : ℝ) (M : ∀ v : Pl, LM c v), AdmM M → ∀ (z : Jd), ‖uW n t M z‖ = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.CenTheta.norm_uW_eq_one | exact GlobalTheory.CompanionTheory.CenTheta.norm_uW_eq_one | (intros; apply GlobalTheory.CompanionTheory.CenTheta.norm_uW_eq_one <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CenTheta.norm_uW_eq_one

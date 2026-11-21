@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigALocalUnitLevi
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.MemConfTOfDetNeZero
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_local_unit_levi : ∀ {F E : Type} [Field
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), IsTriple B G X om om' → CfgA B G G₁ H H' →
     ∀ (v : Pl F) (l : (AE F E)ˣ), l ∈ idelesAt E (evFin F v) → (unitFin F E v l : Fv F v ⊗[F] E) ∈ GlobalTheory.SnMass.locId v (idA σ H.𝔟 H'.𝔟) →
       schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M.co v (shiftA H H' l)) (G.M.vac v) = G.M.vac v := by
-  first | exact @GlobalTheory.VacShift.vac_fixed | exact GlobalTheory.VacShift.vac_fixed | (intros; apply GlobalTheory.VacShift.vac_fixed <;> assumption)
+  exact @GlobalTheory.VacShift.vac_fixed

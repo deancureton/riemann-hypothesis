@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_hodge_height : ∀ {E : Type} [Fiel
     ∀ (ch : VB.Chart (omega Z.t.G) g) (V : X.Opens), V ≤ ρ ⁻¹ᵁ ch.U → IsAffineOpen V →
     ∀ (f : Fin r → Γ(M, V)) (hf : VB.IsFrame f) (A : Matrix (Fin g) (Fin r) Γ(W, jB ⁻¹ᵁ V)), GenCoord Z jB πB t ch hf A →
     ∃ A₀ : Matrix (Fin g) (Fin r) Γ(X, V), A₀.map (jB.app V) = A := by
-  first | exact @GlobalTheory.LieFilt.Reg.exists_regular | exact GlobalTheory.LieFilt.Reg.exists_regular | (intros; apply GlobalTheory.LieFilt.Reg.exists_regular <;> assumption)
+  exact @GlobalTheory.LieFilt.Reg.exists_regular

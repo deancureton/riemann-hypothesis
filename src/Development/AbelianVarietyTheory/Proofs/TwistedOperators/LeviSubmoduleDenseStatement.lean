@@ -15,4 +15,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.levi_submodule_dense : GlobalTheory.Published.IrreducibleUnitaryAdmissible → GlobalTheory.Published.KFiniteCoefficientsAnalytic → GlobalTheory.Published.LeviSubmoduleDense := by
-  first | exact @GlobalTheory.LeviDense.leviSubmoduleDense | exact GlobalTheory.LeviDense.leviSubmoduleDense | (intros; apply GlobalTheory.LeviDense.leviSubmoduleDense <;> assumption)
+  exact @GlobalTheory.LeviDense.leviSubmoduleDense

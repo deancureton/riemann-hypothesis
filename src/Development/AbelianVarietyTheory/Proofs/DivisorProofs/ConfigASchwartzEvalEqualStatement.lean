@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigASchwartzEvalEqual
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.config_A_schwartz_eval_equal : ∀ (F E : Type) [F
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ y : Fin b × Fin (b + a') → AF F,
       Measurable fun l : (AE F E)ˣ => e (G.M.co.rho B.ψ (shiftA H H' l) Φ) y := by
-  first | exact @GlobalTheory.ConeIdeleMeas.measurable_shift | exact GlobalTheory.ConeIdeleMeas.measurable_shift | (intros; apply GlobalTheory.ConeIdeleMeas.measurable_shift <;> assumption)
+  exact @GlobalTheory.ConeIdeleMeas.measurable_shift

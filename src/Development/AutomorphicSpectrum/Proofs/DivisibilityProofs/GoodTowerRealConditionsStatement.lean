@@ -14,4 +14,4 @@ open AlgebraicGeometry CategoryTheory NumberField ReciprocityTheory.ChartRestric
 open GroundTheory.Heights₂.Heights.LowerBoundFree (ComponentData ComponentSetting degMu ArLimExists slX)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.good_tower_real_conditions : Given → ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] [IsAbelianGalois ℚ E] (H : Host E) (D : Datum H) (Xo : ∀ l : Level H, Moduli D l) (l : Level H) (c : Coeff l) (Y : Model (Xo l) c (algebraMap (𝓞 c.F) c.F)) [DecidableEq (CMType H)] (T : RootTower (CMType H) (D.p + D.q)) (o : GoodOrigin Y T) (II : IntersectionSystem), IsGlobal Xo l c Y → o.Extra → IsFullIntersectionSystem II → 1 ≤ D.p → 1 ≤ D.q → ∀ B a, (T.M B a).EffDiff T.nu := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.Top.effDiff_of_goodOrigin | exact GlobalTheory.CompanionTheory.Ar.Top.effDiff_of_goodOrigin | (intros; apply GlobalTheory.CompanionTheory.Ar.Top.effDiff_of_goodOrigin <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.Top.effDiff_of_goodOrigin

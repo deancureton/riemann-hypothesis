@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairAdaptedPlaneRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.pair_adapted_plane_restriction : ∀ (F E : Type) 
           ∀ φ ∈ schA F (Fin n × Fin d), S (schr B.ψ (0, t • fun i => algebraMap F (AF F) (y i)) φ) = M.co.rho B.ψ u (S φ)) ∧
         (∀ φ ∈ schA F (Fin n × Fin d), e₀ (S φ) = 0 →
           ∀ x : Fin n × Fin d → AF F, (∀ y ∈ Y₀, x ⬝ᵥ (fun i => algebraMap F (AF F) (y i)) = 0) → φ x = 0) := by
-  first | exact @GlobalTheory.StraightEv0.main | exact GlobalTheory.StraightEv0.main | (intros; apply GlobalTheory.StraightEv0.main <;> assumption)
+  exact @GlobalTheory.StraightEv0.main

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAMatchedDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.config_a_matched_descent : GlobalTheory.ThK.KP →
     (H' : Plane E (b + 2 + a') (b + a')), CfgA B G G₁ H H' →
     ∀ (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W) (R : RealMaps F (b + 2) a') (Rf : FinMaps F (b + 2) a'),
       IsMatched B G X om om' R Rf → paraSpan B G.M om G₁.W H' R.p = ⊤ := by
-  first | exact @GlobalTheory.IndLine.LowGen.paraSpan_eq_top | exact GlobalTheory.IndLine.LowGen.paraSpan_eq_top | (intros; apply GlobalTheory.IndLine.LowGen.paraSpan_eq_top <;> assumption)
+  exact @GlobalTheory.IndLine.LowGen.paraSpan_eq_top

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalUnipotentCosetParametrization
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.rational_unipotent_coset_parametrization : ∀ (F 
     (x₀ : Fin n → E), form σ J x₀ x₀ = 0 → x₀ ≠ 0 →
     ∀ γ : {x : Fin n → E // x ≠ 0 ∧ form σ J x x = 0} → UA σ J, (∀ x, γ x ∈ ratU σ J ∧ mat (γ x) *ᵥ incV F x.1 = incV F x₀) →
     ∀ δ ∈ ratU σ J, ∃! x, δ * (γ x)⁻¹ ∈ ratU σ J ⊓ Subgroup.closure {g : UA σ J | mat g *ᵥ incV F x₀ = incV F x₀} := by
-  first | exact @GlobalTheory.ThK.IsoCoset.coset | exact GlobalTheory.ThK.IsoCoset.coset | (intros; apply GlobalTheory.ThK.IsoCoset.coset <;> assumption)
+  exact @GlobalTheory.ThK.IsoCoset.coset

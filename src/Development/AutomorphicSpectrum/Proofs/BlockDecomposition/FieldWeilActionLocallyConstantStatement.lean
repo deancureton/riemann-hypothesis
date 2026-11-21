@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.field_weil_action_locally_constant : GL2LocalData.
   ∀ c : Eˣ →* ℂˣ, IsUnit1 c → ∀ Φ ∈ GL2LocalData.SBc F E c, ∀ g₀ : GL (Fin 2) F,
     (∃ t : Eˣ, Algebra.norm F (t : E) = (g₀.val).det) →
     ∃ U ∈ nhds g₀, ∀ g ∈ U, GL2LocalData.piE E χ σ η c g Φ = GL2LocalData.piE E χ σ η c g₀ Φ := by
-  first | exact @GlobalTheory.CompanionTheory.WeilLocConst.piE_locConst | exact GlobalTheory.CompanionTheory.WeilLocConst.piE_locConst | (intros; apply GlobalTheory.CompanionTheory.WeilLocConst.piE_locConst <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WeilLocConst.piE_locConst

@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.bottom_triangle_dual_algebraicity_finite_data : �
       (∀ h ∈ H, h ∈ GfC WW) ∧ ∀ t, ∀ h ∈ GfC WW, ∀ k, ∃ c : GA D WW → (FVar D WW.rank A'.rank →₀ ℕ) → ℂ, (∀ a b, c a b ∈ M₀) ∧
         X.I' W.ψ W.θ t (MvPolynomial.monomial k 1) h =
           ∑ h' ∈ H, ∑ k' ∈ K, c h' k' * X.I' W.ψ W.θ t (MvPolynomial.monomial k' 1) h' := by
-  first | exact @GlobalTheory.BotSpanSnd.span_classSums' | exact GlobalTheory.BotSpanSnd.span_classSums' | (intros; apply GlobalTheory.BotSpanSnd.span_classSums' <;> assumption)
+  exact @GlobalTheory.BotSpanSnd.span_classSums'

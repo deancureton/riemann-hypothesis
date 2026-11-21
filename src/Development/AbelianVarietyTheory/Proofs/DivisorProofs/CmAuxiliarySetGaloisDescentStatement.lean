@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmAuxiliarySetGaloisDescent
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.cm_auxiliary_set_galois_descent : GlobalTheory.Pub
     ∀ (φK : I → E →+* FractionRing R), (∀ i, j.comp (φK i) = φ i) →
     ∀ (n : ℕ) (eH : HdR X₀.A ≃ₗ[R] (Fin n → R)) (σ : E →+* FractionRing R),
       Module.finrank (FractionRing R) (GlobalTheory.IndefiniteRowSideFullHecke.DifferentConductorValuations.eigK (eH.conjRingEquiv.toRingHom.comp (act (dp0 R) (𝟙 _) cm)) σ) = 1 := by
-  first | exact @GlobalTheory.DRLine.eigK_finrank_eq_one | exact GlobalTheory.DRLine.eigK_finrank_eq_one | (intros; apply GlobalTheory.DRLine.eigK_finrank_eq_one <;> assumption)
+  exact @GlobalTheory.DRLine.eigK_finrank_eq_one

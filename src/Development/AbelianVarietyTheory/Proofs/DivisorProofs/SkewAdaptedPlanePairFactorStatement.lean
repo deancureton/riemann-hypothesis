@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_factor : GlobalTheory.FunP
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       (∀ g : UA σ X.J, ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) Φ) = c • om₁ (g, 1) (e Φ)) →
       ∀ g : UA σ X.J, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) Φ) = om₁ (g, 1) (e Φ) := by
-  first | exact @GlobalTheory.MixUXScalar.evalZero_scalar_one | exact GlobalTheory.MixUXScalar.evalZero_scalar_one | (intros; apply GlobalTheory.MixUXScalar.evalZero_scalar_one <;> assumption)
+  exact @GlobalTheory.MixUXScalar.evalZero_scalar_one

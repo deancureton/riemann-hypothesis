@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewSpaceRealEmbedding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_space_real_embedding : ∀ (F E : Type) [Fiel
         B.ψ (symp (R := AF F) (cA σ) (-1) (incM F X.J) (incM F W.J) (Matrix.vecMulVec (incV F y) (incV F w))
             (Matrix.vecMulVec (incV F x) (emb t))) =
           Complex.exp (2 * Real.pi * Complex.I * ∑ j, (lam w j : ℂ) * (t j : ℂ)) := by
-  first | exact @GlobalTheory.RealFreqSnd.injective_real_frequencies_snd | exact GlobalTheory.RealFreqSnd.injective_real_frequencies_snd | (intros; apply GlobalTheory.RealFreqSnd.injective_real_frequencies_snd <;> assumption)
+  exact @GlobalTheory.RealFreqSnd.injective_real_frequencies_snd

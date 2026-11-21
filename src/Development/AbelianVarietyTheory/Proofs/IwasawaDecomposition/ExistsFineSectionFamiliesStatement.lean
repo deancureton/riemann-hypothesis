@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.exists_fine_section_families : ∀ (R : Type) [Com
         ∃ (α : D.toPre.X) (j : Fin 4 → D.toPre.P.L.ι) (b : D.toPre.P.A.left),
           D.toPre.P.A.hom b = closedPoint R ∧
           b ∈ D.toPre.P.A.left.basicOpen ((∑ i, c i • f i α).f j) := by
-  first | exact @GlobalTheory.IntFam.intFam | exact GlobalTheory.IntFam.intFam | (intros; apply GlobalTheory.IntFam.intFam <;> assumption)
+  exact @GlobalTheory.IntFam.intFam

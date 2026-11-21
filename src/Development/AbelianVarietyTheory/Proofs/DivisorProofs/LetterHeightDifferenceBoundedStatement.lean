@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LetterHeightDifferenceBounded
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.letter_height_difference_bounded : ∀ (D : D7) (O
     |(adlOf (O.Φ.C c) (O.met.hm c) (Finsupp.single (((fun _ => false), none, .inr (j : ℕ)) : Sym D.host.E) 1)).ht x -
       (adlOf (O.Φ.C c) (O.met.hm c) (Finsupp.single (((fun _ => false), none,
         .inl (((letters O.S.Dw).get j).1, (((letters O.S.Dw).get j).2 : ℕ))) : Sym D.host.E) 1)).ht x| ≤ C := by
-  first | exact @GlobalTheory.ConcatStep.step | exact GlobalTheory.ConcatStep.step | (intros; apply GlobalTheory.ConcatStep.step <;> assumption)
+  exact @GlobalTheory.ConcatStep.step

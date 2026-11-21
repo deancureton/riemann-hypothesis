@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergCoordsFormula
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisZero
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.heisenberg_coords_formula : ∀ (F E : Type) [Fiel
       (∀ k, a k = -∑ j, inclR (F := F) (AF F) (W₁.J k j) * cA σ (w j)) ∧
       cA σ (2 * α + ∑ j, ∑ k, w j * inclR (F := F) (AF F) (W₁.J j k) * cA σ (w k)) =
         2 * α + ∑ j, ∑ k, w j * inclR (F := F) (AF F) (W₁.J j k) * cA σ (w k) := by
-  first | exact @GlobalTheory.QhtUnip.heis_rel | exact GlobalTheory.QhtUnip.heis_rel | (intros; apply GlobalTheory.QhtUnip.heis_rel <;> assumption)
+  exact @GlobalTheory.QhtUnip.heis_rel

@@ -11,4 +11,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.UT ReciprocityTheory.ChartRestriction.G.DVR
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_eighthPowerMatrixAction_thetaCompactification : ∀ (g n : ℕ) (F : SFam g n (zetaAway n)) (W : Matrix (Fin 8) (Fin 8) ℤ) (Z : Scheme.{0}) (i : F.X ⟶ Z) (X₁ : Setup F W i), ∃ act, IsAct X₁ act := by
-  first | exact @GlobalTheory.Poinc.Sep.exists_isAct | exact GlobalTheory.Poinc.Sep.exists_isAct | (intros; apply GlobalTheory.Poinc.Sep.exists_isAct <;> assumption)
+  exact @GlobalTheory.Poinc.Sep.exists_isAct

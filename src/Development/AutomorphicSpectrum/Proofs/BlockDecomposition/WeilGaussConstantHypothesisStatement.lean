@@ -5,4 +5,4 @@ open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 A
 open scoped ValuativeRel
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weil_gauss_constant_hypothesis : Ad3.K.GL2LocalData.WGaussLam := by
-  first | exact @GlobalTheory.CompanionTheory.GaussLam.wGaussLam | exact GlobalTheory.CompanionTheory.GaussLam.wGaussLam | (intros; apply GlobalTheory.CompanionTheory.GaussLam.wGaussLam <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GaussLam.wGaussLam

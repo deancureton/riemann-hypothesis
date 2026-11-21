@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedTensorSchwartzFunction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.restricted_tensor_schwartz_function : GlobalTheory
       ∀ g ∈ UAt σ G.V (evFin F v), ∀ p ∈ SB (Fin a × Fin (a + a') → Fv F v), ∀ p₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
         Acts (evFin F v) (om (g, 1)) p p₁ →
         G.M.I om (pure f (Function.update φ v p₁)) h = G.M.I om (pure f (Function.update φ v p)) h := by
-  first | exact @GlobalTheory.ThK.FunFin.thetaIntegral_fin | exact GlobalTheory.ThK.FunFin.thetaIntegral_fin | (intros; apply GlobalTheory.ThK.FunFin.thetaIntegral_fin <;> assumption)
+  exact @GlobalTheory.ThK.FunFin.thetaIntegral_fin

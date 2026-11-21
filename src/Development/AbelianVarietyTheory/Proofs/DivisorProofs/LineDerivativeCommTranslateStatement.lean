@@ -7,4 +7,4 @@ theorem _root_.GlobalTheory.T.line_derivative_comm_translate : ∀ (F E : Type) 
     (J : Matrix (Fin n) (Fin n) E) (f : GAd σ J → ℂ), IsSm σ J f →
     ∀ l : List (ℝ → GAd σ J), (∀ β ∈ l, IsRealLine σ J β) → ∀ γ : ℝ → GAd σ J, IsRealLine σ J γ → ∀ g,
       HasDerivAt (fun t : ℝ => l.foldr lineDer (fun x => f (x * γ t)) g) (l.foldr lineDer (lineDer γ f) g) 0 := by
-  first | exact @GlobalTheory.LineDerWord.hasDerivAt_foldr_lineDer_translate | exact GlobalTheory.LineDerWord.hasDerivAt_foldr_lineDer_translate | (intros; apply GlobalTheory.LineDerWord.hasDerivAt_foldr_lineDer_translate <;> assumption)
+  exact @GlobalTheory.LineDerWord.hasDerivAt_foldr_lineDer_translate

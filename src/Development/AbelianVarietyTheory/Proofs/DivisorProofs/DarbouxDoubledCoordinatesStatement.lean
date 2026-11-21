@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DarbouxDoubledCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.darboux_doubled_coordinates : ∀ (F E : Type) [Fi
       (dd.e (incM F (Matrix.vecMulVec H.y ((diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) E) *ᵥ u)))).1 ⬝ᵥ (dd.e (incM F (Matrix.vecMulVec H.x (Sum.elim z 0)))).2 =
         (dd.e (incM F (Matrix.vecMulVec H.x (Sum.elim z 0)))).1 ⬝ᵥ (dd.e (incM F (Matrix.vecMulVec H.y ((diagCols (Fin d) : Matrix (Fin d ⊕ Fin d) (Fin d) E) *ᵥ u)))).2) →
     u = 0 := by
-  first | exact @GlobalTheory.DblLagrNondeg.nondeg | exact GlobalTheory.DblLagrNondeg.nondeg | (intros; apply GlobalTheory.DblLagrNondeg.nondeg <;> assumption)
+  exact @GlobalTheory.DblLagrNondeg.nondeg

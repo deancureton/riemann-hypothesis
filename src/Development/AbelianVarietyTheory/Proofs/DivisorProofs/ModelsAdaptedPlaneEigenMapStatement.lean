@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelsAdaptedPlaneEigenMap
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.models_adapted_plane_eigen_map : GlobalTheory.ThK.
     ∀ Φ ∈ schA F (Fin n × Fin d), ∀ K : ℕ, ∃ C : ℝ, ∀ ξ : Fin n → E,
       ‖thetaSum F (e₀ (M.co.rho B.ψ (realAd F 1 • Matrix.vecMulVec (incV F ξ) (incV F H'.y)) Φ))‖ *
         (1 + ∑ i, ∑ w : InfinitePlace E, w (ξ i)) ^ K ≤ C := by
-  first | exact @GlobalTheory.XiArchDecay.decay | exact GlobalTheory.XiArchDecay.decay | (intros; apply GlobalTheory.XiArchDecay.decay <;> assumption)
+  exact @GlobalTheory.XiArchDecay.decay

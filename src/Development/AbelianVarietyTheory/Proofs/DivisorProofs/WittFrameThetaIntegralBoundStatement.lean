@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.witt_frame_theta_integral_bound : ∀ (F E : Type)
           IsAut σ (c • G.W.J.map σ) K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) →
           ∀ S s, GlobalTheory.StdPar.IsCuspExp σ (c • G.W.J.map σ) Xf Yf S K (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) s →
             ∀ k ∈ S, ∀ i, i ≤ k → i ∈ S := by
-  first | exact @GlobalTheory.ThK.ExpVBlocks.downClosed | exact GlobalTheory.ThK.ExpVBlocks.downClosed | (intros; apply GlobalTheory.ThK.ExpVBlocks.downClosed <;> assumption)
+  exact @GlobalTheory.ThK.ExpVBlocks.downClosed

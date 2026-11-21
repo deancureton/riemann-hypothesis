@@ -10,4 +10,4 @@ open Formalism.MainNotions.DIV.Cons (intO SCF)
 open GlobalTheory.OmegaHT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.OmegaRingStatement : GlobalTheory.OmegaHT.RingSt := by
-  first | exact @GlobalTheory.OmegaHT.ringSt | exact GlobalTheory.OmegaHT.ringSt | (intros; apply GlobalTheory.OmegaHT.ringSt <;> assumption)
+  exact @GlobalTheory.OmegaHT.ringSt

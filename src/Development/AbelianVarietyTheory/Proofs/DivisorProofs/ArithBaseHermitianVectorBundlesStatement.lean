@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithBaseHermitianVectorBundles
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.arith_base_hermitian_vector_bundles : Hypotheses2 
     (_ : G.fromSpecStalk (genericPoint G) ≫ πG = spMap φ ≫ (O.var c).X.fromSpecStalk (genericPoint (O.var c).X))
     (jG : G ⟶ Bg) (r : ∀ a i, (((fl₀ a).root i).pull j).ι → G.functionFieldˣ),
     GlobalTheory.FlagCov.FlagCover (fun a => (h a).isVB) jB πB u π₀ fl₀ j πG φ jG r := by
-  first | exact @GlobalTheory.FlagGenFib.flagCover_exists | exact GlobalTheory.FlagGenFib.flagCover_exists | (intros; apply GlobalTheory.FlagGenFib.flagCover_exists <;> assumption)
+  exact @GlobalTheory.FlagGenFib.flagCover_exists

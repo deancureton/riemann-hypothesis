@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlanesDoubleRestrictionModel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatrixExtendByZeroAdd
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.adapted_planes_double_restriction_model : ∀ (F E
       (∀ z, co.e (incM F H.ι * z * (incM F H'.ι)ᵀ) = (ext0 eq (M₁.co.e z).1, ext0 eq (M₁.co.e z).2)) ∧
       (∀ u ∈ isoA H H', (co.e u).1 = 0 ∧ ∀ j, (co.e u).2 (eq.symm (Sum.inr j)) = 0) ∧
       ∀ u ∈ isoAd H H', (co.e u).2 = 0 ∧ ∀ j, (co.e u).1 (eq.symm (Sum.inr j)) = 0 := by
-  first | exact @GlobalTheory.TwoPlanes.exists_adapted_coords | exact GlobalTheory.TwoPlanes.exists_adapted_coords | (intros; apply GlobalTheory.TwoPlanes.exists_adapted_coords <;> assumption)
+  exact @GlobalTheory.TwoPlanes.exists_adapted_coords

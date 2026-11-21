@@ -20,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_projective_cover_good_reduction : GlobalThe
           ∑ m ∈ Finset.range n, degLB k ((M.line P (.inl (τ, m))).B.pull (g ≫ a)) ∈ subDegs k (Lie G)) ∧
         deg k (lieSub i (scal C (β.comp (intEmb O.κ.c τ)))) =
           ∑ m ∈ Finset.range (O.S.Dw.mult τ), degLB k ((M.line P (.inl (τ, m))).B.pull (g ≫ a)) := by
-  first | exact @GlobalTheory.FlagLines.main | exact GlobalTheory.FlagLines.main | (intros; apply GlobalTheory.FlagLines.main <;> assumption)
+  exact @GlobalTheory.FlagLines.main

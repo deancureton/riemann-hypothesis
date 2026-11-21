@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SupportedMatrixIffFrameCoordinatesOfInert
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisGeometry₂.HoweUnram
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.supported_matrix_iff_frame_coordinates_of_inert : 
       Function.Injective ι → (∀ z : AE F E, At (evFin F v) z ↔ ∃ x, ι x = z) → (∀ x y, ι (x * y) = ι x * ι y) →
       ∀ (PV : GL (Fin n) L) (PW : GL (Fin d) L) (z : Matrix (Fin n) (Fin d) (AE F E)),
         At (evFin F v) z ↔ ∃ x, GlobalTheory.InertLocFrame.xm ι PV PW x = z := by
-  first | exact @GlobalTheory.InertLocFrame.xm_bij_at | exact GlobalTheory.InertLocFrame.xm_bij_at | (intros; apply GlobalTheory.InertLocFrame.xm_bij_at <;> assumption)
+  exact @GlobalTheory.InertLocFrame.xm_bij_at

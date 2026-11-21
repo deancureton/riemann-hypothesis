@@ -12,7 +12,6 @@ import GroundTheory.HeightsAndTheta.Heights.AnalyticLimit.UniformIntegrability
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PCentredRingNormal
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalNormalIndex
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PLocalQuotCentred
-import Mathlib
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.PPtsIntegralPoints
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitArchSum
 import GroundTheory.HeightsAndTheta.Heights.HeightComparison.POrbitCenterMemIff

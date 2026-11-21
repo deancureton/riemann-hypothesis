@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvariantSesquilinearNontrivialChar
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.invariant_sesquilinear_nontrivial_char : GlobalThe
       (∀ Ψ₁ Ψ₂ : GlobalTheory.FullRankCoinv.fullRk k n d,
         (∀ (Y₁ Y₂ : Matrix (Fin n) (Fin d) k), Ψ₁.1 Y₁ ≠ 0 → Ψ₂.1 Y₂ ≠ 0 → ∀ a : GL (Fin n) k, Y₁ ≠ a.1 * Y₂) →
         Bf Ψ₁ Ψ₂ = 0) := by
-  first | exact @GlobalTheory.OffDiagVanish.offDiag_vanish | exact GlobalTheory.OffDiagVanish.offDiag_vanish | (intros; apply GlobalTheory.OffDiagVanish.offDiag_vanish <;> assumption)
+  exact @GlobalTheory.OffDiagVanish.offDiag_vanish

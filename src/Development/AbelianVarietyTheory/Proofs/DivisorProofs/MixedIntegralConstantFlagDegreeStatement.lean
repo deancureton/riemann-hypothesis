@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.mixed_integral_constant_flag_degree : Hypotheses2 
     (T.M c).Smooth f → ∀ a : ℝ,
       (T.M c).int (fun _ => (T.K B c).c1 (T.L B c u + (T.K B c).ar f)) (fun _ _ => a) =
         a * (A.w c * Formalism.DegreeFormula.flagDeg D.what₂.Tau O.Y.N u) := by
-  first | exact @GlobalTheory.GenDeg.main | exact GlobalTheory.GenDeg.main | (intros; apply GlobalTheory.GenDeg.main <;> assumption)
+  exact @GlobalTheory.GenDeg.main

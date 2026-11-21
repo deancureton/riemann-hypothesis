@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.divisor_generator_dominant_root : Hypotheses2 → 
     ∀ w, ReciprocityTheory.AnForm.levi (fun v => ∑ x : DV.Rt D.what₂.Tau O.N, u x.1 x.2 *
         GlobalTheory.Mean4O.lnN (O.met.hm c none ((h.man c).ε a) (O.ex x)) (f x) ((h.man c).pt a ((((T.M c).A a).chart j).symm v))) y w =
       -ReciprocityTheory.AnForm.levi (fun v => Real.log (GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram.pairWeightNormSq (fun τ x => (a' τ : ℂ) • GlobalTheory.HermFrame.quotGram (ψ τ x)) (fun τ x => (b' τ : ℂ) • -GlobalTheory.HermFrame.subGram (ψ τ x)) π AW Aω lam v)) y w / 2 := by
-  first | exact @GlobalTheory.HodgeLocal.hodge_potential_local | exact GlobalTheory.HodgeLocal.hodge_potential_local | (intros; apply GlobalTheory.HodgeLocal.hodge_potential_local <;> assumption)
+  exact @GlobalTheory.HodgeLocal.hodge_potential_local

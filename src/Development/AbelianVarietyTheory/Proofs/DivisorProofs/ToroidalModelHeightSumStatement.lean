@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_height_sum : ∀ {E : Type} [Field 
       (T : ∀ τ, M τ ⟶ L), (∀ τ, IsLieFrames Z e jB πB (M τ) _ τ false (t τ)) →
       (∀ τ, IsLieMet Z e q jB πB (M τ) _ τ false rfl G (h τ) (t τ)) → (∀ τ, TanCoord Z jB πB (t τ) ρ hℓ (T τ)) →
     OrthEmb hL h T := by
-  first | exact @GlobalTheory.LieFilt.orthEmb_of_tanCoord | exact GlobalTheory.LieFilt.orthEmb_of_tanCoord | (intros; apply GlobalTheory.LieFilt.orthEmb_of_tanCoord <;> assumption)
+  exact @GlobalTheory.LieFilt.orthEmb_of_tanCoord

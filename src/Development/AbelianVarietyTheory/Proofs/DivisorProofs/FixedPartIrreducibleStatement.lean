@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixedPartIrreducible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.fixed_part_irreducible : GlobalTheory.ThK.KP → �
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W),
     IsTriple B G X om om' → ∀ m : ℕ, m ≤ fixDeg B G.M om → ∀ H : Submodule ℂ (SInf F (Fin a × Fin (a + a'))),
       H ≤ fixPart B G.M om m → KStabUp B om H → H = ⊥ ∨ H = fixPart B G.M om m := by
-  first | exact @GlobalTheory.KFixIrr.fixPart_irreducible | exact GlobalTheory.KFixIrr.fixPart_irreducible | (intros; apply GlobalTheory.KFixIrr.fixPart_irreducible <;> assumption)
+  exact @GlobalTheory.KFixIrr.fixPart_irreducible

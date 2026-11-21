@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviCharacterExponentArchimedean
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.levi_character_exponent_archimedean : ∀ (F E : T
     W.IsSkew σ B r s → H'.IsAdapted σ B W W₁ i₀ i₁ → ∀ (χ : Chr F E) (m : InfinitePlace F → ℤ), HasExp B.emb χ m →
     ∀ (z : ℝ) (t : (AE F E)ˣ) (h₁ : UA σ W₁.J) (k : UA σ W.J), k ∈ KInf σ W B.emb → IsLevi H' t h₁ k →
       (χ t : ℂ) * (((absE F E t : ℝ) ^ z : ℝ) : ℂ) = ∏ w, piInf (B.emb w) t.1 ^ m w := by
-  first | exact @GlobalTheory.ThK.LeviChar.char_levi_KInf | exact GlobalTheory.ThK.LeviChar.char_levi_KInf | (intros; apply GlobalTheory.ThK.LeviChar.char_levi_KInf <;> assumption)
+  exact @GlobalTheory.ThK.LeviChar.char_levi_KInf

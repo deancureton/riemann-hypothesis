@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.local_character_exponent_list : GlobalTheory.Publi
     (∀ j, IsSmoothChar (χ j)) → (∀ j y, ‖((χ j y : ℂˣ) : ℂ)‖ = 1) → ∀ ϖ : kˣ, ∃ L : List ℂ,
       (∀ c ∈ L, ∃ (j : Fin 2) (l : ℕ), l ≤ i ∧ ‖c‖ = nabs k ϖ ^ ((1 - (b j : ℝ)) / 2 + l)) ∧
       ∀ w, polyAt (jac (blockIndex hi) (pairInd k b hb χ) (blockScalar₂ k N i ϖ)) L w = 0 := by
-  first | exact @GlobalTheory.LeviBlockExponentLocal.position_exponents | exact GlobalTheory.LeviBlockExponentLocal.position_exponents | (intros; apply GlobalTheory.LeviBlockExponentLocal.position_exponents <;> assumption)
+  exact @GlobalTheory.LeviBlockExponentLocal.position_exponents

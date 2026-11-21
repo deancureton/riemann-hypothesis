@@ -9,4 +9,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory GlobalTheory.Ex
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.families_values_correspond : Laws → Laws2 → BrFamSt := by
-  first | exact @GlobalTheory.Ex.brFam | exact GlobalTheory.Ex.brFam | (intros; apply GlobalTheory.Ex.brFam <;> assumption)
+  exact @GlobalTheory.Ex.brFam

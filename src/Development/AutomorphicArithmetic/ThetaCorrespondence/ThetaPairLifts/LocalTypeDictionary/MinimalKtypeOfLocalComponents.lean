@@ -53,5 +53,5 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_minimal_ktype_of_cmDatum : _root_.GlobalTheory.HeightCounting.Up.PublishedInputsThirdLayer → GlobalTheory.Published.DiscreteSeriesExists → BareK := by
-  first | exact @_root_.GlobalTheory.HeightCounting.Up.minimal_ktype_of_local_components | exact _root_.GlobalTheory.HeightCounting.Up.minimal_ktype_of_local_components | (intros; apply _root_.GlobalTheory.HeightCounting.Up.minimal_ktype_of_local_components <;> assumption)
+  exact @_root_.GlobalTheory.HeightCounting.Up.minimal_ktype_of_local_components
 end

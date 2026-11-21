@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodicMetricSectionBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.FlatAcyc
 open scoped Real ContDiff
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.periodic_metric_section_bound : ∀ {g : ℕ} (T :
       (d10 (fun z' => d01 u z' (ev c)) z (ev a) +
         d10 (fun z' => (Real.log (H z') : ℂ)) z (ev a) * d01 u z (ev c)) = k * u z),
     ∀ z, u z = 0 := by
-  first | exact @GlobalTheory.ScalarAcyc.vanish | exact GlobalTheory.ScalarAcyc.vanish | (intros; apply GlobalTheory.ScalarAcyc.vanish <;> assumption)
+  exact @GlobalTheory.ScalarAcyc.vanish

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentInvariantFunctionalTwoDim
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogAbsEEqZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiagFirstApply
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.unipotent_invariant_functional_two_dim : (GlobalTh
         Ψ' ∈ SB (Matrix (Fin n) (Fin d) k) ∧ z = GlobalTheory.FullRankCoinv.lact ν g Ψ' - Ψ'}) →
     ∀ Ψ ∈ SB (Matrix (Fin n) (Fin d) k), ∃ p q : ℂ, ∀ x : kˣ,
       Λ₀ (fun Y => Ψ (Y * (GlobalTheory.JacBlock₂.diagFirst x).1)) = p + q * (((ν x)⁻¹ : ℂˣ) : ℂ) * GlobalTheory.SplitFlip.apow x (((d : ℂ) - 2 * (n : ℂ)) / 2)) := by
-  first | exact @GlobalTheory.FullRankCoinv.JacReduce.jac_reduce | exact GlobalTheory.FullRankCoinv.JacReduce.jac_reduce | (intros; apply GlobalTheory.FullRankCoinv.JacReduce.jac_reduce <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.JacReduce.jac_reduce

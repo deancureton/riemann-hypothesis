@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.LeviThetaValueLeDetMulRationalSum
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.leviThetaValue_le_det_mul_rational_sum : ∀ {D : 
         ‖om (d.levi α, 1) f 0‖ₑ ≤ ENNReal.ofReal (GlobalTheory.IndefiniteRowSideFullHecke.SkewGramHalfModule.halfMod T.rank α) *
           ∑' ξ : Matrix (Fin T.rank) (Fin r) D.host.E,
             ‖d.mixS T ψ μ' 𝓕' f (HMul.hMul (ξ.map (incA D) : Mx D T.rank r) α.1) 0‖ₑ := by
-  first | exact @GlobalTheory.LeviThetaSum.levi_sum | exact GlobalTheory.LeviThetaSum.levi_sum | (intros; apply GlobalTheory.LeviThetaSum.levi_sum <;> assumption)
+  exact @GlobalTheory.LeviThetaSum.levi_sum

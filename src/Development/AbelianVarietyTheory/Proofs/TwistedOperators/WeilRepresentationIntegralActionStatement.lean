@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilRepresentationIntegralAction
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilActionUnitaryCompactStatement
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.weil_representation_integral_action : ∀ {F E : T
     M.IsWeil ψ χX χW om → ∀ (μ : Measure (Fin n × Fin d → mixedEmbedding.mixedSpace F)), μ.IsAddHaarMeasure →
     ∀ (h : UA σ W.J) (f f₁ : SInf F (Fin n × Fin d)), Acts (evI F) (om (1, h)) ⇑f ⇑f₁ →
       ∫ x, ‖f₁ x‖ ^ 2 ∂μ = ∫ x, ‖f x‖ ^ 2 ∂μ := by
-  first | exact @GlobalTheory.ArchIsom.acts_norm_sq_eq | exact GlobalTheory.ArchIsom.acts_norm_sq_eq | (intros; apply GlobalTheory.ArchIsom.acts_norm_sq_eq <;> assumption)
+  exact @GlobalTheory.ArchIsom.acts_norm_sq_eq

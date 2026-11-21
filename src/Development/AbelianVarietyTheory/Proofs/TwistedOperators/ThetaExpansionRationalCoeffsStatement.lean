@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaExpansionRationalCoeffs
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.theta_expansion_rational_coeffs : ∀ {D : D7} {T 
       ∃ (n : ℕ) (c : Fin n → ℂ) (w : Fin n → WO (GlobalTheory.Grid.neg A) WW), (∀ p, IsAlgebraic ℚ (c p)) ∧
         (∀ p, (w p).map (infPart D) = 0) ∧
         X.ω t (γ, γ') X.vac = ∑ p, c p • heisO W.ψ (GlobalTheory.Grid.neg A) WW (w p) X.vac := by
-  first | exact @GlobalTheory.RatMovedAlg.rat_algComb | exact GlobalTheory.RatMovedAlg.rat_algComb | (intros; apply GlobalTheory.RatMovedAlg.rat_algComb <;> assumption)
+  exact @GlobalTheory.RatMovedAlg.rat_algComb

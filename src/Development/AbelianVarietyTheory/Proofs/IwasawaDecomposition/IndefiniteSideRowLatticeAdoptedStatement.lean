@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IndefiniteSideRowLatticeAdopted
-import Mathlib
 import Formalism.LocalToGlobal.Divisibility.DivisionCompatibleToSub2Indef2
 open Formalism.BasicNotions NumberField IsDedekindDomain Matrix Formalism.L2.DIV Formalism.L2.Indef
 open scoped InnerProductSpace
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.indefinite_side_row_lattice_adopted : ∀ (D : D7)
     A.fam.Ok s → RowSideDef3 D A X P ψ Zs S tup eRR jA → X.RRDef → (∀ w, D.what₂.muAt w = tup (S.μ (D.plEq w))) →
     (∀ μ (a : 𝓞 D.what₂.LL), ∀ y ∈ (X.Mtilde μ).carrier, D.what₂.embLL (a : D.what₂.LL) • y ∈ (X.Mtilde μ).carrier) →
     X.RR.L = S.RR.map ((eRR : (Fin S.D → D.what₂.LL) →ₗ[D.what₂.LL] X.RR.V).restrictScalars (𝓞 D.what₂.LL)) := by
-  first | exact @GlobalTheory.Adopt.indefinite_side_row_lattice_adopted | exact GlobalTheory.Adopt.indefinite_side_row_lattice_adopted | (intros; apply GlobalTheory.Adopt.indefinite_side_row_lattice_adopted <;> assumption)
+  exact @GlobalTheory.Adopt.indefinite_side_row_lattice_adopted

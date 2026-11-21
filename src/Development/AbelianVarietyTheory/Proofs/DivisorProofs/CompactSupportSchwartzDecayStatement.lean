@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactSupportSchwartzDecay
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.compact_support_schwartz_decay : ∀ (F E : Type) 
     (∃ K : Set (Fin m → FiniteAdeleRing (𝓞 F) F), IsCompact K ∧ ∀ a, (fun i => ((Algebra.TensorProduct.basis (AF F) b₀).equivFun a i).2) ∉ K → g a = 0) →
     (∀ N : ℕ, ∃ C : ℝ, ∀ a, ‖g a‖ * (1 + ‖fun i => evI F ((Algebra.TensorProduct.basis (AF F) b₀).equivFun a i)‖) ^ N ≤ C) →
     ∀ μ : Measure (AE F E)ˣ, μ.IsHaarMeasure → ∀ z : ℕ, 2 ≤ z → Integrable (fun l : (AE F E)ˣ => ‖g l.1‖ * (absE F E l : ℝ) ^ z) μ := by
-  first | exact @GlobalTheory.TateConvBasis.integrable_norm_mul_absE_pow | exact GlobalTheory.TateConvBasis.integrable_norm_mul_absE_pow | (intros; apply GlobalTheory.TateConvBasis.integrable_norm_mul_absE_pow <;> assumption)
+  exact @GlobalTheory.TateConvBasis.integrable_norm_mul_absE_pow

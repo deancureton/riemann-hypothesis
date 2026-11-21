@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepScalarCharOfSignature
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocPt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.weil_rep_scalar_char_of_signature : ∀ {F E : Typ
       (∀ v, ∀ γ ∈ latAtV X W v, ∀ f : SInf F (Fin n × Fin d), M.co.rho B.ψ γ (pure f M.vac) = c v γ • pure f M.vac) →
       ∀ Ψ ∈ schA F (Fin n × Fin d), (∀ v, ∀ γ ∈ latAtV X W v, M.co.rho B.ψ γ Ψ = c v γ • Ψ) →
         ∃ f₁ : SInf F (Fin n × Fin d), Ψ = pure f₁ M.vac := by
-  first | exact @GlobalTheory.VacLine.vac_line | exact GlobalTheory.VacLine.vac_line | (intros; apply GlobalTheory.VacLine.vac_line <;> assumption)
+  exact @GlobalTheory.VacLine.vac_line

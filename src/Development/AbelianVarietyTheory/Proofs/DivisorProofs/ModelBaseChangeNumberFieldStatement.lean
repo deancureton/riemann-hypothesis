@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelBaseChangeNumberField
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.model_base_change_number_field : ∀ {E : Type} [F
           IsLocFrame Z e jB πB _ τ U u ∧ IsLocLat Z e jB πB _ τ (ArIn.ind ∅) U u) ∧
         ∃ (U : X.Opens) (u : LocAssign Z (Dw.mult τ) jB U), x ∈ U ∧ IsAffineOpen U ∧
           IsLocFrame Z e jB πB _ τ U u ∧ GlobalTheory.TwoLat.IsLocGrLat Z e jB πB _ τ U u := by
-  first | exact @GlobalTheory.TwoLat.exists_base_deRham | exact GlobalTheory.TwoLat.exists_base_deRham | (intros; apply GlobalTheory.TwoLat.exists_base_deRham <;> assumption)
+  exact @GlobalTheory.TwoLat.exists_base_deRham

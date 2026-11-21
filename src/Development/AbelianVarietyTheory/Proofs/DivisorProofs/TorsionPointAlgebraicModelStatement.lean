@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.torsion_point_algebraic_model : ∀ (A₀ : Over (
     IsAbelianScheme A₀ → SmoothOfRelativeDimension g A₀.hom → IsGrpPullback A A₀ (spMap (algebraMap Qb ℂ)) p →
     1 ≤ n → ∀ x : 𝟙_ (Over (Sp ℂ)) ⟶ A, x ^ n = 1 →
     ∃ c : 𝟙_ (Over (Sp Qb)) ⟶ A₀, x.left ≫ p = spMap (algebraMap Qb ℂ) ≫ c.left := by
-  first | exact @GlobalTheory.RealMult.torsion_of_complex_is_algebraic | exact GlobalTheory.RealMult.torsion_of_complex_is_algebraic | (intros; apply GlobalTheory.RealMult.torsion_of_complex_is_algebraic <;> assumption)
+  exact @GlobalTheory.RealMult.torsion_of_complex_is_algebraic

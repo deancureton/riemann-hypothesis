@@ -127,5 +127,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_descent_maps_exist : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalForFanKS → GlobalTheory.Published.SemiAbelianLieSeminegative → Gram → DeepGood → Size → FlatDeg → Maps := by
-  first | exact @_root_.GlobalTheory.CovTop.DescentMaps.covering_descent_maps_compatible | exact _root_.GlobalTheory.CovTop.DescentMaps.covering_descent_maps_compatible | (intros; apply _root_.GlobalTheory.CovTop.DescentMaps.covering_descent_maps_compatible <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DescentMaps.covering_descent_maps_compatible
 end

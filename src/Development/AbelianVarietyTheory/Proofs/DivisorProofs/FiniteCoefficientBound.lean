@@ -723,6 +723,6 @@ end ResidueCardinalityNilpotence
 section
 open GlobalTheory.SumSize GlobalTheory.RowClaim
 theorem _root_.GlobalTheory.Adopt.finite_coefficient_bound : GlobalTheory.FunPr.Hypotheses₂ → FinCoefK := by
-  first | exact @ResidueCardinalityNilpotence.GlobalTheory.CompanionTheory.VolVal.finCoefK | exact ResidueCardinalityNilpotence.GlobalTheory.CompanionTheory.VolVal.finCoefK | (intros; apply ResidueCardinalityNilpotence.GlobalTheory.CompanionTheory.VolVal.finCoefK <;> assumption)
+  exact @ResidueCardinalityNilpotence.GlobalTheory.CompanionTheory.VolVal.finCoefK
 
 end

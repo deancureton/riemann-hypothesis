@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomTripleThetaKernelMinorsEqConstConjJet
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.bottomTriple_thetaKernel_minors_eq_const_conjJet :
         X.ker W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed Tu) g y =
           Ω * starRingEnd ℂ (Formalism.MainNotions.GL3Theta.applyAt0 D (GlobalTheory.NormSum.minorPol D Tu)
             (GlobalTheory.AdForm.xiN W.θ A WW ea.symm ed.symm r rc fun w => starRingEnd ℂ (X.ω s (y, g) (X.f s) w))) := by
-  first | exact @GlobalTheory.BotFormula.ConjJet.ker_minorF_eq_conj_jet | exact GlobalTheory.BotFormula.ConjJet.ker_minorF_eq_conj_jet | (intros; apply GlobalTheory.BotFormula.ConjJet.ker_minorF_eq_conj_jet <;> assumption)
+  exact @GlobalTheory.BotFormula.ConjJet.ker_minorF_eq_conj_jet

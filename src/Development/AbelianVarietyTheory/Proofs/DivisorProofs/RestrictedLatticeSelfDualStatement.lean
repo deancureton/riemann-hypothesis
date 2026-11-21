@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedLatticeSelfDual
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.restricted_lattice_self_dual : ∀ (F E : Type) [F
     IsCMExt F E σ → IsHermND σ J → IsWittFrame σ J X Y →
     ∀ (L : Submodule (𝓞 E) (Fin n → E)) (a : GL (Fin n) (AF F ⊗[F] E)), GlobalTheory.EisLine.IsAdapted σ J X Y L a →
     ∀ v, IsSelfDualAt σ (J0 σ J X Y) (L0 σ J X Y L) v := by
-  first | exact @GlobalTheory.EisRestrictDual.isSelfDualAt_restrictedLattice | exact GlobalTheory.EisRestrictDual.isSelfDualAt_restrictedLattice | (intros; apply GlobalTheory.EisRestrictDual.isSelfDualAt_restrictedLattice <;> assumption)
+  exact @GlobalTheory.EisRestrictDual.isSelfDualAt_restrictedLattice

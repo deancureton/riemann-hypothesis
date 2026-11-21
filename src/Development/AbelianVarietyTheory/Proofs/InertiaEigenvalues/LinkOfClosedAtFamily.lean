@@ -43,7 +43,6 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.Inhab Fo
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.HeightCounting.Up GlobalTheory.Mem.SRe GlobalTheory.Mem.R3.Rw
 
-set_option maxHeartbeats 4000000 in
 
 theorem movable_pin (hL : GlobalTheory.Published.LocalLanglandsGL) (cDep : ℝ) (Γ : GeoP) :
     PositionMv (prmR (NEl hL cDep) SExt.none (geoCl Γ)).s := by

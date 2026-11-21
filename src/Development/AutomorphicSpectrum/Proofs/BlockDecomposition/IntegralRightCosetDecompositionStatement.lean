@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegralRightCosetDecomposition
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FintypeResidue
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalFunctionalSectionNonvanishing
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.integral_right_coset_decomposition : ∀ (G : Type
   (∀ a b, R a * (R b)⁻¹ ∈ K → a = b) → (∀ κ ∈ K, ∀ g, f (κ * g) = f g) →
   (∀ g, f g ≠ 0 → ∃ a ∈ S, g * (R a)⁻¹ ∈ K) →
   ∫ g, f g ∂μ = ((μ.real (K : Set G) : ℝ) : ℂ) * ∑ a ∈ S, f (R a) := by
-  first | exact @GlobalTheory.CompanionTheory.LFUDom.integral_eq_measure_mul_sum_cosets | exact GlobalTheory.CompanionTheory.LFUDom.integral_eq_measure_mul_sum_cosets | (intros; apply GlobalTheory.CompanionTheory.LFUDom.integral_eq_measure_mul_sum_cosets <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LFUDom.integral_eq_measure_mul_sum_cosets

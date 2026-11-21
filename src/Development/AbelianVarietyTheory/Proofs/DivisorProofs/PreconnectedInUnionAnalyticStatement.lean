@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PreconnectedInUnionAnalytic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.darboux_doubled_transfer : ∀ (F E : Type) [Field
     (∀ u : Matrix (Fin (n + n)) (Fin d) (AE F E), (∀ j, uᵀ j ∈ diagSub (AE F E) finSumFinEquiv) →
       ∀ φ ∈ schA F (Fin (n + n) × Fin d), l (cb.rho ψ u φ) = l φ) →
     ∃ c : ℂ, c ≠ 0 ∧ ∀ φ₁ ∈ schA F (Fin n × Fin d), ∀ φ₂ ∈ schA F (Fin n × Fin d), l (bx φ₁ φ₂) = c * ∫ x, φ₁ x * φ₂ x ∂m := by
-  first | exact @GlobalTheory.DblBox.eq_smul_integral_bx | exact GlobalTheory.DblBox.eq_smul_integral_bx | (intros; apply GlobalTheory.DblBox.eq_smul_integral_bx <;> assumption)
+  exact @GlobalTheory.DblBox.eq_smul_integral_bx

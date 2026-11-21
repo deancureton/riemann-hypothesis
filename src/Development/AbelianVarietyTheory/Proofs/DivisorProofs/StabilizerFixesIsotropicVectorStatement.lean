@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerFixesIsotropicVector
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeEvFun
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.stabilizer_fixes_isotropic_vector : ∀ (F E : Typ
     ∀ (v : Pl F) (q : UA σ G.V.J), q ∈ UAt σ G.V (evFin F v) → mat q *ᵥ incV F H.x = incV F H.x →
       ∃ u ∈ unip σ G.V H, u ∈ UAt σ G.V (evFin F v) ∧ ∃ (g₀ : UA σ G₁.V.J) (g : UA σ G.V.J), IsLevi H 1 g₀ g ∧
         g ∈ UAt σ G.V (evFin F v) ∧ g₀ ∈ UAt σ G₁.V (evFin F v) ∧ q = u * g := by
-  first | exact @GlobalTheory.ThK.LemF.StabDec.stab_decomp | exact GlobalTheory.ThK.LemF.StabDec.stab_decomp | (intros; apply GlobalTheory.ThK.LemF.StabDec.stab_decomp <;> assumption)
+  exact @GlobalTheory.ThK.LemF.StabDec.stab_decomp

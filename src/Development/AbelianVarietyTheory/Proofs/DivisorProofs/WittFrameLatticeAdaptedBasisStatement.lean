@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameLatticeAdaptedBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.wittFrame_lattice_adapted_basis : ∀ (F E : Type)
       (∀ u v, hE σ J₀ u v = hE σ J (ι u) (ι v)) ∧
       (∀ z, hE σ J (GlobalTheory.EisMidHt.firstColumn X) z = 0 → hE σ J (GlobalTheory.EisMidHt.firstColumn Y) z = 0 → ∃ u, ι u = z) ∧
       ∀ u, GlobalTheory.EisMidHt.ht L₀ a₀ (GlobalTheory.EisMidHt.adVec F u) = GlobalTheory.EisMidHt.ht L a (GlobalTheory.EisMidHt.adVec F (ι u)) := by
-  first | exact @GlobalTheory.EisRestrict.restrict_adapted | exact GlobalTheory.EisRestrict.restrict_adapted | (intros; apply GlobalTheory.EisRestrict.restrict_adapted <;> assumption)
+  exact @GlobalTheory.EisRestrict.restrict_adapted

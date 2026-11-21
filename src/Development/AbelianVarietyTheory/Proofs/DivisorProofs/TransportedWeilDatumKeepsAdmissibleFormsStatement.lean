@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedWeilDatumKeepsAdmissibleForms
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.transportedWeilDatum_keeps_admissible_forms : ∀ 
       GlobalTheory.WeilM.UG (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.cA D.sp.cm.sig) (incM D.host.F JB) →* Module.End ℂ ((κ → AF D.host.F) → ℂ),
                        GlobalTheory.WeilSchrodinger.IsTransport ψ co ω om →
                        ∀ p, ∀ l ∈ (GlobalTheory.WeilM.adeleClass D.host.F).adm κ, l ∘ₗ om p ∈ (GlobalTheory.WeilM.adeleClass D.host.F).adm κ := by
-  first | exact @GlobalTheory.WeilAdm.transport_adm | exact GlobalTheory.WeilAdm.transport_adm | (intros; apply GlobalTheory.WeilAdm.transport_adm <;> assumption)
+  exact @GlobalTheory.WeilAdm.transport_adm

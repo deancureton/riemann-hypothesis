@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenMapExistsSignatureModels
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.eigen_map_exists_signature_models : GlobalTheory.T
     B.IsGood σ → (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W.IsSkew σ B r' s') → M.IsGood B.ψ → M₁.IsGood B.ψ →
     H'.IsAdapted σ B W W₁ i₀ i₁ → ∀ e₀ : Fn F n d →ₗ[ℂ] Fn F n d₁, IsEv B M M₁ 1 H'.ι (iso0 n H') e₀ →
       ∀ Ψ₁ ∈ schA F (Fin n × Fin d₁), ∃ Ψ ∈ schA F (Fin n × Fin d), e₀ Ψ = Ψ₁ := by
-  first | exact @GlobalTheory.ThK.EvOnto.main | exact GlobalTheory.ThK.EvOnto.main | (intros; apply GlobalTheory.ThK.EvOnto.main <;> assumption)
+  exact @GlobalTheory.ThK.EvOnto.main

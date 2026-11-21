@@ -12,4 +12,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.gl_relations_derivative_preserved : ∀ (D : D7) (θ : D.what₂.Tau → (Ainf D.host.F ⊗[D.host.F] D.host.E →+* ℂ)) (hθ : IsInfFam θ) (V : HSp D) (τ : D.what₂.Tau)
     (M : Fin V.rank → Fin V.rank → Matrix (Fin V.rank) (Fin V.rank) ℂ), Formalism.REAL.GlRel M →
     Formalism.REAL.GlRel (fun i j => GlobalTheory.Mem.RealTranslate.derEnd hθ τ (M i j)) := by
-  first | exact @GlobalTheory.CompanionTheory.DerGlRel.glRel_derEnd_family | exact GlobalTheory.CompanionTheory.DerGlRel.glRel_derEnd_family | (intros; apply GlobalTheory.CompanionTheory.DerGlRel.glRel_derEnd_family <;> assumption)
+  exact @GlobalTheory.CompanionTheory.DerGlRel.glRel_derEnd_family

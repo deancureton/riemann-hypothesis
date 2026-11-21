@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledWeilRepresentationLocalityFinitePlace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromBlocksMem
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.doubledWeilRepresentation_locality_finitePlace : �
     IsUWeilSplit (cA σ) (adeleClass F) B.ψ (-1) (incM F G.V'.J) (dbl (incM F G.W.J)) dd X.α (diagCols (Fin (a + a'))) omd →
     ∀ g : UG (cA σ) (dbl (incM F G.W.J)), At (evFin F v) (GlobalTheory.InertDbl.matD g - 1) →
     ∀ φ ∈ SB ((Fin a' × Fin (a + a') ⊕ Fin a' × Fin (a + a')) → Fv F v), ∃ φ₁ ∈ SB ((Fin a' × Fin (a + a') ⊕ Fin a' × Fin (a + a')) → Fv F v), Acts (evFin F v) (omd g) φ φ₁ := by
-  first | exact @GlobalTheory.WeilLocalityDbl.locality | exact GlobalTheory.WeilLocalityDbl.locality | (intros; apply GlobalTheory.WeilLocalityDbl.locality <;> assumption)
+  exact @GlobalTheory.WeilLocalityDbl.locality

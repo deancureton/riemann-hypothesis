@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundaryPotentialSectionAtlas
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSNCAtlasOfIsEmpty
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt GlobalTheory.SNCComp
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.boundary_potential_section_atlas : ∀ (d : ℕ) (
     ∃ C : ℝ, ∀ (R : ℕ) (T : Fin n → LocPot Y),
       (∀ i, T i = (α + LocPot.ofFun (w R)).pullback μ hμ.1 ∨ T i = α.pullback μ hμ.1) →
         -C ≤ mInt Ck (fun i => (T i).pullback Subtype.val continuous_subtype_val) (fun y => w R (μ y.1)) := by
-  first | exact @GlobalTheory.SNCCompBound.component_term_bounded | exact GlobalTheory.SNCCompBound.component_term_bounded | (intros; apply GlobalTheory.SNCCompBound.component_term_bounded <;> assumption)
+  exact @GlobalTheory.SNCCompBound.component_term_bounded

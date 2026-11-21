@@ -14,4 +14,4 @@ open ReciprocityTheory.Aut Formalism.AUTREP
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.theta_isotypic_injective : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, GlobalTheory.LiftRef.AtRows hL fun D _ _ _ _ _ => ∀ (j : ℕ) (_ : 1 ≤ j) (_ : j ≤ D.R.m) (σ : D.what₂.FT), ∀ y ∈ D.what₂.isot j σ, D.what₂.thetaT D.what₂.mu0 j y = 0 → y = 0 := by
-  first | exact @GlobalTheory.LiftRef.UpInjRows.main | exact GlobalTheory.LiftRef.UpInjRows.main | (intros; apply GlobalTheory.LiftRef.UpInjRows.main <;> assumption)
+  exact @GlobalTheory.LiftRef.UpInjRows.main

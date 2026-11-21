@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsFiniteAlgebraicSetHeckeFieldsSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.FieldValuesMemFixedField
 import Formalism.LocalToGlobal.Columns.PathCountSymmetricHolds
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SameCfgRefl
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_finite_algebraic_set_heckeFields_split : �
       (∀ z ∈ s, z ∈ B.LLC) → ∀ a : I.ι,
         Formalism.L2.Col.HeckeFieldsInAll (rowPts B.wts I.Ch I.sel (I.tup a)) ∅ ∧
           ∀ j : Fin B.R.m, Formalism.L2.Col.HeckeFieldsInAll (liftPts B.wts I.Ch I.sel (I.tup a) (j.1 + 1)) ∅ := by
-  first | exact @GlobalTheory.Mem.HFld.Transp.transp | exact GlobalTheory.Mem.HFld.Transp.transp | (intros; apply GlobalTheory.Mem.HFld.Transp.transp <;> assumption)
+  exact @GlobalTheory.Mem.HFld.Transp.transp

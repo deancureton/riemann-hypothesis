@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BottomPairModularTwistIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.bottom_pair_modular_twist_identity : GlobalTheory.
         IsBottom G s i j (GlobalTheory.SqTop.modT G s) P P' → ∀ (ea : P'.a = A'.rank) (ed : P'.d = WW.rank) (T' : Tup D P'.a P'.d P'.n)
           (h : GA D WW), ∀ k ∈ GinfC A', ∀ g : GA D A',
             X.ker' W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T') h (g * k) = X.ker' W.ψ W.θ s (GlobalTheory.BotFormula.minorF ea ed T') h g := by
-  first | exact @GlobalTheory.BotRealInv.ker'_minorF_mul_real | exact GlobalTheory.BotRealInv.ker'_minorF_mul_real | (intros; apply GlobalTheory.BotRealInv.ker'_minorF_mul_real <;> assumption)
+  exact @GlobalTheory.BotRealInv.ker'_minorF_mul_real

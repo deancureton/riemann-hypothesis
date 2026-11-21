@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockInducedRepIntertwining
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.block_induced_rep_intertwining : ∀ (k : Type) [F
       (R : Subrepresentation ((GlobalTheory.SmGL.twist (GlobalTheory.SmGL.relInd g τ) ν).comp (MonoidHom.mulSingle (fun j => GL (m' j) k) j₀))),
       s ∈ R.toSubmodule ∧ ∀ F ∈ R.toSubmodule,
         (∀ i x, l i (F.1.1 (Function.update (y i) j₀ x)) = 0) → F = 0 := by
-  first | exact @GlobalTheory.ColumnSep.exists_sub_evals_injective | exact GlobalTheory.ColumnSep.exists_sub_evals_injective | (intros; apply GlobalTheory.ColumnSep.exists_sub_evals_injective <;> assumption)
+  exact @GlobalTheory.ColumnSep.exists_sub_evals_injective

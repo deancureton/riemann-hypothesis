@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.real_theta_kernel_formula : ∀ (n : ℤ) (a b c d
       (if 0 ≤ n then (starRingEnd ℂ) z ^ n.natAbs else z ^ n.natAbs) *
       Complex.exp (2 * Real.pi * Complex.I * (((b : ℂ) + Complex.I * ((a : ℂ) * (r : ℂ) ^ 2)) /
         ((d : ℂ) + Complex.I * ((c : ℂ) * (r : ℂ) ^ 2))) * ((Complex.normSq z : ℝ) : ℂ)) := by
-  first | exact @GlobalTheory.CompanionTheory.RealTh.GForm.gform | exact GlobalTheory.CompanionTheory.RealTh.GForm.gform | (intros; apply GlobalTheory.CompanionTheory.RealTh.GForm.gform <;> assumption)
+  exact @GlobalTheory.CompanionTheory.RealTh.GForm.gform

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LevelStructureLocalPoints
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -14,4 +13,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.level_structure_local_points : ∀ (R K : Type) [CommRing R] [IsDomain R] [IsIntegrallyClosed R] [Field K] [IsAlgClosed K] [CharZero K] [Algebra R K] [IsFractionRing R K] (G : Over (Sp R)) [GrpObj G] [IsCommMonObj G], IsSemiAbelian G → ∀ (N : ℕ), N ≠ 0 → ∀ (A : Type) [CommRing A] [HopfAlgebra R A] [IsCocomm R A] [Module.Finite R A] [Module.Projective R A] (θ : TorsPt G N A), IsLevel K θ → ∀ (B : Type) [CommRing B] [Algebra R B] [IsLocalRing B] (φ : A →ₐ[R] B), ∃ (z : Tors G N B) (s : A →ₐ[R] R), toConv φ = toConv (θ.pt B z) * toConv ((Algebra.ofId R B).comp s) := by
-  first | exact @GlobalTheory.GroupBplus.Aff.level_point_eq_tors_mul_section | exact GlobalTheory.GroupBplus.Aff.level_point_eq_tors_mul_section | (intros; apply GlobalTheory.GroupBplus.Aff.level_point_eq_tors_mul_section <;> assumption)
+  exact @GlobalTheory.GroupBplus.Aff.level_point_eq_tors_mul_section

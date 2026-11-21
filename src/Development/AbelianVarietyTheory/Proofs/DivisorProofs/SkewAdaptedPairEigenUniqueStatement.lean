@@ -16,4 +16,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_eigen_unique : ∀ (F E : Type) 
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ g ∈ GlobalTheory.UnipEv.stabilizer₂ σ W H', ∀ z, ∀ Φ ∈ schA F (Fin n × Fin d),
         e (om (1, g) (M.co.rho B.ψ (incM F (1 : Matrix (Fin n) (Fin n) E) * z * (incM F H'.ι)ᵀ) Φ)) = M₁.co.rho B.ψ z (e (om (1, g) Φ)) := by
-  first | exact @GlobalTheory.UnipEvLaw.heis_stabP | exact GlobalTheory.UnipEvLaw.heis_stabP | (intros; apply GlobalTheory.UnipEvLaw.heis_stabP <;> assumption)
+  exact @GlobalTheory.UnipEvLaw.heis_stabP

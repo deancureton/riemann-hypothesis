@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaIntegralFold
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.config_A_theta_integral_fold : ∀ (hKP : GlobalTh
     (hinv : ∀ g ∈ UAt σ G₁.V (evI F), ∀ f f₁ : SInf F (Fin b × Fin (b + a')), Acts (evI F) (om₁ (g, 1)) f f₁ → l f₁ = l f) (f : SInf F (Fin (b + 2) × Fin (b + 2 + a'))) (k : KAt K (evI F)) (t : idelesAt E (evI F))
     (h : mat k.1⁻¹ *ᵥ ((t.1 : AE F E) • incV F H.x) = incV F H.x),
     l (coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f k.1 t.1) = l (coneInfInt B G.M om ei (shiftA H H') X.ν ((b + 2 - a') / 2) f 1 1) := by
-  first | exact @GlobalTheory.ThK.SigmaVal.coneInfInt_sigma | exact GlobalTheory.ThK.SigmaVal.coneInfInt_sigma | (intros; apply GlobalTheory.ThK.SigmaVal.coneInfInt_sigma <;> assumption)
+  exact @GlobalTheory.ThK.SigmaVal.coneInfInt_sigma

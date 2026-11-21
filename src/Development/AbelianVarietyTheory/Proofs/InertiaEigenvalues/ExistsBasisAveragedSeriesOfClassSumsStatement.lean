@@ -7,4 +7,4 @@ open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_basis_averaged_series_of_class_sums : ∀ (D : D7) (E : IntegralHeckeForms.XD D), IntegralHeckeForms.admT4 D.nexp E → ∀ i, D.ntw.NonzeroIndexPlace i → ∀ j ∈ Finset.Icc 1 D.R.m, ∀ b, ∃ S, BasisOf D.nexp i j b (SgJ D.nexp E i j b) S := by
-  first | exact @GlobalTheory.TwInputs.exists_basisOf_of_classSum | exact GlobalTheory.TwInputs.exists_basisOf_of_classSum | (intros; apply GlobalTheory.TwInputs.exists_basisOf_of_classSum <;> assumption)
+  exact @GlobalTheory.TwInputs.exists_basisOf_of_classSum

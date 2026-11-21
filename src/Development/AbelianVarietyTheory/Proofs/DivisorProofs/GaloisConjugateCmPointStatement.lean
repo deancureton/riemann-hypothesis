@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaloisConjugateCmPoint
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.galois_conjugate_cm_point : GlobalTheory.Published
             ((upIdele K E t : Af E) * algebraMap E (Af E) (z' / k) - algebraMap E (Af E) (w' / k)) * ((y⁻¹ : (Af E)ˣ) : Af E) ∈ hatO c →
             g (Complex.exp (-(2 * Real.pi * Complex.I) * ((∑ i, T.U.h i * (φ i w * starRingEnd ℂ (φ i w')).im : ℝ) : ℂ) / k)) =
               Complex.exp (-(2 * Real.pi * Complex.I) * ((((fun j ↦ g (φ (T.U.e j) z)) ⬝ᵥ Hm.mulVec (star fun j ↦ g (φ (T.U.e j) z'))).im : ℝ) : ℂ) / k) := by
-  first | exact @GlobalTheory.ConjWeil.weil_transport | exact GlobalTheory.ConjWeil.weil_transport | (intros; apply GlobalTheory.ConjWeil.weil_transport <;> assumption)
+  exact @GlobalTheory.ConjWeil.weil_transport

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAThetaLiftVanishing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_theta_lift_vanishing : GlobalTheory.ThK.K
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F b a') (Rf₁ : FinMaps F b a'),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ N : Submodule ℂ R.Pi, N ≤ twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p) → KStabL B G.M om R.p G₁.W H' N → N = ⊥ ∨ N = twPart B G.M om R.p G₁.W H' X.α ((a' : ℝ) / 2) (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.IndLine.twPart_irred_real | exact GlobalTheory.IndLine.twPart_irred_real | (intros; apply GlobalTheory.IndLine.twPart_irred_real <;> assumption)
+  exact @GlobalTheory.IndLine.twPart_irred_real

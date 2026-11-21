@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.det_derivatives_borelFrameChange_canonicalWeight :
     (hzv' : ∀ b, ⊤ ≤ zv' b ⁻¹ᵁ O), (Matrix.of fun a b => (evalPt (zv (tanOrd Dw b)) O (hzv _) (g a)).snd).det =
       (∏ ix, t ix ^ exOf Dw (kap Dw) 0 ix).val *
         (Matrix.of fun a b => (evalPt (zv' (tanOrd Dw b)) O (hzv' _) (g a)).snd).det := by
-  first | exact @GlobalTheory.CompHS.det_der_frBor | exact GlobalTheory.CompHS.det_der_frBor | (intros; apply GlobalTheory.CompHS.det_der_frBor <;> assumption)
+  exact @GlobalTheory.CompHS.det_der_frBor

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDegDataTensorPosDefUnimodularForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.OfFactorE
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsProjOverWeierstrass
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_degData_tensor_posDef_unimodular_form : ∀
     ∀ y z J J', Good Q.M.L z J → Good D'.toPre.P.L z J' →
       val (D'.toPre.psi y) (𝟙 _) z J' = gm (D'.toPre.xK y) z _ (w.s (fun k => J (D'.toPre.xK y ≫ tensφ pr k), J' (D'.toPre.xK y))) *
         ∏ i, ∏ j, val (Q.tau (xe y i) (xe y j)) (𝟙 _) z J ^ W i j := by
-  first | exact @GlobalTheory.Mum.TensPol.exists_tensPol | exact GlobalTheory.Mum.TensPol.exists_tensPol | (intros; apply GlobalTheory.Mum.TensPol.exists_tensPol <;> assumption)
+  exact @GlobalTheory.Mum.TensPol.exists_tensPol

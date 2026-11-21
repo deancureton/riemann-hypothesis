@@ -13,4 +13,4 @@ open GlobalTheory.TwistChoice (Reading ReadsAt)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.galois_character_anti_ramified_exactly : PrN → ∀ (D : D7) (l : ℕ) (Q : Finset (PlE D.host)) (χ : HChar D.host.E) (ψ₀ : G D.host.E D.nd.Om →* (D.what₂.LL)ˣ), l.Prime → IsPsi (H := D.host) l Q χ → GalOf D χ ψ₀ → AntiHom D.ntw.cc ψ₀ ∧ RamExactly ψ₀ (↑Q : Set (PlE D.host)) ∧ BlochKatoReduction.Gen.TrivAbove ψ₀ l := by
-  first | exact @GlobalTheory.GalTwist.galOf_twist_props | exact GlobalTheory.GalTwist.galOf_twist_props | (intros; apply GlobalTheory.GalTwist.galOf_twist_props <;> assumption)
+  exact @GlobalTheory.GalTwist.galOf_twist_props

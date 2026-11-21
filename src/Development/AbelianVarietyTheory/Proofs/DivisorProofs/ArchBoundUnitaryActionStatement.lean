@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchBoundUnitaryAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DHRealAdSmul
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.arch_bound_unitary_action : ∀ (F E : Type) [Fiel
     (∀ (w : InfinitePlace F) (τ : EmbOver E w) k l, ‖piInf τ (x k l)‖ ≤ B) →
     ∀ (w : InfinitePlace F) (τ : EmbOver E w) i j,
       ‖piInf τ (actAB (cA σ) p x i j)‖ ≤ n * d * ((ht p.1 : ℝ) * ht p.2) * B := by
-  first | exact @GlobalTheory.WeilDirBound.norm_piInf_actAB_le_target | exact GlobalTheory.WeilDirBound.norm_piInf_actAB_le_target | (intros; apply GlobalTheory.WeilDirBound.norm_piInf_actAB_le_target <;> assumption)
+  exact @GlobalTheory.WeilDirBound.norm_piInf_actAB_le_target

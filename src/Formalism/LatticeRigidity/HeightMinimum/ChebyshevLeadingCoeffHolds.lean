@@ -1,5 +1,4 @@
 import Formalism.LatticeRigidity.StatementC
-import Mathlib
 
 namespace Formalism.SA.P
 

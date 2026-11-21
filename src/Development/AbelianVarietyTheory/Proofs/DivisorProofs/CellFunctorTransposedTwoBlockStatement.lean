@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CellFunctorTransposedTwoBlock
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.GeometricLemmaFiltration
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.HasFiniteLengthOfIsIrreducible
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.BernsteinUnitaryProductIrreducible
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.cell_functor_transposed_two_block : ∀ {k : Type}
           (leviTwo k (Fin 1) (Fin (u + v))).toMonoidHom)
         (extTensor (detRep (Fin 1) (χ₂ * absPow k (-(v : ℂ) / 2)))
           (prod₂ (detRep (Fin u) χ₁) (detRep (Fin v) (χ₂ * absPow k (1 / 2)))))) := by
-  first | exact @GlobalTheory.SmGL.RowOneCell.cell_equiv | exact GlobalTheory.SmGL.RowOneCell.cell_equiv | (intros; apply GlobalTheory.SmGL.RowOneCell.cell_equiv <;> assumption)
+  exact @GlobalTheory.SmGL.RowOneCell.cell_equiv

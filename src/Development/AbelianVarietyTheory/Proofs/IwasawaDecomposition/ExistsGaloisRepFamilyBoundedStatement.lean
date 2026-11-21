@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.exists_galois_rep_family_bounded : GlobalTheory.Pu
           (∀ x : ↥D.LL0, ι (φ ((if b then T.emb0 i else T.emb0b i) x)) = embLL0 D x) →
           IsRepOf D (T.l i) ι (D.naut.tw π D.naut.etaTinv) ((1 - (D.R.nV : ℝ)) / 2)
             (mapRep (φ.comp (algebraMap (T.O0 i) (FractionRing (T.O0 i)))) (rho i σ b)) := by
-  first | exact @GlobalTheory.HeightCounting.RowRhoInt.rho_rows | exact GlobalTheory.HeightCounting.RowRhoInt.rho_rows | (intros; apply GlobalTheory.HeightCounting.RowRhoInt.rho_rows <;> assumption)
+  exact @GlobalTheory.HeightCounting.RowRhoInt.rho_rows

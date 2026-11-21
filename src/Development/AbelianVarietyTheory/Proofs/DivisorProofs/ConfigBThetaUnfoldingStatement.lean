@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaUnfolding
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_unfolding : GlobalTheory.ThK.KP →
       (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W) (R₁ : RealMaps F a b) (Rf₁ : FinMaps F a b),
       IsMatched B G X om om' R Rf → IsMatched B G₁ X om₁ om₁' R₁ Rf₁ →
       ∀ V : Submodule ℂ R.Pi, V ≠ ⊥ → KStab B G.M om R.p V → PGen B G.M om R.p G₁.W H' V := by
-  first | exact @GlobalTheory.IndLine.PGenReal.pGen_of_kStab | exact GlobalTheory.IndLine.PGenReal.pGen_of_kStab | (intros; apply GlobalTheory.IndLine.PGenReal.pGen_of_kStab <;> assumption)
+  exact @GlobalTheory.IndLine.PGenReal.pGen_of_kStab

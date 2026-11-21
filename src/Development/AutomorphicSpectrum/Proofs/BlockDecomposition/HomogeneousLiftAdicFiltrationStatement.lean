@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HomogeneousLiftAdicFiltration
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.VanIdealHomog
 open CategoryTheory CategoryTheory.Limits AlgebraicGeometry ReciprocityTheory.ChartRestriction.G.Out MvPolynomial GlobalTheory.CompanionTheory.GE
 open ReciprocityTheory.ChartRestriction.G.Geo.Tor (PSpace)
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.homogeneous_lift_adic_filtration : ∀ (R : Type) 
     ∃ J : Ideal (MvPolynomial (Fin (N + 1)) R), HomogIdeal J ∧ ∀ e, J ≤ L e ∧
         ∀ f ∈ L e, ∀ k, ∃ m : ℕ, X k ^ m * f ∈
           J ⊔ (I ^ (e + 1)).map (C : R →+* MvPolynomial (Fin (N + 1)) R) := by
-  first | exact @GlobalTheory.CompanionTheory.GE.Tower.exists_limit_ideal | exact GlobalTheory.CompanionTheory.GE.Tower.exists_limit_ideal | (intros; apply GlobalTheory.CompanionTheory.GE.Tower.exists_limit_ideal <;> assumption)
+  exact @GlobalTheory.CompanionTheory.GE.Tower.exists_limit_ideal

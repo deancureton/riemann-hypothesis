@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ChartResidueTrdegGeneric
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.IsNatDiagIffIsDiag
 open AlgebraicGeometry CategoryTheory Limits NumberField
 open ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor Formalism.L2.Pj GlobalTheory.LocM
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.chart_residue_trdeg_generic : ∀ {E : Type} [Fiel
     ((∑ τ : E →+* ℂ, (Dw.mult τ).choose 2 : ℕ) : Cardinal) ≤
     @Algebra.trdeg ((Y Z.i).X.residueField ((Z.chart a ≫ Z.π) x)) ((Sp Γ(Z.X, (Z.U a).1)).residueField x) _ _
       ((Z.chart a ≫ Z.π).residueFieldMap x).hom.toAlgebra := by
-  first | exact @GlobalTheory.FullFlagDim.trdeg_ge_of_generic | exact GlobalTheory.FullFlagDim.trdeg_ge_of_generic | (intros; apply GlobalTheory.FullFlagDim.trdeg_ge_of_generic <;> assumption)
+  exact @GlobalTheory.FullFlagDim.trdeg_ge_of_generic

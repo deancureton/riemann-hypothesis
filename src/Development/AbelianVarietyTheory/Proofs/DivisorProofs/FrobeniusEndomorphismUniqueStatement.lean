@@ -8,4 +8,4 @@ open GlobalTheory GlobalTheory.HTLat GlobalTheory.Published.AbVarRed GlobalTheor
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.frobenius_endomorphism_unique : ∀ (K : Type) [Field K] [Fintype K] (A : AbVar K), IsFrob (frob A) ∧ ∀ π : End A, IsFrob π → π = frob A := by
-  first | exact @GlobalTheory.AV.AbVar.frob_isFrob_unique | exact GlobalTheory.AV.AbVar.frob_isFrob_unique | (intros; apply GlobalTheory.AV.AbVar.frob_isFrob_unique <;> assumption)
+  exact @GlobalTheory.AV.AbVar.frob_isFrob_unique

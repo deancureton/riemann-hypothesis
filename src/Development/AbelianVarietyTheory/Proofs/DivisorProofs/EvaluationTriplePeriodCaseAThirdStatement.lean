@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationTriplePeriodCaseAThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousOfMemSchA
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.evaluation_triple_period_case_a_third : GlobalTheo
     ∀ (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W) (om₁ : Rep σ G₁.V G₁.W) (om₁' : Rep σ G₁.V' G₁.W), IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), ∀ y : Fin b × Fin (b + a') → AF F,
       Continuous (fun l : (AE F E)ˣ => e (G.M.co.rho B.ψ (shiftA H H' l) Ψ) y) := by
-  first | exact @GlobalTheory.ConeLamCont.continuous_ev_rho_shiftA | exact GlobalTheory.ConeLamCont.continuous_ev_rho_shiftA | (intros; apply GlobalTheory.ConeLamCont.continuous_ev_rho_shiftA <;> assumption)
+  exact @GlobalTheory.ConeLamCont.continuous_ev_rho_shiftA

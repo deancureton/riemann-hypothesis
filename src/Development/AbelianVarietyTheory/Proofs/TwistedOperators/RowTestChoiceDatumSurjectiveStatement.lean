@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RowTestChoiceDatumSurjective
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Statements.PlaceShiftStatements.NormSmall
@@ -19,4 +18,4 @@ open GlobalTheory.RowEx
 open GlobalTheory.FunObj
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rowTestChoice_datum_surjective : ∀ {D : D7} {Γ : Type} [Group Γ] [Fintype Γ] {Pl0 T : Type} {A : FamIn D.what₂.LL Γ Pl0 T D.R.m} {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] {R : RealDat D A Ks} (large₂ : SizeData₂ D) (F : Face D A), HidaSetting large₂ R F → ∀ (ch : Choice R), ch.Is → ∀ (Φ : ch.G.Datum), ∃ a, ch.Phi a = Φ := by
-  first | exact @GlobalTheory.ChoiceSurjectivity.choice_phi_surj | exact GlobalTheory.ChoiceSurjectivity.choice_phi_surj | (intros; apply GlobalTheory.ChoiceSurjectivity.choice_phi_surj <;> assumption)
+  exact @GlobalTheory.ChoiceSurjectivity.choice_phi_surj

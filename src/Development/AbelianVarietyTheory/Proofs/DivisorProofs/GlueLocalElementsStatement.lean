@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlueLocalElements
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.stabiliser_finite_generation_vector : GlobalTheory
     (∀ k ∈ KInf σ X B.emb, ρ k x ∈ S) → ∀ U : Subgroup (UA σ X.J), IsOpen (U : Set (UA σ X.J)) →
     (∀ k ∈ U, (mat k).map (Algebra.TensorProduct.map (fstA F) (AlgHom.id F E)) = 1 → ρ k x = x) →
     FiniteDimensional ℂ (Submodule.span ℂ {y | ∃ k ∈ K, y = ρ k x}) := by
-  first | exact @GlobalTheory.KFinStab.span_finiteDimensional | exact GlobalTheory.KFinStab.span_finiteDimensional | (intros; apply GlobalTheory.KFinStab.span_finiteDimensional <;> assumption)
+  exact @GlobalTheory.KFinStab.span_finiteDimensional

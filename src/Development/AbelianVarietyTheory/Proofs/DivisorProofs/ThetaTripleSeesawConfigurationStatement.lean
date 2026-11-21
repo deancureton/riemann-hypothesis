@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTripleSeesawConfiguration
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.theta_triple_seesaw_configuration : GlobalTheory.T
       (∀ v, φ v ∈ SB _) → (∀ v ∉ T, φ v = G.M.vac v) →
       cone B G.M om e K μK μ (shiftA H H') X.ν ((b + 2 - a') / 2) (pure f φ) =
         κ • pure (coneInf B G.M om ei K μKi μi (shiftA H H') X.ν ((b + 2 - a') / 2) f) (fun v => if v ∈ T then coneFin B G.M om v (ev v) K (μKf v) (μf v) (shiftA H H') X.ν ((b + 2 - a') / 2) (φ v) else G₁.M.vac v) := by
-  first | exact @GlobalTheory.ThK.ConeEulerPure.cone_pure_eq_smul | exact GlobalTheory.ThK.ConeEulerPure.cone_pure_eq_smul | (intros; apply GlobalTheory.ThK.ConeEulerPure.cone_pure_eq_smul <;> assumption)
+  exact @GlobalTheory.ThK.ConeEulerPure.cone_pure_eq_smul

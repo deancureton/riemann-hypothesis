@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.bijective_mulVec_of_isTanMat_of_isEigBasis : ∀ {
     ∀ {r : (E →+* ℂ) → ℕ} (u : ∀ τ, Fin (r τ) → (Sp (DualNumber K) ⟶ Z.t.G.left)), (∀ τ, IsEigBasis Z φ x τ (u τ)) →
     ∀ P : Matrix (Fin g) (Σ τ, Fin (r τ)) K, IsTanMat Z x ch (fun s : Σ τ, Fin (r τ) => u s.1 s.2) P →
     Function.Bijective P.mulVec := by
-  first | exact @GlobalTheory.LieFilt.bijective_mulVec_of_eigBases | exact GlobalTheory.LieFilt.bijective_mulVec_of_eigBases | (intros; apply GlobalTheory.LieFilt.bijective_mulVec_of_eigBases <;> assumption)
+  exact @GlobalTheory.LieFilt.bijective_mulVec_of_eigBases

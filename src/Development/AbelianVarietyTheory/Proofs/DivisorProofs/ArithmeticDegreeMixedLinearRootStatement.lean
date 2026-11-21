@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.arithmetic_degree_mixed_linear_root : ∀ (D : D7)
     ∀ w u : Wt Y, Y.arDeg (GlobalTheory.FlagAr.setB Y B) R (Formalism.DegreeFormula.linRoot w * Formalism.DegreeFormula.linRoot u ^ Formalism.MainNotions.WeightThresholdDefs.dimY Y) =
       ∑ c, (T.K B c).num (Fin.cons (T.L B c w + (T.K B c).ar ((T.F c).phR R w))
         fun _ => T.L B c u + (T.K B c).ar ((T.F c).phR R u)) := by
-  first | exact @GlobalTheory.PolarDeg.arDeg_lin_mul_pow | exact GlobalTheory.PolarDeg.arDeg_lin_mul_pow | (intros; apply GlobalTheory.PolarDeg.arDeg_lin_mul_pow <;> assumption)
+  exact @GlobalTheory.PolarDeg.arDeg_lin_mul_pow

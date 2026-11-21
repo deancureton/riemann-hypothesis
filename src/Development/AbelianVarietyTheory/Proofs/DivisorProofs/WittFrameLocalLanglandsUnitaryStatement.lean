@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameLocalLanglandsUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.witt_frame_local_langlands_unitary : GlobalTheory.
           IsSubquotient Q ((jacU (tripPlace hld) π).comp (midHom (Fv F v) l d n)) ∧
           ∃ f : Q.IntertwiningMap ((τ.locRep (splitPrime t)).comp
             (glEquiv d (complEquiv t (splitPrime_under t))).toMonoidHom), f ≠ 0 := by
-  first | exact @GlobalTheory.CuspBlock.exists_cuspSub_of_jacquet | exact GlobalTheory.CuspBlock.exists_cuspSub_of_jacquet | (intros; apply GlobalTheory.CuspBlock.exists_cuspSub_of_jacquet <;> assumption)
+  exact @GlobalTheory.CuspBlock.exists_cuspSub_of_jacquet

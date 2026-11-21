@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelComponentIrreducible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.GenericRegularity.MemRangeOfIsAlgebraicRatFun
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.integral_model_component_irreducible : ∀ (E : Ty
       IrreducibleSpace ↑(pullback (U.ι ≫ pullback.snd Xo'.s (spMap (IntermediateField.inclusion c'.le).toRingHom)) (spMap f))) →
     ∃ Xw : Y.X.Opens, (Xw : Set Y.X) ⊆ Set.range Y.j ∧ Xw ≤ Y.X.basicOpen (p : Γ(Y.X, ⊤)) ∧
       (∀ z, Y.j z ∈ Xw ↔ z ∈ U) ∧ GeomIrr Y.s Xw := by
-  first | exact @GlobalTheory.FlatModel.ModelOpen.exists_geomIrr_open | exact GlobalTheory.FlatModel.ModelOpen.exists_geomIrr_open | (intros; apply GlobalTheory.FlatModel.ModelOpen.exists_geomIrr_open <;> assumption)
+  exact @GlobalTheory.FlatModel.ModelOpen.exists_geomIrr_open

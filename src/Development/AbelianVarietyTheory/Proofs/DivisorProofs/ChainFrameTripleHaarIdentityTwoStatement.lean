@@ -30,4 +30,4 @@ theorem _root_.GlobalTheory.T.chain_frame_triple_haar_identity_two : GlobalTheor
   ∀ (ν₁ : Measure (GA D W₁)) (𝓕₁ : Set (GA D W₁)), GlobalTheory.SquareComm.IsHaarFD W₁ ν₁ 𝓕₁ →
   ∀ ωA ωB Pi rf rl p p', GlobalTheory.SquareComm.IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' →
   ∃ Φ ∈ GlobalTheory.SquareComm.algF ψ θ false A₁ B, GlobalTheory.SquareComm.thetaInt ωB ν₁ 𝓕₁ Φ ≠ 0 := by
-  first | exact @GlobalTheory.DefThetaNZ.exists_algF_thetaInt_ne_zero | exact GlobalTheory.DefThetaNZ.exists_algF_thetaInt_ne_zero | (intros; apply GlobalTheory.DefThetaNZ.exists_algF_thetaInt_ne_zero <;> assumption)
+  exact @GlobalTheory.DefThetaNZ.exists_algF_thetaInt_ne_zero

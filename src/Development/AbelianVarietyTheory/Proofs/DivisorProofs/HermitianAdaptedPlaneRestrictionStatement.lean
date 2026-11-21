@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.hermitian_adapted_plane_restriction : GlobalTheory
     ∀ (n₁ : ℕ) (X₁ : Spc F E n₁) (H : Plane E n n₁) (j₀ j₁ : ℕ) (M₁ : Model σ X₁ W) (om₁ : Rep σ X₁ W) (r₁ s₁ : ℕ),
       H.IsAdapted σ B X X₁ j₀ j₁ → IsPair B M₁ χX χW om₁ r₁ s₁ r' s' →
       ∀ t : (AE F E)ˣ, ∃ m : UA σ X.J, IsLevi (W₁ := X₁) H t 1 m := by
-  first | exact @GlobalTheory.LeviTorusH.exists_levi | exact GlobalTheory.LeviTorusH.exists_levi | (intros; apply GlobalTheory.LeviTorusH.exists_levi <;> assumption)
+  exact @GlobalTheory.LeviTorusH.exists_levi

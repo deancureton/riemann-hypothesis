@@ -1,5 +1,4 @@
 import Formalism.SharpRestriction.CuspSpanNormBounds.CayleyDegreeNondegeneracy.FibreCountOfPositions
-import Mathlib
 import Formalism.SharpRestriction.CuspSpanNormBounds.LatticeGluingRadicals
 
 noncomputable section

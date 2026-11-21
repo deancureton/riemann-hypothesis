@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelDbarAdditiveComplexLinearOne
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.LineSCShortExact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DelOperatorAtDbarOperatorAtLinearLocalStatement
 open GlobalTheory GlobalTheory.CxForm GlobalTheory.GoodMetric
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.del_dbar_additive_complexLinear_one : ∀ (M : Typ
     ∀ (c : ℂ) (α β : A.Fld), A.IsForm α → A.IsForm β →
       A.del (α + β) = A.del α + A.del β ∧ A.dbar (α + β) = A.dbar α + A.dbar β ∧
       A.del (c • α) = c • A.del α ∧ A.dbar (c • α) = c • A.dbar α := by
-  first | exact @GlobalTheory.CxForm.HolAtlas.del_dbar_linear | exact GlobalTheory.CxForm.HolAtlas.del_dbar_linear | (intros; apply GlobalTheory.CxForm.HolAtlas.del_dbar_linear <;> assumption)
+  exact @GlobalTheory.CxForm.HolAtlas.del_dbar_linear

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanLaplacianPolData
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 open NumberField MeasureTheory Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.AdelicU GlobalTheory.SiegelSet GlobalTheory.UAut GlobalTheory.ThK.SquareIntegrability
 open scoped ContDiff
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.archimedean_laplacian_pol_data : ∀ (F E : Type) 
           (∀ t, GlobalTheory.Orb.archMat σ (c • G.W.J.map σ) τ (projArch σ (c • G.W.J.map σ) w (γ t)) = NormedSpace.exp (t • Z)) →
           ∀ f ∈ G.M.Pol B.ψ B.emb,
             ActsD (evI F) (fun t => om (1, (toGAd hσ G.W.J hc).symm (γ t))) f (Δ Z f) := by
-  first | exact @GlobalTheory.ThKFockDer.exists_fockDer | exact GlobalTheory.ThKFockDer.exists_fockDer | (intros; apply GlobalTheory.ThKFockDer.exists_fockDer <;> assumption)
+  exact @GlobalTheory.ThKFockDer.exists_fockDer

@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.cm_period_from_elliptic_lattice : GlobalTheory.Pub
           ∀ w', U.u.ex (fun j ↦ φ (U.e j) b * w' j) = U.u.ex w' ≫ α) ∧
         ∀ (b : E) (α : X.A ⟶ X.A) [IsMonHom α], (∀ w', U.u.ex (fun j ↦ φ (U.e j) b * w' j) = U.u.ex w' ≫ α) →
           ∃ α₀ : X₀.A ⟶ X₀.A, IsMonHom α₀ ∧ α.left ≫ p = p ≫ α₀.left := by
-  first | exact @GlobalTheory.CMModel.exists_model_of_lattice | exact GlobalTheory.CMModel.exists_model_of_lattice | (intros; apply GlobalTheory.CMModel.exists_model_of_lattice <;> assumption)
+  exact @GlobalTheory.CMModel.exists_model_of_lattice

@@ -170,6 +170,6 @@ end LeafFixedPointPairing
 section
 open GlobalTheory.BigTop GlobalTheory.BigTop.Fun GlobalTheory.SumSize
 theorem _root_.GlobalTheory.Adopt.finite_and_away_formula : SetAt → FinK → AwayK → FP @Comparison₂ := by
-  first | exact @LeafFixedPointPairing.GlobalTheory.CompanionTheory.LeafFixedPointPlaceNorm.fp_tie | exact LeafFixedPointPairing.GlobalTheory.CompanionTheory.LeafFixedPointPlaceNorm.fp_tie | (intros; apply LeafFixedPointPairing.GlobalTheory.CompanionTheory.LeafFixedPointPlaceNorm.fp_tie <;> assumption)
+  exact @LeafFixedPointPairing.GlobalTheory.CompanionTheory.LeafFixedPointPlaceNorm.fp_tie
 
 end

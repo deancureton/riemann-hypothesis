@@ -1,6 +1,5 @@
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.RationalPrimesBelowPlaces
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GlobalRankinSelbergBasicFacts
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GammaFactorTransportRingEquiv
 import GroundTheory.GlobalFields.Adele.BaseChange.FiniteCoord
 import GroundTheory.GlobalFields.SemilocalAlgebras.NormTrace

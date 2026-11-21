@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.basis_level_zero_sections : ∀ (E : Type) [Field 
     BasisAlong t.G t.PP.L N (toBase (algebraMap R (FractionRing R))) b →
     ∀ (F : Type) [Field F] (ψ : R →+* F), Function.Injective ψ →
     ∀ s : LB.Sec (LPow t.G t.PP.L (N : ℤ) (Over.mk (spMap ψ))), ∃ c, Lin t.G t.PP.L N (toBase ψ) b c s := by
-  first | exact @GlobalTheory.TorRef.ZeroPow.span_of_basisAlong_zero | exact GlobalTheory.TorRef.ZeroPow.span_of_basisAlong_zero | (intros; apply GlobalTheory.TorRef.ZeroPow.span_of_basisAlong_zero <;> assumption)
+  exact @GlobalTheory.TorRef.ZeroPow.span_of_basisAlong_zero

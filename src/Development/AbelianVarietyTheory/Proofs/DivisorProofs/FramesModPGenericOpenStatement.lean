@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FramesModPGenericOpen
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormsAtOfNorms
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.frames_mod_p_generic_open : ∀ (F : Type) [Field 
         ∀ b, ⊤ ≤ yt ⁻¹ᵁ U b → ∀ i, (∀ k, k < i → e.w (valAt (z ≫ V.j) (((M a)⁻¹ * M b) i k)) < 1) ∧
           e.w (valAt (z ≫ V.j) (((M a)⁻¹ * M b) i i) - valAt z ((c a i / c b i : V.G.functionFieldˣ) : V.G.functionField)) < 1) →
     ∃ c' : ι → Fin N → V.X.functionFieldˣ, (∀ a i, GlobalTheory.TrueGeo.SmallSec.fnMap V.j hη (c' a i) = c a i) ∧ GlobalTheory.FrameGlue.ModPFrames p U M c' := by
-  first | exact @GlobalTheory.FrameGlue.exists_modPFrames_of_bounds | exact GlobalTheory.FrameGlue.exists_modPFrames_of_bounds | (intros; apply GlobalTheory.FrameGlue.exists_modPFrames_of_bounds <;> assumption)
+  exact @GlobalTheory.FrameGlue.exists_modPFrames_of_bounds

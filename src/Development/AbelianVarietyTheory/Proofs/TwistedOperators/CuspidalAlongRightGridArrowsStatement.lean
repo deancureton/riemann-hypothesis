@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CuspidalAlongRightGridArrows
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.cuspidal_along_right_grid_arrows : (∀ D : D7, Gl
     ∀ e, IsIdemSum e (locPl ch.G t) → ∀ φ f, IsLocVec ch.W a.pair e (vacOf ch.rm a) φ f →
     ∀ (Q : PolF D (ch.G.pT a.pair).rank (ch.G.pS a.pair).rank) (F : Fn ch.G a.src), IsCuspListed ch.W.θ a.src F →
       LiftConv ch.W M a (ch.W.fock a.pair f Q) F ∧ IsCuspListed ch.W.θ a.tgt (liftA ch.W M a (ch.W.fock a.pair f Q) F) := by
-  first | exact @GlobalTheory.RightArrowCusp.cuspStep_right | exact GlobalTheory.RightArrowCusp.cuspStep_right | (intros; apply GlobalTheory.RightArrowCusp.cuspStep_right <;> assumption)
+  exact @GlobalTheory.RightArrowCusp.cuspStep_right

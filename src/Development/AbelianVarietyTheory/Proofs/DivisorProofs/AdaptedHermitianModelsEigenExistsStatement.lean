@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedHermitianModelsEigenExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.adapted_hermitian_models_eigen_exists : GlobalTheo
     H'.IsAdapted σ B W W₁ i₀ i₁ → M₁.IsGood B.ψ → ∀ (e₀ : Fn F n d →ₗ[ℂ] Fn F n d₁), IsEv B M M₁ 1 H'.ι (iso0 n H') e₀ → B.IsGood σ → M.IsGood B.ψ → (∃ r s r' s' : ℕ, X.IsHerm σ B r s ∧ W.IsSkew σ B r' s') →
     ∀ g ∈ SB (Fin n × Fin d → FiniteAdeleRing (𝓞 F) F), ∃ N : ℕ, 1 ≤ N ∧ ∀ (f : SInf F (Fin n × Fin d)) (ξ : Fin n → E),
       e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (pureA F f g)) ≠ 0 → ∀ i, ∃ o : 𝓞 E, (N : E) * ξ i = o := by
-  first | exact @GlobalTheory.ExpandDenomUniform.main | exact GlobalTheory.ExpandDenomUniform.main | (intros; apply GlobalTheory.ExpandDenomUniform.main <;> assumption)
+  exact @GlobalTheory.ExpandDenomUniform.main

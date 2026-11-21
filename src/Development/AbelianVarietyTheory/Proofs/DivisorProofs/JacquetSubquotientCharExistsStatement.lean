@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JacquetSubquotientCharExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsMidJacAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsDetProdConstAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittRankLeSignatureSum
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.jacquet_subquotient_char_exists : ∀ (k : Type) [
         GlobalTheory.ThK.DetProd.IsDetProdConst x x'
           (α * GlobalTheory.SmGL.absPow k ((((1 : ℝ) - a) / 2 + j + ((x : ℝ) - 1) / 2 : ℝ) : ℂ))
           (β * GlobalTheory.SmGL.absPow k ((((1 : ℝ) - a') / 2 + j' + ((x' : ℝ) - 1) / 2 : ℝ) : ℂ)) ρ.ρ := by
-  first | exact @GlobalTheory.ThK.MidJacCell.midJac_detInd | exact GlobalTheory.ThK.MidJacCell.midJac_detInd | (intros; apply GlobalTheory.ThK.MidJacCell.midJac_detInd <;> assumption)
+  exact @GlobalTheory.ThK.MidJacCell.midJac_detInd

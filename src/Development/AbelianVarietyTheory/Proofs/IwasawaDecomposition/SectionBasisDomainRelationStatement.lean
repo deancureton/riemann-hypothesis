@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.section_basis_domain_relation : ∀ (E : Type) [Fi
     LinA t.G t.PP.L N (toBase ((algebraMap W (FractionRing W)).comp φ)) b
       (fun i => GlobalTheory.OneBasis.fnR (algebraMap W (FractionRing W) (c i))) (GlobalTheory.OneBasis.fnR (algebraMap W (FractionRing W) a)) s' →
     LinA t.G t.PP.L N (toBase φ) b (fun i => GlobalTheory.OneBasis.fnR (c i)) (GlobalTheory.OneBasis.fnR a) s := by
-  first | exact @GlobalTheory.TorRef.linA_of_fractionRing | exact GlobalTheory.TorRef.linA_of_fractionRing | (intros; apply GlobalTheory.TorRef.linA_of_fractionRing <;> assumption)
+  exact @GlobalTheory.TorRef.linA_of_fractionRing

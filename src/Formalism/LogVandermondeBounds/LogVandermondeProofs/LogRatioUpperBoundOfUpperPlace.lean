@@ -1,5 +1,4 @@
 import Formalism.LogVandermondeBounds.UpperPlace
-import Mathlib
 
 namespace Formalism.LogVandermondeBounds.StandardLattice
 

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalFactorCharacterIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.local_factor_character_identity : ∀ (F E : Type)
       ((X.ν (Units.map (cA σ : AE F E →* AE F E) t) : ℂ) *
         ((absE F E (Units.map (cA σ : AE F E →* AE F E) t) : ℝ) : ℂ) ^ ((b + 2 - a') / 2))⁻¹ =
       GlobalTheory.ThK.LemF.fac X.α ((a' : ℝ) / 2) t := by
-  first | exact @GlobalTheory.ConeLawAChar.fac_div_conj | exact GlobalTheory.ConeLawAChar.fac_div_conj | (intros; apply GlobalTheory.ConeLawAChar.fac_div_conj <;> assumption)
+  exact @GlobalTheory.ConeLawAChar.fac_div_conj

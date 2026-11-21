@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSatakeGLOfHasSatakeParametersPrincipalSeries
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.IsSplitAtOfIsSplitPl
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsIrreducibleFixed
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.IsComplementaryProductOfIsCuspidal
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.hasSatakeGL_of_hasSatakeParameters_principalSeries
     letI := GlobalTheory.LocalData.complRel w
     haveI := GlobalTheory.LocalData.isLocalField w
     HasSatake π α → GlobalTheory.LFun.HasSatGL w π (Finset.univ.val.map α) := by
-  first | exact @GlobalTheory.LFun.SatBridge.hasSatGL_of_hasSatake | exact GlobalTheory.LFun.SatBridge.hasSatGL_of_hasSatake | (intros; apply GlobalTheory.LFun.SatBridge.hasSatGL_of_hasSatake <;> assumption)
+  exact @GlobalTheory.LFun.SatBridge.hasSatGL_of_hasSatake

@@ -10,4 +10,4 @@ open GlobalTheory GlobalTheory.CM GlobalTheory.LamF
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_pos_keyArchAt' : ThetaUnifAV → ∀ (K : Type) [Field K] [NumberField K] (x : KeyIn K) (σ : K →+* ℂ), ∃ t n : ℝ, 0 < t ∧ 0 < n ∧ ∀ T abelian₂ : MLine K, T.n σ = t → abelian₂.n σ = n → KeyArchAt x T abelian₂ σ := by
-  first | exact @GlobalTheory.LamF.KeyArch.exists_pos_keyArchAt | exact GlobalTheory.LamF.KeyArch.exists_pos_keyArchAt | (intros; apply GlobalTheory.LamF.KeyArch.exists_pos_keyArchAt <;> assumption)
+  exact @GlobalTheory.LamF.KeyArch.exists_pos_keyArchAt

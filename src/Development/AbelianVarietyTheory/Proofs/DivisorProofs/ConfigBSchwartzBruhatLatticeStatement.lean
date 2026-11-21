@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBSchwartzBruhatLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 open scoped TensorProduct
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.config_b_schwartz_bruhat_lattice : ∀ {F E : Type
     ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), ∃ Λ : AddSubgroup (Fv F B.v₁ ⊗[F] E), IsOpen (Λ : Set (Fv F B.v₁ ⊗[F] E)) ∧
       ∀ l l' : (AE F E)ˣ, compFin F E B.v₁ l'.1 - compFin F E B.v₁ l.1 ∈ Λ →
         locOp B.v₁ (G.M'.co.rho B.ψ (partFin B.v₁ (shiftB σ H H' l'))) φ = locOp B.v₁ (G.M'.co.rho B.ψ (partFin B.v₁ (shiftB σ H H' l))) φ := by
-  first | exact @GlobalTheory.ShiftLocConst.shiftB_locConst | exact GlobalTheory.ShiftLocConst.shiftB_locConst | (intros; apply GlobalTheory.ShiftLocConst.shiftB_locConst <;> assumption)
+  exact @GlobalTheory.ShiftLocConst.shiftB_locConst

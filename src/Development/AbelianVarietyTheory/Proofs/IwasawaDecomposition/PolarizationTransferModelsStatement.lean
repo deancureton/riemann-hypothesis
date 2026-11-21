@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.polarization_transfer_models : ∀ (E : Type) [Fie
     ∀ (W : Type) [CommRing W] [IsDomain W] [IsLocalRing W], CDvr W → ∀ (χ : Sp W ⟶ Z.X) (χ' : Sp W ⟶ Z'.X)
       (y : Sp (FractionRing W) ⟶ Xo'.XF c'), jK W ≫ χ' = y ≫ Z'.j → jK W ≫ χ = y ≫ r ≫ Z.j →
       idlAlong BD'.idealSheaf χ' = idlAlong BD.idealSheaf χ := by
-  first | exact @GlobalTheory.TraitOrder.idlAlong_eq | exact GlobalTheory.TraitOrder.idlAlong_eq | (intros; apply GlobalTheory.TraitOrder.idlAlong_eq <;> assumption)
+  exact @GlobalTheory.TraitOrder.idlAlong_eq

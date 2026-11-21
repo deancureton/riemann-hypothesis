@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAHaarUnfoldingMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_haar_unfolding_measure : ∀ (F E : Type)
       ∫ k, ∫ l, ∫ g₀ in G₁.M.dom, f (m l g₀ * k.1) * (((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ)) : ℝ) : ℂ) ∂G₁.M.μ ∂μ ∂μK =
         (((∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ENNReal.ofReal ((f (m l g₀ * k.1)).re) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK).toReal - (∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ENNReal.ofReal (-(f (m l g₀ * k.1)).re) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK).toReal : ℝ) : ℂ) +
         (((∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ENNReal.ofReal ((f (m l g₀ * k.1)).im) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK).toReal - (∫⁻ k, ∫⁻ l, ∫⁻ g₀ in G₁.M.dom, ENNReal.ofReal (-(f (m l g₀ * k.1)).im) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂G₁.M.μ ∂μ ∂μK).toReal : ℝ) : ℂ) * Complex.I := by
-  first | exact @GlobalTheory.IterBochner.integral_levi_eq_four | exact GlobalTheory.IterBochner.integral_levi_eq_four | (intros; apply GlobalTheory.IterBochner.integral_levi_eq_four <;> assumption)
+  exact @GlobalTheory.IterBochner.integral_levi_eq_four

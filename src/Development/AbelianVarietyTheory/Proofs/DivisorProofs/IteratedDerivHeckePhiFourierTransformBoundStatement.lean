@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IteratedDerivHeckePhiFourierTransformBound
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.OmegaFactorization
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PartialZetaFunctionalEquation
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.KFacDifferentiable
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.iteratedDeriv_heckePhiFourierTransform_bound : (�
   ∀ K : Set ℂ, IsCompact K → K ⊆ halfPlane → ∀ j : ℕ, ∃ s : ℕ, ∀ N : ℕ, ∃ C : ℝ,
     ∀ σ ∈ K, ∀ ν y : ℝ, ν ≠ 0 → y ≠ 0 →
       ‖iteratedDeriv j (hTrans σ ν) y‖ ≤ C * (|y| + |y|⁻¹) ^ s / (1 + |ν * y|) ^ N := by
-  first | exact @GlobalTheory.HeckeTwo.TermBoundDeriv.iteratedDeriv_hTrans_bound | exact GlobalTheory.HeckeTwo.TermBoundDeriv.iteratedDeriv_hTrans_bound | (intros; apply GlobalTheory.HeckeTwo.TermBoundDeriv.iteratedDeriv_hTrans_bound <;> assumption)
+  exact @GlobalTheory.HeckeTwo.TermBoundDeriv.iteratedDeriv_hTrans_bound

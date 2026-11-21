@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleLocalStabiliserInvariance
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.PairsOfSquareTriple
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.triple_local_stabiliser_invariance : GlobalTheory.
     ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∃ s : Finset (GlobalTheory.ThK.Fn F a (a + a')), (↑s ⊆ (GlobalTheory.ThK.PolData B G.M : Set (GlobalTheory.ThK.Fn F a (a + a')))) ∧
       ∀ Ψ ∈ Submodule.span ℂ (Set.range fun g : GlobalTheory.ThK.UAtSub σ G.W (GlobalTheory.AdelicU.evFin F v) => om (1, g.1) Φ),
         (∀ k ∈ K, om (1, k) Ψ = Ψ) → ∃ Ψ₀ ∈ Submodule.span ℂ (s : Set (GlobalTheory.ThK.Fn F a (a + a'))), G.M.I om (Ψ - Ψ₀) = 0 := by
-  first | exact @GlobalTheory.ThKAdm.adm | exact GlobalTheory.ThKAdm.adm | (intros; apply GlobalTheory.ThKAdm.adm <;> assumption)
+  exact @GlobalTheory.ThKAdm.adm

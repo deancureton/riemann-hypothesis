@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.generic_iso_divisor_class_iso_invariant : ∀ (O :
     (φ : Z.GenIso L L') (χ : Z.GenIso M M') (e : L ≅ M) (e' : L' ≅ M'),
     φ.hom ≫ Z.genRes.map e'.hom = Z.genRes.map e.hom ≫ χ.hom →
     (GlobalTheory.Vert.Model.GenIso.div φ hL hL').cls = (GlobalTheory.Vert.Model.GenIso.div χ hM hM').cls := by
-  first | exact @GlobalTheory.Vert.Model.GenIso.cls_div_eq_of_iso | exact GlobalTheory.Vert.Model.GenIso.cls_div_eq_of_iso | (intros; apply GlobalTheory.Vert.Model.GenIso.cls_div_eq_of_iso <;> assumption)
+  exact @GlobalTheory.Vert.Model.GenIso.cls_div_eq_of_iso

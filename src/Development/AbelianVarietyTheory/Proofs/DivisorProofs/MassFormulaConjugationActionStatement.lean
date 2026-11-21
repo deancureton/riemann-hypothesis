@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.massFormula_conjugation_action : ∀ (G : Type) [G
           (Γ ⊓ Subgroup.centralizer {((Quotient.out c : Γ) : G)} : Subgroup G) X,
         (1 / (Nat.card (MulAction.stabilizer (Γ ⊓ Subgroup.centralizer {((Quotient.out c : Γ) : G)} : Subgroup G)
           (Quotient.out b)) : ℂ)) * Φ (Quotient.out c) (Quotient.out b) := by
-  first | exact @GlobalTheory.MassConj.mass_formula_conj | exact GlobalTheory.MassConj.mass_formula_conj | (intros; apply GlobalTheory.MassConj.mass_formula_conj <;> assumption)
+  exact @GlobalTheory.MassConj.mass_formula_conj

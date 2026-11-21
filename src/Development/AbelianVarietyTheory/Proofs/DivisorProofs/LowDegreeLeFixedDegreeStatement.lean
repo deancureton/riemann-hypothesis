@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowDegreeLeFixedDegree
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.low_degree_le_fixed_degree : GlobalTheory.ThK.KP �
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W)
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       lowDegInf B G.M R.p ≤ fixDeg B G.M om := by
-  first | exact @GlobalTheory.IndLine.lowDegInf_le_fixDeg | exact GlobalTheory.IndLine.lowDegInf_le_fixDeg | (intros; apply GlobalTheory.IndLine.lowDegInf_le_fixDeg <;> assumption)
+  exact @GlobalTheory.IndLine.lowDegInf_le_fixDeg

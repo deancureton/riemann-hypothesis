@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawOneSourceOrthogonalSumTargets
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExternalProductOnHermitianSumSmulLeft
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR.Datum Formalism.IndefR.Links
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.seesaw_oneSource_orthogonalSumTargets : ∀ {D : D
       ∀ φ φ', IsThetaFunO ψ S A φ → IsThetaFunO ψ S B φ' → IsThetaFunO ψ S (GlobalTheory.Doubling.hsum A B) (box2 φ φ') ∧
         ∀ u g g₁, thetaKO ω u (GlobalTheory.SquareComm.blk A B (g, g₁)) (box2 φ φ') =
           c u g g₁ * (thetaKO ω₁ u g φ * thetaKO ω₂ u g₁ φ') := by
-  first | exact @GlobalTheory.SeesawSumTarget.seesaw_sum | exact GlobalTheory.SeesawSumTarget.seesaw_sum | (intros; apply GlobalTheory.SeesawSumTarget.seesaw_sum <;> assumption)
+  exact @GlobalTheory.SeesawSumTarget.seesaw_sum

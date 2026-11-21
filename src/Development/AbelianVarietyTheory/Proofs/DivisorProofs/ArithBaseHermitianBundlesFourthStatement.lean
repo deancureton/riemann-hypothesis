@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithBaseHermitianBundlesFourth
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -36,4 +35,4 @@ theorem _root_.GlobalTheory.T.arith_base_hermitian_bundles_fourth : Hypotheses2 
     (z : Sp (AlgebraicClosure D.what₂.LL) ⟶ G) (yt : Sp e.O ⟶ Y₀) (ch : ((VMetric.grLB (fl₀ a) i ((H a).pull π₀ rfl)).B.pull j).ι),
     z ≫ πG = y.1 → spMap e.O.subtype ≫ yt = z ≫ j → ⊤ ≤ yt ⁻¹ᵁ (VMetric.grLB (fl₀ a) i ((H a).pull π₀ rfl)).B.U (ch PUnit.unit) →
       ((1 : ℕ) : ℝ) * (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).lg v e y = Real.log (e.w (valAt z (φ (genAt (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).D (below y.1)) ^ 1 * (r a i ch : G.functionField)))) := by
-  first | exact @GlobalTheory.FlagCovFin.finNorm_of_flagCover | exact GlobalTheory.FlagCovFin.finNorm_of_flagCover | (intros; apply GlobalTheory.FlagCovFin.finNorm_of_flagCover <;> assumption)
+  exact @GlobalTheory.FlagCovFin.finNorm_of_flagCover

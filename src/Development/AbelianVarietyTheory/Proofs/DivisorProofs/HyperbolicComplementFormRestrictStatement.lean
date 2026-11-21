@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicComplementFormRestrict
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_complement_form_restrict : ∀ (F E : T
     (∀ z, σ (σ z) = z) → (∀ i j, σ (J j i) = J i j) → form σ J x x = 0 → form σ J y y = 0 →
     form σ J x y = 1 → (∀ u, form σ J (ι *ᵥ u) x = 0 ∧ form σ J (ι *ᵥ u) y = 0) → ιᵀ * J * ι.map σ = J₁ → J₁.det ≠ 0 →
     ∀ (a b : AE F E) (w : Fin n₁ → AE F E), a • incV F x + incM F ι *ᵥ w + b • incV F y = 0 → a = 0 ∧ w = 0 ∧ b = 0 := by
-  first | exact @GlobalTheory.LeviIndep.indep | exact GlobalTheory.LeviIndep.indep | (intros; apply GlobalTheory.LeviIndep.indep <;> assumption)
+  exact @GlobalTheory.LeviIndep.indep

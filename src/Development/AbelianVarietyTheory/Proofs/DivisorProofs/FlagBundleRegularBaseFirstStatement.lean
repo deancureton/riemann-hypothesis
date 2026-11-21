@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleRegularBaseFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_regular_base_first : ArCalc → ∀ (k
         ∑ n ∈ s, c n • lin (fun i => (n i : ℝ)) ^ (d + 1) →
       -∑ n ∈ s, c n * (comb (fam5 π w H flB fl A) n).archInt ((fam5 π w H flB fl A 0).dual.tens (fam5 π w H flB fl A 4)) (d + 1) hr =
         1 / (2 * (2 * (i : ℝ) + 1)) * ΨB ((X 1 - X 0) ^ (2 * i) * R) := by
-  first | exact @GlobalTheory.BlockPoint.EvenPow.archInt_evenPow | exact GlobalTheory.BlockPoint.EvenPow.archInt_evenPow | (intros; apply GlobalTheory.BlockPoint.EvenPow.archInt_evenPow <;> assumption)
+  exact @GlobalTheory.BlockPoint.EvenPow.archInt_evenPow

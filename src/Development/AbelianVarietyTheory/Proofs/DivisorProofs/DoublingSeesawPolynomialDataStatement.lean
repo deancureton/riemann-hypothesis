@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingSeesawPolynomialData
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.doubling_seesaw_polynomial_data : GlobalTheory.ThK
         ∀ g, GlobalTheory.Eis.CosetConv (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) g) ∧
       (∀ g, GlobalTheory.Cont.HolValueAt (fun s => GlobalTheory.Eis.cosetSum (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) g) (((n : ℂ) - (d : ℂ)) / 2) (Ψ g)) ∧
       κ ≠ 0 ∧ ∀ h h', GlobalTheory.ThKLiftCusp.kern M om Ψ' Φ₂' h h' = κ * (Ψ (i (h, h')) * (((χX (Matrix.GeneralLinearGroup.det h'.1))⁻¹ : Circle) : ℂ)) := by
-  first | exact @GlobalTheory.DblDatum.datum | exact GlobalTheory.DblDatum.datum | (intros; apply GlobalTheory.DblDatum.datum <;> assumption)
+  exact @GlobalTheory.DblDatum.datum

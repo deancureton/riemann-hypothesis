@@ -7,4 +7,4 @@ open MeasureTheory Matrix NumberField IsDedekindDomain Formalism.BasicNotions Fo
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.card_residueRing_completion_chosenUniformiser : ∀ (L : Type) [Field L] [NumberField L] (P : HeightOneSpectrum (𝓞 L)) (h : ((piP P : (P.adicCompletion L)ˣ) : P.adicCompletion L) ∈ OP P), Nat.card (kF (OP P) ((piP P : (P.adicCompletion L)ˣ) : P.adicCompletion L) h) = qP P := by
-  first | exact @GlobalTheory.ResidueCardUnif.card_kF_piP | exact GlobalTheory.ResidueCardUnif.card_kF_piP | (intros; apply GlobalTheory.ResidueCardUnif.card_kF_piP <;> assumption)
+  exact @GlobalTheory.ResidueCardUnif.card_kF_piP

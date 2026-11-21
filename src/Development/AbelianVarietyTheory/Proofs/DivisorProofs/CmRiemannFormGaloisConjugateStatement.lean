@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmRiemannFormGaloisConjugate
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.cm_riemann_form_galois_conjugate : ∀ (K : Type) 
       (∀ z : Fin n → ℂ, z ≠ 0 → 0 < (z ⬝ᵥ Hm.mulVec (star z)).re) →
       ∃ u ∈ lattice c y, ∃ u' ∈ lattice c y, (∑ i, h i * (φ i u * starRingEnd ℂ (φ i u')).im) ≠ 0 ∧
         0 < (∑ i, h i * (φ i u * starRingEnd ℂ (φ i u')).im) * ((fun j ↦ g (φ (e j) u)) ⬝ᵥ Hm.mulVec (star fun j ↦ g (φ (e j) u'))).im := by
-  first | exact @GlobalTheory.ConjRiemannPos.exists_pos_pair | exact GlobalTheory.ConjRiemannPos.exists_pos_pair | (intros; apply GlobalTheory.ConjRiemannPos.exists_pos_pair <;> assumption)
+  exact @GlobalTheory.ConjRiemannPos.exists_pos_pair

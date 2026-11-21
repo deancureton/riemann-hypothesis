@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBIntermediateModelEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_intermediate_model_evaluation : GlobalThe
     ∀ e₁, IsEv B G.M' Mm H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e₁ →
     ∀ e₂, IsEv B Mm G₁.M' 1 H'.ι (iso0 b H') e₂ →
       ∃ Φ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))), e₂ (e₁ Φ) ≠ 0 := by
-  first | exact @GlobalTheory.ThK.EvCompNe.comp_ne_zero | exact GlobalTheory.ThK.EvCompNe.comp_ne_zero | (intros; apply GlobalTheory.ThK.EvCompNe.comp_ne_zero <;> assumption)
+  exact @GlobalTheory.ThK.EvCompNe.comp_ne_zero

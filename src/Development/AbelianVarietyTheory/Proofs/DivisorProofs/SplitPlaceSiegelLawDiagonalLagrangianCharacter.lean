@@ -1,5 +1,4 @@
 import Mathlib
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReindexDblIncM
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrInt
 import Development.WeilBound.ThetaLifts.Reductions.WeilPairs.SplitPlaceSiegelLawDiagonalLagrangianCharacter
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.splitPlace_siegelLaw_diagonalLagrangian_character 
         GlobalTheory.LagrTheta.lagrInt ν 𝓕 ((diagCols (Fin nT) : Matrix (Fin nT ⊕ Fin nT) (Fin nT) (AF F ⊗[F] E)).submatrix finSumFinEquiv.symm id) f₀ ≠ 0 →
       ∀ e, IsSplitIdemF σ e → ∀ t : GL (Fin nT) (AF F ⊗[F] E),
         (∀ i j, (e + cAF σ e) * (t.1 - 1) i j = (t.1 - 1) i j) → α t = χS (Matrix.GeneralLinearGroup.det t) := by
-  first | exact @PositivityTheory.ThKW.lagrangian_integral_parseval | exact PositivityTheory.ThKW.lagrangian_integral_parseval | (intros; apply PositivityTheory.ThKW.lagrangian_integral_parseval <;> assumption)
+  exact @PositivityTheory.ThKW.lagrangian_integral_parseval

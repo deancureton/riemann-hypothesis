@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleMetricBaseExists
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_metric_base_exists : Hypotheses2 → H
     GlobalTheory.FlagInd.FlagInduces (O.var c) q E (rkB D.what₂.Tau O.N O.j) h H
       (fun a i => adlOf (O.Φ.C c) (O.met.hm c)
         (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))) Y₀ π₀ fl₀ ar₀ n₀ := by
-  first | exact @GlobalTheory.FlagBaseEx.exists_base_flagInduces | exact GlobalTheory.FlagBaseEx.exists_base_flagInduces | (intros; apply GlobalTheory.FlagBaseEx.exists_base_flagInduces <;> assumption)
+  exact @GlobalTheory.FlagBaseEx.exists_base_flagInduces

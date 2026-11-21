@@ -13,4 +13,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_cartan_system : ∀ (n : ℕ) (ε : Fin n → Bool), ∃ 𝒯 : Finset (Subgroup (UJ ε)), IsCartanSystem 𝒯 := by
-  first | exact @GlobalTheory.CartanFinite.exists_isCartanSystem | exact GlobalTheory.CartanFinite.exists_isCartanSystem | (intros; apply GlobalTheory.CartanFinite.exists_isCartanSystem <;> assumption)
+  exact @GlobalTheory.CartanFinite.exists_isCartanSystem

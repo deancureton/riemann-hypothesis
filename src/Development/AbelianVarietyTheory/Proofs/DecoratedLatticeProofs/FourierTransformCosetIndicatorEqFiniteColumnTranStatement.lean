@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.FourierTransformCosetIndicatorEqFiniteColumnTran
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.EntryAgree
 import Formalism.LocalToGlobal.Columns.ChainTw
 open NumberField IsDedekindDomain MeasureTheory ValuativeRel Matrix Formalism.BasicNotions Formalism.HermitianLatticesTheory Formalism.L2.DIV Formalism.L2.Col GlobalTheory.SplitWeil GlobalTheory.RootEx GlobalTheory.StepData GlobalTheory.TwBridge GlobalTheory.SymBridge
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.fourierTransform_cosetIndicator_eq_finiteColumnTra
     ∀ (y : HomE X.E (R.N (s + 1)) (R.N R.m)) (y' : Sp X.E (R.N (s + 1))), (∀ l, IntAt P.1 ((qOf P.1 : X.E) ^ cst.M * y' l)) →
       hat W.ψ ν (-1) (cosetInd (box _ (W.ϖ ^ cst.M)) (Submodule.Quotient.mk fun a => ι (y' (e' a)))) ((toLoc ι e e' y) (Sum.inr ())) =
         σ₀ (ftY sel mu cst P (atNL X.E (R.N R.m) (R.N R.m - 1) ∘ₗ y) y') := by
-  first | exact @GlobalTheory.TwBridge.TopHat.hat_coset_eq_ftY | exact GlobalTheory.TwBridge.TopHat.hat_coset_eq_ftY | (intros; apply GlobalTheory.TwBridge.TopHat.hat_coset_eq_ftY <;> assumption)
+  exact @GlobalTheory.TwBridge.TopHat.hat_coset_eq_ftY

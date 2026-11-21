@@ -8,4 +8,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.Mum
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.irreducibleSpace_fibre_semiAbelian_fieldPoint : ∀ (T : Scheme.{0}) (G : Over T) [GrpObj G], IsSemiAbelian G → ∀ (Ω : Type) [Field Ω] (x : Sp Ω ⟶ T), IrreducibleSpace (pullback G.hom x : Scheme.{0}) := by
-  first | exact @GlobalTheory.SemiAbFibre.irreducibleSpace_fibre | exact GlobalTheory.SemiAbFibre.irreducibleSpace_fibre | (intros; apply GlobalTheory.SemiAbFibre.irreducibleSpace_fibre <;> assumption)
+  exact @GlobalTheory.SemiAbFibre.irreducibleSpace_fibre

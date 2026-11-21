@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationHaarUnfoldingSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.doubling_configuration_haar_unfolding_second : ∀
     ∃ (μN : Measure (unip σ G.V H)) (c : ENNReal), μN.IsHaarMeasure ∧ c ≠ 0 ∧ c ≠ ⊤ ∧
     ∀ φ : UA σ G.V.J → ENNReal, Measurable φ →
       ∫⁻ g, φ g ∂G.M.μ = c * ∫⁻ k, ∫⁻ l, ∫⁻ g₀, ∫⁻ n, φ (n.1 * m l g₀ * k.1) * ENNReal.ofReal ((absE F E l : ℝ) ^ (1 - ((b + 2 : ℕ) : ℝ))) ∂μN ∂G₁.M.μ ∂μ ∂μK := by
-  first | exact @GlobalTheory.IwasawaLine.iwasawa_formula | exact GlobalTheory.IwasawaLine.iwasawa_formula | (intros; apply GlobalTheory.IwasawaLine.iwasawa_formula <;> assumption)
+  exact @GlobalTheory.IwasawaLine.iwasawa_formula

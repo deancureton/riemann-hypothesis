@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedEvaluationSeesaw
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adapted_evaluation_seesaw : GlobalTheory.ThK.KP �
     ∀ e : Fn F n d →ₗ[ℂ] Fn F n₁ d₁, IsEv B M M₂ H.ι H'.ι (isoA H H') e →
     ∃ e' : Fn F n d₁ →ₗ[ℂ] Fn F n₁ d₁, IsEv B M₁ M₂ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e' ∧
       ∃ c : ℂ, c ≠ 0 ∧ ∀ Ψ ∈ schA F (Fin n × Fin d), e' (e₀ Ψ) = c • e Ψ := by
-  first | exact @GlobalTheory.ThK.IsoComp.main | exact GlobalTheory.ThK.IsoComp.main | (intros; apply GlobalTheory.ThK.IsoComp.main <;> assumption)
+  exact @GlobalTheory.ThK.IsoComp.main

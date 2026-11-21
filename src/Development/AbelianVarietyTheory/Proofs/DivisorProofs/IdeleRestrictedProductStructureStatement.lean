@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdeleRestrictedProductStructure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.idele_restricted_product_structure : ∀ {F E : Ty
       (fun _ => (unitArch F E).codRestrict (idelesAt E (evI F)) unitArch_mem)
       (fun v => (unitAt E v).codRestrict (idelesAt E (evFin F v)) (unitAt_mem v))
       (fun v => (unitsAt E v).subgroupOf (idelesAt E (evFin F v))) := by
-  first | exact @GlobalTheory.IdeleRestr.isRestrGroup_ideles | exact GlobalTheory.IdeleRestr.isRestrGroup_ideles | (intros; apply GlobalTheory.IdeleRestr.isRestrGroup_ideles <;> assumption)
+  exact @GlobalTheory.IdeleRestr.isRestrGroup_ideles

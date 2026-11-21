@@ -4,4 +4,4 @@ import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.BlowPo
 open GlobalTheory.TorRef GlobalTheory.ShFam
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.blowup_exists_holds : BlowExSt := by
-  first | exact @GlobalTheory.TorRef.blowExSt | exact GlobalTheory.TorRef.blowExSt | (intros; apply GlobalTheory.TorRef.blowExSt <;> assumption)
+  exact @GlobalTheory.TorRef.blowExSt

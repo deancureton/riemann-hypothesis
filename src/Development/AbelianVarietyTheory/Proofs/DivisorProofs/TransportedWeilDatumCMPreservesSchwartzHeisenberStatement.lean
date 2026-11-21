@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TransportedWeilDatumCMPreservesSchwartzHeisenber
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 open scoped TensorProduct Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.transportedWeilDatum_CM_preserves_schwartz_heisenb
               GlobalTheory.WeilSchrodinger.IsTransportF σ B.ψ co ω om →
               (∀ p, ∀ φ ∈ schA F κ, om p φ ∈ schA F κ) ∧
               ∀ p w, ∀ φ ∈ schA F κ, om p (co.rho B.ψ w φ) = co.rho B.ψ (actAB (cA σ) p w) (om p φ) := by
-  first | exact @GlobalTheory.TransportHeisF.pres_impl | exact GlobalTheory.TransportHeisF.pres_impl | (intros; apply GlobalTheory.TransportHeisF.pres_impl <;> assumption)
+  exact @GlobalTheory.TransportHeisF.pres_impl

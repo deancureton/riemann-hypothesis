@@ -35,4 +35,4 @@ theorem _root_.GlobalTheory.T.pair_restricts_adapted_plane : GlobalTheory.FunPr.
           l₁ (dd₁.rho B.ψ (z * (diagCols (Fin n))ᵀ) φ) = l₁ φ) →
       ∀ μ : @Measure (Fin n → AE F E) (borel _), GlobalTheory.SiegelAvg.IsHaarB μ →
         ∀ Φ ∈ schA F ((Fin n × Fin d) ⊕ (Fin n × Fin d)), GlobalTheory.SiegelAvg.Conv μ (l₁ ∘ₗ ed) (GlobalTheory.SiegelAvg.starFam dd B.ψ (incV F H'.y)) Φ := by
-  first | exact @GlobalTheory.SiegelConv.avg_conv | exact GlobalTheory.SiegelConv.avg_conv | (intros; apply GlobalTheory.SiegelConv.avg_conv <;> assumption)
+  exact @GlobalTheory.SiegelConv.avg_conv

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsFourierIndexRationalPair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.TwistedInnerProducts.TwistPlacesOffPrimeQZero
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.BottomExistsIntegrable
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.exists_fourier_index_rational_pair : ∀ {D : D7} 
     IsBottomTri W i j X → ∀ (t : T), ∀ γ ∈ Formalism.L2.Theta.GQ A, ∀ a ∈ GinfC A, ∀ γ' ∈ Formalism.L2.Theta.GQ WW, ∀ a' ∈ GinfC WW,
       γ * a ∈ GfC A → γ' * a' ∈ GfC WW →
       ∃ k : FVar D WW.rank A.rank →₀ ℕ, pureTensorO W.ψ W.θ (GlobalTheory.Grid.neg A) WW (fun τ => -X.rA.s τ) X.rW.s X.rA.B X.rW.B (X.ω t (γ, γ') X.vac) (MvPolynomial.monomial k 1) 0 ≠ 0 := by
-  first | exact @GlobalTheory.MovedJetNZ.moved_vac_jet_ne_zero | exact GlobalTheory.MovedJetNZ.moved_vac_jet_ne_zero | (intros; apply GlobalTheory.MovedJetNZ.moved_vac_jet_ne_zero <;> assumption)
+  exact @GlobalTheory.MovedJetNZ.moved_vac_jet_ne_zero

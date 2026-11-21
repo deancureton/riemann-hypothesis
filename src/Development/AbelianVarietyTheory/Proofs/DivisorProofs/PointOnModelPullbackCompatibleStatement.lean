@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PointOnModelPullbackCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BLieLieComb
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.point_on_model_pullback_compatible : ∀ (E : Type
       w ≫ Y.oF.t.G.hom = spMap (algebraMap ℂ_[p] (DualNumber ℂ_[p])) ≫ yy ∧
       spMap (TrivSqZeroExt.fstHom ℂ_[p] ℂ_[p] ℂ_[p]).toRingHom ≫ w = (1 : Over.mk yy ⟶ Y.oF.t.G).left ∧
       LieTie P ψ X w := by
-  first | exact @GlobalTheory.FlatModel.LiftW.liftW | exact GlobalTheory.FlatModel.LiftW.liftW | (intros; apply GlobalTheory.FlatModel.LiftW.liftW <;> assumption)
+  exact @GlobalTheory.FlatModel.LiftW.liftW

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IteratedMultiplicationSubmoduleStable
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -25,4 +24,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eventually_place_ring : ∀ (E : Type) [Field E] [NumberField E] (l : ℕ) [Fact l.Prime] (lam : algebraicClosure ℚ ℂ →+* ℂ_[l]),
     Eventually l lam (IsPlaceRing E l lam) := by
-  first | exact @GlobalTheory.LatModel.eventually_isPlaceRing | exact GlobalTheory.LatModel.eventually_isPlaceRing | (intros; apply GlobalTheory.LatModel.eventually_isPlaceRing <;> assumption)
+  exact @GlobalTheory.LatModel.eventually_isPlaceRing

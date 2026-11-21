@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnramifiedLocalThetaEigen
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.unramified_local_theta_eigen : GlobalTheory.ThK.KP
       (∀ k ∈ KAt σ G.W v, ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v), ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
         Acts (evFin F v) (om (1, k)) φ φ₁ → Rf.p v φ = ξ → Rf.p v φ₁ = ξ) →
       ∃ c : ℂ, ξ = c • Rf.p v (G.M.vac v) := by
-  first | exact @GlobalTheory.IndLine.fixed_eq_smul_pVac | exact GlobalTheory.IndLine.fixed_eq_smul_pVac | (intros; apply GlobalTheory.IndLine.fixed_eq_smul_pVac <;> assumption)
+  exact @GlobalTheory.IndLine.fixed_eq_smul_pVac

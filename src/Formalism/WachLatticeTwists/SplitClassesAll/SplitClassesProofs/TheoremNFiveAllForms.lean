@@ -11,7 +11,6 @@ namespace Formalism.RepresentationBoundsCohomology.SplitClassesAll
 
 open Formalism.NG Formalism.RepresentationBoundsCohomology.BR Formalism.RepresentationBoundsCohomology.TorsionBoundCyclotomic Formalism.RepresentationBoundsCohomology.JL Formalism.RepresentationBoundsCohomology.JT Formalism.RepresentationBoundsCohomology.JS
 
-set_option maxHeartbeats 4000000 in
 theorem theorem_n_five_all_forms : WachTwistTheoremAllTwists := by
   intro ℓ _ O _ _ _ _ X X' T T' Z p q b h1 h2 d _ _ R' _ hdet Tc _ _ _ _ G _ r χ E e₁ δ ι _ _ colIdx hinj
     D j e' hE2 he1 π' ρπ hρπ t ht bl hbl ρk hsurj hblk _ _ _ _ hcard1 sE tE δO what₂ qs deg s vhE H0

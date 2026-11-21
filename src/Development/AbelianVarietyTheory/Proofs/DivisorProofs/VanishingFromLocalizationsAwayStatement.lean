@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VanishingFromLocalizationsAway
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -14,4 +13,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.eq_zero_of_local_covering : ∀ (B : Type) [CommRing B] (s : Set B), (∀ P : PrimeSpectrum B, ∃ f ∈ s, f ∉ P.asIdeal) → ∀ b : B, (∀ f ∈ s, algebraMap B (Localization.Away f) b = 0) → b = 0 := by
-  first | exact @GlobalTheory.PDiv.eq_zero_of_away_eq_zero_of_forall_prime | exact GlobalTheory.PDiv.eq_zero_of_away_eq_zero_of_forall_prime | (intros; apply GlobalTheory.PDiv.eq_zero_of_away_eq_zero_of_forall_prime <;> assumption)
+  exact @GlobalTheory.PDiv.eq_zero_of_away_eq_zero_of_forall_prime

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsFourierTransform
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.matched_maps_fourier_transform : GlobalTheory.FunP
       (∀ v : T, ∀ g ∈ GlobalTheory.HoweGlobal.opFin G om v.1, ∀ t, L t ∈ N →
         L (TensorProduct.map LinearMap.id (PiTensorProduct.map (Function.update
           (fun w : T => (LinearMap.id : ↥(GlobalTheory.WeilM.SB (Fin a × Fin (a + a') → Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Fv F w.1)) →ₗ[ℂ] _)) v g)) t) ∈ N) := by
-  first | exact @GlobalTheory.HoweGlobal.tensor_transfer | exact GlobalTheory.HoweGlobal.tensor_transfer | (intros; apply GlobalTheory.HoweGlobal.tensor_transfer <;> assumption)
+  exact @GlobalTheory.HoweGlobal.tensor_transfer

@@ -20,4 +20,4 @@ open GlobalTheory.AbLaw
 open GlobalTheory.KeyPow GlobalTheory.KeyKa
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exactKeyFormula_proof : KeyFormula := by
-  first | exact @GlobalTheory.KeyFam.keyFormula_holds | exact GlobalTheory.KeyFam.keyFormula_holds | (intros; apply GlobalTheory.KeyFam.keyFormula_holds <;> assumption)
+  exact @GlobalTheory.KeyFam.keyFormula_holds

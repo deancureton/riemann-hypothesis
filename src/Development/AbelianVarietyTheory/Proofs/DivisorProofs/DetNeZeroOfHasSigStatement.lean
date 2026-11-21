@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DetNeZeroOfHasSig
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -11,4 +10,4 @@ open GlobalTheory.Doubling (absE)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.det_ne_zero_of_hasSig_divisor : ∀ (n : ℕ) (M : Matrix (Fin n) (Fin n) ℂ) (r s : ℕ), HasSig M r s → M.det ≠ 0 := by
-  first | exact @GlobalTheory.SigDet.det_ne_zero_of_hasSig | exact GlobalTheory.SigDet.det_ne_zero_of_hasSig | (intros; apply GlobalTheory.SigDet.det_ne_zero_of_hasSig <;> assumption)
+  exact @GlobalTheory.SigDet.det_ne_zero_of_hasSig

@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.local_height_prime_sum : Hypotheses2 → Hypothese
       supN e.w (((chiAct O.S.Dw b α).map (Int.castRingHom (AlgebraicClosure D.what₂.LL))).mulVec ((M a).mulVec u) -
         (M a).mulVec fun l => algebraMap D.what₂.LL (AlgebraicClosure D.what₂.LL) (letterEmb O l (α : D.host.E)) * u l) ≤
         e.w (p : AlgebraicClosure D.what₂.LL) ^ k := by
-  first | exact @GlobalTheory.EqHalf.equi_of_ptData | exact GlobalTheory.EqHalf.equi_of_ptData | (intros; apply GlobalTheory.EqHalf.equi_of_ptData <;> assumption)
+  exact @GlobalTheory.EqHalf.equi_of_ptData

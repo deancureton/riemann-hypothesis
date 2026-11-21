@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.HasSumUnfoldingOfComplexInvariantIntegrable
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.AdelicUnitriangularMulMemUnipotentTimesIntegral
 open NumberField IsDedekindDomain Matrix Formalism.UG GlobalTheory.CuspRep MeasureTheory
 open scoped ENNReal
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.hasSum_unfolding_of_complex_invariant_integrable :
     ∀ B : α → ℂ, Measurable B → Integrable B (μ.restrict 𝓕) → (∀ h ∈ H, ∀ x, B (h x) = B x) →
       (∀ i, Integrable (fun x => B (T i x)) (μ.restrict A)) ∧
         HasSum (fun i => (c i : ℂ) * ∫ x in A, B (T i x) ∂μ) (∫ x in 𝓕, B x ∂μ) := by
-  first | exact @GlobalTheory.UnfoldCplx.hasSum_complex | exact GlobalTheory.UnfoldCplx.hasSum_complex | (intros; apply GlobalTheory.UnfoldCplx.hasSum_complex <;> assumption)
+  exact @GlobalTheory.UnfoldCplx.hasSum_complex

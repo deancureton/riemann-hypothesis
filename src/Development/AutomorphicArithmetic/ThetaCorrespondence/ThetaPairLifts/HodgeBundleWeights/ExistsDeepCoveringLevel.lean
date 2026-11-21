@@ -26,5 +26,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_deep_level_exists : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → DeepEx := by
-  first | exact @_root_.GlobalTheory.CovTop.DeepExist.exists_deep_covering_level | exact _root_.GlobalTheory.CovTop.DeepExist.exists_deep_covering_level | (intros; apply _root_.GlobalTheory.CovTop.DeepExist.exists_deep_covering_level <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.DeepExist.exists_deep_covering_level
 end

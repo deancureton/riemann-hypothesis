@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSelfDualScaledHermitianInert
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_self_dual_scaled_hermitian_inert : ∀ (F E
     (B : Base F E) (d r s : ℕ) (W : Spc F E d), IsCMExt F E σ → Algebra.Unramified (𝓞 F) (𝓞 E) → W.IsSkew σ B r s →
     ∀ (v : Pl F) (w : HeightOneSpectrum (𝓞 E)), w.under (𝓞 F) = v → Formalism.UG.IsInertAt F E v w →
     ∃ δ : E, δ ≠ 0 ∧ IsHermND σ (δ • W.J.map σ) ∧ IsSelfDualAt σ (δ • W.J.map σ) W.L v := by
-  first | exact @GlobalTheory.InertSkewRescale.exists_herm_selfDualAt | exact GlobalTheory.InertSkewRescale.exists_herm_selfDualAt | (intros; apply GlobalTheory.InertSkewRescale.exists_herm_selfDualAt <;> assumption)
+  exact @GlobalTheory.InertSkewRescale.exists_herm_selfDualAt

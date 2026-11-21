@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitCoefficientNormOneTwist
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitPlaceEmbeddingPropertiesStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalComponentRationalIdeleStatement
@@ -18,4 +17,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.split_coefficient_norm_one_twist : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → L.IsSp → ∀ (g : GL (Fin 2) (Qv v)) (ξ : K) (κ : Kˣ), κ ∈ K1 K → ∀ x : (Qv v)ˣ,
     fL L g (ξ * κ) x * cW L κ = fL L g ξ (x * k1 L κ) := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.SplitNormOne.fL_mul_norm_one | exact GlobalTheory.CompanionTheory.FexTheta.SplitNormOne.fL_mul_norm_one | (intros; apply GlobalTheory.CompanionTheory.FexTheta.SplitNormOne.fL_mul_norm_one <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.SplitNormOne.fL_mul_norm_one

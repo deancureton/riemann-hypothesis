@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmDeRhamPeriodMapEquivariant
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.cm_de_rham_period_map_equivariant : GlobalTheory.P
     ∃ P : E →+ HdR X.A, Submodule.span ℂ (Set.range P) = ⊤ ∧
       ∀ (a : E) (α : X.A ⟶ X.A) [IsMonHom α], (∀ w', U.u.ex (fun j ↦ φ (U.e j) a * w' j) = U.u.ex w' ≫ α) →
         ∀ x, push (dp0 ℂ) (𝟙 _) α (P x) = P (a * x) := by
-  first | exact @GlobalTheory.PeriodLattice.periods_unif | exact GlobalTheory.PeriodLattice.periods_unif | (intros; apply GlobalTheory.PeriodLattice.periods_unif <;> assumption)
+  exact @GlobalTheory.PeriodLattice.periods_unif

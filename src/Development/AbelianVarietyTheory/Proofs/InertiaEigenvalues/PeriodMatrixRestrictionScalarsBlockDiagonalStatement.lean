@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.PeriodMatrixRestrictionScalarsBlockDiagonal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.periodMatrix_restrictionScalars_blockDiagonal : �
     ∃ Q₀ : GL (n × Fin r) (Bst P), ∀ g : ↥(GK K),
       (ρ₀ g : Matrix (n × Fin r) (n × Fin r) ℚ_[l]).map (algebraMap ℚ_[l] (Bst P)) *
         (Q₀ : Matrix (n × Fin r) (n × Fin r) (Bst P)).map (actSt P (g : GQ l)) = Q₀ := by
-  first | exact @GlobalTheory.PMon.period_resScalars | exact GlobalTheory.PMon.period_resScalars | (intros; apply GlobalTheory.PMon.period_resScalars <;> assumption)
+  exact @GlobalTheory.PMon.period_resScalars

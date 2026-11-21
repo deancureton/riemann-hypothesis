@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SiegelFamilyBoundaryDivisor
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsSiegPull
 open AlgebraicGeometry CategoryTheory Limits NumberField IsLocalRing Formalism.L2.Pj
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Out ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.siegel_family_boundary_divisor : ∀ (E : Type) [F
       ((residue A).comp (Scheme.stalkClosedPointTo ξ).hom).FormallyUnramified ∧ P.TorsionIso ∧
       Module.Free ℤ P.D.toPre.X ∧ Module.finrank ℤ P.D.toPre.X ≤ (Module.finrank ℚ E / 2 * (D.p + D.q)) ∧ IsCone id φ γ ∧
       ∀ y, ∃ (r : A) (u : Aˣ), PsiCoord P.D.toPre y r ∧ r ^ 2 = u * ∏ i, τ i ^ (k * (γ i y y).toNat) := by
-  first | exact @GlobalTheory.SiegChart.exists_local_cone | exact GlobalTheory.SiegChart.exists_local_cone | (intros; apply GlobalTheory.SiegChart.exists_local_cone <;> assumption)
+  exact @GlobalTheory.SiegChart.exists_local_cone

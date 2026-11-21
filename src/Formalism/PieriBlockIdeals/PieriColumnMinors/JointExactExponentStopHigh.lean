@@ -1,6 +1,5 @@
 import Formalism.PieriBlockIdeals.StatementJ
 import Formalism.RankGapBounds.RankGapProofs.CardLargePrimeFactorsLeOneHolds
-import Mathlib
 import Formalism.PieriBlockIdeals.PieriColumnMinors.MaxValEqZeroOfLt
 import Formalism.PieriBlockIdeals.PieriColumnMinors.LocalComponentGL
 

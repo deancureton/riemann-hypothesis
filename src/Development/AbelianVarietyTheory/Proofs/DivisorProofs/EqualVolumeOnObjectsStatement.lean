@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.equal_volume_on_objects : Hypotheses2 → HypothesesH → OnObj fun _ _ A _ _ _ => EqVol A := by
-  first | exact @GlobalTheory.EqVolObj.eqVol_onObj | exact GlobalTheory.EqVolObj.eqVol_onObj | (intros; apply GlobalTheory.EqVolObj.eqVol_onObj <;> assumption)
+  exact @GlobalTheory.EqVolObj.eqVol_onObj

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineStabilizerClosed
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarOfIsCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatHomOfGAdSymm
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.line_stabilizer_closed : ∀ (F E : Type) [Field F
     IsClosed (GlobalTheory.IwLine.lineStab σ J x : Set (UA σ J)) ∧
     IsClosed {u : UA σ J | mat u *ᵥ incV F x = incV F x ∧
       ∀ z, ∃ a : AE F E, mat u *ᵥ (incM F ι *ᵥ z) = incM F ι *ᵥ z + a • incV F x} := by
-  first | exact @GlobalTheory.LineStabClosed.isClosed_lineStab_unip | exact GlobalTheory.LineStabClosed.isClosed_lineStab_unip | (intros; apply GlobalTheory.LineStabClosed.isClosed_lineStab_unip <;> assumption)
+  exact @GlobalTheory.LineStabClosed.isClosed_lineStab_unip

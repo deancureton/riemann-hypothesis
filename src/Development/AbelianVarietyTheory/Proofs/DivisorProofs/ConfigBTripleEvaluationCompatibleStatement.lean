@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBTripleEvaluationCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_triple_evaluation_compatible : GlobalTheo
         (∀ v, ev v (G.M'.vac v) = G₁.M'.vac v ∧ (SB _).map (ev v) = SB _) ∧
         ∀ f φ, (∀ v, φ v ∈ SB _) → (∀ᶠ v in cofinite, φ v = G.M'.vac v) → S (pure f φ) = pure (ei f) fun v => ev v (φ v)) →
       ∃ c : ℂ, ∀ Φ ∈ schA F (Fin (b + 2) × Fin (a + (b + 2))), S Φ = c • e' Φ := by
-  first | exact @GlobalTheory.ThK.EvUniqB.uniq | exact GlobalTheory.ThK.EvUniqB.uniq | (intros; apply GlobalTheory.ThK.EvUniqB.uniq <;> assumption)
+  exact @GlobalTheory.ThK.EvUniqB.uniq

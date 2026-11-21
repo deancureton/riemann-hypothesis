@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaSeriesFactorizableRestrictionFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 open GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.LFun
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.theta_series_factorizable_restriction_finite : Glo
             (∑ i, pure (f' i) (φ' i)) x * starRingEnd ℂ (G.M'.co.rho B.ψ u (∑ i, pure (f' i) (φ' i)) x)) =
           @MeasureTheory.integral _ ℂ _ _ (borel _) μ fun x => pure f φ x * starRingEnd ℂ (G.M'.co.rho B.ψ u (pure f φ) x)) →
     ∃ c : ℂ, ∑ i, pure (f' i) (φ' i) = c • pure f φ := by
-  first | exact @GlobalTheory.SplitSvN.scalar_of_coeff | exact GlobalTheory.SplitSvN.scalar_of_coeff | (intros; apply GlobalTheory.SplitSvN.scalar_of_coeff <;> assumption)
+  exact @GlobalTheory.SplitSvN.scalar_of_coeff

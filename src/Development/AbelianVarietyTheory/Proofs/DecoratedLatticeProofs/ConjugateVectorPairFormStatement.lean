@@ -13,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.MiTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.conjugate_vector_pair_form : GlobalTheory.Published.DiscreteSeriesClassification → GlobalTheory.Published.CuspRapidDecay → ∀ {D : D7} {L : SizeData₂ D} {hT : GatTies D} {Gi : Formalism.MainNotions.G.Inst D L} {Gl : Formalism.MainNotions.G.LatInst D} {Kc : Formalism.MainNotions.G.Consts} {Yd : DivX D} {cX : ExtraC} {ex : Extra D L hT Gi Gl Kc Yd cX} (W : RealPack ex), BotHyp W → ∀ v : (W.Q.Rl.MY 0).Vec, ConjVec W.S.X W.Q.instEq W.Q.Rl.θ (W.Q.Rl.MY 0) v → PairForm W v := by
-  first | exact @GlobalTheory.MiTop.PairingL2.pairForm | exact GlobalTheory.MiTop.PairingL2.pairForm | (intros; apply GlobalTheory.MiTop.PairingL2.pairForm <;> assumption)
+  exact @GlobalTheory.MiTop.PairingL2.pairForm

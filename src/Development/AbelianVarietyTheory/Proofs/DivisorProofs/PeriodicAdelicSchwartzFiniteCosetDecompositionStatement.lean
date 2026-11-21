@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PeriodicAdelicSchwartzFiniteCosetDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryPartnerDiagStatement
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.periodic_adelicSchwartz_finite_coset_decomposition
       ∀ Ψ ∈ GlobalTheory.WeilM.schA F κ, (∀ x ∈ L, ∀ z, Ψ (z + GlobalTheory.WeilCont.adeleJoin F 0 x) = Ψ z) →
         (∀ z, Ψ z ≠ 0 → (fun i => (z i).2) ∈ K) →
         ∃ f : Fin m → SchwartzMap (κ → mixedEmbedding.mixedSpace F) ℂ, Ψ = ∑ i, GlobalTheory.WeilM.pureA F (f i) (g i) := by
-  first | exact @GlobalTheory.WeilCont.schA_periodic_finite_cosets | exact GlobalTheory.WeilCont.schA_periodic_finite_cosets | (intros; apply GlobalTheory.WeilCont.schA_periodic_finite_cosets <;> assumption)
+  exact @GlobalTheory.WeilCont.schA_periodic_finite_cosets

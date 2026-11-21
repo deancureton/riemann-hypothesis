@@ -9,4 +9,4 @@ open scoped TensorProduct Matrix Topology
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.parameters_ok_of_laws : ∀ (D : D7) (J : CoreJ D) (T : Top D) (EX : ErrX D) (p : ℕ), LawsJ J → LawsP T → LawsSh T → T.toCore = J.toCore → T.Q.Canon → FieldOK0 D p → HalfEX T.toCore EX → (∀ j, InR D j → ∀ n, (T.dδ j n).l₂.A = 1 ∧ (T.dδ j n).pd = p) → ∀ j, InR D j → ParOK T EX p j := by
-  first | exact @GlobalTheory.FinalJoin2.liftIndexParameterConditions_of_coreAndShortLaws | exact GlobalTheory.FinalJoin2.liftIndexParameterConditions_of_coreAndShortLaws | (intros; apply GlobalTheory.FinalJoin2.liftIndexParameterConditions_of_coreAndShortLaws <;> assumption)
+  exact @GlobalTheory.FinalJoin2.liftIndexParameterConditions_of_coreAndShortLaws

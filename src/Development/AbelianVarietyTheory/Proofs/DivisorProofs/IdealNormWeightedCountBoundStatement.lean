@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IdealNormWeightedCountBound
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.ideal_norm_weighted_count_bound : ∀ (F E : Type)
             (I ⊓ FractionalIdeal.spanSingleton (nonZeroDivisors (𝓞 E)) (c : E)⁻¹ * I₀) : ℝ) *
             ∏ w, (A w + ‖Algebra.norm w.Completion (inclR (F := F) w.Completion (c : E))‖ * B w)) ^ (-s)) ≤
           ENNReal.ofReal C * ENNReal.ofReal (((FractionalIdeal.absNorm I : ℝ) * ∏ w, A w) ^ (1 - s)) := by
-  first | exact @GlobalTheory.IdealBoxSum.lattice_sum_le | exact GlobalTheory.IdealBoxSum.lattice_sum_le | (intros; apply GlobalTheory.IdealBoxSum.lattice_sum_le <;> assumption)
+  exact @GlobalTheory.IdealBoxSum.lattice_sum_le

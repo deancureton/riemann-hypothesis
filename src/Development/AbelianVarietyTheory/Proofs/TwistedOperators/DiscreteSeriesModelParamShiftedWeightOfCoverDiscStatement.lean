@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.DiscreteSeriesModelParamShiftedWeightOfCoverDisc
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.L2UnitaryRepresentationData
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.S Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Datum
 open Formalism.IndefR.Mult (DSModel dualPar parA parB)
@@ -16,4 +15,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.ArchRec
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.discreteSeriesModelParamShiftedWeight_of_coverDiscreteSeries : ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHecke.BarMatrix.ModelsAreCoverSeries D → DirectBridge D := by
-  first | exact @GlobalTheory.ArchRec.Direct.directBridge | exact GlobalTheory.ArchRec.Direct.directBridge | (intros; apply GlobalTheory.ArchRec.Direct.directBridge <;> assumption)
+  exact @GlobalTheory.ArchRec.Direct.directBridge

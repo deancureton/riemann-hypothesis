@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSumNormSumEqual
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.hermitian_sum_norm_sum_equal : ∀ (F E : Type) [F
     ∀ (w : InfinitePlace F) (k k' : ℕ) (z : Fin k → w.Completion ⊗[F] E) (z' : Fin k' → w.Completion ⊗[F] E),
     ∑ i, sigR w.Completion σ (z i) * z i = ∑ i, sigR w.Completion σ (z' i) * z' i →
     ∑ i, Algebra.norm w.Completion (z i) = ∑ i, Algebra.norm w.Completion (z' i) := by
-  first | exact @GlobalTheory.CMNormSum.sum_norm_eq | exact GlobalTheory.CMNormSum.sum_norm_eq | (intros; apply GlobalTheory.CMNormSum.sum_norm_eq <;> assumption)
+  exact @GlobalTheory.CMNormSum.sum_norm_eq

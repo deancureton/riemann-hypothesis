@@ -1,5 +1,4 @@
 import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.CndDiamOfKnown
-import Mathlib
 import Formalism.SharpRestriction.CuspSpanNormBounds.SGauge
 import Formalism.FlagUnipotentLattices.HeightThresholdInequalities
 

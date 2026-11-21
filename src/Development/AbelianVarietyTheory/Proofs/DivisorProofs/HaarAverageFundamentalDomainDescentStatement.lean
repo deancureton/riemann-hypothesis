@@ -14,4 +14,4 @@ open GlobalTheory.SWLink
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.haar_average_fundamental_domain_descent : ∀ (D : D7) (V : HSp D) (ι : UD D (-V.gram) ≃ₜ* GA D V), (∀ h, h ∈ ratU D.sp.cm.sig (-V.gram) ↔ ι h ∈ GQ V) → ∀ ν : Measure (GA D V), ν.IsHaarMeasure → ∃ (ν' : Measure (UD D (-V.gram))) (𝓕 : Set (UD D (-V.gram))), ν'.IsHaarMeasure ∧ IsFundamentalDomain (ratU D.sp.cm.sig (-V.gram)) 𝓕 ν' ∧ ∀ f : GA D V → ℂ, LeftInv (GQ V) f → ⨍ h in 𝓕, f (ι h) ∂ν' = ⨍ q, descend (GQ V) f q ∂autMeasure V ν := by
-  first | exact @GlobalTheory.SWLink.exists_fundDom_mean | exact GlobalTheory.SWLink.exists_fundDom_mean | (intros; apply GlobalTheory.SWLink.exists_fundDom_mean <;> assumption)
+  exact @GlobalTheory.SWLink.exists_fundDom_mean

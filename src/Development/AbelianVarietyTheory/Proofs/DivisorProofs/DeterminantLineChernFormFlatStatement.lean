@@ -11,4 +11,4 @@ theorem _root_.GlobalTheory.T.determinant_line_chern_form_flat : Hypotheses2 →
     ∀ σ, LeviEq ((T.M c).A σ)
       ((T.K B c).c1 (T.L B c (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0) + (T.K B c).ar g) σ)
       (LocPot.ofFun fun _ => 0) := by
-  first | exact @GlobalTheory.DetLineFlat.first_chern_form_determinant_line_eq_zero | exact GlobalTheory.DetLineFlat.first_chern_form_determinant_line_eq_zero | (intros; apply GlobalTheory.DetLineFlat.first_chern_form_determinant_line_eq_zero <;> assumption)
+  exact @GlobalTheory.DetLineFlat.first_chern_form_determinant_line_eq_zero

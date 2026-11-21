@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsNhdsTransportedActionFiniteOpenSubgroups
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUSplittingInl
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ImportsBis
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledUnitaryPartnerDiagStatement
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.exists_nhds_transportedAction_finite_openSubgroups
         co.e (GlobalTheory.WeilM.actAB (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.cA D.sp.cm.sig) p
           (co.e.symm (GlobalTheory.WeilCont.adeleJoin D.host.F 0 x', GlobalTheory.WeilCont.adeleJoin D.host.F 0 y'))) =
           (GlobalTheory.WeilCont.adeleJoin D.host.F 0 x, GlobalTheory.WeilCont.adeleJoin D.host.F 0 y) := by
-  first | exact @GlobalTheory.WeilTransNbhdD.exists_nhds_finite_preimage_D | exact GlobalTheory.WeilTransNbhdD.exists_nhds_finite_preimage_D | (intros; apply GlobalTheory.WeilTransNbhdD.exists_nhds_finite_preimage_D <;> assumption)
+  exact @GlobalTheory.WeilTransNbhdD.exists_nhds_finite_preimage_D

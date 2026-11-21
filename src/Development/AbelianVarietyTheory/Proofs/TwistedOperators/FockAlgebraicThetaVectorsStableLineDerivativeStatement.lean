@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FockAlgebraicThetaVectorsStableLineDerivative
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRtensOp
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.fockAlgebraicThetaVectors_stable_lineDerivative : 
     ∀ (ε : Bool) (M X : HSp D) (A : Fr M) (B : Fr X), ∀ Φ ∈ algF ψ θ ε A B,
       ∀ L : ℝ →+ WO (sgn ε M) X, Continuous L → (∀ t, (L t).map (finPart D) = 0) →
         (fun x => deriv (fun t : ℝ => heisO ψ (sgn ε M) X (L t) Φ x) 0) ∈ algF ψ θ ε A B := by
-  first | exact @GlobalTheory.SquareComm.LineDeriv.deriv_line_mem_algF | exact GlobalTheory.SquareComm.LineDeriv.deriv_line_mem_algF | (intros; apply GlobalTheory.SquareComm.LineDeriv.deriv_line_mem_algF <;> assumption)
+  exact @GlobalTheory.SquareComm.LineDeriv.deriv_line_mem_algF

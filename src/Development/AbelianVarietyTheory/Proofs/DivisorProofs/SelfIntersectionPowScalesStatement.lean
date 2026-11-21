@@ -20,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.self_intersection_pow_scales : GlobalTheory.Published.ArCalc → ∀ (k : Type) [CommRing k] (X : Scheme.{0}) [IsIntegral X] (p : X ⟶ Sp k) (D : ℕ),
     IsArithVar p D → ∀ (L : HermLB p) (a : ℝ), L.IsSelfInter a → ∀ e : ℕ,
       (L.pow e).IsSelfInter ((e : ℝ) ^ (D + 1) * a) := by
-  first | exact @GlobalTheory.SelfInterPow.isSelfInter_pow | exact GlobalTheory.SelfInterPow.isSelfInter_pow | (intros; apply GlobalTheory.SelfInterPow.isSelfInter_pow <;> assumption)
+  exact @GlobalTheory.SelfInterPow.isSelfInter_pow

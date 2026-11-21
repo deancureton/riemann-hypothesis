@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzMapBarrelledSpace
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsINeZeroKind
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.NotIsCompactUnivFv
 
@@ -15,4 +14,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.Local
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.schwartzMap_barrelledSpace' : ∀ (V : Type) [NormedAddCommGroup V] [NormedSpace ℝ V] [FiniteDimensional ℝ V], BarrelledSpace ℂ (SchwartzMap V ℂ) := by
-  first | exact @GlobalTheory.schwartzMap_barrelledSpace | exact GlobalTheory.schwartzMap_barrelledSpace | (intros; apply GlobalTheory.schwartzMap_barrelledSpace <;> assumption)
+  exact @GlobalTheory.schwartzMap_barrelledSpace

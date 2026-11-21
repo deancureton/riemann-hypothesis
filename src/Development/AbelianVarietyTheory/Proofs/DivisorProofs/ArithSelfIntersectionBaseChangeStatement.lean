@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.arith_self_intersection_base_change : GlobalTheory
     ∀ (ι : Type) [Fintype ι] (L : ι → HermLB p) (Φ : MvPolynomial (Option ι) ℝ →ₗ[ℝ] ℝ),
       IsArFun (fun o : Option ι => o.elim (M.pull ρ hρ) L) D Φ → ∀ n : ι → ℤ,
         Φ (MvPolynomial.X none * rename some (lin fun i => (n i : ℝ)) ^ D) = 0 := by
-  first | exact @GlobalTheory.ProjCurveZero.projection_degree_zero | exact GlobalTheory.ProjCurveZero.projection_degree_zero | (intros; apply GlobalTheory.ProjCurveZero.projection_degree_zero <;> assumption)
+  exact @GlobalTheory.ProjCurveZero.projection_degree_zero

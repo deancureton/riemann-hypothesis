@@ -19,4 +19,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_dual : ∀ (F E : Type) [F
           M₁.co.rho B.ψ z ((om₁ (1, h₁⁻¹) ∘ₗ e ∘ₗ om (1, m)) Φ)) ∧
         (∀ u ∈ iso0 n H', ∀ Φ ∈ schA F (Fin n × Fin d), (om₁ (1, h₁⁻¹) ∘ₗ e ∘ₗ om (1, m)) (M.co.rho B.ψ u Φ) =
           (om₁ (1, h₁⁻¹) ∘ₗ e ∘ₗ om (1, m)) Φ) := by
-  first | exact @GlobalTheory.EvTwist.conj_ev | exact GlobalTheory.EvTwist.conj_ev | (intros; apply GlobalTheory.EvTwist.conj_ev <;> assumption)
+  exact @GlobalTheory.EvTwist.conj_ev

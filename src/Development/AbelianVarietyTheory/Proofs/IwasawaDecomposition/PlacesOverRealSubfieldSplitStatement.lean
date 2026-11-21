@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.places_over_real_subfield_split : GlobalTheory.Pub
       ∃ L : LevT D T i k, LevLawsT D T Pq In.θ i j b k Q ψ L ∧
         FiniteDimensional (FractionRing (T.Ok i k))
           ↥(NX.TypeSpF D.host.E D.R.nV (FractionRing (T.Ok i k)) (rhoKT D T wt i j b k) L.J L.χ) := by
-  first | exact @GlobalTheory.LevForms.levDatum_forms | exact GlobalTheory.LevForms.levDatum_forms | (intros; apply GlobalTheory.LevForms.levDatum_forms <;> assumption)
+  exact @GlobalTheory.LevForms.levDatum_forms

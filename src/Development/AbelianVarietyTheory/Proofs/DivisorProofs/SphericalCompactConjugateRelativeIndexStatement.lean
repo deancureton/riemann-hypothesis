@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SphericalCompactConjugateRelativeIndex
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.spherical_compact_conjugate_relative_index : ∀ (
     IsTriple B G X om om' → ∀ (v : Pl F) (g : GlobalTheory.SphLine.locU σ G.W v),
       (((GlobalTheory.SphLine.locK σ G.W v).subgroupOf (GlobalTheory.SphLine.locU σ G.W v)).map (MulAut.conj g).toMonoidHom).relIndex
         ((GlobalTheory.SphLine.locK σ G.W v).subgroupOf (GlobalTheory.SphLine.locU σ G.W v)) ≠ 0 := by
-  first | exact @GlobalTheory.SphLineComm.commensurated | exact GlobalTheory.SphLineComm.commensurated | (intros; apply GlobalTheory.SphLineComm.commensurated <;> assumption)
+  exact @GlobalTheory.SphLineComm.commensurated

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelChangeOfFieldPointsC
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocGrLat
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegFlagged
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSplitting
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.model_change_of_field_points_c : ∀ {E : Type} [F
     IsVB M r → IsVB M' r → IsLieFrames Z e jB πB M r τ false t → IsLieFrames Z e jB πB M' r τ false t' →
     GlobalTheory.TwoLat.Matches Z jB πB g t t' → IsLieMet Z e q jB πB M r τ false hr G h t →
     IsLieMet Z e q jB πB M' r τ false hr G h' t' → GlobalTheory.TwoLat.IsoHom h h' g := by
-  first | exact @GlobalTheory.TwoLat.isoHom_of_lieMet | exact GlobalTheory.TwoLat.isoHom_of_lieMet | (intros; apply GlobalTheory.TwoLat.isoHom_of_lieMet <;> assumption)
+  exact @GlobalTheory.TwoLat.isoHom_of_lieMet

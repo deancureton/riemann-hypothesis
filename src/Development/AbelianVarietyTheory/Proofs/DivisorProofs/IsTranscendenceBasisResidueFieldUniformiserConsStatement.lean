@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTranscendenceBasisResidueFieldUniformiserCons
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GeometricallyConnectedOfIsIsoRestrict
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.isTranscendenceBasis_residueField_uniformiser_cons
   F.ord π = 1 → (∀ i, y i ∈ F.ring) →
   (∀ P : MvPolynomial (Fin m) ℂ, P ≠ 0 → MvPolynomial.eval₂ cK y P ≠ 0 ∧ (MvPolynomial.eval₂ cK y P)⁻¹ ∈ F.ring) →
   TrBasis cK (Fin.cons π y : Fin (m + 1) → K) := by
-  first | exact @GlobalTheory.FieldPair.ResidueTrBasis.trBasis_cons | exact GlobalTheory.FieldPair.ResidueTrBasis.trBasis_cons | (intros; apply GlobalTheory.FieldPair.ResidueTrBasis.trBasis_cons <;> assumption)
+  exact @GlobalTheory.FieldPair.ResidueTrBasis.trBasis_cons

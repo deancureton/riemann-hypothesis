@@ -12,4 +12,4 @@ open Formalism.MainNotions.ModuliIntegralCharts.H1.BoxTuple Formalism.MainNotion
 open ReciprocityTheory.ChartRestriction.G.TB (colM dAct)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_chart_directions_are_eigenvectors : EigDirSt := by
-  first | exact @GlobalTheory.PowGerm.eigDirSt | exact GlobalTheory.PowGerm.eigDirSt | (intros; apply GlobalTheory.PowGerm.eigDirSt <;> assumption)
+  exact @GlobalTheory.PowGerm.eigDirSt

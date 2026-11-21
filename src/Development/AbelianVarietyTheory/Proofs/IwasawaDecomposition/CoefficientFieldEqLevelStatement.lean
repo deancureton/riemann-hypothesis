@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.CoefficientFieldEqLevel
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
@@ -16,4 +15,4 @@ open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Fo
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.coefficient_field_eq_level : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t _ _ _ => t.r.z.R.C = TC.cf w.I w.l Z := by
-  first | exact @GlobalTheory.HeightCounting.Up.CoefficientAgreement.tied_cf | exact GlobalTheory.HeightCounting.Up.CoefficientAgreement.tied_cf | (intros; apply GlobalTheory.HeightCounting.Up.CoefficientAgreement.tied_cf <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.CoefficientAgreement.tied_cf

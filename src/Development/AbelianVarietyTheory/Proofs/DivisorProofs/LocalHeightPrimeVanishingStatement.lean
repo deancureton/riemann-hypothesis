@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.local_height_prime_vanishing : Hypotheses2 → Hyp
       e.w (dotProduct ((M a).mulVec u)
         (((dualForm O.S.Dw b).map (Int.castRingHom (AlgebraicClosure D.what₂.LL))).mulVec ((M a).mulVec u'))) ≤
         e.w (p : AlgebraicClosure D.what₂.LL) ^ k := by
-  first | exact @GlobalTheory.EqHalf.IsoLevel.isotropic_dualForm | exact GlobalTheory.EqHalf.IsoLevel.isotropic_dualForm | (intros; apply GlobalTheory.EqHalf.IsoLevel.isotropic_dualForm <;> assumption)
+  exact @GlobalTheory.EqHalf.IsoLevel.isotropic_dualForm

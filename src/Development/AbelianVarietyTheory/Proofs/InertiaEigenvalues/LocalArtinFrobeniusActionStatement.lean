@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.LocalArtinFrobeniusAction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CharZeroAdicCompletion
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DecompositionGroupLocalGaloisIso
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.HasExponentZeroIff
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.local_artin_frobenius_action : ∀ (E Ω : Type) [
     ∀ (σ : Weil h) (τ : GalLoc w), Lifts ι τ (σ : G E Ω) →
     ∀ (z : Kbar w) (hz : z ∈ maximalAbelianExtension (w.adicCompletion E) (Kbar w)),
       τ ((localArtinMap (w.adicCompletion E) (Kbar w) (a σ) ⟨z, hz⟩ : maximalAbelianExtension (w.adicCompletion E) (Kbar w)) : Kbar w) = z := by
-  first | exact @GlobalTheory.ArtinCompareApply.lift_localArtinMap_apply | exact GlobalTheory.ArtinCompareApply.lift_localArtinMap_apply | (intros; apply GlobalTheory.ArtinCompareApply.lift_localArtinMap_apply <;> assumption)
+  exact @GlobalTheory.ArtinCompareApply.lift_localArtinMap_apply

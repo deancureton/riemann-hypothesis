@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FixedFockDegreeSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.fixed_fock_degree_span : GlobalTheory.ThK.KP → �
         f ∈ Submodule.span ℂ ({g | g ∈ fockDeg G.M B.ψ B.emb m ∧ IsKFix B om g} ∪
           {f₁ | ∃ γ ∈ Lines σ G.W, ∃ g ∈ fockDeg G.M B.ψ B.emb m, IsKFix B om g ∧
             ActsD (evI F) (fun t => om (1, γ (Multiplicative.ofAdd t))) g f₁}) := by
-  first | exact @GlobalTheory.FixGen.fix_gen | exact GlobalTheory.FixGen.fix_gen | (intros; apply GlobalTheory.FixGen.fix_gen <;> assumption)
+  exact @GlobalTheory.FixGen.fix_gen

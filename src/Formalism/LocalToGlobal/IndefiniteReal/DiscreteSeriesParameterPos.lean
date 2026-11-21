@@ -3,7 +3,6 @@ import Formalism.LocalToGlobal.IndefiniteReal.MultGood
 import Formalism.LocalRingCardinality.HeightBoundGeFourthPowerRank
 import Formalism.LocalRingCardinality.PosOfIsomEmb
 import Formalism.SharpRestriction.Divisibility.FunctionModelRallisFromInputs
-import Mathlib
 import Formalism.SharpRestriction.AdmissibleParameterJoins.SfromGLw
 import Formalism.LocalToGlobal.IndefiniteReal.LinksDefs
 

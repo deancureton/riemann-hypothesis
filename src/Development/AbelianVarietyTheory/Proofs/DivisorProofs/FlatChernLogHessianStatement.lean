@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatChernLogHessian
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DbarEqZeroOfHolomorphic
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.TorsionForm GlobalTheory.TorsionForm.FlatAcyc
 open scoped Real ContDiff
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.flat_chern_log_hessian : ∀ {E : Type} [NormedAdd
     {b : E} (hb : b ∈ B) (z : Fin g → ℂ) (a c : Fin g),
     d10 (fun z' => d01 (fun z'' => (Real.log (h (b, z'')) : ℂ)) z' (ev c)) z (ev a) =
       -(π : ℂ) * (imPart τ b)⁻¹ a c := by
-  first | exact @GlobalTheory.FlatHessian.dholo_dbar_log_metric | exact GlobalTheory.FlatHessian.dholo_dbar_log_metric | (intros; apply GlobalTheory.FlatHessian.dholo_dbar_log_metric <;> assumption)
+  exact @GlobalTheory.FlatHessian.dholo_dbar_log_metric

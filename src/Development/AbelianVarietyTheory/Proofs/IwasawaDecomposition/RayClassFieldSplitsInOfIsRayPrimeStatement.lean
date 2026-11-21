@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.RayClassFieldSplitsInOfIsRayPrime
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ConcreteTwistFrameExtraExcludedOverSmallPrimes
 import Development.AbelianVarietyTheory.PublishedTheorems.PublishedFoundations.NonemptyAlgHomOfIsRayOfDvd
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsOfFinOrderFbar
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.rayClassField_splitsIn_of_isRayPrime : ∀ (D : D7
     haveI := GlobalTheory.ParRay.nfOf hf
     GlobalTheory.Mem.Fld.IsRayField D.host.K M (GlobalTheory.Mem.RaySplit.condIdeal D.host) →
       ∀ p, IsRayPrime (KQbar D jE) (D.host.QS * D.host.q * D.host.d) p → SplitsIn M p := by
-  first | exact @GlobalTheory.ParRay.rayField_splitsIn_of_isRayPrime | exact GlobalTheory.ParRay.rayField_splitsIn_of_isRayPrime | (intros; apply GlobalTheory.ParRay.rayField_splitsIn_of_isRayPrime <;> assumption)
+  exact @GlobalTheory.ParRay.rayField_splitsIn_of_isRayPrime

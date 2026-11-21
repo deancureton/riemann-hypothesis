@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralSchwartzFamilyMemSpace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.integral_schwartz_family_mem_space : ∀ {D Ω₁ 
     (∀ y, StronglyMeasurable (Function.uncurry fun k l => iteratedFDeriv ℝ 0 (⇑(G k l)) y)) →
     (∃ (C : ℝ) (w : Ω₂ → ℝ), Integrable w m₂ ∧ ∀ k l, SchwartzMap.seminorm ℂ 0 0 (G k l) ≤ C * w l) →
     ∃ g ∈ V, ⇑g = fun y => ∫ k, ∫ l, G k l y ∂m₂ ∂m₁ := by
-  first | exact @GlobalTheory.fdint_mem_finiteDimensional | exact GlobalTheory.fdint_mem_finiteDimensional | (intros; apply GlobalTheory.fdint_mem_finiteDimensional <;> assumption)
+  exact @GlobalTheory.fdint_mem_finiteDimensional

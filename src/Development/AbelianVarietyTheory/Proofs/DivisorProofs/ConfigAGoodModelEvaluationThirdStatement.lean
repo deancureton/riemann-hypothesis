@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAGoodModelEvaluationThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Definitions.Foundations.ExistsFinsetOfEventually
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.config_a_good_model_evaluation_third : ∀ (F E : 
     ∀ m : ℕ, ∃ V : Submodule ℂ (SInf F (Fin b × Fin (b + a'))), FiniteDimensional ℂ V ∧ V ≤ G₁.M.Pol B.ψ B.emb ∧
       ∀ l ∈ idelesAt E (evI F), ∀ h ∈ GlobalTheory.FockKFin.polLe G.M B.emb m,
         ei (locOpInf (G.M.co.rho B.ψ (partInf F (shiftA H H' l))) h) ∈ V := by
-  first | exact @GlobalTheory.ShiftEvPol.shiftEv_polLe | exact GlobalTheory.ShiftEvPol.shiftEv_polLe | (intros; apply GlobalTheory.ShiftEvPol.shiftEv_polLe <;> assumption)
+  exact @GlobalTheory.ShiftEvPol.shiftEv_polLe

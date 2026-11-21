@@ -31,4 +31,4 @@ theorem _root_.GlobalTheory.T.real_phase_smooth_unit_sum : Hypotheses2 → Hypot
       0 < m → IsArithVar (spMap (algebraMap (𝓞 D.what₂.LL) k')) 0 →
       (comb (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => o.elim (fnB ((T.M c).pull ε π ((2 : ℝ) • (g - (fun _ _ => O.Y.htDetT B c τ : (T.M c).Fun)))) hu hc)
       ((h.mdl (GlobalTheory.FlagAr.setB O.Y B) c).gens (GlobalTheory.FlagAr.setB O.Y B))) (fun o : Option (Option (D.what₂.Tau × Fin O.N)) => (m : ℤ) * o.elim (1 : ℤ) fun o' => o'.elim 0 fun x => if x.1 = τ then (-1 : ℤ) else 0)).Isometric (M.pull ρ hρ) → M.IsSelfInter 0 := by
-  first | exact @GlobalTheory.FlatDegZero.deg_zero | exact GlobalTheory.FlatDegZero.deg_zero | (intros; apply GlobalTheory.FlatDegZero.deg_zero <;> assumption)
+  exact @GlobalTheory.FlatDegZero.deg_zero

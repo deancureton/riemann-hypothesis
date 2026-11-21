@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbeddingEvaluationCompatible
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLocPart
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InsP
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.embedding_evaluation_compatible : ∀ {F E : Type}
       ∀ z : Matrix (Fin n₁) (Fin d₁) (AE F E), ∀ φ ∈ SB (Fin n × Fin d → Fv F v), ∀ φ₁ ∈ SB (Fin n × Fin d → Fv F v),
         Acts (evFin F v) (M.co.rho B.ψ (incM F ι * z * (incM F ι')ᵀ)) φ φ₁ →
         ∀ χ₁ ∈ SB (Fin n₁ × Fin d₁ → Fv F v), Acts (evFin F v) (M₁.co.rho B.ψ z) (ev v φ) χ₁ → ev v φ₁ = χ₁ := by
-  first | exact @GlobalTheory.EvLocPart.locPart_inv_heis | exact GlobalTheory.EvLocPart.locPart_inv_heis | (intros; apply GlobalTheory.EvLocPart.locPart_inv_heis <;> assumption)
+  exact @GlobalTheory.EvLocPart.locPart_inv_heis

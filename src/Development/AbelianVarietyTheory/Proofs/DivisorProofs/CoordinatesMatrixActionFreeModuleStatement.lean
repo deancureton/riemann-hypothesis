@@ -16,4 +16,4 @@ open GlobalTheory.ChainPts
 open GlobalTheory.ChainDesc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.coordinates_matrix_action_free_module : ∀ (X : Scheme.{0}) (h : ℕ), ∃ μ : Matrix (Fin h) (Fin h) ℤ →+* End (freeModule X (Fin h)), ∀ (N : Matrix (Fin h) (Fin h) ℤ) (W : X.Opens) (s : Γ(freeModule X (Fin h), W)), GlobalTheory.LatGlue.coords X h W ((μ N : freeModule X (Fin h) ⟶ freeModule X (Fin h)).app W s) = mv (RingHom.id _) N (GlobalTheory.LatGlue.coords X h W s) := by
-  first | exact @GlobalTheory.ChainDesc.FreeAct.exists_act | exact GlobalTheory.ChainDesc.FreeAct.exists_act | (intros; apply GlobalTheory.ChainDesc.FreeAct.exists_act <;> assumption)
+  exact @GlobalTheory.ChainDesc.FreeAct.exists_act

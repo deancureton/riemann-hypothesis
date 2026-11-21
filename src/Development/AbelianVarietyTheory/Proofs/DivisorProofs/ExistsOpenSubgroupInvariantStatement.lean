@@ -8,4 +8,4 @@ theorem _root_.GlobalTheory.T.exists_open_subgroup_invariant : ∀ (F E : Type) 
     (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W), GlobalTheory.ThK.KP → IsTriple B G X om om' →
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M,
       ∃ U : Subgroup (GAd σ (c • G.W.J.map σ)), IsOpen (U : Set (GAd σ (c • G.W.J.map σ))) ∧ ∀ k ∈ U, k ∈ finPts σ (c • G.W.J.map σ) → ∀ g, G.M.I om Φ ((toGAd hσ G.W.J hc).symm (g * k)) = G.M.I om Φ ((toGAd hσ G.W.J hc).symm g) := by
-  first | exact @GlobalTheory.ThKLevel.level | exact GlobalTheory.ThKLevel.level | (intros; apply GlobalTheory.ThKLevel.level <;> assumption)
+  exact @GlobalTheory.ThKLevel.level

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCombinationLieGroupPullback
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BLieLieComb
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.exists_combination_lie_group_pullback : ∀ (E : T
     IsGrpPullback P.G t.G yb π → ∀ (g : ℕ) (e : Fin g → (Sp (DualNumber 𝓞_ℂ_[p]) ⟶ t.G.left)) (xb : Fin g → LieG P.Gt),
     (∀ b, ITie P π (xb b) (e b)) → ∀ U : Fin g → 𝓞_ℂ_[p],
     ∃ u0 : Sp (DualNumber 𝓞_ℂ_[p]) ⟶ t.G.left, IsCombAtG t yb e U u0 ∧ ITie P π (lieComb P.Gt U xb) u0 := by
-  first | exact @GlobalTheory.FlatModel.TieComb.main | exact GlobalTheory.FlatModel.TieComb.main | (intros; apply GlobalTheory.FlatModel.TieComb.main <;> assumption)
+  exact @GlobalTheory.FlatModel.TieComb.main

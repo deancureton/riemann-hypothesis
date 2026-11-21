@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SiegelWeilSectionLawDiagonalLagrangian
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReindexDblIncM
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrInt
 open scoped TensorProduct Matrix
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.siegelWeil_section_law_diagonalLagrangian : ∀ (F
             ((((adeleClass F).modu (Units.map (Algebra.norm (AF F) : AF F ⊗[F] E →* AF F)
               (Matrix.GeneralLinearGroup.det t)) : ℝ) ^ ((Fintype.card (Fin nS) : ℝ) / 2) : ℝ) : ℂ) *
             GlobalTheory.LagrTheta.lagrInt ν 𝓕 ((diagCols (Fin nT) : Matrix (Fin nT ⊕ Fin nT) (Fin nT) (AF F ⊗[F] E)).submatrix finSumFinEquiv.symm id) (GlobalTheory.WeilSchrodinger.thetaTr F co B.ψ Φ) := by
-  first | exact @GlobalTheory.SiegelLawDblTargetF.main_law | exact GlobalTheory.SiegelLawDblTargetF.main_law | (intros; apply GlobalTheory.SiegelLawDblTargetF.main_law <;> assumption)
+  exact @GlobalTheory.SiegelLawDblTargetF.main_law

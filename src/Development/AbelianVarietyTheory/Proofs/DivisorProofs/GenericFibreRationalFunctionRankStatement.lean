@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GenericFibreRationalFunctionRank
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.generic_fibre_rational_function_rank : ∀ (D : D7
       UnitAt x (φ (t : (O.var c).Fn) ^ (cond a.2 (-1 : ℤ) 1) * (ρ : G.functionField))) →
     UnitAt x (φ (genAt (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1)
       (cond a.2 0 O.j + i))).D (πG x)) ^ 1 * (ρ : G.functionField)) := by
-  first | exact @GlobalTheory.RootEqn.unitAt_genAt_root | exact GlobalTheory.RootEqn.unitAt_genAt_root | (intros; apply GlobalTheory.RootEqn.unitAt_genAt_root <;> assumption)
+  exact @GlobalTheory.RootEqn.unitAt_genAt_root

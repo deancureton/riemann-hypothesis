@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianSkewAdaptedPairing
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.hermitian_skew_adapted_pairing : ∀ {F E : Type} 
         incM F H.ι * Z * (incM F H'.ι)ᵀ + Matrix.vecMulVec (incM F H.ι *ᵥ c₂) (incV F H'.y))
       (Matrix.vecMulVec (incM F H.ι *ᵥ c) (incV F H'.x)) =
     Algebra.trace (AF F) (AE F E) (c₂ ⬝ᵥ (incM F X₁.J *ᵥ fun k => cA σ (c k))) := by
-  first | exact @GlobalTheory.ArchSchB.symp_levi_pair_eq_trace | exact GlobalTheory.ArchSchB.symp_levi_pair_eq_trace | (intros; apply GlobalTheory.ArchSchB.symp_levi_pair_eq_trace <;> assumption)
+  exact @GlobalTheory.ArchSchB.symp_levi_pair_eq_trace

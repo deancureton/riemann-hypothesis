@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairDescendsAlongAdaptedPlane
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_descends_along_adapted_plane : ∀ (F E : Typ
         ∀ (t : AF F), ∀ w ∈ L, ∃ (a : Fin d → AE F E) (z : Matrix (Fin n₁) (Fin d) (AE F E)), (M₁.co.e z).1 = 0 ∧
           M.co.e (Matrix.vecMulVec (incV F H.x) a + incM F H.ι * z) =
             t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i))) := by
-  first | exact @GlobalTheory.MixedLagrX.exists_ratLagr | exact GlobalTheory.MixedLagrX.exists_ratLagr | (intros; apply GlobalTheory.MixedLagrX.exists_ratLagr <;> assumption)
+  exact @GlobalTheory.MixedLagrX.exists_ratLagr

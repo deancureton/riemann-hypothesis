@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSectionStrictHenselisationClosedFibrePoint
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsorsTrivialIff
 open IsLocalRing Polynomial
 set_option maxHeartbeats 1000000 in
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_section_strictHenselisation_closedFibre_poi
       ∃ s : DE →+* GlobalTheory.LocAcyc.GenFib T S,
         ∀ e : E, s (algebraMap (GlobalTheory.LocAcyc.GenFib T E) DE (algebraMap E _ e)) =
           algebraMap S (GlobalTheory.LocAcyc.GenFib T S) (algebraMap E S e) := by
-  first | exact @GlobalTheory.LocAcyc.exists_section_strictHenselisation_at_closed | exact GlobalTheory.LocAcyc.exists_section_strictHenselisation_at_closed | (intros; apply GlobalTheory.LocAcyc.exists_section_strictHenselisation_at_closed <;> assumption)
+  exact @GlobalTheory.LocAcyc.exists_section_strictHenselisation_at_closed

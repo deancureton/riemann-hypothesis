@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalSplitTorusBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsWeilChar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatMatTransposeMulGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LengthLetters
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.toroidal_split_torus_basis : ∀ (E : Type) [Field
     ∃ (s : Fin N → (Over.mk ξ₀ ⟶ Z.oF.t.G)) (ζ : Kˣ), IsPrimitiveRoot ζ q ∧ IsGram Z.oF.t q s ζ (GlobalTheory.EqHalf.gram Dw b) ∧
       (∀ a : Over.mk ξ₀ ⟶ Z.oF.t.G, a ^ q = 1 → ∃ n : Fin N → ℕ, a = ∏ m, s m ^ n m) ∧
       (∀ (α : 𝓞 E) (m : Fin N), s m ≫ Z.oF.t.act.act α = ∏ m', s m' ^ GlobalTheory.EqHalf.latMat Dw b α m' m) := by
-  first | exact @GlobalTheory.HalfGeo.gram_basis | exact GlobalTheory.HalfGeo.gram_basis | (intros; apply GlobalTheory.HalfGeo.gram_basis <;> assumption)
+  exact @GlobalTheory.HalfGeo.gram_basis

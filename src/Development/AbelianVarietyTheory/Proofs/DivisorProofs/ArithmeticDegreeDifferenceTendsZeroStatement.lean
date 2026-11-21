@@ -7,4 +7,4 @@ open scoped ENNReal Classical
 open MvPolynomial Formalism.DegreeFormula Formalism.BasicNotions.DV Formalism.MainNotions.WeightThresholdDefs GlobalTheory.FlagPoly GlobalTheory.FlagAr Filter Topology
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arithmetic_degree_difference_tends_zero : Hypotheses2 → HypothesesH → OnObj fun D O _ _ _ _ => ∀ x' : GlobalTheory.ShFam.ToroidalCompactificationData O.s, ∀ B : ℝ, 2 ≤ B → ∀ u : D.what₂.Tau → Fin O.N → ℝ, Filter.Tendsto (fun R : ℝ => O.Y.arDeg (GlobalTheory.FlagAr.setB O.Y B) R (linRoot u ^ (Formalism.DegreeFormula.dimFl D.what₂.Tau O.N + 1)) - (GlobalTheory.ShFam.Pad.arIn O.s O.Φ (GlobalTheory.ShFam.metsOf x' O.Φ)).arDeg (GlobalTheory.FlagAr.setB O.Y B) R (linRoot u ^ (Formalism.DegreeFormula.dimFl D.what₂.Tau O.N + 1))) Filter.atTop (nhds 0) := by
-  first | exact @GlobalTheory.ArDegIndep.limit_indep | exact GlobalTheory.ArDegIndep.limit_indep | (intros; apply GlobalTheory.ArDegIndep.limit_indep <;> assumption)
+  exact @GlobalTheory.ArDegIndep.limit_indep

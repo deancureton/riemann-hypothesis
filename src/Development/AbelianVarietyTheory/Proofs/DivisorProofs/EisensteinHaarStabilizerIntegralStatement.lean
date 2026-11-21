@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinHaarStabilizerIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.eisenstein_haar_stabilizer_integral : GlobalTheory
     IsStab B K → μK.IsHaarMeasure → μ.IsHaarMeasure →
     ∀ X om om' om₁ om₁', IsTriple B G X om om' → IsTriple B G₁ X om₁ om₁' →
     ∀ Φ' ∈ PolData B G.M' ⊓ G.M'.So B.ψ B.τ₁, ∀ z : ℂ, GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.β (z + (b : ℂ) / 2) (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' z) := by
-  first | exact @GlobalTheory.ConeSmallLawC.coneI_lawC | exact GlobalTheory.ConeSmallLawC.coneI_lawC | (intros; apply GlobalTheory.ConeSmallLawC.coneI_lawC <;> assumption)
+  exact @GlobalTheory.ConeSmallLawC.coneI_lawC

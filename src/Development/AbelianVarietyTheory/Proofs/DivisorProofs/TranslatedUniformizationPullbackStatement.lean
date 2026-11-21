@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TranslatedUniformizationPullback
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ProductAbelianUniformizationStatement
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.translated_uniformization_pullback : ∀ (A : Over
       (∀ j z, (⊤ ≤ (u'.ex z).left ⁻¹ᵁ (L.pull (lift (𝟙 A) (toUnit A ≫ u.ex x₀)).left).U j ↔
         ⊤ ≤ (U.ex (Fin.append z x₀)).left ⁻¹ᵁ L.U (j PUnit.unit))) ∧
       ∀ j z, u'.fr j z = U.fr (j PUnit.unit) (Fin.append z x₀) := by
-  first | exact @GlobalTheory.TorusPullFrame.exists_holUnif_pull_right | exact GlobalTheory.TorusPullFrame.exists_holUnif_pull_right | (intros; apply GlobalTheory.TorusPullFrame.exists_holUnif_pull_right <;> assumption)
+  exact @GlobalTheory.TorusPullFrame.exists_holUnif_pull_right

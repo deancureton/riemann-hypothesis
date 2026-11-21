@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalOperatorIdeleConstant
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.local_operator_idele_locallyConstant : ∀ (F E : 
     ∃ g : (Fv F v ⊗[F] E) → (Fin n × Fin d → Fv F v) → ℂ, IsLocallyConstant g ∧
       ∀ l ∈ idelesAt E (evFin F v), locOp v (M.co.rho B.ψ (partFin v (shiftB σ H H' l))) ψ =
         g ((GlobalTheory.Doubling.unitFin F E v l : (Fv F v ⊗[F] E)ˣ) : Fv F v ⊗[F] E) := by
-  first | exact @GlobalTheory.SchrLocConst.shiftB_locOp_locallyConstant | exact GlobalTheory.SchrLocConst.shiftB_locOp_locallyConstant | (intros; apply GlobalTheory.SchrLocConst.shiftB_locOp_locallyConstant <;> assumption)
+  exact @GlobalTheory.SchrLocConst.shiftB_locOp_locallyConstant

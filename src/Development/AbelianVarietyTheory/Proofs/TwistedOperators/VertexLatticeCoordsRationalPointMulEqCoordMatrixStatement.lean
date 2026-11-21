@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.VertexLatticeCoordsRationalPointMulEqCoordMatrix
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.SplitOff
 import Formalism.LocalToGlobal.InertKernelTheory.DefsInt
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.JetKapIff
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.vertexLatticeCoords_rationalPoint_mul_eq_coordMatr
     (S : GridChoice W Set.univ) (X : Node) (r : FinPt G X) (U : Matrix.unitaryGroup (Fin (G.V X).rank) D.host.E),
     GlobalTheory.RatMoveJets.RatCoord (G.V X) (S.N.fr X) r U → ∀ x : FinPt G X,
       GlobalTheory.SumSize.latAt S X (r * x) = SDLat.smulLat U.1 (GlobalTheory.SumSize.latAt S X x) := by
-  first | exact @GlobalTheory.RatMoveLat.latAt_rat | exact GlobalTheory.RatMoveLat.latAt_rat | (intros; apply GlobalTheory.RatMoveLat.latAt_rat <;> assumption)
+  exact @GlobalTheory.RatMoveLat.latAt_rat

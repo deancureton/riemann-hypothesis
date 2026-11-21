@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBHaarStabilizerLeft
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.config_B_haar_stabilizer_left : GlobalTheory.ThK.K
         Summable fun w => ∫ g in 𝓓, ‖termW B G.M' H H' e' om' Φ' γ w g h‖ * hf g ^ (s.re + (((b + 2 : ℕ) : ℝ) - 1) / 2) ∂G.M'.μ) ∧
       ∀ T : Set (UA σ G.W.J), GlobalTheory.ConeSmallCT.IsReps T H'.x →
         GlobalTheory.ConeSmallCT.LocUnifSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) T := by
-  first | exact @GlobalTheory.ConeSmallClaim.unfold_claim | exact GlobalTheory.ConeSmallClaim.unfold_claim | (intros; apply GlobalTheory.ConeSmallClaim.unfold_claim <;> assumption)
+  exact @GlobalTheory.ConeSmallClaim.unfold_claim

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalThetaNonsplitInvariant
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_theta_nonsplit_invariant : GlobalTheory.ThK.
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf → ∀ v : Pl F, IsEmpty (E →ₐ[F] Fv F v) →
     ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F v), (∀ k ∈ KAt σ G.W v, ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F v),
       Acts (evFin F v) (om (1, k)) φ φ₁ → Rf.p v φ₁ = Rf.p v φ) → ∃ c : ℂ, Rf.p v φ = c • Rf.p v (G.M.vac v) := by
-  first | exact @GlobalTheory.SphLine.fixed_eq_smul_vac | exact GlobalTheory.SphLine.fixed_eq_smul_vac | (intros; apply GlobalTheory.SphLine.fixed_eq_smul_vac <;> assumption)
+  exact @GlobalTheory.SphLine.fixed_eq_smul_vac

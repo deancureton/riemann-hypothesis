@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdmissibleIntegralInterchange
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.admissible_integral_interchange : ∀ (F : Type) [
     (∀ j (m n : ℕ), ∃ c : S₂ → ℝ, Continuous c ∧ Integrable c μ₂ ∧ ∀ s t, SchwartzMap.seminorm ℂ m n (f j s t) ≤ c t) →
     ∀ L ∈ (adeleClass F).adm κ,
       L (fun y => ∫ s, ∫ t, ∑ j, pureA F (f j s t) (g j) y ∂μ₂ ∂μ₁) = ∫ s, ∫ t, L (∑ j, pureA F (f j s t) (g j)) ∂μ₂ ∂μ₁ := by
-  first | exact @GlobalTheory.AdmInt.adm_integral_comm | exact GlobalTheory.AdmInt.adm_integral_comm | (intros; apply GlobalTheory.AdmInt.adm_integral_comm <;> assumption)
+  exact @GlobalTheory.AdmInt.adm_integral_comm

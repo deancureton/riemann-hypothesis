@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SpecialUnitaryAdelicSplitting
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsHaarProd
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsAdelicSplit
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.ExistsCompactAdele
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.special_unitary_adelic_splitting : ∀ (F E : Type
             (Algebra.TensorProduct.map (fstA F) (AlgHom.id F E)) ∧
         ((HA.mat (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Af F) σ J (e h).2.1 : GL (Fin M) (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Af F ⊗[F] E)) : Matrix (Fin M) (Fin M) (Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes.Af F ⊗[F] E)) =
           finMat σ J h.1 := by
-  first | exact @GlobalTheory.TamUnf.exists_adelic_split_detOne | exact GlobalTheory.TamUnf.exists_adelic_split_detOne | (intros; apply GlobalTheory.TamUnf.exists_adelic_split_detOne <;> assumption)
+  exact @GlobalTheory.TamUnf.exists_adelic_split_detOne

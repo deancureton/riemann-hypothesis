@@ -135,7 +135,6 @@ def levelRep : UnitaryRep (levelSubgroup K n U) (fixedSubspace σ U) :=
 
 variable {μ : Measure (normOneGL K n)} [μ.IsHaarMeasure]
 
-set_option maxHeartbeats 4000000 in
 
 theorem isCompactOperator_levelRep (hσ : σ.IsIrreducible) (T : cuspIntertwiners μ σ) (hT0 : T ≠ 0)
     (hU : IsOpen (U : Set (AdelicGLn.FiniteAdelicGL K n)))

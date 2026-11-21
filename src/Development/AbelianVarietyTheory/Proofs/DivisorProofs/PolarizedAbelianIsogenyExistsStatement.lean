@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolarizedAbelianIsogenyExists
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAHOfIsFactorAH
 
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.polarized_abelian_isogeny_exists : ∀ (g : ℕ) (
     ∃ (P : Out.PolAV (Sp ℂ)) (ψ : A ⟶ P.A) (ρ : P.A ⟶ A) (N : ℕ), 1 ≤ N ∧ IsMonHom ψ ∧ IsMonHom ρ ∧
       ψ ≫ ρ = (𝟙 A) ^ N ∧ ρ ≫ ψ = (𝟙 P.A) ^ N ∧
       LBIso (abelian₂ A M) ((abelian₂ P.A P.L).pull (lift (fst A A ≫ ψ) (snd A A ≫ ψ)).left) := by
-  first | exact @GlobalTheory.PosAHIsog.exists_isog_principal_lam | exact GlobalTheory.PosAHIsog.exists_isog_principal_lam | (intros; apply GlobalTheory.PosAHIsog.exists_isog_principal_lam <;> assumption)
+  exact @GlobalTheory.PosAHIsog.exists_isog_principal_lam

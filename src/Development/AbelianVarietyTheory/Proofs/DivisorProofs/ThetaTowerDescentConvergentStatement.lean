@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaTowerDescentConvergent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 open scoped TensorProduct NNReal Matrix
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.theta_tower_descent_convergent : GlobalTheory.ThK.
       ∀ c₀ : E, c₀ ≠ 0 → IsHermND σ (c₀ • (sp i).J.map σ) → ∀ φ' : GAd σ (c₀ • (sp i).J.map σ) → ℂ,
         (∀ (g : UA σ (sp i).J) (g' : GAd σ (c₀ • (sp i).J.map σ)), g.1 = g'.1 → φ' g' = f g) →
         GlobalTheory.SiegelSet.IsCuspidal σ (c₀ • (sp i).J.map σ) φ' := by
-  first | exact @GlobalTheory.ThK.LevCusp.cusp | exact GlobalTheory.ThK.LevCusp.cusp | (intros; apply GlobalTheory.ThK.LevCusp.cusp <;> assumption)
+  exact @GlobalTheory.ThK.LevCusp.cusp

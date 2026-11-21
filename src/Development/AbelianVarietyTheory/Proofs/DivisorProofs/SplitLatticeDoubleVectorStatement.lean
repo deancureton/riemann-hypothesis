@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitLatticeDoubleVector
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AntiCols
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.split_lattice_double_vector : ∀ {F E : Type} [Fi
       ((gd : GL (Fin d ⊕ Fin d) (AE F E)) : Matrix (Fin d ⊕ Fin d) (Fin d ⊕ Fin d) (AE F E)) = Matrix.fromBlocks (mat k) 0 0 1 →
       gd ∈ GlobalTheory.DblVac.KD σ V v →
       w₀ * gd * w₀⁻¹ ∈ GlobalTheory.DblVac.KD σ V v ∧ w₀ * gd * w₀⁻¹ ∈ GlobalTheory.DblVac.PDiag σ V := by
-  first | exact @GlobalTheory.DblVacSplitConj.exists_conj_diag | exact GlobalTheory.DblVacSplitConj.exists_conj_diag | (intros; apply GlobalTheory.DblVacSplitConj.exists_conj_diag <;> assumption)
+  exact @GlobalTheory.DblVacSplitConj.exists_conj_diag

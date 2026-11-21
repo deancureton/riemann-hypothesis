@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankBoxSeparation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.full_rank_box_separation : ∀ (k : Type) [Field k
     ∀ Ψ₁ Ψ₂ : GlobalTheory.FullRankCoinv.fullRk k n d,
       (∀ (Y₁ Y₂ : Matrix (Fin n) (Fin d) k), Ψ₁.1 Y₁ ≠ 0 → Ψ₂.1 Y₂ ≠ 0 → ∀ a : GL (Fin n) k, Y₁ ≠ a.1 * Y₂) →
       Bf Ψ₁ Ψ₂ = 0 := by
-  first | exact @GlobalTheory.RankCoinv.OffDiagAssemble.bf_eq_zero_of_local | exact GlobalTheory.RankCoinv.OffDiagAssemble.bf_eq_zero_of_local | (intros; apply GlobalTheory.RankCoinv.OffDiagAssemble.bf_eq_zero_of_local <;> assumption)
+  exact @GlobalTheory.RankCoinv.OffDiagAssemble.bf_eq_zero_of_local

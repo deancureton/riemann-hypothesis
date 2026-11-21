@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilLineCommutatorAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.weil_line_commutator_action : GlobalTheory.FunPr.H
         ActsD (evI F) (fun t => om (1, δ (Multiplicative.ofAdd t))) f₁ f₁₂ →
         ActsD (evI F) (fun t => om (1, κ (Multiplicative.ofAdd t))) f₂ f₂₁ →
         ActsD (evI F) (fun t => om (1, ε (Multiplicative.ofAdd t))) f g → f₂₁ - f₁₂ = g := by
-  first | exact @GlobalTheory.LineBracket.exists_line_bracket | exact GlobalTheory.LineBracket.exists_line_bracket | (intros; apply GlobalTheory.LineBracket.exists_line_bracket <;> assumption)
+  exact @GlobalTheory.LineBracket.exists_line_bracket

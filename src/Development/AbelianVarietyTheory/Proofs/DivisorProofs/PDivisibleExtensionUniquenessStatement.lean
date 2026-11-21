@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PDivisibleExtensionUniqueness
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.FaithfulSMulAlgClosure
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HenselianLocalRingOfIsAdicComplete
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsCrystalPairing
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.p_divisible_extension_uniqueness : ∀ (E : Type) 
       IsPropG Dw t' GG' act' pol' θ' ε' τ' → IsRestr m'.φ act' pol' θ' ε' τ' m₀.φ act₀ pol₀ θ₀ ε₀ τ₀ →
       letI := (AffOp.res h).toAlgebra
       IsRestr m.φ act pol θ ε τ m'.φ act' pol' θ' ε' τ' := by
-  first | exact @GlobalTheory.GroupBplus.Rigid.isRestr_of_generic | exact GlobalTheory.GroupBplus.Rigid.isRestr_of_generic | (intros; apply GlobalTheory.GroupBplus.Rigid.isRestr_of_generic <;> assumption)
+  exact @GlobalTheory.GroupBplus.Rigid.isRestr_of_generic

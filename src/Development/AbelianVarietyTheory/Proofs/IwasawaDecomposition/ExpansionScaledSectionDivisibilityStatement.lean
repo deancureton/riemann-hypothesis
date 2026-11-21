@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExpansionScaledSectionDivisibility
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SvalUpSec
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsDivOfExpandsAt
 import Development.AbelianVarietyTheory.Proofs.RingsOfIntegers.CstDvdOfCstMulEqZero
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.expansion_scaled_section_divisibility : ∀ (R : T
     (U : UnifPre (maximalIdeal R) D A G) (k : ℕ) (σ σ' : H0 U.LG.L k) (f f' : ∀ α, D.toPre.SecB k α) (r : R), r ≠ 0 →
     SecIsMul G.hom r σ' σ → (∀ α, SecIsMul D.toPre.P.A.hom r (f' α) (f α)) → (∀ e, U.ExpandsAt e k σ' f') →
     ∀ e, U.ExpandsAt e k σ f := by
-  first | exact @GlobalTheory.expandsAt_cancel_local | exact GlobalTheory.expandsAt_cancel_local | (intros; apply GlobalTheory.expandsAt_cancel_local <;> assumption)
+  exact @GlobalTheory.expandsAt_cancel_local

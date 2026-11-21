@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModularRuleExtOfLevelTwelve
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitObj
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsUniqueDetGen
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.modular_rule_ext_of_level_twelve : ∀ (F : Type) 
     (s t : Rule (unitObj 𝔠 6) R₀ k),
     (∀ (R : Type) [CommRing R] [Algebra R₀ R] (X : Obj F 𝔠 (Sp R)) (h : IsUnit ((6 : ℕ) : R)), Nonempty (X.Level 12) →
       ∀ δ : X.DetGen, s.val R X h δ = t.val R X h δ) → s = t := by
-  first | exact @GlobalTheory.RealMult.Rule.eq_of_eq_on_level_twelve | exact GlobalTheory.RealMult.Rule.eq_of_eq_on_level_twelve | (intros; apply GlobalTheory.RealMult.Rule.eq_of_eq_on_level_twelve <;> assumption)
+  exact @GlobalTheory.RealMult.Rule.eq_of_eq_on_level_twelve

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SymplecticPairRankOneTrace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.symplectic_pair_rank_one_trace : ∀ {F E : Type} 
     symp (cA σ) (-1) (incM F J) (incM F K) (Matrix.vecMulVec (incV F ξ) (incV F y))
       (Matrix.vecMulVec (t • incV F β) (incV F x)) =
       t * algebraMap F (AF F) (Algebra.trace F E (-(form σ J ξ β * form σ K y x))) := by
-  first | exact @GlobalTheory.SympPure.symp_pure | exact GlobalTheory.SympPure.symp_pure | (intros; apply GlobalTheory.SympPure.symp_pure <;> assumption)
+  exact @GlobalTheory.SympPure.symp_pure

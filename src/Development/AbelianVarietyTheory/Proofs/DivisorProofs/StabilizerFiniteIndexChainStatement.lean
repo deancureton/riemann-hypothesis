@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.StabilizerFiniteIndexChain
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoreConcl
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.stabilizer_finite_index_chain : ∀ (F E : Type) [
         col0 X = Matrix.of (fun i (_ : Fin 1) => H.x i) ∧
         ∀ g : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.UA σ V.J, g ∈ K ↔ ∃ k ∈ levelAll σ ((1 : E) • V.J.map σ) L a,
           (g : GL (Fin n) (AF F ⊗[F] E)) = matHom _ σ _ c * matHom _ σ _ k * (matHom _ σ _ c)⁻¹ := by
-  first | exact @GlobalTheory.GoodPos.stab_conj_levelAll | exact GlobalTheory.GoodPos.stab_conj_levelAll | (intros; apply GlobalTheory.GoodPos.stab_conj_levelAll <;> assumption)
+  exact @GlobalTheory.GoodPos.stab_conj_levelAll

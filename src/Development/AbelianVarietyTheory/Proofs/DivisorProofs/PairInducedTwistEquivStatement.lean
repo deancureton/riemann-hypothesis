@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairInducedTwistEquiv
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.pair_induced_twist_equiv : ∀ (k : Type) [Field k
     GlobalTheory.SmGL.IsSmoothChar ν →
     Nonempty ((GlobalTheory.SmGL.twist (GlobalTheory.LeviBlockExponent.pairInd k b' h μ) (GlobalTheory.SmGL.detChar (Fin d) ν)).Equiv
       (GlobalTheory.LeviBlockExponent.pairInd k b' h (fun i => μ i * ν))) := by
-  first | exact @GlobalTheory.LeviBlockExponent.twist_pairInd | exact GlobalTheory.LeviBlockExponent.twist_pairInd | (intros; apply GlobalTheory.LeviBlockExponent.twist_pairInd <;> assumption)
+  exact @GlobalTheory.LeviBlockExponent.twist_pairInd

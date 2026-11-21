@@ -10,4 +10,4 @@ open Formalism.MainNotions.DIV.Cons (intO SCF)
 open GlobalTheory.OmegaHT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.OmegaSpanStatement : GlobalTheory.OmegaHT.SpanSt := by
-  first | exact @GlobalTheory.OmegaHT.SpanLoc.spanSt | exact GlobalTheory.OmegaHT.SpanLoc.spanSt | (intros; apply GlobalTheory.OmegaHT.SpanLoc.spanSt <;> assumption)
+  exact @GlobalTheory.OmegaHT.SpanLoc.spanSt

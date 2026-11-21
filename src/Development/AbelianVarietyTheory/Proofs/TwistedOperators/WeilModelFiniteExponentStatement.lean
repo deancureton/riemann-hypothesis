@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilModelFiniteExponent
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HasInfExpDiv
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsPairReading
 
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.weil_model_finite_exponent : GlobalTheory.FunPr.Hy
         ∀ γ ∈ GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Lines D.sp.cm.sig Ws, ∀ f ∈ N.map Φ, ∀ f₁ : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.SInf D.host.F (Fin M.rank × Fin X.rank),
           GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ActsD (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.evI D.host.F) (fun t => om (1, γ (Multiplicative.ofAdd t))) f f₁ →
           f₁ ∈ N.map Φ := by
-  first | exact @GlobalTheory.RealDict.LineStab.derivLine_mem_map | exact GlobalTheory.RealDict.LineStab.derivLine_mem_map | (intros; apply GlobalTheory.RealDict.LineStab.derivLine_mem_map <;> assumption)
+  exact @GlobalTheory.RealDict.LineStab.derivLine_mem_map

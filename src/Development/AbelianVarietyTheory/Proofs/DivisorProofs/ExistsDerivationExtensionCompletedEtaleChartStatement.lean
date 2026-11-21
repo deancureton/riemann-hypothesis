@@ -14,4 +14,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.LogKSChart GlobalTheo
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_derivation_extension_completedEtaleChart : ∀ (A : Type) [CommRing A] [IsLocalRing A] (k : Type) [Field k] [CharZero k] (m d : ℕ) (ψ : A →+* ChartRing k m d), IsEtaleCompletion ψ → ∀ δ : Derivation ℤ A A, ∃ D' : Derivation ℤ (ChartRing k m d) (ChartRing k m d), ∀ a, D' (ψ a) = ψ (δ a) := by
-  first | exact @GlobalTheory.ChartDerivation.main | exact GlobalTheory.ChartDerivation.main | (intros; apply GlobalTheory.ChartDerivation.main <;> assumption)
+  exact @GlobalTheory.ChartDerivation.main

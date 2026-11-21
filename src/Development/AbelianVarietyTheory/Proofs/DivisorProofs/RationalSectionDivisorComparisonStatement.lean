@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RationalSectionDivisorComparison
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PrismaticDieudonnePerfd
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.rational_section_divisor_comparison : ∀ (X : Sch
     ∀ (Z : Scheme.{0}) [IsIntegral Z] (i : Z ⟶ X) [IsClosedImmersion i],
       (∀ (z' : Z) j, i z' ∈ M.B.U j → ¬ UnitAt (i z') (r j : X.functionField)) →
       cls (B.B.pull i) (LB.isLB_pull B.isLB i) = 0 := by
-  first | exact @GlobalTheory.TrivOnZeroLocus.cls_pull_eq_zero | exact GlobalTheory.TrivOnZeroLocus.cls_pull_eq_zero | (intros; apply GlobalTheory.TrivOnZeroLocus.cls_pull_eq_zero <;> assumption)
+  exact @GlobalTheory.TrivOnZeroLocus.cls_pull_eq_zero

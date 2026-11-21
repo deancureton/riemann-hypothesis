@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartInvariantSubmoduleDense
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.lowPart_invariant_submodule_dense : GlobalTheory.T
         (∀ k ∈ KInf σ G.W B.emb, ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + a')),
           Acts (evI F) (om (1, k)) f f₁ → R.p f ∈ N → R.p f₁ ∈ N) →
         N = ⊥ ∨ N = lowPartInf B G.M R.p := by
-  first | exact @GlobalTheory.IndLine.lowPartInf_irred | exact GlobalTheory.IndLine.lowPartInf_irred | (intros; apply GlobalTheory.IndLine.lowPartInf_irred <;> assumption)
+  exact @GlobalTheory.IndLine.lowPartInf_irred

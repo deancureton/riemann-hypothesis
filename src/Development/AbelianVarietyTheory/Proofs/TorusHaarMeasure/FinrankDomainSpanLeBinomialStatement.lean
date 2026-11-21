@@ -8,4 +8,4 @@ open NumberField ReciprocityTheory.ChartRestriction.G.FD ReciprocityTheory.Chart
 open scoped ContDiff ENNReal Matrix
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finrank_domain_span_le_binomial : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (r : ℕ) (X : Data E r) (Xa : ArchInM X) (Fl : FlatM X Xa), FiniteDimensional ℂ (domSpan X (X.SS (Xa.Fp + Xa.T • Xa.L))) ∧ Module.finrank ℂ (domSpan X (X.SS (Xa.Fp + Xa.T • Xa.L))) ≤ Fl.δ * (Xa.T + 2 * nd X + 6).choose (nd X) := by
-  first | exact @GlobalTheory.UpTie.finrank_domSpan_le | exact GlobalTheory.UpTie.finrank_domSpan_le | (intros; apply GlobalTheory.UpTie.finrank_domSpan_le <;> assumption)
+  exact @GlobalTheory.UpTie.finrank_domSpan_le

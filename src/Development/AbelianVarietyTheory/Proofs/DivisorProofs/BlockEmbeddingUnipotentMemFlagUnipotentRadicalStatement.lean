@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockEmbeddingUnipotentMemFlagUnipotentRadical
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.blockEmbedding_unipotent_mem_flagUnipotentRadical 
       (l = 0 ∨ ∃ p ∈ S, p.val + 1 = l) →
       ∀ (r' : ℕ), 0 < r' → r' < d → ∀ k : Fin r, k.val + 1 = l + r' →
         ∀ x : GlobalTheory.CuspRep.BlockIx d r' → GlobalTheory.CuspRep.Ad E, ι (GlobalTheory.CuspRep.unip x) ∈ GlobalTheory.StdPar.unip σ J Xf (insert k S) := by
-  first | exact @GlobalTheory.BlockForms.CuspUnip.blockEmb_unip_mem | exact GlobalTheory.BlockForms.CuspUnip.blockEmb_unip_mem | (intros; apply GlobalTheory.BlockForms.CuspUnip.blockEmb_unip_mem <;> assumption)
+  exact @GlobalTheory.BlockForms.CuspUnip.blockEmb_unip_mem

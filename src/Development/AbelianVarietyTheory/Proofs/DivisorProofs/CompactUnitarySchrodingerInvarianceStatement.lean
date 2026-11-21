@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactUnitarySchrodingerInvariance
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemAdelicSchwartzSpaceOfLevelCompactSchwartz
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_open_finite_coords_mem_uniformly_on_compact
       ∃ U : AddSubgroup (Fin n₁ × Fin d₁ → FiniteAdeleRing (𝓞 F) F), IsOpen (U : Set (Fin n₁ × Fin d₁ → FiniteAdeleRing (𝓞 F) F)) ∧
         ∀ k ∈ K, ∀ η ∈ U, ∃ p ∈ N, M.co.e (mat k⁻¹ * (incM F ι * M₁.co.e.symm (0, fun i => pairA F 0 (η i)) * (incM F ι')ᵀ)) =
           (fun i => pairA F 0 (p.1 i), fun i => pairA F 0 (p.2 i)) := by
-  first | exact @GlobalTheory.ConeUnif.coords_small_unif | exact GlobalTheory.ConeUnif.coords_small_unif | (intros; apply GlobalTheory.ConeUnif.coords_small_unif <;> assumption)
+  exact @GlobalTheory.ConeUnif.coords_small_unif

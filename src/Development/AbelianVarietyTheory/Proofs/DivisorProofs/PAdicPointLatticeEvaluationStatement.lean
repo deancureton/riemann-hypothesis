@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPointLatticeEvaluation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTangentPresentationPrime
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.p_adic_point_lattice_evaluation : ∀ (E : Type) [
     (tt.lev n).left ≫ ψ = yy ≫ (Y.oF.etaA a).left → ∀ (z : GlobalTheory.ChTor.Pts P.A.A) (e σ : Over.mk yy ⟶ Y.oF.t.G),
     e.left = yy ≫ (Y.oF.etaA a).left → σ.left = z.left ≫ ψ → σ ^ (p ^ n) = 1 → ∀ c : ℂ_[p]ˣ,
     Out.WeilIs Y.oF.t.G Y.oF.t.PP.L ((p ^ n : ℕ) : ℤ) e σ (unitOn c) → (c : ℂ_[p]) = (weil P.A (p ^ n) (tt.lev n) z : ℂ_[p]) := by
-  first | exact @GlobalTheory.ModelPointWeil.weil_eq_of_weilIs_model | exact GlobalTheory.ModelPointWeil.weil_eq_of_weilIs_model | (intros; apply GlobalTheory.ModelPointWeil.weil_eq_of_weilIs_model <;> assumption)
+  exact @GlobalTheory.ModelPointWeil.weil_eq_of_weilIs_model

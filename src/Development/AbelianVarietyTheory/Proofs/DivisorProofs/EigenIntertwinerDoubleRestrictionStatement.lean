@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerDoubleRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.eigen_intertwiner_double_restriction : GlobalTheor
       IsFundamentalDomain ((ratU σ W.J).subgroupOf (unip σ W H')) 𝓕 μ → μ 𝓕 = 1 →
       ∀ Ψ ∈ schA F (Fin n × Fin d), ∀ ξ : Fin n → E, ξ ≠ 0 → form σ X.J ξ ξ = 0 → ∀ γ ∈ ratU σ X.J, mat γ *ᵥ incV F ξ = incV F H.x →
         ∫ u in 𝓕, thetaSum F (e₀ (M.co.rho B.ψ (Matrix.vecMulVec (incV F ξ) (incV F H'.y)) (om (1, u.1) Ψ))) ∂μ = C * thetaSum F (e (M.co.rho B.ψ (shiftA H H' 1) (om (γ, 1) Ψ))) := by
-  first | exact @GlobalTheory.ThKIso.constTerm_iso | exact GlobalTheory.ThKIso.constTerm_iso | (intros; apply GlobalTheory.ThKIso.constTerm_iso <;> assumption)
+  exact @GlobalTheory.ThKIso.constTerm_iso

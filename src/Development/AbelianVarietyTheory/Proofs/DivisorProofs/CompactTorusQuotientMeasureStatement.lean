@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordMeasure
 open MeasureTheory
 open scoped NNReal ENNReal
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.compact_torus_quotient_measure : ∀ (G : Type) [G
     (∀ x : G, ∃ q ∈ Q, ∃ t k, x = q * (m t)⁻¹ * κ k) →
     ∀ ν : Measure G, IsFiniteMeasureOnCompacts ν → (∀ q ∈ Q, ν.map (fun x => q * x) = ν) →
     (∀ s, ν.map (fun x => m s * x) = ν) → (∀ k, ν.map (fun x => x * κ k) = ν) → ν.IsMulLeftInvariant := by
-  first | exact @GlobalTheory.TwoSidedInv.isMulLeftInvariant_of_parabolic | exact GlobalTheory.TwoSidedInv.isMulLeftInvariant_of_parabolic | (intros; apply GlobalTheory.TwoSidedInv.isMulLeftInvariant_of_parabolic <;> assumption)
+  exact @GlobalTheory.TwoSidedInv.isMulLeftInvariant_of_parabolic

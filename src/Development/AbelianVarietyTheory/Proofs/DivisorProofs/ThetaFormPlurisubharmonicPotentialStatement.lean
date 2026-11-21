@@ -12,4 +12,4 @@ open NumberField Formalism.BasicNotions Formalism.MainNotions ReciprocityTheory.
 open AlgebraicGeometry CategoryTheory MeasureTheory Set GlobalTheory.ShFam GlobalTheory.ChernReg GlobalTheory.CxPts GlobalTheory.TrueGeo ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.ShFam.Pad GlobalTheory.Toroidal GlobalTheory.ProjVar Formalism.L2.Pj Formalism.L2.Geo GlobalTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.theta_form_plurisubharmonic_potential : Hypotheses2 → HypothesesH → OnCore fun D O x _ => ∀ c (σ : D.what₂.LL →+* ℂ) τ (i : Fin O.N), (i : ℕ) + 1 < O.N → ∃ v : Pts (O.var c) σ → EReal, GlobalTheory.Published.IsFormPsh (AnRead.all (O.var c).str σ (O.var c).dim) (thW (refMet x O.Φ) c σ (fund τ i)) v ∧ ∀ y ∈ offBd O.Φ c σ, (v y).toReal = psi O x c σ τ i y := by
-  first | exact @GlobalTheory.FundExtPsh.extends_psh | exact GlobalTheory.FundExtPsh.extends_psh | (intros; apply GlobalTheory.FundExtPsh.extends_psh <;> assumption)
+  exact @GlobalTheory.FundExtPsh.extends_psh

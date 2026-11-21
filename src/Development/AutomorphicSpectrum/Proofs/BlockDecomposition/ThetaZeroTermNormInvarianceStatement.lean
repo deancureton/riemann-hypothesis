@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ThetaZeroTermNormInvariance
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsReps
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitValueZeroDiagonalNormStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.FieldValueZeroDiagonalNormStatement
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.theta_zero_term_norm_invariance : ∀ (K : Type) [
   ∀ (DK : DatK K) (c : HeckeCharacter K) (n : ℤ) (t : ℝ) (S : Finset (PlK K)), AdmK DK c n t S →
   ∀ M : ∀ v : Pl, LM c v, AdmM M → (∀ (v : Pl) (x : (Qv v)ˣ), (M v).ct x = 1) → ∀ (κ : Kˣ) (g : G2),
     thT n t M (dg2 (pri (Units.map (Algebra.norm ℚ : K →* ℚ) κ)) 1 * g) 0 = thT n t M g 0 := by
-  first | exact @GlobalTheory.CompanionTheory.FexTheta.theta_zero_term_norm_diagonal_invariant | exact GlobalTheory.CompanionTheory.FexTheta.theta_zero_term_norm_diagonal_invariant | (intros; apply GlobalTheory.CompanionTheory.FexTheta.theta_zero_term_norm_diagonal_invariant <;> assumption)
+  exact @GlobalTheory.CompanionTheory.FexTheta.theta_zero_term_norm_diagonal_invariant

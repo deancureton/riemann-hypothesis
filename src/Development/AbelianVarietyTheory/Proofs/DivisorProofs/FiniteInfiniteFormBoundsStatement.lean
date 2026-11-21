@@ -7,4 +7,4 @@ import Development.AbelianVarietyTheory.Definitions.Foundations.NormSumPairRankZ
 open GlobalTheory.SumSize GlobalTheory.RowClaim
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.finite_infinite_form_bounds : GlobalTheory.FunPr.Hypotheses₂ → FinFormK ∧ InfFormK := by
-  first | exact @GlobalTheory.FormVal.form_fin_inf | exact GlobalTheory.FormVal.form_fin_inf | (intros; apply GlobalTheory.FormVal.form_fin_inf <;> assumption)
+  exact @GlobalTheory.FormVal.form_fin_inf

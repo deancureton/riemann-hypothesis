@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationUnitsCharts
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
 
 set_option autoImplicit false
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.localization_units_charts : ∀ (p n : ℕ) [Fact 
       (((π ⁻¹ᵁ Xw : X'.Opens) : Set X').Nonempty → ∃ φ : R' →+* 𝓞_ℂ_[p], IsTest p (π ⁻¹ᵁ Xw) (spMap φ ≫ χ)) →
       ((∃ k, (∀ j, g (Q k) ∣ g (Q j)) ∧ g (Q k) ∣ (p : R') ^ n) ∨ ∀ j, (p : R') ^ n ∣ g (Q j)) →
       UnitChartAt p (π ⁻¹ᵁ Xw) (fun yb' => K (yb' ≫ π)) x' := by
-  first | exact @GlobalTheory.FlatModel.unitChartAt_of_dvd | exact GlobalTheory.FlatModel.unitChartAt_of_dvd | (intros; apply GlobalTheory.FlatModel.unitChartAt_of_dvd <;> assumption)
+  exact @GlobalTheory.FlatModel.unitChartAt_of_dvd

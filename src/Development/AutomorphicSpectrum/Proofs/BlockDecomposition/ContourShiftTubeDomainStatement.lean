@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.contour_shift_tube_domain : ∀ (ι : Type) [Finty
     ∀ x₁ ∈ Ω, ∀ x₂ ∈ Ω,
       (∫ y : ι → ℝ, H (fun i => (x₁ i : ℂ) + (y i : ℂ) * Complex.I)) =
         ∫ y : ι → ℝ, H (fun i => (x₂ i : ℂ) + (y i : ℂ) * Complex.I) := by
-  first | exact @GlobalTheory.CompanionTheory.EisTube.tubeShift | exact GlobalTheory.CompanionTheory.EisTube.tubeShift | (intros; apply GlobalTheory.CompanionTheory.EisTube.tubeShift <;> assumption)
+  exact @GlobalTheory.CompanionTheory.EisTube.tubeShift

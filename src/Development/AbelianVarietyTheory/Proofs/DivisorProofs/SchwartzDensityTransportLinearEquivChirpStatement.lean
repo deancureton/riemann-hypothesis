@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchwartzDensityTransportLinearEquivChirp
-import Mathlib
 open FourierTransform MeasureTheory Filter Topology
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.schwartz_density_transport_linearEquiv_chirp : ∀ (V : Type) [NormedAddCommGroup V] [NormedSpace ℝ V] [FiniteDimensional ℝ V]
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.schwartz_density_transport_linearEquiv_chirp : ∀
       (∀ (g : SchwartzMap V ℂ) (G : SchwartzMap E ℂ), (∀ x, g x = Complex.exp (-(Q x x))) → g ∈ N →
         (∀ y, G y = Complex.exp (-((Real.pi * ‖y‖ ^ 2 : ℝ) : ℂ))) → G ∈ N₂) ∧
       (Dense (N₂ : Set (SchwartzMap E ℂ)) → Dense (N : Set (SchwartzMap V ℂ))) := by
-  first | exact @GlobalTheory.GaussTransport.transport | exact GlobalTheory.GaussTransport.transport | (intros; apply GlobalTheory.GaussTransport.transport <;> assumption)
+  exact @GlobalTheory.GaussTransport.transport

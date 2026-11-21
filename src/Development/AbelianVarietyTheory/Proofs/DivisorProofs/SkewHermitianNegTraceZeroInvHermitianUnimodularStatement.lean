@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SkewHermitianNegTraceZeroInvHermitianUnimodular
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GramHspOf
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.skewHermitian_neg_traceZero_inv_hermitian_unimodul
         (GlobalTheory.WeilSchrodinger.sesq D (-D.host.xi0 • Y.J⁻¹)).IsSymm ∧
         (GlobalTheory.WeilSchrodinger.sesq D (-D.host.xi0 • Y.J⁻¹)).Nondegenerate ∧
         Formalism.HermitianLatticesTheory.IsUnimodular (GlobalTheory.WeilSchrodinger.sesq D (-D.host.xi0 • Y.J⁻¹)) L := by
-  first | exact @GlobalTheory.WeilSchrodingerSkew.main | exact GlobalTheory.WeilSchrodingerSkew.main | (intros; apply GlobalTheory.WeilSchrodingerSkew.main <;> assumption)
+  exact @GlobalTheory.WeilSchrodingerSkew.main

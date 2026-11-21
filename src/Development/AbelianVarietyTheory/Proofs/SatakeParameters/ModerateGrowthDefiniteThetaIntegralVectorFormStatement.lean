@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ModerateGrowthDefiniteThetaIntegralVectorForm
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ThetaMod
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUniqueVec
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.CharacteristicFunctionIntegralApply
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.moderateGrowth_definiteThetaIntegral_vectorForm : 
     ∀ (X : Type) [NormedAddCommGroup X] [NormedSpace ℂ X] [FiniteDimensional ℂ X] (L : X →ₗ[ℂ] (WO V W → ℂ)),
     (∀ x, IsThetaFunO ψ V W (L x)) → ∀ u : GA D V → X, Continuous u → (∀ γ ∈ GQ V, ∀ h, u (γ * h) = u h) →
     GlobalTheory.Grow.ModGrowth W (fun g => ∫ h in 𝓕, thetaKO om h g (L (u h)) ∂ν) := by
-  first | exact @GlobalTheory.ThetaLiftGrowth.modGrowth_thetaIntegral | exact GlobalTheory.ThetaLiftGrowth.modGrowth_thetaIntegral | (intros; apply GlobalTheory.ThetaLiftGrowth.modGrowth_thetaIntegral <;> assumption)
+  exact @GlobalTheory.ThetaLiftGrowth.modGrowth_thetaIntegral

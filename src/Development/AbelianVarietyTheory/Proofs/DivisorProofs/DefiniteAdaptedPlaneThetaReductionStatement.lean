@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DefiniteAdaptedPlaneThetaReduction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThLiftDef
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.definite_adapted_plane_theta_reduction : GlobalThe
       ∀ Φ₁, ∀ Φ₁' ∈ G.M'.So B.ψ B.τ₁, PolMatch B G X R Rf Φ₁ Φ₁' →
       ∀ (μ : Measure (UA σ G.W.J)) (𝓕 : Set (UA σ G.W.J)), μ.IsHaarMeasure → IsFundamentalDomain (ratU σ G.W.J) 𝓕 μ →
         Continuous (thLift om' Φ₁' μ 𝓕 (fun h => G.M.I om Φ h - c * G.M'.I om' Φ' h)) := by
-  first | exact @GlobalTheory.ThK.LiftContA.continuous_thLift_diff | exact GlobalTheory.ThK.LiftContA.continuous_thLift_diff | (intros; apply GlobalTheory.ThK.LiftContA.continuous_thLift_diff <;> assumption)
+  exact @GlobalTheory.ThK.LiftContA.continuous_thLift_diff

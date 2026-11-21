@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_integral_real_line_smooth : ∀ (F E : Type)
     ∀ (c : E) (hc : c ≠ 0), σ c = -c → ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M,
     ∀ γ : ℝ → GAd σ (c • G.W.J.map σ), IsRealLine σ (c • G.W.J.map σ) γ →
       ∀ h, HasDerivAt (fun t : ℝ => G.M.I om (om (1, back hσ G.W.J hc γ t) Φ) h) (G.M.I om (derR om (back hσ G.W.J hc γ) Φ) h) 0 := by
-  first | exact @GlobalTheory.ThK.ZFinHasDer.hasDerivAt_I_derR | exact GlobalTheory.ThK.ZFinHasDer.hasDerivAt_I_derR | (intros; apply GlobalTheory.ThK.ZFinHasDer.hasDerivAt_I_derR <;> assumption)
+  exact @GlobalTheory.ThK.ZFinHasDer.hasDerivAt_I_derR

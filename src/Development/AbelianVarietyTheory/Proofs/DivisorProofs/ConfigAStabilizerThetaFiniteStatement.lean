@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigAStabilizerThetaFinite
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingConfigurationLeviIntegralImports
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_a_stabilizer_theta_finite : GlobalTheory.Th
     ∀ Φ ∈ PolData B G.M, ∀ h, ∃ (m : ℕ) (c : Fin m → Fin b × Fin (b + a') → Af F) (φ : Fin m → (Fin b × Fin (b + a') → Af F) → ℂ),
       (∀ j, φ j ∈ SB _) ∧ ∀ k ∈ K, ∀ (l : (AE F E)ˣ) (x : Fin b × Fin (b + a') → AF F),
         e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, h) Φ)) x = ∑ j, e (G.M.co.rho B.ψ (shiftA H H' l) (om (k, h) Φ)) (fun q => ((x q).1, c j q)) * φ j (fun q => (x q).2) := by
-  first | exact @GlobalTheory.XTermFinParts.finite_parts | exact GlobalTheory.XTermFinParts.finite_parts | (intros; apply GlobalTheory.XTermFinParts.finite_parts <;> assumption)
+  exact @GlobalTheory.XTermFinParts.finite_parts

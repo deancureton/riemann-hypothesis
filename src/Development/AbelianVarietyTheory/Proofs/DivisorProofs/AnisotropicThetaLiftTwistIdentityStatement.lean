@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnisotropicThetaLiftTwistIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.anisotropic_theta_lift_twist_identity : GlobalTheo
     ∀ c₀ : E, c₀ ≠ 0 → ∀ φ' : GAd σ (c₀ • G.W.J.map σ) → ℂ,
       (∀ (g : UA σ G.W.J) (g' : GAd σ (c₀ • G.W.J.map σ)), g.1 = g'.1 → φ' g' = G.M.I om Φ g - c * G.M'.I om' Φ' g) →
       GlobalTheory.SiegelSet.IsSmoothModerate σ (c₀ • G.W.J.map σ) φ' := by
-  first | exact @GlobalTheory.ThK.SmoothDiff.isSmoothModerate_diff | exact GlobalTheory.ThK.SmoothDiff.isSmoothModerate_diff | (intros; apply GlobalTheory.ThK.SmoothDiff.isSmoothModerate_diff <;> assumption)
+  exact @GlobalTheory.ThK.SmoothDiff.isSmoothModerate_diff

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCombAtGBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPAdicComparisonStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BLieLieComb
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.isCombAtG_base_change : ∀ (E : Type) [Field E] [
     (e : Fin g → (Sp (DualNumber R) ⟶ t.G.left)) (U : Fin g → R) (σ : 𝓞 E →+* R) (u : Sp (DualNumber R) ⟶ t.G.left),
     (IsCombAtG t x e U u → IsCombAtG t (spMap φ ≫ x) (bcV t φ e) (fun b => φ (U b)) (spMap (dualMap φ) ≫ u)) ∧
     (IsEigG t σ u → IsEigG t (φ.comp σ) (spMap (dualMap φ) ≫ u)) := by
-  first | exact @GlobalTheory.FlatModel.BaseChangeComb.bc_comb_eig | exact GlobalTheory.FlatModel.BaseChangeComb.bc_comb_eig | (intros; apply GlobalTheory.FlatModel.BaseChangeComb.bc_comb_eig <;> assumption)
+  exact @GlobalTheory.FlatModel.BaseChangeComb.bc_comb_eig

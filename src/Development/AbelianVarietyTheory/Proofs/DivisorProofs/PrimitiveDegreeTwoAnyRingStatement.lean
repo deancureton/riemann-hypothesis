@@ -7,4 +7,4 @@ open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.G
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.primitive_degree_two_any_ring : PrimitiveExtendedDegTwoVanish := by
-  first | exact @GlobalTheory.Obs.primE2_any_ring | exact GlobalTheory.Obs.primE2_any_ring | (intros; apply GlobalTheory.Obs.primE2_any_ring <;> assumption)
+  exact @GlobalTheory.Obs.primE2_any_ring

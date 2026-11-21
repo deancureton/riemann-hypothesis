@@ -20,4 +20,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_pow_line_bundle_generating_section : ∀ (k : Type) [CommRing k] (k' : Type) [CommRing k'] [IsDomain k'] [Algebra k k'],
     IsArithVar (spMap (algebraMap k k')) 0 → ∀ (B : LB (Sp k')), B.IsLB →
       ∃ e : ℕ, 0 < e ∧ ∃ t : LB.Gen (lbPow B e), t.IsGen := by
-  first | exact @GlobalTheory.PicOrderTors.gen_pow | exact GlobalTheory.PicOrderTors.gen_pow | (intros; apply GlobalTheory.PicOrderTors.gen_pow <;> assumption)
+  exact @GlobalTheory.PicOrderTors.gen_pow

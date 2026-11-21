@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLogCanonicalEquationChangeFormPerturbedDivisor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.CentreAtOfIsAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsLocModelIsPrimeOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.NotDominatesTopPlace
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.isLogCanonicalEquation_changeForm_perturbed_diviso
       IsLogEqn p (Δ + (1 - δ) • D + t • qWeil (CartierDiv.principal g + l • A) 1) η' x m₂ g₂ ∧
       ∀ E : DivOver p, discrep E η' m₂ g₂ = E.formOrd η' + E.ord F - E.ord gG / m
         - (1 - δ) * (E.ord fD / mD) - t * E.ord (g * a ^ l) := by
-  first | exact @GlobalTheory.PairStep.isLogEqn_changeForm_add | exact GlobalTheory.PairStep.isLogEqn_changeForm_add | (intros; apply GlobalTheory.PairStep.isLogEqn_changeForm_add <;> assumption)
+  exact @GlobalTheory.PairStep.isLogEqn_changeForm_add

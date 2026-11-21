@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoverNormsRationalSectionDivisor
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.cover_norms_rational_section_divisor : ∀ (F : Ty
     ∃ (r : L.B.ι → V.X.functionFieldˣ) (hr : IsRatSec L.B r),
       (∀ z, (L.div hr).mult z ≠ 0 → (V.p z).asIdeal ≠ ⊥) ∧
       ∀ σ, ∃ a : ℝ, ∀ y ∈ offSupp V.p σ (L.div hr), logNorm (L.φ σ) r y = a := by
-  first | exact @GlobalTheory.CoverNorm.Lift.exists_ratSec_vertical_const | exact GlobalTheory.CoverNorm.Lift.exists_ratSec_vertical_const | (intros; apply GlobalTheory.CoverNorm.Lift.exists_ratSec_vertical_const <;> assumption)
+  exact @GlobalTheory.CoverNorm.Lift.exists_ratSec_vertical_const

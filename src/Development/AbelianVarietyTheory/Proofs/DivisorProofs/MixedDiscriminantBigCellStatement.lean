@@ -11,4 +11,4 @@ open ReciprocityTheory.L2DbarEstimates (V cHess)
 open scoped ContDiff ComplexOrder Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.mixed_discriminant_big_cell : ∀ (ι : Type) [Fintype ι] (r : ι → ℕ) (n D : ℕ) (ε : Fin (D + 1) ≃ Fin n ⊕ (Σ a, Low (r a))) (N : Matrix (Fin n) (Fin n) ℂ) (δ m : (Σ a, Low (r a)) → ℝ), mix D (BigCell.blk ε N δ) (BigCell.blk ε 0 m) = (D.factorial : ℝ) / Real.pi ^ (D + 1) * N.det.re * ∑ s, m s * ∏ s' ∈ Finset.univ.erase s, δ s' := by
-  first | exact @GlobalTheory.BigCell.mix_blk_fib | exact GlobalTheory.BigCell.mix_blk_fib | (intros; apply GlobalTheory.BigCell.mix_blk_fib <;> assumption)
+  exact @GlobalTheory.BigCell.mix_blk_fib

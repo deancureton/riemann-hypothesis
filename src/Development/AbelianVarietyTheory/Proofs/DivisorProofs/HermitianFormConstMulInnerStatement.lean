@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianFormConstMulInner
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.RealMetaplecticRepresentation
 open MeasureTheory GlobalTheory.RealWeil
 open scoped SchwartzMap
@@ -9,4 +8,4 @@ theorem _root_.GlobalTheory.T.hermitian_form_const_mul_inner : ∀ (n : ℕ) (B 
     (∀ h, 0 ≤ (B h h).re) →
     (∀ f f' g g' : Sch (Fin n), (∫ x, f x * starRingEnd ℂ (g x)) * B g' f' = (∫ x, g' x * starRingEnd ℂ (f' x)) * B f g) →
     ∃ c : ℝ, 0 ≤ c ∧ ∀ h h', B h h' = c * ∫ x, h x * starRingEnd ℂ (h' x) := by
-  first | exact @GlobalTheory.hermitian_form_eq_smul_l2 | exact GlobalTheory.hermitian_form_eq_smul_l2 | (intros; apply GlobalTheory.hermitian_form_eq_smul_l2 <;> assumption)
+  exact @GlobalTheory.hermitian_form_eq_smul_l2

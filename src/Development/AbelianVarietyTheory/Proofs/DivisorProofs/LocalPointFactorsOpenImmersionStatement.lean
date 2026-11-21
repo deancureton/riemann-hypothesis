@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalPointFactorsOpenImmersion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitNatCastRes
 
 set_option autoImplicit false
@@ -19,4 +18,4 @@ open GlobalTheory.UnitGlue
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.local_point_factors_open_immersion : ∀ (S : Type) [CommRing S] [IsLocalRing S] (X : Scheme.{0}) (R : Type) [CommRing R] (ξ : Sp R ⟶ X) (yb : Sp S ⟶ X), IsOpenImmersion ξ → yb (IsLocalRing.closedPoint S) ∈ Set.range ξ → ∃ φ : R →+* S, spMap φ ≫ ξ = yb := by
-  first | exact @GlobalTheory.localSpec_fac_of_closedPoint_mem_range | exact GlobalTheory.localSpec_fac_of_closedPoint_mem_range | (intros; apply GlobalTheory.localSpec_fac_of_closedPoint_mem_range <;> assumption)
+  exact @GlobalTheory.localSpec_fac_of_closedPoint_mem_range

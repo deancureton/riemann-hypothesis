@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalEigenTriple
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain MeasureTheory Filter Topology Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.config_b_local_eigen_triple : GlobalTheory.FunPr.H
       (∀ u ∈ unip σ G.V' H, u ∈ UAt σ G.V' (evI F) → ∀ f, ei' (locOpInf (om' (u, 1)) f) = ei' f) ∧
       ∀ t g₀ g, IsLevi H t g₀ g → g ∈ UAt σ G.V' (evI F) → g₀ ∈ UAt σ G₁.V' (evI F) → ∀ f,
         ei' (locOpInf (om' (g, 1)) f) = fac X.ν (((a + (b + 2) : ℕ) : ℝ) / 2) t • locOpInf (om₁' (g₀, 1)) (ei' f) := by
-  first | exact @GlobalTheory.ThK.EvLawBLeft.infLaw | exact GlobalTheory.ThK.EvLawBLeft.infLaw | (intros; apply GlobalTheory.ThK.EvLawBLeft.infLaw <;> assumption)
+  exact @GlobalTheory.ThK.EvLawBLeft.infLaw

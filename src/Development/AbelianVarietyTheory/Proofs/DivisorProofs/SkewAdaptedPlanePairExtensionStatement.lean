@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_plane_pair_extension : GlobalTheory.F
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ c : UA σ X.J →* ℂˣ, (∀ g, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (g, 1) Φ) = (c g : ℂ) • om₁ (g, 1) (e Φ)) → c = 1 := by
-  first | exact @GlobalTheory.MixWOne.evalZero_scalar_eq_one | exact GlobalTheory.MixWOne.evalZero_scalar_eq_one | (intros; apply GlobalTheory.MixWOne.evalZero_scalar_eq_one <;> assumption)
+  exact @GlobalTheory.MixWOne.evalZero_scalar_eq_one

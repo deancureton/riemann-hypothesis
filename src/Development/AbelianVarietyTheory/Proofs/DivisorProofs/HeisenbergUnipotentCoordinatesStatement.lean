@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergUnipotentCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryAdelicGroupTopology
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.heisenberg_unipotent_coordinates : ∀ (F E : Type
     ∀ (t : (AE F E)ˣ) (m : UA σ Y.J), IsLevi (W₁ := Y₁) H (Units.map (cA σ : AE F E →* AE F E) t) 1 m →
       ∀ u : unip σ Y H, ∃ h : m * u.1 * m⁻¹ ∈ unip σ Y H,
         Φ ⟨m * u.1 * m⁻¹, h⟩ = (cA σ (t : AE F E) • (Φ u).1, Algebra.norm (AF F) (t : AE F E) * (Φ u).2) := by
-  first | exact @GlobalTheory.UnipCoord.exists_coord_unip | exact GlobalTheory.UnipCoord.exists_coord_unip | (intros; apply GlobalTheory.UnipCoord.exists_coord_unip <;> assumption)
+  exact @GlobalTheory.UnipCoord.exists_coord_unip

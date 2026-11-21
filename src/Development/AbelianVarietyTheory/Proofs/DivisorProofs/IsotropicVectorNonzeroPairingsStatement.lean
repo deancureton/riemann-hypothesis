@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicVectorNonzeroPairings
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.exists_isotropic_vector_pairing_ne_zero : ∀ (F E
         Formalism.UG.cT (σ : E →+* E) x₀ * J * x = 0 →
         ∃ u : Matrix (Fin n) (Fin 1) E, Formalism.UG.cT (σ : E →+* E) u * J * u = 0 ∧
           Formalism.UG.cT (σ : E →+* E) x₀ * J * u ≠ 0 ∧ Formalism.UG.cT (σ : E →+* E) u * J * x ≠ 0 := by
-  first | exact @GlobalTheory.exists_isotropic_vector_pairing_one | exact GlobalTheory.exists_isotropic_vector_pairing_one | (intros; apply GlobalTheory.exists_isotropic_vector_pairing_one <;> assumption)
+  exact @GlobalTheory.exists_isotropic_vector_pairing_one

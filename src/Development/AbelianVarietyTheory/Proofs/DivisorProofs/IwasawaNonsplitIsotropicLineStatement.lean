@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaNonsplitIsotropicLine
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAtAlt
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.iwasawa_nonsplit_isotropic_line : ∀ (F E : Type)
     ∀ (x : Fin d → E), x ≠ 0 → form σ W.J x x = 0 →
     ∀ (v : Pl F), IsEmpty (E →ₐ[F] Fv F v) → ∀ g ∈ UAt σ W (evFin F v),
       ∃ k ∈ KAt σ W v, ∃ t : (AE F E)ˣ, mat (g * k⁻¹) *ᵥ incV F x = t.1 • incV F x := by
-  first | exact @GlobalTheory.InertLineTrans.exists_stab_line | exact GlobalTheory.InertLineTrans.exists_stab_line | (intros; apply GlobalTheory.InertLineTrans.exists_stab_line <;> assumption)
+  exact @GlobalTheory.InertLineTrans.exists_stab_line

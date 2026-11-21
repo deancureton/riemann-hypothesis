@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawPairRestrictionIsPair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipMat
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.seesaw_pair_restriction_is_pair : ∀ (F E : Type)
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ (t : (AE F E)ˣ) (m : UA σ W.J), IsLevi (W₁ := W₁) H' t 1 m →
       Matrix.fromBlocks (mat m) 0 0 1 * GlobalTheory.DblUnip.unipMat (cA σ).toRingHom (incM F W.J) (incV F H'.x) (incV F H'.y) ((↑t⁻¹ : AE F E) - 1) * diagCols (Fin d) = diagCols (Fin d) * GlobalTheory.DblUnip.diagMat (cA σ).toRingHom (incM F W.J) (incV F H'.x) (incV F H'.y) ((↑t⁻¹ : AE F E) - 1) ∧
       (GlobalTheory.DblUnip.diagMat (cA σ).toRingHom (incM F W.J) (incV F H'.x) (incV F H'.y) ((↑t⁻¹ : AE F E) - 1)).det = cA σ (↑t⁻¹ : AE F E) := by
-  first | exact @GlobalTheory.DiagUnip.diag_stab | exact GlobalTheory.DiagUnip.diag_stab | (intros; apply GlobalTheory.DiagUnip.diag_stab <;> assumption)
+  exact @GlobalTheory.DiagUnip.diag_stab

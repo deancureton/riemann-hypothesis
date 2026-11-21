@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlternatingCubeProductValueFderivAtZero
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPolAVSectionInverseImage
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToricPeriodBlockIsSymm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoeffTopMonEqZero
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.alternatingCubeProduct_value_fderiv_at_zero : ∀ 
         fderiv ℂ (fr (ULift.up {2})) 0 W / fr (ULift.up {2}) 0 -
         fderiv ℂ (fr (ULift.up {0, 2})) x W / fr (ULift.up {0, 2}) x -
         fderiv ℂ (fr (ULift.up {1, 2})) y W / fr (ULift.up {1, 2}) y := by
-  first | exact @GlobalTheory.AltJet.value_and_fderiv_at_zero | exact GlobalTheory.AltJet.value_and_fderiv_at_zero | (intros; apply GlobalTheory.AltJet.value_and_fderiv_at_zero <;> assumption)
+  exact @GlobalTheory.AltJet.value_and_fderiv_at_zero

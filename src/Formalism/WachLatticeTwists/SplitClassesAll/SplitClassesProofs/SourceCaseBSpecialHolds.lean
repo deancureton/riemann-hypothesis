@@ -8,7 +8,6 @@ namespace Formalism.RepresentationBoundsCohomology.SplitClassesAll
 
 open Formalism.CoboundaryTransfers Formalism.RepresentationBoundsCohomology.N1 Formalism.RepresentationBoundsCohomology.N2 Formalism.RepresentationBoundsCohomology.JL Formalism.RepresentationBoundsCohomology.JN
 
-set_option maxHeartbeats 4000000 in
 theorem srcNA : StatSrcNA := by
   intro ℓ _ H₁ H₂ _ _ _ _ Hf₁ Hf₂ g e hS
   obtain ⟨hℓ2, hS⟩ := hS

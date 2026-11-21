@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MeasureLeOfLocalLe
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecondChernDensity
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticDensityPushforwardIntegral
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ClosedSubsetPartitionNull
@@ -17,4 +16,4 @@ open Formalism.BasicNotions Formalism.L2.Pj GlobalTheory.Toroidal GlobalTheory.S
 open scoped ContDiff ComplexOrder ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.measure_le_of_local_le : ∀ (X : Type) [TopologicalSpace X] [MeasurableSpace X] [BorelSpace X] [SecondCountableTopology X] (M M' : Measure X) (S : X → Set X) (W : Set X), (∀ x, IsOpen (S x)) → (∀ x ∈ W, x ∈ S x) → M Wᶜ = 0 → (∀ x ∈ W, ∀ A : Set X, MeasurableSet A → A ⊆ S x → M A ≤ M' A) → M ≤ M' := by
-  first | exact @GlobalTheory.FubCover.le_of_open_cover | exact GlobalTheory.FubCover.le_of_open_cover | (intros; apply GlobalTheory.FubCover.le_of_open_cover <;> assumption)
+  exact @GlobalTheory.FubCover.le_of_open_cover

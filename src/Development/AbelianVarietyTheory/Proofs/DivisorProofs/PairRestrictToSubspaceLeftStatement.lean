@@ -33,4 +33,4 @@ theorem _root_.GlobalTheory.T.pair_restrict_to_subspace_left : GlobalTheory.ThK.
           S (dd.rho B.ψ (Matrix.fromCols 0 (Matrix.vecMulVec y (incV F H'.x))) Φ) = S Φ) →
         (∀ l ∈ (adeleClass F).adm (Fin n × Fin d₁ ⊕ Fin n × Fin d₁), l ∘ₗ S ∈ (adeleClass F).adm (Fin n × Fin d ⊕ Fin n × Fin d)) →
         ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), S Φ = c • Ed Φ := by
-  first | exact @GlobalTheory.EvZeroUniqDbl.main | exact GlobalTheory.EvZeroUniqDbl.main | (intros; apply GlobalTheory.EvZeroUniqDbl.main <;> assumption)
+  exact @GlobalTheory.EvZeroUniqDbl.main

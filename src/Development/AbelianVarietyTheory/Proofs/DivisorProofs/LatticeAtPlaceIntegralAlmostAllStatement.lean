@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeAtPlaceIntegralAlmostAll
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaActionExists
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.lattice_at_place_integral_almost_all : ∀ (F E : 
     (σ : E →ₐ[F] E) (B : Base F E) (n d : ℕ) (X : Spc F E n) (W : Spc F E d) (M : Model σ X W) (χX χW : Chr F E)
     (om : GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.Rep σ X W) (r s r' s' : ℕ), IsPair B M χX χW om r s r' s' → ∀ᶠ v in Filter.cofinite, ∀ l, l ∈ (latAtV X W v).map (GlobalTheory.LatVac.locCo M.co v) ↔
       ∀ i, l.1 i ∈ v.adicCompletionIntegers F ∧ l.2 i ∈ v.adicCompletionIntegers F := by
-  first | exact @GlobalTheory.LatIntegral.locCo_latAtV_eventually | exact GlobalTheory.LatIntegral.locCo_latAtV_eventually | (intros; apply GlobalTheory.LatIntegral.locCo_latAtV_eventually <;> assumption)
+  exact @GlobalTheory.LatIntegral.locCo_latAtV_eventually

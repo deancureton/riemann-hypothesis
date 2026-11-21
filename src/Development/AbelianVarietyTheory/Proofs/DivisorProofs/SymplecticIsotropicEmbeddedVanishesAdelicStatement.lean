@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.symplectic_isotropic_embedded_vanishes_adelic : �
     (∀ u, form σ JW (H'.ι *ᵥ u) H'.x = 0) → ∀ u ∈ (iso0 n H' : Set (Matrix (Fin n) (Fin d) (AE F E))),
       ∀ z : Matrix (Fin n) (Fin d₁) (AE F E),
         symp (cA σ) (-1) (incM F JX) (incM F JW) (incM F (1 : Matrix (Fin n) (Fin n) E) * z * (incM F H'.ι)ᵀ) u = 0 := by
-  first | exact @GlobalTheory.MixedLagr.symplectic_isotropic_embedded_vanishes | exact GlobalTheory.MixedLagr.symplectic_isotropic_embedded_vanishes | (intros; apply GlobalTheory.MixedLagr.symplectic_isotropic_embedded_vanishes <;> assumption)
+  exact @GlobalTheory.MixedLagr.symplectic_isotropic_embedded_vanishes

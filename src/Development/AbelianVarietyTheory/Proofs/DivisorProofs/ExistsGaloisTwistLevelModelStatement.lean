@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.exists_galois_twist_level_model : Hypotheses2 → 
             (w.mapDomain fun a => (a.1, a.2.1,
               Sum.map (fun p => (p.1.comp ((D.host.sigmaOf h : D.host.E ≃ₐ[ℚ] D.host.E) : D.host.E →+* D.host.E), p.2)) id
                 a.2.2))).arTop := by
-  first | exact @GlobalTheory.ShFam.GalCarry.carry | exact GlobalTheory.ShFam.GalCarry.carry | (intros; apply GlobalTheory.ShFam.GalCarry.carry <;> assumption)
+  exact @GlobalTheory.ShFam.GalCarry.carry

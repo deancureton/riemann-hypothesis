@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedRepExistsRightTranslation
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.induced_rep_exists_right_translation : ∀ (k : Ty
     ∃ ρ : Representation ℂ (GL (Fin (a + a')) k) (GlobalTheory.KSplit.indSp a a' α β),
       (∀ g f x, ((ρ g f : GlobalTheory.KSplit.indSp a a' α β) : GL (Fin (a + a')) k → ℂ) x = (f : GL (Fin (a + a')) k → ℂ) (x * g)) ∧
       IsSmooth ρ ∧ Nonempty (ρ.Equiv (prod₂ (detRep (Fin a) α) (detRep (Fin a') β))) := by
-  first | exact @GlobalTheory.KSplit.indSp_rightTr_equiv_prod₂ | exact GlobalTheory.KSplit.indSp_rightTr_equiv_prod₂ | (intros; apply GlobalTheory.KSplit.indSp_rightTr_equiv_prod₂ <;> assumption)
+  exact @GlobalTheory.KSplit.indSp_rightTr_equiv_prod₂

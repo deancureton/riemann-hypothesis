@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockDegreeOddMapLe
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.fock_degree_odd_map_le : GlobalTheory.ThK.KP → �
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       ∀ j : ℕ, (fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j + 1)).map R.p ≤
         (fockDeg G.M B.ψ B.emb (lowDegInf B G.M R.p + 2 * j)).map R.p := by
-  first | exact @GlobalTheory.FockParity.map_fockDeg_odd_le | exact GlobalTheory.FockParity.map_fockDeg_odd_le | (intros; apply GlobalTheory.FockParity.map_fockDeg_odd_le <;> assumption)
+  exact @GlobalTheory.FockParity.map_fockDeg_odd_le

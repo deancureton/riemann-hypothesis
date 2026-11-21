@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviEmbeddingGammaStabilizerUnique
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitHomVal
 open scoped TensorProduct NNReal Matrix
 open NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.levi_embedding_gamma_stabilizer_unique : ∀ (R : 
     (GlobalTheory.SmGL.leviEmb R e l : Matrix (Fin n) (Fin n) R)ᵀ * GlobalTheory.SplitCoord.gam e (K : Matrix (Fin m) (Fin m) R) *
                  (N' : Matrix (Fin n) (Fin n) R) = GlobalTheory.SplitCoord.gam e (K : Matrix (Fin m) (Fin m) R) →
     N' = GlobalTheory.SmGL.leviEmb R e (GlobalTheory.SplitCoord.levDual K l) := by
-  first | exact @GlobalTheory.SplitCoord.eq_leviEmb_levDual_of_gram | exact GlobalTheory.SplitCoord.eq_leviEmb_levDual_of_gram | (intros; apply GlobalTheory.SplitCoord.eq_leviEmb_levDual_of_gram <;> assumption)
+  exact @GlobalTheory.SplitCoord.eq_leviEmb_levDual_of_gram

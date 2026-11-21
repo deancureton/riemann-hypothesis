@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InvertibleTranslateSchwartzFunctional
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelEigenContinuous
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.invertible_translate_schwartz_functional : ∀ {F 
         (∀ Z : Matrix (Fin (b + 2)) (Fin (a + (b + 2))) (Fv F v), f₁ (P * Z * Q) = ψ (∑ i, ∑ j, U i j * Z i j) * f (P * Z * Q)) → Λ f₁ = Λ f) →
     ∃ κ : ℂ, ∀ f ∈ SB (Matrix (Fin (b + 2)) (Fin (a + (b + 2))) (Fv F v)),
       Λ f = κ * ∫ r, ∫ c, f (P * insS (0 : Matrix (Fin b) (Fin (a + b)) (Fv F v)) r c 0 * Q) ∂(haarVec v b) ∂(haarVec v (a + (b + 2))) := by
-  first | exact @GlobalTheory.SBHaarDelta.main | exact GlobalTheory.SBHaarDelta.main | (intros; apply GlobalTheory.SBHaarDelta.main <;> assumption)
+  exact @GlobalTheory.SBHaarDelta.main

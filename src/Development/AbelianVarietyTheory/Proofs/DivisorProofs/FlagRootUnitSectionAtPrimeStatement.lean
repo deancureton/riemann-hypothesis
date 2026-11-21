@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagRootUnitSectionAtPrime
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -35,4 +34,4 @@ theorem _root_.GlobalTheory.T.flag_root_unit_section_at_prime : Hypotheses2 → 
         (∑ x : D.what₂.Tau × Fin O.N, if x.1 = τ then (O.root0 c (GlobalTheory.FlagAr.setB O.Y B) x).lg v e y else 0) -
           Real.log (e.w (valAt y.1 ((∏ x : D.what₂.Tau × Fin O.N,
             if x.1 = τ then genAt (O.root0 c (GlobalTheory.FlagAr.setB O.Y B) x).D (below y.1) else 1) / σ))) = C := by
-  first | exact @GlobalTheory.HTConstRoot.exists_gen_const | exact GlobalTheory.HTConstRoot.exists_gen_const | (intros; apply GlobalTheory.HTConstRoot.exists_gen_const <;> assumption)
+  exact @GlobalTheory.HTConstRoot.exists_gen_const

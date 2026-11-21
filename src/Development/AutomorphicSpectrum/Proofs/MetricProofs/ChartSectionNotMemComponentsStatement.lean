@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.MetricProofs.ChartSectionNotMemComponents
-import Mathlib
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.PoincareLelong
 import Development.AutomorphicSpectrum.PublishedTheorems.Metrics₂.SheetDensityEqSetSheetDensity
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.chartSection_not_mem_components : ∀ (K : Type) [
     (s : MRingOver ℂ ι) (a : K → ℕ),
     IsCxVar Q e → IsMultiHomog s a → s ∉ Q →
     ∀ J ∈ chartComponents (conePts Q) σ i, chartSection σ i s ∉ J := by
-  first | exact @GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartSection_notMem_component | exact GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartSection_notMem_component | (intros; apply GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartSection_notMem_component <;> assumption)
+  exact @GlobalTheory.CompanionTheory.Ar.Pub.CxChart.chartSection_notMem_component

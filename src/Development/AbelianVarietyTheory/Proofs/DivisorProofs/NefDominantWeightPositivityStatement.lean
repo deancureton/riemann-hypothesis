@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.nef_dominant_weight_positivity : GlobalTheory.CovT
     topologicalKrullDim Z = 1 →
     0 ≤ ∑ x, -(w x.1 x.2) *
       (topSelfIntersection (ZMod q) ((((h.mdl (FlagAr.setB O.Y B) c).root (FlagAr.setB O.Y B) x).pull ρ hρ).B.pull i) 1 : ℝ) := by
-  first | exact @GlobalTheory.NefDeRhamRoots.nonneg_roots | exact GlobalTheory.NefDeRhamRoots.nonneg_roots | (intros; apply GlobalTheory.NefDeRhamRoots.nonneg_roots <;> assumption)
+  exact @GlobalTheory.NefDeRhamRoots.nonneg_roots

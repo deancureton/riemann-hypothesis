@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsInverseDifferentLocalUnit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_inverse_different_local_unit : ∀ (F E : T
     ∃ s : 𝓞 F, s ∉ v.asIdeal ∧
     (∀ t : E, (∀ o : 𝓞 E, IsIntegral ℤ (Algebra.trace ℚ E (o * t))) → IsIntegral ℤ (δ * t)) ∧
     (∀ t : E, IsIntegral ℤ (δ * t) → ∀ o : 𝓞 E, IsIntegral ℤ (Algebra.trace ℚ E (o * (algebraMap F E (s : F) * t)))) := by
-  first | exact @GlobalTheory.ImagDifferent.exists_imag_generator | exact GlobalTheory.ImagDifferent.exists_imag_generator | (intros; apply GlobalTheory.ImagDifferent.exists_imag_generator <;> assumption)
+  exact @GlobalTheory.ImagDifferent.exists_imag_generator

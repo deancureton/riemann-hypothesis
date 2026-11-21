@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.theta_integral_lie_derivative_invariant : ∀ (F E
     ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∀ l : List (Multiplicative ℝ →* UA σ G.V.J), (∀ γ ∈ l, γ ∈ Lines σ G.V) →
       (l.map fun γ t => γ (Multiplicative.ofAdd t)).foldr (derL om) Φ ∈ GlobalTheory.ThK.PolData B G.M ∧
       (l ≠ [] → G.M.I om ((l.map fun γ t => γ (Multiplicative.ofAdd t)).foldr (derL om) Φ) = 0) := by
-  first | exact @GlobalTheory.ThK.ZFinKill.kill | exact GlobalTheory.ThK.ZFinKill.kill | (intros; apply GlobalTheory.ThK.ZFinKill.kill <;> assumption)
+  exact @GlobalTheory.ThK.ZFinKill.kill

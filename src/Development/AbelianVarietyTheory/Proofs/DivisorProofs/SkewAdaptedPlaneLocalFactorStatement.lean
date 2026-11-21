@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.ev_om_levi_eq_om_ev_of_isAdapted : GlobalTheory.Fu
     ∀ (d₁ : ℕ) (W₁ : Spc F E d₁) (H' : Plane E d d₁) (i₀ i₁ : ℕ) (M₁ : Model σ X W₁) (om₁ : Rep σ X W₁) (r₁ s₁ : ℕ),
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ h₁ m, IsLevi H' 1 h₁ m → ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, m) Φ) = om₁ (1, h₁) (e Φ) := by
-  first | exact @GlobalTheory.MixWP.evalZero_levi_unitary | exact GlobalTheory.MixWP.evalZero_levi_unitary | (intros; apply GlobalTheory.MixWP.evalZero_levi_unitary <;> assumption)
+  exact @GlobalTheory.MixWP.evalZero_levi_unitary

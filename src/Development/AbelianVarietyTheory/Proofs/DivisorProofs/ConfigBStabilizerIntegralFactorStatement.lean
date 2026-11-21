@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBStabilizerIntegralFactor
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_integral_factor : GlobalTheory
       ∃ s₁ : ℝ, ∀ T : Set (UA σ G.W.J), GlobalTheory.ConeSmallCT.IsReps T H'.x → ∀ s : ℂ, s₁ < s.re →
         GlobalTheory.ConeSmallCT.LocUnifSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) T ∧
         ∀ h, HasSum (fun t : T => C * GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2) (t.1 * h)) (GlobalTheory.ConeSmallCT.Bint G.M' om' Φ' Eis s h) := by
-  first | exact @GlobalTheory.ConeSmallUnf.unfold_series | exact GlobalTheory.ConeSmallUnf.unfold_series | (intros; apply GlobalTheory.ConeSmallUnf.unfold_series <;> assumption)
+  exact @GlobalTheory.ConeSmallUnf.unfold_series

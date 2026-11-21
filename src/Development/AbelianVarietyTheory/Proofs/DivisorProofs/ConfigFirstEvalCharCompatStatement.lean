@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigFirstEvalCharCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsPairOfIsTriple
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_first_eval_char_compat : GlobalTheory.ThK.K
     (∀ u ∈ isoA (F := F) H H', ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e' (G.M.co.rho B.ψ u Φ) = e' Φ) →
     (∀ y : Fin b × Fin (b + a') → AF F, (LinearMap.proj y : Fn F b (b + a') →ₗ[ℂ] ℂ) ∘ₗ e' ∈ (adeleClass F).adm (Fin (b + 2) × Fin (b + 2 + a'))) →
     ∃ c : ℂ, ∀ Φ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e' Φ = c • e Φ := by
-  first | exact @GlobalTheory.ThKUniqA.main | exact GlobalTheory.ThKUniqA.main | (intros; apply GlobalTheory.ThKUniqA.main <;> assumption)
+  exact @GlobalTheory.ThKUniqA.main

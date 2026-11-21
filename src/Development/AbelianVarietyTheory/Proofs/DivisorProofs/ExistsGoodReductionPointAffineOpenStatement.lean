@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsGoodReductionPointAffineOpen
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockUniOne
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralAdaptedMinorNormsStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsBlockUnipotentTriangularizingStatement
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.exists_good_reduction_point_affine_open : ∀ {F :
     ∃ (v : IsDedekindDomain.HeightOneSpectrum (𝓞 F)) (ε : TrueGeo.Ext v) (xg : Sp (AlgebraicClosure F) ⟶ W)
       (xt : Sp ε.O ⟶ X) (ht : ⊤ ≤ xt ⁻¹ᵁ V), xg ≫ s = spMap (algebraMap F (AlgebraicClosure F)) ∧
       spMap ε.O.subtype ≫ xt = xg ≫ jB ∧ ∀ f : Γ(X, V), IsUnit (TangentOrigin.evalPt xt V ht f) → x₀ ∈ X.basicOpen f := by
-  first | exact @GlobalTheory.ArLieBase.CentrePt.exists_centre_pt | exact GlobalTheory.ArLieBase.CentrePt.exists_centre_pt | (intros; apply GlobalTheory.ArLieBase.CentrePt.exists_centre_pt <;> assumption)
+  exact @GlobalTheory.ArLieBase.CentrePt.exists_centre_pt

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_theta_integral : GlobalTheory.F
       H.IsAdapted σ B X X₁ j₀ j₁ → IsPair B M₁ χX χW om₁ r₁ s₁ r' s' →
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ u ∈ unip σ X H, ∀ Φ ∈ schA F (Fin n × Fin d), e (om (u, 1) Φ) = e Φ := by
-  first | exact @GlobalTheory.MixXUnip.unip_trivial | exact GlobalTheory.MixXUnip.unip_trivial | (intros; apply GlobalTheory.MixXUnip.unip_trivial <;> assumption)
+  exact @GlobalTheory.MixXUnip.unip_trivial

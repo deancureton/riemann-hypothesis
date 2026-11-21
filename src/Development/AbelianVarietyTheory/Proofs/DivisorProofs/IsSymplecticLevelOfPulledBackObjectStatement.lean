@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsSymplecticLevelOfPulledBackObject
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ZetaAwayPowSelf
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.UPel.HT GlobalTheory.SiegelTor GlobalTheory.HTSympCover
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.isSymplecticLevel_of_pulledBack_object : ∀ (p : 
   (lv' : (Fin h ⊕ Fin h → ℤ) → (𝟙_ (Over T.left) ⟶ o'.A)) (lv : (Fin h ⊕ Fin h → ℤ) → (T ⟶ o.A)),
     (∀ a, (lv' a).left ≫ m.φ = (lv a).left) → SympCond o h M T t₁ lv →
       IsSympLev o'.P h M (zetaAway M) t₁ lv' := by
-  first | exact @GlobalTheory.HTSympCover.isSympLev_of_sympCond_pull | exact GlobalTheory.HTSympCover.isSympLev_of_sympCond_pull | (intros; apply GlobalTheory.HTSympCover.isSympLev_of_sympCond_pull <;> assumption)
+  exact @GlobalTheory.HTSympCover.isSympLev_of_sympCond_pull

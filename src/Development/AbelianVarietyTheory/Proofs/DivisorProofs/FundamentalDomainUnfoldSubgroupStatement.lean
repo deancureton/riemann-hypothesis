@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainUnfoldSubgroup
-import Mathlib
 open MeasureTheory
 open scoped Pointwise
 set_option maxHeartbeats 1000000 in
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.fundamental_domain_unfold_subgroup : ∀ {G G₁ :
     μN.IsMulLeftInvariant → IsFundamentalDomain (Q.subgroupOf N) 𝓕 μN →
     ∑' γ : Γ, ∫⁻ n, D.indicator (1 : G → ENNReal) (n.1 * ι γ * h) ∂μN
       = ∫⁻ n in 𝓕, ∑' q : Q, D.indicator (1 : G → ENNReal) (q.1 * (n.1 * h)) ∂μN := by
-  first | exact @GlobalTheory.sum_integral_indicator_eq_setIntegral_count | exact GlobalTheory.sum_integral_indicator_eq_setIntegral_count | (intros; apply GlobalTheory.sum_integral_indicator_eq_setIntegral_count <;> assumption)
+  exact @GlobalTheory.sum_integral_indicator_eq_setIntegral_count

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SeesawIdentityConfigAEigen
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.seesaw_identity_config_a_eigen : GlobalTheory.ThK.
     ∀ (e₁ : Fn F (b + 2) (b + 2 + a') →ₗ[ℂ] Fn F (b + 2) (b + a')) (e₂ : Fn F (b + 2) (b + a') →ₗ[ℂ] Fn F b (b + a')),
       IsEv B G.M M₂ 1 H'.ι (iso0 (b + 2) H') e₁ → IsEv B M₂ G₁.M H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e₂ →
       ∃ c : ℂ, c ≠ 0 ∧ ∀ Ψ ∈ schA F (Fin (b + 2) × Fin (b + 2 + a')), e Ψ = c • e₂ (e₁ Ψ) := by
-  first | exact @GlobalTheory.ThK.EvFactor.evA_eq_smul_comp | exact GlobalTheory.ThK.EvFactor.evA_eq_smul_comp | (intros; apply GlobalTheory.ThK.EvFactor.evA_eq_smul_comp <;> assumption)
+  exact @GlobalTheory.ThK.EvFactor.evA_eq_smul_comp

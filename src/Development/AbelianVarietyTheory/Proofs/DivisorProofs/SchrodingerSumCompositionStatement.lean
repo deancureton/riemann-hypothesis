@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SchrodingerSumComposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.schrodinger_sum_composition : ∀ {R : Type} [Comm
         GlobalTheory.WeilM.schr ψ (Sum.elim b.1 0, Sum.elim b.2 0)
           (GlobalTheory.WeilM.schr ψ (Sum.elim 0 b'.1, Sum.elim 0 (-b'.2))
             (GlobalTheory.WeilM.schr ψ (Sum.elim c.1 c'.1, Sum.elim c.2 (-c'.2)) Φ)) := by
-  first | exact @GlobalTheory.schr_block_factor | exact GlobalTheory.schr_block_factor | (intros; apply GlobalTheory.schr_block_factor <;> assumption)
+  exact @GlobalTheory.schr_block_factor

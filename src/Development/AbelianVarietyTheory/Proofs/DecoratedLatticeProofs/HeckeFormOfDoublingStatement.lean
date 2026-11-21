@@ -18,4 +18,4 @@ open GlobalTheory.Core.Rk.IP
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.hecke_form_of_doubling : GlobalTheory.Published.WeilRepresentationUnitaryPair → GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.WeilSiegelFormulaUnitary → GlobalTheory.Published.SiegelWeilUnitaryConvergent → GlobalTheory.Published.DoublingMethod → GlobalTheory.Published.UnramifiedDoublingGL → ∀ D : D7, HeckeForm D := by
-  first | exact @GlobalTheory.Core.Rk.IP.heckeForm_of_doubling₂ | exact GlobalTheory.Core.Rk.IP.heckeForm_of_doubling₂ | (intros; apply GlobalTheory.Core.Rk.IP.heckeForm_of_doubling₂ <;> assumption)
+  exact @GlobalTheory.Core.Rk.IP.heckeForm_of_doubling₂

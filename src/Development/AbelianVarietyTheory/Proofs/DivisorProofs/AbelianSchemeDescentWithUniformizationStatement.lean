@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.abelian_scheme_descent_with_uniformization : ∀ (
   ∃ (B₀ : Over (Sp k)) (_ : GrpObj B₀) (B : Over (Sp ℂ)) (_ : GrpObj B) (q : B.left ⟶ B₀.left) (M : LB B.left)
     (v : HolUnif B M n), IsAbelianScheme B₀ ∧ SmoothOfRelativeDimension n B₀.hom ∧ IsAbelianScheme B ∧
     SmoothOfRelativeDimension n B.hom ∧ IsGrpPullback B B₀ (spMap σ) q ∧ ∀ z ∈ v.Λ, ∀ j, (fun _ : Fin 1 ↦ z j) ∈ u.Λ := by
-  first | exact @GlobalTheory.EllPowModel.main | exact GlobalTheory.EllPowModel.main | (intros; apply GlobalTheory.EllPowModel.main <;> assumption)
+  exact @GlobalTheory.EllPowModel.main

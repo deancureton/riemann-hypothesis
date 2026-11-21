@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanProjInclRational
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.cm_order_uniformization_exists : ∀ (E : Type) [F
     GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds.IsFieldData d φ → ∀ (c : Ideal (OF E)) (y : (Af E)ˣ), c ≠ ⊥ →
     ∃ (𝔠 : FracId (FR E)) (X : Obj (FR E) 𝔠 (Sp ℂ)) (U : Unif φ (lattice c y) 0 X),
       ∀ a : orderC c, ∃ (α : X.A ⟶ X.A) (_ : IsMonHom α), ∀ w, U.u.ex (fun j ↦ φ (U.e j) (a : E) * w j) = U.u.ex w ≫ α := by
-  first | exact @GlobalTheory.LatTorusAct.exists_unif_act_orderC | exact GlobalTheory.LatTorusAct.exists_unif_act_orderC | (intros; apply GlobalTheory.LatTorusAct.exists_unif_act_orderC <;> assumption)
+  exact @GlobalTheory.LatTorusAct.exists_unif_act_orderC

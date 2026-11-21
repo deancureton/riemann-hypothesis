@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeRealMultiplicationSpan
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsHolFormConst
 open NumberField GlobalTheory.RealMult
 set_option maxHeartbeats 1000000 in
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.lattice_real_multiplication_span : ∀ (F : Type) 
       (∑ j, (h j : ℂ) * (x j * starRingEnd ℂ ((l : Fin (Module.finrank ℚ F) → ℂ) j))).im = 2 * n) →
       ∀ a : 𝓞 F, (∀ d : 𝔠.elt, ∃ b : 𝓞 F, a • d = b • c) → (fun j ↦ (e j (a : F) : ℂ) * x j) ∈ Λ) →
     ∀ t ∈ dualLat 𝔠, t ∈ Submodule.span (𝓞 F) {t | ∃ l l' : Λ, t = P l l'} := by
-  first | exact @GlobalTheory.RealMult.SpanDual.dualLat_le_span_values | exact GlobalTheory.RealMult.SpanDual.dualLat_le_span_values | (intros; apply GlobalTheory.RealMult.SpanDual.dualLat_le_span_values <;> assumption)
+  exact @GlobalTheory.RealMult.SpanDual.dualLat_le_span_values

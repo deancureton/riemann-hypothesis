@@ -14,4 +14,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.TypeRec.factG
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.twisted_place_weight_positive : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ _ w Z _ _ t nch n c => ∀ v, TwistedAt (w.D Z) v → ∀ j, 1 ≤ j → j ≤ (w.D Z).R.m → ∀ σ, (w.D Z).what₂.isot j σ ≠ ⊥ → 0 < (w.D Z).what₂.lamP ((w.D Z).what₂.muTw v) j σ := by
-  first | exact @GlobalTheory.Mem.LamPosTw.eigenvalue_twistedWeight_pos | exact GlobalTheory.Mem.LamPosTw.eigenvalue_twistedWeight_pos | (intros; apply GlobalTheory.Mem.LamPosTw.eigenvalue_twistedWeight_pos <;> assumption)
+  exact @GlobalTheory.Mem.LamPosTw.eigenvalue_twistedWeight_pos

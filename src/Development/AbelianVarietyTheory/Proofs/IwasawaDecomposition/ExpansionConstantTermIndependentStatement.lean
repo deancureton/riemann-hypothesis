@@ -17,4 +17,4 @@ theorem _root_.GlobalTheory.T.expansion_constant_term_independent : ∀ (R : Typ
           D.toPre.P.A.hom b = closedPoint R ∧
           b ∈ D.toPre.P.A.left.basicOpen ((∑ i, c i • f i α).f j)) →
       IndepAlong G U.LG.L N (toBase (residue R)) (fun i => upSec G (σ i)) := by
-  first | exact @GlobalTheory.ClosedIndep.main | exact GlobalTheory.ClosedIndep.main | (intros; apply GlobalTheory.ClosedIndep.main <;> assumption)
+  exact @GlobalTheory.ClosedIndep.main

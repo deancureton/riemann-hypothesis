@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingGramLatticeThird
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.doubling_gram_lattice_third : GlobalTheory.ThK.KP 
       ∫ x in 𝓕, f x * (∑' q : {q : GlobalTheory.Eis.Cosets (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) // ¬ ∃ δ ∈ ratU σ W.J,
         ((q.out : ratU σ W₂.J) : UA σ W₂.J) * (i (1, δ))⁻¹ ∈ (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype)},
         GlobalTheory.Eis.term (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) (i (h, x)) q.1) * (((χX (Matrix.GeneralLinearGroup.det x.1))⁻¹ : Circle) : ℂ) ∂μ = 0 := by
-  first | exact @GlobalTheory.DoublingNonOpen.nonOpen_vanish | exact GlobalTheory.DoublingNonOpen.nonOpen_vanish | (intros; apply GlobalTheory.DoublingNonOpen.nonOpen_vanish <;> assumption)
+  exact @GlobalTheory.DoublingNonOpen.nonOpen_vanish

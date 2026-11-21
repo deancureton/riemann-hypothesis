@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.generic_degree_eq_flag_degree : Hypotheses2 → GlobalTheory.Published.ArDegree → ∀ (ι : Type) [Fintype ι] (N : ℕ) (n : ι × Fin N → ℤ), gdeg (comb (GlobalTheory.FlagZ.grLine (ι := ι) (N := N)) n) (dimFl ι N) = degFl ι N (lin (fun x => (n x : ℝ)) ^ dimFl ι N) := by
-  first | exact @GlobalTheory.FlagDegChecked.flag_gdeg_eq_degFl_checked | exact GlobalTheory.FlagDegChecked.flag_gdeg_eq_degFl_checked | (intros; apply GlobalTheory.FlagDegChecked.flag_gdeg_eq_degFl_checked <;> assumption)
+  exact @GlobalTheory.FlagDegChecked.flag_gdeg_eq_degFl_checked

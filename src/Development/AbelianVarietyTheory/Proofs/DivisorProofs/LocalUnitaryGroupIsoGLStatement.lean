@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalUnitaryGroupIsoGL
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.local_unitary_group_iso_GL : ∀ (F E : Type) [Fie
     ∀ v : Pl F, IsSelfDualAt σ Y.Jᵀ Y.L v → ∀ K : Subgroup (UA σ Y.J), IsStab B K →
     ∀ (t : E →ₐ[F] Fv F v) (b : GL (Fin n) (Fv F v)), IsSplitBasis t Y.L b →
     ∃ e : UAtSub σ Y (evFin F v) ≃ₜ* GL (Fin n) (Fv F v), (∀ g, e g = GlobalTheory.KSplit.locMat t b g.1) ∧ ∀ g, g.1 ∈ K ↔ e g ∈ KGL v n := by
-  first | exact @GlobalTheory.SplitChart.chart | exact GlobalTheory.SplitChart.chart | (intros; apply GlobalTheory.SplitChart.chart <;> assumption)
+  exact @GlobalTheory.SplitChart.chart

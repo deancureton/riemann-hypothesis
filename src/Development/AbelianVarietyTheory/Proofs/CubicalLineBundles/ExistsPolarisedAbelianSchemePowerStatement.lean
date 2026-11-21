@@ -8,4 +8,4 @@ open GlobalTheory GlobalTheory.CM
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_polarisedAbelianScheme_power : ∀ (R : Type) [CommRing R] (P : Out.PolAV (Sp R)) (n : ℕ), ∃ (Q : Out.PolAV (Sp R)) (_ : Out.IsPowGrp Q.A P.A n), Q.g = n * P.g := by
-  first | exact @GlobalTheory.CM.exists_polAV_isPowGrp | exact GlobalTheory.CM.exists_polAV_isPowGrp | (intros; apply GlobalTheory.CM.exists_polAV_isPowGrp <;> assumption)
+  exact @GlobalTheory.CM.exists_polAV_isPowGrp

@@ -9,4 +9,4 @@ theorem _root_.GlobalTheory.T.exists_highestWeight_orthogonal_comap_of_mem_range
     IsUnitary actW B → KStable act F → (∀ Z, IsKC Z → ∀ x, φ (actW Z x) = act Z (φ x)) →
     w ∈ LinearMap.range φ ⊔ F → w ∈ hwSub act Λ → w ∉ F →
     ∃ Ψ ∈ (F.comap φ).orthogonalBilin B, Ψ ≠ 0 ∧ Ψ ∈ hwSub actW Λ := by
-  first | exact @GlobalTheory.SteepMult.hw_lift_orth | exact GlobalTheory.SteepMult.hw_lift_orth | (intros; apply GlobalTheory.SteepMult.hw_lift_orth <;> assumption)
+  exact @GlobalTheory.SteepMult.hw_lift_orth

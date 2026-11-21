@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleRepPairIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -37,4 +36,4 @@ theorem _root_.GlobalTheory.T.config_a_triple_rep_pair_identity : GlobalTheory.T
             ∀ g, GlobalTheory.HwCoef.IsReading B.emb C k₁ g → ∀ f ∈ G.M.Pol B.ψ B.emb, R.p f = y →
               ∀ f₁ : SInf F (Fin (b + 2) × Fin (b + 2 + a')), Acts (evI F) (om (1, k)) f f₁ →
                 η (R.p f₁) = GlobalTheory.HwCoef.hwCoef B b a' G₁.p g := by
-  first | exact @GlobalTheory.TwCoef.twPart_coef | exact GlobalTheory.TwCoef.twPart_coef | (intros; apply GlobalTheory.TwCoef.twPart_coef <;> assumption)
+  exact @GlobalTheory.TwCoef.twPart_coef

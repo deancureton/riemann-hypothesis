@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.CompactChainTopPairMovedVectorRowCharacter
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqConjOfInFrame
 
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.DIV
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.compactChain_topPair_movedVector_rowCharacter : �
     (d : FinDatum G t (.top t j)), S.Z.HasVec d →
     W.om (.top t j) (G.toPair (.top t j) (GlobalTheory.RowReal.ptTop W g j) (GlobalTheory.RowReal.ptTop W g (j + 1))) (movedVec t S d) =
       GlobalTheory.RowReal.rowScal (GlobalTheory.RowReal.rowEntries D sc.cGap) j g • movedVec t S d := by
-  first | exact @GlobalTheory.RowReal.om_ptTop_movedVec | exact GlobalTheory.RowReal.om_ptTop_movedVec | (intros; apply GlobalTheory.RowReal.om_ptTop_movedVec <;> assumption)
+  exact @GlobalTheory.RowReal.om_ptTop_movedVec

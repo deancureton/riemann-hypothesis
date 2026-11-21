@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TestGridMeasureDomainDownwardEqSender
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.testGrid_measure_domain_downward_eq_sender : ∀ {
       IntegrableOn H (M.fd (.grid i (j + 1))) (M.ν (.grid i (j + 1)))) ∧
     ∫ g in (G.meas t i (j + 1)).fd, H (cast e g) ∂(G.meas t i (j + 1)).ν =
       ∫ g in M.fd (.grid i (j + 1)), H g ∂(M.ν (.grid i (j + 1))) := by
-  first | exact @GlobalTheory.GridMeasDown.meas_down | exact GlobalTheory.GridMeasDown.meas_down | (intros; apply GlobalTheory.GridMeasDown.meas_down <;> assumption)
+  exact @GlobalTheory.GridMeasDown.meas_down

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameFirstColumnNonzeroOrthogonal
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.witt_frame_first_column_nonzero_orthogonal : ∀ (
       ∀ y : Fin n → E, hE σ J (GlobalTheory.EisMidHt.firstColumn X) y = 0 → hE σ J (GlobalTheory.EisMidHt.firstColumn Y) y = 0 →
         (∀ c : E, y ≠ 0 → y + c • GlobalTheory.EisMidHt.firstColumn X ≠ 0) ∧
         ∀ c l : E, (l • (y + c • GlobalTheory.EisMidHt.firstColumn X) ∈ L ↔ l • y ∈ L ∧ (l * c) • GlobalTheory.EisMidHt.firstColumn X ∈ L) := by
-  first | exact @GlobalTheory.AdaptedSplit.smul_add_mem_iff | exact GlobalTheory.AdaptedSplit.smul_add_mem_iff | (intros; apply GlobalTheory.AdaptedSplit.smul_add_mem_iff <;> assumption)
+  exact @GlobalTheory.AdaptedSplit.smul_add_mem_iff

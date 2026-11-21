@@ -42,5 +42,5 @@ section
 open GlobalTheory.IndefiniteRowSideFullHecke.DifferentConjugateDefects NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.AllWt GlobalTheory.FlatLine GlobalTheory.FlatTw GlobalTheory.SlopeRec GlobalTheory.CovTop GlobalTheory.BigTop GlobalTheory.RefSum
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.refW_of_refTheta' : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Size → FlatDeg → RefTheta → RefW := by
-  first | exact @_root_.GlobalTheory.RefSum.ToWeight.refW_of_size_of_flatDeg_of_refTheta | exact _root_.GlobalTheory.RefSum.ToWeight.refW_of_size_of_flatDeg_of_refTheta | (intros; apply _root_.GlobalTheory.RefSum.ToWeight.refW_of_size_of_flatDeg_of_refTheta <;> assumption)
+  exact @_root_.GlobalTheory.RefSum.ToWeight.refW_of_size_of_flatDeg_of_refTheta
 end

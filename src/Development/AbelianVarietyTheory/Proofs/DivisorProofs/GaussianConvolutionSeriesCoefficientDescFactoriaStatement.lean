@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianConvolutionSeriesCoefficientDescFactoria
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowForm
 open MeasureTheory Filter Topology
 set_option maxHeartbeats 1000000 in
@@ -9,4 +8,4 @@ theorem _root_.GlobalTheory.T.gaussianConvolutionSeriesCoefficient_descFactorial
     ∀ (h : SchwartzMap E ℂ) (j i : ℕ) (y : E),
     (2 * c) ^ j / (j.factorial : ℝ) * (j.descFactorial i : ℝ) * (∫ a, ‖GlobalTheory.ConvSeries.wt b c (⇑h) a‖ * ‖a‖ ^ j) *
       ‖y‖ ^ (j - i) ≤ θ⁻¹ ^ (j - i) * Real.exp (c * α * ‖y‖ ^ 2) * ∫ a, (2 * c * ‖a‖) ^ i * ‖h a‖ := by
-  first | exact @GlobalTheory.TermEst.main | exact GlobalTheory.TermEst.main | (intros; apply GlobalTheory.TermEst.main <;> assumption)
+  exact @GlobalTheory.TermEst.main

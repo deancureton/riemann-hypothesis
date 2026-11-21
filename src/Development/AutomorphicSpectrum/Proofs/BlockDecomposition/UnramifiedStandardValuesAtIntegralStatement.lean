@@ -12,4 +12,4 @@ open GroundTheory.Global.AdicLiesOver
 open GlobalTheory.CompanionTheory.CenTheta
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unramified_standard_values_at_integral : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (m : LM c v), Unr c v → m.ok → m.std → ∀ k ∈ integralGL (Qv v) 2, m.W k = 1 ∧ m.val k 0 = 1 := by
-  first | exact @GlobalTheory.CompanionTheory.StdValue.std_unit | exact GlobalTheory.CompanionTheory.StdValue.std_unit | (intros; apply GlobalTheory.CompanionTheory.StdValue.std_unit <;> assumption)
+  exact @GlobalTheory.CompanionTheory.StdValue.std_unit

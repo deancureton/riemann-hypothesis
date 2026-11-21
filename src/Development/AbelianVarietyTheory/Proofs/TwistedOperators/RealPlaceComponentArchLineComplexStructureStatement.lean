@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RealPlaceComponentArchLineComplexStructure
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsGaussEqZero
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.realPlaceComponent_archLine_complexStructure : ∀
         Complex.I • (Vs.θ w * u.map (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.piInf (Bs.emb w)) * (Ws.θ w)ᵀ)) →
     ∀ τ, compAt θ τ (GlobalTheory.VacTransfer.archLine cS u' 1) =
       cplxO ((frSgn ε A).cart τ) (B.cart τ) (compAt θ τ (GlobalTheory.VacTransfer.archLine cS u 1)) := by
-  first | exact @GlobalTheory.CartanLinTransfer.compAt_archLine_cplxO | exact GlobalTheory.CartanLinTransfer.compAt_archLine_cplxO | (intros; apply GlobalTheory.CartanLinTransfer.compAt_archLine_cplxO <;> assumption)
+  exact @GlobalTheory.CartanLinTransfer.compAt_archLine_cplxO

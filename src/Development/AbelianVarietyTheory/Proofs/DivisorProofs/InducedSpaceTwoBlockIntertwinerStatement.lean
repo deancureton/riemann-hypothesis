@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InducedSpaceTwoBlockIntertwiner
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.induced_space_two_block_intertwiner : ∀ (k : Typ
         ∀ hf' : (fun x => ((χ (GlobalTheory.SplitFlip.gdet M) : ℂ) * GlobalTheory.SplitFlip.apow (GlobalTheory.SplitFlip.gdet M) ((n : ℂ) / 2)) *
             f (x * M)) ∈ GlobalTheory.FullRankCoinv.indSp k n (m + n) ν,
           T ⟨_, hf'⟩ = pairInd k b hb χ' g (T ⟨f, hf⟩) := by
-  first | exact @GlobalTheory.FibreIdent.exists_ident | exact GlobalTheory.FibreIdent.exists_ident | (intros; apply GlobalTheory.FibreIdent.exists_ident <;> assumption)
+  exact @GlobalTheory.FibreIdent.exists_ident

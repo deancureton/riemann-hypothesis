@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.HeightProofs.HasAllKTypesOfClosureDiscreteSeriesCoefficients
-import Mathlib
 import Formalism.LocalToGlobal.BesselHermitianTheta.AllTied
 import Development.AbelianVarietyTheory.BlockTheory.HeightDefect.FinitePartTypes
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.DiscreteSeriesUpqExistsIffDsExists
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.hasAllKTypes_of_closure_discreteSeriesCoefficients
         (∀ j, SmoothVec (GlobalTheory.SmoothGlob.lieSet ε) σ (v j)) ∧
         ∀ y ∈ C, y ∈ UJset ε → ‖f y - ∑ j, ℓ j (σ y (v j))‖ < δ) →
     GlobalTheory.TypeSum.HasTypeAll (GlobalTheory.TypeSum.lieOf (Formalism.REAL.Jm ε)) (Formalism.QuantumDeterminants.UH (Formalism.REAL.Jm ε)) σ f := by
-  first | exact @GlobalTheory.ClosureSeries.hasTypeAll_of_closure | exact GlobalTheory.ClosureSeries.hasTypeAll_of_closure | (intros; apply GlobalTheory.ClosureSeries.hasTypeAll_of_closure <;> assumption)
+  exact @GlobalTheory.ClosureSeries.hasTypeAll_of_closure

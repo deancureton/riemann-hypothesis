@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnfoldIntegralFundamentalDomain
-import Mathlib
 open MeasureTheory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unfold_integral_fundamental_domain : ∀ {G : Type} [Group G] [TopologicalSpace G] [IsTopologicalGroup G] [MeasurableSpace G] [BorelSpace G]
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.unfold_integral_fundamental_domain : ∀ {G : Type
     (∀ q (S : Subgroup G), (∀ g, g ∈ S ↔ ∃ hg : g ∈ Γ, act q ⟨g, hg⟩ = q) → ∀ D : Set G, IsFundamentalDomain S D μ →
       IntegrableOn (fun x => f x * T q x) D μ → ∫ x in D, f x * T q x ∂μ = 0) →
     ∫ x in 𝓕, f x * ∑' q, T q x ∂μ = 0 := by
-  first | exact @GlobalTheory.UnfoldOrbits.integral_mul_tsum_eq_zero | exact GlobalTheory.UnfoldOrbits.integral_mul_tsum_eq_zero | (intros; apply GlobalTheory.UnfoldOrbits.integral_mul_tsum_eq_zero <;> assumption)
+  exact @GlobalTheory.UnfoldOrbits.integral_mul_tsum_eq_zero

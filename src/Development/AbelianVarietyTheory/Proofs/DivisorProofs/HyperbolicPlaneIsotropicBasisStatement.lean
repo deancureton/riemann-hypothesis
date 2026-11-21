@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneIsotropicBasis
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_isotropic_basis : ∀ (F E : Type
       ∀ K₁ : Subgroup (GAd σ (c₀ • W₁.J.map σ)), K₁ ≤ infPts σ (c₀ • W₁.J.map σ) → IsCompact (K₁ : Set (GAd σ (c₀ • W₁.J.map σ))) →
       ∃ K : Subgroup (GAd σ (c₀ • W.J.map σ)), K ≤ infPts σ (c₀ • W.J.map σ) ∧ IsCompact (K : Set (GAd σ (c₀ • W.J.map σ))) ∧
         ∀ y ∈ K₁, GlobalTheory.ThK.CuspTransfer.emb hσ W W₁ hc₀ M y ∈ K := by
-  first | exact @GlobalTheory.ThK.InducedCons.exists_compact_emb | exact GlobalTheory.ThK.InducedCons.exists_compact_emb | (intros; apply GlobalTheory.ThK.InducedCons.exists_compact_emb <;> assumption)
+  exact @GlobalTheory.ThK.InducedCons.exists_compact_emb

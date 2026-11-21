@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConstJetOperatorNormCauchyBound
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EmbLLMem
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairIntAt
 
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.exists_const_jetOperatorNorm_cauchyBound : ∃ K :
       (∀ z, ‖H z‖ ^ 2 ≤ S * Real.exp (Real.pi * (∑ τ, ∑ i, ∑ j, ‖z τ i j‖ ^ 2) / A)) → ∀ v,
       nrm lam' (fun _ => 1) (Formalism.L2.Ker.jetOp lam lam' (fun m => GL3Theta.applyAt0 D (MvPolynomial.monomial m 1) H) n v) ≤
         S * Kx * max 1 A⁻¹ ^ (∑ τ, ∑ i, (lam' τ).natW i) * nrm lam (fun _ => 1) v := by
-  first | exact @GlobalTheory.FockJetBound.jetOp_norm_le | exact GlobalTheory.FockJetBound.jetOp_norm_le | (intros; apply GlobalTheory.FockJetBound.jetOp_norm_le <;> assumption)
+  exact @GlobalTheory.FockJetBound.jetOp_norm_le

@@ -5,4 +5,4 @@ open Formalism.BasicNotions NumberField IsDedekindDomain Formalism.MainNotions F
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.latticeTuple_frameMatrices_eq_of_same_component : Sites (fun {D L hT Gi Gl Kc Dx cX ex u μ w hg Lv I H X} [Fact (D.what₂.places.resChar w).Prime] {std t J} S => ∀ j (c : (sysS H X std).Lv.comp j) (La Lb : ((sysS H X std).Pj j).Tup), (J.fd std).frM j (c, La) = (J.fd std).frM j (c, Lb)) := by
-  first | exact @GlobalTheory.TwV.Xc.frM_fd_comp | exact GlobalTheory.TwV.Xc.frM_fd_comp | (intros; apply GlobalTheory.TwV.Xc.frM_fd_comp <;> assumption)
+  exact @GlobalTheory.TwV.Xc.frM_fd_comp

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeisenbergEigenLatticePointAtPlaceLocalIdentity
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SquareTriple
 import Development.AbelianVarietyTheory.PublishedTheorems.TwistedTraceFormula.UnifModGrowthOfIsUnifModerate
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LiftPRouteSmall
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.heisenbergEigen_latticePointAtPlace_localIdentity 
     ∀ ξ : κ → Fv F v, GlobalTheory.LatVac.psiAt ψ v (ξ ⬝ᵥ (GlobalTheory.LatVac.locCo co v γ).2 +
         (2 : Fv F v)⁻¹ * ((GlobalTheory.LatVac.locCo co v γ).1 ⬝ᵥ (GlobalTheory.LatVac.locCo co v γ).2)) *
       f (ξ + (GlobalTheory.LatVac.locCo co v γ).1) = χ * f ξ := by
-  first | exact @GlobalTheory.LatVac.heis_at_local_identity | exact GlobalTheory.LatVac.heis_at_local_identity | (intros; apply GlobalTheory.LatVac.heis_at_local_identity <;> assumption)
+  exact @GlobalTheory.LatVac.heis_at_local_identity

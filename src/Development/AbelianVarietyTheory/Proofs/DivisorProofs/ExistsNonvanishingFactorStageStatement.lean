@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.exists_nonvanishing_factor_stage : GlobalTheory.Fu
     TopGrid W i j X → IsStageC W i j (pp D j) (qq D j) X → Factor X W.ψ W.θ lam →
     ∃ κ : T → ℂ, (∀ t, κ t ≠ 0 ∧ ∃ ζ : D.what₂.LL, GlobalTheory.Square.IsAwayUnit (Qn G t) ζ ∧ κ t = D.what₂.embLL ζ * κ μ₀) ∧
       ∀ (t : T) (c' : ℂ), SquareNonzero W S.B ρ t i j → IsSquareConst W S.B ρ t i j c' → c' = κ t * lam t := by
-  first | exact @GlobalTheory.SqCompare.square_compare | exact GlobalTheory.SqCompare.square_compare | (intros; apply GlobalTheory.SqCompare.square_compare <;> assumption)
+  exact @GlobalTheory.SqCompare.square_compare

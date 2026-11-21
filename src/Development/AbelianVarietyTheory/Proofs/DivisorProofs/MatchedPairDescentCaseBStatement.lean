@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairDescentCaseB
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.matched_pair_descent_case_b : GlobalTheory.ThK.KP 
           (∀ i ∈ s, k i ∈ KInf σ G.W B.emb ∧ k₁ i ∈ KInf σ G₁.W B.emb ∧ IsLevi H' 1 (k₁ i) (k i) ∧
             Acts (evI F) (om₁ (1, k₁ i)) g₀ (g i) ∧ Acts (evI F) (om (1, k i)) f₀ (f i)) →
           ∑ i ∈ s, c i • R₁.p (g i) = 0 → ∑ i ∈ s, c i • R.p (f i) = 0 := by
-  first | exact @GlobalTheory.FockInclCyc.exists_cyclic_pair | exact GlobalTheory.FockInclCyc.exists_cyclic_pair | (intros; apply GlobalTheory.FockInclCyc.exists_cyclic_pair <;> assumption)
+  exact @GlobalTheory.FockInclCyc.exists_cyclic_pair

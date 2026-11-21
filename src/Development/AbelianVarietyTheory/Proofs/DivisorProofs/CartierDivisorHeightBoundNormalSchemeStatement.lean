@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.cartier_divisor_height_bound_normal_scheme : Globa
     ∃ (m : ℕ) (k' : Type) (_ : CommRing k') (_ : IsDomain k') (_ : Algebra (𝓞 F) k') (ρ : X ⟶ Sp k')
       (hρ : ρ ≫ spMap (algebraMap (𝓞 F) k') = p) (M : HermLB (spMap (algebraMap (𝓞 F) k'))),
       0 < m ∧ IsArithVar (spMap (algebraMap (𝓞 F) k')) 0 ∧ (L.pow m).Isometric (M.pull ρ hρ) := by
-  first | exact @GlobalTheory.SteinDescent.exists_isometric_pull_stein | exact GlobalTheory.SteinDescent.exists_isometric_pull_stein | (intros; apply GlobalTheory.SteinDescent.exists_isometric_pull_stein <;> assumption)
+  exact @GlobalTheory.SteinDescent.exists_isometric_pull_stein

@@ -3,7 +3,6 @@ import Formalism.FockGram.FockGramProofs.FockSesq
 import Formalism.FockGram.FockGramProofs.FockPerm
 import Formalism.FockGram.FockGramProofs.DetSymPow
 import Formalism.FockGram.FockGramProofs.SubIndexNorm
-import Mathlib
 import Formalism.FockGram.FockGramProofs.CovolGram
 import Formalism.FockGram.FockGramProofs.HermDualOf
 import Formalism.FockGram.FockGramProofs.HermitianTensorMulHermitian

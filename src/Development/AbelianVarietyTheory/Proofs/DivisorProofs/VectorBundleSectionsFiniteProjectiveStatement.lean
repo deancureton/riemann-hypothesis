@@ -16,4 +16,4 @@ open GlobalTheory.ChainPts
 open GlobalTheory.ChainDesc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.vector_bundle_sections_finite_projective : ∀ (X : Scheme.{0}) (F : X.Modules) (r : ℕ), GlobalTheory.VB.IsVB F r → ∀ U : X.Opens, IsAffineOpen U → Module.Finite Γ(X, U) Γ(F, U) ∧ Module.Projective Γ(X, U) Γ(F, U) := by
-  first | exact @GlobalTheory.ChainDesc.finite_projective_sections_of_isVB | exact GlobalTheory.ChainDesc.finite_projective_sections_of_isVB | (intros; apply GlobalTheory.ChainDesc.finite_projective_sections_of_isVB <;> assumption)
+  exact @GlobalTheory.ChainDesc.finite_projective_sections_of_isVB

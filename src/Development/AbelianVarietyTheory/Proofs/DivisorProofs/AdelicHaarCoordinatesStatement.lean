@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdelicHaarCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AveragedIntegralFunctional
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.adelic_haar_coordinates : ∀ (F E : Type) [Field 
       ∀ g : (Fin d × ι → AF F) → ℂ,
         (Integrable g ν → Integrable (fun u : Fin d → AE F E => g (fun p => (Algebra.TensorProduct.basis (AF F) b).repr (u p.1) p.2)) μ) ∧
         ∫ u, g (fun p => (Algebra.TensorProduct.basis (AF F) b).repr (u p.1) p.2) ∂μ = ∫ t, g t ∂ν := by
-  first | exact @GlobalTheory.HaarCoord.haar_coord_transfer | exact GlobalTheory.HaarCoord.haar_coord_transfer | (intros; apply GlobalTheory.HaarCoord.haar_coord_transfer <;> assumption)
+  exact @GlobalTheory.HaarCoord.haar_coord_transfer

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactOpenSchwartzFiniteDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.compact_open_schwartz_finite_decomposition : ∀ (
         (∀ (c : κ → Af F) (X : κ → mixedEmbedding.mixedSpace F),
           G (c : (κ → Af F) ⧸ U) X = Φ (fun i => pairA F ((InfiniteAdeleRing.ringEquiv_mixedSpace F).symm (X i)) (c i))) ∧
         Φ = ∑ q ∈ T, pureA F (G q) (GlobalTheory.CharForm.cosetInd U q) := by
-  first | exact @GlobalTheory.SchACosets.exists_eq_sum_pureA_cosetInd | exact GlobalTheory.SchACosets.exists_eq_sum_pureA_cosetInd | (intros; apply GlobalTheory.SchACosets.exists_eq_sum_pureA_cosetInd <;> assumption)
+  exact @GlobalTheory.SchACosets.exists_eq_sum_pureA_cosetInd

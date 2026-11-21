@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.appell_humbert_factor_of_hermitian : ∀ (A : Over
         u.fr i z = χ l * Complex.exp (Real.pi * (z ⬝ᵥ Hm.mulVec (star (l : Fin g → ℂ))) +
           Real.pi / 2 * ((l : Fin g → ℂ) ⬝ᵥ Hm.mulVec (star (l : Fin g → ℂ)))) * u.fr i (z + l)) →
       ∀ z : Fin g → ℂ, z ≠ 0 → 0 < (z ⬝ᵥ Hm.mulVec (star z)).re := by
-  first | exact @GlobalTheory.AmpleHermPos.re_form_pos_of_relAmple | exact GlobalTheory.AmpleHermPos.re_form_pos_of_relAmple | (intros; apply GlobalTheory.AmpleHermPos.re_form_pos_of_relAmple <;> assumption)
+  exact @GlobalTheory.AmpleHermPos.re_form_pos_of_relAmple

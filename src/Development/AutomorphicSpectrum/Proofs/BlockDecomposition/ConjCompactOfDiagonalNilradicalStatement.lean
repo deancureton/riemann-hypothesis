@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ConjCompactOfDiagonalNilradical
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ContinuousConjNilSymm
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SecondCountableNilrad
 open Matrix MeasureTheory PositivityTheory.Rg.BcB PositivityTheory.Rg.Tf.Loc GlobalTheory.CompanionTheory.LocVan
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.conj_compact_of_diagonal_nilradical : ∀ (n : ℕ
   (∀ X ∈ nilrad W₁ W₂, ∀ i, ((P⁻¹ : GL (Fin n) ℂ).val * X * P.val) i i = 0) →
   ∀ C : Set (GL (Fin n) ℂ), IsCompact C → ∀ g : GL (Fin n) ℂ,
     μd {t : twCent (thC n) d | (t : GL (Fin n) ℂ) * g ∈ nSet W₁ W₂ C} ≠ ⊤ := by
-  first | exact @GlobalTheory.CompanionTheory.LocVan.Slice.slice_measure_ne_top | exact GlobalTheory.CompanionTheory.LocVan.Slice.slice_measure_ne_top | (intros; apply GlobalTheory.CompanionTheory.LocVan.Slice.slice_measure_ne_top <;> assumption)
+  exact @GlobalTheory.CompanionTheory.LocVan.Slice.slice_measure_ne_top

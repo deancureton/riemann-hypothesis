@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.VacuumPhaseSubTraceMemIntegers
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SelfDualOne
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.Gam0
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.vacuumPhase_sub_trace_mem_integers : ∀ (L : Type
   (∀ i j, (y * (a : Matrix (Fin n) (Fin n) L)) i j ∈ Formalism.UG.intL L) →
   GlobalTheory.Hk3.locH σ δ JS JT y (y * (((k⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L) - 1)) -
     δ * Matrix.trace (E * ((JS⁻¹ : GL (Fin n) L) : Matrix (Fin n) (Fin n) L) * Formalism.UG.cT σ y * (JT : Matrix (Fin n') (Fin n') L) * y) ∈ Formalism.UG.intL L := by
-  first | exact @GlobalTheory.Hk3.VacPhase.locH_sub_trace_mem | exact GlobalTheory.Hk3.VacPhase.locH_sub_trace_mem | (intros; apply GlobalTheory.Hk3.VacPhase.locH_sub_trace_mem <;> assumption)
+  exact @GlobalTheory.Hk3.VacPhase.locH_sub_trace_mem

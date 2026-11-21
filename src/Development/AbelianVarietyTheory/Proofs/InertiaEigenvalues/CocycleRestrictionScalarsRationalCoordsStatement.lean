@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CocycleRestrictionScalarsRationalCoords
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.TwistStep
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.FiltrationZeroMembership
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ToMatrixRepOf
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.cocycle_restrictionScalars_rational_coords : ∀ (
             fun x => fr l x.2 (c g x.1)) →
     (∀ g h, c (g * h) = c g + (σ g : Matrix n n ↥(MaximalUnramifiedExtension l)).mulVec (c h)) →
     ∀ g h, c₀ (g * h) = c₀ g + (ρ₀ g : Matrix (n × Fin r) (n × Fin r) ℚ_[l]).mulVec (c₀ h) := by
-  first | exact @GlobalTheory.PMon.cocycle_rat_coords | exact GlobalTheory.PMon.cocycle_rat_coords | (intros; apply GlobalTheory.PMon.cocycle_rat_coords <;> assumption)
+  exact @GlobalTheory.PMon.cocycle_rat_coords

@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.polarization_transfer_base_change : ∀ (E : Type)
     (ν : TwMap σ Z'.oF.t Z.oF.t r), IsDedFrac β → IsDedFrac β' → Algebra.FiniteType ℤ O' → IsTwInv H φ → σ H.w0 = H.w0 →
     IsPol φ m Z BD → IsPol φ m Z' BD' → r ≫ Z.j ≫ Z.s = Z'.j ≫ Z'.s ≫ spMap b →
     ∃ π : Z'.X ⟶ Z.X, π ≫ Z.s = Z'.s ≫ spMap b ∧ Z'.j ≫ π = r ≫ Z.j := by
-  first | exact @GlobalTheory.PolExt.exists_hom_of_isPol | exact GlobalTheory.PolExt.exists_hom_of_isPol | (intros; apply GlobalTheory.PolExt.exists_hom_of_isPol <;> assumption)
+  exact @GlobalTheory.PolExt.exists_hom_of_isPol

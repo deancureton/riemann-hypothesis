@@ -14,4 +14,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.LogKSChart GlobalTheo
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_finite_basis_tangentModule_smooth_commGroupScheme : ∀ (R : Type) [CommRing R] [IsLocalRing R] (G : Over (Sp R)) [GrpObj G] [IsCommMonObj G], Smooth G.hom → ∃ n : ℕ, Nonempty (Module.Basis (Fin n) R (TanM (𝟙 (Sp R)) G)) := by
-  first | exact @GlobalTheory.TanBasis.exists_basis_tanM | exact GlobalTheory.TanBasis.exists_basis_tanM | (intros; apply GlobalTheory.TanBasis.exists_basis_tanM <;> assumption)
+  exact @GlobalTheory.TanBasis.exists_basis_tanM

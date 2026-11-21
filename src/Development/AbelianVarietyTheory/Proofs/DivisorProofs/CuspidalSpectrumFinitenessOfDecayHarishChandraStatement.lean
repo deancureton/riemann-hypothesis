@@ -21,4 +21,4 @@ open GlobalTheory.TrMult
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.cuspidal_spectrum_finiteness_of_decay_harishChandra : GlobalTheory.Published.CuspRapidDecay → GlobalTheory.Published.HarishChandraFinite → GlobalTheory.Published.DixmierMalliavinFactorisation → SpecFin := by
-  first | exact @GlobalTheory.SpecFinite.specFin | exact GlobalTheory.SpecFinite.specFin | (intros; apply GlobalTheory.SpecFinite.specFin <;> assumption)
+  exact @GlobalTheory.SpecFinite.specFin

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedDiffsHermitianTwist
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.matched_diffs_hermitian_twist : GlobalTheory.ThK.K
         ∀ K : Subgroup (GAd σ (c₀ • G.W.J.map σ)), GlobalTheory.UAut.IsMaxCpt σ (c₀ • G.W.J.map σ) K →
         ∀ (r : ℕ) (Xf Yf : Matrix (Fin (a + a')) (Fin r) E), GlobalTheory.SiegelSet.IsWittFrame σ (c₀ • G.W.J.map σ) Xf Yf →
           ∀ S : Finset (Fin r), ¬ (∀ k ∈ S, ∀ l ≤ k, l ∈ S) → GlobalTheory.StdPar.IsCuspComp σ (c₀ • G.W.J.map σ) Xf Yf S K φ' 0 := by
-  first | exact @GlobalTheory.ThK.CuspComponentDifferences.cuspComp_diffs_eq_zero | exact GlobalTheory.ThK.CuspComponentDifferences.cuspComp_diffs_eq_zero | (intros; apply GlobalTheory.ThK.CuspComponentDifferences.cuspComp_diffs_eq_zero <;> assumption)
+  exact @GlobalTheory.ThK.CuspComponentDifferences.cuspComp_diffs_eq_zero

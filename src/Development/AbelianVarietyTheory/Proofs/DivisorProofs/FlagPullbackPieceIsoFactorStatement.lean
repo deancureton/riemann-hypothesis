@@ -25,4 +25,4 @@ theorem _root_.GlobalTheory.T.flag_pullback_piece_iso_factor : ∀ {k : Type} [C
         (Scheme.Modules.pullbackCongr w).hom.app E) →
     ∀ (hf : g' ≫ π₀ ≫ p = π ≫ p) (i : Fin r),
     (VMetric.grLB fl i (H.pull π rfl)).Isometric ((VMetric.grLB fl₀ i (H.pull π₀ rfl)).pull g' hf) := by
-  first | exact @GlobalTheory.VMetric.isometric_grLB_of_steps_pull | exact GlobalTheory.VMetric.isometric_grLB_of_steps_pull | (intros; apply GlobalTheory.VMetric.isometric_grLB_of_steps_pull <;> assumption)
+  exact @GlobalTheory.VMetric.isometric_grLB_of_steps_pull

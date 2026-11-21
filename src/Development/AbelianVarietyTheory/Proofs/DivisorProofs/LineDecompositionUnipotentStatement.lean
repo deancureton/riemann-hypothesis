@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineDecompositionUnipotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 open scoped TensorProduct NNReal Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.line_decomposition_unipotent : GlobalTheory.FunPr.
         ActsD (evI F) (fun t => om (1, γu (Multiplicative.ofAdd t))) f g₁ →
         ActsD (evI F) (fun t => om (1, γl (Multiplicative.ofAdd t))) f g₂ →
         ActsD (evI F) (fun t => om (1, γk (Multiplicative.ofAdd t))) f g₃ → f₁ = g₁ + g₂ + g₃ := by
-  first | exact @GlobalTheory.IndLine.Iwasawa.line_decomposition | exact GlobalTheory.IndLine.Iwasawa.line_decomposition | (intros; apply GlobalTheory.IndLine.Iwasawa.line_decomposition <;> assumption)
+  exact @GlobalTheory.IndLine.Iwasawa.line_decomposition

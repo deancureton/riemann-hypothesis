@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SphericalUnramifiedIntegralValue
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
 open scoped TensorProduct NNReal Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.spherical_unramified_integral_value : ∀ (F : Typ
     HasSum (fun a : GL (Fin n) (Fv F v) ⧸ KGL v n => φ a.out)
       ((∏ j ∈ Finset.range n, (1 - (z : ℂ) * (qV F v : ℂ) ^ (-(s + (n : ℂ) / 2 - (j : ℂ))))⁻¹ * (1 - (z : ℂ)⁻¹ * (qV F v : ℂ) ^ (-(s + (n : ℂ) / 2 - (j : ℂ))))⁻¹) *
         ∏ j ∈ Finset.Icc 1 n, (1 - (qV F v : ℂ) ^ (-(2 * s + (j : ℂ))))) := by
-  first | exact @GlobalTheory.ZetaGL.zeta_sum_GL_trivial | exact GlobalTheory.ZetaGL.zeta_sum_GL_trivial | (intros; apply GlobalTheory.ZetaGL.zeta_sum_GL_trivial <;> assumption)
+  exact @GlobalTheory.ZetaGL.zeta_sum_GL_trivial

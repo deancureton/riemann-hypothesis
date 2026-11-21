@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicOrbitOrthogonalAtPlace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.isotropic_orbit_orthogonal_at_place' : ∀ (F E : 
       ∃ u ∈ iso0 (F := F) n H', At (evFin F v) u ∧ ∃ z : Matrix (Fin n) (Fin d₁) (AE F E), At (evFin F v) z ∧
         w = GlobalTheory.LatVac.locCo M.co v u +
           GlobalTheory.LatVac.locCo M.co v (incM F (1 : Matrix (Fin n) (Fin n) E) * z * (incM F H'.ι)ᵀ) := by
-  first | exact @GlobalTheory.IsoOrthLoc.isotropic_orbit_orthogonal_at_place | exact GlobalTheory.IsoOrthLoc.isotropic_orbit_orthogonal_at_place | (intros; apply GlobalTheory.IsoOrthLoc.isotropic_orbit_orthogonal_at_place <;> assumption)
+  exact @GlobalTheory.IsoOrthLoc.isotropic_orbit_orthogonal_at_place

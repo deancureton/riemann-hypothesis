@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompactTorusQuotientIntegration
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordMeasure
 open MeasureTheory
 open scoped NNReal ENNReal
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.compact_torus_quotient_integration : ∀ (G : Type
     (Q : Subgroup G) (κ : K →* G) (m : T →* G) (δ : T →* ℝ≥0) (μK : Measure K) (μT : Measure T) (μQ : Measure Q),
     IsClosed (Q : Set G) → Continuous κ → Topology.IsClosedEmbedding m → Continuous δ → μK.IsHaarMeasure → μT.IsHaarMeasure → μQ.IsHaarMeasure →
     ∀ q ∈ Q, (GlobalTheory.ParabolicCoord.coordMeasure Q κ m δ μQ μT μK).map (fun x => q * x) = GlobalTheory.ParabolicCoord.coordMeasure Q κ m δ μQ μT μK := by
-  first | exact @GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left | exact GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left | (intros; apply GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left <;> assumption)
+  exact @GlobalTheory.ParabolicCoord.coordMeasure_map_mul_left

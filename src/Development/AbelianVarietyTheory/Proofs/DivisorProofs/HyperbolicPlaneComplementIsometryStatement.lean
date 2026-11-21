@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneComplementIsometry
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipParLeUnipFlag
 import Development.AbelianVarietyTheory.Definitions.Foundations.ConstTermOnMulLeftOfNormalizer
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_complement_isometry : ∀ (F E : 
       ∀ γ ∈ ratPts σ (c₀ • W.J.map σ), ∀ (t : (AE F E)ˣ) (m : UA σ W.J) (h₁ : UA σ W₁.J), IsLevi (W₁ := W₁) H t 1 m →
         γ = GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ m * GlobalTheory.ThK.SquareIntegrability.toGAd hσ W.J hc₀ (M h₁) →
         (∃ s : Eˣ, t = Units.map (inclR (F := F) (E := E) (AF F)).toMonoidHom s) ∧ h₁ ∈ ratU σ W₁.J := by
-  first | exact @GlobalTheory.LeviRatPlane.levi_rat_of_mul | exact GlobalTheory.LeviRatPlane.levi_rat_of_mul | (intros; apply GlobalTheory.LeviRatPlane.levi_rat_of_mul <;> assumption)
+  exact @GlobalTheory.LeviRatPlane.levi_rat_of_mul

@@ -56,5 +56,5 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open GlobalTheory.FactorDepth GlobalTheory.CharDepth GlobalTheory.FGDepth
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.divisor_half_generation_of_cover : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → DeepGood → Size → FlatDeg → Covers fun Fm x _ ι p i Y PP _ => letI := p.T.Q.H.starRing; ∃ α : 𝓞 (Fm.D x ι).host.E, α * star α = ((((Fm.D x ι).host.g 0 * (Fm.D x ι).host.g 1 : ℕ) : ℕ) : 𝓞 (Fm.D x ι).host.E) ∧ ((Fm.D x ι).host.g 0 * (Fm.D x ι).host.g 1) ∣ Y.d.l₂.M ∧ Y.d.l₂.Mb ≤ Ideal.span {star α} ∧ Module.finrank ℚ (Fm.D x ι).host.E * (dat p i).q ≤ 2 * (Fm.D x ι).R.f * (Fm.D x ι).R.m := by
-  first | exact @_root_.GlobalTheory.HalfCover.divisor_half_generated_on_cover | exact _root_.GlobalTheory.HalfCover.divisor_half_generated_on_cover | (intros; apply _root_.GlobalTheory.HalfCover.divisor_half_generated_on_cover <;> assumption)
+  exact @_root_.GlobalTheory.HalfCover.divisor_half_generated_on_cover
 end

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicCharacterPowNeOneOfMovesRoot
-import Mathlib
 import Formalism.CharacterColumnKernels.StatementRho
 import Formalism.GaloisCohomology.LocalTateDualityK
 import ReciprocityTheory.Hypotheses.GalCohDefs
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.cyclotomic_character_pow_ne_one_of_moves_root : �
       ∃ a : ℕ, g ζ = ζ ^ a ∧ (((ε) g : Oˣ) : O) - (a : O) ∈ Ideal.span {(p : O) ^ n}) → ∀ k : ℕ,
     (∃ (σ : Formalism.GaloisCohomology.GK p K) (n : ℕ) (ζ : PadicAlgCl p), ζ ^ (p ^ n) = 1 ∧ (σ ^ k) ζ ≠ ζ) →
     ∃ σ : Formalism.GaloisCohomology.GK p K, ε σ ^ k ≠ 1 := by
-  first | exact @GlobalTheory.ShapeNeg.cyc_char_pow_ne_one | exact GlobalTheory.ShapeNeg.cyc_char_pow_ne_one | (intros; apply GlobalTheory.ShapeNeg.cyc_char_pow_ne_one <;> assumption)
+  exact @GlobalTheory.ShapeNeg.cyc_char_pow_ne_one

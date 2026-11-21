@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.character_multiplicative_stabilizer : ∀ (F E : T
       H'.IsAdapted σ B W W₁ i₀ i₁ → ∀ c : UA σ W.J → ℂ,
         (∀ g ∈ GlobalTheory.UnipEv.stabilizer₂ σ W H', ∀ h ∈ GlobalTheory.UnipEv.stabilizer₂ σ W H', c (g * h) = c g * c h) → c 1 = 1 →
         ∀ u ∈ unip σ W H', c u = 1 := by
-  first | exact @GlobalTheory.UnipComm.char_trivial_unip | exact GlobalTheory.UnipComm.char_trivial_unip | (intros; apply GlobalTheory.UnipComm.char_trivial_unip <;> assumption)
+  exact @GlobalTheory.UnipComm.char_trivial_unip

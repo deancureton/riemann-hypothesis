@@ -7,4 +7,4 @@ open Formalism.BasicNotions.TH Formalism.L2.Theta Formalism.L2.DIV Formalism.Ind
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_top_value_witness : ∀ {hL : GlobalTheory.Published.LocalLanglandsGL} {p : Bl.Prm hL} {K : Ctx} (q : Bl.WPt p.s K) {c : ℝ} (b : Bundle (q.w.D q.Z) q.O c), Bl.BWit q b → q.x.what₂.r.z.Std → ∃ cv, GlobalTheory.TopVal.ValEqv (I := q.w.I) (l := q.w.l) (Z := q.Z) (packB b) cv ∧ GlobalTheory.TopVal.PkVal (I := q.w.I) (l := q.w.l) (Z := q.Z) (packB b) cv := by
-  first | exact @GlobalTheory.TopVal.pkVal_of_bWit | exact GlobalTheory.TopVal.pkVal_of_bWit | (intros; apply GlobalTheory.TopVal.pkVal_of_bWit <;> assumption)
+  exact @GlobalTheory.TopVal.pkVal_of_bWit

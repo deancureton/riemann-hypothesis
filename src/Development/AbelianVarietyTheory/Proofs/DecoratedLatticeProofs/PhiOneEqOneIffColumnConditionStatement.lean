@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.PhiOneEqOneIffColumnCondition
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ColCond
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.L2.Theta Formalism.IndefR Formalism.IndefR.Datum Formalism.IndefR.Links Formalism.L2.Forms Formalism.L2.Ker
 open NumberField IsDedekindDomain Matrix MeasureTheory GlobalTheory.Mem GlobalTheory.Mem.Col2 GlobalTheory.MixModel GlobalTheory.MixPer GlobalTheory.SeeSaw GlobalTheory.LatPair GlobalTheory.SplitWeil
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.phi_one_eq_one_iff_column_condition : ∀ {E : Typ
     (∀ P : ST, ∀ x ∈ Formalism.L2.Col.stdLat E b, ∀ r : Fin b, r.1 + 1 = b → ∀ c : 𝓞 E, algebraMap (𝓞 E) E c = x r →
       d'.f P x = Ideal.Quotient.mk P.1.asIdeal (t * c)) →
     ∀ x : Formalism.L2.Col.HomE E a b, (Formalism.L2.Col.phiT K d d' x = 1 ↔ ∀ P : ST, ColCond P.1 t x) := by
-  first | exact @GlobalTheory.PhiOneVal.phiT_eq_one_iff_colCond | exact GlobalTheory.PhiOneVal.phiT_eq_one_iff_colCond | (intros; apply GlobalTheory.PhiOneVal.phiT_eq_one_iff_colCond <;> assumption)
+  exact @GlobalTheory.PhiOneVal.phiT_eq_one_iff_colCond

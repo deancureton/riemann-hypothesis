@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocalGeneratorsResidueBasis
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.HilbertKodairaSpencer
 import Development.AbelianVarietyTheory.Proofs.DegenerationProofs.ExistsPullbackDegPreStrictLineBundleIso
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsRingActionOfIsGrpPullback
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.exists_local_generators_residue_basis : ∀ (R : T
     Function.Bijective (Finsupp.linearCombination p.ResidueField (fun i => (1 : p.ResidueField) ⊗ₜ[R] v i)) →
     ∃ g : R, g ∉ p ∧ (∀ x : M, ∃ (n : ℕ) (c : J →₀ R), g ^ n • x = Finsupp.linearCombination R v c) ∧
       (∀ c : J →₀ R, Finsupp.linearCombination R v c = 0 → ∃ n : ℕ, g ^ n • c = 0) := by
-  first | exact @GlobalTheory.FibreBasisSpread.exists_away_linearCombination_bijective | exact GlobalTheory.FibreBasisSpread.exists_away_linearCombination_bijective | (intros; apply GlobalTheory.FibreBasisSpread.exists_away_linearCombination_bijective <;> assumption)
+  exact @GlobalTheory.FibreBasisSpread.exists_away_linearCombination_bijective

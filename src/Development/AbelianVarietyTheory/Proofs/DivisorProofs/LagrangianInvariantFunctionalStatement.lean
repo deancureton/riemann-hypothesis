@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianInvariantFunctional
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.lagrangian_invariant_functional : ∀ (F : Type) [
     ∀ (m : Type) [Fintype m] [DecidableEq m] (A : (m → F) →ₗ[F] (κ → F) × (κ → F)), (∀ s, A s ∈ L → s = 0) →
     ∀ μ : @Measure (m → AF F) (borel _), GlobalTheory.SiegelAvg.IsHaarB μ →
     ∀ φ ∈ schA F κ, (letI : MeasurableSpace (m → AF F) := borel _; Integrable (fun t => l (schr ψ (GlobalTheory.SiegelConv.extA A t) φ)) μ) := by
-  first | exact @GlobalTheory.SiegelLagr.main | exact GlobalTheory.SiegelLagr.main | (intros; apply GlobalTheory.SiegelLagr.main <;> assumption)
+  exact @GlobalTheory.SiegelLagr.main

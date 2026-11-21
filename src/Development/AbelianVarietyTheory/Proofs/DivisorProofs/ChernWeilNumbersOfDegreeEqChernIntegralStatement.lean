@@ -9,4 +9,4 @@ open GlobalTheory GlobalTheory.Cartier GlobalTheory.ProjVar GlobalTheory.CxPts G
 open scoped Matrix ContDiff ComplexOrder
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.chernWeilNumbers_of_degree_eq_chernIntegral : GlobalTheory.Published.ChernDegreeComplex → GlobalTheory.Published.ChernWeilNumbers := by
-  first | exact @GlobalTheory.ChernCalc.chernWeilNumbers_of_chernDegreeComplex | exact GlobalTheory.ChernCalc.chernWeilNumbers_of_chernDegreeComplex | (intros; apply GlobalTheory.ChernCalc.chernWeilNumbers_of_chernDegreeComplex <;> assumption)
+  exact @GlobalTheory.ChernCalc.chernWeilNumbers_of_chernDegreeComplex

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingGramLatticeFirst
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.doubling_gram_lattice_first : GlobalTheory.ThK.KP 
         ∀ g, GlobalTheory.Eis.CosetConv (siegelOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype) (ratU σ W₂.J) (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) g) →
     ∀ μ : Measure (UA σ W.J), μ.IsHaarMeasure →
     ∃ R₁ : ℝ, ∀ s : ℂ, R₁ < s.re → Integrable (fun g => (flatOf finSumFinEquiv (UG (cA σ) (incM F W₂.J)).subtype (absE F E) K φ₀ (((n : ℂ) - (d : ℂ)) / 2) s) (i (1, g)) * (((χX (Matrix.GeneralLinearGroup.det g.1))⁻¹ : Circle) : ℂ)) μ := by
-  first | exact @GlobalTheory.DoublingZeta.zeta_integrable_pair | exact GlobalTheory.DoublingZeta.zeta_integrable_pair | (intros; apply GlobalTheory.DoublingZeta.zeta_integrable_pair <;> assumption)
+  exact @GlobalTheory.DoublingZeta.zeta_integrable_pair

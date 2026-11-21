@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InertPlaceTensorLatticeSelfDualSupportedAt
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFinMapsOfForall
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.OneMemKAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLagrAt
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.inertPlace_tensorLattice_selfDual_supportedAt : �
     ∀ z : Matrix (Fin a') (Fin (a + a')) (AE F E), At (evFin F v) z →
       (z ∈ latAtV G.V' G.W v ↔ ∀ γ ∈ latAtV G.V' G.W v,
         B.ψ (symp (cA σ) (-1) (incM F G.V'.J) (incM F G.W.J) z γ) = 1) := by
-  first | exact @GlobalTheory.InertDual.latAtV_selfDual | exact GlobalTheory.InertDual.latAtV_selfDual | (intros; apply GlobalTheory.InertDual.latAtV_selfDual <;> assumption)
+  exact @GlobalTheory.InertDual.latAtV_selfDual

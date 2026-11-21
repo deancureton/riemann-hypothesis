@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedPairAnisotropicTheta
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.matched_pair_anisotropic_theta : GlobalTheory.ThK.
     ∀ c₀ : E, c₀ ≠ 0 → ∀ φ' : GAd σ (c₀ • G.W.J.map σ) → ℂ,
       (∀ (g : UA σ G.W.J) (g' : GAd σ (c₀ • G.W.J.map σ)), g.1 = g'.1 → φ' g' = G.M.I om Φ g - c * G.M'.I om' Φ' g) →
       ∀ γ ∈ ratPts σ (c₀ • G.W.J.map σ), ∀ g, φ' (γ * g) = φ' g := by
-  first | exact @GlobalTheory.ThKLeftInv.left_invariant | exact GlobalTheory.ThKLeftInv.left_invariant | (intros; apply GlobalTheory.ThKLeftInv.left_invariant <;> assumption)
+  exact @GlobalTheory.ThKLeftInv.left_invariant

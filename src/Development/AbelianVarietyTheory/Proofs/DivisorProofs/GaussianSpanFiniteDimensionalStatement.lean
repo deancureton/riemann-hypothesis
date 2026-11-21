@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GaussianSpanFiniteDimensional
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolEqISupFockDeg
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.gaussian_span_finite_dimensional : ∀ (F E : Type
     (n d : ℕ) (X : Spc F E n) (W : Spc F E d) (M : Model σ X W) (r s r' s' : ℕ),
     B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' → M.IsGood B.ψ →
     FiniteDimensional ℂ (Submodule.span ℂ {f₀ : SInf F (Fin n × Fin d) | M.IsGauss B.ψ B.emb f₀}) := by
-  first | exact @GlobalTheory.FockVacGeom.span_finiteDimensional | exact GlobalTheory.FockVacGeom.span_finiteDimensional | (intros; apply GlobalTheory.FockVacGeom.span_finiteDimensional <;> assumption)
+  exact @GlobalTheory.FockVacGeom.span_finiteDimensional

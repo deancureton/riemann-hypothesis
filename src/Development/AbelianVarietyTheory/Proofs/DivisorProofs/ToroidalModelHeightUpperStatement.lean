@@ -22,4 +22,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_height_upper : ∀ {E : Type} [Fiel
     ∀ (f : Fin r → Γ(M, V)) (hf : VB.IsFrame f) (f' : Fin r → Γ(M', V)) (hf' : VB.IsFrame f')
       (A A' : Matrix (Fin g) (Fin r) Γ(W, jB ⁻¹ᵁ V)), GenCoord Z jB πB t ch hf A → GenCoord Z jB πB t' ch hf' A' →
     ∀ b i, A b i = ∑ j, A' b j * jB.app V ((hf'.basis le_rfl).repr (u.app V (f i)) j) := by
-  first | exact @GlobalTheory.LieFilt.genCoord_rel | exact GlobalTheory.LieFilt.genCoord_rel | (intros; apply GlobalTheory.LieFilt.genCoord_rel <;> assumption)
+  exact @GlobalTheory.LieFilt.genCoord_rel

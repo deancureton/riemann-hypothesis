@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.HeisenbergDerivRealLineEqSumRealPlaces
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsGaussEqZero
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.heisenbergDeriv_realLine_eq_sum_realPlaces : ∀ (
       (∀ t, (L t).map (finPart D) = 0) →
       (fun w => deriv (fun t : ℝ => heisO ψ S T (L t) f w) 0) =
         ∑ τ, dRho (heisO ψ S T) θ τ (compAt θ τ (L 1)) f := by
-  first | exact @GlobalTheory.PlaceSum.deriv_heisO_eq_sum_dRho | exact GlobalTheory.PlaceSum.deriv_heisO_eq_sum_dRho | (intros; apply GlobalTheory.PlaceSum.deriv_heisO_eq_sum_dRho <;> assumption)
+  exact @GlobalTheory.PlaceSum.deriv_heisO_eq_sum_dRho

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IwasawaHaarIntegralFormula
-import Mathlib
 open MeasureTheory
 open scoped NNReal
 set_option maxHeartbeats 1000000 in
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.iwasawa_haar_integral_formula : ∀ (G Kt : Type) 
     (∀ g : G, ∃ p ∈ P, ∃ k : Kt, g = p * ι k) → ∀ Ψ : G → ℂ,
     (∀ g : G, Integrable (fun k => Ψ (ι k * g)) μK) → (∀ (p : P) (g : G), Ψ (p * g) = (δ p : ℂ) * Ψ g) →
     ∀ g : G, ∫ k, Ψ (ι k * g) ∂μK = ∫ k, Ψ (ι k) ∂μK := by
-  first | exact @GlobalTheory.IwasawaAbs.kIntegral_mul_right_eq | exact GlobalTheory.IwasawaAbs.kIntegral_mul_right_eq | (intros; apply GlobalTheory.IwasawaAbs.kIntegral_mul_right_eq <;> assumption)
+  exact @GlobalTheory.IwasawaAbs.kIntegral_mul_right_eq

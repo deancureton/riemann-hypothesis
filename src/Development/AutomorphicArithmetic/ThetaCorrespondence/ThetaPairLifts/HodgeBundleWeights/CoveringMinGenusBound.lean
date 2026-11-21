@@ -60,5 +60,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.covering_min_genus_eq : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → Gram → DeepGood → Size → Gmin := by
-  first | exact @_root_.GlobalTheory.CovGminTop.covering_min_genus_bound | exact _root_.GlobalTheory.CovGminTop.covering_min_genus_bound | (intros; apply _root_.GlobalTheory.CovGminTop.covering_min_genus_bound <;> assumption)
+  exact @_root_.GlobalTheory.CovGminTop.covering_min_genus_bound
 end

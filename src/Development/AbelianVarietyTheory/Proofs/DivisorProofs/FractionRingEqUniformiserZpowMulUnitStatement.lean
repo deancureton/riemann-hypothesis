@@ -12,4 +12,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 open Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.fractionRing_eq_uniformiser_zpow_mul_unit : ∀ {V : Type} [CommRing V] [IsDomain V] [IsDiscreteValuationRing V] {ϖ : V}, Irreducible ϖ → ∀ (y : FractionRing V), y ≠ 0 → ∃ (v : ℤ) (w : Vˣ), y = algebraMap V (FractionRing V) ϖ ^ v * algebraMap V (FractionRing V) (w : V) := by
-  first | exact @GlobalTheory.DVR.fractionRing_eq_zpow_mul_unit | exact GlobalTheory.DVR.fractionRing_eq_zpow_mul_unit | (intros; apply GlobalTheory.DVR.fractionRing_eq_zpow_mul_unit <;> assumption)
+  exact @GlobalTheory.DVR.fractionRing_eq_zpow_mul_unit

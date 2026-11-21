@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.N Formal
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.motive_bound_of_series : PrN → SerN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, MvB hL := by
-  first | exact @GlobalTheory.HeightCounting.Up.mvB_of_classicalTheorems | exact GlobalTheory.HeightCounting.Up.mvB_of_classicalTheorems | (intros; apply GlobalTheory.HeightCounting.Up.mvB_of_classicalTheorems <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.mvB_of_classicalTheorems

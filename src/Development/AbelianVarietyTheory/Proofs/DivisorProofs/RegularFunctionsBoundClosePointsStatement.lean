@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RegularFunctionsBoundClosePoints
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RingKrullDimIntegers
 open CategoryTheory AlgebraicGeometry TopologicalSpace NumberField IsDedekindDomain
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.regular_functions_bound_close_points : ∀ (F : Ty
         (∀ (v : HeightOneSpectrum (𝓞 F)) (e : Ext v) (y : AlgPt Y), below y.1 = x → ∀ i,
           e.w (valAt y.1 (f i)) ≤ Real.exp (b v)) →
         A.ht x ≤ K := by
-  first | exact @GlobalTheory.HtLocBound.htLoc | exact GlobalTheory.HtLocBound.htLoc | (intros; apply GlobalTheory.HtLocBound.htLoc <;> assumption)
+  exact @GlobalTheory.HtLocBound.htLoc

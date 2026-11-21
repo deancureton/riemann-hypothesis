@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnisotropicPairEisensteinExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.anisotropic_pair_eisenstein_exists : GlobalTheory.
         ∀ f : UA σ W.J → ℂ, Continuous f → (∀ γ ∈ ratU σ W.J, ∀ h, f (γ * h) = f h) →
         (∀ N : ℕ, ∃ C : ℝ, ∀ h, ‖f h‖ * (qht h : ℝ) ^ N ≤ C) → GlobalTheory.ThKLiftCusp.IsCuspW W f →
         ∀ h, ∫ h' in 𝓕, f h' * Ez s h h' ∂μ = ∫ g, φ s g * f (h * g) ∂μ := by
-  first | exact @GlobalTheory.CuspDbl.anisoFamily | exact GlobalTheory.CuspDbl.anisoFamily | (intros; apply GlobalTheory.CuspDbl.anisoFamily <;> assumption)
+  exact @GlobalTheory.CuspDbl.anisoFamily

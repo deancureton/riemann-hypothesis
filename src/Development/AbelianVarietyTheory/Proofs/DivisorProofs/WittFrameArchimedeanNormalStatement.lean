@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WittFrameArchimedeanNormal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToGAdMat
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsGenericIffIsGenericFor
 import Development.AbelianVarietyTheory.PublishedTheorems.GaloisCohomology₂.StrongMultiplicityOne
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.witt_frame_archimedean_normal : ∀ (F E : Type) [
       ∃ u ∈ GlobalTheory.StdPar.unip σ J Xf S, u ∈ infPts σ J ∧ ∃ y : GL (Fin d) (GlobalTheory.CuspRep.Cinf E),
         ∀ k : GlobalTheory.CuspRep.Kinf E d, (u * ι (GlobalTheory.CuspRep.infGL E d y)) * ι (GlobalTheory.CuspRep.infGL E d (Unitary.toUnits k)) *
           (u * ι (GlobalTheory.CuspRep.infGL E d y))⁻¹ ∈ majCpt σ J c := by
-  first | exact @GlobalTheory.MajPos.exists_conj_mem_majCpt | exact GlobalTheory.MajPos.exists_conj_mem_majCpt | (intros; apply GlobalTheory.MajPos.exists_conj_mem_majCpt <;> assumption)
+  exact @GlobalTheory.MajPos.exists_conj_mem_majCpt

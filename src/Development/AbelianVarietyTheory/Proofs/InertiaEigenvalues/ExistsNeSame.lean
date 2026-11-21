@@ -10,7 +10,6 @@ open scoped TensorProduct
 
 namespace GlobalTheory.TwistChoice
 
-set_option maxHeartbeats 4000000 in
 set_option maxRecDepth 100000 in
 
 theorem SameField.basic {D D' : D7} (h : SameField D D') (h1 : SameGalois D.nd D'.nd) (h2 : TwistDataAgreeAcrossCoefficients D.ntw D'.ntw) :

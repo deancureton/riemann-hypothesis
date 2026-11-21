@@ -13,4 +13,4 @@ open GlobalTheory.TwistChoice (Reading ReadsAt)
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.bad_places_sub_of_admissible_twist : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AllSt fun _ B _ T w P x => ∀ (l : StrictHenselianAcyclic hL x) (v : B.places.Pl) (i : (Dof x).ntw.Tw) (b : Bool) (ψ : G (Dof x).host.E (Dof x).nd.Om →* ((Dof x).ntw.Ok i (T.k v))ˣ) (hA : NX.AdmTw (Dof x) i (T.k v) (QOf P v) ψ) (j : Fin (Dof x).R.m), TwistedAt (Dof x) v → (Dof x).ntw.l i = B.places.resChar v → IntegralHeckeForms.TwOK i (T.k v) (QOf P v) ψ → NX.badV (Dof x) i (QOf P v) ⊆ gPl (Dof x) ∪ qPl (Dof x) (eta (D := Dof x) (cfOf x) w.I.xi v j) := by
-  first | exact @GlobalTheory.LevCmp.BadV.badV_sub_gPl_qPl | exact GlobalTheory.LevCmp.BadV.badV_sub_gPl_qPl | (intros; apply GlobalTheory.LevCmp.BadV.badV_sub_gPl_qPl <;> assumption)
+  exact @GlobalTheory.LevCmp.BadV.badV_sub_gPl_qPl

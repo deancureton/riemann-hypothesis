@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GoodModelsAdaptedPlanesPair
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRelAlt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.good_models_adapted_planes_pair : GlobalTheory.ThK
     ∀ T T' : SInf F (Fin n × Fin d) →L[ℂ] SInf F (Fin n₁ × Fin d₁), T ≠ 0 →
     GlobalTheory.ThK.EvUniqB.InfRel B M M₂ H.ι H'.ι (isoA H H') T → GlobalTheory.ThK.EvUniqB.InfRel B M M₂ H.ι H'.ι (isoA H H') T' →
     ∃ c : ℂ, T' = c • T := by
-  first | exact @GlobalTheory.ArchSchA.infRelA_proportional_uniq | exact GlobalTheory.ArchSchA.infRelA_proportional_uniq | (intros; apply GlobalTheory.ArchSchA.infRelA_proportional_uniq <;> assumption)
+  exact @GlobalTheory.ArchSchA.infRelA_proportional_uniq

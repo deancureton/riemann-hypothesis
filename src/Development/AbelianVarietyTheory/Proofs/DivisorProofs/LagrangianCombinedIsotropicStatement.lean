@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LagrangianCombinedIsotropic
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.HilbertNinetyQuotientHomEqIff
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.SchwartzBruhatMatrixTranslationModulationIrreduc
 open ValuativeRel
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.lagrangian_combined_isotropic : ∀ {k : Type} [Fi
       (∀ Y z, (wT Y).1 ⬝ᵥ (wM z).2 - (wM z).1 ⬝ᵥ (wT Y).2 = Y ⬝ᵥ z) ∧
       (∀ w, ∃ Y z, wT Y + wM z = w) ∧
       (∀ u, u ∈ U ↔ ∃ z : Fin n → k, (∀ i ∉ I, z i = 0) ∧ wM z = u) := by
-  first | exact @GlobalTheory.LagrFrame.exists_frame | exact GlobalTheory.LagrFrame.exists_frame | (intros; apply GlobalTheory.LagrFrame.exists_frame <;> assumption)
+  exact @GlobalTheory.LagrFrame.exists_frame

@@ -7,4 +7,4 @@ open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.Glob
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.thetaModels_are_coverDiscreteSeries_of_harishChandra : GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.HarishChandraModules → ∀ D : D7, GlobalTheory.IndefiniteRowSideFullHecke.BarMatrix.ModelsAreCoverSeries D := by
-  first | exact @GlobalTheory.CoverModel.modelsAreCoverSeries_all | exact GlobalTheory.CoverModel.modelsAreCoverSeries_all | (intros; apply GlobalTheory.CoverModel.modelsAreCoverSeries_all <;> assumption)
+  exact @GlobalTheory.CoverModel.modelsAreCoverSeries_all

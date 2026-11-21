@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralModelPointOverInclusion
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.integral_model_point_over_inclusion : ∀ (E : Typ
     ∃ (_ : Algebra c.F L), (yL ≫ r ≫ pullback.fst _ _) ≫ Xo.s = sOf c L ∧
       (∀ z : FrPt Xo c L, z.x = yL ≫ r ≫ pullback.fst _ _ → ptF z = yL ≫ r) ∧
       ∀ (σ : E →+* ℂ) (a : 𝓞 E), algebraMap c.F L (embK c σ a) = io (β (embV c' W σ a)) := by
-  first | exact @GlobalTheory.GenChartAlg.exists_algebra_of_genPt | exact GlobalTheory.GenChartAlg.exists_algebra_of_genPt | (intros; apply GlobalTheory.GenChartAlg.exists_algebra_of_genPt <;> assumption)
+  exact @GlobalTheory.GenChartAlg.exists_algebra_of_genPt

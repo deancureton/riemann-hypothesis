@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.place_valuation_integral_criterion : GlobalTheory.
       O.Y.arMix Sx R p (dRt D.what₂.Tau O.Y.N (τ0, i') * toR G) = Real.log p * (letI := Formalism.L2.Geo.finPl D p;
         ∑ la, Formalism.L2.Geo.wtL D p la * ((((mdlOf (z la) (jc la)).Z.capDeg (((mdlOf (z la) (jc la)).om (τ' la)).Dv (i la))
           (evC (mdlOf (z la) (jc la)) (rootOf (z la) (jc la)) G) : ℚ) : ℝ) / ((mdlOf (z la) (jc la)).cov : ℝ))) := by
-  first | exact @GlobalTheory.OmTerm.arMix_dRt_om | exact GlobalTheory.OmTerm.arMix_dRt_om | (intros; apply GlobalTheory.OmTerm.arMix_dRt_om <;> assumption)
+  exact @GlobalTheory.OmTerm.arMix_dRt_om

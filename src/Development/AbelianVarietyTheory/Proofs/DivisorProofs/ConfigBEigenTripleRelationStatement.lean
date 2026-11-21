@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEigenTripleRelation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConeIntZero
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 open scoped TensorProduct
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_b_eigen_triple_relation : ∀ {F E : Type} 
     ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F B.v₁), ∃ C : Set (Fv F B.v₁ ⊗[F] E), IsCompact C ∧
       ∀ l : (AE F E)ˣ, compFin F E B.v₁ l.1 ∉ C →
         ev B.v₁ (locOp B.v₁ (G.M'.co.rho B.ψ (partFin B.v₁ (shiftB σ H H' l))) φ) = 0 := by
-  first | exact @GlobalTheory.VanishLoc.vanish_off_compact | exact GlobalTheory.VanishLoc.vanish_off_compact | (intros; apply GlobalTheory.VanishLoc.vanish_off_compact <;> assumption)
+  exact @GlobalTheory.VanishLoc.vanish_off_compact

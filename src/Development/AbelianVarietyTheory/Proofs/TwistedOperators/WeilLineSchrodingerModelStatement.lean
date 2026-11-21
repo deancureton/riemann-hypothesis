@@ -21,4 +21,4 @@ theorem _root_.GlobalTheory.T.weil_line_schrodinger_model : GlobalTheory.FunPr.H
       (∀ (h : GlobalTheory.RealWeil.Sch l) (x : EuclideanSpace ℝ l), Continuous fun t => T t h x) ∧
       ∀ (t : ℝ) (f : SInf F (Fin n × Fin d)),
         Acts (evI F) (om (1, γ (Multiplicative.ofAdd t))) ⇑f ⇑(Φ.symm (T t (Φ f))) := by
-  first | exact @GlobalTheory.ArchLine.realLine | exact GlobalTheory.ArchLine.realLine | (intros; apply GlobalTheory.ArchLine.realLine <;> assumption)
+  exact @GlobalTheory.ArchLine.realLine

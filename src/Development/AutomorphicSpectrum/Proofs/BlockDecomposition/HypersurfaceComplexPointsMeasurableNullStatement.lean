@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.HypersurfaceComplexPointsMeasurableNull
-import Mathlib
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSmoothHermCombLine
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRed
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegrableOnSourceIffOfDensity
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.hypersurface_complex_points_measurable_null : ∀ 
       eval z (map (Int.castRingHom ℂ) f) = 0} ∧
     ∀ c : GlobalTheory.AlgChart (i ≫ mpStr ℤ m n) σ₀ D, volume (c.e.target ∩ c.e.symm ⁻¹'
       {y | ∃ z, IsUnder (PtsOver.map i rfl _ y) z ∧ eval z (map (Int.castRingHom ℂ) f) = 0}) = 0 := by
-  first | exact @GlobalTheory.CompanionTheory.MixZ.zeroLocus_measurable_null | exact GlobalTheory.CompanionTheory.MixZ.zeroLocus_measurable_null | (intros; apply GlobalTheory.CompanionTheory.MixZ.zeroLocus_measurable_null <;> assumption)
+  exact @GlobalTheory.CompanionTheory.MixZ.zeroLocus_measurable_null

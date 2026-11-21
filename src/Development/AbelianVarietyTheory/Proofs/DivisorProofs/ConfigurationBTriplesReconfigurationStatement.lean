@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBTriplesReconfiguration
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.configuration_b_triples_reconfiguration : ∀ {F E
     ∀ (f : SInf F (Fin (b + 2) × Fin (a + (b + 2)))) (y : Fin b × Fin (a + b) → mixedEmbedding.mixedSpace F),
       AEStronglyMeasurable (fun p : KAt K (evI F) × idelesAt E (evI F) => coneInfInt B G.M' om' ei' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f p.1.1 p.2.1 y) (μKI.prod μI) ∧
       ∀ k ∈ KAt K (evI F), AEStronglyMeasurable (fun l : idelesAt E (evI F) => coneInfInt B G.M' om' ei' (shiftB σ H H') X.ν ((a - (b + 2)) / 2 + 1) f k l.1 y) μI := by
-  first | exact @GlobalTheory.ConeInfMeasB.aestronglyMeasurable_coneInfInt | exact GlobalTheory.ConeInfMeasB.aestronglyMeasurable_coneInfInt | (intros; apply GlobalTheory.ConeInfMeasB.aestronglyMeasurable_coneInfInt <;> assumption)
+  exact @GlobalTheory.ConeInfMeasB.aestronglyMeasurable_coneInfInt

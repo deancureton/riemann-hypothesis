@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisensteinResidueHolomorphicRegion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.eisenstein_residue_holomorphic_region : ∀ (F E :
       (∀ s ∈ U₀, IsSmoothModerate σ J (H₀ s)) →
       (∀ μ, GlobalTheory.EisLine.IsModerateForm σ J μ → DifferentiableOn ℂ (fun s => μ (H₀ s)) U₀) →
       ∃ V ∈ 𝓝 (((n : ℂ) - 1) / 2), ∀ s ∈ V, ∀ k ∈ levelAll σ J L a, ∀ g, H₀ s (g * k) = H₀ s g := by
-  first | exact @GlobalTheory.EisRes.levelAll_inv_near_rho | exact GlobalTheory.EisRes.levelAll_inv_near_rho | (intros; apply GlobalTheory.EisRes.levelAll_inv_near_rho <;> assumption)
+  exact @GlobalTheory.EisRes.levelAll_inv_near_rho

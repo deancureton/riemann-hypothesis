@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairCoverHodgeMetric
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairBaseIff
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -31,4 +30,4 @@ theorem _root_.GlobalTheory.T.pair_cover_hodge_metric : GlobalTheory.CovTop.Hypo
             ((cxSt D.what₂.LL).cx (O.var c) τ (genAt (lineAdl O R c st 1).D (under y))) y) ^ 1 =
         ‖ratVal (φ (genAt (lineAdl O R c st 1).D (under y)) ^ 1 * (r ch : Gs.functionField)) z‖ ^ 2 *
           Real.exp (-((VMetric.grLB F i ((HM.pull π rfl).pull ρ rfl)).φ _).φ (ch PUnit.unit) y') := by
-  first | exact @GlobalTheory.PairCovCx.frameSecX_norm_cx | exact GlobalTheory.PairCovCx.frameSecX_norm_cx | (intros; apply GlobalTheory.PairCovCx.frameSecX_norm_cx <;> assumption)
+  exact @GlobalTheory.PairCovCx.frameSecX_norm_cx

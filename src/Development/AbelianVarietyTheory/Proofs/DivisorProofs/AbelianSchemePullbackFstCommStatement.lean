@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AbelianSchemePullbackFstComm
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HodgeIntoDeRhamInjectiveImports
 import Development.AbelianVarietyTheory.Proofs.CoherentCohomologyProofs.ExactAndSurjectiveAppOfExactOfEpi
 open CategoryTheory AlgebraicGeometry Limits ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory.DeRham GlobalTheory.DeRhamSheaf GlobalTheory.LieVB
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.abelian_scheme_pullback_fst_comm : GlobalTheory.Co
         φ ≫ pullback.fst A.hom hV.fromSpec = pullback.fst A.hom hV'.fromSpec →
         ∀ (s : Γ(GlobalTheory.IndefiniteRowSideFullHecke.ZeroSectionBase.hodge A, V)) (c : primDR (onAff A hV)), GlobalTheory.HodgeSub.Corr A hV s c →
           GlobalTheory.HodgeSub.Corr A hV' (GlobalTheory.Twist.resM _ h s) ((GlobalTheory.Published.AbelianDeRham.bcMor hφ).pull c) := by
-  first | exact @GlobalTheory.HodgeSub.Nat.corr_res | exact GlobalTheory.HodgeSub.Nat.corr_res | (intros; apply GlobalTheory.HodgeSub.Nat.corr_res <;> assumption)
+  exact @GlobalTheory.HodgeSub.Nat.corr_res

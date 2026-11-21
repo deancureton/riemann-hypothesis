@@ -10,4 +10,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Asc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.unitaryQuotientHeight_wittLevi_le_pow_of_boundedUnipotent : ∀ (D : D7) (S S₀ : HSp D) (ρ : ℕ) (d : HypDec S S₀ ρ) (C₀ : ℝ), ∃ (C : ℝ) (a : ℕ), ∀ n ∈ flagN d, height S n ≤ C₀ → ∀ h : GA D S₀, quotHeight S₀ h ≤ C * quotHeight S (n * d.emb0 h) ^ a := by
-  first | exact @GlobalTheory.HtWittLow.quotHeight_le_of_height_le | exact GlobalTheory.HtWittLow.quotHeight_le_of_height_le | (intros; apply GlobalTheory.HtWittLow.quotHeight_le_of_height_le <;> assumption)
+  exact @GlobalTheory.HtWittLow.quotHeight_le_of_height_le

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsionPointOpenLocalization
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.finite_free_local_chart : ∀ (R : Type) [CommRing
       (_ : IsScalarTower R (Localization.Away r) C) (_ : Module.Finite (Localization.Away r) C)
       (_ : Module.Free (Localization.Away r) C) (U : T.Opens) (e : Sp C ≅ U.toScheme),
       e.hom ≫ U.ι ≫ π = spMap (algebraMap R C) ∧ ∀ t : T, π t = q → t ∈ U := by
-  first | exact @GlobalTheory.exists_finite_free_chart_away_of_atPrime | exact GlobalTheory.exists_finite_free_chart_away_of_atPrime | (intros; apply GlobalTheory.exists_finite_free_chart_away_of_atPrime <;> assumption)
+  exact @GlobalTheory.exists_finite_free_chart_away_of_atPrime

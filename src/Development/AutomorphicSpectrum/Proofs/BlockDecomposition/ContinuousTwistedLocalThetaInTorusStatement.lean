@@ -11,4 +11,4 @@ open scoped NumberField.AdeleRing ValuativeRel
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.continuous_twisted_local_theta_in_torus : ∀ (K : Type) [Field K] [NumberField K], Module.finrank ℚ K = 2 → ∀ (c : HeckeCharacter K) (v : Pl) (L : LM c v),
   L.ok → ∀ g₀ : GL (Fin 2) (Qv v), L.plus g₀ → ∀ ξ : K, Continuous (fun τ : (Qv v)ˣ => (L.tw τ).val g₀ ξ) := by
-  first | exact @GlobalTheory.CompanionTheory.TwistCont.val_tw_continuous | exact GlobalTheory.CompanionTheory.TwistCont.val_tw_continuous | (intros; apply GlobalTheory.CompanionTheory.TwistCont.val_tw_continuous <;> assumption)
+  exact @GlobalTheory.CompanionTheory.TwistCont.val_tw_continuous

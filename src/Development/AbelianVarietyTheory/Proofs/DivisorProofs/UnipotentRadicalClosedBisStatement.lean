@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentRadicalClosedBis
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.unipotent_radical_closed_bis : ∀ (F E : Type) [F
     ∀ m : (AE F E)ˣ → UA σ G₁.V.J → UA σ G.V.J, (∀ l g₀, IsLevi H l g₀ (m l g₀)) →
     IsClosed ((unip σ G.V H : Subgroup (UA σ G.V.J)) : Set (UA σ G.V.J)) ∧
     IsClosedEmbedding (fun p : unip σ G.V H × ((AE F E)ˣ × UA σ G₁.V.J) => (p.1 : UA σ G.V.J) * m p.2.1 p.2.2) := by
-  first | exact @GlobalTheory.IwEmb.unip_closedEmbedding | exact GlobalTheory.IwEmb.unip_closedEmbedding | (intros; apply GlobalTheory.IwEmb.unip_closedEmbedding <;> assumption)
+  exact @GlobalTheory.IwEmb.unip_closedEmbedding

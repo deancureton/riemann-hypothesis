@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticVarietyDivisorDimension
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -14,4 +13,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.arithmetic_variety_divisor_dimension : ∀ (k : Type) [CommRing k] (Y : Scheme.{0}) (p : Y ⟶ Sp k) (D : ℕ), IsArithVar p D →
     ∀ (Z : Scheme.{0}) (i : Z ⟶ Y) [IsClosedImmersion i] [IsIntegral Z],
     Order.coheight (i (genericPoint Z)) = 1 → topologicalKrullDim Z = D := by
-  first | exact @GlobalTheory.CodimOneDim.topologicalKrullDim_eq_of_coheight_eq_one | exact GlobalTheory.CodimOneDim.topologicalKrullDim_eq_of_coheight_eq_one | (intros; apply GlobalTheory.CodimOneDim.topologicalKrullDim_eq_of_coheight_eq_one <;> assumption)
+  exact @GlobalTheory.CodimOneDim.topologicalKrullDim_eq_of_coheight_eq_one

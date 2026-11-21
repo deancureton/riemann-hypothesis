@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BlockGramDeterminantBounds
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelHodgeGram
 open Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.weighted_sum_log_rootNorm_eq_neg_log_pairWeightNor
           (fun τ x => (((cΩ τ)⁻¹ : ℝ) : ℂ) • -GlobalTheory.HermFrame.subGram (modelHodgeGram (Zm τ x))) id
           (fun τ x => (GW τ x)ᵀ) (fun τ x => ((GΩ τ x).submatrix Fin.rev id)⁻¹)
           (fun τ k => u τ (Fin.cast hpq k)) v) / 2 := by
-  first | exact @GlobalTheory.HodgeLocGeo.Pointwise.pointwise | exact GlobalTheory.HodgeLocGeo.Pointwise.pointwise | (intros; apply GlobalTheory.HodgeLocGeo.Pointwise.pointwise <;> assumption)
+  exact @GlobalTheory.HodgeLocGeo.Pointwise.pointwise

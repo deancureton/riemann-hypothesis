@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoublingPairLatticeMeasure
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -30,4 +29,4 @@ theorem _root_.GlobalTheory.T.doubling_pair_lattice_measure : ∀ (F E : Type) [
       (∀ u, ∀ Ψ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d), e (schr B.ψ (dblE M.co u) Ψ) = co.rho B.ψ u (e Ψ)) →
     ∀ h : UA σ W.J, ∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d),
       om₂ (1, i (h, 1)) (e (boxC Φ₁ Φ₂)) = e (boxC (om (1, h) Φ₁) Φ₂) := by
-  first | exact @GlobalTheory.DblWeilBox.om₂_left_boxC | exact GlobalTheory.DblWeilBox.om₂_left_boxC | (intros; apply GlobalTheory.DblWeilBox.om₂_left_boxC <;> assumption)
+  exact @GlobalTheory.DblWeilBox.om₂_left_boxC

@@ -17,7 +17,6 @@ import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbitalIntegralConv
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.Markov
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OneLevelInequality
 import Formalism.LatticeTheta.ThetaShiftInversion
-import Mathlib
 import Formalism.FormalDegreeBessel.FinalBF
 import Formalism.SharpRestriction.CuspSpanNormBounds.RelevantZeroGramTerms
 import Formalism.SharpRestriction.CuspSpanNormBounds.LocalDataRealPlace

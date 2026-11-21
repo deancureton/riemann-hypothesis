@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocallyConstantSchwartzIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.locally_constant_schwartz_integral : ∀ {P Q Y : 
     (∀ a ∈ SB Y, ∀ a' ∈ SB Y, L (a + a') = L a + L a') → (∀ (c : ℂ), ∀ a ∈ SB Y, L (c • a) = c * L a) →
     (fun y => ∫ p, ∫ q, f p q y * g q ∂μQ ∂μP) ∈ SB Y ∧
       L (fun y => ∫ p, ∫ q, f p q y * g q ∂μQ ∂μP) = ∫ p, ∫ q, L (f p q) * g q ∂μQ ∂μP := by
-  first | exact @GlobalTheory.ConeBump.integ_mem_SB_and_map | exact GlobalTheory.ConeBump.integ_mem_SB_and_map | (intros; apply GlobalTheory.ConeBump.integ_mem_SB_and_map <;> assumption)
+  exact @GlobalTheory.ConeBump.integ_mem_SB_and_map

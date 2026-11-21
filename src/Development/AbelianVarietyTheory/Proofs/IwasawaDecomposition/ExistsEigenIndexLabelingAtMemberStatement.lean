@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsEigenIndexLabelingAtMember
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.CenLocOfCenReal
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.CoreEq
 import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.NoFormsOff
@@ -16,4 +15,4 @@ open Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.L2.Rows Fo
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_eigen_index_labeling_at_member : PrN → ∀ hL : GlobalTheory.Published.LocalLanglandsGL, AtMem hL fun _ _ _ T w Z Wt _ t _ _ _ => ∃ (Xd : DivX (w.D Z)) (E : EigIdx (w.D Z) Xd), Nonempty (E.Pi → (famR (w.st Z) w.I t.hX (usedOf w.I T Wt) t.r.z.Xg t.r.z.tr).A.fam.base.Ix) := by
-  first | exact @GlobalTheory.HeightCounting.Up.IdxAt.exists_divX_eigIdx_lab | exact GlobalTheory.HeightCounting.Up.IdxAt.exists_divX_eigIdx_lab | (intros; apply GlobalTheory.HeightCounting.Up.IdxAt.exists_divX_eigIdx_lab <;> assumption)
+  exact @GlobalTheory.HeightCounting.Up.IdxAt.exists_divX_eigIdx_lab

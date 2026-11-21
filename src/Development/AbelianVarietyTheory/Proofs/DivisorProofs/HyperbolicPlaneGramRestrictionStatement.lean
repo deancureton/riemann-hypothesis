@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlaneGramRestriction
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsUnitDetOfCartan
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaDescentIdentity
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_gram_restriction : ∀ (F E : Typ
         ∀ t₁ t₂ : (Fv F v)ˣ, IsLevi (W₁ := W₁) H (GlobalTheory.JacGeom.idl hcm τ (t₁, t₂⁻¹)) 1
           (GlobalTheory.SplitUnitLift.liftU hcm τ W.J εW hermW hJW
             (c * GlobalTheory.SmGL.leviEmb (Fv F v) e (GlobalTheory.IndLineGL.torusPt (Fv F v) n₁ t₁ t₂) * c⁻¹)) := by
-  first | exact @GlobalTheory.SplitLiftCoord.exists_lift_coords | exact GlobalTheory.SplitLiftCoord.exists_lift_coords | (intros; apply GlobalTheory.SplitLiftCoord.exists_lift_coords <;> assumption)
+  exact @GlobalTheory.SplitLiftCoord.exists_lift_coords

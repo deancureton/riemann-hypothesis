@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigurationBHaarMeasureIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.configuration_b_haar_measure_integral : GlobalTheo
     ∀ (e : ℕ) (W₂ : Spc F E e) (H₂ : Plane E (a + b) e) (i₀ i₁ : ℕ), H₂.IsAdapted σ B (reG G₁ V V' W₁').W W₂ i₀ i₁ →
     ∀ (s : ℂ) (g : UA σ G.W.J) (h : UA σ G₁.W.J) (μ' : Measure (unip σ G₁.W H₂)) (𝓕 : Set (unip σ G₁.W H₂)), μ'.IsHaarMeasure →
       AEStronglyMeasurable (fun p : unip σ G₁.W H₂ × (K × (AE F E)ˣ) => G₁.M'.I om₁' (e' (G.M'.co.rho B.ψ (shiftB σ H H' p.2.2) (om' (p.2.1.1, g) Φ'))) (p.1.1 * h) * (X.ν p.2.2 : ℂ) * ((absE F E p.2.2 : ℝ) : ℂ) ^ (s + ((a : ℂ) + 1) / 2)) ((μ'.restrict 𝓕).prod (μK.prod μ)) := by
-  first | exact @GlobalTheory.ConeUnipMeas.integrand_aestronglyMeasurable | exact GlobalTheory.ConeUnipMeas.integrand_aestronglyMeasurable | (intros; apply GlobalTheory.ConeUnipMeas.integrand_aestronglyMeasurable <;> assumption)
+  exact @GlobalTheory.ConeUnipMeas.integrand_aestronglyMeasurable

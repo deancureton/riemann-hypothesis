@@ -10,4 +10,4 @@ theorem _root_.GlobalTheory.T.theta_integral_smooth_along_real_lines : ∀ (F E 
     ∀ Φ ∈ GlobalTheory.ThK.PolData B G.M, ∀ γ : ℝ → GAd σ (c • G.W.J.map σ), IsRealLine σ (c • G.W.J.map σ) γ →
       ∃ Φ₁ ∈ GlobalTheory.ThK.PolData B G.M, lineDer γ (fun x => G.M.I om Φ ((toGAd hσ G.W.J hc).symm x)) =
         fun x => G.M.I om Φ₁ ((toGAd hσ G.W.J hc).symm x) := by
-  first | exact @GlobalTheory.ThKDer.lineDer_thetaIntegral | exact GlobalTheory.ThKDer.lineDer_thetaIntegral | (intros; apply GlobalTheory.ThKDer.lineDer_thetaIntegral <;> assumption)
+  exact @GlobalTheory.ThKDer.lineDer_thetaIntegral

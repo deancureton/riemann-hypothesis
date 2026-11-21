@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBLocalPartStabilizer
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLocPart
 
 open scoped TensorProduct NNReal Matrix
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.config_b_local_part_stabilizer : GlobalTheory.FunP
         (∀ i, f i ∈ SB (Fin b × Fin (a + b) → Fv F v)) ∧ (∀ i k, Integrable (c i k) μ) ∧
         (∀ i, Integrable (fun k => ∫ l, c i k l ∂μ) μK) ∧
         ∀ k l y, coneFinInt B G.M' om' v (ev' v) (shiftB σ H H') X.ν z φ k.1 l.1 y = ∑ i, c i k l * f i y := by
-  first | exact @GlobalTheory.ThK.LemF.coneFinInt_finSum | exact GlobalTheory.ThK.LemF.coneFinInt_finSum | (intros; apply GlobalTheory.ThK.LemF.coneFinInt_finSum <;> assumption)
+  exact @GlobalTheory.ThK.LemF.coneFinInt_finSum

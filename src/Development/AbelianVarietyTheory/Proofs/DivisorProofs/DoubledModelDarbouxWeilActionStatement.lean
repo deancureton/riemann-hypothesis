@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledModelDarbouxWeilAction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsAut
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.doubled_model_darboux_weil_action : ∀ (F E : Typ
     (∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d), boxC Φ₁ Φ₂ ∈ schA F (Fin n × Fin d ⊕ Fin n × Fin d)) ∧
     ∀ (u : Matrix (Fin n) (Fin (d + d)) (AE F E)), ∀ Φ₁ ∈ schA F (Fin n × Fin d), ∀ Φ₂ ∈ schA F (Fin n × Fin d),
       e (boxC (M.co.rho B.ψ (topC u) Φ₁) (M.co.rho B.ψ (botC u) Φ₂)) = co.rho B.ψ u (e (boxC Φ₁ Φ₂)) := by
-  first | exact @GlobalTheory.DblDatumBox.box_intertwine | exact GlobalTheory.DblDatumBox.box_intertwine | (intros; apply GlobalTheory.DblDatumBox.box_intertwine <;> assumption)
+  exact @GlobalTheory.DblDatumBox.box_intertwine

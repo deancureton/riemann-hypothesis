@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankNormalFormValuation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SubMemTwistSpan
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.full_rank_normal_form_valuation : ∀ (k : Type) [
       (∀ i, i ≠ i₀ → ((g.1)ᵀ * Y₁ * h.1) i j₀ = 0) ∧ (∀ i, (Y₂ * h.1) i j₀ = 0) ∧
       ∃ S : Matrix (Fin d) (Fin n) k, (∀ j i, ValuativeRel.valuation k (S j i) ≤ 1) ∧ (∀ i, S j₀ i = 0) ∧
         Y₂ * h.1 * S = 1 := by
-  first | exact @GlobalTheory.FullRankPair.pair_normal_form | exact GlobalTheory.FullRankPair.pair_normal_form | (intros; apply GlobalTheory.FullRankPair.pair_normal_form <;> assumption)
+  exact @GlobalTheory.FullRankPair.pair_normal_form

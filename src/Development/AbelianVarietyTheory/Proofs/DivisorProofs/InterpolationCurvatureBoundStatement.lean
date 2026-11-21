@@ -3,4 +3,4 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.InterpolationCurvat
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HermitianInterpolation
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.interpolation_curvature_bound : GlobalTheory.IndefiniteRowSideFullHecke.HermitianInterpolation.InterpCurvBound := by
-  first | exact @GlobalTheory.InterpCurv.interpCurvBound | exact GlobalTheory.InterpCurv.interpCurvBound | (intros; apply GlobalTheory.InterpCurv.interpCurvBound <;> assumption)
+  exact @GlobalTheory.InterpCurv.interpCurvBound

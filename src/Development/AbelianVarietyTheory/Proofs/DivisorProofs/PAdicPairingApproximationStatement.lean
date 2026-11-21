@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicPairingApproximation
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.p_adic_pairing_approximation : ∀ (E : Type) [Fie
     (U : Fin g → 𝓞_ℂ_[p]), (∀ m b, h m b - (P.al₀ (ta m)).1 (x b) ∈ Ideal.span {(p : 𝓞_ℂ_[p]) ^ n}) → ∀ i : J,
     ‖(((∑ b, (∑ a, Tc i a * h a b) * U b : 𝓞_ℂ_[p]) : ℂ_[p]) -
       P.pairV (∑ b, (U b : ℂ_[p]) • P.bLie (x b)) (∑ m, (Tc i m : ℂ_[p]) ⊗ₜ[ℤ_[p]] ta m))‖ ≤ (p : ℝ)⁻¹ ^ n := by
-  first | exact @GlobalTheory.FlatModel.HTCong.pair_comb_congr | exact GlobalTheory.FlatModel.HTCong.pair_comb_congr | (intros; apply GlobalTheory.FlatModel.HTCong.pair_comb_congr <;> assumption)
+  exact @GlobalTheory.FlatModel.HTCong.pair_comb_congr

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdaptedPlaneDarbouxCoordinatesExist
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_darboux_coordinates_exist : ∀ (F E
         ∀ p, (co.e (Matrix.vecMulVec b (incV F H'.y))).1 ((idx hd).symm (Sum.inl p)) = 0) ∧
       ∀ x : Matrix (Fin n) (Fin d) E, ∃ y z : Fin n × Fin d → F,
         co.e (incM F x) = (fun i => algebraMap F (AF F) (y i), fun i => algebraMap F (AF F) (z i))) := by
-  first | exact @GlobalTheory.ThK.PlaneEv.Coords.exists_coords | exact GlobalTheory.ThK.PlaneEv.Coords.exists_coords | (intros; apply GlobalTheory.ThK.PlaneEv.Coords.exists_coords <;> assumption)
+  exact @GlobalTheory.ThK.PlaneEv.Coords.exists_coords

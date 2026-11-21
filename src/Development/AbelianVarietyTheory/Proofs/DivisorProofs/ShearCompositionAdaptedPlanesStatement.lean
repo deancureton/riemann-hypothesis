@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ShearCompositionAdaptedPlanes
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.shear_composition_adapted_planes : ∀ (F E : Type
     (∀ v : Fin d → E, ∃ (a b : E) (u : Fin d₁ → E), v = a • H'.x + H'.ι *ᵥ u + b • H'.y) →
     (∀ v : Fin d₁ → E, ∃ (a b : E) (u : Fin e → E), v = a • H₂.x + H₂.ι *ᵥ u + b • H₂.y) →
     ∀ nn : AE F E → UA σ J, IsShear H' H₂ nn → ∀ c : E, nn (inclR (F := F) (AF F) c) ∈ ratU σ J := by
-  first | exact @GlobalTheory.RationalShear.shear_mem_ratU | exact GlobalTheory.RationalShear.shear_mem_ratU | (intros; apply GlobalTheory.RationalShear.shear_mem_ratU <;> assumption)
+  exact @GlobalTheory.RationalShear.shear_mem_ratU

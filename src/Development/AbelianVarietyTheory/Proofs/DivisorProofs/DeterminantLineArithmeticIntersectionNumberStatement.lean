@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.determinant_line_arithmetic_intersection_number : 
     ∀ u : Wt O.Y, (T.K B c).num (Fin.cons (T.L B c (fun σ' _ => if σ' = τ then (-1 : ℝ) else 0) + (T.K B c).ar g)
         fun _ => T.L B c u) =
       (T.M c).int (fun _ => (T.K B c).c1 (T.L B c u)) (fun _ _ => O.Y.htDetT B c τ) := by
-  first | exact @GlobalTheory.FlatDetModel.num_eq_htDetT_mul_int | exact GlobalTheory.FlatDetModel.num_eq_htDetT_mul_int | (intros; apply GlobalTheory.FlatDetModel.num_eq_htDetT_mul_int <;> assumption)
+  exact @GlobalTheory.FlatDetModel.num_eq_htDetT_mul_int

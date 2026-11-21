@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitaryFrameModelVacuum
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MajINonneg
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsSmoothModerateOfIsAutFunSm
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.norm_weil_action_pure_tensor_le_majorant : GlobalT
       (∀ i, c ≤ t i) → IsTorusU x y t a → κ ∈ Cc → ∃ m : ℕ, 1 ≤ m ∧ (m : ℝ) ≤ C * (ht h : ℝ) ^ k ∧
         ∀ ξ : Fin n × Fin d → F, ‖e (om (a * κ, h) (pureA F f φ)) (fun j => algebraMap F (AF F) (ξ j))‖ ≤
           C * semK (Fin n × Fin d) k f * (ht h : ℝ) ^ k * majI blk A N m t ξ := by
-  first | exact @GlobalTheory.ThKTorus.frameMajorant | exact GlobalTheory.ThKTorus.frameMajorant | (intros; apply GlobalTheory.ThKTorus.frameMajorant <;> assumption)
+  exact @GlobalTheory.ThKTorus.frameMajorant

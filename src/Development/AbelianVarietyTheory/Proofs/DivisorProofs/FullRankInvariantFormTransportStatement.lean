@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRankInvariantFormTransport
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FullRk
 open scoped TensorProduct NNReal Matrix
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.fullRank_invariant_form_transport : ∀ (k : Type)
       ∀ Ψ₁ Ψ₂ : GlobalTheory.FullRankCoinv.fullRk k n d,
         (∀ Y, Ψ₂.1 Y ≠ 0 → GlobalTheory.SplitFlip.smallF (GlobalTheory.SplitFlip.haarVol (GlobalTheory.SplitWeil.KO k (Fin n))) ν Ψ₁.1 Y = 0) →
         Bf Ψ₁ Ψ₂ = 0 := by
-  first | exact @GlobalTheory.FullRankCoinv.form_vanish_of_smallF_vanish | exact GlobalTheory.FullRankCoinv.form_vanish_of_smallF_vanish | (intros; apply GlobalTheory.FullRankCoinv.form_vanish_of_smallF_vanish <;> assumption)
+  exact @GlobalTheory.FullRankCoinv.form_vanish_of_smallF_vanish

@@ -10,4 +10,4 @@ open Formalism.MainNotions.DIV.Cons (intO SCF)
 open GlobalTheory.OmegaHT
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.OmegaRootStatement : GlobalTheory.OmegaHT.RootSt := by
-  first | exact @GlobalTheory.OmegaHT.exists_cover_root | exact GlobalTheory.OmegaHT.exists_cover_root | (intros; apply GlobalTheory.OmegaHT.exists_cover_root <;> assumption)
+  exact @GlobalTheory.OmegaHT.exists_cover_root

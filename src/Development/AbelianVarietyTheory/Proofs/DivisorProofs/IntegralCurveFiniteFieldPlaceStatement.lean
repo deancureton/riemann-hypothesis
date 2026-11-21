@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IntegralCurveFiniteFieldPlace
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
@@ -29,4 +28,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.integral_curve_finite_field_place : ∀ (F : Type) [Field F] [NumberField F] (X Z : Scheme.{0}) (q : X ⟶ Sp (𝓞 F)) (i : Z ⟶ X) [IsIntegral Z]
     (κ : Type) [Field κ] [Finite κ] [Algebra κ Γ(Z, ⊤)],
     ∃ v : HeightOneSpectrum (𝓞 F), ((ringChar κ : ℕ) : 𝓞 F) ∈ v.asIdeal ∧ ∀ z : Z, (q (i z)).asIdeal = v.asIdeal := by
-  first | exact @GlobalTheory.fibre_over_prime_of_finite_field_action | exact GlobalTheory.fibre_over_prime_of_finite_field_action | (intros; apply GlobalTheory.fibre_over_prime_of_finite_field_action <;> assumption)
+  exact @GlobalTheory.fibre_over_prime_of_finite_field_action

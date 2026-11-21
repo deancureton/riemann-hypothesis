@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateUniformizationSemilinearMap
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.conjugate_uniformization_semilinear_map : ∀ (A A
     ∃ T : (Fin N → ℂ) →ₛₗ[(g : ℂ →+* ℂ)] (Fin N → ℂ), Function.Injective T ∧
       ∀ (w : Fin N → ℂ) (v : epsR ℂ ⟶ A) (v' : epsR ℂ ⟶ A'), IsTangent v →
         v'.left ≫ p = spMap (Chart.dualMapR (g : ℂ →+* ℂ)) ≫ v.left → u.IsDiff w v → u'.IsDiff (T w) v' := by
-  first | exact @GlobalTheory.ConjTangentSemilin.exists_semilinear_transport | exact GlobalTheory.ConjTangentSemilin.exists_semilinear_transport | (intros; apply GlobalTheory.ConjTangentSemilin.exists_semilinear_transport <;> assumption)
+  exact @GlobalTheory.ConjTangentSemilin.exists_semilinear_transport

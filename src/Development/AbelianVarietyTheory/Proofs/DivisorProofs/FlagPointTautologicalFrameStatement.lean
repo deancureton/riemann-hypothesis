@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagPointTautologicalFrame
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormSqColGrLineOfOrthogonal
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.RegularAlteration
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.flag_point_tautological_frame : ∀ (ι : Type) [F
         (Scheme.Modules.pullbackComp g' (flStr ι N)).hom.app (Taut.stdE N) ≫
           (Scheme.Modules.pullbackCongr w).hom.app (Taut.stdE N)).app V (s j) =
         Loc.colSecOn g V (G a).1 (Fin.castLE l.is_le j) := by
-  first | exact @GlobalTheory.FlagZ.LocTaut.exists_frame_pullback_taut | exact GlobalTheory.FlagZ.LocTaut.exists_frame_pullback_taut | (intros; apply GlobalTheory.FlagZ.LocTaut.exists_frame_pullback_taut <;> assumption)
+  exact @GlobalTheory.FlagZ.LocTaut.exists_frame_pullback_taut

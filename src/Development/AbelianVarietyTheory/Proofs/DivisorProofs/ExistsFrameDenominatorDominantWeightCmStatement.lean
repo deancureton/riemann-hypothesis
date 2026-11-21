@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFrameDenominatorDominantWeightCm
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.Definitions.Divisors.NormNegCmConstantEqAtAllEmbeddings
 import Formalism.LocalRingCardinality.DataParamsT
@@ -36,4 +35,4 @@ open GlobalTheory.LamT (CMPt)
 set_option synthInstance.maxHeartbeats 400000
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_frame_denominator_dominant_weight_cm : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : ReciprocityTheory.ChartRestriction.G.Geo.Tor.Host E) (Dw : Datum H) (l : Level H) (Xo : Moduli Dw l) (c : Coeff l) [StarRing (𝓞 E)] (z : CMPt Xo c) (f : ℕ) (La : ℝ), z.Good f La → ∀ y : FrPt Xo c z.K, y.x = z.x → 1 ≤ (Dw).p → 1 ≤ (Dw).q → ∀ la : GlobalTheory.AllWt.Weight (Dw), (∀ τ, Antitone (la τ)) → (∀ τ, 1 ≤ gap (la τ) ((Dw).p - 1)) → ∃ N : z.K, N ≠ 0 ∧ ∀ F ∈ GlobalTheory.AllWt.secZ Xo c (GlobalTheory.AllWt.exOf Dw la 0), (∀ v, ∀ w ∈ valSet Xo c (algCls Xo c) v, 0 ≤ w F) → IsIntegral ℤ (N * evR Xo c F y) := by
-  first | exact @GlobalTheory.LatFull.CMInt.exists_frame_denom_dominant | exact GlobalTheory.LatFull.CMInt.exists_frame_denom_dominant | (intros; apply GlobalTheory.LatFull.CMInt.exists_frame_denom_dominant <;> assumption)
+  exact @GlobalTheory.LatFull.CMInt.exists_frame_denom_dominant

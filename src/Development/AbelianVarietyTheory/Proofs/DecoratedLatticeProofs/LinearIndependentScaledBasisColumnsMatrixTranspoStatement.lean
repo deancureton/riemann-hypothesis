@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.LinearIndependentScaledBasisColumnsMatrixTranspo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ThetaIdentityOfMapsAll
 import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ChainParSucc
 import Development.AbelianVarietyTheory.PublishedTheorems.DiscreteSeriesUnitary₂.DiscreteSeriesClassificationIff
@@ -14,4 +13,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.linearIndependent_scaledBasisColumnsMatrix_transpose : ∀ {D : D7} (X : HidaSetting D) (h : X.B.I = Formalism.L2.SG.InstExistsPf.instOf D) (t lam : D.host.E), t ≠ 0 → lam ≠ 0 → LinearIndependent D.host.E (GlobalTheory.Core.SBesEx.eM X h t lam).transpose := by
-  first | exact @GlobalTheory.Core.SBesEx.eM_transpose_linearIndependent | exact GlobalTheory.Core.SBesEx.eM_transpose_linearIndependent | (intros; apply GlobalTheory.Core.SBesEx.eM_transpose_linearIndependent <;> assumption)
+  exact @GlobalTheory.Core.SBesEx.eM_transpose_linearIndependent

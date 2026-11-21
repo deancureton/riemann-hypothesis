@@ -5,4 +5,4 @@ open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 A
 open scoped ValuativeRel
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.whittaker_smoothness : Ad3.SchwartzSpaceL2.SSmooth := by
-  first | exact @GlobalTheory.CompanionTheory.WhittakerSmooth.sSmooth | exact GlobalTheory.CompanionTheory.WhittakerSmooth.sSmooth | (intros; apply GlobalTheory.CompanionTheory.WhittakerSmooth.sSmooth <;> assumption)
+  exact @GlobalTheory.CompanionTheory.WhittakerSmooth.sSmooth

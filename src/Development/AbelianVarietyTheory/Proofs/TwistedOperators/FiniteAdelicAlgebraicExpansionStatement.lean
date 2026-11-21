@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.finite_adelic_algebraic_expansion : ∀ {D : D7} {
       ∃ (n : ℕ) (c : Fin n → ℂ) (w : Fin n → WO (GlobalTheory.Grid.neg A) WW), (∀ p, IsAlgebraic ℚ (c p)) ∧
         (∀ p, (w p).map (infPart D) = 0) ∧
         X.ω t (x, h) (heisO W.ψ (GlobalTheory.Grid.neg A) WW u X.vac) = ∑ p, c p • heisO W.ψ (GlobalTheory.Grid.neg A) WW (w p) X.vac := by
-  first | exact @GlobalTheory.MovedAlg.moved_translate_algComb | exact GlobalTheory.MovedAlg.moved_translate_algComb | (intros; apply GlobalTheory.MovedAlg.moved_translate_algComb <;> assumption)
+  exact @GlobalTheory.MovedAlg.moved_translate_algComb

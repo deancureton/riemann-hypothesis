@@ -6,4 +6,4 @@ open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions F
 open scoped ENNReal Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.truncated_plurisubharmonic_correction : Hypotheses2 → HypothesesH → OnObj fun _ O _ T _ _ => ∀ c σ, ∃ (b : ReciprocityTheory.AnForm.M.LocPot ((T.M c).X σ)) (p : (T.M c).X σ → ℝ), IsPoin ((T.M c).A σ) ((T.M c).Z σ) ((T.M c).r σ) b p ∧ ∃ C : ℝ, ∀ C' : ℝ, C ≤ C' → ∀ u (R : ℝ), 2 ≤ R → DomL O.Y.j u → PshOff ((T.M c).A σ) ((T.M c).Z σ) ((T.F c).th u σ + ReciprocityTheory.AnForm.M.LocPot.ofFun ((T.F c).phR R u σ) + (b + ReciprocityTheory.AnForm.M.LocPot.ofFun p).rsmul (C' * ‖u‖)) := by
-  first | exact @GlobalTheory.CurvInterp.curv_interp_lower | exact GlobalTheory.CurvInterp.curv_interp_lower | (intros; apply GlobalTheory.CurvInterp.curv_interp_lower <;> assumption)
+  exact @GlobalTheory.CurvInterp.curv_interp_lower

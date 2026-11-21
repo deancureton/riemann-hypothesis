@@ -14,4 +14,4 @@ open scoped ContDiff ComplexOrder ENNReal Classical
 open GlobalTheory.IrrAn
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.closed_subset_analytic : ∀ (k : Type) [CommRing k] (X : Scheme.{0}) (p : X ⟶ Sp k) [LocallyOfFiniteType p] (σ : k →+* ℂ) (d : ℕ) (R : AnRead p σ d) [CompactSpace (CxPts p σ)] (T : Set (Limits.pullback p (spMap σ) : Scheme.{0})), IsClosed T → R.finAtlas.IsAnalyticSubset (GlobalTheory.IrrAn.ptsOf p σ T) := by
-  first | exact @GlobalTheory.IrrAn.isAnalyticSubset_ptsOf | exact GlobalTheory.IrrAn.isAnalyticSubset_ptsOf | (intros; apply GlobalTheory.IrrAn.isAnalyticSubset_ptsOf <;> assumption)
+  exact @GlobalTheory.IrrAn.isAnalyticSubset_ptsOf

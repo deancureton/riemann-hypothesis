@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBThetaLiftRecursion
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -28,4 +27,4 @@ theorem _root_.GlobalTheory.T.config_b_theta_lift_recursion : GlobalTheory.ThK.K
           ∀ f ∈ G.M.Pol B.ψ B.emb, ∀ f₁ : SInf F (Fin a × Fin (a + (b + 2))), Acts (evI F) (om (1, k)) f f₁ →
           R.p f ∈ twPart B G.M om R.p G₁.W H' X.β ((a : ℝ) / 2) (lowPartInf B G.M R.p) → ∀ g ∈ G₁.M.Pol B.ψ B.emb, ∀ g₁ : SInf F (Fin a × Fin (a + b)),
           Acts (evI F) (om₁ (1, k₁)) g g₁ → ι (R.p f) = R₁.p g → ι (R.p f₁) = R₁.p g₁ := by
-  first | exact @GlobalTheory.BranchIsoB.twPart_iso_lowPart | exact GlobalTheory.BranchIsoB.twPart_iso_lowPart | (intros; apply GlobalTheory.BranchIsoB.twPart_iso_lowPart <;> assumption)
+  exact @GlobalTheory.BranchIsoB.twPart_iso_lowPart

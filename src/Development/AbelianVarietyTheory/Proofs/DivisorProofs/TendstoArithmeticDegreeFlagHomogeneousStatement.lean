@@ -12,4 +12,4 @@ theorem _root_.GlobalTheory.T.tendsto_arithmetic_degree_flag_homogeneous : Globa
       Q.IsHomogeneous (Formalism.MainNotions.WeightThresholdDefs.dimY O.Y) →
       Filter.Tendsto (fun R => O.Y.arDeg (GlobalTheory.FlagAr.setB O.Y B) R (GlobalTheory.FlagPoly.pSum τ 1 * Q) -
         ∑ c, O.Y.htDetT B c τ * (A.w c * Formalism.DegreeFormula.degFl D.what₂.Tau O.Y.N Q)) Filter.atTop (nhds 0) := by
-  first | exact @GlobalTheory.FlatLimit.limVal | exact GlobalTheory.FlatLimit.limVal | (intros; apply GlobalTheory.FlatLimit.limVal <;> assumption)
+  exact @GlobalTheory.FlatLimit.limVal

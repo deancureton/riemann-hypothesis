@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairHypPlaneAdaptedLift
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.pair_hyp_plane_adapted_lift : GlobalTheory.ThK.KP 
         ∀ (μN : Measure (unip σ X H)) (𝓕N : Set (unip σ X H)), μN.IsHaarMeasure →
           IsFundamentalDomain ((ratU σ X.J).subgroupOf (unip σ X H)) 𝓕N μN → μN 𝓕N = 1 →
           ∀ h, ∫ u in 𝓕N, theta om Φ (u.1 * g) h ∂μN = C₀ * thetaSum F (e (om (g, h) Φ)) + ∑' w, T (γ w * h) := by
-  first | exact @GlobalTheory.KernelTower.constantTerm_kernel | exact GlobalTheory.KernelTower.constantTerm_kernel | (intros; apply GlobalTheory.KernelTower.constantTerm_kernel <;> assumption)
+  exact @GlobalTheory.KernelTower.constantTerm_kernel

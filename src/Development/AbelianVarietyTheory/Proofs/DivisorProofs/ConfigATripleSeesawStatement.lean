@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigATripleSeesaw
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.config_a_triple_seesaw : GlobalTheory.ThK.KP → �
         ∃ z : Matrix (Fin b) (Fin (b + a')) (AE F E), (G₁.M.co.e z).1 = 0 ∧ ∀ φ : Fn F (b + 2) (b + 2 + a'),
           schr B.ψ (t • ((fun i => algebraMap F (AF F) (w.1 i)), (fun i => algebraMap F (AF F) (w.2 i)))) φ =
             G.M.co.rho B.ψ u₁ (G.M.co.rho B.ψ u₂ (G.M.co.rho B.ψ (incM F H.ι * z * (incM F H'.ι)ᵀ) φ)) := by
-  first | exact @GlobalTheory.MixedLagrA.lagrangian_isoA | exact GlobalTheory.MixedLagrA.lagrangian_isoA | (intros; apply GlobalTheory.MixedLagrA.lagrangian_isoA <;> assumption)
+  exact @GlobalTheory.MixedLagrA.lagrangian_isoA

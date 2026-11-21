@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilRepresentationDarbouxCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsTransportF
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AdeleJoinZero
 open scoped TensorProduct Matrix
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.weil_representation_darboux_coordinates : ∀ (F E
       (∀ p h, ∀ φ ∈ schA F κ,
         om p (schr ψ (GlobalTheory.WeilL2Words.archPair F (M p h)) φ) = schr ψ (GlobalTheory.WeilL2Words.archPair F h) (om p φ)) ∧
       ∀ h, Continuous fun p => M p h := by
-  first | exact @GlobalTheory.ArchTransportDir.archDir_transport | exact GlobalTheory.ArchTransportDir.archDir_transport | (intros; apply GlobalTheory.ArchTransportDir.archDir_transport <;> assumption)
+  exact @GlobalTheory.ArchTransportDir.archDir_transport

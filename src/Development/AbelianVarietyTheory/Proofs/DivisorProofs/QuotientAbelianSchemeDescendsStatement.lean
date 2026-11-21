@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.quotient_abelian_scheme_descends : ∀ (A₀ : Ove
     (∀ y : 𝟙_ (Over (Sp ℂ)) ⟶ X, ∃ x : 𝟙_ (Over (Sp ℂ)) ⟶ A, x ≫ ψ = y) →
   ∃ (X₀ : Over (Sp Qb)) (_ : GrpObj X₀) (q : X.left ⟶ X₀.left), IsAbelianScheme X₀ ∧ SmoothOfRelativeDimension g X₀.hom ∧
     IsGrpPullback X X₀ (spMap (algebraMap Qb ℂ)) q := by
-  first | exact @GlobalTheory.IsogModel.exists_model_of_surjective | exact GlobalTheory.IsogModel.exists_model_of_surjective | (intros; apply GlobalTheory.IsogModel.exists_model_of_surjective <;> assumption)
+  exact @GlobalTheory.IsogModel.exists_model_of_surjective

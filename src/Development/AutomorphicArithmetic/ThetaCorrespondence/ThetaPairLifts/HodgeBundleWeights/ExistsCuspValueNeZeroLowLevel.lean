@@ -72,5 +72,5 @@ open GlobalTheory.BadCount
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_nonzero_cusp_form_of_fan_charts : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → GlobalTheory.Published.GrothendieckDeformation → GlobalTheory.HSCore.Quoted → GlobalTheory.Published.SiegelToroidalIntegral → GlobalTheory.Published.ToroidalChartsForFan → GlobalTheory.Published.SemiAbelianLieSeminegative → Covers fun Fm x _ ι p i Y _ _ => ∃ Z : Comp Y.d.Xo₂ Y.d.c₂, ∃ f ∈ cuspOn Y.U Z (wtOf (dat p i) (uM p i) 0), f ≠ 0 := by
-  first | exact @_root_.GlobalTheory.CovTop.LowNonzero.exists_nonzero_cusp_form_uM_of_charts | exact _root_.GlobalTheory.CovTop.LowNonzero.exists_nonzero_cusp_form_uM_of_charts | (intros; apply _root_.GlobalTheory.CovTop.LowNonzero.exists_nonzero_cusp_form_uM_of_charts <;> assumption)
+  exact @_root_.GlobalTheory.CovTop.LowNonzero.exists_nonzero_cusp_form_uM_of_charts
 end

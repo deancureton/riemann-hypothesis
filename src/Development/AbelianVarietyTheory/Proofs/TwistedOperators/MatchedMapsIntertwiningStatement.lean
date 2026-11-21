@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.MatchedMapsIntertwining
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -27,4 +26,4 @@ theorem _root_.GlobalTheory.T.matched_maps_intertwining : GlobalTheory.FunPr.Hyp
     ∀ N, GlobalTheory.CoinvKer.IsThetaSub om Bs.emb (GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb) N →
       N ≠ GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb →
       ∀ ΦD ∈ N, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs G Xc R Rf ΦD 0 := by
-  first | exact @GlobalTheory.HoweGlobal.allInKer | exact GlobalTheory.HoweGlobal.allInKer | (intros; apply GlobalTheory.HoweGlobal.allInKer <;> assumption)
+  exact @GlobalTheory.HoweGlobal.allInKer

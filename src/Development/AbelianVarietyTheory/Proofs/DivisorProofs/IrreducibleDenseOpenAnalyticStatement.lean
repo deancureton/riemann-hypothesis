@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IrreducibleDenseOpenAnalytic
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TorsMulVal
 set_option autoImplicit false
 noncomputable section
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.finite_free_affine_open : ∀ (R : Type) [CommRing
     e.hom ≫ U.ι ≫ pullback.fst ((𝟙 G) ^ N : G ⟶ G).left η[G].left ≫ G.hom = spMap (algebraMap R C) →
     (∀ t, (pullback.fst ((𝟙 G) ^ N : G ⟶ G).left η[G].left ≫ G.hom) t = q → t ∈ U) →
     Nonempty (PreChart G N q) := by
-  first | exact @GlobalTheory.GroupBplus.Aff.preChart_of_open | exact GlobalTheory.GroupBplus.Aff.preChart_of_open | (intros; apply GlobalTheory.GroupBplus.Aff.preChart_of_open <;> assumption)
+  exact @GlobalTheory.GroupBplus.Aff.preChart_of_open

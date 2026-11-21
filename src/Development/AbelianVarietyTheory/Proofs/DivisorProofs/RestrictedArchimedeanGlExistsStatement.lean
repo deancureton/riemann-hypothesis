@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrictedArchimedeanGlExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.restricted_archimedean_gl_exists : ∀ (F E : Type
         (JR w.Completion (J0 σ J X Y) * (Y0 σ J X Y).map (inclR (F := F) w.Completion) : Matrix _ _ (w.Completion ⊗[F] E)) * Matrix.diagonal c) ∧
       Formalism.UG.cT (sigR _ σ) (g⁻¹).1 * (g⁻¹).1 = Formalism.UG.cT (sigR _ σ) ((P σ J X Y).map (inclR (F := F) w.Completion)) *
         (Formalism.UG.cT (sigR _ σ) (Formalism.UG.bc (compInf F E w) a⁻¹).1 * (Formalism.UG.bc (compInf F E w) a⁻¹).1) * (P σ J X Y).map (inclR (F := F) w.Completion) := by
-  first | exact @GlobalTheory.EisRestrictInf.restrict_inf | exact GlobalTheory.EisRestrictInf.restrict_inf | (intros; apply GlobalTheory.EisRestrictInf.restrict_inf <;> assumption)
+  exact @GlobalTheory.EisRestrictInf.restrict_inf

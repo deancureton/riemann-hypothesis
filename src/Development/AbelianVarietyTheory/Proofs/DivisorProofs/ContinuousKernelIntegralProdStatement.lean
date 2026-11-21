@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContinuousKernelIntegralProd
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.continuous_kernel_integral_prod : ∀ {α β : Typ
     (h0 : ∀ p ∉ C, F p.1 p.2 = 0) (c : ℂ) (hpos : ∀ a b, 0 ≤ (starRingEnd ℂ c * F a b).re) (a₀ : α) (b₀ : β)
     (h₀ : 0 < (starRingEnd ℂ c * F a₀ b₀).re),
     ∫ a, ∫ b, F a b ∂μb ∂μa ≠ 0 := by
-  first | exact @GlobalTheory.bump_iterated_integral_ne_zero | exact GlobalTheory.bump_iterated_integral_ne_zero | (intros; apply GlobalTheory.bump_iterated_integral_ne_zero <;> assumption)
+  exact @GlobalTheory.bump_iterated_integral_ne_zero

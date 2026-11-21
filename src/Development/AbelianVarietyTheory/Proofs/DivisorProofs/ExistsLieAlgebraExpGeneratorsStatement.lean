@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLieAlgebraExpGenerators
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CoordsSecondKindFormPreservingGroup
 open Filter Topology
 
@@ -11,4 +10,4 @@ theorem _root_.GlobalTheory.T.exists_lie_algebra_exp_generators : ∀ (𝔸 : Ty
     (∀ Y : 𝔸, (∀ t : ℝ, NormedSpace.exp (t • Y) ∈ S) → Y ∈ Submodule.span ℝ (Set.range Z)) →
     ∃ s : 𝔸 → Fin d → ℝ, ContDiffAt ℝ ((⊤ : ℕ∞) : WithTop ℕ∞) s 1 ∧
       ∀ᶠ X in nhds (1 : 𝔸), X ∈ S → X = (List.ofFn fun i => NormedSpace.exp (s X i • Z i)).prod := by
-  first | exact @GlobalTheory.ClosedMonoid.coords_second_kind_of_spanning | exact GlobalTheory.ClosedMonoid.coords_second_kind_of_spanning | (intros; apply GlobalTheory.ClosedMonoid.coords_second_kind_of_spanning <;> assumption)
+  exact @GlobalTheory.ClosedMonoid.coords_second_kind_of_spanning

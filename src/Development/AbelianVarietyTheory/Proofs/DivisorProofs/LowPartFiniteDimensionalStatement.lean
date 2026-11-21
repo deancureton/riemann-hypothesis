@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LowPartFiniteDimensional
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.lowPart_finite_dimensional : GlobalTheory.ThK.KP �
     (B : Base F E) (a a' : ℕ) (G : Geo σ a a') (X : Chars F E) (om : Rep σ G.V G.W) (om' : Rep σ G.V' G.W)
     (R : RealMaps F a a') (Rf : FinMaps F a a'), IsMatched B G X om om' R Rf →
       FiniteDimensional ℂ (lowPartInf B G.M R.p) := by
-  first | exact @GlobalTheory.IndLine.finiteDimensional_lowPartInf | exact GlobalTheory.IndLine.finiteDimensional_lowPartInf | (intros; apply GlobalTheory.IndLine.finiteDimensional_lowPartInf <;> assumption)
+  exact @GlobalTheory.IndLine.finiteDimensional_lowPartInf

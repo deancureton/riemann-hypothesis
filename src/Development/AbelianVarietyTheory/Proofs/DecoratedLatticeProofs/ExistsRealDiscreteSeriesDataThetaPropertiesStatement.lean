@@ -11,4 +11,4 @@ open scoped TensorProduct InnerProductSpace ComplexConjugate
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_real_discreteSeries_data_theta_properties : GlobalTheory.Published.DiscreteSeriesCover → GlobalTheory.Published.HarishChandraModules → ∃ X : ProvA, ChosenSeries X ∧ Formalism.MainNotions.SchurIrreducible.ArchimedeanRallisFirst X ∧ Formalism.MainNotions.SchurIrreducible.ArchimedeanRallisSecond X ∧ Formalism.MainNotions.SchurIrreducible.ArchimedeanRallisUpDownLine X ∧ Formalism.MainNotions.SchurIrreducible.ArchimedeanRallisFourth X ∧ Formalism.MainNotions.SchurIrreducible.ArchimedeanRallisFifth X := by
-  first | exact @GlobalTheory.RealPlaceTheta.exists_record_theta_all | exact GlobalTheory.RealPlaceTheta.exists_record_theta_all | (intros; apply GlobalTheory.RealPlaceTheta.exists_record_theta_all <;> assumption)
+  exact @GlobalTheory.RealPlaceTheta.exists_record_theta_all

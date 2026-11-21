@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WeilModelLineActionExists
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsFockMap
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.weil_model_line_action_exists : GlobalTheory.ThK.K
     (r s r' s' : ℕ), B.IsGood σ → X.IsHerm σ B r s → W.IsSkew σ B r' s' → M.IsGood B.ψ → M.IsWeil B.ψ χX χW om →
     ∀ γ ∈ Lines σ X, ∀ f ∈ M.Pol B.ψ B.emb, ∃ f₁ : SInf F (Fin n × Fin d),
       GlobalTheory.RealLift.SD (fun t => om (γ (Multiplicative.ofAdd t), 1)) f f₁ := by
-  first | exact @GlobalTheory.RealLift.FirstLine.sd_exists | exact GlobalTheory.RealLift.FirstLine.sd_exists | (intros; apply GlobalTheory.RealLift.FirstLine.sd_exists <;> assumption)
+  exact @GlobalTheory.RealLift.FirstLine.sd_exists

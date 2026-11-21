@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeightAdditiveInSymbols
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.KernelSt
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.DemaillyRegularisation
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.height_additive_in_symbols : ∀ (D : D7) (O : Set
     (∀ i ∈ s, (a i).1 = (fun _ => false) ∧ (a i).2.1 = none) →
     (adlOf (O.Φ.C c) (O.met.hm c) (∑ i ∈ s, Finsupp.single (a i) (n i))).ht x =
       ∑ i ∈ s, (n i : ℝ) * (adlOf (O.Φ.C c) (O.met.hm c) (Finsupp.single (a i) 1)).ht x := by
-  first | exact @GlobalTheory.HtAdd.ht_adlOf_sum | exact GlobalTheory.HtAdd.ht_adlOf_sum | (intros; apply GlobalTheory.HtAdd.ht_adlOf_sum <;> assumption)
+  exact @GlobalTheory.HtAdd.ht_adlOf_sum

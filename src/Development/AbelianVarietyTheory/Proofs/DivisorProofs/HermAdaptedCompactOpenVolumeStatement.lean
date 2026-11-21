@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermAdaptedCompactOpenVolume
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.herm_adapted_compact_open_volume : ∀ (F E : Type
       (∀ p : KAt K (evFin F v) × idelesAt E (evFin F v), mat p.1.1 *ᵥ incV F H.x = (p.2.1 : AE F E) • incV F H.x → p ∈ Ω) →
       ∃ U ∈ 𝓝 (0 : Fin n → Fv F v ⊗[F] E), ∃ C : Set (idelesAt E (evFin F v)), IsCompact C ∧
         ∀ p : KAt K (evFin F v) × idelesAt E (evFin F v), GlobalTheory.ConeBump.disp v H.x p.1.1 p.2.1 ∈ U → p ∈ Ω ∧ p.2 ∈ C := by
-  first | exact @GlobalTheory.ConeBump.disp_proper_near | exact GlobalTheory.ConeBump.disp_proper_near | (intros; apply GlobalTheory.ConeBump.disp_proper_near <;> assumption)
+  exact @GlobalTheory.ConeBump.disp_proper_near

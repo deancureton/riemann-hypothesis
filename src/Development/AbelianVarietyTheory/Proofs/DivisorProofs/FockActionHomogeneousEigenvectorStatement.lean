@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.fock_action_homogeneous_eigenvector : ∀ (P Q R S
       ∃ g' ∈ Formalism.BasicNotions.TH.homog (Formalism.BasicNotions.TH.Ln P Q R S) (e - 2),
         (∀ Y : Formalism.BasicNotions.TH.Mat P Q, Formalism.BasicNotions.TH.IsKC Y → Formalism.BasicNotions.TH.fockAct1 P Q R S Y g' = ((x : ℂ) * Y.trace) • g') ∧
         f' = Formalism.BasicNotions.TH.plusPart (Formalism.BasicNotions.TH.fockAct2 P Q R S Z) g'} := by
-  first | exact @GlobalTheory.FockScalarType.mem_span_raising | exact GlobalTheory.FockScalarType.mem_span_raising | (intros; apply GlobalTheory.FockScalarType.mem_span_raising <;> assumption)
+  exact @GlobalTheory.FockScalarType.mem_span_raising

@@ -9,4 +9,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar
 open GlobalTheory.Asc
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.gridConjugation_weilData_inverseCharacter : ConjRead := by
-  first | exact @GlobalTheory.Asc.conjRead_holds | exact GlobalTheory.Asc.conjRead_holds | (intros; apply GlobalTheory.Asc.conjRead_holds <;> assumption)
+  exact @GlobalTheory.Asc.conjRead_holds

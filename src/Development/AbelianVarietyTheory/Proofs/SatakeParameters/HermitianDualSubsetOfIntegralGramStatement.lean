@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.HermitianDualSubsetOfIntegralGram
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.SelfDualOne
 import Development.AbelianVarietyTheory.Proofs.SatakeParameters.LatticeModelVacuumTranslateClassesIndependent
 open Matrix
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.hermitianDual_subset_of_integral_gram : ∀ (L : T
         Formalism.UG.hform σ (JS : Matrix (Fin n) (Fin n) L) (GlobalTheory.Hk3.HoweG.adj σ JS JT x *ᵥ w) v ∈ Formalism.UG.intL L) →
       ∃ u : Fin n → L, ∃ w : Fin n' → L, (∀ i, u i ∈ Formalism.UG.intL L) ∧ (∀ i, (x *ᵥ u) i ∈ Formalism.UG.intL L) ∧
         (∀ i, w i ∈ Formalism.UG.intL L) ∧ v = u + GlobalTheory.Hk3.HoweG.adj σ JS JT x *ᵥ w := by
-  first | exact @GlobalTheory.Hk3.HoweG.hermDual_subset_of_gram_int | exact GlobalTheory.Hk3.HoweG.hermDual_subset_of_gram_int | (intros; apply GlobalTheory.Hk3.HoweG.hermDual_subset_of_gram_int <;> assumption)
+  exact @GlobalTheory.Hk3.HoweG.hermDual_subset_of_gram_int

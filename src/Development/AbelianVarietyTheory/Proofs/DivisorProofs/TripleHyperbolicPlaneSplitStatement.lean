@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TripleHyperbolicPlaneSplit
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -15,4 +14,4 @@ theorem _root_.GlobalTheory.T.triple_hyperbolic_plane_split : GlobalTheory.ThK.K
           (∀ u, form σ G.V.J (H.ι *ᵥ u) H.x = 0 ∧ form σ G.V.J (H.ι *ᵥ u) H.y = 0) ∧ Function.Injective H.ι.mulVec) →
       ∃ (V₁ : Spc F E d₂) (M₁ : Model σ V₁ G.W) (e : Fn F a (a + a') →ₗ[ℂ] Fn F d₂ (a + a')),
         V₁.J = H.ιᵀ * G.V.J * H.ι.map σ ∧ M₁.IsGood B.ψ ∧ IsEv B G.M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e := by
-  first | exact @GlobalTheory.PlaneEvX.exists_model_isEv | exact GlobalTheory.PlaneEvX.exists_model_isEv | (intros; apply GlobalTheory.PlaneEvX.exists_model_isEv <;> assumption)
+  exact @GlobalTheory.PlaneEvX.exists_model_isEv

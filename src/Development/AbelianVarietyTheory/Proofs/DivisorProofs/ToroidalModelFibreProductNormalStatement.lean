@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalModelFibreProductNormal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCoordMat
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.toroidal_model_fibre_product_normal : ∀ {E : Typ
     GlobalTheory.TwoLat.IsCoordMat Z jB πB t t' hf hf' A → GlobalTheory.TwoLat.IsCoordMat Z jB πB t t' hg hg' A' → ∀ a : Fin r,
     Twist.resM M' (inf_le_right : U ⊓ U' ≤ U') (∑ b, A' b a • g' b) =
       ∑ b, trCo hf g b a • Twist.resM M' (inf_le_left : U ⊓ U' ≤ U) (∑ k, A k b • f' k) := by
-  first | exact @GlobalTheory.TwoLat.coordMat_compat | exact GlobalTheory.TwoLat.coordMat_compat | (intros; apply GlobalTheory.TwoLat.coordMat_compat <;> assumption)
+  exact @GlobalTheory.TwoLat.coordMat_compat

@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.skew_adapted_pair_transfer : GlobalTheory.ThK.KP �
       H'.IsAdapted σ B W W₁ i₀ i₁ → IsPair B M₁ χX χW om₁ r s r₁ s₁ → ∀ e, IsEv B M M₁ 1 H'.ι (iso0 n H') e →
       ∀ c : UA σ W₁.J →* ℂˣ, Continuous c →
       (∀ h₁ m, IsLevi H' 1 h₁ m → ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, m) Φ) = (c h₁ : ℂ) • om₁ (1, h₁) (e Φ)) → c = 1 := by
-  first | exact @GlobalTheory.MixWChar.char_eq_one | exact GlobalTheory.MixWChar.char_eq_one | (intros; apply GlobalTheory.MixWChar.char_eq_one <;> assumption)
+  exact @GlobalTheory.MixWChar.char_eq_one

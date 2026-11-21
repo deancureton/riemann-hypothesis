@@ -19,4 +19,4 @@ open GlobalTheory.HCChar GlobalTheory.Published GlobalTheory.Published.Langlands
 open scoped InnerProductSpace Topology ENNReal ComplexConjugate
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.discrete_series_character_formula : GlobalTheory.Published.IrreducibleUnitaryAdmissible → GlobalTheory.Published.KFiniteCoefficientsAnalytic → GlobalTheory.Published.CharacterRegularityFiniteLength → GlobalTheory.Published.DiscreteSeriesCharacterOfParameter → GlobalTheory.Dec.DSUnique → GlobalTheory.Published.DiscreteSeriesCharacter := by
-  first | exact @GlobalTheory.DSCharLowest.discreteSeriesCharacter_of_parameter | exact GlobalTheory.DSCharLowest.discreteSeriesCharacter_of_parameter | (intros; apply GlobalTheory.DSCharLowest.discreteSeriesCharacter_of_parameter <;> assumption)
+  exact @GlobalTheory.DSCharLowest.discreteSeriesCharacter_of_parameter

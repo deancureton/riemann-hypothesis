@@ -10,4 +10,4 @@ open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G Recip
 open scoped Classical
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.antisymmetry_from_prismatic_dieudonne : Hypotheses2 → HypothesesH → RegularAlteration → ScholzeWeinsteinB → PrismaticDieudonnePerfd → AntiSt := by
-  first | exact @GlobalTheory.AntiFinite.main | exact GlobalTheory.AntiFinite.main | (intros; apply GlobalTheory.AntiFinite.main <;> assumption)
+  exact @GlobalTheory.AntiFinite.main

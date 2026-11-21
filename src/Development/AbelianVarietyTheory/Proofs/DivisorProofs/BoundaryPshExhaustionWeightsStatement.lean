@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.BoundaryPshExhaustionWeights
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AnalyticLogResolution
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 open MeasureTheory ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions GlobalTheory.LogResInt
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.boundary_psh_exhaustion_weights : ∀ (d : ℕ) (X
       (∀ R, IsOpen (O R)) ∧ Monotone O ∧ (∀ R, O R ⊆ (boundary σ)ᶜ) ∧
       (∀ x, x ∉ boundary σ → ∃ R, x ∈ O R) ∧
       (∀ R, ∀ x ∈ O R, w R x = pFun Λ σ c x / 2) := by
-  first | exact @GlobalTheory.PoincareTrunc.smoothTrunc | exact GlobalTheory.PoincareTrunc.smoothTrunc | (intros; apply GlobalTheory.PoincareTrunc.smoothTrunc <;> assumption)
+  exact @GlobalTheory.PoincareTrunc.smoothTrunc

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.UnipotentIntegralsPureTensorVanishOfLocal
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.ConstantTermVanishing
 
 noncomputable section
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.unipotentIntegrals_pureTensor_vanish_of_local : �
     (∀ (ν : Measure (NLoc 𝔉 v)) [ν.IsHaarMeasure] (x y : GLoc D.sp.cm.sig V.gram v),
       ∫ n : NLoc 𝔉 v, ff v (x * n * y) ∂ν = 0) →
     UnipIntegralsVanish 𝔉 (tensor D.sp.cm.sig V.gram fa ff) := by
-  first | exact @GlobalTheory.TestConstTerm.unipIntegralsVanish_tensor | exact GlobalTheory.TestConstTerm.unipIntegralsVanish_tensor | (intros; apply GlobalTheory.TestConstTerm.unipIntegralsVanish_tensor <;> assumption)
+  exact @GlobalTheory.TestConstTerm.unipIntegralsVanish_tensor

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TripleGeometryUnitary
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaEqB
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsThetaSubSelf
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.triple_geometry_unitary : GlobalTheory.Published.H
     ∀ N, GlobalTheory.CoinvKer.IsThetaSub om Bs.emb (GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb) N →
       N ≠ GlobalTheory.SquareAgree.algD G.M Bs.ψ Bs.emb →
       ∀ ΦD ∈ N, GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.PolMatch Bs G Xc R Rf ΦD 0 := by
-  first | exact @GlobalTheory.HoweEveryPlace.allInKer | exact GlobalTheory.HoweEveryPlace.allInKer | (intros; apply GlobalTheory.HoweEveryPlace.allInKer <;> assumption)
+  exact @GlobalTheory.HoweEveryPlace.allInKer

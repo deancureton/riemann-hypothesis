@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineGramCurvatureFormula
-import Mathlib
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.HodgeFrameGram
 open Matrix Complex ComplexConjugate GlobalTheory.HermFrame GlobalTheory.IndefiniteRowSideFullHecke.HodgeFrameGram
 open scoped ComplexOrder ContDiff
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.line_gram_curvature_formula : ∀ (E : Type) [Norm
     IsPosFrame U H → IsFlagFamily Y U π A → IsUnitaryFlagFrame Y H π A e → ∀ y ∈ Y, ∀ i ξ η, curv (lineGram H π A i) y ξ η () () =
       curvDiag H π e i y ξ η - ∑ l ∈ Finset.Ioi i, thetaSq H π e l i y ξ η
         + ∑ l ∈ Finset.Iio i, thetaSq H π e i l y ξ η := by
-  first | exact @GlobalTheory.GradedLine.curv_lineGram | exact GlobalTheory.GradedLine.curv_lineGram | (intros; apply GlobalTheory.GradedLine.curv_lineGram <;> assumption)
+  exact @GlobalTheory.GradedLine.curv_lineGram

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagBundleAdelicMetricData
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ScholzeWeinsteinB
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsIsFlagBundleRankOne
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.flag_bundle_adelic_metric_data : ∀ {F : Type} [F
     ∀ (Y : Scheme.{0}) (_ : IsIntegral Y) (π : Y ⟶ Bs) (fl : ∀ a, Vert.Flag ((Scheme.Modules.pullback π).obj (E a)) (n a)),
       IsFlagBundle π E n fl → ∀ (arY : IsArithVar (π ≫ q) Yv.dim) (nY : ReciprocityTheory.ChartRestriction.G.Geo.Tor.IsNormalScheme Y),
       GlobalTheory.FlagInd.FlagInduces Yv q E n h H A Y π fl arY nY := by
-  first | exact @GlobalTheory.FlagInd.flagInduces_transport | exact GlobalTheory.FlagInd.flagInduces_transport | (intros; apply GlobalTheory.FlagInd.flagInduces_transport <;> assumption)
+  exact @GlobalTheory.FlagInd.flagInduces_transport

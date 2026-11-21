@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.QuadraticTraceFormCoordinates
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.quadratic_trace_form_coordinates : ∀ {F E : Type
       (∀ a b, p b ⬝ᵥ q a = Algebra.trace (AF F) (AE F E) (∑ i, ∑ k, a i * incM F J i k * cA σ (b k))) ∧
       (∀ a : Fin n → E, ∃ y : Fin n × Fin 2 → F, p (incV F a) = fun k => algebraMap F (AF F) (y k)) ∧
       (∀ a : Fin n → E, ∃ y : Fin n × Fin 2 → F, q (incV F a) = fun k => algebraMap F (AF F) (y k)) := by
-  first | exact @GlobalTheory.HermCoords.exists_herm_pair_coords | exact GlobalTheory.HermCoords.exists_herm_pair_coords | (intros; apply GlobalTheory.HermCoords.exists_herm_pair_coords <;> assumption)
+  exact @GlobalTheory.HermCoords.exists_herm_pair_coords

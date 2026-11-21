@@ -108,5 +108,5 @@ section
 open GlobalTheory.CovTop GlobalTheory.BigTop
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.flat_of_anchor : _root_.GlobalTheory.CovTop.PublishedHodgeBundleTheorems → DeepGood → FlatDeg → Anchor → Flat := by
-  first | exact @_root_.GlobalTheory.FlatSplit.flat_alt | exact _root_.GlobalTheory.FlatSplit.flat_alt | (intros; apply _root_.GlobalTheory.FlatSplit.flat_alt <;> assumption)
+  exact @_root_.GlobalTheory.FlatSplit.flat_alt
 end

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ToroidalModelBaseChangeNormal
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCoordMat
 open NumberField MvPolynomial Filter Topology Formalism.BasicNotions Formalism.MainNotions Formalism.DegreeFormula GlobalTheory.FlagPoly GlobalTheory.Mean4 GlobalTheory.Mean4O GlobalTheory.CovTop GlobalTheory.CovHt GlobalTheory.CovTest GlobalTheory.Published
 open CategoryTheory AlgebraicGeometry ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor GlobalTheory GlobalTheory.ArInt
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.exists_isCoordMat_of_isLieLat_of_isGrLat : ∀ {E 
     IsLieLat Z e jB πB M r τ (ArIn.ind ∅) (fun _ => True) t → GlobalTheory.TwoLat.IsGrLat Z e jB πB M' r τ t' →
     ∀ (V : X.Opens), IsAffineOpen V → ∀ (f : Fin r → Γ(M, V)) (hf : VB.IsFrame f) (f' : Fin r → Γ(M', V))
     (hf' : VB.IsFrame f'), ∃ A : Matrix (Fin r) (Fin r) Γ(X, V), GlobalTheory.TwoLat.IsCoordMat Z jB πB t t' hf hf' A := by
-  first | exact @GlobalTheory.TwoLat.CoordReg.exists_isCoordMat | exact GlobalTheory.TwoLat.CoordReg.exists_isCoordMat | (intros; apply GlobalTheory.TwoLat.CoordReg.exists_isCoordMat <;> assumption)
+  exact @GlobalTheory.TwoLat.CoordReg.exists_isCoordMat

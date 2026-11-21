@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TangentFrameBaseChange
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MapPairDetCovec
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SecValAt
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsLocalRingTrivSqZeroExt
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.tangent_frame_base_change : ∀ {E : Type} [Field 
     IsCombAtG Y.t (yL ≫ Y.j) e cf (w ≫ Y.m.φ) →
     IsCombAtG Y.t (spMap φ ≫ yL ≫ Y.j) (bcV Y.t φ e) (fun b => φ (cf b)) (w' ≫ Y.m.φ) →
     w' = spMap (dualMap φ) ≫ w := by
-  first | exact @GlobalTheory.FlatModel.LiftBC.eq_bc_of_isCombAtG | exact GlobalTheory.FlatModel.LiftBC.eq_bc_of_isCombAtG | (intros; apply GlobalTheory.FlatModel.LiftBC.eq_bc_of_isCombAtG <;> assumption)
+  exact @GlobalTheory.FlatModel.LiftBC.eq_bc_of_isCombAtG

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteDimKStableSesquilinear
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.RangeSndRel
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
 import Development.AbelianVarietyTheory.BlockTheory.TwistedDiscreteSeries.CuspAlongSmoothRows
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.finite_dim_K_stable_sesquilinear : GlobalTheory.Fu
         b x (Rder θ V τ X y) = -b (Rder θ V τ X x) y) →
     FiniteDimensional ℂ (GlobalTheory.KTypeProj.typeSpan (GlobalTheory.KTypeProj.rhoK θ M) (W ⊓ GlobalTheory.CuspGK.gkGen θ M ψ)
       (GlobalTheory.CuspGK.gkGen θ M ψ)) := by
-  first | exact @GlobalTheory.KTypeAdm.finiteDimensional_typeSpan | exact GlobalTheory.KTypeAdm.finiteDimensional_typeSpan | (intros; apply GlobalTheory.KTypeAdm.finiteDimensional_typeSpan <;> assumption)
+  exact @GlobalTheory.KTypeAdm.finiteDimensional_typeSpan

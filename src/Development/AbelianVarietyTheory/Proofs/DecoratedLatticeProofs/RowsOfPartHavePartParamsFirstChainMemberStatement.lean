@@ -18,4 +18,4 @@ attribute [local instance] Formalism.BasicNotions.Host.cmStar GlobalTheory.Local
 open GlobalTheory.LiftRows (Given)
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.rows_of_part_have_part_params_first_chain_member : GlobalTheory.Published.CuspRapidDecay → ∀ {D : D7} {G : Type} [Group G] [Fintype G] {Pl0 T : Type} {A : FamIn D.what₂.LL G Pl0 T D.R.m} {Ks : Type} [Field Ks] [NumberField Ks] [Algebra Ks D.what₂.LL] (R : RealDat D A Ks) (F : Face D A), Given R F → (∀ h : RangeX R, RChain R h) → RangeX R → RowPar R := by
-  first | exact @GlobalTheory.ChainTw.rowPar_of_chain | exact GlobalTheory.ChainTw.rowPar_of_chain | (intros; apply GlobalTheory.ChainTw.rowPar_of_chain <;> assumption)
+  exact @GlobalTheory.ChainTw.rowPar_of_chain

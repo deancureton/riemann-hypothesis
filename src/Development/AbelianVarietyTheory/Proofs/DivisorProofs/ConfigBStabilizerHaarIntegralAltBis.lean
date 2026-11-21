@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsCTBig
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EisAtMinusRho
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.config_b_stabilizer_haar_integral_alt : GlobalTheo
       GlobalTheory.ConeSmallCT.LocUnifSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) T →
       GlobalTheory.ThK.CTAdd.CTInt H' (GlobalTheory.ConeSmallSer.partSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) (GlobalTheory.ConeSmallSer.bigSet H'.x T)) ∧ ∃ T₂ : UA σ G.W.J → ℂ, IsCT H' (GlobalTheory.ConeSmallSer.partSum (GlobalTheory.ConeSmall.coneI B G G₁ H H' e' K μK μ X.ν om' om₁' Φ' (s + ((a : ℂ) + 1) / 2)) (GlobalTheory.ConeSmallSer.bigSet H'.x T)) T₂ ∧
         GlobalTheory.ConeSmallCT.HasLawC G₁.W H' X.β (-s + ((a + b + 1 : ℕ) : ℂ) / 2) T₂ := by
-  first | exact @GlobalTheory.ConeSmallBig.ctBig | exact GlobalTheory.ConeSmallBig.ctBig | (intros; apply GlobalTheory.ConeSmallBig.ctBig <;> assumption)
+  exact @GlobalTheory.ConeSmallBig.ctBig

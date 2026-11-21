@@ -15,4 +15,4 @@ theorem _root_.GlobalTheory.T.adapted_plane_pair_local_factor : GlobalTheory.Fun
       H.IsAdapted σ B X X₁ j₀ j₁ → IsPair B M₁ χX χW om₁ r₁ s₁ r' s' →
       ∀ e, IsEv B M M₁ H.ι 1 {u | ∃ z, u = Matrix.vecMulVec (incV F H.x) z} e →
       ∀ (h : UA σ W.J), ∀ Φ ∈ schA F (Fin n × Fin d), e (om (1, h) Φ) = om₁ (1, h) (e Φ) := by
-  first | exact @GlobalTheory.MixXUW.evalZero_comm_U | exact GlobalTheory.MixXUW.evalZero_comm_U | (intros; apply GlobalTheory.MixXUW.evalZero_comm_U <;> assumption)
+  exact @GlobalTheory.MixXUW.evalZero_comm_U

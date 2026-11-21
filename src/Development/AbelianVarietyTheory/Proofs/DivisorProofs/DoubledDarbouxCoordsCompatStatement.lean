@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DoubledDarbouxCoordsCompat
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.doubled_darboux_coords_compat : ∀ (F E : Type) [
     ∃ l ∈ (adeleClass F).adm (κ ⊕ κ), (∀ z : Matrix α β (AE F E), ∀ φ ∈ schA F (κ ⊕ κ),
       l (dd.rho ψ (z * (diagCols β : Matrix (β ⊕ β) β (AE F E))ᵀ) φ) = l φ) ∧
       ∃ w : Matrix α (β ⊕ β) (AE F E), l (dd.rho ψ w f) ≠ 0 := by
-  first | exact @GlobalTheory.DiagNonvan.exists_invForm_rho_ne_zero | exact GlobalTheory.DiagNonvan.exists_invForm_rho_ne_zero | (intros; apply GlobalTheory.DiagNonvan.exists_invForm_rho_ne_zero <;> assumption)
+  exact @GlobalTheory.DiagNonvan.exists_invForm_rho_ne_zero

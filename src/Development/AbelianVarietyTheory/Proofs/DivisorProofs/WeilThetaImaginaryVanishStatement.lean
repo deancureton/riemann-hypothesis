@@ -13,4 +13,4 @@ theorem _root_.GlobalTheory.T.weil_theta_imaginary_vanish : ∀ (F E : Type) [Fi
         ψ = fun x => G.M'.I om' (pure f φ) ((toGAd hσ G.W.J hc).symm x)})) →
         (∀ i β, IsRealLine σ (c • G.W.J.map σ) β → ∀ ψ ∈ N i, lineDer β ψ ∈ N i) →
         (∀ i, ∀ k ∈ KInf σ G.W B.emb, ∀ ψ ∈ N i, (fun x => ψ (x * toGAd hσ G.W.J hc k)) ∈ N i) → m ≤ L := by
-  first | exact @GlobalTheory.ThK.ThetaChain.chain_bounded | exact GlobalTheory.ThK.ThetaChain.chain_bounded | (intros; apply GlobalTheory.ThK.ThetaChain.chain_bounded <;> assumption)
+  exact @GlobalTheory.ThK.ThetaChain.chain_bounded

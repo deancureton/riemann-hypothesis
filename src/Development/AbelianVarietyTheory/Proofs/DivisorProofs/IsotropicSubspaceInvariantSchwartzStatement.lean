@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsotropicSubspaceInvariantSchwartz
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FinRel
@@ -26,4 +25,4 @@ theorem _root_.GlobalTheory.T.isotropic_subspace_invariant_schwartz : ∀ {k : T
     (∀ w : (κ → k) × (κ → k), (∀ u ∈ U, u.1 ⬝ᵥ w.2 - w.1 ⬝ᵥ u.2 = 0) → ∀ φ ∈ S, GlobalTheory.WeilM.schr ψ0 w φ ∈ S) →
     ∀ φ₀ ∈ S, φ₀ ∉ Submodule.span ℂ {f | ∃ u ∈ U, ∃ φ ∈ GlobalTheory.WeilM.SB (κ → k), f = GlobalTheory.WeilM.schr ψ0 u φ - φ} →
     S = GlobalTheory.WeilM.SB (κ → k) := by
-  first | exact @GlobalTheory.CoinvIrr.coinvariants_irreducible | exact GlobalTheory.CoinvIrr.coinvariants_irreducible | (intros; apply GlobalTheory.CoinvIrr.coinvariants_irreducible <;> assumption)
+  exact @GlobalTheory.CoinvIrr.coinvariants_irreducible

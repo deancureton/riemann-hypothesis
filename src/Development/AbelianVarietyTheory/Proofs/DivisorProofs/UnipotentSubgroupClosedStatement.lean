@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnipotentSubgroupClosed
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsCuspW
@@ -17,4 +16,4 @@ theorem _root_.GlobalTheory.T.unipotent_subgroup_closed : ∀ (F E : Type) [Fiel
     ∀ (j : ℕ) (Y : Matrix (Fin d) (Fin j) E), 1 ≤ j → Function.Injective Y.mulVec →
       (∀ k l, form σ W.J (fun a => Y a k) (fun a => Y a l) = 0) →
       IsClosed (GlobalTheory.ThKLiftCusp.unipSp σ W Y : Set (UA σ W.J)) := by
-  first | exact @GlobalTheory.UnipSpClosed.isClosed_unipSp | exact GlobalTheory.UnipSpClosed.isClosed_unipSp | (intros; apply GlobalTheory.UnipSpClosed.isClosed_unipSp <;> assumption)
+  exact @GlobalTheory.UnipSpClosed.isClosed_unipSp

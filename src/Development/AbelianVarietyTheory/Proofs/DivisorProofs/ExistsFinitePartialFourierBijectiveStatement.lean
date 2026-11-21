@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsFinitePartialFourierBijective
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsDblOf
@@ -33,4 +32,4 @@ theorem _root_.GlobalTheory.T.exists_finite_partial_fourier_bijective : ∀ (F :
               B g (u + Sum.elim x x)) ∧
       ∃ C : ℂ, C ≠ 0 ∧ ∀ g ∈ SB (κ ⊕ κ → FiniteAdeleRing (𝓞 F) F),
         ∫ v : κ → FiniteAdeleRing (𝓞 F) F, B g (Sum.elim v v) ∂Measure.addHaar = C * g 0 := by
-  first | exact @GlobalTheory.PartialFourierFin.exists_partialFourier_diag | exact GlobalTheory.PartialFourierFin.exists_partialFourier_diag | (intros; apply GlobalTheory.PartialFourierFin.exists_partialFourier_diag <;> assumption)
+  exact @GlobalTheory.PartialFourierFin.exists_partialFourier_diag

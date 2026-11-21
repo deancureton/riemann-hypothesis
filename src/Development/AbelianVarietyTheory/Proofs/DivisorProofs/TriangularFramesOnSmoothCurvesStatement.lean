@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.triangular_frames_on_smooth_curves : ∀ {E : Type
       (φ : G.left ⟶ t.G.left), IsActPull i t.act (g ≫ b) φ → ∀ β : A →+* k, g ≫ b ≫ s = strHom k C ≫ spMap β →
       (∀ n' ≤ n, ∑ m ∈ Finset.range n', degLB k ((L m).pull (g ≫ a)) ∈ subDegs k (Lie G)) ∧
         deg k (lieSub i (scal C (β.comp ε))) = ∑ m ∈ Finset.range n, degLB k ((L m).pull (g ≫ a)) := by
-  first | exact @GlobalTheory.TriFlag.deg_on_curve | exact GlobalTheory.TriFlag.deg_on_curve | (intros; apply GlobalTheory.TriFlag.deg_on_curve <;> assumption)
+  exact @GlobalTheory.TriFlag.deg_on_curve

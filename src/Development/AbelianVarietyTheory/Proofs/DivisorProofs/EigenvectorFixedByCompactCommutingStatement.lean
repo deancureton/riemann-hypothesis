@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenvectorFixedByCompactCommuting
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IncMatTransposeConjTranspose
 open scoped TensorProduct Matrix
 open NumberField Formalism.BasicNotions.TH GlobalTheory.RealLift GlobalTheory.FockIncl GlobalTheory.FockInclK
@@ -12,4 +11,4 @@ theorem _root_.GlobalTheory.T.eigenvector_fixed_by_compact_commuting : ∀ (d d�
     (∀ i, x i = c * (Cw i (.inl r₀) + Cw i (.inr s₀))) → K *ᵥ x = x → Commute K θ →
     θ * Cw = Cw * Jm (R + 1) (S + 1) → (∀ i a, Cw i (skipIx r₀ s₀ a) = (ιH * C₁w) i a) → K * ιH = ιH * K₁ →
     C₁w * NormedSpace.exp Y = K₁ * C₁w → K * Cw = Cw * NormedSpace.exp (extMat r₀ s₀ Y) := by
-  first | exact @GlobalTheory.FockInclK.mul_frame_eq_frame_mul_exp_extMat | exact GlobalTheory.FockInclK.mul_frame_eq_frame_mul_exp_extMat | (intros; apply GlobalTheory.FockInclK.mul_frame_eq_frame_mul_exp_extMat <;> assumption)
+  exact @GlobalTheory.FockInclK.mul_frame_eq_frame_mul_exp_extMat

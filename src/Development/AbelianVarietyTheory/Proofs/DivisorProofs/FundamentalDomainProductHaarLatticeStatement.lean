@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FundamentalDomainProductHaarLattice
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ZetaOn
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CompReixMemAdm
 open scoped TensorProduct NNReal Matrix
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.fundamental_domain_product_haar_lattice : ∀ (G H
     (∃ C : Set G, IsCompact C ∧ ∀ g, ∃ γ ∈ Γ, ∃ c ∈ C, g = γ * c) → (∃ C : Set H, IsCompact C ∧ ∀ h, ∃ γ ∈ Δ, ∃ c ∈ C, h = γ * c) →
     ∀ θ : G → H → ℂ, Continuous (fun p : G × H => θ p.1 p.2) → (∀ γ ∈ Γ, ∀ δ ∈ Δ, ∀ g h, θ (γ * g) (δ * h) = θ g h) →
     (∀ h, ∫ g in 𝓕, θ g h ∂μ = 0) → ∫ g in 𝓕, (⨍ h in 𝓖, θ g h ∂ν) ∂μ = 0 := by
-  first | exact @GlobalTheory.DblBox.integral_setAverage_eq_zero_of_cocompact | exact GlobalTheory.DblBox.integral_setAverage_eq_zero_of_cocompact | (intros; apply GlobalTheory.DblBox.integral_setAverage_eq_zero_of_cocompact <;> assumption)
+  exact @GlobalTheory.DblBox.integral_setAverage_eq_zero_of_cocompact

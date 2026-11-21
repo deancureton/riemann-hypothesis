@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicPlanePairInduction
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_plane_pair_induction : GlobalTheory.ThK
         ∀ ξ : Fin d₂ × Fin d → F,
           ‖e (M.co.rho B.ψ (Matrix.vecMulVec (incV F H.y) (incV F w)) (om (u, 1) (om (g, h) Φ))) (fun i => algebraMap F (AF F) (ξ i))‖ *
             (1 + ‖fun i => evI F (algebraMap F (AF F) (ξ i))‖) ^ N₀ * (1 + ∑ i, ∑ v : InfinitePlace E, v (w i)) ^ K' ≤ C * ((N : ℝ) * ht h) ^ k := by
-  first | exact @GlobalTheory.MixedPtDecay.main | exact GlobalTheory.MixedPtDecay.main | (intros; apply GlobalTheory.MixedPtDecay.main <;> assumption)
+  exact @GlobalTheory.MixedPtDecay.main

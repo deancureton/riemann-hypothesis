@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EvaluationIsoBTriplePair
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UAtMemIsoB
 open MeasureTheory Filter NumberField IsDedekindDomain Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes GlobalTheory.WeilM GlobalTheory.AdelicU GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels GlobalTheory.ThK GlobalTheory.ConeSoB
 open scoped TensorProduct GlobalTheory.VacAny
@@ -19,4 +18,4 @@ theorem _root_.GlobalTheory.T.evaluation_iso_b_triple_pair : ∀ {F E : Type} [F
     ∀ (v : Pl F) (u : Matrix (Fin (b + 2)) (Fin (a + (b + 2))) (AE F E)), u ∈ isoB H H' → At (evFin F v) u →
     ∀ φ ∈ SB (Fin (b + 2) × Fin (a + (b + 2)) → Fv F v),
       ev v (schr (GlobalTheory.LatVac.psiAt B.ψ v) (GlobalTheory.LatVac.locCo G.M'.co v u) φ) = ev v φ := by
-  first | exact @GlobalTheory.VanishLocInv.inv_local | exact GlobalTheory.VanishLocInv.inv_local | (intros; apply GlobalTheory.VanishLocInv.inv_local <;> assumption)
+  exact @GlobalTheory.VanishLocInv.inv_local

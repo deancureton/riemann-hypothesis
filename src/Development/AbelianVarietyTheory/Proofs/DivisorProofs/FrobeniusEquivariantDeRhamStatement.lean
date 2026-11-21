@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobeniusEquivariantDeRham
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FrobPullHomExtAffine
 open CategoryTheory AlgebraicGeometry Limits MonoidalCategory CartesianMonoidalCategory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
@@ -13,4 +12,4 @@ theorem _root_.GlobalTheory.T.frobenius_equivariant_de_rham : ∀ (O : Type) [Co
     (e : ∀ (V : T.Opens) (hV : IsAffineOpen V), Γ(H, V) ≃ₗ[Γ(T, V)] primDR (onAff A hV))
     (p : ℕ) [Fact p.Prime] (h0 : (p : Γ(T, ⊤)) = 0) (ρ : O →+* End H) (Ψ : (frobPull p h0).obj H ⟶ H),
     IsDRAct e i ρ → IsLinFrob e p h0 Ψ → IsEquivariant (pullAct ρ (frob T p h0)) ρ Ψ := by
-  first | exact @GlobalTheory.AbDatum.linFrob_isEquivariant | exact GlobalTheory.AbDatum.linFrob_isEquivariant | (intros; apply GlobalTheory.AbDatum.linFrob_isEquivariant <;> assumption)
+  exact @GlobalTheory.AbDatum.linFrob_isEquivariant

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalMatrixActionColumnSpan
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LeviBlockSizesSum
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsBlockCentre
 import Development.AbelianVarietyTheory.Definitions.Foundations.GLintEqKOAndPrincEqKOne
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.local_matrix_action_column_span : ∀ (F E : Type)
     (matHom _ σ J x).1 *ᵥ (fun a => compFin F E v (z a)) - (fun a => compFin F E v (z a)) ∈
       Submodule.span (Fv F v ⊗[F] E) ((fun l a => inclR (F := F) (Fv F v) (X a l)) '' I) →
     (matHom _ σ J (emb σ J v x)).1 *ᵥ z - z ∈ GlobalTheory.StdPar.colSpan F X I := by
-  first | exact @GlobalTheory.EmbColSpan.emb_mulVec_sub_mem_colSpan | exact GlobalTheory.EmbColSpan.emb_mulVec_sub_mem_colSpan | (intros; apply GlobalTheory.EmbColSpan.emb_mulVec_sub_mem_colSpan <;> assumption)
+  exact @GlobalTheory.EmbColSpan.emb_mulVec_sub_mem_colSpan

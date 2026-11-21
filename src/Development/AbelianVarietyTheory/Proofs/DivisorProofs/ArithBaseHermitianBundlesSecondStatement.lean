@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithBaseHermitianBundlesSecond
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlagInduces
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsLieFrames
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LieBaseIff
@@ -34,4 +33,4 @@ theorem _root_.GlobalTheory.T.arith_base_hermitian_bundles_second : Hypotheses2 
     (a : D.what₂.Tau × Bool) (i : Fin (rkB D.what₂.Tau O.N O.j a)),
     IsRatSec ((VMetric.grLB (fl₀ a) i ((H a).pull π₀ rfl)).B.pull j) (r a i) ∧
     ∀ ch, ∀ x ∈ ((VMetric.grLB (fl₀ a) i ((H a).pull π₀ rfl)).B.pull j).U ch, UnitAt x (φ (genAt (adlOf (O.Φ.C c) (O.met.hm c) (rootSym O.S.Dw (ArIn.ind (setB O.Y B)) (some R) (DV.tauEmb D a.1) (cond a.2 0 O.j + i))).D (πG x)) ^ 1 * r a i ch) := by
-  first | exact @GlobalTheory.FlagCovDiv.isRatSec_and_unitAt | exact GlobalTheory.FlagCovDiv.isRatSec_and_unitAt | (intros; apply GlobalTheory.FlagCovDiv.isRatSec_and_unitAt <;> assumption)
+  exact @GlobalTheory.FlagCovDiv.isRatSec_and_unitAt

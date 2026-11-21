@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConfigBEvaluationInfinitePart
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCompactIsOpenUnitsAt
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocCharEqValZpow
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TmulMemLocId
@@ -29,4 +28,4 @@ theorem _root_.GlobalTheory.T.config_b_evaluation_infinite_part : ∀ {F E : Typ
       ∀ (v : Pl F) (l : (AE F E)ˣ), l ∈ idelesAt E (evFin F v) →
         ev' v (locOp v (G.M'.co.rho B.ψ (partFin v (shiftB σ H H' l))) (G.M'.vac v)) =
           if compFin F E v (l : AE F E) ∈ locId v (H.𝔟⁻¹ * conjI σ H'.𝔟) then G₁.M'.vac v else 0 := by
-  first | exact @GlobalTheory.ThK.UnrSuppB.evShift_vac | exact GlobalTheory.ThK.UnrSuppB.evShift_vac | (intros; apply GlobalTheory.ThK.UnrSuppB.evShift_vac <;> assumption)
+  exact @GlobalTheory.ThK.UnrSuppB.evShift_vac

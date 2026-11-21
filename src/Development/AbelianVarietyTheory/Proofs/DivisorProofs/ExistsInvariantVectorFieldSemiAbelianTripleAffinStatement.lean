@@ -15,4 +15,4 @@ open GlobalTheory.Toroidal GlobalTheory.LogKS GlobalTheory.RigChart GlobalTheory
 attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.exists_invariant_vectorField_semiAbelian_triple_affine : ∀ (E : Type) [Field E] [NumberField E] [IsCMField E] (H : Host E) (R : Type) [CommRing R] (t : SAB H (Sp R)) (v : TanM (𝟙 (Sp R)) t.G), ∃ dd : Fld t.G.left, IsInv t.G v dd := by
-  first | exact @GlobalTheory.InvFieldSemiAb.exists_isInv | exact GlobalTheory.InvFieldSemiAb.exists_isInv | (intros; apply GlobalTheory.InvFieldSemiAb.exists_isInv <;> assumption)
+  exact @GlobalTheory.InvFieldSemiAb.exists_isInv

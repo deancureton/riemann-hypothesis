@@ -6,4 +6,4 @@ open Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Pj Formalism.L2.D
 open GlobalTheory.BigTop GlobalTheory.BigOn
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.runs_estimate_statement : RunsSt := by
-  first | exact @GlobalTheory.BigOn.runsSt | exact GlobalTheory.BigOn.runsSt | (intros; apply GlobalTheory.BigOn.runsSt <;> assumption)
+  exact @GlobalTheory.BigOn.runsSt

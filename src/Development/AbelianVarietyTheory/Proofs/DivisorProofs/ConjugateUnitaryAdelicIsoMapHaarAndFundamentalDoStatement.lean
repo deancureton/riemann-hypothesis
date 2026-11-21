@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjugateUnitaryAdelicIsoMapHaarAndFundamentalDo
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ExistsNotRelZero
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.UnitaryConjugation
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
@@ -23,4 +22,4 @@ theorem _root_.GlobalTheory.T.conjugateUnitaryAdelicIso_map_haar_and_fundamental
     IsFundamentalDomain (GQ V) fd ν →
     (ν.map (conjU V c h)).IsHaarMeasure ∧
       IsFundamentalDomain (GlobalTheory.IndefiniteRowSideFullHecke.WeilTensorModels.ratU D.sp.cm.sig J) (conjU V c h '' fd) (ν.map (conjU V c h)) := by
-  first | exact @GlobalTheory.ConjUTransport.map_isHaar_isFundamentalDomain | exact GlobalTheory.ConjUTransport.map_isHaar_isFundamentalDomain | (intros; apply GlobalTheory.ConjUTransport.map_isHaar_isFundamentalDomain <;> assumption)
+  exact @GlobalTheory.ConjUTransport.map_isHaar_isFundamentalDomain

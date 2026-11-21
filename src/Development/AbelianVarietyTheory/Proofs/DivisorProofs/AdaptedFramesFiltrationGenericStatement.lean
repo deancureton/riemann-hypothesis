@@ -14,4 +14,4 @@ theorem _root_.GlobalTheory.T.adapted_frames_filtration_generic : ∀ {X : Schem
     (∀ a, Submodule.span X.functionField
       (Set.range fun i => ((E' a).presheaf.germ V _ hV ((u a).app V (f a i)) : genStalk (E' a))) = ⊤) →
     ∀ k, genSpan o T k = Submodule.span X.functionField ((fun z => L.presheaf.germ V _ hV (c z)) '' {z | o z.1 < k}) := by
-  first | exact @GlobalTheory.GrFilt.genSpan_eq_of_adaptedAt | exact GlobalTheory.GrFilt.genSpan_eq_of_adaptedAt | (intros; apply GlobalTheory.GrFilt.genSpan_eq_of_adaptedAt <;> assumption)
+  exact @GlobalTheory.GrFilt.genSpan_eq_of_adaptedAt

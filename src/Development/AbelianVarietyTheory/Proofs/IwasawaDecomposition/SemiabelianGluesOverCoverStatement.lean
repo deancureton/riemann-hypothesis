@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.SemiabelianGluesOverCover
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsChartOf
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.GlueSchemesOverOpensAlongCocycle
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.ExistsSemiAbelianTripleGlueCommonGenericPart
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.semiabelian_glues_over_cover : ∀ {E : Type} [Fie
     (∀ i, IsPullback (ψ i) (C i).s F (spMap (b i))) → (∀ i k, (C i).j ≫ ψ i = (C k).j ≫ ψ k) →
     Geo.Tor.IsNormalScheme A → IsProjOver F → Flat F →
     ∃ (Z : GMod Xo c) (u : ∀ i, (C i).X ⟶ Z.X), ∀ i, IsChartOf Z (C i) (a i) (b i) (u i) := by
-  first | exact @GlobalTheory.GlueModel.exists_gmod_charts | exact GlobalTheory.GlueModel.exists_gmod_charts | (intros; apply GlobalTheory.GlueModel.exists_gmod_charts <;> assumption)
+  exact @GlobalTheory.GlueModel.exists_gmod_charts

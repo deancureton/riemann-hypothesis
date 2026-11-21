@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ModelMapSurjectiveBirational
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SemiposAtOfPositive
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsIsCompModel
@@ -17,4 +16,4 @@ open CategoryTheory AlgebraicGeometry GlobalTheory GlobalTheory.TrueGeo GlobalTh
 
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.model_map_surjective_birational : ∀ (F : Type) [Field F] [NumberField F] (Y : Var F) (P M : TrueGeo.Model Y) (π : P.X ⟶ M.X), π ≫ M.p = P.p → P.j ≫ π = M.j → Surjective π ∧ (haveI := P.ar.isIntegral; π.residueDegree (genericPoint P.X) = 1) := by
-  first | exact @GlobalTheory.ModelBirational.main | exact GlobalTheory.ModelBirational.main | (intros; apply GlobalTheory.ModelBirational.main <;> assumption)
+  exact @GlobalTheory.ModelBirational.main

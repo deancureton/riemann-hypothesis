@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HeckeLineLeviEigenvalue
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndLineInf
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.hecke_line_levi_eigenvalue : ∀ (F E : Type) [Fie
     ∀ (γ₁ : Multiplicative ℝ →* UA σ W₁.J) (t : Multiplicative ℝ →* (AE F E)ˣ), (∀ s, IsLevi H' (t s) (γ₁ s) (γ s)) →
       ∃ c : ℂ, HasDerivAt (fun s : ℝ => (χ (t (Multiplicative.ofAdd s)) : ℂ) *
         (((absE F E (t (Multiplicative.ofAdd s)) : ℝ) ^ z : ℝ) : ℂ)) c 0 := by
-  first | exact @GlobalTheory.IndLine.hasDerivAt_chi_abs_levi | exact GlobalTheory.IndLine.hasDerivAt_chi_abs_levi | (intros; apply GlobalTheory.IndLine.hasDerivAt_chi_abs_levi <;> assumption)
+  exact @GlobalTheory.IndLine.hasDerivAt_chi_abs_levi

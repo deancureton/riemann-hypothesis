@@ -12,4 +12,4 @@ open CompanionTheory.D.LK (IsKMod IsMin)
 open scoped InnerProductSpace
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.kFinite_smoothVec_of_irreducible_unitaryRep : ∀ (n : ℕ) (ε : Fin n → Bool) (H : Type) [NormedAddCommGroup H] [InnerProductSpace ℂ H] [CompleteSpace H] [Nontrivial H] (σ : Matrix (Fin n) (Fin n) ℂ → (H →L[ℂ] H)), IsURepOn (UJset ε) σ → IsIrredOn (UJset ε) σ → ∀ v, IsKFin ε σ v → Formalism.L2.Theta.SmoothVec {X | inG ε X} σ v := by
-  first | exact @GlobalTheory.HdSmooth.kFinite_smoothVec | exact GlobalTheory.HdSmooth.kFinite_smoothVec | (intros; apply GlobalTheory.HdSmooth.kFinite_smoothVec <;> assumption)
+  exact @GlobalTheory.HdSmooth.kFinite_smoothVec

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MumfordBundleIsoSquarePassesSecondIso
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.OfFactorE
 import Development.AbelianVarietyTheory.PublishedTheorems.AutomorphicForms₂.MumfordConstruction
 import Development.AbelianVarietyTheory.Definitions.Degenerations.AdmissibleBaseOfCompleteDvr
@@ -24,4 +23,4 @@ theorem _root_.GlobalTheory.T.mumfordBundleIso_square_passes_second_iso : ∀ {S
       ∀ (Z : Scheme.{0}) (p : Z ⟶ (G2 B₁).left) (z : Z) I J I₁ J₁, Good N z I → Good M z J → Good N₁ z I₁ →
         Good M₁ z J₁ → (∏ k, om v' z I I₁ ((p ≫ m₁) ≫ lamφ C₁ k) ^ lamε k) * lamVal w₁ p z I₁ J₁ =
           lamVal w (p ≫ β₂) z I J * lamVal u p z J J₁ := by
-  first | exact @GlobalTheory.FactorPull.lam_down_gen | exact GlobalTheory.FactorPull.lam_down_gen | (intros; apply GlobalTheory.FactorPull.lam_down_gen <;> assumption)
+  exact @GlobalTheory.FactorPull.lam_down_gen

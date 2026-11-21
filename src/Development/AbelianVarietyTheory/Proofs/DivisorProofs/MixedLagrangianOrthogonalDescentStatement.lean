@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MixedLagrangianOrthogonalDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.EigenIntertwinerGoodModels
@@ -25,4 +24,4 @@ theorem _root_.GlobalTheory.T.mixed_lagrangian_orthogonal_descent : ∀ (F E : T
           w.1 ⬝ᵥ (M.co.e (incM F (1 : Matrix (Fin n) (Fin n) E) * incM F z * (incM F H'.ι)ᵀ)).2 =
             (M.co.e (incM F (1 : Matrix (Fin n) (Fin n) E) * incM F z * (incM F H'.ι)ᵀ)).1 ⬝ᵥ w.2) →
         ∃ u ∈ (iso0 n H' : Set (Matrix (Fin n) (Fin d) (AE F E))), w = M.co.e u := by
-  first | exact @GlobalTheory.MixedLagrOrth.mem_iso_zero_of_orth | exact GlobalTheory.MixedLagrOrth.mem_iso_zero_of_orth | (intros; apply GlobalTheory.MixedLagrOrth.mem_iso_zero_of_orth <;> assumption)
+  exact @GlobalTheory.MixedLagrOrth.mem_iso_zero_of_orth

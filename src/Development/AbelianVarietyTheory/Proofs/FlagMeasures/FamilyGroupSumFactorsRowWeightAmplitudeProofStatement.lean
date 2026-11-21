@@ -3,4 +3,4 @@ import Development.AbelianVarietyTheory.Proofs.FlagMeasures.FamilyGroupSumFactor
 import Development.AbelianVarietyTheory.Statements.CuspFrameWeights.FamilyGroupSumFactorsWeightAmplitude
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.familyGroupSumFactorsRowWeightAmplitude_proof : GlobalTheory.SnFam.FamilyGroupSumFactorsWeightAmplitude := by
-  first | exact @GlobalTheory.FamilyNormRational.familyGroupSumFactorsRowWeightAmplitude | exact GlobalTheory.FamilyNormRational.familyGroupSumFactorsRowWeightAmplitude | (intros; apply GlobalTheory.FamilyNormRational.familyGroupSumFactorsRowWeightAmplitude <;> assumption)
+  exact @GlobalTheory.FamilyNormRational.familyGroupSumFactorsRowWeightAmplitude

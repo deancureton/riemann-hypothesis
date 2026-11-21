@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.CmRepresentationEigenDecomposition
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.cm_representation_eigen_decomposition : ∀ (E : T
       Module.finrank ℂ W = Module.finrank ℚ E →
     ∀ (T : O → Module.End ℂ W), (∀ (a : O) (x y : L), (y : E) = a * x → T a (P x) = P y) →
     ∀ τ : E →+* ℂ, Module.finrank ℂ (⨅ a : O, Module.End.eigenspace (T a) (τ a) : Submodule ℂ W) = 1 := by
-  first | exact @GlobalTheory.EigLine.finrank_common_eigenspace_eq_one | exact GlobalTheory.EigLine.finrank_common_eigenspace_eq_one | (intros; apply GlobalTheory.EigLine.finrank_common_eigenspace_eq_one <;> assumption)
+  exact @GlobalTheory.EigLine.finrank_common_eigenspace_eq_one

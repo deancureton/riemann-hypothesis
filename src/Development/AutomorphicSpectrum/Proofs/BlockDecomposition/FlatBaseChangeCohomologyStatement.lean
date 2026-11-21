@@ -18,4 +18,4 @@ theorem _root_.GlobalTheory.T.flat_base_change_cohomology : ∀ {R R' : Type} [C
         fun T hT α hα => h α T (hT α hα)).pull j x) →
     ∀ j, Tens R (N := N) (M := fun i => CH.H (F i) j) (M' := CH.H F' j)
       fun i n x => (⟨G, τ i n, hτ i n⟩ : CH.Mor (F i) F' σ).pull j x := by
-  first | exact @GlobalTheory.CompanionTheory.CosieveBC.base_change_of_cover | exact GlobalTheory.CompanionTheory.CosieveBC.base_change_of_cover | (intros; apply GlobalTheory.CompanionTheory.CosieveBC.base_change_of_cover <;> assumption)
+  exact @GlobalTheory.CompanionTheory.CosieveBC.base_change_of_cover

@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PairDoubleDescent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 
@@ -18,4 +17,4 @@ theorem _root_.GlobalTheory.T.pair_double_descent : GlobalTheory.FunPr.Hypothese
       f (M.co.rho B.ψ (incM F H.ι * z * (incM F H'.ι)ᵀ) Φ) = M₁.co.rho B.ψ z (f Φ)) →
     (∀ u ∈ isoA H H', ∀ Φ ∈ schA F (Fin n × Fin d), f (M.co.rho B.ψ u Φ) = f Φ) →
     ∃ c : ℂ, ∀ Φ ∈ schA F (Fin n × Fin d), f Φ = c • e Φ := by
-  first | exact @GlobalTheory.ThK.EvLawUniq.eq_smul_isEv | exact GlobalTheory.ThK.EvLawUniq.eq_smul_isEv | (intros; apply GlobalTheory.ThK.EvLawUniq.eq_smul_isEv <;> assumption)
+  exact @GlobalTheory.ThK.EvLawUniq.eq_smul_isEv

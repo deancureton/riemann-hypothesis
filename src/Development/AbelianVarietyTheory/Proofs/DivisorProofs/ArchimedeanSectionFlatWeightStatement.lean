@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArchimedeanSectionFlatWeight
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.ToKnownTheoremsOf
 import Development.AbelianVarietyTheory.Definitions.Divisors.P22
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.ExistsHorizontalGeneratorOfCharts
@@ -32,4 +31,4 @@ theorem _root_.GlobalTheory.T.archimedean_section_flat_weight : GlobalTheory.Cov
           e.IsGen ∧ IsCoord f D sig ybar y e cc ∧
           w s.sig = val_vw la p (Valued.v : Valuation ℂ_[p] NNReal) (cc : ℂ_[p]) ∧
           val_vw la p (Valued.v : Valuation ℂ_[p] NNReal) (algebraMap R ℂ_[p] (φ ϖ)) = (κ : EReal) := by
-  first | exact @GlobalTheory.FlatModel.exists_model | exact GlobalTheory.FlatModel.exists_model | (intros; apply GlobalTheory.FlatModel.exists_model <;> assumption)
+  exact @GlobalTheory.FlatModel.exists_model

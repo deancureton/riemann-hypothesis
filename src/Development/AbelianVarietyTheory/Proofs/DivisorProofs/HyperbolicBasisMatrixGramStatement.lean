@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HyperbolicBasisMatrixGram
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PlaneZeroInsertionLinearApply
@@ -21,4 +20,4 @@ theorem _root_.GlobalTheory.T.hyperbolic_basis_matrix_gram : ∀ {F E : Type} [F
       (∀ t a, (Qᵀ * J * Q.map σ) (Fin.natAdd d₁ t) (Fin.castAdd 2 a) = 0) ∧
       (Qᵀ * J * Q.map σ) (Fin.natAdd d₁ 0) (Fin.natAdd d₁ 0) = 0 ∧ (Qᵀ * J * Q.map σ) (Fin.natAdd d₁ 1) (Fin.natAdd d₁ 1) = 0 ∧
       (Qᵀ * J * Q.map σ) (Fin.natAdd d₁ 0) (Fin.natAdd d₁ 1) = 1 ∧ (Qᵀ * J * Q.map σ) (Fin.natAdd d₁ 1) (Fin.natAdd d₁ 0) = -1 := by
-  first | exact @GlobalTheory.ThK.FrameGram.frame_gram | exact GlobalTheory.ThK.FrameGram.frame_gram | (intros; apply GlobalTheory.ThK.FrameGram.frame_gram <;> assumption)
+  exact @GlobalTheory.ThK.FrameGram.frame_gram

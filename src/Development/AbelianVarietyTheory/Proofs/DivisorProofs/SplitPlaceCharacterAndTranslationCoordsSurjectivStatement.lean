@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SplitPlaceCharacterAndTranslationCoordsSurjectiv
-import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HaarOIsAddHaar
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.IsLocIsoRefl
 
@@ -14,4 +13,4 @@ theorem _root_.GlobalTheory.T.splitPlace_characterAndTranslationCoords_surjectiv
     ∀ (v : Pl F) (t : E →ₐ[F] Fv F v) (bb : GL (Fin n) (Fv F v)) (cc : GL (Fin d) (Fv F v)) (Z : Matrix (Fin n) (Fin d) (Fv F v)),
     (∃ z : Matrix (Fin n) (Fin d) (AE F E), At (evFin F v) z ∧ z.map (piW (t.comp σ)) = 0 ∧ GlobalTheory.FlipMatch.coX t bb cc z = Z) ∧
     (∃ z : Matrix (Fin n) (Fin d) (AE F E), At (evFin F v) z ∧ z.map (piW t) = 0 ∧ GlobalTheory.FlipMatch.coY σ X W t bb cc z = Z) := by
-  first | exact @GlobalTheory.FlipOnto.coX_coY_onto | exact GlobalTheory.FlipOnto.coX_coY_onto | (intros; apply GlobalTheory.FlipOnto.coX_coY_onto <;> assumption)
+  exact @GlobalTheory.FlipOnto.coX_coY_onto

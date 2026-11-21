@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MatchedDiffsInvariantSubspace
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
 import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DiffsZeroOfLev
@@ -22,4 +21,4 @@ theorem _root_.GlobalTheory.T.matched_diffs_invariant_subspace : GlobalTheory.Th
         (∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁), T φ ∈ N) ∧ augAt om B.v₁ ≤ LinearMap.ker T ∧
         (∀ y ∈ UAt σ G.W (evFin F B.v₁), ∀ φ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁), ∀ φ₁ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁),
           Acts (evFin F B.v₁) (om (1, y)) φ φ₁ → ∀ h, T φ₁ h = T φ (h * y)) ∧ ∃ φ ∈ SB (Fin a × Fin (a + a') → Fv F B.v₁), F₀ = T φ} := by
-  first | exact @GlobalTheory.ThK.TransMaps.diffs_mem_span_maps | exact GlobalTheory.ThK.TransMaps.diffs_mem_span_maps | (intros; apply GlobalTheory.ThK.TransMaps.diffs_mem_span_maps <;> assumption)
+  exact @GlobalTheory.ThK.TransMaps.diffs_mem_span_maps

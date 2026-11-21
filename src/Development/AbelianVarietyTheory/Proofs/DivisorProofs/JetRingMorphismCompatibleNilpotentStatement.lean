@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JetRingMorphismCompatibleNilpotent
-import Mathlib
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.GrothendieckDeformation
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.CrysToDRBijective
@@ -16,4 +15,4 @@ theorem _root_.GlobalTheory.T.jet_ring_morphism_compatible_nilpotent : GlobalThe
     (N : I → Module.End R (HdR X.A)), admitted X N →
     ∀ (m : GrpMor (dp0 R) (𝟙 _) X.A J.κ (spMap J.π) X.A (algebraMap R J.B) (𝟙 _) (Over.Hom.left (𝟙 X.A))),
       ∀ (a : 𝓞 F), ∀ d ∈ Submodule.span J.B {d | ∃ x ∈ Fil X.A, IsJetElt J X N m x d}, act J.κ (spMap J.π) X.rm a d ∈ Submodule.span J.B {d | ∃ x ∈ Fil X.A, IsJetElt J X N m x d} := by
-  first | exact @GlobalTheory.LatJet.jetFil_act_stable | exact GlobalTheory.LatJet.jetFil_act_stable | (intros; apply GlobalTheory.LatJet.jetFil_act_stable <;> assumption)
+  exact @GlobalTheory.LatJet.jetFil_act_stable

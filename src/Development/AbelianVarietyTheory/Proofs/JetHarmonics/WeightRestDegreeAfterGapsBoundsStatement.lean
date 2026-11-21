@@ -8,4 +8,4 @@ set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.weight_rest_degree_after_gaps_bounds : ∀ (D : D7) (L : SizeData₂ D) (Pm : ParameterChoice' D L) (Tp : ParamsT D L Pm) (hK : DV.KapDef D) (T : Core D), T.Q.Pins → ∀ j : ℕ, InR D j →
   0 ≤ restOf (numOf D L) (T.Q.Dw j) (fun z => DV.tauEmb D (plOf D z)) (wtA (lR Tp hK j)) ∧
   (Tp.TO : ℝ) * restOf (numOf D L) (T.Q.Dw j) (fun z => DV.tauEmb D (plOf D z)) (wtA (lR Tp hK j)) ≤ 100 * (D.R.f * D.R.k * ((numOf D L).Sc + (numOf D L).eta)) := by
-  first | exact @GlobalTheory.RestDegree.rest_degree_bounds | exact GlobalTheory.RestDegree.rest_degree_bounds | (intros; apply GlobalTheory.RestDegree.rest_degree_bounds <;> assumption)
+  exact @GlobalTheory.RestDegree.rest_degree_bounds

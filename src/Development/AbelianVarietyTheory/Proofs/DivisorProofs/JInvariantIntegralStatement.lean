@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.JInvariantIntegral
-import Mathlib
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.PeriodComparison
 import Development.AbelianVarietyTheory.Definitions.Divisors.JetAnalytic
 import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.TateUnramifiedOfTorsionUnramified
@@ -27,4 +26,4 @@ attribute [local instance] Over.cartesianMonoidalCategory
 set_option maxHeartbeats 1000000 in
 theorem _root_.GlobalTheory.T.j_invariant_integral : ∀ (d : ℕ) (Λ : PeriodPair), d.Prime → GlobalTheory.IndefiniteRowSideFullHecke.ClassZetaValuationBounds.IsIntLattice d Λ →
     IsIntegral ℤ (1728 * Λ.g₂ ^ 3 / latDisc Λ) := by
-  first | exact @GlobalTheory.isIntegral_j_of_isIntLattice | exact GlobalTheory.isIntegral_j_of_isIntLattice | (intros; apply GlobalTheory.isIntegral_j_of_isIntLattice <;> assumption)
+  exact @GlobalTheory.isIntegral_j_of_isIntLattice

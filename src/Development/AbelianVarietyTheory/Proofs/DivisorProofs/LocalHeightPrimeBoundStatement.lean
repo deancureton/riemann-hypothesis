@@ -24,4 +24,4 @@ theorem _root_.GlobalTheory.T.local_height_prime_bound : Hypotheses2 → Hypothe
       0 < colMinor e.w (M a) Finset.univ ∧ ∀ i, (wholeA O c T R i).lg v e y =
         Real.log (e.w (valAt y.1 (genAt (wholeA O c T R i).D (below y.1) * (dgOf O c (below y.1) i : (O.Φ.C c).Y.Fn)))) +
           Real.log (colMinor e.w (M a) (Finset.Iic i)) - Real.log (colMinor e.w (M a) (Finset.Iio i)) := by
-  first | exact @GlobalTheory.EqHalf.NormWhole.norm_whole | exact GlobalTheory.EqHalf.NormWhole.norm_whole | (intros; apply GlobalTheory.EqHalf.NormWhole.norm_whole <;> assumption)
+  exact @GlobalTheory.EqHalf.NormWhole.norm_whole

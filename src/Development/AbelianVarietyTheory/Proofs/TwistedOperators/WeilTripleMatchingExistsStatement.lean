@@ -1,6 +1,5 @@
 import Mathlib
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.WeilTripleMatchingExists
-import Mathlib
 import Development.AbelianVarietyTheory.Statements.HeckeThetaIntegrals.ThetaIntegralsAgree
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.WeilTensorModels
 import Development.AbelianVarietyTheory.Definitions.Divisors.DiscreteSeriesHermitianUnique
@@ -20,4 +19,4 @@ theorem _root_.GlobalTheory.T.weil_triple_matching_exists : GlobalTheory.Publish
   ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (θ : InfFam D), IsStdChar D ψ (-1) → IsInfFam θ →
     ∀ (W W₁ X : HSp D) (A : Fr W) (A₁ : Fr W₁) (B : Fr X) (α β : (AE D)ˣ →* Circle), IsTriple W W₁ X α β →
       ∃ ωA ωB Pi rf rl p p', IsMatch ψ θ A A₁ B α β ωA ωB Pi rf rl p p' := by
-  first | exact @GlobalTheory.TripleRead.exists_isMatch | exact GlobalTheory.TripleRead.exists_isMatch | (intros; apply GlobalTheory.TripleRead.exists_isMatch <;> assumption)
+  exact @GlobalTheory.TripleRead.exists_isMatch
