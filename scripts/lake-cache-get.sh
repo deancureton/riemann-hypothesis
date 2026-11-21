@@ -1,8 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [[ "$#" != 1 || "$1" != get ]]; then
-  echo 'Usage: lake exe cache get' >&2
+if [[ "${1:-}" != get ]]; then
+  echo 'Usage: lake exe cache get [--from REVISION]' >&2
+  exit 2
+fi
+shift
+if [[ "$#" != 0 && ( "$#" != 2 || "$1" != --from || -z "$2" ) ]]; then
+  echo 'Usage: lake exe cache get [--from REVISION]' >&2
   exit 2
 fi
 
@@ -30,16 +35,16 @@ MATHLIB_CACHE_GET_URL="${MATHLIB_CACHE_GET_URL:-https://cache.mathlib.org/mathli
   lake exe mathlib/cache get
 
 # Cache URLs live in lakefile.toml; users need no separate configuration file.
-export LAKE_CACHE_DIR="$RH_CACHE_ROOT/.lake/cache"
+export LAKE_CACHE_DIR="${LAKE_CACHE_DIR:-$RH_CACHE_ROOT/.lake/cache}"
 source scripts/cache-env.sh
 RH_CACHE_CURL_HOME="$(mktemp -d "$PWD/.lake/cache-curl.XXXXXX")"
 trap 'rm -rf -- "$RH_CACHE_CURL_HOME"' EXIT
 printf 'parallel-max = 500\n' > "$RH_CACHE_CURL_HOME/.curlrc"
-if CURL_HOME="$RH_CACHE_CURL_HOME" python3 scripts/ci-cache-get.py; then
+if CURL_HOME="$RH_CACHE_CURL_HOME" python3 scripts/ci-cache-get.py "$@"; then
   exit 0
 else
   RH_CI_CACHE_STATUS=$?
-  if [[ "$RH_CI_CACHE_STATUS" != 3 ]]; then
+  if [[ "$RH_CI_CACHE_STATUS" != 3 || "$#" != 0 ]]; then
     exit "$RH_CI_CACHE_STATUS"
   fi
 fi

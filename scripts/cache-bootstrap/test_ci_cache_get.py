@@ -153,7 +153,34 @@ revisionEndpoint = "https://example.invalid/revisions"
         source.write_bytes(original)
         (root / "src/Untracked.lean").write_text("--untracked\n")
         rejects(lambda: client.current_identity(root))
-    print("PASS dynamic CI client: actual stock get/restore, docs ancestors, exact metadata, corrupt blobs, traversal and dirty sources")
+
+        # Seed the exact ancestor while the working checkout has source edits.
+        # The seed must leave Lake's build directory empty.
+        source.write_text("def answer : Nat := 43\n")
+        assert client.current_identity(root, head) == identity
+        assert client.find_record(root, identity, fetcher=fetch, revision=head) == record
+        shutil.rmtree(root / ".lake/build")
+        seed_cache = root / ".lake/seed"
+        (seed_cache / "artifacts").mkdir(parents=True)
+        seeded_archive = seed_cache / "artifacts" / artifact
+        shutil.copyfile(archive, seeded_archive)
+        client.seed(root, seed_cache, record, identity, head, fetcher=fetch)
+        assert not (lib / "Subject.olean").exists()
+        lake = ("env", f"LAKE_CACHE_DIR={seed_cache}", "LAKE_ARTIFACT_CACHE=true",
+                "LAKE_RESTORE_ARTIFACTS=true", "lake")
+        rejects(lambda: run(root, *lake, "--no-build", "--rehash", "build", "Subject"))
+        run(root, *lake, "build", "Subject")
+        assert (lib / "Subject.olean").read_bytes() != originals["olean"]
+
+        # Restore the base source, remove the outputs and reuse the seed with stock Lake.
+        source.write_bytes(original)
+        shutil.rmtree(root / ".lake/build")
+        assert "up-to-date" in run(root, *lake, "--no-build", "--rehash", "build", "Subject")
+        assert (lib / "Subject.olean").read_bytes() == originals["olean"]
+        different = root / "lakefile.toml"
+        different.write_text(different.read_text() + "\n# Different configuration\n")
+        rejects(lambda: client.current_identity(root, head))
+    print("PASS dynamic CI client: exact restore, validated ancestor seeding, native cache matching, integrity checks")
 
 
 if __name__ == "__main__":

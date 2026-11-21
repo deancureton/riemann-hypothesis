@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Restore a successful public CI cache for the current clean build inputs.
+"""Restore a public CI cache or seed Lake from a successful ancestor build.
 
 Exit 3 means no equivalent successful CI receipt was found. Other failures must
 not silently fall back: a matching receipt with corrupt bytes is an error.
@@ -69,8 +69,8 @@ def git(root, *args):
     return subprocess.check_output(["git", "-C", str(root), *args], text=True).strip()
 
 
-def current_identity(root):
-    """Bind actual files and the clean Git src tree, without the initial archive's pins."""
+def current_identity(root, revision=None):
+    """Bind working build configuration to the selected Git source tree."""
     checked = set()
     files = {}
     for name in ("lakefile.toml", "lake-manifest.json", "lean-toolchain"):
@@ -79,17 +79,23 @@ def current_identity(root):
             raise ValueError(f"expected a bounded regular input: {name}")
         files[name] = path.read_bytes()
     restore.local_path(root, Path("src"), checked)
-    subprocess.run(["git", "-C", str(root), "diff", "--no-ext-diff", "--no-textconv", "--quiet",
-                    "HEAD", "--", "src", *files], check=True)
-    if git(root, "ls-files", "--others", "--", "src"):
-        raise ValueError("untracked source files differ from HEAD")
+    if revision is None:
+        subprocess.run(["git", "-C", str(root), "diff", "--no-ext-diff", "--no-textconv", "--quiet",
+                        "HEAD", "--", "src", *files], check=True)
+        if git(root, "ls-files", "--others", "--", "src"):
+            raise ValueError("untracked source files differ from HEAD")
+    else:
+        for name, data in files.items():
+            original = subprocess.check_output(["git", "-C", str(root), "show", f"{revision}:{name}"])
+            if data != original:
+                raise ValueError(f"cache base differs in {name}")
     config = tomllib.loads(files["lakefile.toml"].decode())
     if (config.get("srcDir", ".") != "src" or config.get("extern_lib")
             or any(key in config for key in ("buildDir", "leanLibDir", "irDir", "packagesDir", "manifestFile"))
             or any(lib.get("srcDir", ".") != "." for lib in config.get("lean_lib", []))):
         raise ValueError("public CI restoration currently supports the attested src/default build layout")
     identity = {
-        "source_tree": git(root, "rev-parse", "HEAD:src"), "build_roots": {},
+        "source_tree": git(root, "rev-parse", f"{revision or 'HEAD'}:src"), "build_roots": {},
         "lakefile_sha256": digest(files["lakefile.toml"]),
         "manifest_sha256": digest(files["lake-manifest.json"]),
         "toolchain": files["lean-toolchain"].decode().strip(),
@@ -149,29 +155,29 @@ def matching_record(data, identity):
     return record
 
 
-def find_record(root, identity, ancestor_limit=100, fetcher=fetch):
+def find_record(root, identity, ancestor_limit=100, fetcher=fetch, revision="HEAD"):
     lookup = f"ci/inputs/{fingerprint(identity)}.json"
     data = fetcher(lookup, MAX_RECEIPT)
     if data is not None:
         record = matching_record(data, identity)
         if record is not None:
             return record
-    revisions = git(root, "rev-list", f"--max-count={ancestor_limit}", "HEAD").splitlines()
-    for revision in revisions:
+    revisions = git(root, "rev-list", f"--max-count={ancestor_limit}", revision).splitlines()
+    for ancestor in revisions:
         # Do not issue HTTP requests for ancestors whose build inputs already differ.
-        same = subprocess.run(["git", "-C", str(root), "diff", "--no-ext-diff", "--quiet", "HEAD", revision,
+        same = subprocess.run(["git", "-C", str(root), "diff", "--no-ext-diff", "--quiet", revision, ancestor,
                                "--", "src", "lakefile.toml", "lake-manifest.json", "lean-toolchain"]).returncode
         if same == 0:
-            data = fetcher(f"ci/revisions/{revision}.json", MAX_RECEIPT)
+            data = fetcher(f"ci/revisions/{ancestor}.json", MAX_RECEIPT)
             if data is not None:
                 record = matching_record(data, identity)
                 if record is not None:
-                    if record["candidate_head"] != revision:
+                    if record["candidate_head"] != ancestor:
                         raise ValueError("CI revision index names a different candidate")
                     return record
         elif same != 1:
             raise ValueError("could not compare ancestor build inputs")
-        if revision == BOOTSTRAP:
+        if ancestor == BOOTSTRAP:
             break
     return None
 
@@ -221,11 +227,7 @@ def validated_blobs(record, identity, fetcher=fetch):
     return contents, module_rows
 
 
-def consume(root, cache, record, identity, workers=24, fetcher=fetch):
-    contents, rows = validated_blobs(record, identity, fetcher)
-    if current_identity(root) != identity:
-        raise ValueError("project inputs changed during cache lookup")
-    restore.local_path(root, Path(".lake"), set()).mkdir(exist_ok=True)
+def cache_environment(root, cache, identity):
     env = os.environ.copy()
     for key in list(env):
         if (key.startswith(("AWS_", "CLOUDFLARE_", "CF_"))
@@ -234,6 +236,41 @@ def consume(root, cache, record, identity, workers=24, fetcher=fetch):
             env.pop(key)
     env.update(LAKE_CONFIG=str(root / "lakefile.toml"), LAKE_CACHE_DIR=str(cache),
                LAKE_ARTIFACT_CACHE="true", LAKE_RESTORE_ARTIFACTS="true", ELAN_TOOLCHAIN=identity["toolchain"])
+    return env
+
+
+def seed(root, cache, record, identity, revision, fetcher=fetch):
+    contents, rows = validated_blobs(record, identity, fetcher)
+    if current_identity(root, revision) != identity:
+        raise ValueError("project configuration changed during cache lookup")
+    entries, hashes = {}, {}
+    for _, input_hash, archive, sha256 in rows:
+        entries[input_hash] = archive
+        if hashes.setdefault(archive, sha256) != sha256:
+            raise ValueError("conflicting SHA-256 digests for one cache archive")
+
+    spec = importlib.util.spec_from_file_location("rh_seed_download", Path(__file__).with_name("ci-prepare.py"))
+    downloader = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(downloader)
+    restore.local_path(root, Path(".lake"), set()).mkdir(exist_ok=True)
+    print(f"Seeding Lake from successful CI cache {record['candidate_head']}...", flush=True)
+    downloader.downloads(cache, entries, hashes)
+    if current_identity(root, revision) != identity:
+        raise ValueError("project configuration changed before registering the cache")
+    with tempfile.TemporaryDirectory(prefix="ci-seed-", dir=root / ".lake") as temporary:
+        path = Path(temporary) / "outputs.jsonl"
+        path.write_bytes(contents)
+        subprocess.run(["lake", "-q", "cache", "add", "--no-overwrite", str(path)],
+                       cwd=root, env=cache_environment(root, cache, identity), check=True)
+    print(f"Seeded {len(entries):,} Lake mappings. Use: source scripts/cache-env.sh && lake build", flush=True)
+
+
+def consume(root, cache, record, identity, workers=24, fetcher=fetch):
+    contents, rows = validated_blobs(record, identity, fetcher)
+    if current_identity(root) != identity:
+        raise ValueError("project inputs changed during cache lookup")
+    restore.local_path(root, Path(".lake"), set()).mkdir(exist_ok=True)
+    env = cache_environment(root, cache, identity)
     print(f"Fetching successful CI cache {record['candidate_head']} for current build inputs...", flush=True)
     with tempfile.TemporaryDirectory(prefix="ci-cache-", dir=root / ".lake") as temporary:
         path = Path(temporary) / "outputs.jsonl"
@@ -284,12 +321,18 @@ def main():
     parser.add_argument("--cache-dir", type=Path)
     parser.add_argument("--ancestor-limit", type=int, default=100)
     parser.add_argument("--jobs", type=int, default=24)
+    parser.add_argument("--from", dest="base", metavar="REVISION", help="seed from a successful ancestor build")
     args = parser.parse_args()
     if args.jobs < 1 or not 1 <= args.ancestor_limit <= 1000:
         parser.error("jobs must be positive; ancestor limit must be 1..1000")
     root = args.project.resolve()
-    identity = current_identity(root)
-    record = find_record(root, identity, args.ancestor_limit)
+    revision = None
+    if args.base is not None:
+        revision = git(root, "rev-parse", "--verify", "--end-of-options", args.base + "^{commit}")
+        if subprocess.run(["git", "-C", str(root), "merge-base", "--is-ancestor", revision, "HEAD"]).returncode:
+            raise ValueError("cache base must be an ancestor of HEAD")
+    identity = current_identity(root, revision)
+    record = find_record(root, identity, args.ancestor_limit, revision=revision or "HEAD")
     cached = {}
     if record is None:
         record, cached = baseline_record(identity)
@@ -297,8 +340,13 @@ def main():
         print("No equivalent successful cache found for the current build inputs.", flush=True)
         return 3
     cache = (args.cache_dir or Path(os.environ.get("LAKE_CACHE_DIR", str(root / ".lake/cache")))).resolve()
-    consume(root, cache, record, identity, args.jobs,
-            fetcher=lambda key, maximum=MAX_JSON: cached[key] if key in cached else fetch(key, maximum))
+    def fetch_blob(key, maximum=MAX_JSON):
+        return cached[key] if key in cached else fetch(key, maximum)
+
+    if revision is None:
+        consume(root, cache, record, identity, args.jobs, fetcher=fetch_blob)
+    else:
+        seed(root, cache, record, identity, revision, fetcher=fetch_blob)
     return 0
 
 

@@ -64,6 +64,22 @@ The bulk restore checks the pinned source/configuration and every completed arch
 
 For independent verification or fetching Mathlib alone, use `lake exe mathlib/cache get`, which bypasses this project's combined entry point.
 
+## Seed an edited checkout
+
+For a branch with Lean source edits, seed Lake from a successful build of a
+local ancestor, such as the upstream commit the branch started from.
+
+```bash
+lake exe cache get --from upstream/main
+source scripts/cache-env.sh
+lake build
+```
+
+The base and working checkout must have the same toolchain, dependency manifest,
+and Lake configuration. This mode verifies the published archives and stores
+them in the Lake cache. Lake then reuses artifacts whose input hashes match
+during the build.
+
 ## Publish a completed cache
 
 The bootstrap is pinned to the original submission. Publish its validated staging directory from a separate host holding the upload credential:
