@@ -126,23 +126,6 @@ private theorem finOrder_of_kills {C : Type} [CommGroup C] {N : ℕ} (hN : 0 < N
   rw [map_pow, pow_card_eq_one, Units.val_one, ZMod.val_one_eq_one_mod, ← pow_eq_pow_mod 1 hz.pow_eq_one, pow_one] at h1
   rw [map_pow, ← h1]
 
-omit [IsAlgClosure ℚ Ω] in
-private theorem cc_sq {c : G ℚ Ω} (h : IsCC c) : c * c = 1 := by
-  obtain ⟨j, hj⟩ := h
-  ext x
-  apply j.injective
-  rw [AlgEquiv.mul_apply, hj, hj]; simp
-
-omit [IsAlgClosure ℚ Ω] in
-private theorem cc_not_mem (K : Type) [Field K] [NumberField K] [IsTotallyComplex K] [Algebra K Ω] {c : G ℚ Ω} (h : IsCC c) :
-    c ∉ galOf ℚ K Ω := by
-  obtain ⟨j, hj⟩ := h
-  intro hc
-  refine IsTotallyComplex.complexEmbedding_not_isReal (j.comp (algebraMap K Ω)) ?_
-  rw [ComplexEmbedding.isReal_iff]
-  ext x
-  rw [ComplexEmbedding.conjugate_coe_eq, RingHom.comp_apply, ← hj, hc x]
-
 private theorem algClosure (K : Type) [Field K] [NumberField K] [Algebra K Ω] : IsAlgClosure K Ω :=
   ⟨IsAlgClosure.isAlgClosed ℚ, Algebra.IsAlgebraic.tower_top (K := ℚ) K⟩
 
