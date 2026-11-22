@@ -5,7 +5,6 @@ import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomology
 
 set_option synthInstance.maxHeartbeats 200000
 set_option maxHeartbeats 1000000
-set_option backward.isDefEq.respectTransparency false
 
 noncomputable section
 

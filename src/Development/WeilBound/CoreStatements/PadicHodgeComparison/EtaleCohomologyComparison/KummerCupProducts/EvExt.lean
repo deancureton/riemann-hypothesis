@@ -6,7 +6,6 @@ import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ImageCochainExists
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.KummerCupProducts.FirstChernCompatibleSystem
 
 set_option linter.unusedVariables false
-set_option backward.isDefEq.respectTransparency false
 
 open CategoryTheory GlobalTheory.EtC
 

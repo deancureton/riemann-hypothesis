@@ -1,7 +1,6 @@
 import Mathlib
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.ThetaSetupAlgebraMaps
 
-set_option backward.isDefEq.respectTransparency false
 
 noncomputable section
 

@@ -1,6 +1,5 @@
 import Mathlib
 
-set_option backward.isDefEq.respectTransparency false
 
 noncomputable section
 

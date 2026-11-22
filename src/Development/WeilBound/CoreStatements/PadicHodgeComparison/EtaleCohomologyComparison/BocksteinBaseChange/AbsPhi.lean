@@ -1,7 +1,6 @@
 import Mathlib
 import Development.WeilBound.CoreStatements.PadicHodgeComparison.EtaleCohomologyComparison.BocksteinBaseChange.AbsProps
 
-set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1000000
 
 noncomputable section
