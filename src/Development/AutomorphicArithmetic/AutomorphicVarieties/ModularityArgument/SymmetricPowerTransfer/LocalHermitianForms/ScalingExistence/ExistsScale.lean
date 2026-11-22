@@ -98,8 +98,7 @@ theorem fin_cosets (h : IsLoc O Δ) {N : O} (hN : N ≠ 0) :
         Subalgebra.smul_mem _ ((mem_integralClosure_iff _ _).2 (hgi k)) _
     · rw [← sub_eq_iff_eq_add']
       apply eq_of_smul_eq_smul_of_ne_zero h hN
-      rw [smul_sub, ← hc1, ← hc2, ← Finset.sum_sub_distrib, Finset.smul_sum]
-      rw [Finset.smul_sum]
+      rw [smul_sub, ← hc1, ← hc2, ← Finset.sum_sub_distrib, Finset.smul_sum, Finset.smul_sum]
       refine Finset.sum_congr rfl fun k _ => ?_
       rw [← sub_smul, hd k, smul_smul, smul_smul, pow_two]
   choose W hWi hW using hdiff

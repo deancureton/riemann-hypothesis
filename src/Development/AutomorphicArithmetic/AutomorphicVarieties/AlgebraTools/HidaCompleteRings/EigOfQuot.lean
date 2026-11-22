@@ -108,8 +108,7 @@ private theorem UpperTheory.V.AlgebraTools.AnnihilatorQuotientFinite.common_ker_
     rw [h2]
     exact hu
   have haker : (T i ^ (n + 1)) (a : Y) = 0 := by
-    rw [← hfpow]
-    rw [LinearMap.mem_ker.mp ha]
+    rw [← hfpow, LinearMap.mem_ker.mp ha]
     rfl
   let W : Submodule K Y := V ⊓ LinearMap.ker (T i ^ (n + 1))
   have hWle : W ≤ V := inf_le_left

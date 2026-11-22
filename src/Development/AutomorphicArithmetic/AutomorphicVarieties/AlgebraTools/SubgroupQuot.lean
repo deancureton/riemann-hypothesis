@@ -24,8 +24,7 @@ theorem UpperTheory.V.AlgebraTools.TopFG.subgroup_quot :
       (D.subtype.comp (H.subgroupOf D).subtype).codRestrict H (fun x => x.2)
     refine ⟨φ '' t, htf.image _, ?_⟩
     unfold TopGen
-    rw [← MonoidHom.map_closure, ht, ← MonoidHom.range_eq_map]
-    rw [dense_iff_inter_open]
+    rw [← MonoidHom.map_closure, ht, ← MonoidHom.range_eq_map, dense_iff_inter_open]
     intro U hU hUne
     have hVo : IsOpen ((Subtype.val : H → G) '' U) := hH.isOpenMap_subtype_val U hU
     obtain ⟨x, ⟨y, hyU, rfl⟩, hxD⟩ := hden.inter_open_nonempty _ hVo (hUne.image _)

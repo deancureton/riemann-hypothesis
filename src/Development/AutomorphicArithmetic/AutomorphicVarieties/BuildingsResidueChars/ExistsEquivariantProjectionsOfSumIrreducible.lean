@@ -30,8 +30,7 @@ private theorem ss_proj {R V : Type} [Ring R] [AddCommGroup V] [Module R V]
     have h1 : ∀ i, e (Q i w) = DFinsupp.single i (e w i) := fun i => by simp [Q]
     simp_rw [h1]
     ext1 m
-    rw [DFinsupp.finset_sum_apply]
-    rw [Finset.sum_eq_single m]
+    rw [DFinsupp.finset_sum_apply, Finset.sum_eq_single m]
     · simp
     · intro b _ hb
       exact DFinsupp.single_eq_of_ne hb.symm

@@ -14,6 +14,5 @@ theorem UpperTheory.V.AlgebraTools.jqRec :
   rw [H2, Multiset.map_map, Finset.prod_eq_multiset_prod]
   refine congrArg Multiset.prod (Multiset.map_congr rfl fun i _ => ?_)
   show (rc (IrrGL.ofChar (ψ i) (hψ i))).charPol σ = _
-  rw [L.one]
-  rw [WD.lpOfChar, WD.charPol_mk, WDRep.ofChars_ρ, charpoly_diagEnd]
+  rw [L.one, WD.lpOfChar, WD.charPol_mk, WDRep.ofChars_ρ, charpoly_diagEnd]
   simp

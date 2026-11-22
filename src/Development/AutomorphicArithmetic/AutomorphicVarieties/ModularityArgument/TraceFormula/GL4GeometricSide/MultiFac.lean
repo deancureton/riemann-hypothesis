@@ -87,8 +87,7 @@ private theorem trace_form {W : Type} [AddCommGroup W] [Module ℂ W] [FiniteDim
     intro f w
     have e1 : f.smulRight w = l.smulRight w * f.smulRight v := by ext; simp [hl]
     have e2 : f.smulRight v * l.smulRight w = f w • l.smulRight v := by ext; simp [smul_smul, mul_comm]
-    rw [LinearMap.trace_smulRight]
-    rw [e1, hφ, e2, map_smul, smul_eq_mul]
+    rw [LinearMap.trace_smulRight, e1, hφ, e2, map_smul, smul_eq_mul]
   let b := Module.finBasis ℂ W
   have h2 : a = ∑ i, (b.coord i).smulRight (a (b i)) := by
     refine b.ext fun j => ?_

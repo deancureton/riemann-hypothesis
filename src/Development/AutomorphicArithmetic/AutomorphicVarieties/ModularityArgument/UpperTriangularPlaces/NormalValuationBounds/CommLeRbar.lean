@@ -7,8 +7,7 @@ open NumberField IsDedekindDomain Formalism.ConjugateSelfDual Formalism.HC Recip
 private theorem comm_le_fix {k Ω : Type} [Field k] [Field Ω] [Algebra k Ω] (F : IntermediateField k Ω)
     (hF : IsAbelianGalois k F) : commutator (Ω ≃ₐ[k] Ω) ≤ F.fixingSubgroup := by
   haveI : Normal k F := IsGalois.to_normal
-  rw [← IntermediateField.restrictNormalHom_ker]
-  rw [commutator_def, Subgroup.commutator_le]
+  rw [← IntermediateField.restrictNormalHom_ker, commutator_def, Subgroup.commutator_le]
   intro a _ b _
   rw [MonoidHom.mem_ker, map_commutatorElement, commutatorElement_eq_one_iff_mul_comm]
   exact hF.toIsMulCommutative.is_comm.comm _ _

@@ -60,8 +60,7 @@ theorem UpperTheory.blockEmbedding_comm_infEmb_and_exp :
   refine ⟨fun x => ?_, fun Y => ?_⟩
   · apply (AdelicGLn.prodEquiv K n).injective
     have hx := prodEquiv_infEmb (K := K) (n := a) x
-    rw [UpperTheory.prodEquiv_apply_eq_map_fst_snd] at hx
-    rw [Prod.mk.injEq] at hx
+    rw [UpperTheory.prodEquiv_apply_eq_map_fst_snd, Prod.mk.injEq] at hx
     rw [UpperTheory.prodEquiv_apply_eq_map_fst_snd, prodEquiv_infEmb]
     refine Prod.ext ?_ ?_
     · refine (emb_map e (RingHom.fst (InfiniteAdeleRing K) (IsDedekindDomain.FiniteAdeleRing (𝓞 K) K))

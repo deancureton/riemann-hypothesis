@@ -46,8 +46,7 @@ theorem exists_isFr (D : Dat3 l O) : ∃ σ, IsFr D σ := by
   ·
     rw [eq_top_iff]
     intro g _
-    rw [← SetLike.mem_coe, Subgroup.topologicalClosure_coe]
-    rw [mem_closure_iff]
+    rw [← SetLike.mem_coe, Subgroup.topologicalClosure_coe, mem_closure_iff]
     intro U hU hgU
     have hdense := frobDense σ₀ hσ₀
     have hV : IsOpen (D.HL.subtype '' U) := (hHo.isOpenEmbedding_subtypeVal).isOpenMap U hU

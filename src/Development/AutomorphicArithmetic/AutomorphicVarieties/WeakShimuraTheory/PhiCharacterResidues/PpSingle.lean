@@ -43,8 +43,7 @@ private theorem pp_tr {n : ℕ} {A B G H : Type} [CommRing A] [CommRing B] [Grou
   rw [e1]
   simp only [W.GDet.tr, W.GDet.lam]
   have h0 : f ((D.chi (MonoidAlgebra.mapDomainRingHom B π (MonoidAlgebra.single h 1 * y))).coeff (n - 1)) = 0 := by
-    rw [← Polynomial.coeff_map, hc, Polynomial.coeff_X_pow]
-    rw [if_neg (by omega)]
+    rw [← Polynomial.coeff_map, hc, Polynomial.coeff_X_pow, if_neg (by omega)]
   rw [(map_eq_zero_iff f hf).1 h0, mul_zero]
 
 set_option maxHeartbeats 200000 in

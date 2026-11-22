@@ -152,8 +152,7 @@ theorem UpperTheory.exists_hermitian_form_of_unitary_rotation_basis :
     have hn : (4 - (algebraMap K (Lsq K Δ) τ) ^ 2) * QuadraticAlgebra.norm m = a * a - (algebraMap K (Lsq K Δ) τ * a - b) * b := by
       rw [QuadraticAlgebra.norm_def, hm0, hm1]
       linear_combination (u * ((algebraMap K (Lsq K Δ) τ) ^ 2 - 4) + 1) * (a * a - (algebraMap K (Lsq K Δ) τ * a - b) * b) * hut
-    rw [hvw', ← hb', ← ha] at hq
-    rw [← hn] at hq
+    rw [hvw', ← hb', ← ha, ← hn] at hq
     exact isUnit_of_mul_isUnit_right hq
   · refine QuadraticAlgebra.ext ?_ ?_
     · rw [QuadraticAlgebra.re_star]
