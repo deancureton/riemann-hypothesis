@@ -35,8 +35,7 @@ theorem exists_conj : ∀ (L : Type) [Field L] (N j : ℕ) (ca cb : Fin N) (U : 
     have hab : a ≠ b := by
       rintro rfl
       exact h Iff.rfl
-    rw [Matrix.add_apply, Matrix.one_apply_ne hab, Matrix.single_apply, zero_add]
-    rw [if_neg]
+    rw [Matrix.add_apply, Matrix.one_apply_ne hab, Matrix.single_apply, zero_add, if_neg]
     rintro ⟨rfl, rfl⟩
     exact h hblk.symm
   refine ⟨(1 + Matrix.single cb ca (-X')) * U * (1 + Matrix.single cb ca s),

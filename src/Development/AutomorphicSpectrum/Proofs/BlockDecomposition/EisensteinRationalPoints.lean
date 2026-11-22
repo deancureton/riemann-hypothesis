@@ -96,8 +96,7 @@ theorem clause3 : ∀ γ ∈ GF D n, ∀ g : Matrix (Fin (n + n)) (Fin (n + n)) 
       have h1 : IsUnit (mat γ).det := by
         unfold mat
         exact (Matrix.isUnit_iff_isUnit_det _).1 (Units.isUnit _)
-      rw [hg] at h1
-      rw [det_eq_of_lowerLeft_zero _ hM] at h1
+      rw [hg, det_eq_of_lowerLeft_zero _ hM] at h1
       exact isUnit_of_mul_isUnit_right h1
     have hinj : ∀ y : Fin n → AE D, blkD (g.map (incA D)) *ᵥ y = 0 → y = 0 := by
       intro y hy

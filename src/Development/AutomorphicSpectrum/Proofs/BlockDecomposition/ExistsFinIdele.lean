@@ -95,8 +95,7 @@ theorem exists_finIdele {d : F} (hd0 : d ≠ 0) :
       rw [hk, WithZero.log_exp]
       omega
     simp only [f, hn]
-    rw [map_zpow₀, valued_alg, hπ]
-    rw [← WithZero.exp_zsmul]
+    rw [map_zpow₀, valued_alg, hπ, ← WithZero.exp_zsmul]
     simp
 
 theorem exists_infIdele {d : F} (hd0 : d ≠ 0) (hr : NumberField.IsTotallyReal F) :

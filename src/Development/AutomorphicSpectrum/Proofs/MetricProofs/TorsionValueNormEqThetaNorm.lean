@@ -339,8 +339,7 @@ theorem norm_of_torsVal {n : ℕ} (s : Out.H0 P.L n) (θ : (Fin g → ℂ) → �
   simp only [R] at hW
   rw [smul_zero] at hW
   have hrig := a.rig i₀ h0
-  rw [← hrig] at hE
-  rw [hθ i w hi] at hE
+  rw [← hrig, hθ i w hi] at hE
   have key := dualNumber_unit_mul_decomposition (fi_ne a h0') (fi_ne a hi') (fi_ne a hNw)
     (valF_unit_ne (a.pt 0) (t.s ![i₀, i₀]) (mem_wc a hN0 h0')) hE hW
   have hn := congrArg norm key

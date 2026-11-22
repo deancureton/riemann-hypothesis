@@ -265,8 +265,7 @@ theorem xN_not_mem_twist (p : ℕ) {W : Ideal (MRing ι)} (hW : W ≠ ⊤) :
       exact Ideal.mem_span_singleton_self _
   intro hx
   have h3 := hle hx
-  rw [Ideal.mem_comap, Ideal.mem_span_singleton] at h3
-  rw [h1, Polynomial.X_pow_dvd_iff] at h3
+  rw [Ideal.mem_comap, Ideal.mem_span_singleton, h1, Polynomial.X_pow_dvd_iff] at h3
   have := h3 1 (by norm_num)
   simp at this
 

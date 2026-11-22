@@ -95,8 +95,7 @@ theorem ker_le_chart (K : Type) [Fintype K] (ι : K → Type) [∀ k, Fintype (�
     (ReciprocityTheory.AnForm.R.chartIdeal (pC (mCoordIdeal y)) c)
     (fun k => Ideal.mem_sup_right (Ideal.subset_span ⟨k, rfl⟩)) g
   have hH : H ∈ mCoordIdeal y := by
-    rw [mCoordIdeal, RingHom.mem_ker]
-    rw [ha, hg]
+    rw [mCoordIdeal, RingHom.mem_ker, ha, hg]
     simp
   have hHC : map (Int.castRingHom ℂ) H ∈ ReciprocityTheory.AnForm.R.chartIdeal (pC (mCoordIdeal y)) c :=
     Ideal.mem_sup_left (Ideal.subset_span ⟨H, hH, rfl⟩)

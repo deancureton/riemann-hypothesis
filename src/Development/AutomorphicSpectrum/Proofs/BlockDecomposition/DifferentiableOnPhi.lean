@@ -47,8 +47,7 @@ theorem norm_KK (a b : ℝ) (s : ℂ) (t : ℝ) :
   have e2 : (-(s / 2 + (b : ℂ))).re = -(s.re / 2 + b) := by simp
   have e3 : (-(s / 2 + (a : ℂ))).im = -(s.im / 2) := by simp
   have e4 : (-(s / 2 + (b : ℂ))).im = -(s.im / 2) := by simp
-  rw [e1, e2, e3, e4]
-  rw [← Real.rpow_natCast ‖w‖ 2, ← Real.rpow_mul hpos.le]
+  rw [e1, e2, e3, e4, ← Real.rpow_natCast ‖w‖ 2, ← Real.rpow_mul hpos.le]
   have e5 : ((2 : ℕ) : ℝ) * (-(s.re + a + b) / 2) = -(s.re / 2 + a) + -(s.re / 2 + b) := by
     push_cast; ring
   rw [e5, Real.rpow_add hpos]

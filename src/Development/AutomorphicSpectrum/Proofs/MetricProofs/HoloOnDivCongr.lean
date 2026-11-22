@@ -66,8 +66,7 @@ theorem holoOn_valAt (K : Type) [Fintype K] (ι : K → Type) [∀ k, Fintype (�
   have hz : eval (b y₀) (map (Int.castRingHom ℂ) h) ≠ 0 := by
     intro h0
     refine hQ (mem_mCoordIdeal_of_aeval_eq_zero (b y₀) hh ?_)
-    rw [← h0]
-    rw [aeval_def, eval_map, Subsingleton.elim (algebraMap ℤ ℂ) (Int.castRingHom ℂ)]
+    rw [← h0, aeval_def, eval_map, Subsingleton.elim (algebraMap ℤ ℂ) (Int.castRingHom ℂ)]
   have hx : aeval x h ≠ 0 := fun h0 =>
     hz (eval_eq_zero_of_mem_mcPts (hpt y₀ hy₀) (mem_mCoordIdeal_of_aeval_eq_zero x hh h0))
   have Hg := holoOn_eval A hb g

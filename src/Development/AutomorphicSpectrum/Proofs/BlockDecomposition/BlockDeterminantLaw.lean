@@ -69,8 +69,7 @@ theorem bdet_univ (g : GL ι R) : bdet (Set.univ : Set ι) g = Matrix.GeneralLin
   classical
   have hs : g ∈ stab R (Set.univ : Set ι) := fun r hr => absurd (Set.mem_univ r) hr
   apply Units.ext
-  rw [bdet_val _ hs]
-  rw [Matrix.GeneralLinearGroup.val_det_apply]
+  rw [bdet_val _ hs, Matrix.GeneralLinearGroup.val_det_apply]
   convert Matrix.det_submatrix_equiv_self (Equiv.Set.univ ι) (g : Matrix ι ι R)
   all_goals (funext x; rfl)
 

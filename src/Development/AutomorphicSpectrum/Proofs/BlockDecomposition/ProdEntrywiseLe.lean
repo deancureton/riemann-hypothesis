@@ -96,7 +96,6 @@ theorem prod_entrywise_le : ∀ (n r d : ℕ), r ≤ n → ∀ (C β t : ℝ), 0
   have : (((r * (n - r) : ℕ) : ℝ)) * ((d : ℝ) * t) = (d : ℝ) * ((r : ℝ) * ((n : ℝ) - r)) * t := by
     rw [Nat.cast_mul, Nat.cast_sub hr]
     ring
-  rw [this]
-  rw [hp]
+  rw [this, hp]
 
 end GlobalTheory.CompanionTheory.EntrywiseCount

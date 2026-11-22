@@ -21,8 +21,7 @@ theorem wz_mem {Fil : ℤ → IdF Φ.A} (hF : IsFil Φ Fil) {d j : ℕ} (u : Fin
     intro S f hf
     induction S using Finset.induction_on with
     | empty =>
-      rw [Finset.prod_empty, Finset.card_empty]
-      rw [hF.top _ (by simp)]
+      rw [Finset.prod_empty, Finset.card_empty, hF.top _ (by simp)]
       trivial
     | insert a S ha ih =>
       have e : (insert a S).card = 1 + S.card := by rw [Finset.card_insert_of_notMem ha, Nat.add_comm]

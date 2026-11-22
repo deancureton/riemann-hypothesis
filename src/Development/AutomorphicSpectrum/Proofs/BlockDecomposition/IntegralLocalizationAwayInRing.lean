@@ -60,8 +60,7 @@ theorem exists_eq_of_isIntegral : ∀ {S : Type} [CommRing S] (ϖ : S), ϖ ∈ n
         _ = a u * (a h * a (P.coeff i * h ^ (d - 1 - i))) := by
             rw [hhx, hUp, map_mul, map_pow]
     rw [t1, Finset.sum_congr rfl t2, ← Finset.mul_sum, ← Finset.mul_sum] at h0
-    rw [map_mul, map_add, map_one, map_mul, hk, map_sum]
-    rw [mul_add, mul_one, add_comm]
+    rw [map_mul, map_add, map_one, map_mul, hk, map_sum, mul_add, mul_one, add_comm]
     exact h0
   have hrel' : u * (1 + h * k) = 0 := hinj (by rw [hrel, map_zero])
   have hu' : u = - (u * h * k) := by linear_combination hrel'

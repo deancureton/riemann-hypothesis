@@ -15,8 +15,7 @@ theorem coord_zero {F A B E ι : Type*} [Field F] [AddCommGroup E] [Module F E]
     (ℬ : Module.Basis ι F E) (f : A →ₗ[F] B) (c : ι →₀ A)
     (h : LinearMap.rTensor E f (c.sum fun i m => m ⊗ₜ[F] ℬ i) = 0) (i : ι) : f (c i) = 0 := by
   have h1 : (c.mapRange f (map_zero f)).sum (fun i m => m ⊗ₜ[F] ℬ i) = 0 := by
-    rw [Finsupp.sum_mapRange_index (by intro i; simp)]
-    rw [← h, Finsupp.sum, Finsupp.sum, map_sum]
+    rw [Finsupp.sum_mapRange_index (by intro i; simp), ← h, Finsupp.sum, Finsupp.sum, map_sum]
     simp
   have h2 := TensorProduct.sum_tmul_basis_right_eq_zero ℬ _ h1
   simpa using DFunLike.congr_fun h2 i
