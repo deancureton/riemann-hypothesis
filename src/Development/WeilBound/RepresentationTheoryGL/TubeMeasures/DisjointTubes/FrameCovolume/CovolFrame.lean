@@ -71,7 +71,6 @@ namespace MainStatements.Tam
 open MainStatements.Tam.T2
 
 set_option maxHeartbeats 2000000 in
-set_option synthInstance.maxHeartbeats 400000 in
 theorem tube : VolSt → StabSt → IdxSt → TubeSt := by
   intro hvol hstab hidx D V P Q hV hsig hr M hM ι _ X g x0 hdist hX
   classical

@@ -128,7 +128,6 @@ theorem mem_max_iff (y : Valued.integer (v.adicCompletion K)) :
     (Valuation.integer.integers (Valued.v : Valuation (v.adicCompletion K) _)).isUnit_iff_valuation_eq_one]
   exact ⟨fun h => lt_of_le_of_ne y.2 h, fun h => ne_of_lt h⟩
 
-set_option synthInstance.maxHeartbeats 400000 in
 theorem finite_residue : Finite (IsLocalRing.ResidueField (Valued.integer (v.adicCompletion K))) := by
   haveI := v.isMaximal
   let ψ := (IsLocalRing.residue (Valued.integer (v.adicCompletion K))).comp (toInt v)
@@ -159,7 +158,6 @@ theorem finite_residue : Finite (IsLocalRing.ResidueField (Valued.integer (v.adi
 theorem isClosed_integer : IsClosed (Valued.integer (v.adicCompletion K) : Set (v.adicCompletion K)) :=
   (Valued.integer (v.adicCompletion K)).toAddSubgroup.isClosed_of_isOpen (Valued.isOpen_integer _)
 
-set_option synthInstance.maxHeartbeats 400000 in
 theorem compactSpace_integer : CompactSpace (Valued.integer (v.adicCompletion K)) := by
   have : CompleteSpace (Valued.integer (v.adicCompletion K)) := (isClosed_integer v).completeSpace_coe
   haveI : IsDiscreteValuationRing (Valued.integer (v.adicCompletion K)) :=

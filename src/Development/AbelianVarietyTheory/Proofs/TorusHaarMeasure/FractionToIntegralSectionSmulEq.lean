@@ -131,7 +131,6 @@ theorem fractionToIntegralSection_smul_eq (b : ↥(Frac0 X la G.w)) (m : Section
   algebraMap_smul (OsK X la G.w) b m
 
 set_option maxHeartbeats 1000000 in
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem lwZ_mem (Ω : Type) [CommRing Ω] [Algebra B.KO Ω] (gF : X.Forms →ₐ[B.KO] Ω) (z : ↥(HK X la G.w wF))
     (hz : z ∈ Jid X la G.w • (⊤ : Submodule ↥(Frac0 X la G.w) ↥(HK X la G.w wF))) :
@@ -144,7 +143,6 @@ theorem lwZ_mem (Ω : Type) [CommRing Ω] [Algebra B.KO Ω] (gF : X.Forms →ₐ
     exact Ideal.add_mem _ hx hy
 
 set_option maxHeartbeats 1000000 in
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem ratio_eq (Ω : Type) [CommRing Ω] [Algebra B.KO Ω] (gF : X.Forms →ₐ[B.KO] Ω) (g0 F : B.Cusp j wF)
     (b : ↥(Frac0 X la G.w)) (hb : b • resF G la g0 = resF G la F) :
@@ -169,7 +167,6 @@ theorem ratio_eq (Ω : Type) [CommRing Ω] [Algebra B.KO Ω] (gF : X.Forms →�
   exact Ideal.Quotient.eq.2 h1
 
 set_option maxHeartbeats 2000000 in
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem tie_of {ι : Type} [Finite ι] (Ω : ι → Type) [∀ Z, CommRing (Ω Z)] [∀ Z, Algebra B.KO (Ω Z)]
     (gF : ∀ Z, X.Forms →ₐ[B.KO] Ω Z) (g0 : B.Cusp j wF)
@@ -214,7 +211,6 @@ theorem tie_of {ι : Type} [Finite ι] (Ω : ι → Type) [∀ Z, CommRing (Ω Z
 end Record
 
 set_option maxHeartbeats 4000000 in
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem tieS : ∀ (D : D7) (T : Top D) (h : LawsP T) (j : ℕ) (hj : InR D j) (hG : GenFrEx (T.Q.Xo j) T.Q.c) (ka wL wF : WeightFamilies.Wt D j) (G : GlobalFamilyData (recPlus h j hj) ka wL wF) (hT : GenFromTest (T.Q.Xo j) T.Q.c hG) (S : Scal (recB h.toLawsCore)) (g0 : (recB h.toLawsCore).Cusp j wF) (la : HeightOneSpectrum (𝓞 (recB h.toLawsCore).KO)), CurveHyp h j hj hG ka wL wF G S g0 → InBasis G la → TieSSt h j hj hG hT G la g0 := by
   intro D T h j hj hG ka wL wF G hT S g0 la hH hB

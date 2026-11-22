@@ -534,7 +534,6 @@ theorem solvable (D : Formalism.BasicNotions.D7) (HW : HWOf D.loc) (F : FonOf D.
     (funext fun j => γL_apply (SerL (HW l) (F l) h hL) _ (w j))).trans k3
 
 set_option maxHeartbeats 2000000 in
-set_option synthInstance.maxHeartbeats 200000 in
 
 theorem main : ∀ (D : Formalism.BasicNotions.D7) (HW : HWOf D.loc) (F : FonOf D.loc D.locA HW), P7 D HW F := by
   intro D HW F l _ K s LL h T hT J y z hy hz hyz

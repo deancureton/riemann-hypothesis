@@ -110,7 +110,6 @@ theorem span_latL (i : LocT B) : Submodule.span what₂.LL (latL B i) = ⊤ := b
   obtain ⟨x, rfl⟩ := what₂.MtLat_sub _ _ v hv
   exact ⟨x, hv, rfl⟩
 
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem span_mtSub (hC : PartCompl B) (i : LocT B) :
     Submodule.span (FractionRing (OOf B i)) ((MtSub B hC i : Submodule (OOf B i) (partOf B i)) : Set (partOf B i)) = ⊤ := by
@@ -128,7 +127,6 @@ theorem span_mtSub (hC : PartCompl B) (i : LocT B) :
   | add a b _ _ ha hb => rw [map_add]; exact Submodule.add_mem _ ha hb
   | smul c a _ ha => rw [map_smul]; exact Submodule.smul_mem _ _ ha
 
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem mtLoc_holds (hC : PartCompl B) : MtLoc B hC := fun i => isLocalized_of_span _ (span_mtSub hC i)
 

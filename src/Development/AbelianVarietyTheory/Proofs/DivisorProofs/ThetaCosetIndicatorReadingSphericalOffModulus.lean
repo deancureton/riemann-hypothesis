@@ -87,7 +87,6 @@ theorem isLatVac_span {D : D7} {ψ : AddChar (AF D.host.F) ℂ} {S T : HSp D} {�
       funext w; have e1 := congrFun h1 w
       simp only [heisO, Pi.smul_apply, smul_eq_mul] at e1 ⊢; rw [mul_left_comm, e1]
 
-set_option synthInstance.maxHeartbeats 200000 in
 
 theorem exists_sum_eq {D : D7} (𝔫 : Ideal (𝓞 D.host.F)) {α : Af D.host.F} (hα : α ∈ Formalism.MainNotions.StandardLattice.intAf D.host.F)
     (h0 : ∀ v : FinPl D, 𝔫 ≤ v.asIdeal → evalV D.host.F v α = 0) :

@@ -724,7 +724,6 @@ theorem lift_closure {LL : FinExt l} (D : Subring (RW LL)) (T : Set (OCb l))
   obtain ⟨w, hw, e⟩ := this hy
   exact ⟨w, e, hw⟩
 
-set_option synthInstance.maxHeartbeats 400000 in
 
 theorem mem_range_of_fixed : ∀ (l : ℕ) [Fact l.Prime] (P : LocPrime l) (AI : LocAinf l P) (K : FinExt l) (s : ℕ) (LL : FinExt l) (h : Good K s LL) (W : LocWach (P.PD K) ↥LL.1 ↥(OL LL) (P.v LL) (Module.finrank ℚ_[l] ↥(K0 K))) (E : EtSit P AI K s LL h W) (ι : Type) [Fintype ι] (M : ι → ι → W.EE) (c : ι → W.EE) (w : ι → RW LL), (∀ g : ↥(GK K), W.resΓ g = 1 → ∀ i, AI.gRW LL (g : GQ l) (w i) = w i) → (∀ i, w i = ∑ j, E.tie.ioE (M i j) * φRW LL (w j) + E.tie.ioE (c i)) → ∀ i, ∃ e : W.EE, E.tie.ioE e = w i := by
   intro l _ P AI K s LL h W E I _ M c w hw hc i

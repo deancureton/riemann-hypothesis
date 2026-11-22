@@ -71,7 +71,6 @@ end GlobalTheory.BadOrth
 namespace GlobalTheory.BadOrth
 
 set_option maxHeartbeats 1000000 in
-set_option synthInstance.maxHeartbeats 100000 in
 
 theorem finCosets : ∀ (D : D7) (S T : HSp D) (ΛS : Submodule (𝓞 D.host.E) (Fin S.rank → D.host.E)) (ΛT : Submodule (𝓞 D.host.E) (Fin T.rank → D.host.E)), IsSelfDualC S ΛS → IsSelfDualC T ΛT → ∀ a : AE D, a * a = a → ∀ k : ℕ, 0 < k → ∃ C : Finset (WO S T), (∀ c ∈ C, IsHalf a c) ∧ ∀ s : WO S T, IsHalf a s → k • s ∈ (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True) → ∃ c ∈ C, ∃ u ∈ (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True), IsHalf a u ∧ s = c + k • u := by
   intro D S T ΛS ΛT hS hT a ha k hk
@@ -95,7 +94,6 @@ theorem finCosets : ∀ (D : D7) (S T : HSp D) (ΛS : Submodule (𝓞 D.host.E) 
       _ = a • (r • z) + k • (a • u) := by rw [hzu, smul_add, smul_add, mul_smul, hrkz, smul_comm a k u]
 
 set_option maxHeartbeats 1000000 in
-set_option synthInstance.maxHeartbeats 100000 in
 
 theorem separate : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (S T : HSp D) (ΛS : Submodule (𝓞 D.host.E) (Fin S.rank → D.host.E)) (ΛT : Submodule (𝓞 D.host.E) (Fin T.rank → D.host.E)), IsStdChar D ψ (-1) → IsSelfDualC S ΛS → IsSelfDualC T ΛT → ∀ e : AE D, IsSplitIdem D e → ∀ k : ℕ, 0 < k → ∀ x : WO S T, IsHalf (cA D e) x → (∀ u ∈ (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True), IsHalf (cA D e) u → x ≠ k • u) → ∃ y : WO S T, IsHalf e y ∧ (∀ u ∈ (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True), ψ (symplO S T (k • u) y) = 1) ∧ ψ (symplO S T x y) ≠ 1 := by
   intro D ψ S T ΛS ΛT hψ hS hT e he k hk x hx hxL
@@ -143,7 +141,6 @@ theorem separate : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (S T : HSp D) (
 open GlobalTheory.PlaceModel GlobalTheory.PlaceModelSum
 
 set_option maxHeartbeats 1000000 in
-set_option synthInstance.maxHeartbeats 100000 in
 
 theorem orth_of_disjoint : ∀ (D : D7) (ψ : AddChar (AF D.host.F) ℂ) (S T : HSp D) (ΛS : Submodule (𝓞 D.host.E) (Fin S.rank → D.host.E)) (ΛT : Submodule (𝓞 D.host.E) (Fin T.rank → D.host.E)) (Pf : Finset (Pl D.host.E)) (ea e : AE D) (f₀ : WO S T → ℂ) (Tm : (WO S T → ℂ) →ₗ[ℂ] (WO S T → ℂ)) (μ : Measure (WO S T)) (𝓕 : Set (WO S T)), IsStdChar D ψ (-1) → IsSelfDualC S ΛS → IsSelfDualC T ΛT → IsIdemSum ea Pf → IsSplitIdem D e → e * ea = e → IsThetaFunO ψ S T f₀ → IsLatVac (heisO ψ S T) (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True) f₀ → IsPlaceModel ψ (symplO S T) (heisO ψ S T) (cA D ea) (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True) 1 f₀ Tm → IsCovolOne (ratL T S) μ 𝓕 → ∀ Φ₁ Φ₂ : WO S T → ℂ, IsSBHalf (cA D ea) (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True) Φ₁ → IsSBHalf (cA D ea) (latO S T (ΛS : Set (Fin S.rank → D.host.E)) (ΛT : Set (Fin T.rank → D.host.E)) fun _ => True) Φ₂ → (∀ x x' : WO S T, (∀ a b, (e + cA D e) * x a b = (e + cA D e) * x' a b) → Φ₁ x ≠ 0 → Φ₂ x' ≠ 0 → False) → ∀ Ω : Module.End ℂ (WO S T → ℂ), (∀ g, IsThetaFunO ψ S T g → IsThetaFunO ψ S T (Ω g)) → (∀ y : WO S T, IsHalf e y → ∀ g, IsThetaFunO ψ S T g → Ω (heisO ψ S T y g) = heisO ψ S T y (Ω g)) → thetaIP μ 𝓕 (Tm Φ₁) (Ω (Tm Φ₂)) = 0 := by
   intro D ψ S T ΛS ΛT Pf ea e f₀ Tm μ 𝓕 hψ hS hT hIdem hsplit hee hf₀ hvac hTm hμ Φ₁ Φ₂ hΦ₁ hΦ₂ hdisj Ω hΩt hΩc
