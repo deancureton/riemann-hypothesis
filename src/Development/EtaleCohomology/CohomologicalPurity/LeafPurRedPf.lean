@@ -14,8 +14,7 @@ theorem inv_red (q r : ℕ) {E E' : Spc} (f : E ⟶ E') (n i : ℤ)
     (y : Ht q E n i) :
     (AddEquiv.ofBijective _ hr).symm (red q r E n i y) = red q r E' n i ((AddEquiv.ofBijective _ hq).symm y) := by
   apply hr.1
-  rw [AddEquiv.ofBijective_apply_symm_apply]
-  rw [GlobalTheory.EtC.pull_red]
+  rw [AddEquiv.ofBijective_apply_symm_apply, GlobalTheory.EtC.pull_red]
   congr 1
   exact ((AddEquiv.ofBijective _ hq).apply_symm_apply y).symm
 

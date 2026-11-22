@@ -36,8 +36,7 @@ theorem RootAIC_of : LateralTheory.E.HZeroPf.RootAIC := by
   have hK : ((q : ℕ) : X.functionField) ≠ 0 := by
     intro h
     have := hq.map (X.germToFunctionField ⊤).hom
-    rw [map_natCast] at this
-    rw [h] at this
+    rw [map_natCast, h] at this
     exact not_isUnit_zero this
   have hq0 : q ≠ 0 := by rintro rfl; exact hK (by simp)
   haveI : NeZero q := ⟨hq0⟩

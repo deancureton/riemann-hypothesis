@@ -106,8 +106,7 @@ theorem lift_res (τ : Pair C J T) {V U : Scheme.{0}} (g : V ⟶ U) (w : ℤ) (x
   have : (τ.lift V w) ∘ₗ Tens.res g w = ((T.X w).obj.map g.op).hom ∘ₗ τ.lift U w := by
     apply DirectSum.linearMap_ext; intro p; apply TensorProduct.ext'; intro a b
     simp only [LinearMap.comp_apply, Tens.res]
-    rw [DirectSum.lmap_lof, TensorProduct.map_tmul]
-    rw [lift_lof, lift_lof]
+    rw [DirectSum.lmap_lof, TensorProduct.map_tmul, lift_lof, lift_lof]
     exact (τ.nat g p.1.1 p.1.2 w p.2 a b).symm
   exact LinearMap.congr_fun this x
 

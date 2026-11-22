@@ -98,10 +98,8 @@ theorem dT_dT (U : Scheme.{0}) (w : ℤ) : dT I J U (w + 1) ∘ₗ dT I J U w = 
   apply DirectSum.linearMap_ext; rintro ⟨⟨s, t⟩, h⟩
   apply TensorProduct.ext'; intro a b
   simp only [LinearMap.comp_apply, LinearMap.zero_apply]
-  rw [dT_tmul, map_add, map_zsmul]
-  rw [dT_tmul (s := s + 1) (t := t) (w := w + 1)]
-  rw [dT_tmul (s := s) (t := t + 1) (w := w + 1)]
-  rw [dd0 (K := I), dd0 (K := J)]
+  rw [dT_tmul, map_add, map_zsmul, dT_tmul (s := s + 1) (t := t) (w := w + 1)]
+  rw [dT_tmul (s := s) (t := t + 1) (w := w + 1), dd0 (K := I), dd0 (K := J)]
   simp only [TensorProduct.zero_tmul, TensorProduct.tmul_zero, map_zero, zero_add, smul_zero, add_zero,
     Int.negOnePow_succ, Units.val_neg, neg_smul, neg_add_cancel]
 

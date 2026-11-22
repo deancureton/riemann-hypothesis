@@ -81,8 +81,7 @@ theorem Exact_of (hD : Dict) (hG : Glue) (hF : Flasque) : Exact := by
     obtain ⟨r', hr'⟩ := hF R ((res R F).X (n - 1)) a r
     change Sec.res a r' = r at hr'
     have hu1 : Sec.res a (u0 - Sec.map ((res R F).d (n - 1) n) r') = Sec.res b v0 := by
-      rw [rsub]
-      rw [← map_res, hr', hr]
+      rw [rsub, ← map_res, hr', hr]
       abel
     obtain ⟨z, hzf, hzg⟩ := (hG R ((res R F).X n) a b f g hmv).2 _ v0 hu1
     have hdz : Sec.map ((res R F).d n (n + 1)) z = 0 := by

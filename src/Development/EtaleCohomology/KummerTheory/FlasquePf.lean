@@ -90,8 +90,7 @@ theorem Flasque_of : LateralTheory.KummerTheory.ContCut.Flasque := by
   change (ψ.hom.app (op W)).hom (Sec.res a (freeGen R (yoneda.obj U) U (𝟙 U))) = t
   rw [freeGen_res]
   have e : (yoneda.obj U).map a.op (𝟙 U) = (yoneda.map a).app (op W) (𝟙 W) := by simp
-  rw [e, ← freeGen_map]
-  rw [← ofSec_gen G t]
+  rw [e, ← freeGen_map, ← ofSec_gen G t]
   exact congrArg (fun k => (k.hom.app (op W)).hom (freeGen R (yoneda.obj W) W (𝟙 W))) hψ
 
 end LateralTheory.KummerTheory.FlasquePf

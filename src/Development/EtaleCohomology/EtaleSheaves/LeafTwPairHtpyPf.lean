@@ -62,8 +62,7 @@ theorem pairHtpy_of_homotopy {R : Type} [CommRing R] {I J T K : Cx R} (τ : Pair
     have e3 := hom_reindex τ H.hom U s t (w - 1) w (by omega) hw (by omega) a b
     have e3' : (ModuleCat.Hom.hom ((H.hom (w - 1 + 1) (w - 1)).hom.app (op U))) (τ.mul U s t (w - 1 + 1) (by omega) a b) =
         Sec.map (H.hom w (w - 1)) (τ.mul U s t w hw a b) := e3
-    rw [e3']
-    rw [τ.leibniz, secMap_addx, secMap_usmul]
+    rw [e3', τ.leibniz, secMap_addx, secMap_usmul]
     dsimp only [Sec.map]
     abel
 
