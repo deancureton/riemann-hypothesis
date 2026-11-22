@@ -46,8 +46,7 @@ theorem NormalCodimOneUniformiser.proof : NormalCodimOneUniformiser.Statement :=
   have : IsNoetherianRing (MvPolynomial σ ℂ ⧸ P) := Algebra.FiniteType.isNoetherianRing ℂ _
   have : FiniteRingKrullDim (MvPolynomial σ ℂ ⧸ P) :=
     finiteRingKrullDim_iff_ne_bot_and_top.mpr ⟨by rw [hdimP]; exact WithBot.natCast_ne_bot _, by
-      rw [hdimP]
-      rw [← WithBot.coe_natCast, Ne, WithBot.coe_eq_top]
+      rw [hdimP, ← WithBot.coe_natCast, Ne, WithBot.coe_eq_top]
       exact ENat.natCast_ne_top _⟩
   set q : Ideal (MvPolynomial σ ℂ ⧸ P) := Q.map π with hqdef
   have : q.IsPrime := Ideal.isPrime_map_quotientMk_of_isPrime hPQ

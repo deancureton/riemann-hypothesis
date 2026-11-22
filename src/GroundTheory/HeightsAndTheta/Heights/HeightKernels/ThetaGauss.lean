@@ -140,8 +140,7 @@ theorem integral_cube_tsum (F : (Fin g → ℝ) → ℝ) (hF0 : ∀ x, 0 ≤ F x
       (fun γ => (ENNReal.measurable_ofReal.comp
         (hFc.measurable.comp (measurable_const_vadd γ))).aemeasurable)]
   refine setLIntegral_congr_fun (ZSpan.fundamentalDomain_measurableSet _) (fun u _ => ?_)
-  rw [ENNReal.ofReal_tsum_of_nonneg (fun k => hF0 _) (hs u)]
-  rw [← (latticeEquiv (g := g)).tsum_eq]
+  rw [ENNReal.ofReal_tsum_of_nonneg (fun k => hF0 _) (hs u), ← (latticeEquiv (g := g)).tsum_eq]
   rfl
 
 end

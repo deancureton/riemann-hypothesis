@@ -315,8 +315,7 @@ theorem hilbertPrime_succ (d : ℕ) (hM : MixedNumberPolynomial.Statement.{u})
       intro c y h
       subst h
       rfl
-    rw [gfun _ _ hcast, gfun a _ rfl]
-    rw [Nat.factorial_succ]
+    rw [gfun _ _ hcast, gfun a _ rfl, Nat.factorial_succ]
     push_cast
     field_simp
     ring

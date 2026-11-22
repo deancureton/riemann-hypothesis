@@ -91,8 +91,7 @@ theorem comap_sup_chartOneIdeal
       V.comap (C : ℤ →+* MvPolynomial (Coord n) ℤ) := by
   refine le_antisymm (fun a ha ↦ ?_) (Ideal.comap_mono le_sup_left)
   rw [Ideal.mem_comap, ← ker_dehomFrac hVh hc, RingHom.mem_ker] at ha
-  rw [Ideal.mem_comap, ← classFrac_eq_zero_iff V]
-  rw [← ha]
+  rw [Ideal.mem_comap, ← classFrac_eq_zero_iff V, ← ha]
   exact ((classFrac V).commutes a).trans ((dehomFrac V c).commutes a).symm
 
 def quotEquivRange

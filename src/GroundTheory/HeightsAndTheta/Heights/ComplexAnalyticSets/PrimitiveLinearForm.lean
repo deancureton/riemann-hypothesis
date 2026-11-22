@@ -67,8 +67,7 @@ theorem exists_linear_primitive {K L : Type*} [Field K] [Field L] [Algebra K L] 
     simp [map_sum, map_mul, AlgHom.commutes, ι', map_pow]
   have h2 := congrArg id hφψ
   simp only [id] at h2
-  rw [h1, h1] at h2
-  rw [← sub_eq_zero] at h2
+  rw [h1, h1, ← sub_eq_zero] at h2
   rw [← h2, ← Finset.sum_sub_distrib]
   exact Finset.sum_congr rfl fun j _ => by ring
 

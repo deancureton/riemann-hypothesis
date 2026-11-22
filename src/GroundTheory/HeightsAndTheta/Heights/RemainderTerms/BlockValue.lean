@@ -96,8 +96,7 @@ theorem restrict_gmfOut (f r a : ℕ) (c : SmallBlock) (κ : ℚ) (q : Fin f →
       ((Nat.multinomial Finset.univ (mstar f r a q e τ) : ℚ) *
           ∏ σ ∈ Finset.univ.erase τ, (blockCoeff (q σ) (r * a - q σ) (rectangle r a) * κ)) •
         toN (r + a) (blockOut r a c κ (q τ) (mstar f r a q e τ τ)) := by
-  rw [gmfOut, map_sum]
-  rw [Finset.sum_eq_single (mstar f r a q e τ)]
+  rw [gmfOut, map_sum, Finset.sum_eq_single (mstar f r a q e τ)]
   · rw [map_smul, map_prod, ← Finset.mul_prod_erase _ _ (Finset.mem_univ τ)]
     rw [restrictToBlock_blockEmb, if_pos rfl]
     have : ∏ x ∈ Finset.univ.erase τ, restrictToBlock f (r + a) τ

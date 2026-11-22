@@ -133,8 +133,7 @@ theorem proof : SegreChartIntegralPoints.Statement := by
     rw [h, PointIntegral.zeroSet_ker_eval] at this
     exact (Set.singleton_eq_singleton_iff.1 this).symm
   rw [hcomp, Finset.sum_image fun x _ y _ h => hkinj x y h]
-  rw [Finset.sum_congr rfl fun x _ => PointIntegral.proof m x G Φ]
-  rw [hfs, Finset.sum_image hinj]
+  rw [Finset.sum_congr rfl fun x _ => PointIntegral.proof m x G Φ, hfs, Finset.sum_image hinj]
 
   rw [← Finset.sum_filter_of_ne (p := fun t => segre t i ≠ 0) fun t ht hgt hti => hgt (hvan t (by
     rw [hti, norm_zero]

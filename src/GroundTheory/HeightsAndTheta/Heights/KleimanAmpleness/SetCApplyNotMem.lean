@@ -524,8 +524,7 @@ theorem dif_projOp (hc : ∀ k, y ⟨k, c k⟩ ≠ 0) {f : (∀ k, Finset (ι k)
   · obtain ⟨j, hjT, hj1⟩ : ∃ j ∈ T, (I j).card ≠ 1 := by
       by_contra hne
       exact hT fun j hj => by_contra fun h => hne ⟨j, hj, h⟩
-    rw [projOp_of_not (fun h => hT h.2)]
-    rw [Finset.sum_eq_single j]
+    rw [projOp_of_not (fun h => hT h.2), Finset.sum_eq_single j]
     · by_cases h2 : (I j).card = 2
       · obtain ⟨a, b, hab, hIj⟩ := Finset.card_eq_two.1 h2
         have ha : a ∈ I j := by rw [hIj]; simp

@@ -208,8 +208,7 @@ theorem sections (hE : KHFreeEmbed.Statement) (hD : KHFreeDecomp.Statement) (hI 
       rw [embed_apply a 0 (f a) I hsub, hfa, hval, hmI, LocalizedModule.smul'_mk]
   choose! m hm hmI using hpart
   refine ⟨∑ a ∈ A, m a, Submodule.sum_mem _ hm, fun I => ?_⟩
-  rw [Finset.sum_apply]
-  rw [← LocalizedModule.mkLinearMap_apply, map_sum]
+  rw [Finset.sum_apply, ← LocalizedModule.mkLinearMap_apply, map_sum]
   exact Finset.sum_congr rfl fun a ha => by rw [hmI a ha, LocalizedModule.mkLinearMap_apply]
 
 end KHTheoremSFree

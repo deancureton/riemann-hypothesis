@@ -45,8 +45,7 @@ theorem HomLocRingIsLocal.proof (h : HomLocRingMem.Statement.{u}) : HomLocRingIs
       have hgf : φ g / φ f ∈ homLocRing P W := Subring.subset_closure ⟨b, g, f, hg, hf, hfW, rfl⟩
       refine IsUnit.of_mul_eq_one ⟨_, hgf⟩ ?_
       apply Subtype.ext
-      rw [Subring.coe_mul, Subring.coe_one]
-      rw [div_mul_div_comm, mul_comm (φ f) (φ g)]
+      rw [Subring.coe_mul, Subring.coe_one, div_mul_div_comm, mul_comm (φ f) (φ g)]
       exact div_self (mul_ne_zero (hne g hgW) (hne f hfW))
   refine ⟨?_, key⟩
   have hnu : ∀ z : homLocRing P W, ¬ IsUnit z → ∃ (b : K → ℕ) (f g : MRing ι R),

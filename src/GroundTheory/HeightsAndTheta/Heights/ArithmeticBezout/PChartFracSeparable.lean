@@ -131,8 +131,7 @@ theorem ChartFracSeparable.proof (h : ChartPointSeparable.Statement) : ChartFrac
       dsimp only
       obtain ⟨s0, hs0, hs⟩ := s.2
       have hne : ψ s.1 ≠ 0 := by
-        rw [← hs]
-        rw [hψS]
+        rw [← hs, hψS]
         refine (map_ne_zero _).2 fun h0 => hs0 ?_
         rw [hφinj (h0.trans (map_zero φ).symm)]
         exact p.zero_mem

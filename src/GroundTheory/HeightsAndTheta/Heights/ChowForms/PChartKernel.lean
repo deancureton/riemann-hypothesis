@@ -189,8 +189,7 @@ theorem chartIncIdeal_le_ker : chartIncIdeal I t e ≤ RingHom.ker (chartSubst I
   refine sup_le ?_ ?_
   · rw [Ideal.map_le_iff_le_comap]
     intro g hg
-    rw [Ideal.mem_comap, RingHom.mem_ker]
-    rw [chartSubst_inl, chartX_eq_zero I t e hg, map_zero]
+    rw [Ideal.mem_comap, RingHom.mem_ker, chartSubst_inl, chartX_eq_zero I t e hg, map_zero]
   · rw [Ideal.span_le]
     rintro _ ⟨i, rfl⟩
     rw [SetLike.mem_coe, RingHom.mem_ker]

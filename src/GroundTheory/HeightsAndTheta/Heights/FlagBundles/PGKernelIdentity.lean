@@ -103,8 +103,7 @@ theorem GKernelIdentity.proof : GKernelIdentity.Statement := by
   · rw [eval_gKernel, kernelSum_neg_one_one]
   · have h := add_mul_kernelSum c (-1 : R) k
     rw [eval_gKernel, mul_comm]
-    rw [neg_pow, pow_mul] at h
-    rw [show c + -1 = c - 1 by ring] at h
+    rw [neg_pow, pow_mul, show c + -1 = c - 1 by ring] at h
     rw [h, pow_mul]
     simp
     ring

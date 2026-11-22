@@ -43,8 +43,7 @@ theorem ChowDegreePos.proof : ChowDegreePos.Statement := by
     obtain ⟨j, hj⟩ := hW.isRelevant
     apply hj
     have hrad : X j ∈ W.radical := by
-      rw [← vanishingIdeal_zeroLocus_eq_radical (K := AlgebraicClosure ℂ)]
-      rw [mem_vanishingIdeal_iff]
+      rw [← vanishingIdeal_zeroLocus_eq_radical (K := AlgebraicClosure ℂ), mem_vanishingIdeal_iff]
       intro y hy
       by_cases hy0 : y = 0
       · subst hy0

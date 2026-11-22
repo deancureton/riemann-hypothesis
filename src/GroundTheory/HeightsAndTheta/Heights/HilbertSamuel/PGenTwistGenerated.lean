@@ -222,8 +222,7 @@ theorem cechD_mul {z z' : KH.CechC S ι (MRingOver S ι ⧸ V) 0}
     KH.cechD S ι (MRingOver S ι ⧸ V) 0 (fun J => z J * z' J) = 0 := by
   funext I
   obtain ⟨J₁, J₂, -, -, σ, hσ, hd⟩ := cechD_zero_apply (S := S) (M := MRingOver S ι ⧸ V) I
-  rw [hd]
-  rw [cellRes_mul, cellRes_mul, res_eq_of_cechD hσ (hd z) hz, res_eq_of_cechD hσ (hd z') hz']
+  rw [hd, cellRes_mul, cellRes_mul, res_eq_of_cechD hσ (hd z) hz, res_eq_of_cechD hσ (hd z') hz']
   exact (congrArg (σ • ·) (sub_self _)).trans (zsmul_zero σ)
 
 theorem cechD_const (m : MRingOver S ι ⧸ V) :

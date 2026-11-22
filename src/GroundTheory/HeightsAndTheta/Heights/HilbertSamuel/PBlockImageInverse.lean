@@ -179,8 +179,7 @@ theorem mConeMap_of_isMultiHomog (y : (Σ k, ι k) → Ω) {f : MRing ι} {a : K
 
 theorem mem_mCoordIdeal_iff (y : (Σ k, ι k) → Ω) {f : MRing ι} {a : K → ℕ} (hf : IsMultiHomog f a) :
     f ∈ mCoordIdeal y ↔ aeval y f = 0 := by
-  rw [mCoordIdeal, RingHom.mem_ker]
-  rw [mConeMap_of_isMultiHomog y hf]
+  rw [mCoordIdeal, RingHom.mem_ker, mConeMap_of_isMultiHomog y hf]
   constructor
   · intro h
     rcases mul_eq_zero.mp h with h | h

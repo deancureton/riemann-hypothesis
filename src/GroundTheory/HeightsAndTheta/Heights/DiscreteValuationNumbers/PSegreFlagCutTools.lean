@@ -72,8 +72,7 @@ theorem liftPairForm_mem_iff {y : (Σ k, ι k) → Ω} {pt : (Σ o, bundleIdx (b
     (hpt : ∀ p : Σ k, ι k, pt ⟨some (some p.1), p.2⟩ = algebraMap Ω Φ (y p)) (f : MRing ι O) :
     liftPairForm M M' f ∈ pointIdeal O pt ↔ f ∈ pointIdeal O y := by
   unfold pointIdeal
-  rw [RingHom.mem_ker, RingHom.mem_ker]
-  rw [pointConeMap_liftPairForm hpt]
+  rw [RingHom.mem_ker, RingHom.mem_ker, pointConeMap_liftPairForm hpt]
   have hinj : Function.Injective (fun k : K => (some (some k) : Option (Option K))) :=
     fun a b h => Option.some_injective _ (Option.some_injective _ h)
   constructor

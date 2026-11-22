@@ -327,8 +327,7 @@ theorem exists_sub_mem
       | zero => rw [smul_zero, smul_zero]; exact zero_mem _
       | add a b _ _ ha hb => rw [smul_add, smul_add]; exact add_mem ha hb
       | smul r z _ hz =>
-        rw [smul_comm (aeval x s)⁻¹ r z, smul_comm w r]
-        rw [← algebraMap_smul Ω r]
+        rw [smul_comm (aeval x s)⁻¹ r z, smul_comm w r, ← algebraMap_smul Ω r]
         exact Submodule.smul_mem _ (algebraMap S (chartRing S x I) r) hz
   | zero => rw [smul_zero]; exact zero_mem _
   | add a b _ _ ha hb => rw [smul_add]; exact add_mem ha hb

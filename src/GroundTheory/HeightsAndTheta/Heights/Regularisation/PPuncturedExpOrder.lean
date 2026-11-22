@@ -110,8 +110,7 @@ theorem PuncturedExpOrder.proof : PuncturedExpOrder.Statement := by
     exact hudiff.mono (closedBall_subset_ball (half_lt_self hε))
   have hI4 : (∮ z in C(0, r), (j : ℂ) * (z - 0)⁻¹) = (j : ℂ) * (2 * π * Complex.I) := by
     rw [circleIntegral.integral_const_mul, circleIntegral.integral_sub_center_inv 0 hr.ne']
-  rw [circleIntegral.integral_add hc1 hc2, hI3, hI4, add_zero] at hI2
-  rw [hI1] at hI2
+  rw [circleIntegral.integral_add hc1 hc2, hI3, hI4, add_zero, hI1] at hI2
   have hj0 : (j : ℂ) = 0 := by
     rcases mul_eq_zero.mp hI2.symm with h | h
     · exact h

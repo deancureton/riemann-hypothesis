@@ -87,8 +87,7 @@ theorem UniformiserCase.proof (h1 : ConservationOfNumberLE.Statement.{u})
     rw [e]
     refine withBot_lt_of_add_one_le _ _ ?_
     have := h2 O K ι P hP.multiProj hP.noTorsion
-    rw [hdim] at this
-    rwa [show d + 1 + 1 + Fintype.card K = d + 1 + Fintype.card K + 1 by omega] at this
+    rwa [hdim, show d + 1 + 1 + Fintype.card K = d + 1 + Fintype.card K + 1 by omega] at this
   have hcut := h8 (FractionRing O) K ι d (genFib P) hGprime hGhom hGdim _ c hsG hsG' L
   have hcorr := h4 O ϖ hϖ K ι P s hP.multiProj.isPrime hP.noTorsion hsP
     (fun V => intNum (FractionRing O) V L)
@@ -113,8 +112,7 @@ theorem UniformiserCase.proof (h1 : ConservationOfNumberLE.Statement.{u})
   have hWdim : ringKrullDim (MRing ι O ⧸ W) ≤ ((d + 1 + Fintype.card K : ℕ) : WithBot ℕ∞) := by
     refine withBot_le_of_add_one_le _ _ ?_
     have := h7 (MRing ι O) P W hlt
-    rw [hdim] at this
-    rwa [show d + 1 + 1 + Fintype.card K = d + 1 + Fintype.card K + 1 by omega] at this
+    rwa [hdim, show d + 1 + 1 + Fintype.card K = d + 1 + Fintype.card K + 1 by omega] at this
   rw [ratDiv_one]
   exact (h1 O ϖ hϖ K ι W d ⟨hWprime, hWhom, hWrel⟩ (comap_C_eq_bot_of_not_mem hϖ W hϖW) hWdim L).symm
 

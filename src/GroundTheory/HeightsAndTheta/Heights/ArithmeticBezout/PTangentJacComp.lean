@@ -36,8 +36,7 @@ theorem TangentJacComp.proof : TangentJacComp.Statement := by
       ((linProjₗ π).comp L).normDet ^ 2 := by
     rw [LinearMap.det_restrictScalars, Algebra.norm_complex_apply, LinearMap.normDet_eq_norm_det,
       Complex.sq_norm, abs_of_nonneg (Complex.normSq_nonneg _)]
-  rw [hr, hc, tangentJac, TangentJacComp.areaJacobian_eq]
-  rw [mul_pow]
+  rw [hr, hc, tangentJac, TangentJacComp.areaJacobian_eq, mul_pow]
   rfl
 
 end

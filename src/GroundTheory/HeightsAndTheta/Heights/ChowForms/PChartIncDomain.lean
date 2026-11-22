@@ -149,8 +149,7 @@ theorem proof : ChartIncDomain.Statement := by
     (Ideal.Quotient.mk (chartIncIdeal I t e)).comp (rename Sum.inl).toRingHom with hχ
   have hJX : ∀ a ∈ J, χ a = 0 := by
     intro a ha
-    rw [hχ, RingHom.comp_apply]
-    rw [Ideal.Quotient.eq_zero_iff_mem]
+    rw [hχ, RingHom.comp_apply, Ideal.Quotient.eq_zero_iff_mem]
     exact Ideal.mem_sup_left (Ideal.mem_map_of_mem _ ha)
 
   set β : MvPolynomial (Fin e × Fin n) (MvPolynomial (Fin n) F ⧸ J) →+*

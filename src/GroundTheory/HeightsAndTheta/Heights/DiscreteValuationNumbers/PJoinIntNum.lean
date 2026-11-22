@@ -69,8 +69,7 @@ theorem mul_pow_mem_map_iff (V : Ideal (MRing ι F)) (f : MRing ι F) (t : ℕ) 
 
 theorem weight_newBlock (d : (Σ k : K ⊕ Unit, Sum.elim ι ptIdx k) →₀ ℕ) :
     Finsupp.weight (blockWeight (Sum.elim ι ptIdx)) d (.inr ()) = d newVar := by
-  rw [Finsupp.weight_apply, Finsupp.sum, Finset.sum_apply]
-  rw [Finset.sum_eq_single newVar]
+  rw [Finsupp.weight_apply, Finsupp.sum, Finset.sum_apply, Finset.sum_eq_single newVar]
   · simp [blockWeight, newVar]
   · rintro ⟨k | u, i⟩ _ hne
     · simp [blockWeight]

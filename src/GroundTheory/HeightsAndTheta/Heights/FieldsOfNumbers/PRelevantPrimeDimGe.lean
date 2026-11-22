@@ -46,8 +46,7 @@ theorem RelevantPrimeDimGe.proof : RelevantPrimeDimGe.Statement.{u} := by
         _ = _ := by rw [map_sum]; simp only [rename_monomial]
     have hc : weightedHomogeneousComponent (blockWeight ι) (⇑α) (rename j G) =
         rename j (monomial α (coeff α G)) := by
-      rw [hsum, map_sum, rename_monomial]
-      rw [Finset.sum_eq_single α]
+      rw [hsum, map_sum, rename_monomial, Finset.sum_eq_single α]
       · rw [weightedHomogeneousComponent_of_mem (isWeightedHomogeneous_monomial _ _ _ (hw α)),
           if_pos rfl]
       · intro β _ hβ

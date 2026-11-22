@@ -20,8 +20,7 @@ theorem coe_aeval_ratio_mem_idealMod {pp : Ideal (Poly k N)}
     {p : Poly k N} (hp : p ∈ pp) :
     ((aeval (ratio (S := k) hj) p : chartRing k x (singleChart hj)) : Ω) ∈
       idealMod (x := x) pp (singleChart hj) := by
-  rw [← sum_homogeneousComponent p]
-  rw [map_sum, AddSubmonoidClass.coe_finsetSum]
+  rw [← sum_homogeneousComponent p, map_sum, AddSubmonoidClass.coe_finsetSum]
   refine Submodule.sum_mem _ fun d _ => Submodule.subset_span ?_
   exact ⟨homogeneousComponent d p, X j ^ d, d, hh p hp d,
     pow_mem (X_mem_monos (Finset.mem_singleton_self j)) d, homogeneousComponent_isHomogeneous d p,
