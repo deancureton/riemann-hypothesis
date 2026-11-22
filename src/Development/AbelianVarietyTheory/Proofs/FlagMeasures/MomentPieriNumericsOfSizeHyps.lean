@@ -62,7 +62,7 @@ theorem pow_big (n : ℝ) (hn : 1000 ≤ n) : 1000 * n ^ 5 ≤ n ^ 18 / 32 ∧ n
     pow_le_pow_right₀ h1 (by norm_num), one_le_pow₀ h1, pow_le_pow_right₀ h1 (by norm_num)⟩
   have e : n ^ 18 = n ^ 13 * n ^ 5 := by ring
   rw [e]
-  nlinarith
+  nlinarith only [h5, h13]
 
 theorem gapOK (k r : ℕ) (n : ℝ) (hn : n = 2 * r + k + 1) (hk : 1 ≤ k) (hb : 1000 ≤ n) :
     Formalism.FourierDecayAlt.ThreeDimData.GapOK k r (n ^ 19 / 4) ∧ GapCell k r (n ^ 19 / 2) := by
@@ -107,7 +107,7 @@ theorem gapOK (k r : ℕ) (n : ℝ) (hn : n = 2 * r + k + 1) (hk : 1 ≤ k) (hb 
     · linarith
     · linarith
   · unfold GlobalTheory.CellAmp.GapCell
-    linarith
+    linarith only [hb1, hb3, hb5, ha2, hG, hC]
 
 theorem lam_lt (D : D7) (τ : D.what₂.Tau) (a : Fin (2 * D.R.rS + D.R.k + 1)) (h : a.val < D.R.k - 1) :
     lamD D τ a = ((D.hc τ).v ⟨a.val, h⟩ : ℝ) := by
@@ -188,11 +188,11 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     have h : D.R.r + 1 = D.R.k + D.R.m := by rw [hr]; omega
     have h' : ((D.R.r + 1 : ℕ) : ℝ) = ((D.R.k + D.R.m : ℕ) : ℝ) := by rw [h]
     push_cast at h'
-    linarith
+    linarith only [h']
   have hK : (1003 : ℝ) ≤ D.R.k := by
     have : ((D.R.m + 3 : ℕ) : ℝ) ≤ D.R.k := by exact_mod_cast hk3
     push_cast at this
-    linarith
+    linarith only [hCl, hClm, this]
   have hN1000 : (1000 : ℝ) ≤ D.R.r := by linarith
   have hKN : (D.R.k : ℝ) ≤ D.R.r := by linarith
   have hMN : (D.R.m : ℝ) ≤ D.R.r := by linarith
@@ -200,7 +200,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
   have hNeq : (D.R.r : ℝ) = 2 * D.R.rS + D.R.k + 1 := by
     have : ((2 * D.R.rS + D.R.k + 1 : ℕ) : ℝ) = D.R.r := by rw [hdim]
     push_cast at this
-    linarith
+    linarith only [this]
   have hL1 : 1 ≤ large₂.sc.L := by
     show 1 ≤ large₂.sc.x ^ large₂.sc.eps
     exact Real.one_le_rpow large₂.sc.one_lt_alt.le large₂.sc.eps_pos.le
@@ -226,7 +226,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     apply lam_antitone_of_isDominant_liftWt
     intro a h
     have := hcons a h
-    linarith
+    linarith only [h, hp, hp', this]
   have hUi : ∀ (j : ℕ) (h : j < D.R.k), U (j + 1) = ((D.hcW w τ).u ⟨j, h⟩ : ℝ) :=
     fun j h => hU ⟨j, h⟩
   have hlamFirst : lamD D τ ⟨D.R.k - 1, by omega⟩ = -bOne D τ 1 :=
@@ -349,13 +349,13 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     rcases Nat.eq_zero_or_pos j with hj | hj
     · subst hj
       rw [hUi 0 (by omega)]
-      linarith
+      linarith only [hr, hdim, hi, hm2, hk3, hbB', hu0]
     · have hj' : j - 1 < 2 * D.R.rS + D.R.k + 1 := by omega
       have hup : U (j - 1 + 2) < lamD D τ ⟨j - 1, hj'⟩ :=
         hC5 ⟨j - 1, hj'⟩ (show j - 1 + 1 < D.R.k by omega)
       rw [show j - 1 + 2 = j + 1 by omega] at hup
       have h8' := (abs_le.mp (hC8 ⟨j - 1, hj'⟩)).2
-      linarith
+      linarith only [hj', hup, h8']
   have hC10 : ∀ a c : Fin (2 * D.R.rS + D.R.k + 1), a < c → c.val + 1 < D.R.k →
       (D.R.r : ℝ) * (D.R.m : ℝ) ^ 10 ≤ lamD D τ a - lamD D τ c := by
     intro a c hac _
@@ -365,7 +365,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     have key := hcons a ha1
     have hmono : lamD D τ c ≤ lamD D τ ⟨a.val + 1, ha1⟩ :=
       hanti.antitone (Fin.le_iff_val_le_val.mpr (show a.val + 1 ≤ c.val by omega))
-    linarith
+    linarith only [ha1, hp, key, hmono]
 
   have hKpow : (D.R.k : ℝ) ^ 1000 ≤ (D.R.k : ℝ) ^ Cl := by
     have := Real.rpow_le_rpow_of_exponent_le (by linarith : (1 : ℝ) ≤ D.R.k) hCl
@@ -374,7 +374,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     le_trans (le_max_left _ _) (hbpow τ 1 le_rfl (by omega)).1
   have hNK : (D.R.r : ℝ) ≤ (D.R.k : ℝ) * D.R.k := by
     have := mul_le_mul_of_nonneg_right (show (2 : ℝ) ≤ D.R.k by linarith) (show (0 : ℝ) ≤ D.R.k by linarith)
-    linarith
+    linarith only [hMK, hNr, this]
   have hbig19 : (D.R.r : ℝ) ^ 19 ≤ bOne D τ 1 := by
     calc (D.R.r : ℝ) ^ 19 ≤ ((D.R.k : ℝ) * D.R.k) ^ 19 := by gcongr
       _ = (D.R.k : ℝ) ^ 38 := by ring
@@ -412,7 +412,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
     have hmono : lamD D τ c ≤ lamD D τ ⟨a.val + 1, ha1⟩ :=
       hanti.antitone (Fin.le_iff_val_le_val.mpr (show a.val + 1 ≤ c.val by omega))
     have hn := hnode τ (a.val + 2 - D.R.k) (by omega) (by omega)
-    linarith
+    linarith only [ha1, hnode19, e1, e2, hmono, hn]
   have hN19 : (0 : ℝ) ≤ (D.R.r : ℝ) ^ 19 := pow_nonneg hN0 19
   have hC11 : Formalism.QuantumDeterminants.GapAtLeast (PI.BesselPeriodGGP.eps48 D.R.k D.R.rS) (lamD D τ)
       ((D.R.r : ℝ) ^ 19) := by
@@ -428,35 +428,35 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
         have h0 := (hC6 ⟨0, by omega⟩ (show 0 + 1 < D.R.k by omega)).1
         have h0' := (hC6 ⟨0, by omega⟩ (show 0 + 1 < D.R.k by omega)).2
         rw [abs_of_nonneg (by linarith)]
-        linarith
+        linarith only [hbig19, h1, h2]
     · by_cases hc : c.val < D.R.k - 1
       · have h1 := (hC6 c (by omega)).1
         have h2 := (hC7 a (by omega)).2
         have h0 := (hC6 ⟨0, by omega⟩ (show 0 + 1 < D.R.k by omega)).1
         have h0' := (hC6 ⟨0, by omega⟩ (show 0 + 1 < D.R.k by omega)).2
         rw [abs_sub_comm, abs_of_nonneg (by linarith)]
-        linarith
+        linarith only [hbig19, h1, h2]
       · have hne : a ≠ c := by
           rintro rfl
           exact hac rfl
         rcases lt_or_gt_of_ne hne with hlt | hlt
         · have key := hnodeGap a c hlt ha
           rw [abs_of_nonneg (by linarith)]
-          linarith
+          linarith only [key]
         · have key := hnodeGap c a hlt hc
           rw [abs_sub_comm, abs_of_nonneg (by linarith)]
-          linarith
+          linarith only [key]
   have hC13 : 100 * (((D.R.k * D.R.m ^ 5 : ℕ) : ℝ) + 1) ≤ (D.R.r : ℝ) * (D.R.m : ℝ) ^ 10 := by
     push_cast
     have hP : (1000 : ℝ) ≤ (D.R.m : ℝ) ^ 5 := by
       have : (D.R.m : ℝ) ^ 1 ≤ (D.R.m : ℝ) ^ 5 := pow_le_pow_right₀ (by linarith) (by norm_num)
       rw [pow_one] at this
-      linarith
+      linarith only [hCl, hClm, this]
     have hKP : 1 ≤ (D.R.k : ℝ) * (D.R.m : ℝ) ^ 5 :=
       one_le_mul_of_one_le_of_one_le (by linarith) (by linarith)
     have hKP0 : 0 ≤ (D.R.k : ℝ) * (D.R.m : ℝ) ^ 5 := by linarith
     calc 100 * ((D.R.k : ℝ) * (D.R.m : ℝ) ^ 5 + 1) ≤ ((D.R.k : ℝ) * (D.R.m : ℝ) ^ 5) * 200 := by
-          linarith
+          linarith only [hKP]
       _ ≤ ((D.R.k : ℝ) * (D.R.m : ℝ) ^ 5) * (D.R.m : ℝ) ^ 5 :=
           mul_le_mul_of_nonneg_left (by linarith) hKP0
       _ ≤ ((D.R.r : ℝ) * (D.R.m : ℝ) ^ 5) * (D.R.m : ℝ) ^ 5 :=
@@ -476,7 +476,7 @@ theorem num_of_size : ∀ (D : D7) (large₂ : SizeData₂ D) (C' Cl Cg cb Cu cT
             mul_le_mul_of_nonneg_right h13 (by positivity)
         _ = (D.R.r : ℝ) ^ 19 := by ring
     have h3 : (1 : ℝ) ≤ (D.R.r : ℝ) ^ 6 := one_le_pow₀ (by linarith)
-    linarith
+    linarith only [h1, h2, h3]
   have hGO := gapOK D.R.k D.R.rS (D.R.r : ℝ) hNeq (by omega) hN1000
   refine ⟨⟨by omega, hC2, hC3, hC4, hC5, hC6, hC7, hC8, hC9, hC10, hC11, hGO.1, hC13, hC14, hC15⟩,
     hGO.2, ?_⟩

@@ -42,7 +42,7 @@ theorem term_le {V W : Type} [NormedAddCommGroup V] [InnerProductSpace ℂ V] [N
   have h1 := norm_sub_sq_le (P η - c • η) (P w - c • w)
   have h2 := norm_sub_sq_le (P w) (c • w)
   rw [norm_smul, mul_pow] at h2
-  linarith
+  linarith only [h1, h2]
 
 end trialData
 
@@ -64,7 +64,7 @@ theorem trial_of_inputs : DSData → Mom2 → Approx → Restrict → Trial := b
     intro N h1
     have h2 : 1 ≤ N ^ 2 := by nlinarith
     have h3 : N ≤ N ^ 3 := by nlinarith
-    nlinarith
+    nlinarith only [h1, h3]
   have hgap : ((n + 1 : ℕ) : ℝ) ^ 3 + 2 * ((n + 1 : ℕ) : ℝ) + 1 < 200 * ((n : ℝ) + 1) ^ 3 := by
     push_cast
     exact key _ (by linarith [(Nat.cast_nonneg n : (0 : ℝ) ≤ n)])
@@ -102,8 +102,8 @@ theorem trial_of_inputs : DSData → Mom2 → Approx → Restrict → Trial := b
       mul_le_mul_of_nonneg_left (hηf.le.trans hδK) hK0
     have h2 : K * (t / (4 * K + 1)) ≤ t / 4 := by
       rw [mul_div_assoc', div_le_div_iff₀ (by linarith) (by norm_num)]
-      nlinarith
-    linarith
+      nlinarith only [ht, hδpos, hδ1]
+    linarith only [h1, h2]
   have hSb : S * ‖w‖ ^ 2 ≤ t / 4 := by
     have h0 := norm_nonneg w
     have e1 : ‖w‖ ^ 2 ≤ δ ^ 2 := pow_le_pow_left₀ h0 hw.le 2
@@ -112,13 +112,13 @@ theorem trial_of_inputs : DSData → Mom2 → Approx → Restrict → Trial := b
       mul_le_mul_of_nonneg_left (by linarith) hS0
     have h2 : S * (t / (4 * S + 1)) ≤ t / 4 := by
       rw [mul_div_assoc', div_le_div_iff₀ (by linarith) (by norm_num)]
-      nlinarith
-    linarith
+      nlinarith only [ht, hδpos, hδ1]
+    linarith only [h1, h2]
   have hI : ∀ z, ‖I z‖ = ‖z‖ := fun z => congrArg (‖·‖) (hIc z)
   have hn' : 1 / 2 ≤ ‖η - w‖ := by
     have := norm_sub_norm_le η (η - w)
     rw [sub_sub_cancel] at this
-    linarith
+    linarith only [hη1, hδ1, hdist, hηf, this]
   refine ⟨hU', ?_, I (η - w), ?_, ?_, ?_⟩
   · rw [Metric.dense_iff]
     intro y r hr
@@ -129,7 +129,7 @@ theorem trial_of_inputs : DSData → Mom2 → Approx → Restrict → Trial := b
   · intro h0
     have := hI (η - w)
     rw [h0, norm_zero] at this
-    linarith
+    linarith only [hδpos, hδ1, hn', this]
   · refine ⟨F.map I, by haveI := hFfd; infer_instance, ?_, Submodule.mem_map_of_mem hη'F⟩
     intro a b hab y hy
     obtain ⟨z, hz, rfl⟩ := Submodule.mem_map.mp hy
@@ -161,6 +161,6 @@ theorem trial_of_inputs : DSData → Mom2 → Approx → Restrict → Trial := b
     rw [hsplit, hSdef] at hT
     have hx2 : 1 / 4 ≤ ‖I (η - w)‖ ^ 2 := by
       rw [hI]
-      nlinarith
+      nlinarith only [hn']
     have hfin := mul_le_mul_of_nonneg_left hx2 (by positivity : (0 : ℝ) ≤ (8 * C0 + 8) * t)
-    linarith
+    linarith only [hηb, hsum, hKb, hSb, hB, hT, hfin]

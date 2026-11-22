@@ -182,7 +182,7 @@ theorem base_of_far_models_frame : Far → Models → Frame → Base := by
     have e5 : m * (|C| + 100 * ((n : ℝ) + 1) ^ 3) ≤ m * m := mul_le_mul_of_nonneg_left (by linarith) (by linarith)
     have e6 : 100 * ((n : ℝ) + 1) ^ 3 ≤ m * (100 * ((n : ℝ) + 1) ^ 3) := le_mul_of_one_le_left (by positivity) hm1
     rw [htm] at e4
-    nlinarith
+    nlinarith only [hBd, hs1, hs2, hMge, hmdef, hC0, hT0, htm, e1, e2, e3, hn3, hd2, ht]
   obtain ⟨Hσ, j1, j2, σ, hσ⟩ := BaseIntegrality.ds_ex ε' mu' hmc _ hgap' (by nlinarith)
   have : CompleteSpace Hσ := hσ.1
   obtain ⟨j, hj0, hj⟩ := hocc Hσ σ hσ
@@ -218,7 +218,7 @@ theorem base_of_far_models_frame : Far → Models → Frame → Base := by
     have h2 := hDge x
     have h3 := (abs_le.1 h1).1
     rw [htm] at h2
-    nlinarith
+    nlinarith only [hBd, hs1, hs2, hMge, hmdef, hC0, hn3, hT0, htm, hm2', hBm, h3, h2, ht]
   obtain ⟨a, ha⟩ : ∃ a : Fin (n + 1) ⊕ Fin n → ℕ, a = fun x => ⌊Wf x⌋₊ := ⟨_, rfl⟩
   have haW : ∀ x, (a x : ℝ) = Wf x := fun x => by
     obtain ⟨z, hz⟩ := hWint x
@@ -242,10 +242,10 @@ theorem base_of_far_models_frame : Far → Models → Frame → Base := by
       have hkey : 2 * (|C| * m) + 2 * B ≤ t := by
         rw [htm, sq]
         rw [e5] at h5
-        linarith
+        linarith only [hBd, hs1, hs2, hMge, hC0, hn3, hT0, hBm, h5]
       have hreal : (a x : ℝ) ≤ (a y : ℝ) := by
         rw [haW, haW]
-        linarith
+        linarith only [hBd, hs1, hs2, hMge, hC0, hn3, hT0, htm, hBm, h2, h3, h4, h5]
       exact Nat.cast_le.mp hreal
   · have e1 : (lam + fun i => (a (Sum.inl i) : ℝ)) = lam + t • d := funext fun i => by
       simp only [Pi.add_apply, Pi.smul_apply, smul_eq_mul]

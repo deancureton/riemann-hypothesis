@@ -225,10 +225,10 @@ theorem kap_le (large₂ : SizeData₂ D) (hR : GlobalTheory.IndefiniteRowSideFu
     have hg0 : (0 : ℝ) ≤ gap D 1 := by positivity
     have hi' : (i : ℝ) + 3 / 2 ≤ D.R.m + 1 := by
       have : (i : ℝ) + 1 ≤ D.R.m := by exact_mod_cast hi
-      linarith
+      linarith only [this]
     have := mul_le_mul_of_nonneg_right hi' hg0
     have hcast : ((cen D 1 τ (D.R.m - i) : ℚ) : ℝ) = (cen D 1 τ (D.R.m - i) : ℝ) := by push_cast; rfl
-    linarith
+    linarith only [hi, hk, hSc, hcl, hfl', this]
   have hb : 0 ≤ large₂.sc.b := (Real.exp_pos _).le
   unfold kap
   have hs : (0 : ℝ) ≤ s := by positivity
@@ -309,11 +309,11 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
     unfold c_vp
     split_ifs
     · have : (a0 (condF G.pl) l : ℝ) ≤ 2 := by exact_mod_cast maxConductorExponent_grid_le_two G.pl l
-      nlinarith
+      nlinarith only [this, h9, hL1]
     · have h1 := delta_log_le (E := D.host.E) l hp
       have h2 : Real.log (|(discr D.host.E : ℝ)| ^ ((1 : ℝ) / (Module.finrank ℚ D.host.E : ℝ))) =
           Real.log D.host.rdE := rfl
-      linarith
+      linarith only [hrd1, hrd2, hL1, h1, h2]
   have haO : ∀ l ∈ S.filter (fun l => ¬ l ∈ badPr D), a0 (condF G.pl) l = 0 := by
     intro l hl
     obtain ⟨hl, hb⟩ := Finset.mem_filter.1 hl
@@ -330,7 +330,7 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
   have h16 : 16 ≤ Module.finrank ℚ (maximalRealSubfield D.host.E) * (2 * s) := by
     rw [hfF]
     have : 44 ^ 4 ≤ D.R.m ^ 4 := Nat.pow_le_pow_left hm44 4
-    nlinarith
+    nlinarith only [hs1, hm4, this]
   have hcE := cE_sum_le hZ hs1 h16 hzv S hS
   rw [hfF] at hcE
   have hfk : ((D.R.f * (2 * s) : ℕ) : ℝ) ≤ large₂.sc.b := by rw [show D.R.f * (2 * s) = 2 * s * D.R.f by ring]; exact hkf
@@ -348,7 +348,7 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
     have e : (Formalism.PairingDivisionLocalBalance.wtM (2 * s) κ : ℝ) = ((2 * s * Fintype.card D.what₂.Tau : ℕ) : ℝ) + 2 * (Formalism.PairingDivisionLocalBalance.absK κ : ℝ) := by
       unfold Formalism.PairingDivisionLocalBalance.wtM; push_cast; ring
     rw [hK, e, D.what₂.card_Tau]
-    nlinarith
+    nlinarith only [hf1', hA, hb1, hkf]
   have hK0 : 0 ≤ K := by positivity
 
   have hsum : ∑ l ∈ S, (n l) * Real.log l ≤ large₂.sc.b * (large₂.sc.L + 1) + 8 * (K * Λ) := by
@@ -359,7 +359,7 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
       rw [Finset.sum_add_distrib, Finset.sum_const, nsmul_eq_mul]
       have hc : ((S.filter (· ∈ badPr D)).card : ℝ) ≤ 5 := by
         exact_mod_cast (Finset.card_le_card fun l hl => (Finset.mem_filter.1 hl).2).trans (card_badPr D)
-      nlinarith
+      nlinarith only [hKΛ, hc]
     have hO : ∑ l ∈ S.filter (fun l => ¬ l ∈ badPr D), (n l) * Real.log l ≤
         ∑ l ∈ S.filter (fun l => ¬ l ∈ badPr D), (cE_vp l z : ℝ) * Real.log l + K * Λ := by
       rw [Finset.sum_congr rfl fun l hl => by rw [hz l (hS l (Finset.mem_filter.1 hl).1)]]
@@ -367,7 +367,7 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
       have : (0 : ℝ) ≤ Formalism.PairingDivisionLocalBalance.wtM (2 * s) κ := by positivity
       linarith
     rw [← Finset.sum_filter_add_sum_filter_not S (· ∈ badPr D)] at hcE' ⊢
-    linarith
+    linarith only [hcE', hKΛ, hB, hO]
   refine hsum.trans ?_
   unfold bTH
   rw [hlogb]
@@ -377,7 +377,7 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
   have h2 : large₂.sc.b * (large₂.sc.L + 1) ≤ 2 * D.R.f * large₂.sc.b * large₂.sc.L := by
     have h6 : large₂.sc.L + 1 ≤ 2 * D.R.f * large₂.sc.L := by nlinarith
     have := mul_le_mul_of_nonneg_left h6 (by linarith : (0 : ℝ) ≤ large₂.sc.b)
-    linarith
+    linarith only [this]
   have h3 : (0 : ℝ) ≤ D.R.f * large₂.sc.b * Real.log large₂.sc.x := by positivity
   have h4 : (0 : ℝ) ≤ D.R.f * large₂.sc.b * (large₂.sc.L + Real.log large₂.sc.x) := by positivity
   have h5 : 8000 * (D.R.f * large₂.sc.b * (large₂.sc.L + Real.log large₂.sc.x)) ≤ C * (D.R.f * large₂.sc.b * (large₂.sc.L + Real.log large₂.sc.x)) :=
@@ -388,6 +388,6 @@ theorem denSum (hZ : GlobalTheory.IndefiniteRowSideFullHecke.ZetaValueIdeals.Zet
   have e3 : 2 * D.R.f * large₂.sc.b * large₂.sc.L = 2 * (D.R.f * large₂.sc.b * large₂.sc.L) := by ring
   have e4 : D.R.f * large₂.sc.b * (large₂.sc.L + Real.log large₂.sc.x) = D.R.f * large₂.sc.b * large₂.sc.L + D.R.f * large₂.sc.b * Real.log large₂.sc.x := by ring
   rw [e1]; rw [e2] at h1; rw [e3] at h2; rw [e4] at h5 ⊢
-  linarith
+  linarith only [h1, h2, h3, h4, h5]
 
 end GlobalTheory.DenSumPf

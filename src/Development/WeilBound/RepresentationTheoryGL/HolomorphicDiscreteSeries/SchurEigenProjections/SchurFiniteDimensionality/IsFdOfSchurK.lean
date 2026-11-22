@@ -65,7 +65,7 @@ theorem bigProjP_of (hg0 : PositivityTheory.UnitaryDecomposition.X4.IntegralGerm
     have h2 := hP.bd a
     have h3 := hP.bd (zi e)
     have h4 : |lam a - lam (zi e)| ≤ |lam a| + |lam (zi e)| := abs_sub _ _
-    linarith
+    linarith only [h1, h2, h3, h4]
   have hn3 : (3 : ℝ) ≤ (n : ℝ) + 1 := by
     have : (2 : ℝ) ≤ n := by exact_mod_cast hn2
     linarith
@@ -182,15 +182,15 @@ theorem bigProjP_of (hg0 : PositivityTheory.UnitaryDecomposition.X4.IntegralGerm
     have h1 : (1 : ℝ) ≤ (100 * ((n + 1 : ℕ) : ℝ) * (B + 1)) ^ 2 := by
       apply one_le_pow₀
       push_cast
-      nlinarith
+      nlinarith only [hn3, hx16]
     have := inv_le_one_of_one_le₀ h1
-    linarith
+    linarith only [this]
   have hV := UnitaryDecomposition.X4.num_V (N := n + 1) (B := B) (x := x) (by omega) hB2 (by rw [hx]; push_cast; ring)
   have hgap100 : GapAtLeast ε lam (100 * ((n + 1 : ℕ) : ℝ) ^ 3) := by
     intro a b hab
     refine le_trans ?_ (hP.gap a b hab)
     push_cast
-    nlinarith
+    nlinarith only [h27]
   have hDU := hDUp (n + 1) ε lam B H π (muG ε) dπ hμ (by omega) hP.hc hDSπ hP.bd hgap100 hFdeg
   have hvol : ENNReal.ofReal dπ * muG ε {g : UJ ε | hs (umat g) ≤ 64 * ((n + 1 : ℕ) : ℝ)
       * (((n + 1 : ℕ) : ℝ) + 2 * x ^ (8 * (n + 1))) ^ 2} ≤ ENNReal.ofReal (4 * x ^ (24 * (n + 1) ^ 3)) := by
@@ -220,7 +220,7 @@ theorem bigProjP_of (hg0 : PositivityTheory.UnitaryDecomposition.X4.IntegralGerm
           rw [ENNReal.ofReal_mul (by norm_num), ENNReal.ofReal_ofNat, mul_comm]
   have hY1 : (1 : ℝ) ≤ 2 * x ^ (8 * (n + 1)) := by
     have : (1 : ℝ) ≤ x ^ (8 * (n + 1)) := one_le_pow₀ (by linarith)
-    linarith
+    linarith only [this]
   have hK0 : (0 : ℝ) < 4 * x ^ (24 * (n + 1) ^ 3) := by positivity
   have hmomG : ∫⁻ g : UJ ε, ENNReal.ofReal (GlobalTheory.CompanionTheory.UnitaryFramesMetricPeriods.nsq (umat g⁻¹ *ᵥ Pi.single (zi e) 1)
         * ‖⟪i w, π (umat g) v⟫_ℂ‖ ^ 2) ∂muG ε
@@ -247,7 +247,7 @@ theorem bigProjP_of (hg0 : PositivityTheory.UnitaryDecomposition.X4.IntegralGerm
   have hnat : 1 + 67 * (n + 1) ^ 2 + 24 * (n + 1) ^ 3 ≤ 100 * (n + 1) ^ 3 * 2 := by
     have h1 : (n + 1) ^ 2 ≤ (n + 1) ^ 3 := Nat.pow_le_pow_right (by omega) (by norm_num)
     have h2 : 1 ≤ (n + 1) ^ 3 := Nat.one_le_pow _ _ (by omega)
-    linarith
+    linarith only [h1, h2]
   have hbig : 16 * x ^ (67 * (n + 1) ^ 2) * x ^ (24 * (n + 1) ^ 3) ≤ (x ^ (100 * (n + 1) ^ 3)) ^ 2 := by
     rw [← pow_mul]
     calc 16 * x ^ (67 * (n + 1) ^ 2) * x ^ (24 * (n + 1) ^ 3)

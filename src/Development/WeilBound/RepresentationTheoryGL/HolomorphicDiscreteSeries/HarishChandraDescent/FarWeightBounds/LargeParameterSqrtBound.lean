@@ -23,7 +23,7 @@ theorem large_parameter_sqrt_bound {A B t : ℝ} (hA : 0 ≤ A) (hB : 0 ≤ B) (
   have h3 : Real.sqrt t * (A + B + 1) ≤ Real.sqrt t * Real.sqrt t :=
     mul_le_mul_of_nonneg_left hs (by linarith)
   have h4 : 0 ≤ (Real.sqrt t - 1) * A := mul_nonneg (by linarith) hA
-  nlinarith
+  nlinarith only [hA, hB, hs, hsq, h3, h4]
 
 theorem umem {n : ℕ} {ε : Fin n → Bool} (h : Formalism.REAL.UJ ε) : um h ∈ UJset ε :=
   h.2
@@ -76,11 +76,11 @@ theorem far_of_trial_bound : Trial → Core → Far := by
     rw [h2]
     have h3 : (2 * C0 + 1) * t ≤ 2 * J * t := by
       apply mul_le_mul_of_nonneg_right _ ht0
-      linarith
-    nlinarith
+      linarith only [hJC]
+    nlinarith only [hbig, hks, hbig', hP1, h3]
   have hcond2 : (n : ℝ) ^ 3 + 4 * n + 2 + 2 * (Real.sqrt (2 * (C0 * t)) + J) ≤ t := by
     rw [hsqrt]
-    linarith
+    linarith only [hbig, hJks, hbig', hP2]
   have hτ : ∀ a b : Fin n, a < b → t ≤ (t • d') a - (t • d') b := by
     intro a b hab
     simp only [Pi.smul_apply, smul_eq_mul]
@@ -96,13 +96,13 @@ theorem far_of_trial_bound : Trial → Core → Far := by
     rw [← hs]
     have h2 : (J : ℝ) ≤ J * s := by
       have := mul_le_mul_of_nonneg_left hs1 hJ0
-      linarith
+      linarith only [this]
     have h3 : (n : ℝ) ≤ n * s := by
       have := mul_le_mul_of_nonneg_left hs1 hn0
-      linarith
+      linarith only [this]
     have h4 : (k + J + n) * s = k * s + J * s + n * s := by ring
     rw [h4]
-    linarith
+    linarith only [h1, h2, h3]
   · intro H' _ _ _ σ hσ
     obtain ⟨j, hj0, hj⟩ := hmap H' σ hσ
     refine ⟨j, hj0, ?_⟩

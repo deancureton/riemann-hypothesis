@@ -122,7 +122,7 @@ theorem blocks_good (χ : Fin n → ℂ) (m : Fin n → ℕ) (f : Fin n → ℝ)
         have hm' : (m a : ℝ) ≤ m r := by exact_mod_cast hm
         have := hlt r hrl
         rw [hf, hf] at this
-        linarith
+        linarith only [hre, hm', this]
       · have hnot : r ∉ a :: l := by simp [hr, hrl]
         rw [h2 r hnot, hχa] at he
         have hre : (χ r).re + m r = (χ a).re + j + 1 := by
@@ -131,7 +131,7 @@ theorem blocks_good (χ : Fin n → ℂ) (m : Fin n → ℕ) (f : Fin n → ℝ)
         have hjm : (j : ℝ) + 1 ≤ m a := by exact_mod_cast hj
         have := h3 r hnot a (by simp)
         rw [hf, hf] at this
-        linarith
+        linarith only [hre, hjm, this]
     · rw [pathEnd_replicate]
       exact hI.1
 
@@ -198,11 +198,11 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
   have hNε : 2 * M + 1 ≤ ε / 2 * N := by
     have : 2 * (2 * M + 1) / ε ≤ N / 2 := by linarith
     rw [div_le_iff₀ hε] at this
-    linarith
+    linarith only [hM0, this]
   have hNκ : (n : ℝ) + B < κ / 2 * N := by
     rw [div_le_iff₀ hκ] at hNb
     have := le_abs_self B
-    linarith
+    linarith only [hNb, this]
   set m : Fin n → ℕ := fun a => ⌊N * c a⌋₊ with hm
   have hNc : ∀ a, 0 ≤ N * c a := fun a => mul_nonneg (by linarith) (by linarith [hc1 a])
   have hfl : ∀ a, (m a : ℝ) ≤ N * c a := fun a => Nat.floor_le (hNc a)
@@ -214,7 +214,7 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
     refine Nat.le_floor ?_
     have := hc1 a
     push_cast
-    nlinarith
+    nlinarith only [hN2, this]
   · intro I I' _ hcard hv
     have hvx : (∑ i ∈ I, χ i - ∑ i ∈ I', χ i).re = ∑ i ∈ I, x i - ∑ i ∈ I', x i := by
       simp [hx, Complex.re_sum]
@@ -231,7 +231,7 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
         Finset.sum_le_sum fun i _ => (hfu i).le
       rw [Finset.sum_add_distrib, ← Finset.mul_sum] at this
       simp only [Finset.sum_const, nsmul_eq_mul, mul_one] at this
-      linarith
+      linarith only [this]
     have hA : ∑ i ∈ I, ((i : ℕ) : ℝ) ≤ (n : ℝ) ^ 2 := by
       have h1 : ∑ i ∈ I, ((i : ℕ) : ℝ) ≤ I.card • (n : ℝ) :=
         Finset.sum_le_card_nsmul _ _ _ fun i _ => (hidx i).2
@@ -240,7 +240,7 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
         simp only [Fintype.card_fin] at this
         exact_mod_cast this
       rw [nsmul_eq_mul] at h1
-      nlinarith
+      nlinarith only [h1, h2]
     have hA' : 0 ≤ ∑ i ∈ I', ((i : ℕ) : ℝ) := Finset.sum_nonneg fun i _ => (hidx i).1
     have hk : (I'.card : ℝ) ≤ n := by
       have := Finset.card_le_univ I'
@@ -262,10 +262,10 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
     have hinner : X - X' + ε * (A - A') ≤ -(κ / 2) := by
       have h1 : ε * (A - A') ≤ ε * (n : ℝ) ^ 2 := mul_le_mul_of_nonneg_left (by linarith) hε.le
       have h2 : 0 ≤ ε * (n : ℝ) ^ 2 := by positivity
-      nlinarith
+      nlinarith only [hε, hε2, hKv, h1]
     have hmul : N * (X - X' + ε * (A - A')) ≤ N * (-(κ / 2)) :=
       mul_le_mul_of_nonneg_left hinner (by linarith)
-    nlinarith
+    nlinarith only [hNκ, hv, hk, hup, hlo, hmul]
   · intro a b hab
     have hxa := abs_le.1 (hxM a)
     have hxb := abs_le.1 (hxM b)
@@ -277,10 +277,10 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
     rcases hgapc a b hab with h | h
     · have hh := mul_le_mul_of_nonneg_left h hNp
       refine le_abs.2 (Or.inl ?_)
-      nlinarith
+      nlinarith only [hNε, hxa, hxb, h2, h3, hh]
     · have hh := mul_le_mul_of_nonneg_left h hNp
       refine le_abs.2 (Or.inr ?_)
-      nlinarith
+      nlinarith only [hNε, hxa, hxb, h1, h4, hh]
   · intro a
     have hNp : 0 ≤ N := by linarith
     have hεn : 0 ≤ ε * n := by positivity
@@ -293,7 +293,7 @@ theorem num (χ : Fin n → ℂ) (B : ℝ) : ∃ C δ : ℝ, 0 < δ ∧ ∀ N₀
     refine abs_le.2 ⟨?_, ?_⟩
     · nlinarith
     · show x a + m a ≤ _
-      nlinarith
+      nlinarith only [hN2, hxa, h1, h2, h3]
 
 theorem pathExists : CompanionTheory.RgExh.Fin.PathExists := by
   intro n χ B

@@ -14,7 +14,7 @@ lemma aR_nonneg (ℓ : ℕ) (hℓ : 11 ≤ ℓ) (H : ℕ) : 0 ≤ Formalism.Trun
     · simp [h0]
     · have : (1:ℝ) ≤ H := by exact_mod_cast h0
       exact Real.logb_nonneg hl (by linarith)
-  linarith
+  linarith only [t1, t2]
 
 end Formalism.KernelCokernelLengths.RowDegreeJointLemmas
 
@@ -47,19 +47,19 @@ theorem Formalism.KernelCokernelLengths.row_degree_joint_form : Formalism.Kernel
     have hH1 : (1:ℝ) ≤ ((h + η' : ℕ) : ℝ) := by push_cast; rw [hη']; linarith
     have hfrac : (2 * (ℓ : ℝ) - 1) / ((ℓ : ℝ) - 1) ^ 2 ≤ 21 / 100 := by
       rw [div_le_iff₀ (by nlinarith)]
-      nlinarith
+      nlinarith only [hℓR]
     have he5 : (100:ℝ) ≤ Real.exp 5 := by
       have e1 := Real.exp_one_gt_d9
       have e2 : (2.7:ℝ) ^ 5 < Real.exp 1 ^ 5 := pow_lt_pow_left₀ (by linarith) (by norm_num) (by norm_num)
       rw [← Real.exp_nat_mul] at e2
       norm_num at e2
-      linarith
+      linarith only [e2]
     have hlog : ∀ y : ℝ, 0 < y → Real.log y ≤ y / 100 + 4 := by
       intro y hy
       have h5 := Real.log_le_sub_one_of_pos (div_pos hy (Real.exp_pos 5))
       rw [Real.log_div hy.ne' (Real.exp_pos 5).ne', Real.log_exp] at h5
       have : y / Real.exp 5 ≤ y / 100 := div_le_div_of_nonneg_left hy.le (by norm_num) he5
-      linarith
+      linarith only [h5, this]
     have hl11 : (2:ℝ) < Real.log ℓ := by
       rw [Real.lt_log_iff_exp_lt (by linarith)]
       have e1 := Real.exp_one_lt_d9
@@ -74,14 +74,14 @@ theorem Formalism.KernelCokernelLengths.row_degree_joint_form : Formalism.Kernel
       rw [Real.logb]
       have hdd : Real.log (2 * ((h + η' : ℕ) : ℝ)) / Real.log ℓ ≤ Real.log (2 * ((h + η' : ℕ) : ℝ)) / 2 :=
         div_le_div_of_nonneg_left hlg0 (by norm_num) hl11.le
-      linarith
+      linarith only [hlg, hdd]
     have haR2 : Formalism.TruncatedSeriesCounting.RamifiedCoefficientChains.aR ℓ (h + η') ≤ 0.22 * ((h + η' : ℕ) : ℝ) + 6 := by
       unfold Formalism.TruncatedSeriesCounting.RamifiedCoefficientChains.aR
       have : ((h + η' : ℕ) : ℝ) * (2 * (ℓ : ℝ) - 1) / ((ℓ : ℝ) - 1) ^ 2 ≤
           ((h + η' : ℕ) : ℝ) * (21 / 100) := by
         rw [mul_div_assoc]
         exact mul_le_mul_of_nonneg_left hfrac (Nat.cast_nonneg _)
-      linarith
+      linarith only [hlam, this]
     have : (2 * (a : ℝ) + η' + 1) ≤ bi := by rw [hη'] at *; linarith
     exact_mod_cast this
   refine ⟨⟨hA, hB, hC⟩, ?_⟩

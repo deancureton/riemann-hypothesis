@@ -73,7 +73,7 @@ private theorem num_poly (u Y t b g c v : ℝ) (hu : 2 ≤ u) (hY : 1 / 2 ≤ Y)
     have e' : u ^ 9 * Y = u ^ 5 * (u ^ 4 * Y) := by ring
     rw [e, e']
     exact mul_le_mul_of_nonneg_right (by linarith) h4Y
-  linarith
+  linarith only [hst, hsu, hfin]
 
 set_option maxHeartbeats 800000 in
 private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 1 ≤ E) (hn : 1 ≤ n) (hD : 1 ≤ D)
@@ -101,11 +101,11 @@ private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 
   have hd16 : (d:ℝ) ≤ 16 * E * n := by
     have : ((n:ℝ) + 1) * (4 * E + 4) ≤ (2 * n) * (8 * E) :=
       mul_le_mul (by linarith) (by linarith) (by positivity) (by positivity)
-    nlinarith
+    nlinarith only [h2R, this]
   have hn'16 : (n':ℝ) ≤ 16 * E * n ^ 2 := by
     rw [h1R]
     have := mul_le_mul_of_nonneg_right hd16 (by linarith : (0:ℝ) ≤ n)
-    nlinarith
+    nlinarith only [this]
   set x : ℝ := 2 * E * n with hx
   have hx2 : 2 ≤ x := by nlinarith
   have hx0 : 0 < x := by linarith
@@ -114,7 +114,7 @@ private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 
     exact mul_le_mul_of_nonneg_right this (by positivity)
   have hn'x : (n':ℝ) ≤ 4 * x ^ 2 := by
     have : x ^ 2 = 4 * E ^ 2 * n ^ 2 := by rw [hx]; ring
-    nlinarith
+    nlinarith only [hn'16, hEn]
   have hd8 : (d:ℝ) ≤ 8 * x := by rw [hx]; linarith
   have hx3 : 8 ≤ x ^ 3 := by nlinarith
   have hbase : 2 * (E:ℝ) * n' ≤ x ^ 5 := by
@@ -123,7 +123,7 @@ private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 
     have a2 : 2 * (E:ℝ) * (16 * E * n ^ 2) = 8 * x ^ 2 := by rw [hx]; ring
     have a3 : 8 * x ^ 2 ≤ x ^ 3 * x ^ 2 := mul_le_mul_of_nonneg_right hx3 (by positivity)
     have a4 : x ^ 3 * x ^ 2 = x ^ 5 := by ring
-    linarith
+    linarith only [a1, a3]
   have hbase0 : (0:ℝ) ≤ 2 * E * n' := by positivity
   have hpowC : (2 * (E:ℝ) * n') ^ C ≤ (x ^ 5) ^ C := Real.rpow_le_rpow hbase0 hbase hC
   have hx5C : (x ^ 5) ^ C = x ^ (5 * C) := by
@@ -139,7 +139,7 @@ private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 
   have hlogw0 : 0 ≤ Real.log (w:ℝ) := Real.log_nonneg hw1R
   have hlogw : Real.log (w:ℝ) ≤ 8 * x ^ 2 := by
     have := Real.log_le_sub_one_of_pos (by linarith : (0:ℝ) < w)
-    linarith
+    linarith only [hwR, hn'16, hEn, this]
   have hlogD' : Real.log (2 * (D':ℝ)) ≤ Real.log 2 + d * Real.log D + n' * Real.log w := by
     have hDd : (0:ℝ) < (D:ℝ) ^ d := pow_pos (by linarith) _
     have hwn : (0:ℝ) < (w:ℝ) ^ n' := pow_pos (by linarith) _
@@ -170,14 +170,14 @@ private theorem num_down (C : ℝ) (hC : 0 ≤ C) (E n D n' D' d w : ℕ) (hE : 
   have tsum : Real.log (2 * (D':ℝ)) ≤ 73 * (x ^ 4 * LD) := by
     have e1 : 8 * x * LD = 8 * (x * LD) := by ring
     have e2 : 32 * x ^ 4 * (2 * LD) = 64 * (x ^ 4 * LD) := by ring
-    linarith
+    linarith only [hlogD', hLD, t1, t2, t3, s1, s2]
   have tfin : Real.log (2 * (D':ℝ)) ≤ x ^ (11:ℕ) * LD := by
     have e : x ^ (11:ℕ) * LD = x ^ 7 * (x ^ 4 * LD) := by ring
     have h0 : 0 ≤ x ^ 4 * LD := by positivity
     have : 73 * (x ^ 4 * LD) ≤ x ^ 7 * (x ^ 4 * LD) :=
       mul_le_mul_of_nonneg_right (by linarith) h0
     rw [e]
-    linarith
+    linarith only [hlogD', hLD, t1, t2, t3, s1, s2, this]
   rw [hxadd, ← hx5C]
   calc (2 * (E:ℝ) * n') ^ C * Real.log (2 * (D':ℝ)) ≤ (x ^ 5) ^ C * (x ^ (11:ℕ) * LD) :=
         mul_le_mul hpowC tfin hlogD'0 (by positivity)
@@ -306,12 +306,12 @@ theorem UpperTheory.V.ZK.sNum :
   have hn'u : 2 * n' ≤ u := by
     rw [hu']
     have := mul_le_mul_of_nonneg_right (show (2:ℝ) ≤ 2 * ((k:ℝ) + 1) by linarith) hn'0
-    linarith
+    linarith only [this]
   have hku : 2 * ((k:ℝ) + 1) ≤ u := by
     rw [hu']
     have := mul_le_mul_of_nonneg_left (show (1:ℝ) ≤ n' by linarith)
       (show (0:ℝ) ≤ 2 * ((k:ℝ) + 1) by positivity)
-    linarith
+    linarith only [hn'bigR, hu', hn'u]
   have hu2 : 2 ≤ u := by linarith
   have hL2 : (0.6931471803:ℝ) < Real.log 2 := Real.log_two_gt_d9
   have hY2 : Real.log 2 ≤ Y := Real.log_le_log (by norm_num) (by linarith)
@@ -327,7 +327,7 @@ theorem UpperTheory.V.ZK.sNum :
     exact_mod_cast this
   have htl : Real.log l ≤ u := by
     have := Real.log_le_sub_one_of_pos hl0R
-    linarith
+    linarith only [hn'u, hlR2, this]
   have hbR : (bN:ℝ) = 2 * k + 2 + (2 * k + 3) * (c + (2 * k + 3)) := by rw [hbN]; push_cast; ring
   have hb0 : (0:ℝ) ≤ bN := Nat.cast_nonneg _
   have hbb : (bN:ℝ) ≤ u + 2 * u ^ 2 := by
@@ -340,16 +340,16 @@ theorem UpperTheory.V.ZK.sNum :
       have e1 : (2 * n') ^ 2 = 4 * n' ^ 2 := by ring
       have e2 : n' * (3 * n') = 3 * n' ^ 2 := by ring
       have h5 : 0 ≤ n' ^ 2 := by positivity
-      linarith
-    linarith
+      linarith only [h4, h5]
+    linarith only [hn'bigR, hn'u, a1, a3]
   have hg0 : (0:ℝ) ≤ g := Nat.cast_nonneg _
   have hgg : (g:ℝ) ≤ u + 2 * u * Y + 2 := by
     have hY0 : 0 ≤ Y := by linarith
     have : 2 * (2 * n') * Y ≤ 2 * u * Y := by
       have := mul_le_mul_of_nonneg_right hn'u hY0
-      linarith
+      linarith only [this]
     have hgl' : (g:ℝ) ≤ 2 * n' + 2 * (2 * n') * Y + 2 := hgl
-    linarith
+    linarith only [i4, hgl, hn'u, this]
   have hc0R : (0:ℝ) ≤ c := Nat.cast_nonneg _
   have hcu : (c:ℝ) ≤ u := by linarith
   have hf0 : (0:ℝ) ≤ fN := Nat.cast_nonneg _
@@ -360,13 +360,13 @@ theorem UpperTheory.V.ZK.sNum :
   have ht : (s:ℝ) * Real.log l ≤ 2 * Real.exp (u ^ C0 * Y) + (X:ℝ) * Real.log l := by
     have e1 : Real.log (T1:ℝ) ≤ Real.exp (u ^ C0 * Y) := hT1b
     have e2 : Real.log (T2:ℝ) ≤ Real.exp (u ^ C0 * Y) := hT2b
-    linarith
+    linarith only [i4, hlogs, hT1b, hT2b]
   have h3 := num_three C0 u Y ((s:ℝ) * Real.log l) hu2 hYh _ hP' ht
   have hs0R : (s0:ℝ) * Real.log l ≤ (s:ℝ) * Real.log l :=
     mul_le_mul_of_nonneg_right (by exact_mod_cast hs0) hlog0.le
   have hC : 0 ≤ max C0 9 + 2 := by
     have := le_max_right C0 9
-    linarith
+    linarith only [this]
   have hn1 : 1 ≤ Module.finrank ℚ L := Module.finrank_pos
   have hD1 : 1 ≤ (discr L).natAbs := Int.natAbs_pos.mpr (NumberField.discr_ne_zero L)
   have hdown := num_down (max C0 9 + 2) hC (k + 1) (Module.finrank ℚ L) (discr L).natAbs
@@ -375,4 +375,4 @@ theorem UpperTheory.V.ZK.sNum :
       kBound (max C0 9 + 2) (k + 1) (Module.finrank ℚ L') (discr L').natAbs := by
     unfold kBound
     rfl
-  linarith
+  linarith only [i2, i4, h3, hs0R, hdown, hmid]
