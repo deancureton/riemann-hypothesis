@@ -122,8 +122,7 @@ theorem UpperTheory.Gal.Wt.sqExp_h : ExpBasic → EvLem → Dom → SqExp := by
           + ((∑ i ∈ Finset.univ.filter (fun i : Fin a => (i : ℕ) < k), κ.natW i : ℕ) : ℤ) = psum κ k := by
         rw [Nat.cast_sum]
         simp only [hnat]
-        rw [Finset.sum_sub_distrib, hD, psum]
-        rw [Finset.sum_const, nsmul_eq_mul]
+        rw [Finset.sum_sub_distrib, hD, psum, Finset.sum_const, nsmul_eq_mul]
         ring
       linarith
     exact (hle _ _ hup).1 (hmon _ _).1

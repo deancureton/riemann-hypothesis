@@ -39,8 +39,7 @@ private theorem exS (w : HeightOneSpectrum (𝓞 E)) (c : 𝓞 E) (hc : c ≠ 0)
     exact w.isPrime.ne_top hQ
   obtain ⟨s, hsQ, hsw⟩ := hex
   refine ⟨s, hsw, fun u hu => ?_⟩
-  rw [val_alg, val_alg]
-  rw [HeightOneSpectrum.intValuation_if_neg u hc]
+  rw [val_alg, val_alg, HeightOneSpectrum.intValuation_if_neg u hc]
   refine (HeightOneSpectrum.intValuation_le_pow_iff_mem u s _).2 ?_
   set e := (Associates.mk u.asIdeal).count (Associates.mk (Ideal.span {c})).factors with he
   have hce : c ∈ u.asIdeal ^ e := by

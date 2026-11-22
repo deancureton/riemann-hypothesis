@@ -163,8 +163,7 @@ private theorem std_pres {R B : Type} [CommRing R] [CommRing B] (f : R →+* B) 
         rw [this, ha]
       have h2 := RingHom.mem_ker.1 (hker h1)
       have h3 := RingHom.congr_fun hι a
-      rw [RingHom.comp_apply] at h3
-      rw [h2] at h3
+      rw [RingHom.comp_apply, h2] at h3
       exact h3.symm
     · obtain ⟨w, rfl⟩ := surj b
       exact ⟨h w, by rw [← RingHom.comp_apply, gh]⟩

@@ -14,8 +14,7 @@ private theorem integral_mul_left_adele {F : Type} [Field F] [NumberField F] (a 
   have h1 : ∫ s, g ((a : A F) * s) ∂(adeleMeasure F) =
       ∫ s, g s ∂((adeleMeasure F).map (fun x : A F => a • x)) :=
     (he.integral_map g).symm
-  rw [h1, hmap, integral_smul_measure, ENNReal.toReal_ofReal hpos]
-  rw [Complex.real_smul]
+  rw [h1, hmap, integral_smul_measure, ENNReal.toReal_ofReal hpos, Complex.real_smul]
   rfl
 
 theorem UpperTheory.ConvolutionTheory.R2.D.hatM :

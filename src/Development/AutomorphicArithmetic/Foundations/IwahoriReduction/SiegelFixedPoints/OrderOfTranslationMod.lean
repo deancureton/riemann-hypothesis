@@ -35,8 +35,7 @@ private theorem eq_of_tm_eq_of_lt (M : ℕ) (a b : ℕ) (ha : a < M) (hb : b < M
   have h1 := congrArg (fun g : SL(2, ZMod M) => g 0 1) h
   simp only [tm_apply_eq_cast_upper_unipotent] at h1
   simp at h1
-  rw [ZMod.natCast_eq_natCast_iff'] at h1
-  rwa [Nat.mod_eq_of_lt ha, Nat.mod_eq_of_lt hb] at h1
+  rwa [ZMod.natCast_eq_natCast_iff', Nat.mod_eq_of_lt ha, Nat.mod_eq_of_lt hb] at h1
 
 private theorem tm_mem_map_gam (N l M : ℕ) (k : ℕ) :
     Tm M k ∈ Subgroup.map (Matrix.SpecialLinearGroup.map (Int.castRingHom (ZMod M))) (Gam N l) := by

@@ -92,8 +92,7 @@ theorem UpperTheory.Gal.crystallineComparison.Mod.chainRing_of :
     have ht1 : (algebraMap B (Localization.AtPrime m) t) ^ q ∈ RingHom.ker φ := by
       rw [hJ]
       exact Ideal.mem_span_singleton_self _
-    rw [RingHom.mem_ker, ← map_pow, hφ, map_pow] at ht1
-    rw [← map_pow] at ht1
+    rw [RingHom.mem_ker, ← map_pow, hφ, map_pow, ← map_pow] at ht1
     obtain ⟨⟨u', hu'⟩, hu0⟩ := (IsLocalization.map_eq_zero_iff m'.primeCompl (Localization.AtPrime m') _).1 ht1
     obtain ⟨v, rfl⟩ := hπ u'
     have hv : ε' (π v) ≠ 0 := fun h0 => hu' ((hmem' _).2 h0)

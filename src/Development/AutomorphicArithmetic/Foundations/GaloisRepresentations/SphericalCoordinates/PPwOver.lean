@@ -29,8 +29,7 @@ private theorem matEnd_diagonal_pr {S : Scheme.{0}} {O : Type} [Ring O] {A : Ove
     (d : Fin m → O) (i : Fin m) :
     GlobalTheory.KS.matEnd act (Matrix.diagonal d) ≫ GlobalTheory.KS.pr A i = GlobalTheory.KS.pr A i ≫ act.act (d i) := by
   unfold GlobalTheory.KS.matEnd GlobalTheory.KS.pr
-  rw [Pi.lift_π]
-  rw [list_prod_ofFn_eq_of_eq_one_of_ne' _ i]
+  rw [Pi.lift_π, list_prod_ofFn_eq_of_eq_one_of_ne' _ i]
   · simp
   · intro j hj
     simp [Matrix.diagonal_apply_ne' d hj, GlobalTheory.KS.Model.act_zero, Hom.one_def]

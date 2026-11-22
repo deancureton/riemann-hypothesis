@@ -32,8 +32,7 @@ private lemma units_pow_nhds [CharZero 𝕜] [CompleteSpace 𝕜] [CompleteSpace
   have h2 : (fun x : R => x ^ N) '' (((↑) : Rˣ → R) '' V) ∈ 𝓝 (1 : R) := by
     rw [← map_pow_nhds (𝕜 := 𝕜) hN]
     exact image_mem_map h1
-  rw [← he.image_mem_nhds]
-  rw [Set.image_image, Units.val_one]
+  rw [← he.image_mem_nhds, Set.image_image, Units.val_one]
   rw [Set.image_image] at h2
   simpa using h2
 end

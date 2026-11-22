@@ -35,8 +35,7 @@ private theorem mem_omA_iff' {I : Finset (Fin (d + 1))} {i : Fin (d + 1)} (hi : 
   constructor
   · intro hy
     have h1 := hy i hi
-    rw [key, div_self (Units.ne_zero (x i)), one_pow] at h1
-    rwa [one_div, inv_mul_eq_div] at h1
+    rwa [key, div_self (Units.ne_zero (x i)), one_pow, one_div, inv_mul_eq_div] at h1
   · intro hy i' hi'
     rw [key, div_mul_eq_mul_div, mul_div_assoc]
     exact Subalgebra.mul_mem _ (Subalgebra.pow_mem _ (ratio_mem x hi i') _) hy

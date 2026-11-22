@@ -40,8 +40,7 @@ private theorem wmap_wmul {J : Type} (f : ℂ →+* ℂ) (a s : List J →₀ �
   unfold wmul wmap
   have hm : ∀ t : List J →₀ ℂ, Finsupp.mapRange f f.map_zero t =
       Finsupp.mapRange.addMonoidHom f.toAddMonoidHom t := fun t => rfl
-  rw [Finsupp.sum_mapRange_index (by intro w; simp)]
-  rw [hm, map_finsuppSum]
+  rw [Finsupp.sum_mapRange_index (by intro w; simp), hm, map_finsuppSum]
   refine Finsupp.sum_congr (fun w _ => ?_)
   rw [map_finsuppSum, Finsupp.sum_mapRange_index (by intro w'; simp)]
   refine Finsupp.sum_congr (fun w' _ => ?_)

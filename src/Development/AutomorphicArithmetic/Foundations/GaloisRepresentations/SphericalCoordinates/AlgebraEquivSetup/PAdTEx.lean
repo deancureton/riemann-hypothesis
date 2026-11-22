@@ -27,8 +27,7 @@ theorem UpperTheory.Gal.W2.Seed.pAdTEx :
     let b := Module.finBasis ℚ E
     obtain ⟨c, rfl⟩ := TensorProduct.eq_repr_basis_right b y
     have hc0 : (c.mapRange Q.ρ (map_zero _)).sum (fun i m => m ⊗ₜ[ℚ] b i) = 0 := by
-      rw [Finsupp.sum_mapRange_index (by simp)]
-      rw [← hy, Finsupp.sum, Finsupp.sum, map_sum]
+      rw [Finsupp.sum_mapRange_index (by simp), ← hy, Finsupp.sum, Finsupp.sum, map_sum]
       rfl
     have hc := TensorProduct.sum_tmul_basis_right_eq_zero b _ hc0
     have hci : ∀ i, e * c i = c i := by

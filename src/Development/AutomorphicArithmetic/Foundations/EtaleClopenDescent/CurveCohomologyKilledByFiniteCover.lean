@@ -209,8 +209,7 @@ theorem UpperTheory.Cb.curve_cohomology_killed_by_finite_cover :
   obtain ⟨k, hk⟩ := UpperTheory.curve_cohomology_killed_by_finite_cover.exists_affU (C := C)
   obtain ⟨C', γ, h1, h2, h3, h4⟩ := UpperTheory.curve_cohomology_killed_by_finite_cover.kill hy hH0 q Ω hq k c hc ⊤ hk m i hm (pl q i (⊤ : C.Opens).ι m x)
   refine ⟨C', γ, h1, h2, ?_⟩
-  rw [← pl_comp] at h4
-  rw [morphismRestrict_ι, pl_comp] at h4
+  rw [← pl_comp, morphismRestrict_ι, pl_comp] at h4
   have hι : ∀ V : C'.Opens, V = ⊤ → IsIso V.ι := by
     rintro _ rfl
     rw [← Scheme.topIso_hom]

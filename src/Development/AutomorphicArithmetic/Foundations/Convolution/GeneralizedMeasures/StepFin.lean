@@ -167,8 +167,7 @@ theorem UpperTheory.ConvolutionTheory.GM.stepFin :
       rw [← coset_sum J h hinv t ht (cf w x), Finset.mul_sum]
       refine Finset.sum_congr rfl fun c _ => ?_
       ring
-    rw [hfs, he]
-    rw [Ofin_sum]
+    rw [hfs, he, Ofin_sum]
     refine ContinuousLinearMap.ext fun v => ?_
     simp only [ContinuousLinearMap.sum_apply, ContinuousLinearMap.smul_apply, ContinuousLinearMap.comp_apply]
     refine Finset.sum_congr rfl fun c _ => ?_

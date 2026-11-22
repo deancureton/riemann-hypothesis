@@ -173,8 +173,7 @@ theorem UpperTheory.Gal.productCup_of_system.locD_of :
           rw [this, map_zero]
       · have e := wd_pw act r (a ^ N) y
         change wd (fun l => act (r l)) (pwR act _ (a ^ N) y) = pwR act _ (a ^ N) c
-        rw [e]
-        rw [← hyc]
+        rw [e, ← hyc]
         rfl
   · let T : Set S := Set.range r
     let Pn : Submodule ℂ E :=
