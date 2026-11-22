@@ -27,5 +27,4 @@ theorem UpperTheory.Reformulated.B.DiagonalizeThreeByThree.diagonalize_three_by_
     exact h
   obtain ⟨u, hu⟩ := hP
   refine ⟨u, ?_⟩
-  rw [Matrix.mul_assoc, hu, hMP, ← hu, ← Matrix.mul_assoc]
-  rw [Units.inv_mul, Matrix.one_mul]
+  rw [Matrix.mul_assoc, hu, hMP, ← hu, ← Matrix.mul_assoc, Units.inv_mul, Matrix.one_mul]

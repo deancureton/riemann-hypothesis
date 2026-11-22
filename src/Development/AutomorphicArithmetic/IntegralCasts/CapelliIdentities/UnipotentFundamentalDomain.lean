@@ -82,8 +82,7 @@ theorem UpperTheory.Reformulated.B.UnipotentFundamentalDomain.val_two :
     rw [hJ, hJtop, Ideal.mul_top]
   have hp0 : (p : NumberField.RingOfIntegers K) ≠ 0 := by
     intro h
-    rw [h] at hnorm
-    rw [Set.singleton_zero, Ideal.span_zero, Ideal.absNorm_bot] at hnorm
+    rw [h, Set.singleton_zero, Ideal.span_zero, Ideal.absNorm_bot] at hnorm
     exact pow_ne_zero _ hp.ne_zero hnorm.symm
   have h1 : P.intValuation (p : NumberField.RingOfIntegers K) ≤ WithZero.exp (-((1 : ℕ) : ℤ)) := by
     rw [IsDedekindDomain.HeightOneSpectrum.intValuation_le_pow_iff_dvd, hspan, pow_one]

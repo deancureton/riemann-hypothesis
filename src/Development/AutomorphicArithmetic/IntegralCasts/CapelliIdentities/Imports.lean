@@ -44,8 +44,7 @@ theorem UpperTheory.Reformulated.B.DYda8.main :
     rw [hc g φ, mul_assoc, mul_inv_cancel, mul_one]
   rw [hcomm, ← hg] at hcj
   have hx := hcj x
-  rw [hund] at hx
-  rw [Int.card_ideal_quot, Ideal.mem_comap] at hx
+  rw [hund, Int.card_ideal_quot, Ideal.mem_comap] at hx
   have he : (MulSemiringAction.toAlgHom ℤ (NumberField.RingOfIntegers E) φ) x =
       NumberField.RingOfIntegers.mapRingEquiv φ.toRingEquiv x := by
     ext
