@@ -70,7 +70,7 @@ For a branch with Lean source edits, seed Lake from a successful build of a
 local ancestor, such as the upstream commit the branch started from.
 
 ```bash
-lake exe cache get --from upstream/main
+lake exe cache get --from "$(git merge-base HEAD upstream/main)"
 source scripts/cache-env.sh
 lake build
 ```

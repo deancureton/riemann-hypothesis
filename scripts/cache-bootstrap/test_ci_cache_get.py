@@ -39,6 +39,44 @@ def rejects(call):
     raise AssertionError("invalid CI cache was accepted")
 
 
+def check_public_cache_directory(root, revision):
+    scripts = root / "scripts"
+    scripts.mkdir()
+    for name in ("lake-cache-get.sh", "cache-env.sh"):
+        shutil.copyfile(HERE.parent / name, scripts / name)
+    shutil.copyfile(HERE.parent / "Cache.lean", root / "src/CacheEntry.lean")
+    with (root / "lakefile.toml").open("a") as config:
+        config.write('''
+
+[[lean_exe]]
+name = "cache"
+root = "CacheEntry"
+
+[[require]]
+name = "mathlib"
+path = "fixture-mathlib"
+''')
+    (scripts / "ci-cache-get.py").write_text(
+        "import json, os, sys\n"
+        "print(json.dumps([os.environ['LAKE_CACHE_DIR'], *sys.argv[1:]]))\n"
+    )
+    mathlib = root / "fixture-mathlib"
+    mathlib.mkdir()
+    (mathlib / "lakefile.toml").write_text(
+        'name = "mathlib"\n[[lean_exe]]\nname = "cache"\nroot = "CacheStub"\n'
+    )
+    (mathlib / "CacheStub.lean").write_text("def main : IO Unit := pure ()\n")
+    run(root, "lake", "update")
+    try:
+        output = run(root, "lake", "exe", "cache", "get", "--from", revision)
+    except subprocess.CalledProcessError as error:
+        raise AssertionError(error.output) from error
+    directory, *args = json.loads(output.splitlines()[-1])
+    build_directory = run(root, "bash", "-c", "source scripts/cache-env.sh && printenv LAKE_CACHE_DIR")
+    assert directory == build_directory == str(root / ".lake/cache"), (directory, build_directory)
+    assert args == ["--from", revision], args
+
+
 def main():
     with tempfile.TemporaryDirectory(prefix="rh-ci-client-") as temporary:
         root = Path(temporary)
@@ -180,6 +218,7 @@ revisionEndpoint = "https://example.invalid/revisions"
         different = root / "lakefile.toml"
         different.write_text(different.read_text() + "\n# Different configuration\n")
         rejects(lambda: client.current_identity(root, head))
+        check_public_cache_directory(root, head)
     print("PASS dynamic CI client: exact restore, validated ancestor seeding, native cache matching, integrity checks")
 
 
