@@ -102,8 +102,7 @@ theorem mem_mCoordIdeal {y : (Σ k, J k) → Ω} {g : MRing J} {d : K → ℕ} (
     rw [Fintype.prod_sigma]
     refine Finset.prod_congr rfl fun k _ => ?_
     simp only [Finset.prod_pow_eq_pow_sum, hg m hm k]
-  rw [mCoordIdeal, RingHom.mem_ker]
-  rw [key, h, map_zero, zero_mul]
+  rw [mCoordIdeal, RingHom.mem_ker, key, h, map_zero, zero_mul]
 
 omit [∀ k, Fintype (J k)] in
 theorem mseg_ne_zero {y : (Σ k, J k) → Ω} {W : Ideal (MRing J)} (hle : mCoordIdeal y ≤ W) {s : ∀ k, J k}

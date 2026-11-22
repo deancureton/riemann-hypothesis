@@ -38,8 +38,7 @@ theorem teich_dvd (r : Res l K) [FiniteDimensional ℚ_[l] K] (f : ℕ) (hf : 0 
     ∃ N : ℕ, f ∣ N ∧ Pb.Mid.TeichmullerCongruence r N := by
   obtain ⟨N, hfN, hN⟩ := close_dvd r f hf
   refine ⟨N, hfN, fun n x => ?_⟩
-  rw [Pb.Mid.phiQ_pow, Pb.G3.struct, ← Pb.G3.cong n _ _ (hN x)]
-  rw [map_pow, map_pow]
+  rw [Pb.Mid.phiQ_pow, Pb.G3.struct, ← Pb.G3.cong n _ _ (hN x), map_pow, map_pow]
   rfl
 
 end CrystallineSemistableComparison.crystallineComparison.PinP

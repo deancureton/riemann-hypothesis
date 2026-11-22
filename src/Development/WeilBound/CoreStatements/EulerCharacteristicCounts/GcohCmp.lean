@@ -134,8 +134,7 @@ theorem gc1 : Sgc1 := by
     exists_coc A 1 _ (lc_of_cont A e (z.2.1.comp (continuous_apply 0))) (by
       refine (d_comp rho A e he 1 fun s => z.1 (s 0)).trans ?_
       funext s
-      rw [dn_one, z.2.2 (s 0) (s 1)]
-      rw [show ∀ a b : M, b - (a + b) + a = 0 from fun a b => by abel]
+      rw [dn_one, z.2.2 (s 0) (s 1), show ∀ a b : M, b - (a + b) + a = 0 from fun a b => by abel]
       exact map_zero e)
   have hv : ∀ s : Fin 1 → G, s = fun _ => s 0 := fun s => funext fun i => by
     rw [Subsingleton.elim i 0]

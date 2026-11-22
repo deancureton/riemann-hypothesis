@@ -129,8 +129,7 @@ theorem levi_fs_zero {κ : Type} [Fintype κ] {z : κ → ℂ} (hz : z ≠ 0) (w
     rw [WithLp.toLp_smul, norm_smul]
     simp
   unfold levi at h
-  rw [key, key, hI, hIn, Complex.I_mul_re, neg_sq] at h
-  rw [← add_div, div_div, div_eq_zero_iff] at h
+  rw [key, key, hI, hIn, Complex.I_mul_re, neg_sq, ← add_div, div_div, div_eq_zero_iff] at h
   have hsum : ‖WithLp.toLp 2 w‖ ^ 2 * ‖WithLp.toLp 2 z‖ ^ 2 =
       (inner ℂ (WithLp.toLp 2 z) (WithLp.toLp 2 w)).re ^ 2 +
         (inner ℂ (WithLp.toLp 2 z) (WithLp.toLp 2 w)).im ^ 2 := by

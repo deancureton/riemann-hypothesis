@@ -98,8 +98,7 @@ theorem hTens_eq {R K : Type} [CommRing R] [CommRing K] [Algebra R K] (c : K →
   simp only [hTens, Matrix.trace, Matrix.diag, Matrix.mul_apply, Matrix.transpose_apply, Matrix.map_apply, Finset.sum_mul]
   rw [Finset.sum_comm]
   refine Finset.sum_congr rfl fun j _ => ?_
-  rw [Finset.sum_comm]
-  rw [Finset.sum_congr rfl fun k _ => Finset.sum_comm, Finset.sum_comm]
+  rw [Finset.sum_comm, Finset.sum_congr rfl fun k _ => Finset.sum_comm, Finset.sum_comm]
   refine Finset.sum_congr rfl fun l _ => Finset.sum_congr rfl fun k _ => Finset.sum_congr rfl fun i _ => by ring
 
 theorem symp_act {R K : Type} [CommRing R] [CommRing K] [Algebra R K] (c : K →ₐ[R] K) (ξ : K) (JA : Matrix (Fin n) (Fin n) K)

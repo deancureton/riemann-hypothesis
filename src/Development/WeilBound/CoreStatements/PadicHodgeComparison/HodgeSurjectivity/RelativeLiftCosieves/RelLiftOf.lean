@@ -80,8 +80,7 @@ theorem relLiftOf_pf : RelLiftOf := by
       rw [map_sub, hz₀', CH.d_d, sub_zero]
     refine ⟨z₀ - CH.d (G q a) m (extZ (G q a) hQ' b'), hz, fun s hs => ?_, ?_⟩
     · change z₀ s - CH.d (G q a) m (extZ (G q a) hQ' b') s = 0
-      rw [d_extZ (G q a) hQ' b' s ⟨trivial, hs⟩]
-      rw [hb']
+      rw [d_extZ (G q a) hQ' b' s ⟨trivial, hs⟩, hb']
       exact sub_self _
     · show Submodule.Quotient.mk _ = Submodule.Quotient.mk _
       rw [Submodule.Quotient.eq]

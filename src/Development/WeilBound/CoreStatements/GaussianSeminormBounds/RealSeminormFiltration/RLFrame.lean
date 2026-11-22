@@ -104,8 +104,7 @@ theorem diag_ex {n : ℕ} (M φ : Matrix (Fin n) (Fin n) ℂ) (hM : M.IsHermitia
   have hU2 : U * star U = 1 := hK.eigenvectorUnitary.2.2
   have hD : star U * (Qᴴ * M * Q) * U = Matrix.diagonal (fun i => (hK.eigenvalues i : ℂ)) := by
     have := hK.conjStarAlgAut_star_eigenvectorUnitary
-    rw [Unitary.conjStarAlgAut_apply] at this
-    rw [Unitary.coe_star, star_star] at this
+    rw [Unitary.conjStarAlgAut_apply, Unitary.coe_star, star_star] at this
     exact this
   have hφC : φ * (Q * U) = Q * U * Matrix.diagonal (fun i => (hK.eigenvalues i : ℂ)) := by
     rw [← hD, hKe]

@@ -231,8 +231,7 @@ theorem d2 : D2 := by
     have h2 := hC' i v hv
     have h3 : sobNorm σ (S i) v ≤ sobNorm σ (S i) w + sobNorm σ (S i) (w - v) := by
       have := sob_add hU (S i) (hS i) hw (hsub _ _ (hsm v hv) hw)
-      rw [add_sub_cancel] at this
-      rwa [sob_comm hU (S i) (hS i) (hsm v hv) hw] at this
+      rwa [add_sub_cancel, sob_comm hU (S i) (hS i) (hsm v hv) hw] at this
     have h4 : p i (F w) ≤ p i (F w - T₀ v) + p i (T₀ v) := by
       have := map_add_le_add (p i) (F w - T₀ v) (T₀ v)
       rwa [sub_add_cancel] at this

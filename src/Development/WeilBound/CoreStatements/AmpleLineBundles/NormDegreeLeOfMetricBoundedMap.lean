@@ -34,8 +34,7 @@ theorem gram_map_le (E E' : HermitianBundle.{0} K) (φ : E.carrier →ₗ[𝓞 K
     exact (pow_le_pow_iff_left₀ (norm_nonneg _)
       (mul_nonneg (Real.sqrt_nonneg _) (norm_nonneg _)) two_ne_zero).mp h3
   have key := LatticeLemmas.gramDet_le_of_norm_le E.metric (E'.metric.comap φ hφ) σ (Real.sqrt c) hnorm hs
-  rw [gramDet_comap] at key
-  rwa [max_eq_left (Real.sqrt_nonneg c), Real.sq_sqrt hc.le] at key
+  rwa [gramDet_comap, max_eq_left (Real.sqrt_nonneg c), Real.sq_sqrt hc.le] at key
 
 theorem normDeg_map (E E' : HermitianBundle.{0} K) (φ : E.carrier →ₗ[𝓞 K] E'.carrier) (c : ℝ)
     (hφ : Function.Injective φ) (hc : 0 < c)

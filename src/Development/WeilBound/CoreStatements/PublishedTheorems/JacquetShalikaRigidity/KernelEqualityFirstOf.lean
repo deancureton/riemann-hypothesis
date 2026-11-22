@@ -416,8 +416,7 @@ theorem law_fC (hG0 : jumpWindows.G0) (hG5 : jumpWindows.G5) (hP2 : P2) (hP3 : P
     have h1 := hW _ φ hgood (hsat w) _ hgσ x
     have h2 := hW _ φ' hgood' (hsat' w) g hg x
     have h3 := law_sph hK8a hk α α' w hχ hn hκ l hl
-    rw [hPW g', hPW g, hdep.1, e1, h1, h2, hηe, map_mul]
-    rw [← h3]
+    rw [hPW g', hPW g, hdep.1, e1, h1, h2, hηe, map_mul, ← h3]
     ring
 
 open scoped ValuativeRel

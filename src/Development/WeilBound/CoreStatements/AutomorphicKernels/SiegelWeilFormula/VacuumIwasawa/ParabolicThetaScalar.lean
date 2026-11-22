@@ -147,8 +147,7 @@ theorem parabolic_theta_scalar (hT : TAll) {d : SD σ} (i₀ : Fin d.n) {q : d.G
   have hXD : X * (D⁻¹).1ᵀ = X := by
     have h1 : X * D.1ᵀ = X := by
       ext a j
-      rw [Matrix.mul_apply]
-      rw [Finset.sum_eq_single j]
+      rw [Matrix.mul_apply, Finset.sum_eq_single j]
       · rw [Matrix.transpose_apply]
         by_cases hj : j = i₀
         · subst hj; rw [hX a, zero_mul]

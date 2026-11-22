@@ -192,8 +192,7 @@ theorem rho_semisimple {E : Type} [Field E] [NumberField E] {k W : Type} [Field 
     exact (minpoly.irreducible (Algebra.IsIntegral.isIntegral _)).separable
   have h3 : ((minpoly ℤ a).map (Int.castRingHom k)).Separable := by
     have := h2.map (f := algebraMap ℚ k)
-    rw [Polynomial.map_map] at this
-    rwa [RingHom.eq_intCast' ((algebraMap ℚ k).comp (algebraMap ℤ ℚ))] at this
+    rwa [Polynomial.map_map, RingHom.eq_intCast' ((algebraMap ℚ k).comp (algebraMap ℤ ℚ))] at this
   refine Module.End.isSemisimple_of_squarefree_aeval_eq_zero h3.squarefree ?_
   rw [aeval_rho, minpoly.aeval, map_zero]
 

@@ -115,8 +115,7 @@ theorem satake_eigenvalue_formula : lift_levelP_alt₂ := by
   have hK := SatakeEigenvalues.KGL_eq w n
   refine ⟨fun g hg => GlobalTheory.LGrp.mem_fixed.1 hfix g (hK ▸ hg), fun r hr => ?_⟩
   have h1 := hT _ (SatakeEigenvalues.isUnifV_uniformizer w) r hr
-  rw [heckeVec, SatakeEigenvalues.Tj_eq w hr, SatakeEigenvalues.satEig_eq w hr] at h1
-  rw [hK] at h1
+  rw [heckeVec, SatakeEigenvalues.Tj_eq w hr, SatakeEigenvalues.satEig_eq w hr, hK] at h1
   exact h1
 
 end PositivityTheory.JacquetShalikaLocal

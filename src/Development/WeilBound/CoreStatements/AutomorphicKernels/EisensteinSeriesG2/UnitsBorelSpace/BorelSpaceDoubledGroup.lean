@@ -17,8 +17,7 @@ theorem units_borelSpace (M : Type*) [Monoid M] [TopologicalSpace M] [T2Space M]
   haveI : SecondCountableTopology Mˣ := hce.isEmbedding.secondCountableTopology
   refine ⟨le_antisymm ?_ ?_⟩
   · show MeasurableSpace.comap Units.val ‹MeasurableSpace M› ≤ borel Mˣ
-    rw [BorelSpace.measurable_eq (α := M)]
-    rw [← @borel_comap Mˣ M Units.val _]
+    rw [BorelSpace.measurable_eq (α := M), ← @borel_comap Mˣ M Units.val _]
     exact borel_anti (continuous_iff_le_induced.mp Units.continuous_val)
   · rw [borel_eq_generateFrom_isClosed]
     refine MeasurableSpace.generateFrom_le fun C hC => ?_

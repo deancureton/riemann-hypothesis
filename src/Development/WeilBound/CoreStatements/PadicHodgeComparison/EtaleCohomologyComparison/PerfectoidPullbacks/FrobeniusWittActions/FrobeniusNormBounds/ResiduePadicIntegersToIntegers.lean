@@ -306,8 +306,7 @@ theorem close (r : Res l K) [FiniteDimensional ℚ_[l] K] :
 theorem teich (r : Res l K) [FiniteDimensional ℚ_[l] K] : ∃ N : ℕ, Mid.TeichmullerCongruence r N := by
   obtain ⟨N, hN⟩ := close r
   refine ⟨N, fun n x => ?_⟩
-  rw [Mid.phiQ_pow, struct, ← cong n _ _ (hN x)]
-  rw [map_pow, map_pow]
+  rw [Mid.phiQ_pow, struct, ← cong n _ _ (hN x), map_pow, map_pow]
   rfl
 
 end CrystallineSemistableComparison.Pb.G3
