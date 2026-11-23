@@ -1,4 +1,8 @@
-import Formalism.SizeWindowBrackets.TraceSquareAndDiagBounds
+module
+
+public import Formalism.SizeWindowBrackets.TraceSquareAndDiagBounds
+
+@[expose] public section
 
 open Matrix
 open scoped ComplexOrder
@@ -92,9 +96,8 @@ section CS
 
 variable {m n : Type} [Fintype m] [Fintype n]
 
-private theorem le_sqrt_of_sq_le' {x y : ℝ} (h : x ^ 2 ≤ y) : x ≤ Real.sqrt y := by
-  refine (le_abs_self x).trans ?_
-  exact Real.abs_le_sqrt h
+private theorem le_sqrt_of_sq_le' {x y : ℝ} (h : x ^ 2 ≤ y) : x ≤ Real.sqrt y :=
+  Real.le_sqrt_of_sq_le h
 
 private theorem sum_norm_mul_le_hsNorm_mul (A B : Matrix m n ℂ) :
     ∑ i, ∑ j, ‖A i j‖ * ‖B i j‖ ≤ hsNorm A * hsNorm B := by
@@ -127,8 +130,7 @@ lemma hsSq_one (n : ℕ) : hsSq (1 : Matrix (Fin n) (Fin n) ℂ) = n := by
 
 end CS
 
-private theorem re_le_norm' (z : ℂ) : z.re ≤ ‖z‖ := by
-  exact Complex.re_le_norm z
+private theorem re_le_norm' (z : ℂ) : z.re ≤ ‖z‖ := Complex.re_le_norm z
 
 private theorem neg_re_le_norm' (z : ℂ) : -z.re ≤ ‖z‖ := by
   have h := re_le_norm' (-z)
@@ -476,8 +478,8 @@ end RamMain
 
 section Num
 
-set_option maxHeartbeats 800000 in
 
+set_option maxHeartbeats 800000 in
 lemma num_main {s η0 η1 a : ℝ} (hs0 : 0 < s) (hs : s ≤ 1 / 4) (hη0 : -1 ≤ η0) (hη0' : η0 ≤ s / 2)
     (hη1' : η1 ≤ s / 2) (_hL : 0 ≤ 1 + η1) (ha : 0 ≤ a) (ha' : a ≤ s / 2) :
     (1 + η1) * ((1 + η0) + (1 + a) ^ 2 * s) ≤ (1 + 5 * s) * (1 - a) ^ 2 := by
@@ -501,8 +503,8 @@ lemma num_main {s η0 η1 a : ℝ} (hs0 : 0 < s) (hs : s ≤ 1 / 4) (hη0 : -1 �
     mul_le_mul_of_nonneg_left hsq2 (by linarith)
   linarith
 
-set_option maxHeartbeats 800000 in
 
+set_option maxHeartbeats 800000 in
 lemma num_ram {s a t : ℝ} (hs0 : 0 < s) (hs : s ≤ 1 / 20) (ha : 0 ≤ a) (ha' : a ≤ s / 2)
     (ht : 0 ≤ t) (ht' : t ≤ 1 / 2) :
     (1 + 5 * s) * (1 - a) ^ 2 ≤ (1 + 5 * s + 3 * t) * (1 - a - t ^ 2 - t * a) ^ 2 := by
@@ -586,8 +588,8 @@ lemma cor_common (B : ∀ u, Matrix (Fin D) (Fin (d u)) ℂ) (ga : ι → ℝ) (
   rw [he2]
   linarith
 
-set_option maxHeartbeats 800000 in
 
+set_option maxHeartbeats 800000 in
 theorem compressTraceSquareBound : CompressTraceSquareBound := by
   intro ι _ D d r B V ga Dstar sg η0 η1 e0 de hV hga hD hs0 hs hR hη0 hη0' hη1' he ha' hde0 hde hsum hS
   have hV' : ∀ u, (V u)ᴴ * V u = 1 := hV

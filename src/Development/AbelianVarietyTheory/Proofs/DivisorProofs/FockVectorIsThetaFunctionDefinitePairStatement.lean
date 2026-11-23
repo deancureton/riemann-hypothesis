@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVectorIsThetaFunctionDefinitePair
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacTheta
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FockVectorIsThetaFunctionDefinitePair
+public import Development.AbelianVarietyTheory.Proofs.DivisorProofs.VacTheta
+
+@[expose] public section
 
 open NumberField MeasureTheory
 open scoped Classical

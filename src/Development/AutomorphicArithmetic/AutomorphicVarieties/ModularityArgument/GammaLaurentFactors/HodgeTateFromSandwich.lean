@@ -1,4 +1,8 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.MatchIndOf
+module
+
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.ModularityArgument.GammaLaurentFactors.MatchIndOf
+
+@[expose] public section
 
 noncomputable section
 
@@ -34,7 +38,7 @@ def CoefInd : Prop :=
 
 def SuppBridge : Prop :=
   ∀ (F : Type) [Field F] [ValuativeRel F] [TopologicalSpace F] [IsNonarchimedeanLocalField F] [CharZero F]
-    (n : ℕ) (V : Type) [AddCommGroup V] [Module ℂ V] (π : Representation ℂ (GL (Fin n) F) V) (s : Multiset (GlobalTheory.LocGL.IrrGL F)),
+    (n : ℕ) (V : Type) [AddCommGroup V] [Module ℂ V] (π : Representation ℂ (GL (Fin n) F) V) (s : Multiset (GlobalTheory.LocGL.IrrGL (k := F))),
     GlobalTheory.LocGL.HasSupport π s → ∀ (β : Fin n → ℕ) (W : Type) [AddCommGroup W] [Module ℂ W]
     (σ : Representation ℂ (levi F n β) W), IsAdmissible σ → σ.IsIrreducible → IsCuspidal σ →
     ∀ ι : Representation.IntertwiningMap π (parabolicInd F n β σ), Function.Injective ι → cnt s 1 = cntF σ

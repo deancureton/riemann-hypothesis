@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LintegralUniformNearParameter
+module
+
+public import Mathlib
+public import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LintegralUniformNearParameter
+
+@[expose] public section
+
 open MeasureTheory
 open scoped ENNReal NNReal Topology
 set_option maxHeartbeats 1000000 in

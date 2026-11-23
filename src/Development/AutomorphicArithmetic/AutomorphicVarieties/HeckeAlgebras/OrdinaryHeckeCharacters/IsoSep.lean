@@ -1,8 +1,12 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.CoefficientRepTrivialOnUnramified
-import Mathlib.RingTheory.SimpleModule.Basic
-import Mathlib.RepresentationTheory.Irreducible
-import Mathlib.LinearAlgebra.Basis.VectorSpace
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsoSeparation
+module
+
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.HeckeAlgebras.CoefficientRepTrivialOnUnramified
+public import Mathlib.RingTheory.SimpleModule.Basic
+public import Mathlib.RepresentationTheory.Irreducible
+public import Mathlib.LinearAlgebra.Basis.VectorSpace
+public import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.IsoSeparation
+
+@[expose] public section
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.LocGL GlobalTheory.GalOfCusp GlobalTheory.SmGL GlobalTheory.SplitWeil UpperTheory.V UpperTheory.V.Hi
 

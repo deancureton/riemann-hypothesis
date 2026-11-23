@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromSpecComapEqBotEqGenericPoint
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FromSpecComapEqBotEqGenericPoint
+
+@[expose] public section
+
 open CategoryTheory AlgebraicGeometry TopologicalSpace
 open scoped TensorProduct
 set_option maxHeartbeats 1000000 in

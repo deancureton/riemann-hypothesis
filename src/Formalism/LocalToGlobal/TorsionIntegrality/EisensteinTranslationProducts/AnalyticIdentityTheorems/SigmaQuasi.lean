@@ -1,4 +1,8 @@
-import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.Legendre
+module
+
+public import Formalism.LocalToGlobal.TorsionIntegrality.EisensteinTranslationProducts.Legendre
+
+@[expose] public section
 
 noncomputable section
 
@@ -7,14 +11,12 @@ namespace Formalism.L2.Th1.F
 namespace PeriodLatticeBasisLemmas
 
 private theorem mem_lattice_iff_exists_int_comb' (L : PeriodPair) {x : ℂ} :
-    x ∈ L.lattice ↔ ∃ m n : ℤ, (m : ℂ) * L.ω₁ + (n : ℂ) * L.ω₂ = x := by
-  exact L.mem_lattice
+    x ∈ L.lattice ↔ ∃ m n : ℤ, (m : ℂ) * L.ω₁ + (n : ℂ) * L.ω₂ = x := L.mem_lattice
 
-private theorem periodPair_basis_zero_eq_omega_one (L : PeriodPair) : L.basis 0 = L.ω₁ := by
-  exact L.basis_zero
+private theorem periodPair_basis_zero_eq_omega_one (L : PeriodPair) : L.basis 0 = L.ω₁ :=
+  L.basis_zero
 
-private theorem periodPair_basis_one_eq_omega_two (L : PeriodPair) : L.basis 1 = L.ω₂ := by
-  exact L.basis_one
+private theorem periodPair_basis_one_eq_omega_two (L : PeriodPair) : L.basis 1 = L.ω₂ := L.basis_one
 
 private theorem basis_equivFun_real_comb_periods (L : PeriodPair) (s t : ℝ) :
     L.basis.equivFun ((s : ℂ) * L.ω₁ + (t : ℂ) * L.ω₂) = ![s, t] := by
@@ -158,7 +160,7 @@ lemma qp_of_half_notMem (hq : ZetaQuasi) (hl : SigmaLogDeriv) (ho : SigmaOdd) (h
 lemma qp_two_mul (L : PeriodPair) {ω c : ℂ} (h : QP L ω c) (hc : c ^ 2 = 1) : QP L (2 * ω) 1 := by
   unfold QP at h ⊢
   intro z
-  rw [two_mul, map_add, show z + (ω + ω) = z + ω + ω by ring, h (z + ω), h z]
+  rw [two_mul, map_add (f := _), show z + (ω + ω) = z + ω + ω by ring, h (z + ω), h z]
   have hE : Complex.exp (Formalism.L2.Th1.F.wEta L ω * (z + ω + ω / 2)) * Complex.exp (Formalism.L2.Th1.F.wEta L ω * (z + ω / 2))
       = Complex.exp ((Formalism.L2.Th1.F.wEta L ω + Formalism.L2.Th1.F.wEta L ω) * (z + (ω + ω) / 2)) := by
     rw [← Complex.exp_add]
@@ -240,16 +242,16 @@ lemma qp_coords (hq : ZetaQuasi) (hl : SigmaLogDeriv) (ho : SigmaOdd) (hz : Sigm
 
 end PeriodLatticeBasisLemmas
 
-open PeriodLatticeBasisLemmas in
 
+open PeriodLatticeBasisLemmas in
 theorem sigmaQuasi_of (hq : ZetaQuasi) (hl : SigmaLogDeriv) (_he : SigmaEntire) (ho : SigmaOdd)
     (hz : SigmaZero) : SigmaQuasi := by
   intro L ω z hω
   obtain ⟨a, b, rfl⟩ := (_root_.Formalism.L2.Th1.F.PeriodLatticeBasisLemmas.mem_lattice_iff_exists_int_comb' L).mp hω
   exact Formalism.L2.Th1.F.PeriodLatticeBasisLemmas.qp_coords hq hl ho hz L _ a b le_rfl z
 
-open PeriodLatticeBasisLemmas in
 
+open PeriodLatticeBasisLemmas in
 theorem sigmaSimple_of (hq : SigmaQuasi) (he : SigmaEntire)
     (h0 : ∀ L : PeriodPair, deriv (wSigma L) 0 = 1) : SigmaSimple := by
   intro L

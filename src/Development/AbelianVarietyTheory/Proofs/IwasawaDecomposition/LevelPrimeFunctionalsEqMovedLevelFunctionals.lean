@@ -1,9 +1,14 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftsInvOne
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiamondElementIntegralSupportLastRow
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPointOfLastCoordinateDilationOnePrime
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InclMulInvMul
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.LiftsInvOne
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.DiamondElementIntegralSupportLastRow
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.IsPointOfLastCoordinateDilationOnePrime
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.InclMulInvMul
+
+@[expose] public section
+
 open NumberField IsDedekindDomain Formalism.BasicNotions Formalism.MainNotions Formalism.L2.Col Formalism.L2.DIV Formalism.L2.Ker Formalism.UG Formalism.L2.Forms GlobalTheory.Mem GlobalTheory.Mem.Chr GlobalTheory.Mem.Col2 GlobalTheory.Mem.Col2.TC GlobalTheory.Mem.Col2.AdT Matrix
 open scoped TensorProduct
 attribute [local instance] GlobalTheory.Mem.Col2.starE Formalism.BasicNotions.Host.cmStar
@@ -22,10 +27,10 @@ theorem hasRes_add {P : HeightOneSpectrum (𝓞 E)} {a b : P.adicCompletion E} {
     (ha : HasRes P a c) (hb : HasRes P b d) : HasRes P (a + b) (c + d) := by
   obtain ⟨r, rfl, hr⟩ := ha
   obtain ⟨r', rfl, hr'⟩ := hb
-  refine ⟨r + r', by rw [map_add], ?_⟩
+  refine ⟨r + r', by rw [map_add (f := _)], ?_⟩
   have e : a + b - algebraMap E (P.adicCompletion E) (algebraMap (𝓞 E) E (r + r')) =
       (a - algebraMap E _ (algebraMap (𝓞 E) E r)) + (b - algebraMap E _ (algebraMap (𝓞 E) E r')) := by
-    simp only [map_add]; ring
+    simp only [map_add (f := _)]; ring
   rw [e]
   exact Valuation.map_add_lt _ hr hr'
 
@@ -81,7 +86,8 @@ theorem hasRes_last {F E : Type} [Field F] [NumberField F] [Field E] [NumberFiel
   rw [pullbackVector_mul_right]
   have e1 : adAt F P ((((k⁻¹ : GL (Fin n) (AfE F E)) : Matrix (Fin n) (Fin n) (AfE F E)) *ᵥ GlobalTheory.Mem.Col2.pullV y x) r) =
       ∑ j, adAt F P ((k⁻¹ : GL (Fin n) (AfE F E)).1 r j) * adAt F P (GlobalTheory.Mem.Col2.pullV y x j) := by
-    simp only [Matrix.mulVec, dotProduct, map_sum, map_mul]
+    set_option synthInstance.maxHeartbeats 100000 in
+      simp only [Matrix.mulVec, dotProduct, map_sum, map_mul]
   have e2 : b * cj r = ∑ j, (if j = r then b else 0) * cj j := by
     simp only [ite_mul, zero_mul, Finset.sum_ite_eq', Finset.mem_univ, if_true]
   rw [e1, e2]
@@ -123,7 +129,7 @@ def resL (hLb : IsBase S π) (hP : P.under (𝓞 F) = v) (h3 : π ∉ (conjPrime
     have hst := Classical.choose_spec (exists_hasRes hP ((s + t).1 r) (val_coord_le hLb hP h3 (s + t).2 r))
     refine hst.unique ?_
     have e : psi v P hP ((s + t).1 r) = psi v P hP (s.1 r) + psi v P hP (t.1 r) := by
-      rw [← map_add]; rfl
+      rw [← map_add (f := _)]; rfl
     rw [e]
     exact hasRes_add hs ht
 
@@ -170,9 +176,9 @@ theorem exists_fun (hLb : IsBase S π) (hv : (T : 𝓞 F) ∈ v.asIdeal) (hP : P
   · refine hker _ ?_
     rw [hg]
   · intro m m'
-    rw [← sub_eq_zero, ← map_add, ← map_sub]
+    rw [← sub_eq_zero, ← map_add (f := _), ← map_sub]
     refine hker _ ?_
-    rw [map_sub, map_add, hg, hg, hg, sub_self]
+    rw [map_sub, map_add (f := _), hg, hg, hg, sub_self]
   · show ψ (g (S.fT v hv s)) = c
     have e : ψ (g (S.fT v hv s)) = ψ s := by
       rw [← sub_eq_zero, ← map_sub]

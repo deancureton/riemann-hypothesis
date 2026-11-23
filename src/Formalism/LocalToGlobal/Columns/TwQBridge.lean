@@ -1,4 +1,8 @@
-import Formalism.LocalToGlobal.Columns.TwQDense
+module
+
+public import Formalism.LocalToGlobal.Columns.TwQDense
+
+@[expose] public section
 
 open NumberField IsDedekindDomain
 open scoped TensorProduct

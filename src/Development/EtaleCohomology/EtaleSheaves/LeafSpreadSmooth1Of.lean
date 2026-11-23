@@ -1,5 +1,9 @@
-import Development.EtaleCohomology.EtaleSheaves.SpreadingOutQuasiFiniteness
-import Development.EtaleCohomology.EtaleSheaves.LeafSpreadSmoothAffSmPf
+module
+
+public import Development.EtaleCohomology.EtaleSheaves.SpreadingOutQuasiFiniteness
+public import Development.EtaleCohomology.EtaleSheaves.LeafSpreadSmoothAffSmPf
+
+@[expose] public section
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite LateralTheory.E.E4 LateralTheory.E.LeafDescendVCut TensorProduct

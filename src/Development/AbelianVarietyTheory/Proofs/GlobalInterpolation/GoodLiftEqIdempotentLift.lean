@@ -1,11 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LatIntZero
-import Formalism.LocalToGlobal.KernelLattices.DeterminantCokernelCount.CokernelIndexFactors.StatementB
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ImagQuadraticMaximalOrderArithmeticAtSplitPrime
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MkLeContinuumOfDenseRange
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.OpUConstMul
-import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CmThetaOperatorInvariantOfLiftCongrOne
-import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsDualBasisOfUnimodularLatticeAtPrimeStatement
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.GlobalTwisting.LatIntZero
+public import Formalism.LocalToGlobal.KernelLattices.DeterminantCokernelCount.CokernelIndexFactors.StatementB
+public import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ImagQuadraticMaximalOrderArithmeticAtSplitPrime
+public import Development.AbelianVarietyTheory.Proofs.JetHarmonics.MkLeContinuumOfDenseRange
+public import Development.AbelianVarietyTheory.Proofs.JetHarmonics.OpUConstMul
+public import Development.AbelianVarietyTheory.Proofs.JetHarmonics.CmThetaOperatorInvariantOfLiftCongrOne
+public import Development.AbelianVarietyTheory.Proofs.GlobalInterpolation.ExistsDualBasisOfUnimodularLatticeAtPrimeStatement
+
+@[expose] public section
 
 open GlobalTheory.MomN Formalism.L2.Ker.JMB
 open scoped ComplexConjugate
@@ -17,7 +21,7 @@ variable {g : ℕ} {q : ℕ} [Fact q.Prime]
 
 theorem hf_add_right (Hm : Matrix (Fin g) (Fin g) ℂ) (x y y' : Fin g → ℂ) :
     hf Hm x (y + y') = hf Hm x y + hf Hm x y' := by
-  simp only [hf, Pi.add_apply, map_add, mul_add, Finset.sum_add_distrib]
+  simp only [hf, Pi.add_apply, map_add (f := _), mul_add, Finset.sum_add_distrib]
 
 theorem hf_neg_right (Hm : Matrix (Fin g) (Fin g) ℂ) (x y : Fin g → ℂ) : hf Hm x (-y) = -hf Hm x y := by
   have h := hf_smul_right Hm (-1) x y
@@ -68,7 +72,7 @@ theorem goodLift_eq : ∀ (q : ℕ) [Fact q.Prime] (lam : Qbar →+* ℂ_[q]) (g
   obtain ⟨⟨-, -, hcl⟩, hZ, hdiv, hid, -, -, -⟩ := GlobalTheory.MomOne.okArith S.d q ι hS.1 hS.2.1 hsp
   obtain ⟨H1, -, -, H4, H5, H6⟩ := GlobalTheory.HeisOps.heisenberg g S.d S.Hm hS.1.pos hS.2.2.1.isHermitian
   have hlam : ∀ x : ℂ, x ∈ Qbar → lamA lam x = ι x := fun x hx => by
-    rw [lamA, dif_pos hx]; exact (hι ⟨x, hx⟩).symm
+    rw [lamA, dite_eq_left hx]; exact (hι ⟨x, hx⟩).symm
   have hOK1 : ∀ α ∈ OK S.d, ‖ι α‖ ≤ 1 := fun α hα => by
     obtain ⟨⟨a, ha⟩, -⟩ := hZ α hα
     rw [ha, norm_zc]; exact PadicInt.norm_le_one a
@@ -123,7 +127,7 @@ theorem goodLift_eq : ∀ (q : ℕ) [Fact q.Prime] (lam : Qbar →+* ℂ_[q]) (g
       obtain ⟨v1, hv1, rfl, h1⟩ := ih1
       obtain ⟨v2, hv2, rfl, h2⟩ := ih2
       refine ⟨v1 + v2, add_mem hv1 hv2, (smul_add _ _ _).symm, fun x hx => ?_⟩
-      rw [bar, map_add]
+      rw [bar, map_add (f := _)]
       exact (IsUltrametricDist.norm_add_le_max _ _).trans (max_le (h1 x hx) (h2 x hx))
     | neg y1 _ ih =>
       obtain ⟨v1, hv1, rfl, h1⟩ := ih
@@ -235,7 +239,8 @@ theorem goodLift_eq : ∀ (q : ℕ) [Fact q.Prime] (lam : Qbar →+* ℂ_[q]) (g
           _ ≤ _ := by rw [mul_one]; exact hpow_le
       have h3 : ‖ι (beta S.d S.Hm w x)‖ = ‖ι ((s : ℂ) * beta S.d S.Hm w x)‖ := by
         rw [map_mul, norm_mul, hnat1 s hs, one_mul]
-      rw [h3, hsum, map_sum]
+      set_option synthInstance.maxHeartbeats 100000 in
+        rw [h3, hsum, map_sum]
       refine IsUltrametricDist.norm_sum_le_of_forall_le_of_nonneg (hpos _) fun j _ => ?_
       rw [map_mul, norm_mul]
       calc _ ≤ 1 * (q : ℝ) ^ (-(n : ℤ)) :=

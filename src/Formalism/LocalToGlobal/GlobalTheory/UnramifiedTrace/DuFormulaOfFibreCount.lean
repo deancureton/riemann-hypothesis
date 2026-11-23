@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.EopUEq
-import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.SumFib
+module
+
+public import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.EopUEq
+public import Formalism.LocalToGlobal.GlobalTheory.UnramifiedTrace.SumFib
+
+@[expose] public section
 
 noncomputable section
 

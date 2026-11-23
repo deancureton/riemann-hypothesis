@@ -1,0 +1,68 @@
+name: batch queue
+
+# A maintainer queues a pull request for a later batch build by commenting `batch` on it. This
+# adds the `batch queue` label, which is what the people assembling a batch look for.
+#
+# Only a comment whose whole text is `batch` counts, letter case and surrounding blank space
+# aside, and only from someone with write access to this repository. Every other comment is
+# ignored. GitHub runs comment-triggered workflows from the default branch, so a pull request
+# cannot change what this does, and nothing from the pull request is checked out or run.
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions: {}
+
+jobs:
+  label:
+    name: Add `batch queue` when a maintainer comments `batch`
+    # A first filter, so that most comments start no runner: pull requests only, and the comment
+    # has to contain the word. The step below makes the exact comparison.
+    if: ${{ github.event.issue.pull_request && contains(github.event.comment.body, 'batch') }}
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Check the comment and its author, then add the label
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          PR: ${{ github.event.issue.number }}
+          AUTHOR: ${{ github.event.comment.user.login }}
+          BODY: ${{ github.event.comment.body }}
+          LABEL: batch queue
+        run: |
+          # The comment text arrives in an environment variable. It is compared and never run.
+          text=$(printf '%s' "$BODY" | tr -d '\r' | tr '[:upper:]' '[:lower:]')
+          # Drop blank space, line breaks included, from both ends.
+          text="${text#"${text%%[![:space:]]*}"}"
+          text="${text%"${text##*[![:space:]]}"}"
+          if [ "$text" != "batch" ]; then
+            echo "The comment is not just 'batch': nothing to do."
+            exit 0
+          fi
+
+          # Write access or higher. The API reports the maintain role as write and triage as read.
+          if ! permission=$(gh api "repos/$REPO/collaborators/$AUTHOR/permission" --jq .permission); then
+            echo "::error::Could not read the access $AUTHOR has to $REPO."
+            exit 1
+          fi
+          case "$permission" in
+            admin | write) ;;
+            *)
+              echo "$AUTHOR has '$permission' access. Queuing a pull request needs write access."
+              exit 0
+              ;;
+          esac
+
+          # Adding a label that does not exist creates it. If `batch queue` is ever renamed, this
+          # should fail and be noticed, not start a second label.
+          if ! gh api "repos/$REPO/labels/$(jq -rn --arg label "$LABEL" '$label | @uri')" --silent; then
+            echo "::error::There is no '$LABEL' label in $REPO. Was it renamed?"
+            exit 1
+          fi
+
+          gh api -X POST "repos/$REPO/issues/$PR/labels" -f "labels[]=$LABEL" --silent
+          echo "Added '$LABEL' to pull request $PR, as $AUTHOR asked."

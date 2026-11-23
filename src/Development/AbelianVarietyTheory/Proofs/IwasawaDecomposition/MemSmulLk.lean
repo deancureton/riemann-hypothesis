@@ -1,7 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
-import Formalism.LocalToGlobal.HermitianForms.TiedTwJSym
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.StdLvPr
+public import Formalism.LocalToGlobal.HermitianForms.TiedTwJSym
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.TrueColumnSpacesStandardInFrameCoords
+
+@[expose] public section
 
 noncomputable section
 
@@ -161,13 +165,13 @@ def toLk (A : AtTTied u) (i : ℕ) (hi : i ≤ D.R.m) (v : (D.mem u).A.vT) (c : 
 
 variable (A : AtTTied u) (P : ∀ i hi, LvTied u A i hi)
 
-open Classical in
 
+open Classical in
 def prH (i : ℕ) (v : (D.mem u).A.vT) (c : (D.mem u).C.cls i) : Formalism.L2.Herm.Ld D u i c →+ (D.fm u).lv i v c :=
   if hi : i ≤ D.R.m then ((P i hi).pr v c).comp (toLd i hi c) else 0
 
-open Classical in
 
+open Classical in
 def prkH (i : ℕ) (v : (D.mem u).A.vT) (c : (D.mem u).C.cls i) :
     Formalism.L2.Herm.Lk D u (A.Pv v) i c →+ (D.fm u).lk i v c :=
   if hi : i ≤ D.R.m then ((P i hi).prk v c).comp (toLk A i hi v c) else 0
@@ -333,7 +337,7 @@ def mkAtT (he : A.eV = e)
   prk_smul i v c a y := by
     by_cases hi : i ≤ D.R.m
     · rw [prkH_eq A P hi, prkH_eq A P hi, toLk_smul, (P i hi).prk_smul]
-    · simp [prkH, hi]
+    · simp only [prkH, dif_neg hi, AddMonoidHom.zero_apply, smul_zero]
   prk_ker i hi v c y := by
     rw [prkH_eq A P hi, (P i hi).prk_ker]
     exact (mem_smul_Lk A i hi v c y.1).symm

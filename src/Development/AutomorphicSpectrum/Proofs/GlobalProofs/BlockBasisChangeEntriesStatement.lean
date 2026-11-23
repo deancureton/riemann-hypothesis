@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.BlockBasisChangeEntries
+module
+
+public import Mathlib
+public import Development.AutomorphicSpectrum.Proofs.GlobalProofs.BlockBasisChangeEntries
+
+@[expose] public section
+
 open Matrix
 
 set_option maxHeartbeats 1000000 in

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegerCoordinatesBound
+module
+
+public import Mathlib
+public import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IntegerCoordinatesBound
+
+@[expose] public section
+
 open NumberField
 
 set_option maxHeartbeats 1000000 in

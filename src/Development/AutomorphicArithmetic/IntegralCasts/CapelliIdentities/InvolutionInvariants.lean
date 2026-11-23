@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 noncomputable def UpperTheory.Reformulated.B.InvolutionInvariants.Jm :
     {n : Nat} → (Fin n → Bool) → Matrix (Fin n) (Fin n) Complex :=
@@ -684,10 +688,7 @@ theorem UpperTheory.Reformulated.B.InvolutionInvariants.laurent_T_neg_one_mul_T_
       Units.continuous_val) continuous_const
   exact hc.locallyCompactSpace
 
-noncomputable def UpperTheory.Reformulated.B.InvolutionInvariants.muG :
-    {n : Nat} →
-      (ε : Fin n → Bool) → @MeasureTheory.Measure (↥(@UpperTheory.Reformulated.B.InvolutionInvariants.UJ n ε)) (UpperTheory.Reformulated.B.InvolutionInvariants.instMeasurableSpaceUJ n ε) :=
-    fun {n : Nat} (ε : Fin n → Bool) ↦
+noncomputable def UpperTheory.Reformulated.B.InvolutionInvariants.muG : {n : ℕ} → (ε : Fin n → Bool) → MeasureTheory.Measure ↥(UpperTheory.Reformulated.B.InvolutionInvariants.UJ ε) := fun {n : Nat} (ε : Fin n → Bool) ↦
       @MeasureTheory.Measure.haar (↥(@UpperTheory.Reformulated.B.InvolutionInvariants.UJ n ε))
         (@Subgroup.toGroup
           (@Units (Matrix (Fin n) (Fin n) Complex)
@@ -790,6 +791,7 @@ noncomputable def UpperTheory.Reformulated.B.InvolutionInvariants.InvInvariant :
           (@UpperTheory.Reformulated.B.InvolutionInvariants.muG n ε))
         (@UpperTheory.Reformulated.B.InvolutionInvariants.muG n ε)
 
+open scoped Pointwise in
 open MeasureTheory MeasureTheory.Measure in
 private theorem UpperTheory.Reformulated.B.InvolutionInvariants.haar_map_inv {G : Type*} [Group G] [TopologicalSpace G]
     [IsTopologicalGroup G] [MeasurableSpace G] [BorelSpace G] [LocallyCompactSpace G]
@@ -804,7 +806,7 @@ private theorem UpperTheory.Reformulated.B.InvolutionInvariants.haar_map_inv {G 
   have h0 : (haar : Measure G) K ≠ 0 := (measure_pos_of_nonempty_interior _ K.interior_nonempty).ne'
   have ht : (haar : Measure G) K ≠ ⊤ := K.isCompact.measure_lt_top.ne
   have h1 : ∀ s : Set G, (haar : Measure G) s⁻¹ = c * haar s := fun s => by
-    rw [← inv_apply, hc, Measure.smul_apply, smul_eq_mul]
+    rw [← MeasureTheory.Measure.inv_apply, hc, Measure.smul_apply, smul_eq_mul]
   have h2 : c ^ 2 * (haar : Measure G) K = 1 ^ 2 * (haar : Measure G) K := by
     rw [pow_two, mul_assoc, ← h1, ← h1, inv_inv, one_pow, one_mul]
   have h3 : c = 1 :=

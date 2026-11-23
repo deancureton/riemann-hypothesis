@@ -1,7 +1,11 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.TvMapApply
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.ExistsMulEqOneAddSmulOfRowsGe
+module
+
+public import Mathlib
+public import Formalism.SharpRestriction.CuspSpanNormBounds.IsPrimitiveSub
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.TvMapApply
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.NormRepresentationLift.ExistsMulEqOneAddSmulOfRowsGe
+
+@[expose] public section
 
 noncomputable section
 
@@ -16,12 +20,8 @@ variable {E : Type} [Field E] [NumberField E] [StarRing E] {S : HSpace E}
 theorem smul_coe (o : 𝓞 E) (w : S.V) : (o : E) • w = o • w := by
   exact IsScalarTower.algebraMap_smul E o w
 
-theorem herm_eq (x y : S.V) : S.hT y x = star (S.hT x y) := by
-  first
-    | exact (S.herm x y).symm
-    | exact (S.herm.eq x y).symm
-    | (rw [← S.herm x y]; rfl)
-    | (rw [← S.herm.eq x y]; rfl)
+theorem herm_eq (x y : S.V) : S.hT y x = star (S.hT x y) :=
+  (S.herm.eq x y).symm
 
 theorem tvMap_isom (e v : S.V) (l : E) (hee : S.hT e e = 0) (hev : S.hT e v = 0)
     (hl : l + star l = -S.hT v v) (x y : S.V) :
@@ -30,7 +30,7 @@ theorem tvMap_isom (e v : S.V) (l : E) (hee : S.hT e e = 0) (hev : S.hT e v = 0)
   have hxe : S.hT x e = star (S.hT e x) := herm_eq e x
   have hxv : S.hT x v = star (S.hT v x) := herm_eq v x
   rw [tvMap_apply, tvMap_apply]
-  simp only [map_add, map_sub, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.sub_apply,
+  simp only [map_add (f := _), map_sub, map_smul, map_smulₛₗ, LinearMap.add_apply, LinearMap.sub_apply,
     LinearMap.smul_apply, hee, hev, hve, hxe, hxv, smul_eq_mul, starRingEnd_apply, star_mul',
     mul_zero, zero_mul, add_zero, sub_zero, zero_add]
   linear_combination (star (S.hT e x) * S.hT e y) * hl
@@ -175,7 +175,8 @@ theorem actsBy_frameAct {n : ℕ} {φ : S.V ≃ₗ[E] S.V} {f : Fin n → S.V} {
       | push_cast
       | simp
   unfold ActsBy at h
-  simp only [frameAct, map_sum, map_smul, h, Finset.smul_sum, smul_smul, hcoe, Finset.sum_smul]
+  set_option synthInstance.maxHeartbeats 100000 in
+    simp only [frameAct, map_sum, map_smul, h, Finset.smul_sum, smul_smul, hcoe, Finset.sum_smul]
   rw [Finset.sum_comm]
   exact Finset.sum_congr rfl fun c _ => Finset.sum_congr rfl fun a _ => by rw [mul_comm]
 

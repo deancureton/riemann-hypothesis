@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.EvenBlockRowActionEval
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.NatActRVtupR
+module
+
+public import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.EvenBlockRowActionEval
+public import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.NatActRVtupR
+
+@[expose] public section
 
 open MvPolynomial Matrix Formalism.GradedWeylDivisibility Formalism.MainNotions.G Formalism.BasicNotions Formalism.L2.Forms
 
@@ -77,7 +81,7 @@ theorem evRat_of_blocks {h : P.m + 1 = n} {pos : (Σ v : Fin P.nV, Fin (P.n' v))
     obtain ⟨Q, hQ, e⟩ := hx
     obtain ⟨Q', hQ', e'⟩ := hy
     exact ⟨Q + Q', Submodule.add_mem _ hQ hQ', fun z => by
-      rw [map_add, map_add, map_add, Pi.add_apply, Pi.add_apply, e z, e' z]⟩
+      rw [map_add (f := _), map_add (f := _), map_add (f := _), Pi.add_apply, Pi.add_apply, e z, e' z]⟩
   | neg x _ hx =>
     obtain ⟨Q, hQ, e⟩ := hx
     exact ⟨-Q, Submodule.neg_mem _ hQ, fun z => by

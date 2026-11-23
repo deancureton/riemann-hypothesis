@@ -1,6 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUnitBasePointAdjoinTwistedSigmaStatement
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.UnitLemmaGroup
+public import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsUnitBasePointAdjoinTwistedSigmaStatement
+
+@[expose] public section
 
 namespace GlobalTheory.UnitLemma.TwistUnit
 
@@ -8,34 +12,7 @@ open GlobalTheory.UnitLemma Polynomial
 
 theorem mem_adjoin_of_mul_eq_one {O A : Type} [CommRing O] [CommRing A] [Algebra O A] {s t : A}
     (h : s * t = 1) (ht : IsIntegral O t) : t ∈ Algebra.adjoin O {s} := by
-  obtain ⟨p, hp, hpt⟩ := ht
-  have e : aeval t p = 0 := hpt
-  rw [aeval_eq_sum_range, Finset.sum_range_succ, hp.coeff_natDegree, one_smul] at e
-  rcases Nat.eq_zero_or_pos p.natDegree with h0 | hpos
-  · rw [h0] at e
-    simp at e
-    have : t = 0 := by simpa using congrArg (t * ·) e
-    rw [this]; exact Subalgebra.zero_mem _
-  obtain ⟨k, hk⟩ : ∃ k, p.natDegree = k + 1 := ⟨_, (Nat.succ_pred_eq_of_pos hpos).symm⟩
-  rw [hk] at e
-  have hts : t * s = 1 := by rw [mul_comm]; exact h
-  have h1 : t ^ (k + 1) * s ^ k = t := by
-    rw [pow_succ', mul_assoc, ← mul_pow, hts, one_pow, mul_one]
-  have h2 : ∀ i ∈ Finset.range (k + 1), p.coeff i • t ^ i * s ^ k = p.coeff i • s ^ (k - i) := by
-    intro i hi
-    have hik : i ≤ k := Nat.lt_succ_iff.1 (Finset.mem_range.1 hi)
-    rw [smul_mul_assoc]
-    congr 1
-    rw [show s ^ k = s ^ i * s ^ (k - i) by rw [← pow_add, Nat.add_sub_cancel' hik], ← mul_assoc,
-      ← mul_pow, hts, one_pow, one_mul]
-  have e2 := congrArg (· * s ^ k) e
-  simp only [add_mul, zero_mul, Finset.sum_mul] at e2
-  rw [Finset.sum_congr rfl h2, h1] at e2
-  have key : t = -∑ i ∈ Finset.range (k + 1), p.coeff i • s ^ (k - i) := by
-    linear_combination e2
-  rw [key]
-  exact Subalgebra.neg_mem _ (Subalgebra.sum_mem _ fun i _ =>
-    Subalgebra.smul_mem _ (Subalgebra.pow_mem _ (Algebra.self_mem_adjoin_singleton O s) _) _)
+  exact GlobalTheory.UnitLemma.UnitBase.mem_adjoin_of_mul_eq_one' h ht
 
 theorem adjoin_stab {O A : Type} [CommRing O] [CommRing A] [Algebra O A] {s : A} (L : Submodule O A)
     (hL : ∀ y ∈ L, s * y ∈ L) {a : A} (ha : a ∈ Algebra.adjoin O {s}) : ∀ y ∈ L, a * y ∈ L := by
@@ -76,7 +53,8 @@ theorem trace_σ (B : InvAlg K) (a : B.A) :
     intro y _
     have h1 : y = ∑ j, K.c (b.repr (B.σ.symm y) j) • B.σ (b j) := by
       conv_lhs => rw [← B.σ.apply_symm_apply y, ← b.sum_repr (B.σ.symm y)]
-      rw [map_sum]
+      set_option synthInstance.maxHeartbeats 100000 in
+        rw [map_sum]
       exact Finset.sum_congr rfl fun j _ => hsm _ _
     rw [h1]
     exact Submodule.sum_mem _ fun j _ => Submodule.smul_mem _ _ (Submodule.subset_span ⟨j, rfl⟩)
@@ -88,10 +66,12 @@ theorem trace_σ (B : InvAlg K) (a : B.A) :
     intro y i
     have h1 : B.σ y = ∑ j, K.c (b.repr y j) • b' j := by
       conv_lhs => rw [← b.sum_repr y]
-      rw [map_sum]
+      set_option synthInstance.maxHeartbeats 100000 in
+        rw [map_sum]
       exact Finset.sum_congr rfl fun j _ => by rw [hsm, hb']
     rw [h1, b'.repr_sum_self]
-  rw [Algebra.trace_eq_matrix_trace b', Algebra.trace_eq_matrix_trace b, Matrix.trace, Matrix.trace,
+  set_option synthInstance.maxHeartbeats 100000 in
+    rw [Algebra.trace_eq_matrix_trace b', Algebra.trace_eq_matrix_trace b, Matrix.trace, Matrix.trace,
     map_sum]
   refine Finset.sum_congr rfl fun i _ => ?_
   simp only [Matrix.diag_apply, Algebra.leftMulMatrix_eq_repr_mul]

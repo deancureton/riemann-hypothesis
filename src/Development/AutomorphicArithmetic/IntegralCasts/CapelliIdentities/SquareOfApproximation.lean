@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 namespace UpperTheory.Reformulated.B.SquareOfApproximation
 
@@ -12,7 +16,9 @@ private lemma small_power_bound {A : Type*} [Ring A] [_i : Valued A (WithZero (M
   obtain ⟨k, hk⟩ : ∃ k : ℤ, MonoidWithZeroHom.ValueGroup₀.embedding γ.1 = exp k :=
     ⟨log _, (exp_log hg).symm⟩
   refine ⟨(-k + 1).toNat, fun x hx => ?_⟩
-  rw [Valuation.restrict_lt_iff_lt_embedding, hk]
+  apply _i.v.restrict_lt_iff_lt_embedding.mpr
+  change _i.v x < MonoidWithZeroHom.ValueGroup₀.embedding γ.1
+  rw [hk]
   refine lt_of_le_of_lt hx ?_
   rw [exp_lt_exp]
   have := Int.self_le_toNat (-k + 1)
@@ -121,11 +127,11 @@ private theorem core {F E : Type} [Field F] [NumberField F] [Field E] [NumberFie
   have hσσ : ∀ x, σ (σ x) = x := by
     intro x
     obtain ⟨u, w, rfl⟩ := hsp' x
-    simp only [map_add, map_mul, AlgHom.commutes, hσ, map_neg, mul_neg, neg_neg]
+    simp only [map_add (f := _), map_mul, AlgHom.commutes, hσ, map_neg, mul_neg, neg_neg]
   have hfix : ∀ x, σ x = x → ∃ u : F, x = algebraMap F E u := by
     intro x hx
     obtain ⟨u, w, rfl⟩ := hsp' x
-    simp only [map_add, map_mul, AlgHom.commutes, hσ, mul_neg] at hx
+    simp only [map_add (f := _), map_mul, AlgHom.commutes, hσ, mul_neg] at hx
     have h2 : (2 : E) * (algebraMap F E w * θ) = 0 := by
       have h3 := add_left_cancel hx
       linear_combination -h3
@@ -147,12 +153,12 @@ private theorem core {F E : Type} [Field F] [NumberField F] [Field E] [NumberFie
     obtain ⟨u, hu⟩ := hfix (y : E) (by rw [← hs, hy])
     have hint : IsIntegral ℤ u := by
       have h1 : IsIntegral ℤ (algebraMap F E u) := hu ▸ RingOfIntegers.isIntegral_coe y
-      exact (isIntegral_algebraMap_iff (algebraMap F E).injective).1 h1
+      exact (isIntegral_algebraMap_iff ).1 h1
     refine ⟨⟨u, hint⟩, ?_⟩
     apply RingOfIntegers.ext
     exact hu.symm
   have htr : ∀ y, ∃ r : 𝓞 F, algebraMap (𝓞 F) (𝓞 E) r = y + s y := fun y =>
-    hfixO _ (by rw [map_add, hss, add_comm])
+    hfixO _ (by rw [map_add (f := _), hss, add_comm])
   have hnm : ∀ y, ∃ r : 𝓞 F, algebraMap (𝓞 F) (𝓞 E) r = y * s y := fun y =>
     hfixO _ (by rw [map_mul, hss, mul_comm])
   have hint : IsIntegral ℤ θ := by
@@ -172,12 +178,13 @@ private theorem core {F E : Type} [Field F] [NumberField F] [Field E] [NumberFie
   have : P.asIdeal.LiesOver v.asIdeal := ⟨hP.symm⟩
   have he : v.asIdeal.ramificationIdx' P.asIdeal ≠ 0 :=
     Ideal.IsDedekindDomain.ramificationIdx'_ne_zero_of_liesOver P.asIdeal v.ne_bot
-  set e := v.asIdeal.ramificationIdx' P.asIdeal
+  set e := v.asIdeal.ramificationIdx' P.asIdeal with he'
   have hdown : ∀ (x : 𝓞 F) (m : ℕ), algebraMap (𝓞 F) (𝓞 E) x ∈ P.asIdeal ^ (e * m) →
       x ∈ v.asIdeal ^ m := by
     intro x m hx
     rw [← intValuation_le_pow_iff_mem] at hx ⊢
     rw [← intValuation_liesOver v P x] at hx
+    rw [← Ideal.ramificationIdx'_eq_ramificationIdx v.asIdeal P.asIdeal v.ne_bot, ← he'] at hx
     have h1 : exp (-((e * m : ℕ) : ℤ)) = (exp (-(m : ℤ))) ^ e := by
       rw [← exp_nsmul]
       congr 1

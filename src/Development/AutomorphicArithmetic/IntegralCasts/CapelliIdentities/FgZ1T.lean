@@ -1,16 +1,21 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
-import Formalism.WeaklyAdmissibleFiltrations.StatementTor
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CompactQuotientSubmodule
+module
+
+public import Mathlib
+public import Formalism.WeaklyAdmissibleFiltrations.Statement
+public import Formalism.WeaklyAdmissibleFiltrations.StatementTor
+public import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CompactQuotientSubmodule
+
+@[expose] public section
 
 open Formalism.WeaklyAdmissibleFiltrations in
+/-- Apply compact-quotient finite generation to the lattice cocycles, using reduction modulo `ϖ`. -/
 theorem UpperTheory.Reformulated.B.Gub2.fg_Z1T
-    {G : Type} [Group G] [TopologicalSpace G]
-    {LL O V : Type} [Field LL] [CommRing O] [Algebra O LL]
-    [AddCommGroup V] [Module LL V] [Module O V] [IsScalarTower O LL V]
-    {ρ : Representation LL G V}
-    [TopologicalSpace V] [TopologicalSpace LL]
-    [ContinuousSMul LL V] [IsTopologicalAddGroup V] [T2Space V]
+    {G : Type} [inst : Group G] [inst_1 : TopologicalSpace G]
+    {LL O V : Type} [inst_2 : Field LL] [inst_3 : CommRing O] [inst_4 : Algebra O LL]
+    [inst_5 : AddCommGroup V] [inst_6 : Module LL V] [inst_7 : Module O V]
+    [inst_8 : IsScalarTower O LL V] {ρ : Representation LL G V}
+    [inst_9 : TopologicalSpace V] [inst_10 : ContinuousAdd V] [inst_11 : ContinuousConstSMul LL V]
+    [inst_12 : TopologicalSpace LL] [ContinuousSMul LL V] [IsTopologicalAddGroup V] [T2Space V]
     (L : Lattice (O := O) ρ) {ϖ : O}
     (hϖ : algebraMap O LL ϖ ≠ 0)
     (hb : (nhds (0 : V)).HasBasis (fun _ : ℕ => True) (fun n => (fun x => ϖ ^ n • x) '' (L.T : Set V)))
@@ -18,8 +23,6 @@ theorem UpperTheory.Reformulated.B.Gub2.fg_Z1T
     (hI : StableSub L (Ideal.span {ϖ ^ 1} • ⊤ : Submodule O ↥L.T))
     (hfin : Finite ↥(quotientCocycles L _ hI)) :
     (latticeCocycles L).FG := by
-  have : ContinuousAdd V := inferInstance
-  have : ContinuousConstSMul LL V := inferInstance
   have hmem : ∀ x : L.T, x ∈ (Ideal.span {ϖ ^ 1} • (⊤ : Submodule O L.T)) ↔
       ∃ y ∈ L.T, ϖ • y = (x : V) := by
     intro x
@@ -45,7 +48,7 @@ theorem UpperTheory.Reformulated.B.Gub2.fg_Z1T
     · have : evT L (g * h) c = evT L g c + actT L g (evT L h c) :=
         Subtype.ext (c.2.1.2 g h)
       change Submodule.mkQ _ (evT L (g * h) c) = _
-      rw [this, map_add]
+      rw [this, map_add (f := _)]
       rfl
   refine UpperTheory.compact_quotient_submodule (LL := LL) (latticeCocycles L) ϖ
     ((redT L _).codRestrict (quotientCocycles L _ hI) hred) hc ?_ ?_

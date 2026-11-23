@@ -1,4 +1,8 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtRec
+module
+
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtRec
+
+@[expose] public section
 
 noncomputable section
 

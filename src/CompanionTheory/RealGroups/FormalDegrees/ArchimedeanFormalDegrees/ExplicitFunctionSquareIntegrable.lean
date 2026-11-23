@@ -1,6 +1,10 @@
-import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.NormIndOfSteps
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormInductionOfEstimates
-import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.FormalDegreeFormula.CoefPow
+module
+
+public import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.NormIndOfSteps
+public import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.NormInductionOfEstimates
+public import CompanionTheory.RealGroups.FormalDegrees.ArchimedeanFormalDegrees.FormalDegreeFormula.CoefPow
+
+@[expose] public section
 
 namespace CompanionTheory.RgFd
 

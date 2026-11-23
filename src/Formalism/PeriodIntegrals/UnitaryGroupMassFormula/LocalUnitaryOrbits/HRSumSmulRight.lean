@@ -1,5 +1,10 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.CrossMSmulRight
+module
+
+public import Mathlib
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.CrossMSmulRight
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.LocalUnitaryOrbits.GenSmulMem
+
+@[expose] public section
 
 noncomputable section
 
@@ -12,35 +17,8 @@ variable {F E : Type} [Field F] [NumberField F] [Field E] [NumberField E] [Algeb
   (σ : E →ₐ[F] E) {n : ℕ} (J : Matrix (Fin n) (Fin n) E) (v : HeightOneSpectrum (𝓞 F))
 
 theorem oEv_mul {x y : Fv F v ⊗[F] E} (hx : x ∈ OEv (E := E) v) (hy : y ∈ OEv (E := E) v) :
-    x * y ∈ OEv (E := E) v := by
-  unfold OEv at *
-  rw [SetLike.mem_coe] at *
-  induction hx using Submodule.span_induction with
-  | mem a ha =>
-    obtain ⟨e, -, rfl⟩ := ha
-    induction hy using Submodule.span_induction with
-    | mem b hb =>
-      obtain ⟨f, -, rfl⟩ := hb
-      rw [← map_mul]
-      exact Submodule.subset_span ⟨e * f, Set.mem_univ _, by simp⟩
-    | zero =>
-      rw [mul_zero]
-      exact Submodule.zero_mem _
-    | add b c _ _ hb hc =>
-      rw [mul_add]
-      exact Submodule.add_mem _ hb hc
-    | smul r b _ hb =>
-      rw [mul_smul_comm]
-      exact Submodule.smul_mem _ r hb
-  | zero =>
-    rw [zero_mul]
-    exact Submodule.zero_mem _
-  | add a c _ _ ha hc =>
-    rw [add_mul]
-    exact Submodule.add_mem _ ha hc
-  | smul r a _ ha =>
-    rw [smul_mul_assoc]
-    exact Submodule.smul_mem _ r ha
+    x * y ∈ OEv (E := E) v :=
+  (PI.OmLocU.Orb.oSub (E := E) v).2 x hx y hy
 
 theorem oEv_sum {ι : Type} (s : Finset ι) (f : ι → Fv F v ⊗[F] E) (h : ∀ i ∈ s, f i ∈ OEv (E := E) v) :
     ∑ i ∈ s, f i ∈ OEv (E := E) v := by
@@ -129,7 +107,8 @@ theorem hensOnto_of (a : ℕ) (Y : TupV (E := E) v n a) (hGI : GramInvO σ J v �
     have e2 : ∑ k, sigR (Fv F v) σ (C k i) * hR (Fv F v) σ J (y k) (y j) = sigR (Fv F v) σ (A j i) := by
       have : (gramR (Fv F v) σ J y * C) j i = A j i := by
         rw [hCdef, ← Matrix.mul_assoc, hGG, Matrix.one_mul]
-      rw [← this, Matrix.mul_apply, map_sum]
+      set_option synthInstance.maxHeartbeats 100000 in
+        rw [← this, Matrix.mul_apply, map_sum]
       refine Finset.sum_congr rfl fun k _ => ?_
       rw [map_mul, mul_comm]
       congr 1

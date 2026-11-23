@@ -1,10 +1,14 @@
-import Mathlib
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePsi
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.ChiMemSubfield
-import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
-import Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWRec
-import Formalism.LocalToGlobal.GroupLattices.CloudFilling.FillInstRecEqWj
-import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
+module
+
+public import Mathlib
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePsi
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.ChiMemSubfield
+public import Formalism.LocalToGlobal.GroupLattices.DownNaturalLevelZero
+public import Formalism.LocalToGlobal.GroupLattices.PerfectRings.ExtWRec
+public import Formalism.LocalToGlobal.GroupLattices.CloudFilling.FillInstRecEqWj
+public import Formalism.SatakeDualWeyl.AdelicIwasawaHecke.GlintPrincRelIndexNeZero
+
+@[expose] public section
 
 noncomputable section
 

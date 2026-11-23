@@ -1,0 +1,20 @@
+{
+  "snapshot": {
+    "toolchain": "leanprover/lean4:v4.37.0-rc1",
+    "lakefile_sha256": "8672b307e6ff65f6d3ffcd33f18b30bc2a7f4212cd4d931c78a9337a8c49580d",
+    "manifest_sha256": "6b5ad855ab2f8544071569928d1b84e8e6be14636e7b2809e7ccabb3937934ee"
+  },
+  "worklist_modules": 149216,
+  "worklist_sha256": "b567310f8067a47f4a12db3f7ee8992cfe65a2b7e0c069a0a0e2f2fcc5f38def",
+  "max_batch_modules": 4096,
+  "minimum_cpus": 16,
+  "minimum_memory_mib": 65536,
+  "baseline": {
+    "fresh_project": true,
+    "unchanged_modules": 0,
+    "unchanged_module_names": []
+  },
+  "candidate_modules": 149216,
+  "pr_number": 185,
+  "approval_mode": "ancestor-of-open-pr"
+}

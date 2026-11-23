@@ -1,7 +1,10 @@
-import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.IdealLattice
-import Formalism.PeriodIntegrals.HeisMul
-import Formalism.PeriodIntegrals.HeisNorm
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.IdealLattice
+module
+
+public import Formalism.SharpRestriction.GlobalSchurBounds.GlobalRankLatticeProofs.UnitTraceSumBounds.IdealLattice
+public import Formalism.PeriodIntegrals.HeisDefs
+public import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.IdealLattice
+
+@[expose] public section
 
 namespace Formalism.MainNotions.Ext
 

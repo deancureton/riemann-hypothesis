@@ -1,6 +1,11 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SesquilinearRowSplitting.CoreStep
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CMTraceSurjective.IsTrMulConjOfMem
+module
+
+public import Mathlib
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.SesquilinearRowSplitting.CoreStep
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.CMTraceSurjective.IsTrMulConjOfMem
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.ScalarPairOrthogonal.ExistsNeZeroMem
+
+@[expose] public section
 
 open NumberField Formalism.BasicNotions Formalism.MainNotions.S
 
@@ -67,11 +72,6 @@ section D7
 
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
 
-example (D : D7) (a : 𝓞 D.host.F) :
-    ((algebraMap (𝓞 D.host.F) (𝓞 D.host.E) a : 𝓞 D.host.E) : D.host.E) = ((a : D.host.F) : D.host.E) := rfl
-
-example (D : D7) (a : D.host.E) : star a = a ↔ a ∈ (algebraMap D.host.F D.host.E).range := D.sp.cm.fixed a
-
 theorem trace_reduction : TrStep := by
   intro D
   obtain ⟨x, y, hy, hxy⟩ := PI.CMT.main D.host.E D.sp.cm.cmUnram 1 (by simp)
@@ -85,9 +85,8 @@ theorem alg_inj (D : D7) : Function.Injective (algebraMap (𝓞 D.host.F) (𝓞 
   ext
   simpa using h'
 
-theorem ddS_ne (D : D7) : ddS D ≠ 0 := by
-  rw [ddS, Ne, FractionalIdeal.coeIdeal_eq_zero, Ideal.map_eq_bot_iff_of_injective (alg_inj D)]
-  exact differentIdeal_ne_bot
+theorem ddS_ne (D : D7) : ddS D ≠ 0 :=
+  PI.ScalarPairDr.W.ddS_ne_zero D
 
 theorem ddS_cstab (D : D7) : CStab (ddS D) := by
   have hfix : PI.CMT.conj.comp (algebraMap (𝓞 D.host.F) (𝓞 D.host.E)) =

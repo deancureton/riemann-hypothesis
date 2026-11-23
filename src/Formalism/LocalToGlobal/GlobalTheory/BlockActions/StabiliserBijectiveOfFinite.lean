@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabiliserBijectiveOfFixed
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ClassInjectiveOfSelfDual
+module
+
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabiliserBijectiveOfFixed
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ClassInjectiveOfSelfDual
+
+@[expose] public section
 
 noncomputable section
 

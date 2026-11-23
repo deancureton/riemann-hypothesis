@@ -1,6 +1,10 @@
-import Mathlib
-import Formalism.PeriodIntegrals.AdelicOrbitU
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnitaryOrbits.UnitChoice
+module
+
+public import Mathlib
+public import Formalism.SharpRestriction.GlobalSchurBounds.GeneralLinearActions.GenusMassVolumes
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.AdelicUnitaryOrbits.UnitChoice
+
+@[expose] public section
 
 noncomputable section
 
@@ -14,8 +18,8 @@ section SlopeTestRemainingChoices
 variable {F E : Type} [Field F] [Field E] [Algebra F E]
 
 lemma sigR_inclR (R : Type) [CommRing R] [Algebra F R] (σ : E →ₐ[F] E) (e : E) :
-    sigR R σ (inclR R e) = inclR R (σ e) := by
-  simp [sigR, inclR]
+    sigR R σ (inclR R e) = inclR R (σ e) :=
+  DFunLike.congr_fun (Algebra.TensorProduct.map_comp_includeRight (AlgHom.id F R) σ) e
 
 lemma isHerm_JR (R : Type) [CommRing R] [Algebra F R] (σ : E →ₐ[F] E) {n : ℕ}
     (J : Matrix (Fin n) (Fin n) E) (hJ : ∀ i j, σ (J j i) = J i j) :
@@ -30,13 +34,6 @@ lemma isUnit_det_JR (R : Type) [CommRing R] [Algebra F R] {n : ℕ}
     rw [RingHom.map_det]; rfl
   rw [h]
   exact (isUnit_iff_ne_zero.mpr hJ).map _
-
-lemma hform_incl (R : Type) [CommRing R] [Algebra F R] (σ : E →ₐ[F] E) {n : ℕ}
-    (J : Matrix (Fin n) (Fin n) E) (v w : Fin n → E) :
-    Formalism.UG.hform (sigR R σ) (JR R J) (fun i => inclR R (v i)) (fun i => inclR R (w i)) =
-      inclR R (hE σ J v w) := by
-  simp only [hE, Formalism.UG.hform, map_sum, map_mul, JR, Matrix.map_apply, sigR_inclR]
-  rfl
 
 lemma inclR_algebraMap (R : Type) [CommRing R] [Algebra F R] (b : F) :
     inclR R (algebraMap F E b) = algebraMap F (R ⊗[F] E) b :=

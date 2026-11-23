@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MatrixInvEntriesBounded
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.FoundationProofs.MatrixInvEntriesBounded
+
+@[expose] public section
+
 open scoped Matrix
 open NumberField IsDedekindDomain
 set_option maxHeartbeats 1000000 in

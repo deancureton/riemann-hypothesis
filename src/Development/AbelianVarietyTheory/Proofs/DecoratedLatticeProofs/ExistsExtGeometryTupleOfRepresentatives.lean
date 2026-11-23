@@ -1,12 +1,16 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsOpenKerUnramMulTame
-import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsDoubleDescentRanksOneThreeFive
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsIsCombAt
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EntriesWellDefined
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteQuotientCosetsScaledStandardLatticeBox
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsOpenFix
-import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsOneCombSphLevel
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.LatticeFrames.IsOpenKerUnramMulTame
+public import Development.AbelianVarietyTheory.Definitions.LatticeFrames.ExistsDoubleDescentRanksOneThreeFive
+public import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsIsCombAt
+public import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EntriesWellDefined
+public import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FiniteQuotientCosetsScaledStandardLatticeBox
+public import Development.AbelianVarietyTheory.Proofs.FoundationProofs.PadicIsNonarchimedeanLocalField
+public import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.ExistsOpenFix
+public import Development.AbelianVarietyTheory.Proofs.DecoratedLatticeProofs.IsOneCombSphLevel
+
+@[expose] public section
 
 set_option genSizeOfSpec false
 set_option genInjectivity false
@@ -152,8 +156,8 @@ def wtT (j : ℕ) (α : ChT G δ hδ η A M j) : ℂ :=
       (Nat.card {yb | SameOrb ((G.T δ hδ η).lev (G.s + 1) 0 rfl).J (box _ (G.ϖ ^ M)) (cosT G δ hδ η A M α) yb} : ℂ))
   else (idxT G δ hδ η (G.s + 1 + 1) : ℂ)
 
-open Classical in
 
+open Classical in
 def epsT (j : ℕ) (α : ChT G δ hδ η A M j) : GA D (c.V j) →₀ ℂ :=
   if j = 0 then Finsupp.single 1 1 else
   if hj : j ≤ G.s then
@@ -274,23 +278,23 @@ theorem exists_qExt : ∀ (D : D7) (c : Comm D) (v : VCom c) (B : GlobalTheory.F
     intro j d h
     obtain rfl : d = G.s - j := by omega
     unfold eLT
-    rw [dif_pos (by omega)]
+    rw [dite_eq_left (by omega)]
     exact combOf_spec _ _ _ _ _
   ·
     intro j d H α γ
     obtain rfl : d = G.s - (j + 1) := by omega
     unfold dLT
-    rw [dif_pos (by omega)]
+    rw [dite_eq_left (by omega)]
     exact combOf_spec _ _ _ _ _
   ·
     intro α y
     unfold dLT
-    rw [dif_neg (by omega), dif_pos rfl]
+    rw [dite_eq_right (by omega), dite_eq_left rfl]
     exact combOf_spec _ _ _ _ _
   ·
     intro y u
     unfold dLT
-    rw [dif_neg (by omega), dif_neg (by omega), dif_pos rfl]
+    rw [dite_eq_right (by omega), dite_eq_right (by omega), dite_eq_left rfl]
     exact combOf_spec _ _ _ _ _
   ·
     intro j ρ hρ d h α
@@ -320,7 +324,7 @@ theorem exists_qExt : ∀ (D : D7) (c : Comm D) (v : VCom c) (B : GlobalTheory.F
         rw [hP]
         exact id
       unfold epsT
-      rw [if_neg hj0, dif_pos (by omega), dif_pos H]
+      rw [if_neg hj0, dite_eq_left (by omega), dite_eq_left H]
   ·
     intro α
     unfold epsT
@@ -329,23 +333,23 @@ theorem exists_qExt : ∀ (D : D7) (c : Comm D) (v : VCom c) (B : GlobalTheory.F
     intro j d h
     obtain rfl : d = G.s + 1 - j := by omega
     unfold idxT
-    rw [dif_pos (by omega)]
+    rw [dite_eq_left (by omega)]
   ·
     unfold idxT
-    rw [dif_neg (by omega)]
+    rw [dite_eq_right (by omega)]
   ·
     intro j d h α
     obtain rfl : d = G.s - j := by omega
     unfold wtT
-    rw [dif_pos (by omega)]
+    rw [dite_eq_left (by omega)]
   ·
     intro y
     unfold wtT
-    rw [dif_neg (by omega), dif_pos rfl]
+    rw [dite_eq_right (by omega), dite_eq_left rfl]
   ·
     intro u
     unfold wtT
-    rw [dif_neg (by omega), dif_neg (by omega)]
+    rw [dite_eq_right (by omega), dite_eq_right (by omega)]
 
 end Main
 

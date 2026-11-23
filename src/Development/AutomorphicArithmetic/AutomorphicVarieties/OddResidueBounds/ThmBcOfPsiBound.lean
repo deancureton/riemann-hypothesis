@@ -1,11 +1,15 @@
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.KillPow
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.LenPow
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.Imports
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActEx
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActFacts
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ProdVal
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.AtPrime
-import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.DegExistsLift
+module
+
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.KillPow
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.LenPow
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.Imports
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActEx
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ActFacts
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.ProdVal
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.AtPrime
+public import Development.AutomorphicArithmetic.AutomorphicVarieties.OddResidueBounds.DegExistsLift
+
+@[expose] public section
 
 open NumberField IsDedekindDomain Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.GaloisCohomology UpperTheory.V UpperTheory.V.LDataCardLeFinrank UpperTheory.V.Base UpperTheory.V.Kum UpperTheory.V.Bern UpperTheory.V.B4 UpperTheory.V.B5 UpperTheory.V.Odd
 

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ComapSingleSpanAlgebraMapNumberField
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ComapSingleSpanAlgebraMapNumberField
+
+@[expose] public section
+
 open NumberField IsDedekindDomain Matrix
 open scoped BigOperators
 set_option maxHeartbeats 1000000 in

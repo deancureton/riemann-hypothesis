@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GroupLattices.StdSubAtOfRing
-import Formalism.LocalToGlobal.GroupLattices.CloudFilling.FillInstRecEqWj
+module
+
+public import Formalism.LocalToGlobal.GroupLattices.StdSubAtOfRing
+public import Formalism.LocalToGlobal.GroupLattices.CloudFilling.FillInstRecEqWj
+
+@[expose] public section
 
 noncomputable section
 

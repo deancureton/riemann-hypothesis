@@ -1,11 +1,14 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 namespace MulEquivHaarCharEqOfProjection
 open MeasureTheory
 
 private lemma smul_nn {α : Type*} [MeasurableSpace α] (c : NNReal) (μ : Measure α) (s : Set α) :
-    (c • μ) s = (c : ENNReal) * μ s := by
-  rw [Measure.smul_apply, ENNReal.smul_def, smul_eq_mul]
+    (c • μ) s = (c : ENNReal) * μ s := Measure.coe_nnreal_smul_apply c μ s
 
 end MulEquivHaarCharEqOfProjection
 

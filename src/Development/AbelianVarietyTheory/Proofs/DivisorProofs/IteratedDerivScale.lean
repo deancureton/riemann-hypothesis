@@ -1,4 +1,8 @@
-import Development.AbelianVarietyTheory.Definitions.Divisors.RangeShape
+module
+
+public import Development.AbelianVarietyTheory.Definitions.Divisors.RangeShape
+
+@[expose] public section
 
 section
 

@@ -1,5 +1,9 @@
-import Mathlib
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.WeakApproxF
+module
+
+public import Mathlib
+public import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryApproximation.WeakApproxF
+
+@[expose] public section
 
 noncomputable section
 
@@ -30,11 +34,8 @@ theorem wa_isOpen_lt_one (v : HeightOneSpectrum (𝓞 F)) (x : v.adicCompletion 
   exact lt_of_le_of_lt (Valuation.map_add _ _ _) (max_lt hz' hy)
 
 theorem wa_valued_algebraMap (v : HeightOneSpectrum (𝓞 F)) (k : F) :
-    Valued.v (algebraMap F (v.adicCompletion F) k) = v.valuation F k := by
-  first
-    | exact IsDedekindDomain.HeightOneSpectrum.valuedAdicCompletion_eq_valuation' v k
-    | simpa using IsDedekindDomain.HeightOneSpectrum.valuedAdicCompletion_eq_valuation' v k
-    | rfl
+    Valued.v (algebraMap F (v.adicCompletion F) k) = v.valuation F k :=
+  IsDedekindDomain.HeightOneSpectrum.valuedAdicCompletion_eq_valuation' v k
 
 theorem wa_exists_close (v : HeightOneSpectrum (𝓞 F)) (x : v.adicCompletion F) :
     ∃ b : F, Valued.v (x - algebraMap F (v.adicCompletion F) b) < 1 := by

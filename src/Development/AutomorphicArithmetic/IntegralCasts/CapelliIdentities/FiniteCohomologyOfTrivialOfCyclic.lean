@@ -1,12 +1,19 @@
-import Mathlib
-import GroundTheory.ProfiniteCohomology.ContinuousCochains
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.FiniteRoots
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.FiniteOpen
-import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChange
-import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Devissage
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CyclicTrivialInductionRing
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HomologyFiniteShortExact
-import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CochainInjectiveExact
+module
+
+public import Mathlib
+public import GroundTheory.ProfiniteCohomology.ContinuousCochains
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.FiniteRoots
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.FiniteOpen
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeDefs
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeModules
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangePlaces
+public import GroundTheory.ProfiniteCohomology.RestrictedRamification.BaseChangeMackey
+public import GroundTheory.ProfiniteCohomology.LocalClassFormation.FiniteVanishing.Devissage
+public import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CyclicTrivialInductionRing
+public import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.HomologyFiniteShortExact
+public import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.CochainInjectiveExact
+
+@[expose] public section
 
 private theorem isDiscreteRep_of_forall_eq {k G : Type} [CommRing k] [Group G]
     [TopologicalSpace G] (A : Rep.{0, 0, 0} k G) (h : ∀ (g : G) (a : A.V), A.ρ g a = a) :

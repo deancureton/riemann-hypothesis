@@ -1,5 +1,9 @@
-import Mathlib
-import Formalism.SharpRestriction.GrowthBounds.BaseLevels.LvSite
+module
+
+public import Mathlib
+public import Formalism.SharpRestriction.GrowthBounds.BaseLevels.LvSite
+
+@[expose] public section
 
 noncomputable section
 

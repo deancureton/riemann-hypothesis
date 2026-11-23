@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 theorem UpperTheory.Reformulated.B.FreeModuleQuotient.freeN_quot
     {R S M : Type} [CommRing R] [CommRing S] [AddCommGroup M] [Module R M]
@@ -36,7 +40,7 @@ theorem UpperTheory.Reformulated.B.FreeModuleQuotient.freeN_quot
       exact Ideal.Quotient.eq_zero_iff_mem.2 (K.mul_mem_right y hk)
     · intro x; simp
     · intro a b _ _ ha hb x
-      rw [add_smul, map_add, ha, hb, add_zero]
+      rw [add_smul, map_add (f := _), ha, hb, add_zero]
     · intro a b _ hb x
       rw [smul_eq_mul, mul_comm, mul_smul, hb]
   have hker : ∀ x : M, x ∈ (Ideal.map s K • ⊤ : Submodule R M) ↔ φ x = 0 := by
@@ -45,7 +49,7 @@ theorem UpperTheory.Reformulated.B.FreeModuleQuotient.freeN_quot
     · intro hx
       refine Submodule.smul_induction_on (p := fun x => φ x = 0) hx ?_ ?_
       · intro r hr n _; exact h1 r hr n
-      · intro a b ha hb; rw [map_add, ha, hb, add_zero]
+      · intro a b ha hb; rw [map_add (f := _), ha, hb, add_zero]
     · intro hx
       choose t ht using fun i => Ideal.Quotient.mk_surjective (e x i)
       have htK : ∀ i, t i ∈ K := by
@@ -55,7 +59,8 @@ theorem UpperTheory.Reformulated.B.FreeModuleQuotient.freeN_quot
         exact Ideal.Quotient.eq_zero_iff_mem.1 this
       have hxe : x = ∑ i, s (t i) • e.symm (Pi.single i 1) := by
         apply e.injective
-        rw [map_sum]
+        set_option synthInstance.maxHeartbeats 100000 in
+          rw [map_sum]
         simp only [he, e.apply_symm_apply]
         rw [← Finset.univ_sum_single (e x)]
         refine Finset.sum_congr rfl fun i _ => ?_

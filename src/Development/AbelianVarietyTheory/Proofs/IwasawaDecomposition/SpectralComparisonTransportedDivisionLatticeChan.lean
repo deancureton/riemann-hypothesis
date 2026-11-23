@@ -1,11 +1,15 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RelabelledWeight
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsReOfDiv
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinXSpectralRedivisionFullChoices
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultREqReL
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MvEvHolds
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MvRowJ
-import Formalism.LocalToGlobal.IndefiniteReal.HeckeNonvanishing.Imports
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.RelabelledWeight
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsReOfDiv
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.FinXSpectralRedivisionFullChoices
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MultREqReL
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MvEvHolds
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.MvRowJ
+public import Lean
+
+@[expose] public section
 
 noncomputable section
 

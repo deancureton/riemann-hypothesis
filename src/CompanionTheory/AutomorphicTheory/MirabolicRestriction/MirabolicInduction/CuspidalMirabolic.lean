@@ -1,5 +1,9 @@
-import CompanionTheory.AutomorphicTheory.MirabolicRestriction.MirabolicInduction.CuspidalRestrictsToInduced
-import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsIrreducibleTransportRep
+module
+
+public import CompanionTheory.AutomorphicTheory.MirabolicRestriction.MirabolicInduction.CuspidalRestrictsToInduced
+public import Development.AutomorphicSpectrum.Proofs.GlobalProofs.IsIrreducibleTransportRep
+
+@[expose] public section
 
 namespace CompanionTheory.Mirab
 

@@ -1,9 +1,13 @@
-import Formalism.SharpRestriction.CuspSpanNormBounds.WeightedMirrorLevelOperator
-import Formalism.SharpRestriction.CuspSpanNormBounds.RootMeasBig
-import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.BoundarySlices.StarSingleOne
-import Formalism.PeriodIntegrals.BordInv
-import Formalism.FormalDegreeBessel.FinalG
-import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.StabBig
+module
+
+public import Formalism.SharpRestriction.CuspSpanNormBounds.WeightedMirrorLevelOperator
+public import Formalism.SharpRestriction.CuspSpanNormBounds.RootMeasBig
+public import Formalism.PeriodIntegrals.BordDefs
+public import Formalism.FormalDegreeBessel.FormalDegreeRatio.GBasic
+public import Formalism.FormalDegreeBessel.FinalG
+public import Formalism.PeriodIntegrals.OrbitalBoundsConclusion.StabBig
+
+@[expose] public section
 
 namespace Formalism.MainNotions.S.Lem
 

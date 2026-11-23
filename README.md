@@ -2,104 +2,106 @@
 
 [![checks](https://github.com/leanprover-community/riemann-hypothesis/actions/workflows/checks.yml/badge.svg)](https://github.com/leanprover-community/riemann-hypothesis/actions/workflows/checks.yml)
 
-A [Comparator](https://github.com/leanprover/comparator) setup and community build cache for the Lean formalization that
-claims a proof of the Riemann Hypothesis, and of GRH for Dirichlet L-functions, announced on
-2026-11-20 at <https://alpo.ge/remark.pdf>.
 
-The first commit, `40e56bab`, is the submitted Lean source exactly as published. Since then,
-cleanup pull requests have removed 10,724 of its 175,187 files and edited 18; the
-[notes](verification/NOTES.md#source) list them. Check out `40e56bab` for the original. This
-repository also adds Comparator files and cache infrastructure:
+A community-led effort to clean up and maintain a Lean formalization of the 2026 proof of the Riemann Hypothesis and of GRH for Dirichlet L-functions.
 
-| File | What it is |
+The purpose of this repo is to create an artifact that is:
+
+- **accessible**: we want to improve build performance and modularity to enable researchers to feasibly engage with the proof even without access to massive amounts of compute.
+- **readable**: we want to improve code quality while preserving the "logic" of the proof, aspirationally to Mathlib levels. This includes lemma organization, formatting and idiomatic style, eliminating linter warnings, slop-free documentation, and more.
+- **integrated with the community**: we would like to add bibliographic references to prior work where appropriate, and rely on existing formalization projects when possible.
+
+Please note: we are **not** looking for:
+
+- complete overhauls that follow a substantially different proof path
+- claims about your own machine's builds / comparator run
+- adding files which are not necessary for the Riemann Hypothesis proof
+
+This work is taking place on the `main` branch. The `original` branch preserves the first publicly-released version of the proof retrieved on 2026-11-20 from <https://alpo.ge/remark.pdf>.
+
+## Theorem Statements
+
+`src/Main.lean` proves the following theorems (see [`src/Challenge.lean`](src/Challenge.lean)):
+
+| Theorem | Statement |
 |---|---|
-| [`src/Challenge.lean`](src/Challenge.lean) | the five theorems, stated in a file that imports only Mathlib |
-| [`comparator.json`](comparator.json) | the Comparator config |
-| [`export-targets.txt`](export-targets.txt) | the declarations to export |
-| [`verification/`](verification/NOTES.md) | our notes, and the results once there are some |
-| [`scripts/`](scripts/) | public Lake cache configuration and reproducible bootstrap/publishing tools |
+| `riemannHypothesis` | Mathlib's `RiemannHypothesis` |
+| `LFunction_ne_zero_of_half_lt_re` | L(χ, s) ≠ 0 for Re s > 1/2, for every modulus and every Dirichlet character, except the trivial character at s = 1 |
+| `LFunction_eq_zero_re` | every zero of L(χ, s) with 0 < Re s < 1 has Re s = 1/2 |
 
-## Using the build cache
+ states the same five with `sorry` in place of the
+proofs, in a file that imports only Mathlib. Comparator checks that `Main.lean` proves exactly
+those statements, that it uses no axioms other than `propext`, `Quot.sound` and
+`Classical.choice`, and that Lean's kernel and nanoda both accept the proof.
 
-Fetch and restore Mathlib and this project's compiled modules:
+## Cache
+
+A full build takes hours, so you should use the cache:
 
 ```bash
 lake exe cache get
 lake build --no-build
 ```
 
-The cache settings are in `lakefile.toml`; no user configuration is needed. The first command
-fetches both caches anonymously and extracts the oleans to `.lake/build`. It prefers a successful
-CI build matching the current clean source, configuration, dependency manifest and toolchain;
-documentation-only commits can reuse the same cache. Otherwise it tries the original published
-cache. The second command checks the default build targets without compiling them. The original
-project cache is 4.94 GB and contains portable Lean outputs and generated C. Subsequent ordinary
-builds compile changed modules and their dependents.
+## Checking the proof
 
-The community cache includes outputs from **untrusted pull requests and volunteer machines**.
-Download integrity checks do not verify proofs. Use an independent fresh build when you need
-to trust the result.
-
-The [cache notes](verification/CACHE.md) describe the pinned published archive, the cheaper
-bootstrap that reuses its proofs, and how to produce and publish future caches. For independent
-verification, follow the clean-build instructions below.
-
-## What is claimed
-
-| Theorem in `Main.lean` | Statement |
-|---|---|
-| `riemannHypothesis` | Mathlib's `RiemannHypothesis` |
-| `riemannZeta_eq_zero_re` | the same, written out |
-| `LFunction_ne_zero_of_half_lt_re` | L(χ, s) ≠ 0 for Re s > 1/2, for every modulus and every Dirichlet character, except the trivial character at s = 1 |
-| `LFunction_eq_zero_re` | every zero of L(χ, s) with 0 < Re s < 1 has Re s = 1/2 |
-| `LFunction_eq_zero_re_of_isPrimitive` | the same, for primitive characters |
-
-## Checking it
+To check the proof yourself, without the cache, take a fresh clone on a Linux machine with
+[bubblewrap](https://github.com/containers/bubblewrap) installed and run:
 
 ```bash
-export LEAN_ABORT_ON_PANIC=1   # as Comparator sets it: stop on an internal error, don't continue
-export LAKE_ARTIFACT_CACHE=false   # rebuild the submission even if cache-env.sh was sourced earlier
-export MATHLIB_CACHE_GET_URL=https://cache.mathlib.org/mathlib4   # Mathlib's current cache server
-
-# 1. Export the challenge. Clean clone at $CLEAN, Lean v4.33.1.
-cd "$CLEAN"
-lake exe mathlib/cache get
-lake build Challenge
-lake env lean4export Challenge -- $(cat export-targets.txt) > challenge.export
-
-# 2. Build the solution. Second clone, inside a sandbox with no network. Takes hours.
-lake exe mathlib/cache get      # before entering the sandbox
-lake build Main         # inside the sandbox
-
-# 3. Export the solution. Still inside the sandbox; only solution.export comes out.
-lake env lean4export Main -- $(cat "$CLEAN/export-targets.txt") > solution.export
-
-# 4. Judge. Lean v4.36.0, from an empty directory, with the config from the clean clone.
-lake comparator --config "$CLEAN/comparator.json" \
-  --challenge-from-export "$CLEAN/challenge.export" --solution-from-export solution.export
+MATHLIB_CACHE_GET_URL=https://cache.mathlib.org/mathlib4 lake exe mathlib/cache get
+lake comparator
 ```
 
-What to know before running it:
+The first command fetches Mathlib's compiled files and nothing of ours. Don't use
+`lake exe cache get` here, because that also downloads our prebuilt copy of the submission. The
+second reads `comparator.json`, builds `Challenge` and `Main` in a sandbox with no network, and
+makes the checks described under [What is claimed](#what-is-claimed).
 
-- **Two Lean versions.** The project is pinned to Lean `v4.33.1`, and `lake comparator` exists
-  only from Lean 4.35. So the proof is built and exported with `v4.33.1` and judged with
-  `v4.36.0`. The exporter is [lean4export](https://github.com/leanprover/lean4export) at tag
-  `v4.33.0`, built with Lean `v4.33.1`.
-- **Challenge first.** Compiling the submission runs its code, so the challenge is exported
-  where none of that code has been compiled. CI does step 1 on every push and publishes the
-  result as the `challenge-export` artifact. Its sha256 is
-  `bd484ac9886a96f26b1d9a7a59ebd45b7a70d102c015d4f31f9302bbdd6ab2b9`.
-- **Not `lake exe cache get`.** In this repository that command also downloads prebuilt files
-  for the submission itself, and `lake build Main` then compiles nothing. Steps 1 and 2 use
-  `lake exe mathlib/cache get`, which fetches Mathlib only.
-- **Cost.** Hours on a large machine, about 100 GB of disk, and a lot of memory for step 4.
+```bash
+export LEAN_ABORT_ON_PANIC=1        # as Comparator does
+export LAKE_ARTIFACT_CACHE=false    # in case cache-env.sh was sourced
 
-The [notes](verification/NOTES.md) have the details: where the source came from, the Lean
-version and its known kernel fixes, the tools, the sandboxes, the test of these steps, and the
-limits of what a passing run shows.
+# in a clone where the submission has not been compiled
+lake build Challenge
+lake env leanexport Challenge -- $(cat export-targets.txt) > challenge.export
+
+# wherever you build the submission
+lake build Main
+lake env leanexport Main -- $(cat export-targets.txt) > solution.export
+
+# from an empty directory, with the same Lean release and comparator.json from the first clone
+lake comparator --config comparator.json \
+  --challenge-from-export challenge.export --solution-from-export solution.export
+```
+
+The published source was written for Lean 4.33.1, which has neither `lake comparator` nor
+`leanexport`, so checking `40e56bab` itself takes two toolchains.
+[An older version of this README](https://github.com/leanprover-community/riemann-hypothesis/blob/7cce738ba719a32964ca3822d0994f4c6952c7ae/README.md#checking-it)
+has those steps.
+
+## The formal-conjectures statement
+
+[`comparator/`](comparator/) holds a second Comparator setup. Its challenge states the Riemann
+Hypothesis and the Generalized Riemann Hypothesis the way
+[formal-conjectures](https://github.com/google-deepmind/formal-conjectures/blob/d8d031d4998c78575159ccab9a7a9e95ce043883/FormalConjectures/Millennium/RiemannHypothesis.lean)
+does, in statements that neither the author nor we wrote, and the files next to it prove them
+from `src/Main.lean`. [NOTES.md](verification/NOTES.md#formal-conjectures) says how to check it
+and what has been checked so far.
+
+## CI
+
+If you have a Linux machine with
+plenty of memory and disk to spare, [CI-RUNNERS.md](verification/CI-RUNNERS.md) explains how to
+lend it. The scripts behind all this are in [`scripts/`](scripts/) and
+[`tools/ci_native/`](tools/ci_native/README.md).
 
 ## License
 
 The submission belongs to its author and was published without a license. It is mirrored here
-for verification only: unmodified at commit `40e56bab`, and with the changes listed in the
-[notes](verification/NOTES.md#source) since.
+so that it can be checked. Commit `40e56bab` is the unmodified copy.
+
+The declarations in `comparator/` that are copied from
+[formal-conjectures](https://github.com/google-deepmind/formal-conjectures) are copyright The Formal
+Conjectures Authors, under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+The files that hold them carry the notice.

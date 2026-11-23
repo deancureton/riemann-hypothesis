@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieEvR
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecAct
+module
+
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TieEvR
+public import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.RecAct
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.Jm :
     {n : Nat} → (Fin n → Bool) → Matrix (Fin n) (Fin n) Complex :=
@@ -734,10 +738,7 @@ theorem UpperTheory.Reformulated.B.placeRankTwoOne.laurent_T_neg_one_mul_T_one :
     inferInstanceAs (LocallyCompactSpace (Fin n → Fin n → ℂ))
   exact (isClosed_UJ ε).locallyCompactSpace
 
-noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.muG :
-    {n : Nat} →
-      (ε : Fin n → Bool) → @MeasureTheory.Measure (↥(@UpperTheory.Reformulated.B.placeRankTwoOne.UJ n ε)) (UpperTheory.Reformulated.B.placeRankTwoOne.instMeasurableSpaceUJ n ε) :=
-    fun {n : Nat} (ε : Fin n → Bool) ↦
+noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.muG : {n : ℕ} → (ε : Fin n → Bool) → MeasureTheory.Measure ↥(UpperTheory.Reformulated.B.placeRankTwoOne.UJ ε) := fun {n : Nat} (ε : Fin n → Bool) ↦
       @MeasureTheory.Measure.haar (↥(@UpperTheory.Reformulated.B.placeRankTwoOne.UJ n ε))
         (@Subgroup.toGroup
           (@Units (Matrix (Fin n) (Fin n) Complex)
@@ -807,9 +808,7 @@ noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.hs :
           @HPow.hPow Real Nat Real (@instHPow Real Nat (@NPow.toPow Real (@Monoid.toNPow Real Real.instMonoid)))
             (@Norm.norm Complex Complex.instNorm (g i j)) (@OfNat.ofNat Nat (nat_lit 2) (instOfNatNat (nat_lit 2)))
 
-noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.hsG :
-    {n : Nat} → {ε : Fin n → Bool} → ↥(@UpperTheory.Reformulated.B.placeRankTwoOne.UJ n ε) → Real :=
-    fun {n : Nat} {ε : Fin n → Bool} (g : ↥(@UpperTheory.Reformulated.B.placeRankTwoOne.UJ n ε)) ↦
+noncomputable def UpperTheory.Reformulated.B.placeRankTwoOne.hsG : {n : ℕ} → {ε : Fin n → Bool} → ↥(UpperTheory.Reformulated.B.placeRankTwoOne.UJ ε) → ℝ := fun {n : Nat} {ε : Fin n → Bool} (g : ↥(@UpperTheory.Reformulated.B.placeRankTwoOne.UJ n ε)) ↦
       @UpperTheory.Reformulated.B.placeRankTwoOne.hs n
         (@Units.val (Matrix (Fin n) (Fin n) Complex)
           (@Semiring.toMonoid (Matrix (Fin n) (Fin n) Complex)
@@ -1019,7 +1018,7 @@ theorem UpperTheory.Reformulated.B.placeRankTwoOne.volume_growth :
     Units.continuous_val.comp continuous_subtype_val
   have hB : IsClosed {g : UJ ε | hsG g ≤ R ^ 2} :=
     isClosed_le (f := fun g : UJ ε => ∑ i, ∑ j, ‖g.val.val i j‖ ^ 2)
-      (continuous_finset_sum _ fun i _ => continuous_finset_sum _ fun j _ =>
+      (continuous_finsetSum _ fun i _ => continuous_finsetSum _ fun j _ =>
         (hval.matrix_elem i j).norm.pow 2) continuous_const
   have hact : Continuous fun p : UJ ε × (Fin n → Fin n → ℂ) => act (p.1⁻¹).val.val p.2 :=
     continuous_pi fun j => (hval.comp continuous_fst.inv).matrix_mulVec

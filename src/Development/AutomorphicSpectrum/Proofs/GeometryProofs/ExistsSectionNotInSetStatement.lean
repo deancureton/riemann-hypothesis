@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsSectionNotInSet
+module
+
+public import Mathlib
+public import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsSectionNotInSet
+
+@[expose] public section
+
 open NumberField
 
 set_option maxHeartbeats 1000000 in

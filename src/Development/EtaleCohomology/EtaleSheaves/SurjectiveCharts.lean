@@ -1,4 +1,8 @@
-import Development.EtaleCohomology.EtaleSheaves.LChartPf
+module
+
+public import Development.EtaleCohomology.EtaleSheaves.LChartPf
+
+@[expose] public section
 
 noncomputable section
 

@@ -1,5 +1,10 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalCechLemmas
+module
+
+public import Mathlib
+public import GroundTheory.ArithmeticGeometry.SchemeCohomology.ProperCohomology.FormalCechLemmas
+
+@[expose] public section
+
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Arith.SchemeCoh
@@ -26,10 +31,11 @@ lemma cls_sum {α : Type*} (s : Finset α) (f : α → Cochain P 𝔘 p) (hf : �
     exact (cls_congr 𝔘 (Finset.sum_empty) h (map_zero _)).trans cls_zero
   | insert a s ha ih =>
     have hs : d P 𝔘 p (∑ b ∈ s, f b) = 0 := by
-      rw [map_sum]
+      set_option synthInstance.maxHeartbeats 100000 in
+        rw [map_sum]
       exact Finset.sum_eq_zero fun b _ => hf b
     conv_rhs => rw [Finset.sum_insert ha, ← ih hs]
-    exact (cls_congr 𝔘 (Finset.sum_insert ha) h (by rw [map_add, hf a, hs, add_zero])).trans
+    exact (cls_congr 𝔘 (Finset.sum_insert ha) h (by rw [map_add (f := _), hf a, hs, add_zero])).trans
       (cls_add _ _ (hf a) hs _)
 
 end Sum
@@ -56,7 +62,7 @@ lemma reesCoefFam_reesMul (r : reesAlgebra I) (N : ℕ) (x : cechH (reesPre I F)
   obtain ⟨σ, hσ, rfl⟩ := exists_cls x
   have hterm : ∀ ij : ℕ × ℕ, ((r : Polynomial A).coeff ij.1) •
       (reesCoefFam I hF 𝔘 hU ij.2).cechH p (cls σ hσ) =
-      cls (push 𝔘 (smulAbRingHom F (algebraMap A Γ(X, ⊤) ((r : Polynomial A).coeff ij.1))).hom p
+      cls (push 𝔘 (smulAbRingHom F (algebraMap A Γ(X, ⊤) ((r : Polynomial A).coeff ij.1))).asHom.hom p
         ((reesCoefFam I hF 𝔘 hU ij.2).cochain p σ))
         (by rw [← push_d, ← CechFamily.cochain_d, hσ, map_zero, map_zero]) := fun ij => rfl
   rw [Finset.sum_congr rfl (fun ij _ => hterm ij), ← cls_sum]
@@ -64,7 +70,8 @@ lemma reesCoefFam_reesMul (r : reesAlgebra I) (N : ℕ) (x : cechH (reesPre I F)
     refine cls_congr 𝔘 (funext fun t => ?_) _ _
     rw [Finset.sum_apply]
     exact reesCoef_reesInr_smul I hF (isAffineOpen_inter 𝔘 hU t) r N (σ t)
-  · rw [map_sum]
+  · set_option synthInstance.maxHeartbeats 100000 in
+      rw [map_sum]
     exact Finset.sum_eq_zero fun ij _ => by
       rw [← push_d, ← CechFamily.cochain_d, hσ, map_zero, map_zero]
 

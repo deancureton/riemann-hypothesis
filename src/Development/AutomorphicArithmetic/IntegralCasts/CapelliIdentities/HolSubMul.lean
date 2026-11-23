@@ -1,17 +1,17 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+module
 
-@[reducible] noncomputable def UpperTheory.Reformulated.B.Qe28.FDSec :
-    {E : Type} →
-      [inst : Field E] →
-        [inst_1 : @NumberField E inst] →
-          [inst_2 : @NumberField.IsCMField E inst (@NumberField.to_charZero E inst inst_1)] →
-            {r : Nat} → {Comp : Type} → (Comp → @ReciprocityTheory.ChartRestriction.G.FD.Data E inst inst_1 inst_2 r) → Type :=
-    fun {E : Type} [inst : Field E] [inst_1 : @NumberField E inst]
-        [inst_2 : @NumberField.IsCMField E inst (@NumberField.to_charZero E inst inst_1)] {r : Nat} {Comp : Type}
-        (X : Comp → @ReciprocityTheory.ChartRestriction.G.FD.Data E inst inst_1 inst_2 r) ↦
-      (c : Comp) → @ReciprocityTheory.ChartRestriction.G.FD.Frame E inst (@ReciprocityTheory.ChartRestriction.G.FD.Data.Ψ E inst inst_1 inst_2 r (X c)) r → Complex
+public import Mathlib
+public import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.Signature
+public import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.FundamentalDomains.ModerateCoefficientPositivity
+
+@[expose] public section
+
+@[reducible] noncomputable def UpperTheory.Reformulated.B.Qe28.FDSec : {E : Type} →
+  [inst : Field E] →
+    [inst_1 : NumberField E] →
+      [inst_2 : NumberField.IsCMField E] →
+        {r : ℕ} → {Comp : Type} → (Comp → ReciprocityTheory.ChartRestriction.G.FD.Data E r) → Type := fun {E} [Field E] [NumberField E] [NumberField.IsCMField E] {r} {Comp} X =>
+  (c : Comp) → ReciprocityTheory.ChartRestriction.G.FD.Frame (X c).Ψ r → ℂ
 
 noncomputable def UpperTheory.Reformulated.B.Qe28.IsHolCusp :
     {E : Type} →

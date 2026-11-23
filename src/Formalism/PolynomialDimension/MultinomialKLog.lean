@@ -1,6 +1,10 @@
-import Formalism.PolynomialDimension.MultinomialDepth.DvdPowOfNotPowSuccDvd
-import Formalism.PolynomialDimension.MultinomialDepth.FockGaussComparisonHolds
-import Formalism.PolynomialDimension.MultinomialDepth.IntervalRoomBound
+module
+
+public import Formalism.PolynomialDimension.MultinomialDepth.DvdPowOfNotPowSuccDvd
+public import Formalism.PolynomialDimension.MultinomialDepth.FockGaussComparisonHolds
+public import Formalism.PolynomialDimension.EdgeSumGoodRank
+
+@[expose] public section
 
 namespace Formalism.CountingSumsFrames.Top
 

@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.XEUpdSZeroLam
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.XEUpdSZeroLam
+
+@[expose] public section
+
 open Formalism.BasicNotions Formalism.MainNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.MainNotions.StandardLattice Formalism.MainNotions.S MeasureTheory IsDedekindDomain NumberField Matrix Formalism.L2.Theta Formalism.L2.DIV Formalism.L2.Indef Formalism.IndefR Formalism.IndefR.Links Formalism.IndefR.Mult Formalism.IndefR.Datum Formalism.IndefR.Cx
 open scoped TensorProduct InnerProductSpace
 attribute [local instance] Formalism.BasicNotions.Host.cmStar
@@ -19,16 +24,16 @@ theorem read_updS_keep (R : RealDat3 D A3 Ks) (F : Face3 D A3) (lam : type_of% R
   refine ⟨reFaceRead (R.updS R.kap lam) F Dc Sp Zsc err X0 Y,
     reFaceReadL (R.updS R.kap lam) F Dc Sp Zsc err X0 Y (scalReadL R F lam hX X0 Y Z),
     rfl, rfl, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
-  · kexactB HEq.refl Y.jA
+  · exact (by with_unfolding_all exact (HEq.refl Y.jA :))
   · exact (by with_unfolding_all exact (HEq.refl Y.jA0 :))
   · exact (by with_unfolding_all exact (HEq.refl Y.eMt :))
   · exact (by with_unfolding_all exact (HEq.refl Y.PY :))
   · exact (by with_unfolding_all exact (HEq.refl Y.eFT :))
-  · kexactB HEq.refl Y.IL
+  · exact (by with_unfolding_all exact (HEq.refl Y.IL :))
   · exact (by with_unfolding_all exact (HEq.refl Y.PW :))
   · exact (by with_unfolding_all exact (HEq.refl Y.eE :))
   · exact (by with_unfolding_all exact (HEq.refl Y.mj.eW :))
-  · kexactB HEq.refl Z.eRR
+  · exact (by with_unfolding_all exact (HEq.refl Z.eRR :))
   · exact (by with_unfolding_all exact (HEq.refl Z.jW :))
 
 end GlobalTheory.Mem.R3

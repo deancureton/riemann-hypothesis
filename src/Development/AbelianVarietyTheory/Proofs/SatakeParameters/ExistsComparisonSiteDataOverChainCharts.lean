@@ -1,14 +1,19 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JointCmpEmbeddingYAlt
-import Formalism.LocalToGlobal.GroupLattices.Joint0
-import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.GramLevelZeroEqReindex
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ChiFinOfGlevH
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.BaseLatticeSelfDualOfLocalEq
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUnifPow
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NotMemUnderSBOfGIdx
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChiRatAllOfAdTie
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsFractionRingGat
-import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvCoordsIsBasisAtBaseLatticeOfStdCompanionStatement
+module
+
+public import Mathlib
+public import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.JointCmpEmbeddingYAlt
+public import Formalism.LocalToGlobal.GroupLattices.Joint0
+public import Formalism.LocalToGlobal.PairingIndexBounds.OrthogonalChartLevels.GramLevelZeroEqReindex
+public import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ChiFinOfGlevH
+public import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.BaseLatticeSelfDualOfLocalEq
+public import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.ExistsUnifPow
+public import Development.AbelianVarietyTheory.Proofs.SatakeParameters.NotMemUnderSBOfGIdx
+public import Development.AbelianVarietyTheory.Proofs.SatakeParameters.ChiRatAllOfAdTie
+public import Development.AbelianVarietyTheory.Proofs.SatakeParameters.IsFractionRingGat
+public import Development.AbelianVarietyTheory.Proofs.SatakeParameters.InvCoordsIsBasisAtBaseLatticeOfStdCompanionStatement
+
+@[expose] public section
+
 open Formalism.BasicNotions Formalism.MainNotions Formalism.MainNotions.G Formalism.L2.G Formalism.L2.G.Cmp Formalism.L2.Forms Formalism.UG NumberField IsDedekindDomain Matrix Formalism.MainNotions.G.CmpJ Formalism.MainNotions.G.CmpJ.AgreeLv Formalism.MainNotions.G.KAat Formalism.L2.Ker Formalism.L2.PairingIndexBounds.F GlobalTheory.Port
 open scoped TensorProduct
 attribute [local instance] Formalism.BasicNotions.Host.cmStar

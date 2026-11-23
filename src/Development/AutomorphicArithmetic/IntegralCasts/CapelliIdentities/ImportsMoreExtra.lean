@@ -1,13 +1,11 @@
-import Mathlib
-import Formalism.WeaklyAdmissibleFiltrations.Statement
+module
 
-theorem UpperTheory.Reformulated.B.Qh15.aux1 :
-    ∀ {A : Type} [inst : CommRing A],
-      @SMulCommClass A A A
-        (@Algebra.toSMul A A (@CommRing.toCommSemiring A inst)
-          (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst)) (@Algebra.id A (@CommRing.toCommSemiring A inst)))
-        (@instSMulOfMul A
-          (@Distrib.toMul A (@instDistribOfSemiring A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst))))) := by
+public import Mathlib
+public import Formalism.WeaklyAdmissibleFiltrations.Statement
+
+@[expose] public section
+
+theorem UpperTheory.Reformulated.B.Qh15.aux1 : ∀ {A : Type} [inst : CommRing A], SMulCommClass A A A := by
   intro A _
   infer_instance
 
@@ -452,21 +450,7 @@ theorem UpperTheory.Reformulated.B.Qh15.aux3 :
   ext
   simp [mul_comm]
 
-noncomputable def UpperTheory.Reformulated.B.Qh15.chRep :
-    {G A : Type} →
-      [inst : Group G] →
-        [inst_1 : CommRing A] →
-          @MonoidHom G (@Units A (@Semiring.toMonoid A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))))
-              (@MulOneClass.toMulOne G (@Monoid.toMulOneClass G (@DivInvMonoid.toMonoid G (@Group.toDivInvMonoid G inst))))
-              (@MulOneClass.toMulOne
-                (@Units A (@Semiring.toMonoid A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))))
-                (@Units.instMulOneClass A
-                  (@Semiring.toMonoid A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))))) →
-            @Representation A G A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))
-              (@DivInvMonoid.toMonoid G (@Group.toDivInvMonoid G inst))
-              (@Semiring.toAddCommMonoid A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1)))
-              (@Semiring.toModule A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))) :=
-    fun {G A : Type} [inst : Group G] [inst_1 : CommRing A]
+noncomputable def UpperTheory.Reformulated.B.Qh15.chRep : {G A : Type} → [inst : Group G] → [inst_1 : CommRing A] → (G →* Aˣ) → Representation A G A := fun {G A : Type} [inst : Group G] [inst_1 : CommRing A]
         (κ :
           @MonoidHom G (@Units A (@Semiring.toMonoid A (@CommSemiring.toSemiring A (@CommRing.toCommSemiring A inst_1))))
             (@MulOneClass.toMulOne G (@Monoid.toMulOneClass G (@DivInvMonoid.toMonoid G (@Group.toDivInvMonoid G inst))))
@@ -1538,11 +1522,11 @@ theorem UpperTheory.Reformulated.B.Qh15.act_mul :
     rfl
   induction x using TensorProduct.induction_on with
   | zero => simp only [map_zero, zero_mul]
-  | add x₁ x₂ h₁ h₂ => simp only [map_add, add_mul, h₁, h₂]
+  | add x₁ x₂ h₁ h₂ => simp only [map_add (f := _), add_mul, h₁, h₂]
   | tmul a b =>
     induction y using TensorProduct.induction_on with
     | zero => simp only [map_zero, mul_zero]
-    | add y₁ y₂ h₁ h₂ => simp only [map_add, mul_add, h₁, h₂]
+    | add y₁ y₂ h₁ h₂ => simp only [map_add (f := _), mul_add, h₁, h₂]
     | tmul c d =>
       have hu : (κ g : E) * a * ((κ⁻¹ g : E) * c) = ((1 : G →* Eˣ) g : E) * (a * c) := by
         rw [mul_mul_mul_comm, ← Units.val_mul, MonoidHom.inv_apply, mul_inv_cancel,

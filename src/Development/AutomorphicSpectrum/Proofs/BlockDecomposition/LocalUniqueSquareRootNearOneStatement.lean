@@ -1,5 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalUniqueSquareRootNearOne
+module
+
+public import Mathlib
+public import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.LocalUniqueSquareRootNearOne
+
+@[expose] public section
+
 open MeasureTheory
 open scoped ENNReal NNReal Topology
 set_option maxHeartbeats 1000000 in

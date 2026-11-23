@@ -1,6 +1,10 @@
-import Formalism.HarderNarasimhan.StatementFrameF
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.FrameHermSharpB
-import Formalism.HarderNarasimhan.HarderNarasimhanProofs.FrameLinearAlgebraFirst
+module
+
+public import Formalism.HarderNarasimhan.StatementFrameF
+public import Formalism.HarderNarasimhan.HarderNarasimhanProofs.FrameHermSharpB
+public import Formalism.HarderNarasimhan.HarderNarasimhanProofs.FrameLinearAlgebraFirst
+
+@[expose] public section
 
 open Module NumberField Finset Formalism.CorankShareLayerCake.FR
 
@@ -33,7 +37,7 @@ theorem thmF_share {I : Type} [Fintype I] (m : I → ℕ) (x : ∀ i, Fin (m i) 
     simp [hempty]
 
 theorem thmF_place {K W κ κ₁ I : Type} [Field K] [NumberField K] [StarRing K]
-    [IsTotallyComplex K] [AddCommGroup W] [Module K W] [Module (𝓞 K) W] [IsScalarTower (𝓞 K) K W]
+    [_root_.NumberField.IsTotallyComplex K] [AddCommGroup W] [Module K W] [Module (𝓞 K) W] [IsScalarTower (𝓞 K) K W]
     [Fintype κ] [DecidableEq κ] [Fintype κ₁] [DecidableEq κ₁] [Fintype I]
     {V ι : I → Type} [∀ i, AddCommGroup (V i)] [∀ i, Module K (V i)] [∀ i, Module (𝓞 K) (V i)]
     [∀ i, IsScalarTower (𝓞 K) K (V i)] [∀ i, Fintype (ι i)] [∀ i, DecidableEq (ι i)]

@@ -1,4 +1,8 @@
-import Mathlib
+module
+
+public import Mathlib
+
+@[expose] public section
 
 namespace UpperTheory.Reformulated.B.CoboundaryOfGenerator
 
@@ -84,8 +88,8 @@ theorem cobOfGen
   have hzc : Continuous z := hz.1
   have hzm : ∀ g h : Γ, z (g * h) = z g + ρ g (z h) := hz.2
   obtain ⟨m, hm⟩ := hsurj (z γ)
-  have hm' : ρ γ m - m = z γ := hm
   have hone : z 1 = 0 := hz0 1 (map_one χ)
+  -- The cocycle agrees with the coboundary on a closed subgroup containing γ.
   let S : Subgroup Γ :=
     { carrier := {g | z g = ρ g m - m}
       one_mem' := by
@@ -96,7 +100,7 @@ theorem cobOfGen
         have ha' : z a = ρ a m - m := ha
         have hb' : z b = ρ b m - m := hb
         change z (a * b) = ρ (a * b) m - m
-        rw [hzm, ha', hb', map_mul, map_sub, Module.End.mul_apply]
+        rw [hzm, ha', hb', map_mul, map_sub, mul_apply_eq_comp]
         abel
       inv_mem' := by
         intro a ha
@@ -104,7 +108,7 @@ theorem cobOfGen
         change z a⁻¹ = ρ a⁻¹ m - m
         have h1 := hzm a⁻¹ a
         have h2 : ρ a⁻¹ (ρ a m) = m := by
-          rw [← Module.End.mul_apply, ← map_mul, inv_mul_cancel, map_one, Module.End.one_apply]
+          rw [← mul_apply_eq_comp, ← map_mul, inv_mul_cancel, map_one, one_apply_eq_self]
         rw [inv_mul_cancel, hone, ha', map_sub, h2] at h1
         rw [eq_neg_of_add_eq_zero_left h1.symm, neg_sub] }
   have hρm : Continuous fun g : Γ => ρ g m :=
@@ -116,7 +120,7 @@ theorem cobOfGen
     exact (hSc.isCompact.image hχ).isClosed
   have hle : (Subgroup.zpowers (χ γ)).topologicalClosure ≤ S.map χ :=
     Subgroup.topologicalClosure_minimal _
-      ((Subgroup.zpowers_le).2 ⟨γ, hm'.symm, rfl⟩) himg
+      ((Subgroup.zpowers_le).2 ⟨γ, hm.symm, rfl⟩) himg
   have hall : ∀ g : Γ, g ∈ S := by
     intro g
     obtain ⟨s, hs, hsg⟩ := hle (hgen g)

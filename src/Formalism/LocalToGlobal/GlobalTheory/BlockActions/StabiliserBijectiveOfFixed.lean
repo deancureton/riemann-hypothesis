@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabRestrict
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ClassInjectiveOfDegree
+module
+
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.StabRestrict
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.ClassInjectiveOfDegree
+
+@[expose] public section
 
 noncomputable section
 

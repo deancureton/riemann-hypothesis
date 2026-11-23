@@ -1,5 +1,9 @@
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.GoodPathWeightOfParts
-import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ReflectionMemGlevCastSucc
+module
+
+public import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.GoodPathWeightOfParts
+public import Formalism.SharpRestriction.GrowthBounds.SegmentDegree.ReflectionMemGlevCastSucc
+
+@[expose] public section
 
 noncomputable section
 

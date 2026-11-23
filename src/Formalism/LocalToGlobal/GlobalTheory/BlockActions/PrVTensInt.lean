@@ -1,5 +1,9 @@
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.DualLStable
-import Formalism.LocalToGlobal.GlobalTheory.BlockActions.LatSOfMem
+module
+
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.DualLStable
+public import Formalism.LocalToGlobal.GlobalTheory.BlockActions.LatSOfMem
+
+@[expose] public section
 
 noncomputable section
 
@@ -61,7 +65,7 @@ variable {D : D7} {u : D.what₂.Word} {Ch : ℕ → Type} {chOf : ∀ i, (D.mem
 
 theorem clsCrd_fin (u : D.what₂.Word) (c : (D.mem u).C.cls D.R.m) :
     Module.Finite (𝓞 D.host.E) (clsCrd D u D.R.m le_rfl c) := by
-  letI := D.host.cmStar
+  let := D.host.cmStar
   rw [Module.Finite.iff_fg]
   exact (D.clsLat_lat u D.R.m c).fg.map _
 

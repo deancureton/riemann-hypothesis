@@ -1,6 +1,10 @@
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOneRec
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.SelfDualAtColLevel
-import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.FullTiedCBase
+module
+
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.TiePtOneRec
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.SelfDualAtColLevel
+public import Formalism.LocalToGlobal.GroupLattices.TiedFamilies.FullTiedCBase
+
+@[expose] public section
 
 noncomputable section
 
