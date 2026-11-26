@@ -49,8 +49,6 @@ namespace New.Variety
 
 open CategoryTheory MonoidalCategory ObjectProperty CommAlgCat TotalH Period Ideal Finsupp
 
-set_option backward.isDefEq.respectTransparency false
-
 variable {C : Type _} [Category C] {ℓ : ℕ} {A : Type} [CommRing A] {g : C ⥤ TestOver A}
 
 section
@@ -214,13 +212,11 @@ lemma etaOneClass_eq_zero_of_hasUniversalPoints {c : TestOver A}
   let M : TorsionCoeff g := ⟨locConstAlong g, h_torsion, h_descent⟩
   let one : freeAb (onePointFunctor (projLineAlong g).Elements) ⟶
       locConstAlong (elementsProj (projLineAlong g) ⋙ g) := oneLocConst
-  have h_pull : (P (etaOneClass c)).toTotalH = 0 :=
-    calc (P (etaOneClass c)).toTotalH
-        = comp (P (etaOneClass c)).toTotalH (homClass (𝟙 _)) := comp_id.symm
-      _ = pullbackAlong one (comp (homClass (𝟙 M.onElements.functor)) M.cupClass.toTotalH) :=
-          comp_pull_etaOneClass_eq_pullbackAlong_oneLocConst (M := M) u
-      _ = pullbackAlong one M.cupClass.toTotalH := congrArg _ pullbackAlong_id
-      _ = 0 := h_zero
+  have h_pull : (P (etaOneClass c)).toTotalH = 0 := by
+    have h := comp_pull_etaOneClass_eq_pullbackAlong_oneLocConst (M := M)
+      (T := homClass (𝟙 M.onElements.functor)) u
+    erw [comp_id, pullbackAlong_id] at h
+    exact h.trans h_zero
   have h_pull_two : P (etaOneClass c) = 0 :=
     DirectSum.of_injective 2 (h_pull.trans (map_zero _).symm)
   have h_injective : Function.Injective P := (hu.on_elements.isBijective 2).injective
@@ -331,6 +327,7 @@ lemma lerayHirsch_lineBasis_single_false_eq_zero_of_etaOneClass_eq_zero {C : Typ
   -- `oneLocConst` to the points of ℙ¹.
   erw [← comp_pull_etaOneClass_eq_pullbackAlong_oneLocConst u, h_generic]
   simp
+  rfl
 
 /-- If `New.Variety.etaOneClass` vanishes at a test k over A that is a field, then it vanishes at
 the residue field of A at its generic point. -/
@@ -352,7 +349,7 @@ lemma etaOneClass_residueTest_bot_eq_zero {ℓ : ℕ} {A : Type} [CommRing A] [I
   -- Vanishing then passes to the generic point, as the vanishing locus is open.
   have h_open : IsOpen {P : PrimeSpectrum A |
       etaOneClass (ℓ := ℓ) (residueTest (TestOver.ofSelf A) P).right = 0} := by
-    simpa only [map_etaOneClass] using isDetectedAtPoints_projLine.isOpen_setOf_map_eq_zero
+    simpa only [map_etaOneClass] using! isDetectedAtPoints_projLine.isOpen_setOf_map_eq_zero
       (TestOver.ofSelf A) 2 (etaOneClass (TestOver.ofSelf A))
   have h_specializes : (⊥ : PrimeSpectrum A) ⤳ Q := (PrimeSpectrum.le_iff_specializes ..).mp bot_le
   exact h_specializes.mem_open h_open h_eta_under
