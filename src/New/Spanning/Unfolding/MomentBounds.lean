@@ -170,7 +170,7 @@ lemma eight_mul_M_pow_mul_identitySecondMoment_le [S.IsAdmissible] :
       (S.b ^ (6 * 𝔰.k))⁻¹ ^ #(univ : Finset (S.chosenPlaces 0)) * S.mainSecondMoment := by
   have h_id_nonneg : 0 ≤ S.identitySecondMoment := identitySecondMoment_nonneg
   have h_exp : 23 * Core.numInfPlaces E + 1 ≤ 5 * (𝔰.k * Core.numInfPlaces E) := by
-    nlinarith [S.thousand_mul_le_k, NeZero.one_le (n := Core.numInfPlaces E)]
+    nlinarith only [S.thousand_mul_le_k, NeZero.one_le (n := Core.numInfPlaces E)]
   have hb : 1000 ≤ S.b := S.thousand_le_b
   calc _ ≤ S.b * (S.b ^ 23) ^ Core.numInfPlaces E * S.identitySecondMoment := by
         grw [M_le_b_pow, show (8 : ℝ) ≤ S.b by linarith]

@@ -188,7 +188,7 @@ lemma New.Exchange.HasDeepLevelSizes.pow_places_le_div
       exacts [by linarith, h_size.rank_pow_le, by linarith, by linarith]
     _ = β ^ ((1 + 2 * card n ^ 2 + 2 * A + (N + 2 * (3 * A))) * D.f + 2) := by ring
     _ ≤ β ^ (20 * A * (D.f + 1)) :=
-      pow_le_pow_right₀ (by linarith) (by nlinarith [Nat.mul_le_mul_right D.f exponent_le])
+      pow_le_pow_right₀ (by linarith) (by linarith [Nat.mul_le_mul_right D.f exponent_le])
     _ ≤ m := h_size.pow_le
 
 end

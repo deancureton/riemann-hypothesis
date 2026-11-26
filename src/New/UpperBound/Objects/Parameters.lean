@@ -410,7 +410,7 @@ lemma abs_gridParam_le (hi : i ≤ D.m) (hj : j ≤ D.m) (x : D.GridIndex z i j)
   -- each entry is bounded by `10 * w (2 * m)`
   have h_top : 10 * D.liftWeight (2 * D.m) τ ≤ ⌈20 * D.b⌉₊ := by
     rify
-    linarith [D.liftWeight_le_two_mul_b (le_refl (2 * D.m)) τ, Nat.le_ceil (20 * D.b)]
+    linarith only [D.liftWeight_le_two_mul_b (le_refl (2 * D.m)) τ, Nat.le_ceil (20 * D.b)]
   grw [← h_top, gridParam]
   rcases D.gridBlockEquiv x with (n | ⟨l, b⟩) | ⟨l, b⟩ <;> grind [targetParameter_eq]
 

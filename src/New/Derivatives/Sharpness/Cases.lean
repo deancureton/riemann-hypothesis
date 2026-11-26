@@ -352,7 +352,7 @@ lemma padicValNat_factorial_sub_min_le (D : Data P) {p : ℕ} [Fact p.Prime] {l 
       _ ≤ i + 2 * padicValNat p B := by lia
   have h_sub_le_weight : ((l (τ, ()) - D.lossFactorCount : ℕ) : ℝ) ≤ D.weight τ := by
     rw [cast_le, tsub_le_iff_right, ← cast_le (α := ℝ), cast_add]
-    linarith [hl.le_weight_add τ, D.x_pow_le_lossFactorCount]
+    linarith only [hl.le_weight_add τ, D.x_pow_le_lossFactorCount]
   have h_quot : (i : ℝ) ≤ D.weight τ / p := by grw [hi, cast_div_le, h_sub_le_weight]
   have h_min : (i : ℝ) - (min i (l (P.partner D.towerExp p 1 τ, ())) : ℕ) ≤
       (D.weight τ / p - D.weight (P.partner D.towerExp p 1 τ) : ℝ)⁺ := by
@@ -404,7 +404,7 @@ lemma gammaPrime_mul_degree_sub_le_localPrimeSumTotal_add (D : Data P) {p : ℕ}
     simp only [Finsupp.degree_eq_sum, cast_sum, Fintype.sum_prod_type, Fintype.sum_unique, mul_sum,
       ← sum_add_distrib]
     refine sum_le_sum fun τ _ ↦ ?_
-    linarith [hl.le_weight_add τ, mul_le_of_le_one_left (sub_nonneg.2 (hl.weight_le τ)) hγ]
+    linarith only [hl.le_weight_add τ, mul_le_of_le_one_left (sub_nonneg.2 (hl.weight_le τ)) hγ]
   have h_weights_sub_predicted :
       γ * ∑ τ : D.Φ, (D.weight τ : ℝ) - D.localPrimeSumTotal p ≤ ∑ τ : D.Φ, D.partnerMinSum p τ :=
     (D.mul_sum_weight_sub_localPrimeSumTotal p).trans_le <|

@@ -178,7 +178,7 @@ lemma abs_primeRemainder_exp_le {v : ℝ} (hv : 0 ≤ v) :
     |primeRemainder d q (rexp v)| ≤ (|re (logDerivMean d q 1)| + 5) * rexp v := by
   have h_log : |v / φ q| ≤ rexp v := by
     rw [abs_of_nonneg (by positivity)]
-    linarith [div_le_self hv (mod_cast NeZero.one_le : (1 : ℝ) ≤ φ q), add_one_le_exp v]
+    linarith only [div_le_self hv (mod_cast NeZero.one_le : (1 : ℝ) ≤ φ q), add_one_le_exp v]
   set c : ℝ := re (logDerivMean d q 1) with hc
   calc
     |primeRemainder d q (rexp v)|

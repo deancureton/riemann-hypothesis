@@ -239,7 +239,7 @@ lemma carry_smul_mem_Z2 (χ : QZChar G) (w : ρ.invariants) :
   -- `w` is invariant, so this is the cocycle identity of the carry, times `w`
   have hf_mul (a b : G) : f (a * b) = f a + f b := QZChar.apply_mul χ a b
   have h_carry (a b c : QZ) : (a + b).carry c = a.carry (b + c) - a.carry b + b.carry c := by
-    linarith [QZ.carry_add_add_carry a b c]
+    linarith only [QZ.carry_add_add_carry a b c]
   have hw_inv : ρ g (w : M) = w := w.prop g
   rw [hf_mul, hf_mul, h_carry, map_zsmul, hw_inv, add_smul, sub_smul]
 

@@ -225,7 +225,7 @@ lemma norm_coeff_le_norm_sum_frameVector {y : 𝔰.G₁} (h_box : y ∈ frameBox
     rw [mulVec_mulVec, adjugate_mul, det_eq_one_of_unitriangular (frameMatrix_unitriangular hu),
       one_smul, one_mulVec]
   have h_exponent : 1 + ((2 + (7 * 𝔰.n + 37 * 𝔰.n)) * 𝔰.ϱ + 7 * 𝔰.n) ≤ 46 * 𝔰.n ^ 2 := by
-    nlinarith [S.ten_pow_five_le_varrho, (rfl : 𝔰.n = 𝔰.ϱ + 1)]
+    nlinarith only [S.ten_pow_five_le_varrho, (rfl : 𝔰.n = 𝔰.ϱ + 1)]
   calc ‖x a‖ ≤ ∑ i, ‖T.adjugate a i‖ * ‖(T *ᵥ x) i‖ := by
         rw [h_cramer]
         exact norm_sum_le_of_le _ fun i _ ↦ norm_mul_le _ _

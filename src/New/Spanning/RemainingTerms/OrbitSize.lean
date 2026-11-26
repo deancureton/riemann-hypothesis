@@ -359,7 +359,7 @@ lemma pairingBoundConst_le [S.IsAdmissible] :
     _ ≤ _ := by
       have h_eight : 8 ≤ S.tailScale ^ 2 := by
         grw [← pow_le_tailScale (S := S) (e := 1) NeZero.one_le, pow_one]
-        nlinarith [S.thousand_le_b]
+        nlinarith only [S.thousand_le_b]
       rw [div_pow, mul_pow, pow_right_comm]
       gcongr
       nlinarith [mul_le_mul_of_nonneg_left h_eight

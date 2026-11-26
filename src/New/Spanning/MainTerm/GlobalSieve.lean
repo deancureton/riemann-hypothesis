@@ -848,7 +848,7 @@ lemma boundsDecay_prod [S.IsAdmissible] :
     simp only [B, ← pow_mul, ← pow_succ']
     gcongr
     grw [← Nat.pow_le_pow_right 𝔰.ϱ.succ_pos (by norm_num : 2 ≤ 9)]
-    nlinarith [S.ten_pow_five_le_varrho]
+    nlinarith only [S.ten_pow_five_le_varrho]
   have h_sum : ∑ y ∈ X,
       (∏ v, dampedPower (𝔰.k - 𝔰.n ^ 7) ‖c v / S.frameScaleSq v a * Φ v y‖⁻¹) *
         (√(genIndex (ratToPlaces T y)) ^ (𝔰.k - 𝔰.n ^ 7) / denomIndex O (ratToPlaces T y) ^ 3) ≤
@@ -1059,7 +1059,7 @@ lemma sum_globalWeight_le [S.IsAdmissible] {A : Finset Eˣ}
       headProduct_injective.injOn
   have h_base : 1 + 2 * S.b ^ (120 * 𝔰.n ^ 2) ≤ S.b ^ (120 * 𝔰.n ^ 2 + 1) := by
     rw [pow_succ S.b]
-    nlinarith [S.thousand_le_b, one_le_pow₀ hb (n := 120 * 𝔰.n ^ 2)]
+    nlinarith only [S.thousand_le_b, one_le_pow₀ hb (n := 120 * 𝔰.n ^ 2)]
   calc
     _ = ∑ p ∈ P, S.globalWeight T i (S.scaledHead T p 1) := (sum_filter_ne_zero univ).symm
     _ ≤ #P * S.b ^ (120 * 𝔰.n ^ 8 * numInfPlaces E * i) := by

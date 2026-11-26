@@ -94,7 +94,7 @@ lemma IsBoxPartitionOfUnity.mem_frameBox {c : S.Classes}
   grw [hω.mem_frameBox_besselLength y v hy a, h_size, frameBoxRadius, ← mul_assoc, ← pow_add]
   -- Exponents of `b`: `27 + 6 n + 2 ≤ 37 n`.
   gcongr
-  nlinarith [S.ten_pow_five_le_varrho]
+  linarith only [S.ten_pow_five_le_varrho]
 
 /-- The cutoff `S.classCutoff c` of a class `c` is a cutoff for the rational unipotent elements
 fixing the frame, times the indicator of the reduced points. If it is not zero at `y` and
@@ -318,7 +318,7 @@ lemma frameImage_eq_frameImage_one_of_close {g : S.G E} {d : S.Classes} {r : S.R
   have h_exp : S.b ^ (23 * 𝔰.ϱ) * S.b ^ (6 * 𝔰.n + 2) ≤ S.frameBoxRadius := by
     rw [frameBoxRadius, ← pow_add]
     gcongr
-    nlinarith [S.ten_pow_five_le_varrho]
+    linarith only [S.ten_pow_five_le_varrho]
   set ε : ℝ := ‖Φ v (g.val (Sum.inl a) (𝔰.besselFrame b) -
     (1 : S.G E).val (Sum.inl a) (𝔰.besselFrame b))‖
   calc ε ≤ ε * (S.b ^ (23 * 𝔰.ϱ) *

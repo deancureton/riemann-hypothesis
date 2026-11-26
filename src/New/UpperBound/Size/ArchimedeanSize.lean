@@ -344,7 +344,7 @@ lemma chainSize_sub_le {P : Parameters} (D : Data P) :
       D.mainAmount - D.m * D.totalRemainder + 2 * ∑ p ∈ D.smallNonsplitPrimes, D.gain p * log p +
         32 * (D.f * D.a * D.logB) := by
   rw [mainAmount_sub_add_two_mul_sum_gain, chainSize]
-  linarith [D.card_aPlaces_mul_excess_le]
+  linarith only [D.card_aPlaces_mul_excess_le]
 
 /-! ### The terms and the restriction -/
 

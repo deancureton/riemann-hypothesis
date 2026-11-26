@@ -425,7 +425,7 @@ lemma cut_exponent_le {n r k f : ℕ} (hk : 12 * n ^ 3 + 500 ≤ k) (hr : k + 1 
   have h_small : 402 * r ^ 2 ≤ r ^ 3 := by grw [pow_succ' r 2, show 402 ≤ r by lia]
   have h_cube : k ^ 3 ≤ r ^ 3 := Nat.pow_le_pow_left (by lia) 3
   calc
-    _ ≤ (12 * n ^ 3 * r + 400 * r ^ 2 + (2 * k + 1) + k ^ 3) * f := by nlinarith
+    _ ≤ (12 * n ^ 3 * r + 400 * r ^ 2 + (2 * k + 1) + k ^ 3) * f := by linarith
     _ ≤ 2 * r ^ 3 * f := Nat.mul_le_mul_right f (by lia)
     _ = _ := mul_assoc ..
 

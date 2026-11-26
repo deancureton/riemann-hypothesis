@@ -546,7 +546,7 @@ lemma IsNear.norm_map_leadingMinor_sq_le [S.IsAdmissible] (l : Fin (𝔰.ϱ + 1 
   -- by `l ≤ ϱ + 1 ≤ b` the left side is at most a power of `b`; compare the exponents
   have hl : (l : ℝ) ≤ S.b := by grw [l.is_le, S.succ_le_b]
   have h_exponent : (l.val + 134 * 𝔰.n * l.val) * 2 ≤ 270 * 𝔰.n ^ 2 := by
-    nlinarith [S.ten_pow_five_le_varrho, l.is_le]
+    nlinarith only [S.ten_pow_five_le_varrho, l.is_le]
   grw [h_det, hl, ← pow_add, ← pow_mul]
   exact pow_le_pow_right₀ S.one_le_b h_exponent
 
