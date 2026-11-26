@@ -832,7 +832,7 @@ lemma exists_equalRankThetaRatio_eq_const (W : Space E n s) (μ : InfinitePlace 
   | succ q ih =>
     let W₀ := hyperbolicSum (Fin q) (stdSpace E (Fin (2 * k)))
     have h_neg : negCount (Sum.elim (hyperbolicSigns (Fin q)) (1 : Fin (2 * k) → ℤˣ)) = q := by
-      simp [negCount_sumElim_hyperbolicSigns]
+      simp
     have h_even₀ : 2 ∣ card ((Unit ⊕ Unit) ⊕ (Fin q ⊕ Fin q) ⊕ Fin (2 * k)) :=
       ⟨1 + k + q, by simp +arith⟩
     obtain ⟨v, hv, C, hC, h_below⟩ := ih W₀ (by simp +arith [h_neg]) h_even₀ h_neg
