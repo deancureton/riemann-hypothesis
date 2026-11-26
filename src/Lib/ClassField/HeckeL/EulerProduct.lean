@@ -1,3 +1,4 @@
+import TauCeti.NumberTheory.RamificationInertia.Tower
 import Lib.ClassField.Places.Ideles
 
 /-!
@@ -89,10 +90,8 @@ def HasPrimeDensity (l : ℂ) : Prop :=
 /-- At most `[K : ℚ]` primes of `K` lie over a maximal ideal of `ℤ`. -/
 lemma ncard_primesOver_le_finrank (p : Ideal ℤ) [p.IsMaximal] :
     (p.primesOver (𝓞 K)).ncard ≤ finrank ℚ K := by
-  -- Each term of the fundamental identity `∑ e f = [K : ℚ]` is at least `1`.
-  rw [← RingOfIntegers.rank, ← sum_ramification_inertia_eq_finrank p (𝓞 K),
-    ← Set.fintypeCard_eq_ncard, Fintype.card_eq_sum_ones]
-  exact sum_le_sum fun P _ ↦ mul_pos (P.1.ramificationIdx_pos ℤ) (P.1.inertiaDeg_pos ℤ)
+  rw [← RingOfIntegers.rank]
+  exact TauCeti.RamificationInertia.ncard_primesOver_le_finrank p
 
 /-- For a finite set `u` of primes of `K`, the sum over `v ∈ u` of `1 / p ^ 2`, with `p` the least
 prime factor of the norm `v.q`, is at most the degree `[K : ℚ]`. -/

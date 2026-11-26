@@ -1,3 +1,4 @@
+import TauCeti.RingTheory.MvPowerSeries.Derivative
 import Lib.CM.Sigma.Basic
 import Lib.GLn.SchurModule.Basic
 import Lib.General.Algebra.AdicCompletion
@@ -101,11 +102,8 @@ open MvPowerSeries Finset WithPiTopology
 
 /-- Partial derivatives of power series are continuous for the coefficientwise topology. -/
 lemma New.continuous_pderiv_of_continuousMul {σ R : Type*} [CommRing R] [TopologicalSpace R]
-    [ContinuousMul R] (i : σ) : Continuous (pderiv (R := R) i) := by
-  refine continuous_pi fun d ↦ ?_
-  change Continuous fun F : MvPowerSeries σ R ↦ coeff d (pderiv i F)
-  simp only [coeff_pderiv]
-  exact (continuous_coeff R _).mul continuous_const
+    [ContinuousMul R] (i : σ) : Continuous (pderiv (R := R) i) :=
+  MvPowerSeries.WithPiTopology.continuous_pderiv i
 
 variable {ι : Type _} {κ : Type _} {R : Type _} [CommRing R] [Fintype ι] in
 /-- The chain rule for power series: if the family `a` can be substituted into series in the
@@ -113,22 +111,8 @@ variables `ι`, then `∂_k F(a) = ∑_i (∂_i F)(a) * ∂_k a_i`. -/
 @[simp]
 lemma New.pderiv_subst {a : ι → MvPowerSeries κ R} (ha : HasSubst a) (k : κ)
     (F : MvPowerSeries ι R) :
-    pderiv k (subst a F) = ∑ i : ι, (pderiv i F).subst a * pderiv k (a i) := by
-  classical
-  -- With the discrete topology on `R` both sides are continuous in `F` and polynomials are dense,
-  -- so it suffices to prove the chain rule for polynomials.
-  let : UniformSpace R := ⊥
-  have h_cont : Continuous (subst (R := R) a) := continuous_subst ha
-  refine denseRange_toMvPowerSeries.induction_on F ?_ fun Q ↦ ?_
-  · have h_pderiv (i : ι) : Continuous (pderiv (R := R) i) := continuous_pderiv_of_continuousMul i
-    exact isClosed_eq ((continuous_pderiv_of_continuousMul k).comp h_cont) (by fun_prop)
-  · simp only [subst_coe, pderiv_coe]
-    induction Q using MvPolynomial.induction_on with
-    | C c => simp
-    | add P Q hP hQ => simp [hP, hQ, add_mul, sum_add_distrib]
-    | mul_X P i hP =>
-      -- the Leibniz rule on both sides
-      simp [hP, add_mul, sum_add_distrib, mul_sum, apply_ite, mul_assoc, Pi.single_apply]
+    pderiv k (subst a F) = ∑ i : ι, (pderiv i F).subst a * pderiv k (a i) :=
+  MvPowerSeries.pderiv_subst ha F k
 
 /-- Jets of a linear substitution. Let `M` be a matrix and substitute the linear forms
 `(M z)_i = ∑_k M_(i k) z_k` into the series `F`. The jet `P(∂) F(M z) (0)` equals the jet of `F`
