@@ -528,7 +528,7 @@ lemma scaledSiegelConst_le : D.filling.scaledSiegelConst ≤
     have h_order : ((D.filling.M : ℝ) ^ (2 * (D.ϱ * (D.ϱ + D.k)) + D.ϱ)) ^ D.f =
         D.filling.unipotentOrder := by
       rw [← pow_mul, unipotentOrder, Shape.k, card_X₀, Nat.cast_pow]
-      ring_nf
+      ring
     -- The factor `frameScaleProd` cancels from the definition of the covolume.
     rw [Filling.unipotentCovolume, div_mul_cancel₀ _ D.filling.frameScaleProd_pos.ne', Shape.k,
       card_X₀, h_rank, div_pow]

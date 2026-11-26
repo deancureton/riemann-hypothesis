@@ -726,7 +726,7 @@ lemma pow_mul_mul_rootDiscr_pow_le_tailScale (S : Filling E 𝔰) [S.IsAdmissibl
   calc (S.N ^ numInfPlaces E * X ^ (numInfPlaces E * (𝔰.k + 1))) ^ 1000
     _ = (S.N ^ 1000 * (X ^ 1000) ^ (𝔰.k + 1)) ^ numInfPlaces E := by
       simp only [mul_pow, ← pow_mul]
-      ring_nf
+      ring
     _ ≤ ((S.b ^ (60 * 𝔰.n)) ^ 1000 * S.b ^ (𝔰.k + 1)) ^ numInfPlaces E := by
       gcongr
       exacts [IsAdmissible.N_le, S.mul_rootDiscr_pow_le]
