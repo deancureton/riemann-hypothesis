@@ -143,7 +143,7 @@ by the coefficients of `P` and of the `Q i`, with the sign changed. If `P` is mo
 and these coefficients of `P` in degree `a - 1` lie in a complete set, some `R` is attached to `P`,
 and the pairs of the traces of `R` and of the `r i` lie in `N`. -/
 lemma New.GaloisRep.exists_attached_of_isApproximatingMonoid {ℓ : ℕ} {E : Type} {a : ℕ} [ThePrime ℓ]
-    [PadicIso ℓ] [Field E] [CMType E] [EmbeddedNumberField E] [NeZero a] {s : Set.Ioi (0 : ℝ) → ℕ}
+    [PadicIso ℓ] [Field E] [EmbeddedNumberField E] [NeZero a] {s : Set.Ioi (0 : ℝ) → ℕ}
     {t : (η : Set.Ioi 0) → Fin (s η) → PadicAlgCl ℓ}
     {N : Submonoid (PadicAlgCl ℓ × ((η : Set.Ioi 0) × Fin (s η) → PadicAlgCl ℓ))}
     (apx : IsApproximatingMonoid s t N)

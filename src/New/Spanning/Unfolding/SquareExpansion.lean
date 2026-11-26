@@ -299,7 +299,7 @@ lemma amplitudeSum_besselS_eq_zero {side : FullOrCut} {s : S.ResidueGL}
 
 /-- The complement of the Bessel subgroup is stable under multiplication by the unipotent group
 `besselU` on both sides. -/
-lemma isStable_compl_besselS [HasPrimitiveRoot5040 E] :
+lemma isStable_compl_besselS :
     S.IsStable ((S.ratMiddle E).besselS : Set (S.G E))ᶜ :=
   fun u hu u' hu' γ ↦ (S.isStable_besselS u hu u' hu' γ).not
 
@@ -505,7 +505,8 @@ lemma amplitudeSum_mul_inv_apply [HasPrimitiveRoot5040 E] [S.IsAdmissible] {T : 
   have h_kernel (γ : S.G E) (y : NumberField.InfinitePlace E → 𝔰.G₁) :
       S.besselKernel .full (1 * γ * δ⁻¹) (S.ratToInf 1 * y) = L (S.besselKernel .full γ y) := by
     ext ⟨a, b⟩
-    simp [hL, besselKernel, mul_assoc, hN, mulVec, dotProduct, mul_sum, mul_left_comm]
+    simp [hL, besselKernel, mul_assoc, hN, mulVec, dotProduct, mul_sum]
+    exact Finset.sum_congr rfl fun _ _ ↦ mul_left_comm ..
   have h_move : S.amplitudeSum .full T c (s * t⁻¹) d = L (S.amplitudeSum .full T c s d') := by
     simpa using amplitudeSum_mul_mul_inv hT (one_mem _) (S.classUnipotent c).one_mem.2 hδ hδ_over
       (by simpa using hT_mul_inv) L h_kernel s
@@ -593,12 +594,11 @@ theorem sqrt_secondMoment_compl_besselS_le [HasPrimitiveRoot5040 E] [S.IsAdmissi
     _ = √C + 2 * (S.b ^ 5)⁻¹ * ((S.b ^ 15)⁻¹ * √S.identitySecondMoment) := by ring
     _ ≤ √C + (S.b ^ 15)⁻¹ * √S.identitySecondMoment := by grw [h_small, one_mul]
 
-/-- Let `E` contain a primitive `5040`-th root of unity and let the filling `S` be admissible
-(`IsAdmissible`). Let `s` coincide, at the chosen places above `p_i = levelPrime i`, with an element
-`t` of `reducedImage besselS`, the reduction of the Bessel subgroup. Then the product of the norms
+/-- Let `s` coincide at the chosen places above `p_i = levelPrime i` with an element `t` of
+`reducedImage besselS`, the reduction of the Bessel subgroup. Then the product of the norms
 `p_i` of these places and their conjugates is at most `meetNorm s`, the product of the norms of the
 places at which `s` meets, as `s` meets at each of them. -/
-lemma prod_levelPrime_le_meetNorm_of_eq [HasPrimitiveRoot5040 E] [S.IsAdmissible]
+lemma prod_levelPrime_le_meetNorm_of_eq
     {s t : S.ResidueGL} (ht : t ∈ S.reducedImage besselS) {i : Fin 2} (hs : s i = t i) :
     ∏ _ : S.chosenPlaces i × Bool, S.levelPrime i ≤ S.meetNorm s := by
   classical

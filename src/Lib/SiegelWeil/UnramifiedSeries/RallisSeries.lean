@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.LinearAlgebra.Projectivization.Cardinality
 public import Lib.SiegelWeil.UnramifiedSeries.VacuumCoefficients
 
 /-!

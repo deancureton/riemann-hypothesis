@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.Probability.Kernel.Composition.MeasureCompProd
 public import Lib.DiscreteSeries.Bruhat.FloorGroups
 public import Lib.General.Measure.QuadricDisintegration
 

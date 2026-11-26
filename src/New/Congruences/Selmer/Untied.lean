@@ -449,7 +449,7 @@ lemma IsTiedPrimes.relLength_tied_le_sum_ker [ThePrime ℓ]
     (hp : IsTiedPrimes ℓ S₀ V W N P₀ J d) (hN : N ≠ 0)
     (i : ι) (h_unr : ∀ g ∈ inertiaAbove S₀ᶜ, reduceModPow ℓ M ρ g = 1)
     (h_triv_of_V : ∀ g : Gal(Ω/E), V i g → reduceModPow ℓ M ρ g = 1) {O' : Type} [CommRing O']
-    [DVR O'] (e : O →+* O') {y : O'}
+    (e : O →+* O') {y : O'}
     (h_geom_sum : ∀ α : O', y ∣ α - 1 → (ℓ ^ M : O') ∣ ∑ j ∈ range (ℓ ^ N), α ^ j)
     (S : Set (FinPlace E)) (L : Set (Gal(Ω/E) →₀ Matrix n n O))
     {I : Finset (FinPlace E)} (hI : I ⊆ J) (hy_zero_of_first_mem : P₀ ∈ I → y = 0) :

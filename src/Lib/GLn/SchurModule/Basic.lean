@@ -412,7 +412,7 @@ def linSubst : MvPolynomial σ R →ₐ[R] MvPolynomial m R := aeval fun s ↦ �
 /-- The chain rule for a linear substitution: the derivative of `p(zᵀx)` in `x_i` is
 `Σ_a z_{ia} (∂p/∂x_a)(zᵀx)`. -/
 lemma pderiv_linSubst {σ m R : Type} [CommRing R] [Fintype m] (z : Matrix m σ R) [Fintype σ]
-    [DecidableEq σ] (p : MvPolynomial σ R) (i : m) :
+    (p : MvPolynomial σ R) (i : m) :
     (linSubst z p).pderiv i = ∑ a : σ, z i a • linSubst z (p.pderiv a) := by
   classical
   -- By induction from the variables; the step for `p * X j` is the Leibniz rule.
@@ -427,7 +427,7 @@ lemma pderiv_linSubst {σ m R : Type} [CommRing R] [Fintype m] (z : Matrix m σ 
 /-- For an `m × σ` matrix `z` over the commutative ring `R`, the substitutions by `z` and by `zᵀ`
 (`New.linSubst`) are adjoint for the Fock form `⟨p, q⟩ = p(∂) q (0)`. -/
 lemma fockPairing_linSubst {σ m R : Type} [CommRing R] [Fintype m] (z : Matrix m σ R) [Fintype σ]
-    [DecidableEq σ] (f : MvPolynomial m R) (g : MvPolynomial σ R) :
+    (f : MvPolynomial m R) (g : MvPolynomial σ R) :
     fockPairing R f (linSubst z g) = fockPairing R (linSubst zᵀ f) g := by
   classical
   -- A factor `X i` of `f` moves across the Fock form as `pderiv i` (`fockPairing_mul_X`), and

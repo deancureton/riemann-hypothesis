@@ -319,7 +319,7 @@ lemma relIndex_ne_zero_of_isLevel (K : Subgroup (Gf E n)) [IsLevel K] :
 says that `w i` is split), a matrix `k` in `localIntGL n (w i)` = GL_n(O_{w i}) put at the split
 place `w i` by `New.ofSplitPlace` reduces to `reduceGL k`, the reduction of `k` modulo `w i`, at
 `w i` and to `1` at the other places of the family. -/
-lemma reduceFamily_ofSplitPlace [Finite ι] [IsConjApart w] [DecidableEq ι] (i : ι)
+lemma reduceFamily_ofSplitPlace [IsConjApart w] [DecidableEq ι] (i : ι)
     (k : localIntGL n (w i)) :
     reduceFamily w ⟨ofSplitPlace (IsConjApart.star_ne (w := w) i i) k, by simp⟩ =
       Pi.mulSingle i (reduceGL k) := by

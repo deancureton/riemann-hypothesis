@@ -124,8 +124,8 @@ valuations. -/
 lemma norm_natCast_prod_eq_rpow_neg_sum {p : ℕ} [hp : Fact p.Prime] [PadicPlace p] {X : Type}
     [Fintype X] {n : X → ℕ} (hn : ∀ x : X, n x ≠ 0) :
     ‖(ιₚ (∏ x : X, n x : ℕ) : ℂ_[p])‖ = p ^ (-∑ x : X, (padicValNat p (n x) : ℝ)) := by
-  simp [norm_natCast_eq_inv_pow_padicValNat, hn, rpow_neg p.cast_nonneg, ← cast_sum,
-    prod_pow_eq_pow_sum]
+  rw [map_natCast, Nat.cast_prod]
+  exact New.norm_prod_natCast_eq_rpow_neg_sum (p := p) hn
 
 /-- The hermitian space `Hom(E, E¹²)` of `12 × 1` matrices over `E = D.E`, where `E` and `E¹²` carry
 the sum of the norms of the coordinates (`stdSpace`). The sign of a coordinate is the product of

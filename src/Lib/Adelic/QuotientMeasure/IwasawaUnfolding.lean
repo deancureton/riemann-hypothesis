@@ -79,7 +79,7 @@ lemma New.integrable_prod_count_of_lintegral_lt_top {X Y : Type*} [MeasurableSpa
 
 /-- If the `k y` are measurable and `∑ ‖k y‖` has finite integral, then `∑ k y` is integrable. -/
 lemma New.integrable_tsum_of_lintegral_lt_top {X Y : Type*} [MeasurableSpace X] [Countable Y]
-    {ν : Measure X} [SFinite ν] {k : Y → X → ℂ} (hk_meas : ∀ y : Y, Measurable (k y))
+    {ν : Measure X} {k : Y → X → ℂ} (hk_meas : ∀ y : Y, Measurable (k y))
     (h_fin : ∫⁻ x : X, ∑' y : Y, ‖k y x‖ₑ ∂ν < ∞) :
     Integrable (fun x : X ↦ ∑' y : Y, k y x) ν := by
   let : MeasurableSpace Y := ⊤
@@ -565,7 +565,7 @@ let the discrete group `Γ` contain every `i (δ d)` and lie in the union of the
 Suppose that conjugation by `i m` multiplies integrals over `N` by `w m`. Then `w m` times the
 integral over `(Γ ∩ N) \ N` (that is, against `quotMeasure lam`) of a sum over `Γ` unfolds to a sum
 over `d` of integrals over `N` against the Haar measure `lam`. -/
-lemma New.ofReal_mul_lintegral_quotMeasure_tsum [IsMulRightInvariant lam]
+lemma New.ofReal_mul_lintegral_quotMeasure_tsum
     (hN : IsClosed (N : Set G))
     (h_conj : ∀ (m : M) (f : G → ℝ≥0∞), Measurable f →
       ∫⁻ n : N, f (i m * n * (i m)⁻¹) ∂lam = ENNReal.ofReal (w m) * ∫⁻ n : N, f n ∂lam)

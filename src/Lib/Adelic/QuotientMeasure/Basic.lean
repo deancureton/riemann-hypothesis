@@ -144,7 +144,7 @@ cutoff) as `F ∘ T` under `m`. -/
 lemma identDistrib_orbitMeasure_of_unfold [SMul H X] [MeasurableSMul₂ H X] {ν : Measure H}
     {μ : Measure X} {Z L : Type*} [MeasurableSpace Z] [MeasurableSpace L] {ρ : Measure L}
     [SFinite ρ] [c : HasCutoff ν X] {σ : L → H} (hσ_pres : MeasurePreserving σ ρ ν) {T : Z → X}
-    {m : Measure Z} [SFinite m]
+    {m : Measure Z}
     (h_unfold : MeasurePreserving (fun p : Z × L ↦ σ p.2 • T p.1) (m.prod ρ) μ) (hF : Measurable F)
     (hT : Measurable T) (h_inv : ∀ (h : H) (x : X), F (h • x) = F x) :
     IdentDistrib F (F ∘ T) (orbitMeasure ν μ) m := by

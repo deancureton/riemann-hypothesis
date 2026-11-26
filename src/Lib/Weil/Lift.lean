@@ -513,7 +513,9 @@ theorem lift_piTensor_integratedRep {T : InfinitePlace E → FockDualPair s t ι
         simp only [Space.lift, integral_const_mul]
     _ = ∫ a : G E s, (∫ x : GInf E s, F x a) ∂S.quotMeasure := integral_integral_swap h_int
     _ = S.lift Θ φ (realConv e y) g := by
-        simp only [F, Space.lift, realConv, ← integral_const_mul, mul_left_comm]
+        simp only [F, Space.lift, realConv, ← integral_const_mul]
+        exact integral_congr_ae (.of_forall fun _ ↦ integral_congr_ae (.of_forall fun _ ↦
+          mul_left_comm ..))
     _ = S.lift Θ φ y g := by rw [hy.realConv_eq cusp.integrable]
 
 variable [Nonempty n']

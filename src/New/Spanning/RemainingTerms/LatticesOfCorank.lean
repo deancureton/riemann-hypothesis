@@ -664,7 +664,7 @@ end Forms
 omit [HasPrimitiveRoot5040 E] in
 /-- The number `S.tailScale = b ^ (k f / 4)` is nonnegative, as the size parameter `b` is. Here
 `k = |κ|` and `f` is the number of infinite places of `E`. -/
-lemma tailScale_nonneg (S : Filling E 𝔰) [S.IsAdmissible] : 0 ≤ S.tailScale := by
+lemma tailScale_nonneg (S : Filling E 𝔰) : 0 ≤ S.tailScale := by
   have hb : 0 < S.b := by linarith [S.thousand_le_b]
   rw [tailScale]
   positivity

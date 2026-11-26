@@ -377,9 +377,9 @@ lemma New.Variety.map_pointClass_eq_sum {k : Type} [Field k] [CharZero k] {d : �
 the pairs `(x, [Λ(v)])` where `v` are coordinates of `x` with a unit entry and the values `Λ(v)`
 generate the unit ideal (`hΓ`). If the first projection `Γ → Y` is a monomorphism, then `Γ` is
 covered by charts of the dimension `d` of `Y`. -/
-lemma New.Variety.isChartCovered_graph_projection {k : Type} [Field k] [CharZero k]
+lemma New.Variety.isChartCovered_graph_projection {k : Type} [Field k]
     {R : CommRingCat} [Algebra R.carrier k] {Y : Over (AlgebraicGeometry.Spec R)} {d n : ℕ}
-    [HasAtlas d (algPointsOf k R Y)] {ι : Type} [Finite ι] {L : LineBundle Y.left ι}
+    [HasAtlas d (algPointsOf k R Y)] {ι : Type} {L : LineBundle Y.left ι}
     [Fact (L.IsProjEmbedding Y.hom)] {Λ : Fin (n + 1) → homogeneousSubmodule ι k 1}
     {Γ : Subfunctor (algPointsOf k R Y ⊗ projSpace k n)}
     (hΓ : ∀ (A : CommAlg k) (x : (algPointsOf k R Y ⊗ projSpace k n).obj A),

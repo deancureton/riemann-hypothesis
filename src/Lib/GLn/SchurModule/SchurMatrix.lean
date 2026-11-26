@@ -80,7 +80,7 @@ height `h` for each `h < M τ`. Take the product over τ of the minor products o
 rows (τ, ·). This product lies in `nabla R Sigma.fst (diagramWeight M κ)`. That is, with rows
 coloured by τ, it satisfies f(yβ) = ∏ β_{τ,ii}^{l(τ,i)} f(y) for upper triangular β_τ, where l(τ, i)
 is the sum of `κ τ h` over i < h < M τ. -/
-lemma prod_tableauPoly_mem_nabla [DecidableEq Φ]
+lemma prod_tableauPoly_mem_nabla
     {M : Φ → ℕ} {T : ∀ τ : Φ, Tableau (n' τ) (M τ) (κ τ)} :
     ∏ τ : Φ, tableauPoly R (Sigma.mk τ) (T τ) ∈ nabla R Sigma.fst (diagramWeight M κ) := by
   -- The product is the product `minorProduct` of the minors over all columns of all colours.

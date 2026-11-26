@@ -179,11 +179,9 @@ polynomial of `M` is a root of `P`. -/
 lemma isRoot_of_isRoot_charpoly {m K : Type*} [Fintype m] [DecidableEq m] [Field K]
     {M : Matrix m m K} {P : Polynomial K} {x : K} (hP : Polynomial.aeval M P = 0)
     (hx : M.charpoly.IsRoot x) : P.IsRoot x := by
-  -- The characteristic polynomial of `aeval M P = 0` is a power of `X`, so that of `M` divides a
-  -- power of `P`.
-  have h_dvd : M.charpoly ∣ P ^ Fintype.card m := by
-    simpa [hP] using charpoly_dvd_charpoly_aeval_comp (Y := M) P
-  exact eq_zero_of_pow_eq_zero (by simpa using hx.dvd h_dvd : P.eval x ^ Fintype.card m = 0)
+  have h_mem : P.eval x ∈ spectrum K (0 : Matrix m m K) := hP ▸
+    spectrum.subset_polynomial_aeval M P ⟨x, Matrix.mem_spectrum_iff_isRoot_charpoly.2 hx, rfl⟩
+  exact (by simpa using Matrix.mem_spectrum_iff_isRoot_charpoly.1 h_mem : P.eval x = 0 ∧ _).1
 
 end New.GaloisRep
 

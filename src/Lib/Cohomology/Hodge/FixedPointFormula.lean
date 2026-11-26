@@ -431,7 +431,7 @@ omit [CharZero k] in
 /-- The universal symbol `symbolClass` in degree `d` is compatible with a change of the base
 field: for a field `E` of characteristic `0` over `k`, the base change to `E` of the symbol over
 `k` is the symbol over `E`. -/
-lemma symbolClass_baseChange {E : Type} [Field E] [CharZero E] [Algebra k E] :
+lemma symbolClass_baseChange {E : Type} [Field E] [Algebra k E] :
     (symbolClass (k := k) (d := d)).baseChange (k := E) = symbolClass := by
   -- Both classes are given by the same determinant cocycle on the same relation; the three
   -- compatibilities hold by unfolding the identity maps.
@@ -520,7 +520,7 @@ of `u` and `c` come from a point of the finite set `s`. Then `scaledGraph t u c`
 square-zero points of the complement `offPoints s` of `s` into the complement `offDiagonal X` of
 the diagonal. -/
 private lemma offPoints_whisker_le_preimage_scaledGraph [IsSeparatedFunctor X] {E : Type} [Field E]
-    [CharZero E] [Algebra k E] {W : CommAlg E ⥤ Type 1} (u c : W ⟶ restrictAlg k E ⋙ X)
+    [Algebra k E] {W : CommAlg E ⥤ Type 1} (u c : W ⟶ restrictAlg k E ⋙ X)
     (s : Finset (W.obj (of E E))) (t : E)
     (h_field : ∀ K : CommAlg E, IsField K → ∀ x : W.obj K, c.app K x = u.app K x →
       ∃ w ∈ s, x = W.map structureMap w) :
@@ -582,7 +582,7 @@ diagonal) is the symbol of the coordinate differences of the chart `A`; `lift u 
 out `w = W.map ζ a.point` and generates `ker ζ`; `m` is the Jacobian ratio at `w`. Then on `a`,
 relative to the complement of `w`, `δ.baseChange` (`δ` read on `E`-algebras through
 `restrictAlg k E`) pulls back along `scaledGraph t u c` to `m • [df / f]`. -/
-private lemma map_pointMap_map_scaledGraph_eq_smul_symbolClass [IsSeparatedFunctor X] {E : Type}
+private lemma map_pointMap_map_scaledGraph_eq_smul_symbolClass {E : Type}
     [Field E] [CharZero E] [Algebra k E] {W : CommAlg E ⥤ Type 1} {u c : W ⟶ restrictAlg k E ⋙ X}
     {s : Finset (W.obj (of E E))} {t m : E} {δ : HodgeH (relFreeAb (offDiagonal X)) d}
     {A : EtaleChart d X} {O : Subfunctor (X ⊗ X)} (hO : IsOpenSubfunctor O)

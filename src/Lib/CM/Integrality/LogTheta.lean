@@ -596,7 +596,7 @@ variable {C}
 /-- An element `v` of `𝒪[[y]]` (the ring `integralSeriesRing` of the lattice), taken at the linear
 form `μ_i z` (`linearSeries (μ i)`), lies in the ring `𝒪[[y(μ_j z)]]` of all the forms. The
 hypothesis `PrimeSevenModEight d` says that `d` is a prime that is 7 modulo 8. -/
-lemma subst_mem_multiSeriesRing (μ : I → X → ℂ_[p]) [PrimeSevenModEight d] {v : PowerSeries ℂ_[p]}
+lemma subst_mem_multiSeriesRing (μ : I → X → ℂ_[p]) {v : PowerSeries ℂ_[p]}
     (hv : v ∈ C.integralSeriesRing) (i : I) :
     v.subst (linearSeries (μ i)) ∈ C.multiSeriesRing μ := by
   -- If `v = g(y)` with `g` integral, then `v(μ i)` is `g(X i)` evaluated at the series `y(μ j)`.

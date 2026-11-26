@@ -762,7 +762,7 @@ lemma det_eq_realIdele_mul_finIdeleIncl {B : GL b (𝔸 E)} {x : GL b (𝔸f E)}
     (hx : B.val.map Prod.snd = x.val) : B.det = realIdele (infiniteDet B) * finIdeleIncl x.det := by
   ext : 2
   · simp [infiniteDet]
-  · simpa [← hx] using (RingHom.snd (NumberField.InfinitePlace E → ℂ) (𝔸f E)).map_det B.val
+  · simp [← hx]
 
 /-- The identity of periods over `[U W₁]` for a tame character `𝔠` of weight `μ` (an integer for
 each infinite place) and real data `v` of `(X, V' ⊕ W₁)` and `v'` of `(X, V')`, with weight function

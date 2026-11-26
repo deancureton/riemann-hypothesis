@@ -124,8 +124,8 @@ lemma exists_avatar :
     ext g : 1
     obtain ⟨x, hx⟩ := artinMap_surjective Gal(Ω/K) ⟦g⟧
     have hψ_mul : ψ (θ * θ') x = ψ θ x * ψ θ' x := by
-      simp [ψ, AlgHeckeChar.character, AlgHeckeChar.infinityType, zpow_add, prod_mul_distrib,
-        mul_mul_mul_comm]
+      simp [ψ, AlgHeckeChar.character, AlgHeckeChar.infinityType, zpow_add, prod_mul_distrib]
+      exact mul_mul_mul_comm ..
     rw [MonoidHom.mul_apply, hμ _ x g hx, hμ θ x g hx, hμ θ' x g hx, hψ_mul]
   exact ⟨.mk' μ hμ_mul, fun θ ↦ ⟨hμ_cont θ, fun x g hg ↦ by simp [ψ, hμ θ x g hg]⟩⟩
 

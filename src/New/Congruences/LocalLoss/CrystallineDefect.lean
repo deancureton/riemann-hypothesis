@@ -490,7 +490,7 @@ product of the two level primes, and `λ = crystallineLoss h₂ b ℓ` is the `�
 `(2 b)! (∏ a) ^ h₂³`, with `a` over the positive integers in `(b - 30 h₂³, b + 30 h₂³]` and
 `h₂ = D.halfGap = D.r ^ 8`. -/
 lemma New.Selmer.normLength_dualDefect_le_defectBound_of_isTameType {P : Parameters} {D : Data P}
-    {n : Fin 2} [ThePrime (D.levelPrime n)] [PadicIso (D.levelPrime n)] {Γ : Type} [Group Γ]
+    {n : Fin 2} [ThePrime (D.levelPrime n)] {Γ : Type} [Group Γ]
     [𝒥 : OverGp Γ (D.levelPrime n)] [TopologicalSpace Γ]
     {e : D.E →+* PadicAlgCl (D.levelPrime n)} (h_group : IsCompletionGroup e 𝒥.toGp)
     {O : CoeffRing (D.levelPrime n)} {L : GalLattice O Γ} {F : Filter Γ}

@@ -619,7 +619,7 @@ vectors over `O` to rows, and let `N` hold the images under `Φ` of the cocycle 
 `formsMod Φ z N p`, that is, `c = Ψ ∘ z` for a linear form `Ψ` modulo `p` that vanishes on `Φ⁻¹ N`,
 is a cocycle for `ξ` that obeys the linear relations and vanishes at the `δ w`; and if `c γ = 0`,
 then every `ξ g - 1` kills `c a`. -/
-lemma isCharacterCocycle_of_mem_formsMod [DVR O] {n ι R : Type} [CommRing R] [Algebra O R]
+lemma isCharacterCocycle_of_mem_formsMod {n ι R : Type} [CommRing R] [Algebra O R]
     (Φ : (n → O) →ₗ[O] ι → R) (z : G → n → O) (N : Submodule R (ι → R)) {p : O} (ξ : G →* O)
     (δ : W → G) (a γ : G) (c₁ : O) (h_cocycle : ∀ g h : G, Φ (z (g * h) - z g - ξ g • z h) ∈ N)
     (h_δ : ∀ w : W, Φ (z (δ w)) ∈ N)

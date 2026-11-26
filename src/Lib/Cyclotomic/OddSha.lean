@@ -374,7 +374,7 @@ private lemma four_mul_totient_smul_eq_zero_of_sum_eq {E : Type} [Field E] [Numb
 `shaLocalSet l E e`, where `e ≠ 0`. Let `g` lie in an inertia group at a place prime to `l`, or in
 `shaLocalSet l ℚ 1` (a decomposition group above `l`, with trivial cyclotomic character). Then `x`
 vanishes at each `w` whose image in `Gal(Ω/ℚ)` is the conjugate `u g u⁻¹`. -/
-private lemma apply_eq_zero_of_toAlgAut_eq_conj {E : Type} [Field E] [NumberField E] [IsCMField E]
+private lemma apply_eq_zero_of_toAlgAut_eq_conj {E : Type} [Field E] [NumberField E]
     [Algebra E Ω] {l e : ℕ} [ThePrime l] (he : e ≠ 0) {V : Type} [Zero V] {x : Gal(Ω/E) → V}
     (h_above : ∀ g ∈ shaLocalSet l E e, x g = 0)
     (h_unram : ∀ g ∈ inertiaAbove (placesDividing E l)ᶜ, x g = 0) {g : Gal(Ω/ℚ)}

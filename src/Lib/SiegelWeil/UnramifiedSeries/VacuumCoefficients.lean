@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.LinearAlgebra.Projectivization.Cardinality
 public import Lib.Adelic.AutomorphicForms.PAdicGauge
 public import Lib.ClassField.HeckeCharacter.TameModulus
 public import Lib.SiegelWeil.NeighbourLattices

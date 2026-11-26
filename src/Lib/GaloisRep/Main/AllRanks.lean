@@ -305,7 +305,7 @@ continuous character `ψ i l` at the Frobenius element (`hψ_val`), and that no 
 `ψ 1 l'`. Then some representation of rank `card n` is attached to `P`, and every representation
 `r` attached to `P` has trace `tr ρ i - ∑ l, ψ i l` for both `i`. -/
 lemma New.GaloisRep.Attached.exists_attached_of_mul_prod {ℓ : ℕ} {E n m T : Type} [ThePrime ℓ]
-    [PadicIso ℓ] [Field E] [EmbeddedNumberField E] [IsCMField E] [Fintype n] [DecidableEq n]
+    [PadicIso ℓ] [Field E] [EmbeddedNumberField E] [Fintype n] [DecidableEq n]
     [Nonempty n] [Fintype m] [DecidableEq m] [Nonempty m] [Fintype T] {P : FinPlace E → ℂ[X]}
     {c : Fin 2 → T → FinPlace E → ℂ} {ρ : Fin 2 → GalRep ℓ E m}
     {ψ : Fin 2 → T → Gal(Ω/E) →* (PadicAlgCl ℓ)ˣ}
@@ -340,7 +340,7 @@ lemma New.GaloisRep.Attached.exists_attached_of_mul_prod {ℓ : ℕ} {E n m T : 
 `ν` takes the value `ιℓ (z w)`, `Q w` is monic of degree `card m`, and `Q w` with its roots
 multiplied by `z w` is `P w`. Then the twist of `σ` by `ν` is attached to `P`. -/
 lemma New.GaloisRep.Attached.twistByChar_of_scaleRoots_eq {ℓ : ℕ} {E m : Type} [ThePrime ℓ]
-    [PadicIso ℓ] [Field E] [EmbeddedNumberField E] [IsCMField E] [Fintype m] [DecidableEq m]
+    [PadicIso ℓ] [Field E] [EmbeddedNumberField E] [Fintype m] [DecidableEq m]
     {P Q : FinPlace E → ℂ[X]} {z : FinPlace E → ℂ} {σ : GalRep ℓ E m}
     {ν : Gal(Ω/E) →* (PadicAlgCl ℓ)ˣ} (hσ : Attached Q σ) (hν : Continuous ν)
     (hev : ∀ᶠ y : FrobeniusDatum E in mostFrobenii E, (ν y.frob).val = ιℓ (z y.place) ∧

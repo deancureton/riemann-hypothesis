@@ -679,7 +679,7 @@ lemma norm_map_inner_le :
 
 /-- Let `ρ` be the representation `New.weylRep κ e` and `G` the Gram matrix of weight `κ`. Then
 `G ρ(a) = ρ(aᵀ)ᵀ G`: the matrices of `a` and of its transpose are adjoint for `G`. -/
-lemma _root_.New.weylGramOver_mul_weylRep {Φ R : Type} [CommRing R] [IsDomain R] [CharZero R]
+lemma _root_.New.weylGramOver_mul_weylRep {Φ R : Type} [CommRing R]
     [Fintype Φ] [DecidableEq Φ] {κ : Φ → ℕ → ℕ} (e : Φ → ℤ) (a : Φ → GL n R) :
     (weylGramOver : Matrix (WeylIndex n κ) (WeylIndex n κ) R) * weylRep κ e a =
       (weylRep κ e fun τ : Φ ↦ transposeGL (a τ))ᵀ * weylGramOver := by

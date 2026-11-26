@@ -300,7 +300,7 @@ hyperbolic planes, and let `w_r = weylElem 𝔰.ϱ r` send `e_a` to `r a • e*_
 the graph of the middle block of `ρ`: a pair lies in it if and only if its first member is the image
 of the second under this block. -/
 lemma Filling.mem_link_weylElem_mul_iff {A : Type} [Field A] [StarRing A] {T : 𝔰.Form A}
-    [IsHermitianUnit T.splitGram] {ρ : T.G} (hρ : ρ ∈ floorGroup 𝔰.ϱ) (r : ℕ → Aˣ)
+    {ρ : T.G} (hρ : ρ ∈ floorGroup 𝔰.ϱ) (r : ℕ → Aˣ)
     {v : 𝔰.MiddleIndex ⊕ 𝔰.MiddleIndex → A} :
     v ∈ link (weylElem 𝔰.ϱ r * ρ) ↔ ρ.val.val.toBlocks₂₂.toBlocks₁₁ *ᵥ (v ∘ inr) = v ∘ inl := by
   -- `mem_link` asks for an `a` with one block of `w_r ρ` sending it to `0`: `a = 0` will do.

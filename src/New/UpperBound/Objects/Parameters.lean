@@ -303,11 +303,6 @@ lemma max_min_succ_sub_max_min_mem_Icc (x : ℤ) {n c low high : ℤ} (hn : 0 �
       Icc (if x < low then 1 else 0 : ℤ) (if x < high then 1 else 0) := by
   grind
 
-/-- The entry `D.k - 1 + a` of `D.targetParameter τ` is `D.halfGap - D.liftWeight (a + 1) τ`. -/
-lemma targetParameter_sub_one_add (a : ℕ) :
-    D.targetParameter τ (D.k - 1 + a) = D.halfGap - D.liftWeight (a + 1) τ := by
-  grind [targetParameter_eq, D.k_pos]
-
 /-- The base case of `gridParam_interlace`. Let `λ_n = D.targetParameter τ n` be the entries of the
 target parameter and `s = 2 λ_(k-1)`. The number of `n < k` with `x < -2 λ_n - 1`, less the number
 of `n < k - 1` with `x < 2 λ_n`, is `1` if `x < s`, is `0` if `-s - 1 ≤ x`, and is always `0` or

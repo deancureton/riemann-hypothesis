@@ -460,7 +460,7 @@ lemma row_mul_eq_smul_of_commute {A t : Matrix n n ℂ} {k : (Matrix n n ℂ)ˣ}
 omit [CMType E] in
 /-- For a nonzero matrix `Q` and points `a`, `b` of the real group, multiplying `a` by `b` on the
 right moves `log ‖Q a_w‖` by at most `‖b_w‖`, in the operator norm. -/
-lemma abs_log_norm_mul_sub_le [Nonempty n] {Q : Matrix n n ℂ} (hQ : Q ≠ 0) (w : InfinitePlace E)
+lemma abs_log_norm_mul_sub_le {Q : Matrix n n ℂ} (hQ : Q ≠ 0) (w : InfinitePlace E)
     (a b : GInf E s) :
     |‖Q * ((a * b) w : Matrix n n ℂ)‖.log - ‖Q * (a w : Matrix n n ℂ)‖.log| ≤
       ‖(b w : Matrix n n ℂ)‖ := by

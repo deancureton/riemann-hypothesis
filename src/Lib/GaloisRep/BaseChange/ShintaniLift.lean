@@ -158,8 +158,8 @@ include h_unique hμ_trivial h_residue h_degree
 
 omit h_unique hμ_trivial h_residue h_degree in
 /-- The Galois action on `GL n` of the residue field applies the automorphism to the entries. -/
-private lemma galActionGL_apply {k k' : Type} [Field k] [Field k'] [Algebra k k'] [Finite k]
-    [Finite k'] (φ : Gal(k'/k)) (x : GL n k') :
+private lemma galActionGL_apply {k k' : Type} [Field k] [Field k'] [Algebra k k']
+    (φ : Gal(k'/k)) (x : GL n k') :
     galActionGL k k' n φ x = Matrix.GeneralLinearGroup.map (φ : k' →+* k') x :=
   rfl
 

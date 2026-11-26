@@ -97,7 +97,7 @@ lemma cellRankSecondMoment_nonneg [S.IsAdmissible] (j : Fin (𝔰.ϱ + 2)) :
 /-- At the top cell rank the orbit bound at `x` is
 `τ² (mainSecondMoment / (pairCountScale M ^ (2 ϱ f k) x ^ k)) ^ (1 / 2)`, where `τ` is `tailScale`,
 `M` is the level and `f` is the number of infinite places. -/
-lemma orbitBound_top [S.IsAdmissible] (x : ℝ) : S.orbitBound ⊤ x = S.tailScale ^ 2 *
+lemma orbitBound_top (x : ℝ) : S.orbitBound ⊤ x = S.tailScale ^ 2 *
     √(S.mainSecondMoment / (S.pairCountScale *
       (S.M ^ (2 * 𝔰.ϱ * numInfPlaces E * 𝔰.k) * x ^ 𝔰.k))) := by
   rw [orbitBound, cellRankSecondMoment, ite_eq_left (by simp), min_eq_left (by simp), mul_pow,

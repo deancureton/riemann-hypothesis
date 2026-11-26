@@ -2,7 +2,6 @@ module
 
 public import Lib.General.Algebra.SeriesBounds
 public import Lib.General.Algebra.SeriesCongruences
-public import Lib.General.NumberTheory.PadicLimitsValuation
 
 /-!
 # Couplings and the normal form

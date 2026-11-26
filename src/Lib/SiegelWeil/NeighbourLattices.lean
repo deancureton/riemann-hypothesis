@@ -1,6 +1,5 @@
 module
 
-public import Mathlib.LinearAlgebra.Projectivization.Basic
 public import Lib.Weil.Construction.FiniteMultiplier
 public import Lib.Weil.Unramified.HeckeGL
 

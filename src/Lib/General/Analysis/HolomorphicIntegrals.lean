@@ -4,6 +4,7 @@ public import Lib.General.Analysis.GaussianIntegral
 public import Lib.General.Groups.CongruenceSubgroups
 public import Lib.General.Measure.HaarNormalisation
 public import Lib.General.Topology
+public import TauCeti.Analysis.MvPolynomial.Jacobian
 import TauCeti.Analysis.Complex.CauchyIntegralPolydisc
 
 /-!
@@ -302,14 +303,8 @@ lemma analyticAt_of_eventually_differentiableAt [FiniteDimensional ℂ F] {f : E
 derivative v ↦ ∑ᵢ (∂P/∂Xᵢ)(x)·vᵢ, given by the formal partial derivatives. -/
 @[fun_prop]
 lemma hasFDerivAt_mvPolynomial_eval {ι : Type*} [Fintype ι] (P : MvPolynomial ι ℂ) (x : ι → ℂ) :
-    HasFDerivAt (𝕜 := ℂ) (P.eval ·) (∑ i : ι, (P.pderiv i).eval x • .proj i) x := by
-  classical
-  induction P using MvPolynomial.induction_on with
-  | C a => simpa using hasFDerivAt_const a x
-  | add P Q hP hQ => simpa [add_smul, sum_add_distrib] using hP.fun_add hQ
-  | mul_X P i hP =>
-    simpa [add_smul, sum_add_distrib, Pi.single_apply, mul_smul, ← smul_sum, apply_ite] using
-      hP.fun_mul (hasFDerivAt_apply i x)
+    HasFDerivAt (𝕜 := ℂ) (P.eval ·) (∑ i : ι, (P.pderiv i).eval x • .proj i) x :=
+  P.hasFDerivAt_eval x
 
 end New
 

@@ -143,7 +143,7 @@ lemma exists_isCompact_isOpen_superset_subset {G : Type} [Group G] [TopologicalS
 /-- A compact open subset of a closed subset `C` of a locally compact Hausdorff non-archimedean
 group is cut out by a compact open subset of the group. -/
 lemma exists_isCompact_isOpen_preimage_eq {G : Type} [Group G] [TopologicalSpace G]
-    [NonarchimedeanGroup G] [T2Space G] [WeaklyLocallyCompactSpace G] {C : Set G} (hC : IsClosed C)
+    [NonarchimedeanGroup G] [WeaklyLocallyCompactSpace G] {C : Set G} (hC : IsClosed C)
     {A : Set C} (hA_open : IsOpen A) (hA_compact : IsCompact A) :
     ∃ V : Set G, IsOpen V ∧ IsCompact V ∧ ∀ x : C, (x : G) ∈ V ↔ x ∈ A := by
   have h_rest : IsClosed (Subtype.val '' Aᶜ) := hC.isClosedMap_subtypeVal _ hA_open.isClosed_compl

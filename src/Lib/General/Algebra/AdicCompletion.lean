@@ -116,6 +116,13 @@ instance : IsFractionRing (valRingCp p) ℂ_[p] :=
 
 instance : IsLocalRing (valRingCp p) := ValuationRing.isLocalRing (valRingCp p)
 
+/-- The residue field of the valuation ring of `ℂ_[p]` has characteristic `p`, since `‖p‖ < 1`. -/
+instance : CharP (IsLocalRing.ResidueField (valRingCp p)) p := by
+  refine (CharP.charP_iff_prime_eq_zero (Fact.out : p.Prime)).2 ?_
+  rw [← map_natCast (IsLocalRing.residue (valRingCp p)), IsLocalRing.residue_eq_zero_iff,
+    IsLocalRing.mem_maximalIdeal, mem_nonunits_iff]
+  simpa [isUnit_iff_dvd_one, valRingCp.dvd_iff_norm_le] using PadicComplex.norm_p_lt_one p
+
 instance : IsIntegrallyClosed (valRingCp p) :=
   inferInstanceAs (IsIntegrallyClosed (NormedField.valuation (K := ℂ_[p])).integer)
 

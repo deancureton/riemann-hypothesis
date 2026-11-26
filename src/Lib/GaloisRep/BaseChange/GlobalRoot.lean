@@ -805,7 +805,7 @@ some unit `y` and `c` with `θ q c` a unit make `star (θ q c) * (y * θ q (T^[p
 self-adjoint, then some `y q`, `c₀ q` make `y q * θ q (T c)` a unit and `star (θ q c)` times it
 self-adjoint at all `q`, for every `c` with `θ q c = θ q (c₀ q)` for all `q`. -/
 private lemma New.exists_isSelfAdjoint_principalIdele_of_forall_minimalPeriod {E E' : Type}
-    [Field E] [Field E'] [NumberField E'] [IsCMField E'] [Algebra E E'] {P : E'[X]}
+    [Field E] [Field E'] [NumberField E'] [Algebra E E'] {P : E'[X]}
     [∀ q : primeFactors P, Fact (Irreducible q.val)]
     [∀ q : primeFactors P, IsCMField (AdjoinRoot q.val)]
     (θ : ∀ q : primeFactors P, (𝔸f E')[X] →ₐ[𝔸f E'] 𝔸f (AdjoinRoot q.val))

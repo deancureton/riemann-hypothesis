@@ -160,11 +160,12 @@ lemma translateByClassReps_weylElem_mul (c c' : S.Classes) (p : ℕ → Eˣ) (σ
   -- No `e*_a` has level below `ϱ`.
   have h_level (a : Fin 𝔰.ϱ) : ¬2 * 𝔰.ϱ - a < 𝔰.ϱ := by lia
   -- The Weyl element commutes with the change of basis, entry by entry.
-  simp +contextual [Subtype.ext_iff, ← mul_assoc, Units.ext_iff, ← ext_iff, Sum.forall, weylElem,
+  simp [Subtype.ext_iff, ← mul_assoc, Units.ext_iff, ← ext_iff, Sum.forall, weylElem,
     weylOn, coe_translateByClassReps, classBasis, toBesselH, besselLatticeBasis,
       fromBlocks_multiply,
     fromCols_mul_fromBlocks, Matrix.mul_apply, Matrix.one_apply, BesselIndex.level, h_level,
     apply_ite (algebraMap E (𝔸f E))]
+  simp +contextual
 
 end
 

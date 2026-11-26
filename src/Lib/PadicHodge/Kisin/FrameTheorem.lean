@@ -60,9 +60,6 @@ frame. `KummerChartDeRham`: the different, and values in `B_dR`. `Modules`: `M`,
 * `New.Lift.KummerChart.JumpLattice.frame_theorem`: a relation `∑ c i • v i = 0` among vectors of
   `L.valueFieldPoints L.fracSpan` still holds after applying any `k.S`-linear `f : Ainf → k.S` to
   the coefficients (`New.Lift.KummerChart.JumpLattice.FrameProperties`).
-* `New.Lift.KummerChart.JumpLattice.valueFieldPoints_frobKisinAinf_eq_span`: the vectors of
-  `φ ^ l (L.kisinAinf)` on which all forms in `L.forms` take values in `k.valueField 0` form the
-  `S`-span of `φ ^ l N`.
 * `New.Lift.KummerChart.JumpLattice.smul_mem_kisinAinf`: an element `g` that conjugates `Γ'` into
   itself preserves the module `New.Lift.KummerChart.JumpLattice.kisinAinf`. The reason is that
   conjugation by `g` keeps forms `Γ'`-equivariant
@@ -806,23 +803,6 @@ lemma exists_span_eq_kisinModule_linearIndependent :
       span Ainf (Set.range v) = L.kisinAinf ∧
       LinearIndependent Ainf v :=
   frame_theorem.exists_span_eq_kisinModule_linearIndependent
-
-/-- For a jump lattice `L` (a finite free `O`-module with a `Γ`-action, crystalline over `Γ'`), the
-vectors of `L.frobKisinAinf l`, the image of `kisinAinf` under `φ ^ l`, on which all forms in
-`L.forms` take values in the field `valueField 0` ⊂ B_dR form the `S`-span of the image of the Kisin
-module `L.kisinModule` under `φ ^ l`. -/
-lemma valueFieldPoints_frobKisinAinf_eq_span (l : ℕ) :
-    L.valueFieldPoints (L.frobKisinAinf l) =
-      span k.S ((fun y : L.Ambient ↦ φ ^ l • y) '' (L.kisinModule : Set L.Ambient)) := by
-  -- Both sides are spanned by the vectors `φ ^ l • F.n i` of a frame `F`, as `φ` preserves `S`.
-  obtain ⟨F⟩ : Nonempty (Frame L) := nonempty_frame
-  rw [← F.span_phi_pow_smul_n_eq_valueFieldPoints l, ← F.span_n_eq_kisinModule]
-  refine le_antisymm (span_mono (range_subset_iff.mpr fun i ↦ ?_)) (span_le.2 ?_)
-  · exact ⟨F.n i, subset_span ⟨i, rfl⟩, rfl⟩
-  · rintro _ ⟨y, hy, rfl⟩
-    obtain ⟨c, rfl⟩ := (mem_span_range_iff_exists_fun k.S).mp hy
-    refine (mem_span_range_iff_exists_fun k.S).mpr ⟨fun i ↦ (k.φ ^ l) (c i), ?_⟩
-    simp only [smul_sum, smul_eq_val_smul, frobGroup_smul_smul, Chart.coe_phi_pow, phi_pow_smul]
 
 private lemma mem_kisinAinf_of_mem_kisinModule {x : L.Ambient} (hx : x ∈ L.kisinModule) :
     x ∈ L.kisinAinf :=

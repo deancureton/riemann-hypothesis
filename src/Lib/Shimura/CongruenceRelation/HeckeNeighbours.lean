@@ -539,7 +539,7 @@ noncomputable def frobeniusTwist (π : V →+* k) (l : ℕ) [Fact l.Prime] [Char
     Over.map (specMap ((iterateFrobenius k l f).comp π)) ⟶ Over.map (specMap π) where
   app T := homMk (absFrobenius f T) (by
     have h_frob : absFrobenius f T ≫ T.hom = T.hom ≫ specMap (iterateFrobenius k l f) :=
-      (absFrobenius_comm ..).trans
+      (absFrobenius_comm f T (.mk (𝟙 _)) T.hom).trans
         (T.hom ≫= by simpa using! comp_absFrobenius f (.mk (𝟙 _)) (𝟙 _))
     simpa [specMap] using! h_frob =≫ specMap π)
   naturality := by simp [absFrobenius_comm, OverMorphism.ext_iff]

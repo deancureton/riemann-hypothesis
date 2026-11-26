@@ -183,8 +183,8 @@ lemma length_quotient_span_row (N : Matrix k k O) :
   let : DecidableEq k := Classical.decEq k
   -- For `N = Q * diagonal d * P` the rows span the kernel of the surjection onto the product of
   -- the `O / d i` that sends `v` to the classes of the coordinates of `v P⁻¹`.
-  obtain ⟨Q, -, P, -, d, rfl⟩ : ∃ᵉ (Q ∈ intGL k (⊤ : Subring O)) (P ∈ intGL k (⊤ : Subring O))
-      (d : k → O), N = Q.val * diagonal d * P.val := isValuationPair_top.smith_normal_form N
+  obtain ⟨Q, -, P, -, d, rfl⟩ : ∃ Q ∈ intGL k (⊤ : Subring O), ∃ P ∈ intGL k (⊤ : Subring O),
+      ∃ d : k → O, N = Q.val * diagonal d * P.val := isValuationPair_top.smith_normal_form N
   let π : (k → O) →ₗ[O] ∀ i, QuotSpan (d i) :=
     LinearMap.piMap (fun i ↦ (Ideal.span {d i}).mkQ) ∘ₗ P⁻¹.1.vecMulLinear
   have h_surj : Function.Surjective π :=
