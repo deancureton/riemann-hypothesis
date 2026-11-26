@@ -115,7 +115,7 @@ noncomputable def adeleOfLocal : LocProd P →ₙ+* 𝔸f E where
     by_cases h : w ∈ P <;> simp [h]
   map_zero' := by
     congrm ⟨fun w ↦ ?_, _⟩
-    by_cases h : w ∈ P <;> simp [h]
+    simp
   map_add' x y := by
     congrm ⟨fun w ↦ ?_, _⟩
     by_cases h : w ∈ P <;> simp [h]
