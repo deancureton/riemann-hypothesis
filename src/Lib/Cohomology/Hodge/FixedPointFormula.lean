@@ -1,4 +1,3 @@
-import Lib.Adelic.Unitary.Defs
 import Lib.Cohomology.Hodge.DiagonalClass
 import Lib.Cohomology.Hodge.Kunneth
 import Lib.General.Algebra.MultivariatePolynomials

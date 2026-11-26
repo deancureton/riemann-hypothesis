@@ -1,5 +1,4 @@
 import Lib.Adelic.TraceFormula.TestFunction
-import Lib.DiscreteSeries.Haar.CayleyChart
 
 /-!
 # Integration over the fibres of a conjugation map

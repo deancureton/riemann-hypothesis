@@ -1,4 +1,3 @@
-import Lib.Adelic.Unitary.Defs
 import Lib.General.Analysis.FiniteFourier
 import Lib.General.LinearAlgebra.IntegralLattices
 

@@ -63,8 +63,6 @@ section TateModule
 open CategoryTheory AddCommGrpCat Polynomial Module TotalH Function TensorProduct NeZero
   AddCommGroup
 
-set_option backward.isDefEq.respectTransparency false
-
 variable {C C' : Type _} [Category C] [Category C'] {ℓ : ℕ} {A : Type} [CommRing A]
   (g : C ⥤ TestOver A)
 
@@ -93,7 +91,8 @@ instance : HasFlatValues (tateModule g) where
     let : Module ℚᵐᵒᵖ (ℚ →+ (ringOf g ⋙ Gm) c) := AddMonoidHom.instDomMulActModule
     have : HasUniqueDiv (ℚ →+ (ringOf g ⋙ Gm).obj c) :=
       HasUniqueDiv.of_isTorsionFree ℚᵐᵒᵖ (ℚ →+ (ringOf g ⋙ Gm) c)
-    exact inferInstanceAs (Flat ℤ (AddMonoidHom.ker _))
+    let ev : (ℚ →+ (ringOf g ⋙ Gm).obj c) →+ (ringOf g ⋙ Gm).obj c := AddMonoidHom.eval 1
+    exact inferInstanceAs (Flat ℤ ev.ker)
 
 /-- Along a functor g to tests over A, the Kummer sequence 0 → 𝕋 → Hom(ℚ, G_m) → G_m → 0, with
 last map evaluation at 1, is short exact. -/
@@ -518,8 +517,6 @@ section LineChernClass
 
 open CategoryTheory AddCommGrpCat Abelian TotalH FreeAbelianGroup Ideal
 
-set_option backward.isDefEq.respectTransparency false
-
 variable {C C' : Type _} [Category C] [Category C'] {ℓ : ℕ} {A : Type} [CommRing A]
   (g : C ⥤ TestOver A)
 
@@ -649,7 +646,8 @@ lemma add_rowUnit_eq {q' : projLine B'} {a : Bˣ} {b : B'ˣ}
 def affinePt (x : B) : projLine B := ⟨⟦(x - 1, 1)⟧⟩
 
 lemma map_affinePt (x : B) : projLine.map f (affinePt x) = affinePt (f x) := by
-  simp [affinePt, projLine]
+  change (⟨⟦(f (x - 1), f 1)⟧⟩ : projLine B') = ⟨⟦(f x - 1, 1)⟧⟩
+  simp
 
 /-- The first coordinate of the row of the point `(x : 1)` is a unit exactly when `x` is a unit. -/
 lemma isUnit_unimodularRow_affinePt_iff {x : B} :

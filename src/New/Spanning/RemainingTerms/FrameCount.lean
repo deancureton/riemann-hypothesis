@@ -1,4 +1,3 @@
-import Lib.GLn.SchurModule.Basic
 import New.Spanning.Unfolding.ReducedPoints
 
 /-!

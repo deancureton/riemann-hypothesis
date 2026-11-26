@@ -1,6 +1,5 @@
 import Lib.Adelic.Adeles.SemilocalProducts
 import Lib.Adelic.AutomorphicForms.UnipotentRadical
-import Lib.Weil.Construction.AdelicRepresentation
 import Lib.Weil.Unramified.HeckeGL
 
 /-!

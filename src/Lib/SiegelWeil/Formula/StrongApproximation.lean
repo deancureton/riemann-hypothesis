@@ -1,4 +1,3 @@
-import Lib.SiegelWeil.Formula.LagrangianZeroTerms
 import Lib.SiegelWeil.SingularForms.UnimodularCoefficients
 
 /-!

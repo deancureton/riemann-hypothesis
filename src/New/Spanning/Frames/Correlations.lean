@@ -499,15 +499,6 @@ lemma partialCorrelation_eq_integral_floorMeasure (hk : F.IsPairingKernel j k d)
     _ = ∫ σ : T.G, F.partialCorrelation (l + 1) k (σ * g) (σ * y) ∂F.floorMeasure l := by
       simp only [partialCorrelation, mul_assoc]
 
-/-- For a pairing kernel `k` with element `d` at any floor `j`, the correlation
-`F.partialCorrelation l k g y` from floor `l` on is an absolutely convergent integral: that of
-`F.partialCorrelation (l + 1) k (σ * g) (σ * y)` over σ against θ_l = `F.floorMeasure l`. -/
-lemma partialCorrelation_eq_integral_succ (hk : F.IsPairingKernel j k d) :
-    Integrable (fun σ : T.G ↦ F.partialCorrelation (l + 1) k (σ * g) (σ * y)) (F.floorMeasure l) ∧
-    F.partialCorrelation l k g y =
-      ∫ σ : T.G, F.partialCorrelation (l + 1) k (σ * g) (σ * y) ∂F.floorMeasure l :=
-  ⟨hk.integrable_partialCorrelation_succ, hk.partialCorrelation_eq_integral_floorMeasure⟩
-
 /-- For a pairing kernel `k`, the modulus of the correlation from floor `l` on is at most
 `F.pivotL1Norm l k g y`, the integral over floor `l` of the modulus of the correlation from floor
 `l + 1` on. -/

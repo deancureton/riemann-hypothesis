@@ -488,8 +488,6 @@ lemma isSchwartzVector_realPairWeil {r : Type} [Fintype r] [DecidableEq r] {t : 
 
 variable {m : Type} [Fintype m] [DecidableEq m]
 
--- The index types of the spaces in the proof nest too deeply for the default instance size.
-set_option synthInstance.maxSize 512 in
 /-- Let `J = stdSpace E m` be positive definite of even rank `2 k`,
 `Y = H ⊕ J = hyperbolicSum Unit J` with `H` a hyperbolic plane, and `𝔠` a tame character: a
 character `ν = 𝔠.character` of `[U(1)]` of weight `μ`, tamely ramified exactly at a finite set
@@ -522,6 +520,7 @@ lemma thetaLargeVanishes_of_equalRankThetaRatio_eq_zero {μ : InfinitePlace E �
       v vacVector 1 0 := by
     refine fun h ↦ ⟨1, fun B β f x g y ↦ ?_⟩
     rw [mul_zero, zero_div, zero_mul]
+    let : DecidableEq ((Unit ⊕ Unit) ⊕ m) := inferInstance
     exact integral_thetaOnRealData_eq_zero Y h_theta (stdSpace E m).neg
       (isSchwartzVector_realPairWeil _ _ _ (isSchwartzVector_slice _ _ hv)) β f x g y
   obtain ⟨K, -, h_identity⟩ :=
