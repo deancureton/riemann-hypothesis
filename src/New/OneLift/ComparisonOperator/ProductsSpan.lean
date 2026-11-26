@@ -514,8 +514,7 @@ variable (D) in
 /-- The identity `b ^ (-20 n_*) b ^ n_* = b ^ (-19 n_*)` for `n_* = nStar D`. -/
 lemma inv_pow_twenty_mul_pow_nStar :
     (D.b ^ (20 * nStar D))⁻¹ * D.b ^ nStar D = (D.b ^ (19 * nStar D))⁻¹ := by
-  field_simp
-  ring
+  field
 
 /-- Let `S = signedSpace D.E (1 ⊕ᵥ -1)`. Suppose the first minimum of `S` moved by `g₁` is at least
 `(5 b √b) ^ (-1 / 2)`. Suppose that of `D.spaceW j` moved by `g` is at least

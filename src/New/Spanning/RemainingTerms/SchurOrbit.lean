@@ -1000,7 +1000,6 @@ lemma tsum_amplitudeMajorant_orbit_le (h_over : γ ∈ S.termsOver c s c')
   refine le_of_eq ?_
   simp only [identitySecondMoment, sourceDim, pairCountScale, Nat.cast_mul, div_pow, inv_pow,
     mul_inv, mul_pow]
-  field_simp
-  ring
+  field
 
 end New.Filling

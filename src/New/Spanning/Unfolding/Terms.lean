@@ -335,8 +335,7 @@ lemma gramDiscReal_realFrameGram_ratToInf {γ : S.G E} (v : InfinitePlace E) :
   have h_disc : frameDisc 1 (realFrameGram (S.ratToInf γ v)) =
       ((∏ a : Fin 𝔰.n, S.frameScaleSq v a) ^ 2 : ℝ) * Φ v (S.termDisc γ) := by
     simp [frameDisc, h_det, h_minor, frameScaleSq, prod_univ_castSucc]
-    field_simp [Nat.Prime.ne_zero]
-    ring
+    field [Nat.Prime.ne_zero]
   rw [RealPlace.gramDiscReal, h_disc, re_ofReal_mul, ← ofReal_re ‖Φ v _‖, ← map_termDisc_eq_norm]
 
 /-! ### Passing to the infinite and the finite places; the Bessel group; sizes of constants -/

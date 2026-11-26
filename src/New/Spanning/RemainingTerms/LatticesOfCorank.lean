@@ -460,8 +460,7 @@ lemma mul_inv_pow_le_of_mul_le {d i H : ℝ} (hd : 1 ≤ d) (hi : 1 ≤ i) (hH :
   have hH_pos : 0 < H := by linarith
   calc i * ((d * i) ^ k)⁻¹
     _ = i * (d * i) ^ (μ + 1) * (d ^ (k + μ + 1) * i ^ (k + μ + 1))⁻¹ := by
-      field_simp
-      ring
+      field
     _ ≤ H * H ^ (μ + 1) * (d ^ (k + 1) * i ^ (r + μ))⁻¹ := by
       have hd_pow : d ^ (k + 1) ≤ d ^ (k + μ + 1) := pow_le_pow_right₀ hd (by lia)
       have hi_pow : i ^ (r + μ) ≤ i ^ (k + μ + 1) := pow_le_pow_right₀ hi (by lia)

@@ -226,8 +226,7 @@ lemma IsNearPairOverAgreeingBlock.ofReal_termSize_mul_le {E : Type} [Field E] [C
       B / (S.tailScale ^ (l + 2) * S.pairCountScale) :=
     calc
       _ = S.tailScale ^ (l + 6) * D / η ^ 𝔰.k / (S.tailScale ^ (l + 2) * S.pairCountScale) := by
-        field_simp
-        ring
+        field
       _ ≤ _ := by gcongr
   grw [← ofReal_mul' (by positivity), hq.termSize_mul_le hη h_gain hD hD', h_const]
 
@@ -373,8 +372,7 @@ lemma pow_mul_mainSecondMoment_div_le {E : Type} [Field E] [CMType E] {𝔰 : Sh
     _ ≤ (S.tailScale ^ 4) ^ 2 * (S.b / S.b ^ 6) ^ m * S.identitySecondMoment := by gcongr
     _ = S.identitySecondMoment / (S.tailScale ^ 4) ^ 3 := by
       rw [tailScale_pow_four, div_pow]
-      field_simp
-      ring
+      field
     _ ≤ S.identitySecondMoment / S.tailScale ^ 10 := by
       grw [← pow_mul, pow_le_pow_right₀ hτ (by norm_num : 10 ≤ 4 * 3)]
 

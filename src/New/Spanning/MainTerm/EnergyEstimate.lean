@@ -242,8 +242,7 @@ lemma scaledSiegelConst_mul_decayConst_le [S.IsAdmissible] :
     generalize x⁻¹ ^ 𝔰.n ^ 7 = y
     simp only [x, Q, D, Shape.openCellConst, Shape.scaledVolumeRatio, sphereDensity, one_pow,
       mul_pow, div_pow]
-    field_simp [(volU_pos _).ne']
-    ring
+    field [(volU_pos _).ne']
   -- Those factors are at most `b ^ n⁹`: `2 / s²` is at most `b`, `s / s^(2ϱ)` at most `1` and
   -- `x⁻¹` at most a power of `b`.
   have h_factor : (2 / s ^ 2) ^ (𝔰.n + 2 * 𝔰.ϱ ^ 2) * (s / s ^ (2 * 𝔰.ϱ)) /

@@ -546,8 +546,7 @@ lemma scaledSiegelConst_le : D.filling.scaledSiegelConst ≤
       rw [prod_frameMass_mul_div_eq, scaledSiegelConst, card_reducedImage_besselS, h_siegel]
       simp only [scale, h_covolume, Shape.n]
       push_cast
-      field_simp
-      ring
+      field
     _ ≤ (1 + D.b⁻¹ ^ 9) * D.filling.mainSecondMoment * scale :=
       mul_le_mul_of_nonneg_right D.card_mul_card_classes_mul_prod_le (by positivity)
     _ = _ := by ring
