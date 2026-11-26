@@ -1,5 +1,4 @@
 import Lib.Adelic.Reduction.FiniteVolume
-import Lib.Shimura.AbelianScheme.Basic
 import Lib.Shimura.Transfer.MarkedPairs
 
 /-!

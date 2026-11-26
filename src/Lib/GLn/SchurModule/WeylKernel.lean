@@ -1,4 +1,3 @@
-import Lib.Adelic.Unitary.Defs
 import Lib.GLn.SchurModule.TensorModel
 import Lib.Shimura.ComplexTheta.AppellHumbertData
 

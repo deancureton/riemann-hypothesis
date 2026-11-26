@@ -1,4 +1,3 @@
-import Lib.GLn.SchurModule.Basic
 import Lib.General.Geometry.ProjectiveSpace
 import Lib.PadicComparison.Descent.TestCategory
 import Lib.Shimura.AbelianScheme.TangentCoordinates

@@ -1,7 +1,5 @@
-import Lib.Adelic.Unitary.Defs
 import Lib.Cohomology.Etale.Basic
 import Lib.General.Geometry.ProjectiveSpace
-import Lib.General.NumberTheory.EmbeddingsAndDifferent
 import Lib.Shimura.AbelianScheme.Basic
 
 /-!

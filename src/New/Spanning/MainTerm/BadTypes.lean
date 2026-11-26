@@ -1,5 +1,4 @@
 import Lib.Analytic.Primes
-import New.Spanning.RemainingTerms.Size
 import New.UpperBound.Objects.LabelsAndIndexTypes
 
 /-!

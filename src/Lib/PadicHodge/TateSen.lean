@@ -1,5 +1,4 @@
 import Lib.ClassField.Places.TameInertia
-import Lib.General.Groups.CongruenceSubgroups
 
 /-!
 # Tate's vanishing theorem, Hodge–Tate elimination and the filtration of B_dR

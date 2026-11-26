@@ -1,4 +1,3 @@
-import Lib.Adelic.Unitary.ComponentsAndBlockSums
 import Lib.General.LinearAlgebra.Eigenvalues
 import Lib.LocalGL.Iwahori.ParahoricStructure
 import Lib.Shimura.Uniformisation.HolomorphicFamilies

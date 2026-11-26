@@ -1,4 +1,3 @@
-import Lib.Adelic.Unitary.Defs
 import Lib.Cohomology.Etale.RelativeChains
 import Lib.Cohomology.LerayHirsch
 import Lib.General.Algebra.CohomologyBaseChange
