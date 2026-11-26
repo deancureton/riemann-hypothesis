@@ -315,7 +315,6 @@ section TateIndex
 
 open LinearMap Module End Polynomial Function GeneralLinearGroup IsCyclotomicExtension
 
-set_option synthInstance.maxHeartbeats 200000 in
 /-- Tate's index formula. Let `l` be prime, let `σ ^ l = 1` on `B`, let the sequence
 `C → B → B → C` with maps `j`, `σ - 1`, `s` be exact with `j` injective, and let `s ∘ j = l`. So
 `C` is the group of fixed points of `σ`, and `s` plays the role of the norm. With
@@ -354,7 +353,7 @@ lemma New.Tate.index_formula {B C : Type} [AddCommGroup B] [AddCommGroup C] (s :
   have index_C : cokerKerIndex (l : End ℤ C) = s.range.cardQuot * cokerKerIndex t := by
     rw [← hsj, (cokerKerIndex_comp j s).left,
       (cokerKerIndex_comp N.subtype (σ - 1).rangeRestrict).left]
-    simp_all [N, ker_eq_bot.mpr hj, exact_iff, sup_comm, inf_comm]
+    simp [N, ker_eq_bot.mpr hj, exact_iff.mp exact_j, exact_iff.mp exact_s, sup_comm, inf_comm]
   have ht : cokerKerIndex t ≠ 0 := right_ne_zero_of_mul (by rwa [← index_C])
   -- The index is multiplicative once one factor is nonzero, and a unit has index `1`.
   have index_pow_mul (m : ℕ) : cokerKerIndex (t ^ m * (u : End ℤ N)) = cokerKerIndex t ^ m := by
@@ -369,7 +368,8 @@ lemma New.Tate.index_formula {B C : Type} [AddCommGroup B] [AddCommGroup C] (s :
     rw [← hu, index_pow_mul]
   have index_B :
       cokerKerIndex (l : End ℤ B) = cokerKerIndex (l : End ℤ C) * cokerKerIndex (l : End ℤ N) :=
-    cokerKerIndex_mul_of_exact j _ hj (by simp_all [exact_iff]) (σ - 1).surjective_rangeRestrict hC
+    cokerKerIndex_mul_of_exact j _ hj (by simpa [exact_iff] using exact_j)
+      (σ - 1).surjective_rangeRestrict hC
   rw [index_B, index_N, mul_left_comm, ← mul_pow, ← index_C, mul_pow_sub_one NeZero.out]
 
 end TateIndex
